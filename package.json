@@ -10,7 +10,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"typesafe-i18n": "typesafe-i18n"
 	},
 	"devDependencies": {
 		"@iconify/svelte": "^3.0.1",
@@ -37,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e"
+		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+		"typesafe-i18n": "^5.17.2"
 	}
 }
