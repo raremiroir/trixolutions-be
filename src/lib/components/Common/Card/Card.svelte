@@ -28,6 +28,17 @@
    // Make cards in row equal height
    export let equalHeight = false;
 
+   // Choose image
+   export let img = 'beslissende-voorsprong'
+   // Set image alt
+   export let imgAlt = 'No alt';
+   // Set image object position (default object-center)
+   export let imgPos = '';
+   // Set image object height (default h-60)
+   export let imgHeight = '';
+   // Add extra classes to img
+   export let imgClass = '';
+
    let wrapComp = Div;
    // If link isnt specified, make div
    wrapComp = link ? Link : Div;
@@ -42,22 +53,16 @@
 <svelte:component
    this={wrapComp}
    klass="
-      group overflow-none
+      group overflow-hidden
       flex flex-col gap-2 
       bg-gray-50/70
-      {link ? 'hover:bg-gray-100/70 active:bg-gray-200/70' : ''}  
-      rounded-xl 
+      {link ? 'hover:bg-gray-100/70 active:bg-gray-200/70 hover:shadow-xl' : ''}  
+      rounded-xl shadow-lg
       {equalHeight ? 'h-full' : 'h-fit'}
       w-full
       ">
    <slot name="prepend-outer"/>
-   <img 
-         srcset="{BVw400} 400w, {BVw600} 600w, {BVw800} 800w, {BVw1080} 1080w"
-         sizes="(max-width: 600px) 400w, (max-width: 800px) 600w, (max-width: 1200px) 800w"
-         src="../../images/stock/Beslissende-Voorsprong_800w_Stock.webp"
-         alt="Beslissende voorsprong"
-         class="rounded-t-xl h-60 object-cover"
-    />
+   <Image {img} alt={imgAlt} objectPos={imgPos} height={imgHeight} klass="{imgClass}" />
    
     <!-- Inner Wrap -->
    <div class="pt-2 px-4 pb-4 flex flex-col h-full gap-1 items-start justify-start relative">
