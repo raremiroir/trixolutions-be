@@ -7,8 +7,6 @@
 
    // Name of Section
    export let name:string;
-   // Title of section
-   export let title = '';
 
    // Extra classes on section when called
    export let klass = '';
@@ -28,9 +26,9 @@
       {klass}
    ">    
       <!-- Section Title -->
-      {#if title}
-         <Title type="h2">{title}</Title>
-      {/if}
+      <div class="m-0">
+         <slot name="title"/>
+      </div>
       
       <!-- Section Content -->
       <div class="m-0">
