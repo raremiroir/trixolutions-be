@@ -4,31 +4,35 @@
 <script lang="ts">
    // Import navigation functions
    import { page, navigating }   from "$app/stores";
-   import { slide }  from "svelte/transition";
+   import { slide }     from "svelte/transition";
    // Import components
-import Button        from "$comp/Common/Button/Button.svelte";
-import Link          from "$comp/Common/Link/Link.svelte";
-import Menu          from "$comp/Menu/Menu.svelte";
-import Hamburger     from "./Hamburger.svelte";
-import Logo          from "$comp/Base/Media/Logo.svelte";
-import Icon          from '@iconify/svelte';
+   import Button        from "$comp/Common/Button/Button.svelte";
+   import Link          from "$comp/Common/Link/Link.svelte";
+   import Menu          from "$comp/Menu/Menu.svelte";
+   import Hamburger     from "./Hamburger.svelte";
+   import Logo          from "$comp/Base/Media/Logo.svelte";
+   import Icon          from '@iconify/svelte';
+	import LangSwitcher  from "./LangSwitcher.svelte";
+
+   // Import locale from i18n
+   import { locale } from "$i18n/i18n-svelte";
 
 
    // Define links in navbar
    const navItems = [
-      { name: 'Home', link: `/`, dropdown: false, pages: [] },
-      { name: 'Over Ons', link: `/over-ons`, dropdown: false, pages: [] },
-      { name: 'Referenties', link: `/referenties`, dropdown: false, pages: [] },
-      { name: 'Blog', link: `/blog`, dropdown: false, pages: [] },
+      { name: 'Home', link: `/${$locale}/`, dropdown: false, pages: [] },
+      { name: 'Over Ons', link: `/${$locale}/over-ons`, dropdown: false, pages: [] },
+      { name: 'Referenties', link: `/${$locale}/referenties`, dropdown: false, pages: [] },
+      { name: 'Blog', link: `/${$locale}/blog`, dropdown: false, pages: [] },
       { 
-         name: 'Open Workshops', link: '/open-sessies', dropdown: true, 
+         name: 'Open Workshops', link: `/${$locale}/open-sessies`, dropdown: true, 
          pages: [
-               { title: 'Gratis Open Infosessies', link: `/open-sessies/gratis-open-infosessies` },
-               { title: 'Hybride Lencioni Leertrajecten', link: `/open-sessies/hybride-lencioni-leertrajecten` },
-               { title: 'Lencioni DeepDive - Level 2', link: `/open-sessies/lencioni-deepdive-level-2` },
+               { title: 'Gratis Open Infosessies', link: `/${$locale}/open-sessies/gratis-open-infosessies` },
+               { title: 'Hybride Lencioni Leertrajecten', link: `/${$locale}/open-sessies/hybride-lencioni-leertrajecten` },
+               { title: 'Lencioni DeepDive - Level 2', link: `/${$locale}/open-sessies/lencioni-deepdive-level-2` },
          ] 
       },
-      { name: 'Contact', link: `/contact`, dropdown: false, pages: [] },
+      { name: 'Contact', link: `/${$locale}/contact`, dropdown: false, pages: [] },
    ]
 
    // Get current url/pathname
@@ -71,7 +75,7 @@ import Icon          from '@iconify/svelte';
       
          <!-- Logo/Brand -->
       <div class="w-1/5">
-         <Link href="/" klass="max-w-fit">
+         <Link href="/{$locale}/" klass="max-w-fit">
             <Logo width="180"/>  
          </Link>
       </div>
@@ -130,6 +134,7 @@ import Icon          from '@iconify/svelte';
       <!-- Extra Buttons -->
       <div class="flex flex-row gap-2 w-1/2 lg:w-1/5 justify-end pr-8 z-20">
          <div class="lg:hidden"><Hamburger onClick={toggleMobile} onCheck={openMobile}/></div>
+         <LangSwitcher/>
       </div>
    </div>
 </div>
