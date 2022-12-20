@@ -7,6 +7,8 @@
 	import Image from "$src/lib/components/Base/Media/Image.svelte";
 	import Card from "$src/lib/components/Common/Card/Card.svelte";
 
+   // Import Video
+   import cegeka_video from '$lib/videos/referentiefilmpje-cegeka-min.mp4'
    // Import images
    import acerta from '$img/references/acerta-logo.png'; 
    import axa from '$img/references/axa-logo.png'; 
@@ -51,6 +53,7 @@
    import tessgroup from '$img/references/tessenderlo_group-logo.png'; 
    import vulkoprin from '$img/references/vulkoprin-logo.png'; 
    import wgn from '$img/references/wijngaardnatie-logo.png'; 
+	import Video from "$src/lib/components/Base/Media/Video.svelte";
 
    let references = [
       {
@@ -276,11 +279,7 @@
    <SectionWrapper name="references">
       <Title slot="title" type='h1'>Referenties</Title>
       <div class="w-2/3 mx-auto">
-         <Image 
-            img="tom-color" alt="Tom van Dorst - CEO Trixolutions"
-            klass="rounded-xl shadow-md" 
-            height="h-full"
-         />
+         <Video src={cegeka_video}/>
       </div>
    </SectionWrapper>
 

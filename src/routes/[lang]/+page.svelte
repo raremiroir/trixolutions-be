@@ -1,11 +1,13 @@
 <script>
-
+   // Import Components
 	import SectionWrapper from "$src/lib/components/Base/Wrapper/SectionWrapper.svelte";
 	import Card from "$src/lib/components/Common/Card/Card.svelte";
    import Button from "$src/lib/components/Common/Button/Button.svelte";
 	import Link from "$src/lib/components/Common/Link/Link.svelte";
 	import Hero from "$src/lib/components/Hero/Hero.svelte";
 	import Title from "$src/lib/components/Common/Text/Title.svelte";
+
+   // Import Images
 
 </script>
 
@@ -16,6 +18,7 @@
 <SectionWrapper name="digitale-opleidingstoppers">
    <Title slot="title" type="h2">Digitale Opleidingstoppers!</Title>
    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      
       <Card title="Train-the-Virtual-Trainer" link="/" equalHeight>
          Op een attractieve en interactieve manier deelnemers betrekken en engageren in digitale opleidingen, 
          workshops en meetings is een nieuwe belangrijke vaardigheid geworden.<br/><br/>
