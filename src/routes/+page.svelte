@@ -5,13 +5,16 @@
    import Button from "$src/lib/components/Common/Button/Button.svelte";
 	import Link from "$src/lib/components/Common/Link/Link.svelte";
 	import Hero from "$src/lib/components/Hero/Hero.svelte";
+	import Title from "$src/lib/components/Common/Text/Title.svelte";
 
 </script>
+
 <header>
    <Hero/>
 </header>
 
-<SectionWrapper name="digitale-opleidingstoppers" title="Digitale Opleidingstoppers!">
+<SectionWrapper name="digitale-opleidingstoppers">
+   <Title slot="title" type="h2">Digitale Opleidingstoppers!</Title>
    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <Card title="Train-the-Virtual-Trainer" link="/" equalHeight>
          Op een attractieve en interactieve manier deelnemers betrekken en engageren in digitale opleidingen, 
