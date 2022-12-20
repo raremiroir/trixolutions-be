@@ -58,7 +58,7 @@ import Icon          from '@iconify/svelte';
 <div 
    class="
       w-full fixed top-0 z-10
-      bg-white/30 backdrop-blur-md 
+      bg-gray-100/30 backdrop-blur-md 
       py-2 
       transition-all duration-200
       border-b-2 lg:border-none
