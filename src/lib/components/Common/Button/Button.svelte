@@ -43,11 +43,12 @@
       transition-all ease-out duration-300
       font-body font-semibold
    
+     md:active:translate-y-0.5
 
       { disabled ? 'opacity-70 saturate-50' : 'opacity-100 saturate-100' } 
       { block ? 'w-full' : 'w-fit' }
       { lowercase ? '' : 'uppercase' }
-      { flat ? 'shadow-none' : 'shadow-md hover:shadow-lg' }
+      { flat ? 'shadow-none' : 'shadow-md hover:shadow-lg active:shadow-black/50' }
       
       { square  ? 'rounded-none'
       : rounded ? 'rounded-full'

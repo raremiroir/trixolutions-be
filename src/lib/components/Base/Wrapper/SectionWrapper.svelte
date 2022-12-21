@@ -31,7 +31,7 @@
       </div>
       
       <!-- Section Content -->
-      <div class="m-0">
+      <div class="m-0 flex flex-col gap-8">
          <slot/>
       </div>
 

@@ -61,9 +61,9 @@
 <!-- Navbar Outer Wrap -->
 <div 
    class="
-      w-full fixed top-0 z-10
+      w-full fixed top-0
       bg-gray-100/30 backdrop-blur-md 
-      py-2 
+      py-2  z-20
       transition-all duration-200
       border-b-2 lg:border-none
       {openMobile ? 'border-primary' : 'border-transparent'}">
@@ -92,7 +92,7 @@
             {#each navItems as page}
                <li class="w-fit">
                   {#if page.dropdown}
-                     <Menu>
+                     <Menu hoverState>
                         <Button 
                            slot="trigger"
                            color="transparent" 
@@ -147,7 +147,7 @@
       w-screen h-fit left-0 top-[58px]
       absolute
       z-10 flex
-      bg-gray-300/20 backdrop-blur-md
+      bg-gray-100/30 backdrop-blur-lg
       ">
    <ul class="flex flex-col gap-2 w-full justify-center items-center">
       {#each navItems as page}
@@ -156,9 +156,10 @@
                <Menu>
                   <Button 
                      slot="trigger"
-                     color="transparent" 
+                     color="transparent-alt" 
                      flat lowercase square block
-                     size="text-lg px-5 pt-[14px] pb-3">
+                     size="text-lg px-5 pt-[14px] pb-3"
+                     klass="font-bold font-body text-primary-d2 group-hover:text-primary-l1">
                      {page.name}
                      <Icon icon="mdi:chevron-down" />
                   </Button>
@@ -180,9 +181,10 @@
             {:else if !page.dropdown}
                <Link href={page.link}>
                   <Button 
-                     color="transparent" 
+                     color="transparent-alt" 
                      flat lowercase square block
-                     size="text-lg px-5 pt-[14px] pb-3">
+                     size="text-lg px-5 pt-[14px] pb-3"
+                     klass="font-bold font-body text-primary-d2 group-hover:text-primary-l1">
                      {page.name}
                   </Button>
                </Link>

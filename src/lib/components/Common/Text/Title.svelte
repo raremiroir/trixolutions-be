@@ -12,8 +12,10 @@
 // Choose color or leave blank for default (primary)
    export let color = ''
 
-// Use smaller h6 case
+// Use smaller case
    export let small = false;
+// Use smallest case
+   export let smallest = false;
 
 </script>
 
@@ -34,8 +36,10 @@
    {:else if type === 'h2'}
       <h2 class="
             font-title font-bold
-            {color ? color : 'text-primary'} 
-            {small ? 'text-5xl' : 'h2-size'}">
+            { color ? color : 'text-primary'} 
+            { small ? 'text-5xl'
+            : smallest ? 'text-3xl'
+            : 'h2-size'}">
          <slot/>
       </h2>
    <!-- If type is h3 -->

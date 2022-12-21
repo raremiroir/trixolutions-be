@@ -74,6 +74,7 @@
    onMount(() => {
       const videoContainer:any = document.getElementById('video-container');
       const fullscreenButton:any = document.getElementById('btnFullScreen');
+      const videoElement:any = document.getElementById('video-element');
       const toggleFullScreen = () => {
          if(document.fullscreenElement) {
             document.exitFullscreen();
@@ -86,6 +87,7 @@
          }
       }
       fullscreenButton.onclick = toggleFullScreen;
+      videoElement.ondblclick = toggleFullScreen;
    })
    
 </script>
@@ -103,6 +105,7 @@
          bind:currentTime={time}
          bind:duration={duration} bind:paused bind:muted
          bind:volume {src}
+         id='video-element'
          class="
             border-4 border-primary rounded-lg
             w-full h-auto bg-black

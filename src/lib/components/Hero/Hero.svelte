@@ -29,7 +29,7 @@
       class="
          object-cover object-center
          w-full 
-         h-120 lg:h-160
+         h-156 lg:h-160
          "
        />
 
@@ -43,6 +43,7 @@
    <div class="
          w-full h-full 
          absolute top-0
+         pt-20
          flex items-center">
       <div class="w-3/4 mx-auto flex flex-col gap-4">
          <Title type="h1" color="text-gray-100/90">

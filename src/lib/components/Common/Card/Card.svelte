@@ -10,16 +10,22 @@
 	import Link    from "$comp/Common/Link/Link.svelte";
 	import Button  from "$comp/Common/Button/Button.svelte";
 
-   // Choose title
-   export let title = "";
    // Choose type of title
    export let titleType = "h3";
+
+   // Choose direction of card
+   export let direction = 'col';
    
    // If card is link, enter url
    export let link = '';
 
    // Make cards in row equal height
    export let equalHeight = false;
+
+   // Small title?
+   export let titleSmall = false;
+   // Smallest title?
+   export let titleSmallest = false;
 
    let wrapComp = Div;
    // If link isnt specified, make div
@@ -36,7 +42,10 @@
    this={wrapComp}
    klass="
       group overflow-hidden
-      flex flex-col gap-2 
+      flex gap-2  items-center justify-center
+      { direction === 'row' ? 'flex-row' 
+      : direction === 'row-reverse' ? 'flex-row-reverse'
+      : 'flex-col'} 
       bg-gray-50/70
       {link ? 'hover:bg-gray-100/70 active:bg-gray-200/70 hover:shadow-xl' : ''}  
       rounded-xl shadow-lg
@@ -44,16 +53,21 @@
       w-full
       ">
    <slot name="prepend-outer"/>
-   <slot name="image"/>
+   
+   <div class="
+         { direction === 'row' ? 'w-1/2' 
+         : direction === 'col' ? 'w-full' 
+         : 'w-fit'} h-full overflow-hidden">
+      <slot name="image"/>
+   </div>
    
     <!-- Inner Wrap -->
-   <div class="pt-2 px-4 pb-4 flex flex-col h-full gap-1 items-start justify-start relative">
+   <div class="pt-2 px-4 pb-4 flex flex-col h-full gap-2 items-start justify-start relative">
 
       <slot name="prepend-inner"/>
 
-      <Title 
-         type={titleType} small>
-         {title}
+      <Title type={titleType} small={titleSmall} smallest={titleSmallest}>
+         <slot name="title"/>
       </Title>
 
       <P large>

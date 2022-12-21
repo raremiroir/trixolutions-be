@@ -7,6 +7,9 @@
 
    // True if menu is open
    export let menuOpen = false;
+   // Open menu when hovering over trigger instead of clicking
+   export let hoverState = false;
+
    // Clicked on menu button --> open/close menu
    const handleMenuClick = () => {
       menuOpen = !menuOpen;
@@ -16,6 +19,9 @@
       if (relatedTarget instanceof HTMLElement && currentTarget.contains(relatedTarget)) return
       menuOpen = false;
    }
+
+   const openMenu = () => {menuOpen = true};
+   const closeMenu = () => {menuOpen = false};
 
    // Add extra classes on component wrapper when called
    export let wrapClass = "";
@@ -33,17 +39,32 @@
 <div class="min-w-fit {wrapClass}"
      on:focusout={handleMenuFocusLoss}>
 
+
      <!-- Trigger Wrapper -->
-     <div class="group {klass}" on:click={handleMenuClick}>
-         <slot name="trigger">Menu Trigger</slot>
-     </div>
+      {#if hoverState}
+         <div 
+            class="group {klass}" 
+            on:mouseenter={() => openMenu()}
+            on:mouseleave={() => closeMenu()}
+            on:mouseover={() => openMenu()}
+            on:focus={() => openMenu()}>
+               <slot name="trigger">Menu Trigger</slot>
+         </div>
+      {:else}
+         <div 
+            class="group {klass}" 
+            on:click={handleMenuClick}
+            on:keydown|preventDefault={handleMenuClick}>
+               <slot name="trigger">Menu Trigger</slot>
+         </div>
+      {/if}
 
      <!-- Menu Wrapper -->
      {#if menuOpen}
          <div 
             transition:fade="{{duration: 200}}"
             class="
-               absolute {menuPos} z-50
+               absolute {menuPos} z-99
                bg-gray-50 rounded-lg
                shadow-md min-w-fit lg:min-w-fit max:w-full
                px-2 py-0.5">

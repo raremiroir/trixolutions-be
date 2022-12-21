@@ -44,8 +44,8 @@
    <Button
       slot="trigger"
       color="transparent" flat rounded
-      size="square-md">
-      <Icon icon="ic:round-translate" width="28" />
+      size="square-md" klass="flex items-center justify-center">
+      <Icon icon="ic:round-translate" width="24" />
    </Button>
    <ul class="flex flex-col gap-2 p-2">
       {#each locales as l}
