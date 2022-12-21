@@ -278,7 +278,7 @@
 <Main>
    <SectionWrapper name="references">
       <Title slot="title" type='h1'>Referenties</Title>
-      <div class="w-2/3 mx-auto">
+      <div class="w-full mx-auto">
          <Video src={cegeka_video}/>
       </div>
    </SectionWrapper>
