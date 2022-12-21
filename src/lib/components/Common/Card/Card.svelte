@@ -46,7 +46,7 @@
       { direction === 'row' ? 'flex-row' 
       : direction === 'row-reverse' ? 'flex-row-reverse'
       : 'flex-col'} 
-      bg-gray-50/70
+      bg-white
       {link ? 'hover:bg-gray-100/70 active:bg-gray-200/70 hover:shadow-xl' : ''}  
       rounded-xl shadow-lg
       {equalHeight ? 'h-full' : 'h-fit'}
@@ -66,7 +66,7 @@
 
       <slot name="prepend-inner"/>
 
-      <Title type={titleType} small={titleSmall} smallest={titleSmallest}>
+      <Title type={titleType} small={titleSmall} smallest={titleSmallest} klass="flex items-center justify-center w-full">
          <slot name="title"/>
       </Title>
 
