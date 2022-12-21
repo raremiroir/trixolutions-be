@@ -8,8 +8,6 @@
    // Extra classes on image wrap
    export let klass = '';
 
-   // Choose image
-   export let img = '';
    // Set image position (default object-center)
    export let objectPos = '';
 
@@ -27,6 +25,6 @@
    srcset="{w400} 400w, {w600} 600w, {w800} 800w, {w1080} 1080w"
    sizes="(max-width: 600px) 400w, (max-width: 800px) 600w, (max-width: 1200px) 800w, (min-width: 1201px) 1080w"
    {src} {alt} loading={lazy ? 'lazy' : 'eager'}
-   class="{height ? height : 'h-60'} object-cover {objectPos ? objectPos : 'object-center'} {klass}"
+   class="{height ? height : 'h-60'} object-cover {objectPos ? objectPos : 'object-center'} w-full {klass}"
 />
 
