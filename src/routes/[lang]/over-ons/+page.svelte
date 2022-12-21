@@ -47,7 +47,7 @@
          />
          <P klass="col-span-2 h-fit" large>
             Trixolutions is als enige in de Benelux lid van de 
-            Table Group van Patrick Lencioni. (CAPA Pro)<br/>p
+            Table Group van Patrick Lencioni. (CAPA Pro)<br/>
             <br/>
             We zijn een dynamisch trainingskantoor met een sterke focus 
             op teamcoaching en leiderschapsvaardigheden met de Lencioni 
@@ -74,47 +74,53 @@
       <Title type="h2">Ons Team</Title>
 
       <div class="grid grid-cols-2 lg:grid-cols-3 gap-8">
-         <Card title="Tom van Dorst" titleType="h3">
+         <Card titleType="h3" titleSmall>
+            <span slot="title">Tom van Dorst</span>
             <Image 
                slot="image" height="h-80" alt="Tom van Dorst - CEO Trixolutions"
                w400={tom_bw400} w600={tom_bw600} w800={tom_bw800} w1080={tom_bw1080}
             />
             CEO / Trainer / Coach
          </Card>
-         <Card title="Tamara" titleType="h3">
+         <Card titleType="h3" titleSmall>
+            <span slot="title">Tamara</span>
             <Image 
                slot="image" height="h-80" alt="Tamara - Trixolutions Office Manager"
                w400={tamara400} w600={tamara600} w800={tamara800} w1080={tamara1080}
             />
             Office Manager
          </Card>
-         <Card title="Roger" titleType="h3">
+         <Card titleType="h3" titleSmall>
+            <span slot="title">Roger</span>
             <Image 
                slot="image" height="h-80" alt="Roger - Trixolutions Trainer / Acteur"
                w400={tamara400} w600={tamara600} w800={tamara800} w1080={tamara1080}
             />
             Trainer / Acteur
          </Card>
-         <Card title="Kelly" titleType="h3">
+         <Card titleType="h3" titleSmall>
+            <span slot="title">Kelly</span>
             <Image 
                slot="image" height="h-80" alt="Kelly - Trixolutions Trainer / Facilitator"
                w400={tamara400} w600={tamara600} w800={tamara800} w1080={tamara1080}
             />
             Trainer / Facilitator
          </Card>
-         <Card title="Christoph" titleType="h3">
+         <Card titleType="h3" titleSmall>
+            <span slot="title">Christoph</span>
             <Image 
                slot="image" height="h-80" alt="Christoph - Trixolutions Trainer / Facilitator"
                w400={christoph400} w600={christoph600} w800={christoph800} w1080={christoph1080}
-               objectPos="object-top"
+               objectPos="object-top" klass="w-full"
             />
             Trainer / Facilitator
          </Card>
-         <Card title="Frederik" titleType="h3">
+         <Card titleType="h3" titleSmall>
+            <span slot="title">Frederik</span>
             <Image 
                slot="image" height="h-80" alt="Frederik - Trixolutions Senior Trainer"
                w400={frederik400} w600={frederik600} w800={frederik800} w1080={frederik1080}
-               objectPos="object-top"
+               objectPos="object-top" klass="w-full"
             />
             Senior Trainer
          </Card>
