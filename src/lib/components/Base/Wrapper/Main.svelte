@@ -1,10 +1,11 @@
 <script>
    export let klass = '';
+   export let noMargin = false;
 </script>
 
 <main 
    class="
-      my-20
+      {noMargin ? '' : 'my-20'}
       {klass}">
    <slot/>
 </main>
