@@ -15,6 +15,8 @@
    export let italic = false
    // Set font family
    export let fontfam = 'font-body'
+   // Center text?
+   export let center = false;
    
 </script>
 
@@ -24,6 +26,7 @@
 <!--      -->
 <p 
    class="
+      { center ? 'text-center' : '' }
       { color ? color : 'text-gray-800' }
       { fontfam } { thickness }
       { italic ? 'italic' : '' }
