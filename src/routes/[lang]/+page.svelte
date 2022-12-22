@@ -7,13 +7,36 @@
 	import Hero from "$src/lib/components/Hero/Hero.svelte";
 	import Title from "$src/lib/components/Common/Text/Title.svelte";
 	import Main from "$src/lib/components/Base/Wrapper/Main.svelte";
+	import P from "$src/lib/components/Common/Text/P.svelte";
 
    // Import Images
 
 </script>
 
 <header>
-   <Hero/>
+   <Hero imgAlt="De Kracht van Gezonde Teams">
+      <div class="flex flex-col gap-2">
+         <Title type='subheader' color="text-gray-50">
+           Opleiding in Teamcoaching
+         </Title>
+         <P thickness="font-semibold" color="text-gray-200">
+            De kracht van een gezond team zit voornamelijk in de vaardigheid 
+            van teamleden om vertrouwen op te bouwen, met elkaar respectvolle 
+            conflicten te kunnen hebben, betrokkenheid bij het team te voelen, 
+            elkaar aansprakelijk te durven stellen en resultaatgericht te kunnen werken.
+         </P>
+         <P thickness="font-bold" color="text-gray-50">
+            Nieuwe data!! In samenwerking met de Table Group van Lencioni bundelen 
+            we al onze Lencioni-expertise rond het succes model “De 5 frustraties 
+            van teamwork”, in een tweedaagse Masterclass Coach-the-Coach opleiding.<br/> 
+            Zie hier voor de data!
+         </P>
+      </div>
+      <div class="flex flex-row gap-4">
+         <Button size="lg" color="transparent" outlined>Meer Info</Button>
+         <Button size="lg" color="primary">Over Trixolutions</Button>
+      </div>
+   </Hero>
 </header>
 
 <Main noMargin>
