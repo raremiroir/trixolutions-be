@@ -22,7 +22,7 @@
    class="
       w-full md:w-11/12 lg:w-5/6 xl:w-3/4 2xl:w-2/3 mx-auto
       flex flex-col gap-8 
-      py-8 px-4 md:px-0
+      pb-8 pt-4 px-4 md:px-0
       {klass}
    ">    
       <!-- Section Title -->
