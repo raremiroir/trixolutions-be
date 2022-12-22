@@ -1,0 +1,128 @@
+<script>
+	import Accordeon from "$src/lib/components/Accordeon/Accordeon.svelte";
+import Image from "$src/lib/components/Base/Media/Image.svelte";
+	import Main from "$src/lib/components/Base/Wrapper/Main.svelte";
+   import SectionWrapper from "$src/lib/components/Base/Wrapper/SectionWrapper.svelte";
+	import Breadcrumbs from "$src/lib/components/Common/Breadcrumbs/Breadcrumbs.svelte";
+	import Button from "$src/lib/components/Common/Button/Button.svelte";
+	import Card from "$src/lib/components/Common/Card/Card.svelte";
+	import List from "$src/lib/components/Common/List/List.svelte";
+	import ListItem from "$src/lib/components/Common/List/ListItem.svelte";
+	import Blockquote from "$src/lib/components/Common/Text/Blockquote.svelte";
+	import P from "$src/lib/components/Common/Text/P.svelte";
+	import Tag from "$src/lib/components/Common/Text/Tag.svelte";
+	import Title from "$src/lib/components/Common/Text/Title.svelte";
+	import Hero from "$src/lib/components/Hero/Hero.svelte";
+
+   import { formatDateMonthFull } from "$src/utils";
+
+   import lencioni_pyramid from '$img/lencioni/pyramide/pyramid-lencioni-1.png'
+	import Tabs from "$src/lib/components/Tabs/Tabs.svelte";
+
+   let infosessie_data = [
+      {
+         date: '02/12/2022',
+         start: '11:00',
+         end: '11:45',
+         coach: 'Tom van Dorst',
+      },
+      {
+         date: '13/01/2023',
+         start: '11:00',
+         end: '11:45',
+         coach: 'Tom van Dorst',
+      },
+   ]
+   let deepdive_data = [
+      {
+         date: '05/12/2022',
+         start: '09:00',
+         end: '17:00',
+         coach: 'Tom van Dorst',
+      },
+   ]
+
+</script>
+
+<header>
+   <Hero title="Trixolutions / Lencioni Hybride Teamcoaching Leertraject" height="h-92" />
+</header>
+
+<Main noMargin>
+   <Breadcrumbs/>
+   
+   <SectionWrapper name="hybride-lencioni-leertraject">
+      <P large>
+         Jouw <strong>hybride Lencioni Leertraject</strong> om je, via <strong>online en fysieke leermomenten</strong>, 
+         te verdiepen en <strong>bekwamen als Lencioni Teamcoach</strong>, is klaar.<br/>
+         <br/>
+         Trixolutions werkt al 15 jaar intensief met alle modellen, methodieken 
+         en inzichten van The Table Group van Patrick Lencioni. <br/>
+         Als enige in de Benelux zijn we ook gecertificeerde partner (CAPAPro) 
+         van Patrick Lencioni. Dit wil zeggen dat we wekelijks <strong>door Patrick zelf 
+         getraind en gecoached worden</strong> in de vele modellen, assessments en oefeningen, 
+         en in de Table Group CAPAPro Academy toegang hebben tot honderden filmpjes, 
+         virtuele trainingen, speciale podcasts, facilitator instructies, etc.<br/>
+         <br/>
+         We hebben alle onze Lencioni wijsheid en kennis in <strong>2 mogelijke 
+         leertrajecten</strong> gegoten:
+      </P>
+      <ul class="flex flex-col gap-4">
+         <li>
+            <Accordeon title="Het Partnership tussen Trixolutions en Patrick Lencioni" titleSmaller>
+               <div class="flex flex-col gap-2">
+                  <Title type="h4" smaller>Trixolutions is als enige in de Benelux lid van de Table Group van Patrick Lencioni. (CAPA Pro)</Title>
+                  <P large>
+                     We worden in de Lencioni CAPA Pro Academy op wekelijkse basis begeleid, gecoacht en 
+                     getraind in de verschillende Lencioni modellen, assessment en toepassingen door 
+                     Patrick Lencioni en zijn consultants zelf.<br/>
+                     Deze kennis, gecombineerd met meer dan 200 teamtrajecten op de teller, zijn we de 
+                     ideale partner om jouw Lencioni kennis te verhogen naar het hoogste niveau.
+                  </P>
+                  <Blockquote author="Patrick Lencioni">
+                     Niet de operationele en strategische sterktes van een team zijn doorslaggevend … 
+                     maar wel de kracht en gezondheid van dit team zullen hét ultieme competitief voordeel zijn in de toekomst …
+                  </Blockquote>
+                  <P large>
+                     De kracht van een gezond team zit voornamelijk in de vaardigheid van teamleden 
+                     om <strong>vertrouwen</strong> op te bouwen, met elkaar <strong>respectvolle conflicten</strong> te kunnen hebben, 
+                     <strong>betrokkenheid bij het team</strong> te voelen, elkaar <strong>aansprakelijk</strong> te durven stellen en 
+                     <strong>resultaatgericht</strong> te kunnen werken.
+                  </P>
+               </div>
+            </Accordeon>
+         </li>
+         <li>
+            <Accordeon title="Welke Vragen zullen We voor Je Oplossen?" titleSmaller>
+               <div class="flex flex-col gap-2">
+                  <Title type="h4" smaller>In deze opleiding zal je antwoorden vinden op vragen als:</Title>
+                  <div class="flex flex-row w-full justify-between">
+                     <List klass="w-7/12">
+                        <ListItem large>Hoe werk ik aan een gezonde teamcultuur met dit model?</ListItem>
+                        <ListItem large>Hoe verkoop ik een Lencioni traject aan mijn (interne) klant?</ListItem>
+                        <ListItem large>Hoe creëer ik voldoende "goesting" of "burning platform" om een Lencioni traject te starten?</ListItem>
+                        <ListItem large>Hoe ontwikkel ik een Lencioni teamcoaching traject?</ListItem>
+                        <ListItem large>Wat zijn de verschillende stappen in een Lencioni teamcoachingstraject?</ListItem>
+                        <ListItem large>Welke Lencioni oefeningen zijn er (extra) om met teams in de verschillende lagen van de Piramide te werk te gaan?</ListItem>
+                        <ListItem large>Met welke andere “modellen” kan de Piramide gecombineerd worden?</ListItem>
+                        <ListItem large>Hoe zet ik het volledige Lencioni Team Assessment juist in?</ListItem>
+                        <ListItem large>Hoe gebruik ik het Lencioni Persoonlijk Teamlid Assessment?</ListItem>
+                        <ListItem large>Welke vaardigheden heeft een Lencioni Teamcoach juist nodig?</ListItem>
+                        <ListItem large>Welke Lencioni Tools en materiaal is er en kan ik inzetten?</ListItem>
+                        <ListItem large>Waar kan ik hulp vinden als ik vastloop in een teamtraject?</ListItem>
+                        <ListItem large>...</ListItem>
+                     </List>
+                     <div class="w-5/12">
+                        <Image src={lencioni_pyramid} alt="Pyramide van Lencioni" height="h-80" objectFit="object-contain"/>
+                     </div>
+                  </div>
+               </div>
+            </Accordeon>
+         </li>
+      </ul>
+   </SectionWrapper>
+
+   <SectionWrapper name="infosessies-praktische-info">
+      
+   </SectionWrapper>
+</Main>
