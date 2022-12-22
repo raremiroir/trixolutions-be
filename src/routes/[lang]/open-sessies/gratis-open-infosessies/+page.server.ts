@@ -1,4 +1,3 @@
-import { invalid } from '@sveltejs/kit'
 import type { PageServerLoad } from './$types'
 
 // Form Message Items Array
@@ -10,6 +9,5 @@ export const load = ({ locals: { LL } }) => {
    console.info(LL.log({ fileName: '+page.server.ts' }))
    // Return form message
    return {
-      messageItems
    }
 }
