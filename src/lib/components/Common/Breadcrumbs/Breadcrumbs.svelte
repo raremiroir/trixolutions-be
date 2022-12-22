@@ -34,28 +34,37 @@
 
 <div class="dui-breadcrumbs w-11/12 lg:w-5/6 xl:w-3/4 2xl:w-2/3 mx-auto">
    <ul class="
-       text-primary 
+       text-primary
          font-body font-semibold 
          flex items-center">
 
-     <li class="hover:text-primary-l1">
-       <a href="/" class="flex items-center">
+     <li class="hover:text-primary-l1 transition-all duration-200 ease-out">
+       <a href="/" 
+         class="flex items-center 
+            !no-underline border-b-2 border-transparent hover:border-primary-l1
+            transition-all duration-200 ease-out">
          <Icon icon="gg:home-alt" />
          <span class="ml-1 mt-0.5">Home</span>
        </a>
      </li> 
 
      {#if before}
-         <li class="hover:text-primary-l1">
-            <a href="{beforeUrl}" class="flex flex-row"> 
+         <li class="hover:text-primary-l1 transition-all duration-200 ease-out">
+            <a href="{beforeUrl}" 
+               class="flex flex-row 
+                  !no-underline border-b-2 border-transparent hover:border-primary-l1
+                  transition-all duration-200 ease-out">  
                <Icon icon="{beforeIcon}"/>
                <span class="ml-1 mt-0.5">{before}</span>
             </a>
          </li>
       {/if}
 
-      <li class="hover:text-primary-l1">
-         <a href="{currentUrl}"> 
+      <li class="hover:text-primary-l1 transition-all duration-200 ease-out">
+         <a href="{currentUrl}" 
+            class="
+               !no-underline border-b-2 border-transparent hover:border-primary-l1
+               transition-all duration-200 ease-out"> 
             <Icon icon="{currentIcon}"/>
             <span class="ml-1 mt-0.5">{currentName}</span>
          </a>
