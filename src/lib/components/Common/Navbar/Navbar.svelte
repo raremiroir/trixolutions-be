@@ -28,7 +28,7 @@
          name: 'Open Workshops', link: `/${$locale}/open-sessies`, dropdown: true, 
          pages: [
                { title: 'Gratis Open Infosessies', link: `/${$locale}/open-sessies/gratis-open-infosessies` },
-               { title: 'Hybride Lencioni Leertrajecten', link: `/${$locale}/open-sessies/hybride-lencioni-leertrajecten` },
+               { title: 'Hybride Lencioni Leertraject', link: `/${$locale}/open-sessies/hybride-lencioni-leertraject` },
                { title: 'Lencioni DeepDive - Level 2', link: `/${$locale}/open-sessies/lencioni-deepdive-level-2` },
          ] 
       },
@@ -93,14 +93,15 @@
                <li class="w-fit">
                   {#if page.dropdown}
                      <Menu hoverState>
-                        <Button 
-                           slot="trigger"
-                           color="transparent" 
-                           flat lowercase 
-                           size="text-lg px-5 pt-[14px] pb-3">
-                           {page.name}
-                           <Icon icon="mdi:chevron-down" />
-                        </Button>
+                        <a href={page.link} slot="trigger" class="w-fit h-fit m-0 p-0">
+                           <Button 
+                              color="transparent" 
+                              flat lowercase 
+                              size="text-lg px-5 pt-[14px] pb-3">
+                              {page.name}
+                              <Icon icon="mdi:chevron-down" />
+                           </Button>
+                        </a>
                         <ul class="flex flex-col gap-1 py-2">
                            {#each page.pages as item}
                               <li>
