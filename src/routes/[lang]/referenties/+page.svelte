@@ -9,6 +9,7 @@
 
    // Import Video
    import cegeka_video from '$lib/videos/referentiefilmpje-cegeka-min.mp4'
+   import cegeka_thumbnail from '$lib/videos/referentiefilmpje-cegeka-thumbnail-720.webp'
    // Import images
    import acerta from '$img/references/acerta-logo.png'; 
    import axa from '$img/references/axa-logo.png'; 
@@ -279,7 +280,7 @@
    <SectionWrapper name="references">
       <Title slot="title" type='h1'>Referenties</Title>
       <div class="w-full mx-auto">
-         <Video src={cegeka_video}/>
+         <Video src={cegeka_video} poster={cegeka_thumbnail}/>
       </div>
    </SectionWrapper>
 
