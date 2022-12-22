@@ -9,15 +9,25 @@
 	import Div     from "$comp/Base/Div.svelte";
 	import Link    from "$comp/Common/Link/Link.svelte";
 	import Button  from "$comp/Common/Button/Button.svelte";
+	import Tag from "../Text/Tag.svelte";
 
    // Choose type of title
    export let titleType = "h3";
+   // Center title?
+   export let centerTitle = false;
 
    // Choose direction of card
    export let direction = 'col';
    
    // If card is link, enter url
    export let link = '';
+   
+   // If card has label, enter here
+   export let label = '';
+   // Extra label props (see component)
+   export let labelPrimary = false;
+   export let labelSm = false;
+   export let labelLg = false;
 
    // Make cards in row equal height
    export let equalHeight = false;
@@ -62,15 +72,21 @@
    </div>
    
     <!-- Inner Wrap -->
-   <div class="pt-2 px-4 pb-4 flex flex-col h-full gap-2 items-start justify-start relative">
+   <div class="pt-2 px-4 pb-4 flex flex-col h-full gap-4 items-start justify-start relative w-full">
 
       <slot name="prepend-inner"/>
+      
+      <div class="m-0 p-0 flex flex-row w-full h-fit items-center justify-between">
+         <Title type={titleType} small={titleSmall} smallest={titleSmallest} klass="flex items-center {centerTitle ? 'justify-center' : ''} w-full">
+            <slot name="title"/>
+         </Title>
 
-      <Title type={titleType} small={titleSmall} smallest={titleSmallest} klass="flex items-center justify-center w-full">
-         <slot name="title"/>
-      </Title>
+         {#if label}
+            <Tag primary={labelPrimary} small={labelSm} large={labelLg}>{label}</Tag>
+         {/if}
+      </div>
 
-      <P large>
+      <P large klass="w-full">
          <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus molestias maiores soluta at vel quia, beatae distinctio aliquid. Omnis, tempore?</slot>
       </P>
       
