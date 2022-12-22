@@ -3,13 +3,13 @@
 <!--      -->
 <script lang="ts">
 	// Import components
+	import Button  from "$comp/Core/Button/Button.svelte";
    import Image   from "$comp/Base/Media/Image.svelte";
-   import Title from "$src/lib/components/Common/Text/Title.svelte";
-	import P       from "$comp/Common/Text/P.svelte";
 	import Div     from "$comp/Base/Div.svelte";
+   import Title   from "$comp/Common/Text/Title.svelte";
+	import P       from "$comp/Common/Text/P.svelte";
 	import Link    from "$comp/Common/Link/Link.svelte";
-	import Button  from "$comp/Common/Button/Button.svelte";
-	import Tag from "../Text/Tag.svelte";
+	import Tag     from "$comp/Common/Text/Tag.svelte";
 
    // Choose type of title
    export let titleType = "h3";
@@ -34,6 +34,8 @@
 
    // Small title?
    export let titleSmall = false;
+   // Smaller title?
+   export let titleSmaller = false;
    // Smallest title?
    export let titleSmallest = false;
 
@@ -77,7 +79,7 @@
       <slot name="prepend-inner"/>
       
       <div class="m-0 p-0 flex flex-row w-full h-fit items-center justify-between">
-         <Title type={titleType} small={titleSmall} smallest={titleSmallest} klass="flex items-center {centerTitle ? 'justify-center' : ''} w-full">
+         <Title type={titleType} small={titleSmall} smaller={titleSmaller} smallest={titleSmallest} klass="flex items-center {centerTitle ? 'justify-center' : ''} w-full">
             <slot name="title"/>
          </Title>
 

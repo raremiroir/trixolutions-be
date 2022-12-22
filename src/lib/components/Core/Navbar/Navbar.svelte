@@ -6,13 +6,13 @@
    import { page, navigating }   from "$app/stores";
    import { slide }     from "svelte/transition";
    // Import components
-   import Button        from "$comp/Common/Button/Button.svelte";
-   import Link          from "$comp/Common/Link/Link.svelte";
-   import Menu          from "$comp/Menu/Menu.svelte";
-   import Hamburger     from "./Hamburger.svelte";
+   import Button        from "$comp/Core/Button/Button.svelte";
+   import Hamburger     from "$comp/Core/Navbar/Hamburger.svelte";
+	import LangSwitcher  from "$comp/Core/Navbar/LangSwitcher.svelte";
    import Logo          from "$comp/Base/Media/Logo.svelte";
+   import Link          from "$comp/Common/Link/Link.svelte";
+   import Menu          from "$comp/Other/Menu/Menu.svelte";
    import Icon          from '@iconify/svelte';
-	import LangSwitcher  from "./LangSwitcher.svelte";
 
    // Import locale from i18n
    import { locale } from "$i18n/i18n-svelte";
@@ -62,8 +62,11 @@
 <div 
    class="
       w-full fixed top-0
-      bg-gray-100/30 backdrop-blur-md 
-      py-2  z-20
+      { yscroll >= 10
+      ? 'bg-gray-200/30 py-2' 
+      : 'bg-gray-100/30 py-4'}
+      backdrop-blur-md
+      z-20
       transition-all duration-200
       border-b-2 lg:border-none
       {openMobile ? 'border-primary' : 'border-transparent'}">

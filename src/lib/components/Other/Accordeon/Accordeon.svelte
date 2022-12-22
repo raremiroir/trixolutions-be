@@ -2,7 +2,7 @@
    import { slide } from "svelte/transition";
 
 	import Icon from "@iconify/svelte";
-	import Title from "../Common/Text/Title.svelte";
+	import Title from "$comp/Common/Text/Title.svelte";
 
    // Set title
    export let title = '';

@@ -9,9 +9,9 @@
 	import { loadLocaleAsync } from '$i18n/i18n-util.async'
 	import { replaceLocaleInUrl } from '../../../../utils'
    // import components
-   import Menu from "$comp/Menu/Menu.svelte";
-   import Button from "$comp/Common/Button/Button.svelte";
-   import Icon from "@iconify/svelte";
+   import Button  from "$comp/Core/Button/Button.svelte";
+   import Menu    from "$comp/Other/Menu/Menu.svelte";
+   import Icon    from "@iconify/svelte";
 
    const switchLocale = async (newLocale: Locales, updateHistoryState = true) => {
 		if (!newLocale || $locale === newLocale) return
@@ -40,22 +40,38 @@
 
 <svelte:window on:popstate={handlePopStateEvent} />
 
-<Menu>
+<Menu hoverState padding="p-0.5">
    <Button
       slot="trigger"
       color="transparent" flat rounded
-      size="square-md" klass="flex items-center justify-center">
+      size="square-md" 
+      klass="flex items-center justify-center">
       <Icon icon="ic:round-translate" width="24" />
    </Button>
-   <ul class="flex flex-col gap-2 p-2">
+   <ul class="flex flex-col gap-1 p-2">
       {#each locales as l}
          <li>
             <Button
                on:click={() => switchLocale(l)}
-               color="{l === $locale ? 'accent' : 'transparent'}"
-               flat block size="sm"
+               color="{l === $locale ? 'secondary' : 'transparent'}"
+               flat block size="xs"
                >
-               {l}
+               <div class="w-full flex flex-row items-center justify-start gap-2">
+                  <Icon icon="emojione:flag-for-{l === 'nl' ? 'belgium' : l === 'en' ? 'united-kingdom' : l === 'fr' ? 'france' : ''}" 
+                        width="20" />
+                  <div class="flex flex-col items-start justify-center">
+                     {l === 'en' ? 'English' 
+                     : l === 'fr' ? 'Français' 
+                     : l === 'nl' ? 'Nederlands' 
+                     : 'Error'}
+                     <span class="text-xs italic text-gray-600 capitalize drop-shadow-none font-light">
+                        { l === 'en' ? 'Engels' 
+                        : l === 'fr' ? 'Frans' 
+                        : l === 'nl' ? 'Nederlands' 
+                        : 'Error'}
+                     </span>
+                  </div>
+               </div> 
             </Button>
          </li>
       {/each}

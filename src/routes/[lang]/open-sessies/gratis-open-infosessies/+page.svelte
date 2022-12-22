@@ -1,14 +1,14 @@
 <script>
-	import Image from "$src/lib/components/Base/Media/Image.svelte";
-	import Main from "$src/lib/components/Base/Wrapper/Main.svelte";
-import SectionWrapper from "$src/lib/components/Base/Wrapper/SectionWrapper.svelte";
-	import Breadcrumbs from "$src/lib/components/Common/Breadcrumbs/Breadcrumbs.svelte";
-	import Button from "$src/lib/components/Common/Button/Button.svelte";
-	import Card from "$src/lib/components/Common/Card/Card.svelte";
-	import P from "$src/lib/components/Common/Text/P.svelte";
-	import Tag from "$src/lib/components/Common/Text/Tag.svelte";
-	import Title from "$src/lib/components/Common/Text/Title.svelte";
-	import Hero from "$src/lib/components/Hero/Hero.svelte";
+	import Button           from "$comp/Core/Button/Button.svelte";
+	import Main             from "$comp/Base/Wrapper/Main.svelte";
+   import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
+	import Image            from "$comp/Base/Media/Image.svelte";
+	import Breadcrumbs      from "$comp/Common/Breadcrumbs/Breadcrumbs.svelte";
+	import Card             from "$comp/Common/Card/Card.svelte";
+	import P                from "$comp/Common/Text/P.svelte";
+	import Tag              from "$comp/Common/Text/Tag.svelte";
+	import Title            from "$comp/Common/Text/Title.svelte";
+	import Hero 	         from "$comp/Hero/Hero.svelte";
 
    import { formatDateMonthFull } from "$src/utils";
 

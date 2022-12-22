@@ -1,18 +1,18 @@
 <script>
-	import Image from "$src/lib/components/Base/Media/Image.svelte";
-	import Map from "$src/lib/components/Base/Media/Map.svelte";
-	import Main from "$src/lib/components/Base/Wrapper/Main.svelte";
-import SectionWrapper from "$src/lib/components/Base/Wrapper/SectionWrapper.svelte";
-	import Breadcrumbs from "$src/lib/components/Common/Breadcrumbs/Breadcrumbs.svelte";
-	import Button from "$src/lib/components/Common/Button/Button.svelte";
-	import Card from "$src/lib/components/Common/Card/Card.svelte";
-	import Link from "$src/lib/components/Common/Link/Link.svelte";
-	import P from "$src/lib/components/Common/Text/P.svelte";
-	import Title from "$src/lib/components/Common/Text/Title.svelte";
-	import Tab from "$src/lib/components/Tabs/Tab.svelte";
-	import TabPanel from "$src/lib/components/Tabs/TabPanel.svelte";
-	import Tabs from "$src/lib/components/Tabs/Tabs.svelte";
-	import Icon from "@iconify/svelte";
+	import Button           from "$comp/Core/Button/Button.svelte";
+	import Main             from "$comp/Base/Wrapper/Main.svelte";
+   import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
+	import Map              from "$comp/Base/Media/Map.svelte";
+	import Image            from "$comp/Base/Media/Image.svelte";
+	import Breadcrumbs      from "$comp/Common/Breadcrumbs/Breadcrumbs.svelte";
+	import Card             from "$comp/Common/Card/Card.svelte";
+	import Link             from "$comp/Common/Link/Link.svelte";
+	import P                from "$comp/Common/Text/P.svelte";
+	import Title            from "$comp/Common/Text/Title.svelte";
+	import Tabs             from "$comp/Other/Tabs/Tabs.svelte";
+	import Tab              from "$comp/Other/Tabs/Tab.svelte";
+	import TabPanel         from "$comp/Other/Tabs/TabPanel.svelte";
+	import Icon             from "@iconify/svelte";
 
 
    const places = [

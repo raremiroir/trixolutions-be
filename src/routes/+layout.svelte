@@ -9,8 +9,8 @@
 	console.info($LL.log({ fileName: '+layout.svelte' }))
 
 	// Import Components
-	import Footer from "$src/lib/components/Common/Footer/Footer.svelte";
-	import Navbar from "$src/lib/components/Common/Navbar/Navbar.svelte";
+	import Footer from "$comp/Core/Footer/Footer.svelte";
+	import Navbar from "$comp/Core/Navbar/Navbar.svelte";
 	import "../app.postcss";
 
 

@@ -29,6 +29,8 @@
    export let klass = "";
    // Position of menu
    export let menuPos = 'translate-y-1 -translate-x-0';
+   // Menu padding
+   export let padding = 'px-2 py-0.5';
 </script>
 
 <!--      -->
@@ -70,9 +72,9 @@
                on:focus={() => openMenu()}
                class="
                   absolute {menuPos} z-99
-                  bg-gray-50 rounded-lg
+                  bg-white rounded-lg
                   shadow-md min-w-fit lg:min-w-fit max:w-full
-                  px-2 py-0.5">
+                  {padding}">
                <slot/>
             </div>
          {:else}
@@ -80,9 +82,9 @@
                transition:fade="{{duration: 200}}"
                class="
                   absolute {menuPos} z-99
-                  bg-gray-50 rounded-lg
+                  bg-white rounded-lg
                   shadow-md min-w-fit lg:min-w-fit max:w-full
-                  px-2 py-0.5">
+                  {padding}">
                <slot/>
             </div>
          {/if}

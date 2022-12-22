@@ -2,7 +2,7 @@
 <!--  JS  -->
 <!--      -->
 <script lang="ts">
-	import Button from "$comp/Common/Button/Button.svelte";
+	import Button from "$comp/Core/Button/Button.svelte";
 
    export let color = `
       bg-primary group-hover:bg-primary-l1 group-hover:drop-shadow-lg
