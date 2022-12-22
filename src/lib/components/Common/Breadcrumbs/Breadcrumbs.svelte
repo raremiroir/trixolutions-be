@@ -32,7 +32,7 @@
    console.log(currentName);
 </script>
 
-<div class="dui-breadcrumbs">
+<div class="dui-breadcrumbs w-11/12 lg:w-5/6 xl:w-3/4 2xl:w-2/3 mx-auto">
    <ul class="
        text-primary 
          font-body font-semibold 
