@@ -12,10 +12,14 @@
 // Choose color or leave blank for default (primary)
    export let color = ''
 
-// Use smaller case
+// Use small case
    export let small = false;
+// Use smaller case
+   export let smaller = false;
 // Use smallest case
    export let smallest = false;
+// Use larger case
+   export let large = false;
 
 </script>
 
@@ -26,7 +30,7 @@
 <div class="{klass}">
    <!-- If type is h1 -->
    {#if type === 'h1'}
-      <h1 class="
+      <h1 class=" text-xl
             font-title font-bold leading-none
             {color ? color : 'text-primary'} 
             {small ? 'text-7xl' : 'h1-size'}">
@@ -37,8 +41,10 @@
       <h2 class="
             font-title font-bold
             { color ? color : 'text-primary'} 
-            { small ? 'text-5xl'
-            : smallest ? 'text-3xl'
+            { small ? 'h3-size'
+            : smaller ? 'h4-size'
+            : smallest ? 'h6-size'
+            : large ? 'h1-size-sm'
             : 'h2-size'}">
          <slot/>
       </h2>
@@ -46,16 +52,22 @@
    {:else if type === 'h3'}
       <h3 class="
             font-title leading-tight font-bold
-            {color ? color : 'text-primary-d1'} 
-            {small ? 'text-3xl' : 'h3-size'}">
+            { color ? color : 'text-primary-d1' } 
+            { small ? 'h4-size' 
+            : smaller ? 'h6-size'
+            : smallest ? 'h6-size-sm'
+            : 'h3-size'}">
          <slot/>
       </h3>
    <!-- If type is h4 -->
    {:else if type === 'h4'}
       <h4 class="
             font-title leading-normal font-bold
-            {color ? color : 'text-primary-d1'} 
-            {small ? 'text-2xl' : 'h4-size'}">
+            { color ? color : 'text-primary-d1' } 
+            { small ? 'h5-size' 
+            : smaller ? 'h6-size-sm'
+            : smallest ? ''
+            : 'h4-size'}">
          <slot/>
       </h4>
    <!-- If type is h5 -->
@@ -91,28 +103,19 @@
 <!-- STYLE -->
 <!--       -->
 <style>
-   .h1-size {
-      font-size: clamp(3rem, 2.2308rem + 3.0769vw, 5rem);
-   }
-   .h2-size {
-      font-size: clamp(2rem, 1.4231rem + 2.3077vw, 3.5rem);
-   }
-   .h3-size {
-      font-size: clamp(1.75rem, 1.2692rem + 1.9231vw, 3rem);
-   }
-   .h4-size {
-      font-size: clamp(1.5rem, 1.1154rem + 1.5385vw, 2.5rem);
-   }
-   .h5-size {
-      font-size: clamp(1.25rem, 0.9615rem + 1.1538vw, 2rem);
-   }
-   .h6-size {
-      font-size: clamp(1.125rem, 0.8846rem + 0.9615vw, 1.75rem);
-   }
-   .subtitle-size {
-      font-size: clamp(1.125rem, 0.8846rem + 0.9615vw, 1.75rem);
-   }
-   .subheader-size {
-      font-size: clamp(1.25rem, 0.9615rem + 1.1538vw, 2rem);
-   }
+   /*  clamp.font-size.app
+       vw 400-1200 */
+   
+   .h1-size { font-size: clamp(3rem, 2rem + 4vw, 5rem); }
+   .h1-size-sm { font-size: clamp(2.5rem, 1.375rem + 4.5vw, 4.75rem); }
+   .h2-size { font-size: clamp(2rem, 0.75rem + 5vw, 4.5rem); }
+   .h3-size { font-size: clamp(1.75rem, 1.125rem + 2.5vw, 3rem); }
+   .h4-size { font-size: clamp(1.5rem, 1rem + 2vw, 2.5rem); }
+   .h5-size { font-size: clamp(1.25rem, 0.875rem + 1.5vw, 2rem); }
+   .h6-size { font-size: clamp(1.125rem, 0.8125rem + 1.25vw, 1.75rem); }
+   .h6-size-sm { font-size: clamp(1rem, 0.875rem + 0.5vw, 1.25rem); }
+   .h6-size-xs { font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1.125rem); }
+
+   .subtitle-size { font-size: clamp(1.125rem, 0.8125rem + 1.25vw, 1.75rem); }
+   .subheader-size { font-size: clamp(1.25rem, 0.875rem + 1.5vw, 2rem); }
 </style>
