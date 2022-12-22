@@ -19,7 +19,7 @@ const colors = {
       transparent: {
          default:       `bg-transparent hover:bg-gray-500/30 
                          active:bg-gray-600/20 ring-none border-none`,
-         default_text:  `text-primary hover:text-primary-d2 active:text-black`,
+         default_text:  `text-primary hover:text-primary-l3 active:text-black drop-shadow-md`,
          outline:       `bg-transparent ring-2  hover:bg-primary-d3/5
                          ring-secondary  hover:ring-secondary-l1`,
          outline_text:  `text-secondary  hover:text-secondary-l1`,
