@@ -61,15 +61,31 @@
 
      <!-- Menu Wrapper -->
      {#if menuOpen}
-         <div 
-            transition:fade="{{duration: 200}}"
-            class="
-               absolute {menuPos} z-99
-               bg-gray-50 rounded-lg
-               shadow-md min-w-fit lg:min-w-fit max:w-full
-               px-2 py-0.5">
-            <slot/>
-         </div>
+         {#if hoverState}
+            <div 
+               transition:fade="{{duration: 200}}"
+               on:mouseenter={() => openMenu()}
+               on:mouseleave={() => closeMenu()}
+               on:mouseover={() => openMenu()}
+               on:focus={() => openMenu()}
+               class="
+                  absolute {menuPos} z-99
+                  bg-gray-50 rounded-lg
+                  shadow-md min-w-fit lg:min-w-fit max:w-full
+                  px-2 py-0.5">
+               <slot/>
+            </div>
+         {:else}
+            <div 
+               transition:fade="{{duration: 200}}"
+               class="
+                  absolute {menuPos} z-99
+                  bg-gray-50 rounded-lg
+                  shadow-md min-w-fit lg:min-w-fit max:w-full
+                  px-2 py-0.5">
+               <slot/>
+            </div>
+         {/if}
      {/if}
    
 </div>
