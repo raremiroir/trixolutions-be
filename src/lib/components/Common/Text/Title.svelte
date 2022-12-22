@@ -27,7 +27,7 @@
 <!-- HTML -->
 <!--      -->
 
-<div class="{klass}">
+<div class="m-0 p-0 {klass}">
    <!-- If type is h1 -->
    {#if type === 'h1'}
       <h1 class=" text-xl
@@ -36,6 +36,13 @@
             {small ? 'text-7xl' : 'h1-size'}">
          <slot/>
       </h1>
+   {:else if type === 'fake-h1'}
+      <span class=" text-xl
+            font-title font-bold leading-none
+            {color ? color : 'text-primary'} 
+            {small ? 'text-7xl' : 'h1-size'}">
+         <slot/>
+      </span>
       <!-- If type is h2 -->
    {:else if type === 'h2'}
       <h2 class="
