@@ -79,7 +79,13 @@
       <slot name="prepend-inner"/>
       
       <div class="m-0 p-0 flex flex-row w-full h-fit items-center justify-between">
-         <Title type={titleType} small={titleSmall} smaller={titleSmaller} smallest={titleSmallest} klass="flex items-center {centerTitle ? 'justify-center' : ''} w-full">
+         <Title 
+            type={titleType} 
+            small={titleSmall} smaller={titleSmaller} smallest={titleSmallest} 
+            klass="
+               flex items-center 
+               {centerTitle ? 'justify-center text-center' : ''} 
+               w-full">
             <slot name="title"/>
          </Title>
 
