@@ -12,6 +12,8 @@
 	import Footer from "$comp/Core/Footer/Footer.svelte";
 	import Navbar from "$comp/Core/Navbar/Navbar.svelte";
 	import "../app.postcss";
+	import SectionWrapper from '$src/lib/components/Base/Wrapper/SectionWrapper.svelte';
+	import CtA from '$src/lib/components/Core/CtA/CtA.svelte';
 
 
 </script>
@@ -27,6 +29,9 @@
 	
 		<slot></slot>
 	
+	<SectionWrapper name="call-to-action">
+		<CtA></CtA>
+	</SectionWrapper>
 	<Footer />
 </div>
 
