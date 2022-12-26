@@ -94,9 +94,9 @@
          {/if}
       </div>
 
-      <P large klass="w-full">
-         <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus molestias maiores soluta at vel quia, beatae distinctio aliquid. Omnis, tempore?</slot>
-      </P>
+      
+      <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus molestias maiores soluta at vel quia, beatae distinctio aliquid. Omnis, tempore?</slot>
+      
       
       <slot name="append-inner"/>
    </div>
