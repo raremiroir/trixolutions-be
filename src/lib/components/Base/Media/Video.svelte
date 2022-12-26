@@ -246,6 +246,7 @@
             {/if}
    
             <!-- Full Screen Toggle Button -->
+            <!-- TODO: Icon not changing on doubleclick --> FIX -->
             <button
                id="btnFullScreen" title="toggle full screen" accesskey="T"
                class="
