@@ -18,6 +18,7 @@
    import { formatDateMonthFull } from "$src/utils";
 
    import lencioni_pyramid from '$img/lencioni/pyramide/pyramid-lencioni-1.png'
+	import Link from "$src/lib/components/Common/Link/Link.svelte";
 
    let infosessie_data = [
       {
@@ -45,7 +46,9 @@
 </script>
 
 <header>
-   <Hero title="Trixolutions / Lencioni Hybride Teamcoaching Leertraject" height="h-92" />
+   <Hero height="h-92" titleSmall>
+      <span slot="title">Trixolutions / Lencioni Hybride Teamcoaching Leertraject</span>   
+   </Hero>
 </header>
 
 <Main noMargin>
@@ -123,6 +126,58 @@
    </SectionWrapper>
 
    <SectionWrapper name="infosessies-praktische-info">
-      
+      <div class="flex flex-row gap-8">
+
+         <Card link="/" equalHeight titleSmallest titleType="h2" centerTitle>
+            <span 
+               slot="title" 
+               class="text-center flex flex-col gap-0 justify-center w-full m-0 p-0">
+               <span class="text-[18px] uppercase font-normal m-0 p-0">
+                  Leertraject
+               </span>
+               <span class="leading-tight lg:whitespace-nowrap">
+                  Zonder<br class="lg:hidden"/> Tweedaagse Masterclass
+               </span>
+            </span>
+            <P>
+               Dit leertraject raden we aan als je al redelijk goed met de Piramide 
+               aan de slag kan en vooral naar verdieping en extra inspiratie zoekt 
+               op vlak van zijn assessments, speciale oefeningen, bruggen met andere 
+               modellen, podcasts, Lencioni filmpjes….<br/>
+               Dit is de 'do it yourself' aanpak, wél met een uur coaching van onze 
+               Trixolutions/Lencioni expert inbegrepen.<br/>
+               Wil je daarna toch wel meedoen aan de tweedaagse Masterclass? Dat kan! 
+               Enkel het verschil in prijs rekenen we dan aan.
+            </P>
+            <Link underlineOnHover
+               slot="append-inner" href="/"
+               klass='my-2 font-bold'>
+               Meer Info
+            </Link>
+         </Card>
+
+         <Card link="/" equalHeight titleSmallest titleType="h2" centerTitle>
+            <span slot="title" class="text-center flex flex-col gap-0 justify-center w-full m-0 p-0">
+               <span class="text-[18px] uppercase font-normal m-0 p-0">Leertraject</span>
+               <span class="leading-tight lg:whitespace-nowrap">Mét<br class="lg:hidden"/> Tweedaagse Masterclass</span>
+            </span>
+            <P klass="">
+               Dit extensieve leertraject raden we aan als je geen of een beperkte 
+               kennis van de Piramide van Lencioni hebt.<br/> 
+               We gaan immers in detail door het Lencioni Werkboek en leren je een 
+               Lencioni traject opbouwen en uitrollen, verdiepende kennis en 
+               oefeningen in de verschillende lagen van de Piramide, hoe de 
+               assessments in te zetten.<br/>
+               In deze module zit ook een uur opvolgcoaching inbegrepen, alsook 
+               15 Lencioni Piramides én een Trixolutions/Lencioni Certificaat!
+            </P>
+            <Link underlineOnHover
+               slot="append-inner" href="/"
+               klass='my-2 font-bold'>
+               Meer Info
+            </Link>
+         </Card>         
+
+      </div>
    </SectionWrapper>
 </Main>
