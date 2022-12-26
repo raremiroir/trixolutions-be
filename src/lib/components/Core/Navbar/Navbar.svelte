@@ -67,17 +67,17 @@
       : 'bg-gray-100/30 py-4'}
       backdrop-blur-md
       z-20
-      transition-all duration-200
+      transition-all duration-200 ease-in-out
       border-b-2 lg:border-none
       {openMobile ? 'border-primary' : 'border-transparent'}">
    <!-- Navbar Wrapper -->
    <div class="
-         w-4/5 xl:w-3/4 
+         w-full lg:w-4/5 xl:w-3/4 
          h-fit mx-auto 
          flex flex-row justify-center items-center">
       
          <!-- Logo/Brand -->
-      <div class="w-1/5">
+      <div class="w-1/3 lg:w-1/5">
          <Link href="/{$locale}/" klass="max-w-fit">
             <Logo width="180"/>  
          </Link>
@@ -85,10 +85,9 @@
    
       <!-- Navigation -->
       <nav class="
-         w-screen lg:w-3/5 h-fit left-0
+         w-3/5 h-fit left-0
          transition-all duration-200 ease-out
-         lg:translate-y-0
-         absolute lg:relative
+         translate-y-0 relative
          z-10 hidden lg:block
       ">
          <ul class="flex flex-row gap-2 w-full justify-center items-center">
@@ -148,10 +147,16 @@
    transition:slide={{duration:200}}
    class="
       lg:hidden
-      w-screen h-fit left-0 top-[58px]
-      absolute
+      w-screen h-fit left-0
+      { yscroll >= 10
+         ? 'top-[58px]' 
+         : 'top-[78px]'}
+      fixed
       z-10 flex
       bg-gray-100/30 backdrop-blur-lg
+      transition-all duration-200 ease-in-out
+      border-b-2 border-primary
+      shadow-lg shadow-black/30
       ">
    <ul class="flex flex-col gap-2 w-full justify-center items-center">
       {#each navItems as page}
