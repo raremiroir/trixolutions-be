@@ -25,6 +25,7 @@
    import WG600      from '$img/stock/Working-Genius_600w_Stock.webp'
    import WG800      from '$img/stock/Working-Genius_800w_Stock.webp'
    import WG1080     from '$img/stock/Working-Genius_1080w_Stock.webp'
+	import CtA from "$src/lib/components/Core/CtA/CtA.svelte";
 
    let heroHeight="h-180"
 </script>
