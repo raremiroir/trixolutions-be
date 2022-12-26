@@ -3,7 +3,7 @@
 	import Main             from "$comp/Base/Wrapper/Main.svelte";
    import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
    import Image            from "$comp/Base/Media/Image.svelte";
-	import Breadcrumbs      from "$comp/Common/Breadcrumbs/Breadcrumbs.svelte";
+	import Breadcrumbs      from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
 	import Card             from "$comp/Common/Card/Card.svelte";
 	import List             from "$comp/Common/List/List.svelte";
 	import ListItem         from "$comp/Common/List/ListItem.svelte";
@@ -19,28 +19,29 @@
 
    import lencioni_pyramid from '$img/lencioni/pyramide/pyramid-lencioni-1.png'
 	import Link from "$src/lib/components/Common/Link/Link.svelte";
+	import Icon from "@iconify/svelte";
 
-   let infosessie_data = [
-      {
-         date: '02/12/2022',
-         start: '11:00',
-         end: '11:45',
-         coach: 'Tom van Dorst',
-      },
-      {
-         date: '13/01/2023',
-         start: '11:00',
-         end: '11:45',
-         coach: 'Tom van Dorst',
-      },
-   ]
-   let deepdive_data = [
-      {
-         date: '05/12/2022',
-         start: '09:00',
-         end: '17:00',
-         coach: 'Tom van Dorst',
-      },
+   let lencioni_features = [
+      {content: 'Toegang tot het Hybride Lencioni Traject voor 12 maanden', firstCheck: true},
+      {content: 'Regelmatige Updates', firstCheck: true},
+      {content: 'Integratie in een leergroep met 8 andere deelnemers', firstCheck: false},
+      {content: 'Intake', firstCheck: false},
+      {content: 'TWEEDAAGSE FYSIEKE MASTERCLASS onder begeleiding van een Trixolutions/Lencioni Expert', firstCheck: false},
+      {content: 'Certificaat', firstCheck: false},
+      {content: 'Je wordt toegevoegd aan de Lencioni CAPA Group (Consultants and Practitioners Alliance) op LinkedIn', firstCheck: false},
+      {content: 'Je wordt toegevoegd aan de Trixolutions/Lencioni Coach-the-Coach Groep/LEVEL 1 op LinkedIn', firstCheck: false},
+      {content: '15 Kartonnen Lencioni Piramides', firstCheck: false},
+      {content: 'Toegang tot het volwaardige Lencioni Team Assessment + facilitator instructies', firstCheck: false},
+      {content: 'Toegang tot het volwaardige Lencioni Personal Assessment + facilitator instructies', firstCheck: true},
+      {content: 'Toegang tot het Lencioni Werkboek', firstCheck: true},
+      {content: 'Toegang tot de 10+ Lencioni Bijlages bij het werkboek', firstCheck: true},
+      {content: 'Een uur opvolgcoaching met een Trixolutions/Lencioni Expert', firstCheck: true},
+      {content: 'Toegang tot de DeepDive – Laag “Vertrouwen”', firstCheck: true},
+      {content: 'Toegang tot de DeepDive – Laag “Respectvolle Conflicten”', firstCheck: true},
+      {content: 'Toegang tot de DeepDive – Laag “Team Betrokkenheid”', firstCheck: true},
+      {content: 'Toegang tot de DeepDive – Laag “Aansprakelijkheid”', firstCheck: true},
+      {content: 'Toegang tot de DeepDive – Laag “Resultaatgerichtheid”', firstCheck: true},
+      {content: 'Jaarlijks te verlengen voor €490,00', firstCheck: true},
    ]
 
 </script>
@@ -126,7 +127,7 @@
    </SectionWrapper>
 
    <SectionWrapper name="infosessies-praktische-info">
-      <div class="flex flex-row gap-8">
+      <div class="flex flex-row gap-4">
 
          <Card link="/" equalHeight titleSmallest titleType="h2" centerTitle>
             <span 
@@ -139,7 +140,7 @@
                   Zonder<br class="lg:hidden"/> Tweedaagse Masterclass
                </span>
             </span>
-            <P>
+            <P klass="sm:h-90 md:h-50 lg:h-48 xl:h-40 2xl:h-36">
                Dit leertraject raden we aan als je al redelijk goed met de Piramide 
                aan de slag kan en vooral naar verdieping en extra inspiratie zoekt 
                op vlak van zijn assessments, speciale oefeningen, bruggen met andere 
@@ -149,11 +150,32 @@
                Wil je daarna toch wel meedoen aan de tweedaagse Masterclass? Dat kan! 
                Enkel het verschil in prijs rekenen we dan aan.
             </P>
-            <Link underlineOnHover
-               slot="append-inner" href="/"
-               klass='my-2 font-bold'>
-               Meer Info
-            </Link>
+            <List title klass="rounded-lg overflow-hidden border-2 border-primary">
+               <div 
+                  slot="title" 
+                  class="
+                     text-gray-50 bg-primary 
+                     py-2 font-body font-normal
+                     w-full text-center
+                     flex items-center justify-center flex-col
+                     ">
+                  <span>€ 690,00</span>
+                  <span class="text-sm font-thin">12 Maanden Toegang</span>
+               </div>
+
+               {#each lencioni_features as item}
+                  {#if item.firstCheck}
+                     <ListItem icon="check">{item.content}</ListItem>
+                  {:else}
+                     <ListItem icon="cancel" disabled>{item.content}</ListItem>
+                  {/if}
+               {/each}
+
+            </List>
+            <Button size="xl" klass="flex flex-col w-4/5 mx-auto" block>
+               <span class="font-light">INSCHRIJVEN VOOR LEERTRAJECT</span>
+               <span>ZONDER TWEEDAAGSE MASTERCLASS</span>
+            </Button>
          </Card>
 
          <Card link="/" equalHeight titleSmallest titleType="h2" centerTitle>
@@ -161,7 +183,7 @@
                <span class="text-[18px] uppercase font-normal m-0 p-0">Leertraject</span>
                <span class="leading-tight lg:whitespace-nowrap">Mét<br class="lg:hidden"/> Tweedaagse Masterclass</span>
             </span>
-            <P klass="">
+            <P klass="sm:h-90 md:h-50 lg:h-48 xl:h-40 2xl:h-36">
                Dit extensieve leertraject raden we aan als je geen of een beperkte 
                kennis van de Piramide van Lencioni hebt.<br/> 
                We gaan immers in detail door het Lencioni Werkboek en leren je een 
@@ -171,11 +193,28 @@
                In deze module zit ook een uur opvolgcoaching inbegrepen, alsook 
                15 Lencioni Piramides én een Trixolutions/Lencioni Certificaat!
             </P>
-            <Link underlineOnHover
-               slot="append-inner" href="/"
-               klass='my-2 font-bold'>
-               Meer Info
-            </Link>
+            <List title klass="rounded-lg overflow-hidden border-2 border-primary">
+               <div 
+                  slot="title" 
+                  class="
+                     text-gray-50 bg-primary 
+                     py-2 font-body font-normal
+                     w-full text-center
+                     flex items-center justify-center flex-col
+                     ">
+                  <span>€ 1.390,00</span>
+                  <span class="text-sm font-thin">12 Maanden Toegang</span>
+               </div>
+
+               {#each lencioni_features as item}
+                  <ListItem icon="check">{item.content}</ListItem>
+               {/each}
+
+            </List>
+            <Button size="xl" klass="flex flex-col w-4/5 mx-auto" block>
+               <span class="font-light">INSCHRIJVEN VOOR LEERTRAJECT</span>
+               <span>MÉT TWEEDAAGSE MASTERCLASS</span>
+            </Button>
          </Card>         
 
       </div>

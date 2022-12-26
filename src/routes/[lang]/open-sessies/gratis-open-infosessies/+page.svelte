@@ -3,7 +3,7 @@
 	import Main             from "$comp/Base/Wrapper/Main.svelte";
    import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
 	import Image            from "$comp/Base/Media/Image.svelte";
-	import Breadcrumbs      from "$comp/Common/Breadcrumbs/Breadcrumbs.svelte";
+	import Breadcrumbs      from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
 	import Card             from "$comp/Common/Card/Card.svelte";
 	import P                from "$comp/Common/Text/P.svelte";
 	import Tag              from "$comp/Common/Text/Tag.svelte";

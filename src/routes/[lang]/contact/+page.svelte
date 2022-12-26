@@ -4,7 +4,7 @@
    import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
 	import Map              from "$comp/Base/Media/Map.svelte";
 	import Image            from "$comp/Base/Media/Image.svelte";
-	import Breadcrumbs      from "$comp/Common/Breadcrumbs/Breadcrumbs.svelte";
+	import Breadcrumbs      from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
 	import Card             from "$comp/Common/Card/Card.svelte";
 	import Link             from "$comp/Common/Link/Link.svelte";
 	import P                from "$comp/Common/Text/P.svelte";
