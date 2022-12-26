@@ -100,6 +100,8 @@
             { type === 'subheader' ? 'subheader-size italic font-normal font-title'
             : type === 'subtitle' ? 'subtitle-size'
             : ''}
+            { small ? type === 'subtitle' ? 'subtitle-size-sm' : '' : ''}
+            { smaller ? type === 'subtitle' ? 'subtitle-size-xs' : '' : ''}
          ">
          <slot/>
       </span>
@@ -124,5 +126,7 @@
    .h6-size-xs { font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1.125rem); }
 
    .subtitle-size { font-size: clamp(1.125rem, 0.8125rem + 1.25vw, 1.75rem); }
+   .subtitle-size-sm { font-size: clamp(1rem, 0.875rem + 0.5vw, 1.25rem); }
+   .subtitle-size-xs { font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1.125rem); }
    .subheader-size { font-size: clamp(1.25rem, 0.875rem + 1.5vw, 2rem); }
 </style>
