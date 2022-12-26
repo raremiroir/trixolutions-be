@@ -2,7 +2,7 @@
 const daisyui = require("daisyui");
 const typography = require("@tailwindcss/typography");
 const forms = require("@tailwindcss/forms");
-const lineclamp = require("@tailwindcss/forms");
+const lineclamp = require("@tailwindcss/line-clamp");
 
 // Define Tailwind Config
 const config = {
