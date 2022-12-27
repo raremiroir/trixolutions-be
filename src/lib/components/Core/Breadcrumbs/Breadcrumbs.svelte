@@ -1,6 +1,6 @@
 <script>
    import { page } from '$app/stores';
-   import { titleCase } from '$src/utils';
+   import { titleCase } from '$lib/utils';
 
 	import Icon from "@iconify/svelte";
 
@@ -8,14 +8,14 @@
    export let beforeUrl = ""
 
    let currentUrl = $page.url.pathname;
-   console.log(currentUrl);
-   console.log($page);
+   // console.log(currentUrl);
+   // console.log($page);
    export let beforeIcon = "gg:smile"
    export let currentIcon = "gg:smile"
 
    let slashIndex = currentUrl.indexOf("/", 3) + 1;
    let secondSlashIndex = currentUrl.indexOf("/", 5) + 1;
-   console.log("index:" + slashIndex);
+   // console.log("index:" + slashIndex);
    
    let currentName = ''
 
@@ -29,7 +29,7 @@
       beforeUrl = currentUrl.substring(0, secondSlashIndex);
    }
    
-   console.log(currentName);
+   // console.log(currentName);
 </script>
 
 <div class="dui-breadcrumbs w-11/12 lg:w-5/6 xl:w-3/4 2xl:w-2/3 mx-auto">
