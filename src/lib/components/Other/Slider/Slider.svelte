@@ -40,7 +40,7 @@
 	autoplay={{ delay: 5000 }}
 >
 	<div slot="container-start" 
-		  class="absolute bottom-1/2 translate-y-1/2 left-10 z-2 flex flex-row">
+		  class="absolute bottom-1/2 translate-y-1/2 left-10 z-2 flex-row hidden md:flex">
 		<Tooltip 
 			title="Vorige Slide"
 			klass="z-2"
@@ -68,7 +68,7 @@
 	<slot/>
 	
 	<div slot="container-end"
-		  class="absolute bottom-1/2 translate-y-1/2 right-10 z-2 flex flex-row">
+		  class="absolute bottom-1/2 translate-y-1/2 right-10 z-2 hidden md:flex flex-row">
 		<Tooltip 
 		  title="Volgende Slide"
 		  klass="z-2"
