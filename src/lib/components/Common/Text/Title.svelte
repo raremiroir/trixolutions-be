@@ -46,7 +46,7 @@
       <!-- If type is h2 -->
    {:else if type === 'h2'}
       <h2 class="
-            font-title font-bold
+            font-title font-bold leading-none
             { color ? color : 'text-primary'} 
             { small ? 'h3-size'
             : smaller ? 'h4-size'
@@ -93,15 +93,22 @@
             {small ? 'text-lg' : 'h6-size'}">
          <slot/>
       </h6>
-   <!-- If type is other title -->
-   {:else if type === 'subtitle' || type === 'subheader'}
+   <!-- If type is subtitle -->
+   {:else if type === 'subtitle'}
       <span class="
             { color ? color : 'text-gray-600' }
-            { type === 'subheader' ? 'subheader-size italic font-normal font-title'
-            : type === 'subtitle' ? 'subtitle-size'
-            : ''}
-            { small ? type === 'subtitle' ? 'subtitle-size-sm' : '' : ''}
-            { smaller ? type === 'subtitle' ? 'subtitle-size-xs' : '' : ''}
+            { small ? 'subtitle-size-sm' 
+            : smaller ? 'subtitle-size-xs' 
+            : 'subtitle-size'}
+            italic font-normal font-title
+         ">
+         <slot/>
+      </span>
+   <!-- If type is subheader -->
+   {:else if type === 'subtitle' || type === 'subheader'}
+      <span class="
+            { color ? color : 'text-primary' }
+            subheader-size font-normal font-title
          ">
          <slot/>
       </span>
