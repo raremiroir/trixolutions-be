@@ -58,8 +58,8 @@
       { size === 'xs'         ? 'text-xs      px-[10px] pt-[8px]     pb-[5px]' 
       : size === 'sm'         ? 'text-sm      px-4      pt-[14px]    pb-3    ' 
       : size === 'md'         ? 'text-base    px-5      pt-[14px]    pb-3    ' 
-      : size === 'lg'         ? 'text-lg      px-8      pt-[22px]    pb-5    ' 
-      : size === 'xl'         ? 'text-lg  lg:text-2xl    px-8 lg:px-12    py-4 lg:py-5                 ' 
+      : size === 'lg'         ? 'text-lg      px-8      pt-[18px]    pb-4    ' 
+      : size === 'xl'         ? 'text-lg  lg:text-2xl   px-8 lg:px-12    py-3 lg:py-4                 ' 
       : size === 'xxl'        ? 'text-5xl     px-15     py-6                 ' 
 
       : size === 'xs-resp'    ? `   text-xs        px-2      pt-2           pb-1
