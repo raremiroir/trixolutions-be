@@ -25,15 +25,18 @@
    import WG600      from '$img/stock/Working-Genius_600w_Stock.webp'
    import WG800      from '$img/stock/Working-Genius_800w_Stock.webp'
    import WG1080     from '$img/stock/Working-Genius_1080w_Stock.webp'
-	import CtA from "$src/lib/components/Core/CtA/CtA.svelte";
+	import Navbar from "$src/lib/components/Core/Navbar/Navbar.svelte";
+	import Footer from "$src/lib/components/Core/Footer/Footer.svelte";
 
-   let heroHeight="h-180"
+   let heroHeight="h-200 lg:h-140"
 </script>
 
 <header>
+   <Navbar/>
+
    <Hero slider>
       <Slide hero 
-         imgAlt="Trixolutions Lencioni - De Kracht van Gezonde Teams" height={heroHeight}
+         imgAlt="Trixolutions Lencioni - De Kracht van Gezonde Teams" height="{heroHeight}"
          img400={KVGT400} img600={KVGT600} img800={KVGT800} img1080={KVGT1080}>
          <span slot="title">De Kracht van Gezonde Teams</span>
          <div class="flex flex-col gap-2">
@@ -102,7 +105,7 @@
    </Hero>
 </header>
 
-<Main noMargin>
+<Main noMargin cta>
    <SectionWrapper name="digitale-opleidingstoppers">
       <Title slot="title" type="h2">Digitale Opleidingstoppers!</Title>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -150,3 +153,5 @@
       </div>
    </SectionWrapper>
 </Main>
+
+<Footer/>
