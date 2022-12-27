@@ -3,7 +3,7 @@
 <!--      -->
 <script lang="ts">
    // Import components
-	import Title from "$src/lib/components/Common/Text/Title.svelte";
+	import Title from "$comp/Common/Text/Title.svelte";
 
    // Name of Section
    export let name:string;
