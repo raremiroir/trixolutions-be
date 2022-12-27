@@ -72,9 +72,9 @@
       {openMobile ? 'border-primary' : 'border-transparent'}">
    <!-- Navbar Wrapper -->
    <div class="
-         w-full lg:w-4/5 xl:w-3/4 
+         w-11/12 lg:w-4/5 xl:w-3/4 
          h-fit mx-auto 
-         flex flex-row justify-center items-center">
+         flex flex-row justify-between items-center">
       
          <!-- Logo/Brand -->
       <div class="w-1/3 lg:w-1/5">
@@ -90,7 +90,7 @@
          translate-y-0 relative
          z-10 hidden lg:block
       ">
-         <ul class="flex flex-row gap-2 w-full justify-center items-center">
+         <ul class="flex flex-row gap-1 xl:gap-2 w-full justify-end items-center">
             {#each navItems as page}
                <li class="w-fit">
                   {#if page.dropdown}
@@ -99,7 +99,7 @@
                            <Button 
                               color="transparent" 
                               flat lowercase 
-                              size="text-lg px-5 pt-[14px] pb-3">
+                              size="text-lg px-2 xl:px-5 pt-[14px] pb-3">
                               {page.name}
                               <Icon icon="mdi:chevron-down" />
                            </Button>
@@ -124,7 +124,7 @@
                         <Button 
                            color="transparent" 
                            flat lowercase
-                           size="text-lg px-5 pt-[14px] pb-3">
+                           size="text-lg px-2 xl:px-5 pt-[14px] pb-3">
                            {page.name}
                         </Button>
                      </Link>
@@ -135,7 +135,7 @@
       </nav>
    
       <!-- Extra Buttons -->
-      <div class="flex flex-row gap-2 w-1/2 lg:w-1/5 justify-end pr-8 z-20">
+      <div class="flex flex-row gap-2 w-fit justify-end ml-8 z-20">
          <div class="lg:hidden"><Hamburger onClick={toggleMobile} onCheck={openMobile}/></div>
          <LangSwitcher/>
       </div>
@@ -150,7 +150,7 @@
       w-screen h-fit left-0
       { yscroll >= 10
          ? 'top-[58px]' 
-         : 'top-[78px]'}
+         : 'top-[74px] md:top-[78px]'}
       fixed
       z-10 flex
       bg-gray-100/30 backdrop-blur-lg
