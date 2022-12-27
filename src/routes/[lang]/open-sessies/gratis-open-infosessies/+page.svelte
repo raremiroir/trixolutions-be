@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Button           from "$comp/Core/Button/Button.svelte";
 	import Main             from "$comp/Base/Wrapper/Main.svelte";
    import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
@@ -10,35 +10,31 @@
 	import Title            from "$comp/Common/Text/Title.svelte";
 	import Hero 	         from "$comp/Hero/Hero.svelte";
 
-   import { formatDateMonthFull } from "$src/utils";
-
-   let infosessie_data = [
-      {
-         date: '02/12/2022',
-         start: '11:00',
-         end: '11:45',
-         coach: 'Tom van Dorst',
-      },
-      {
-         date: '13/01/2023',
-         start: '11:00',
-         end: '11:45',
-         coach: 'Tom van Dorst',
-      },
-   ]
-   let deepdive_data = [
-      {
-         date: '05/12/2022',
-         start: '09:00',
-         end: '17:00',
-         coach: 'Tom van Dorst',
-      },
-   ]
+   import { formatDateMonthFull, formatTime, formatDateShort } from "$lib/utils";
+   
+   import PocketBase from "pocketbase";
+   import { pageResult } from "$lib/stores";
+   const pb = new PocketBase('http://127.0.0.1:8090')
+   
+   
+   async function sessionsList() {
+      $pageResult =  await pb.collection('info_sessions')
+                     .getFullList(200 /* batch size */, {
+         sort: 'created',
+         expand: 'trainer'
+      });
+   }
+   sessionsList();
+   export let data:any;
 
 </script>
 
 <header>
-   <Hero title="Gratis Online Open Infosessies" height="h-92" />
+   <Hero height="h-92">
+      <span slot="title">
+         Gratis Online Open Infosessies
+      </span>
+   </Hero>
 </header>
 
 <Main noMargin>
@@ -70,24 +66,25 @@
    <SectionWrapper name="infosessies-praktische-info">
       <Title type="h2" slot="title">Praktische Info</Title>
       <div class="grid grid-cols-2 gap-8">
-         {#each infosessie_data as session}
-            <Card label="{formatDateMonthFull(session.date)}" labelPrimary titleType="h3" titleSmallest>
-               <span slot="title">Online Infosessie</span>
-               <div class="flex flex-col gap-4 w-full">
-                  <div class="flex flex-row justify-between w-full">
-                     <Tag large outlined>
-                        {session.date} || {session.start} - {session.end}
-                     </Tag>
-                     <Tag large outlined>
-                        {session.coach}
-                     </Tag>
+         <!-- <pre>{JSON.stringify($pageResult, null, 2)}</pre> -->
+            {#each $pageResult as session}
+               <Card label="{formatDateMonthFull(session["starts_on"])}" labelPrimary titleType="h3" titleSmallest>
+                  <span slot="title">Online Infosessie</span>
+                  <div class="flex flex-col gap-4 w-full">
+                     <div class="flex flex-row justify-between w-full">
+                        <Tag large outlined>
+                           {formatDateShort(session["starts_on"])} || {formatTime(session["starts_on"])} - {formatTime(session["ends_on"])}
+                        </Tag>
+                        <Tag large outlined>
+                           {session['expand']['trainer']['first_name']} {session['expand']['trainer']['last_name']}
+                        </Tag>
+                     </div>
+                     <Button size="lg" color="primary">
+                        Inschrijven
+                     </Button>
                   </div>
-                  <Button size="lg" color="primary">
-                     Inschrijven
-                  </Button>
-               </div>
-            </Card>
-         {/each}
+               </Card>
+            {/each}
       </div>
       <div class="m-0 px-0 py-16 w-full flex justify-center items-center">
          <Button size="xxl">

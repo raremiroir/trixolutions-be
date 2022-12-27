@@ -55,6 +55,7 @@
    import vulkoprin from '$img/references/vulkoprin-logo.png'; 
    import wgn from '$img/references/wijngaardnatie-logo.png'; 
 	import Video from "$src/lib/components/Base/Media/Video.svelte";
+	import Breadcrumbs from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
 
    let references = [
       {
@@ -276,7 +277,8 @@
    ]
 </script>
 
-<Main>
+<Breadcrumbs/>
+<Main cta>
    <SectionWrapper name="references">
       <Title slot="title" type='h1'>Referenties</Title>
       <div class="w-full mx-auto">

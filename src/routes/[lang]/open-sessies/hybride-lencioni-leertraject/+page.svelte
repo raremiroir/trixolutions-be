@@ -15,7 +15,7 @@
 	import Hero             from "$comp/Hero/Hero.svelte";
 	import Tabs             from "$comp/Other/Tabs/Tabs.svelte";
 
-   import { formatDateMonthFull } from "$src/utils";
+   import { formatDateMonthFull } from "$lib/utils";
 
    import lencioni_pyramid from '$img/lencioni/pyramide/pyramid-lencioni-1.png'
 	import Link from "$src/lib/components/Common/Link/Link.svelte";

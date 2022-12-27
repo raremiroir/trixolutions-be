@@ -34,8 +34,8 @@
 
 </script>
 
+<Breadcrumbs/>
 <Main>
-   <Breadcrumbs/>
    <SectionWrapper name="contact-us">
       <Title type="h1">Contact</Title>
       <div class="flex flex-row gap-8">

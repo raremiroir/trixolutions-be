@@ -37,7 +37,7 @@
       
 </script>
 
-<Main>
+<Main cta>
    <SectionWrapper name="about-us">
       <Title slot="title" type='h1'>Over Ons</Title>
       <div class="grid grid-cols-3 gap-12">

@@ -9,31 +9,31 @@
 	import Tag              from "$comp/Common/Text/Tag.svelte";
 	import Title            from "$comp/Common/Text/Title.svelte";
 
-   let infosessie_data = [
-      {
-         date: '02/12/2022',
-         start: '11:00',
-         end: '11:45'
-      },
-      {
-         date: '13/01/2023',
-         start: '11:00',
-         end: '11:45'
-      },
-   ]
-   let deepdive_data = [
-      {
-         date: '05/12/2022',
-         start: '09:00',
-         end: '17:00'
-      },
-   ]
+
+   
+   import PocketBase from "pocketbase";
+   import { formatTime, formatDateFull } from "$lib/utils";
+   import { pageResult, secondPageResult } from "$lib/stores";
+   const pb = new PocketBase('http://127.0.0.1:8090')
+   
+   
+   async function sessionsList() {
+      $pageResult =  await pb.collection('info_sessions')
+                     .getFullList(200 /* batch size */, {
+         sort: 'created'
+      });
+      $secondPageResult =  await pb.collection('level_2_sessions')
+                     .getFullList(200 /* batch size */, {
+         sort: 'created',
+      });
+      console.log($pageResult);
+   }
+   sessionsList();
 
 </script>
 
-<Main>
-   <Breadcrumbs/>
-
+<Breadcrumbs/>
+<Main cta>
    <SectionWrapper name="open-workshops">
       <Title type="h1" slot="title">Open Sessies</Title>
       <ul class="m-0 flex flex-col gap-8">
@@ -53,9 +53,9 @@
                <!-- Append Inner -->
                <div class="flex flex-col gap-4" slot="append-inner">
                   <div class="flex flex-col gap-1">
-                     {#each infosessie_data as session}
+                     {#each $pageResult as session}
                         <Tag outlined>
-                           {session.date} | {session.start} - {session.end}
+                           {formatDateFull(session['starts_on'])} | {formatTime(session['starts_on'])} - {formatTime(session['ends_on'])}
                         </Tag>
                      {/each}
                   </div>
@@ -124,9 +124,9 @@
                <!-- Append Inner -->
                <div class="flex flex-col gap-4" slot="append-inner">
                   <div class="flex flex-col gap-1">
-                     {#each deepdive_data as session}
+                     {#each $secondPageResult as session}
                         <Tag outlined>
-                           {session.date} | {session.start} - {session.end}
+                           {formatDateFull(session['starts_on'])} | {formatTime(session['starts_on'])} - {formatTime(session['ends_on'])}
                         </Tag>
                      {/each}
                   </div>
