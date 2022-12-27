@@ -7,7 +7,7 @@
 	import type { Locales } from '$i18n/i18n-types'
 	import { locales } from '$i18n/i18n-util'
 	import { loadLocaleAsync } from '$i18n/i18n-util.async'
-	import { replaceLocaleInUrl } from '../../../../utils'
+	import { replaceLocaleInUrl } from '$lib/utils'
    // import components
    import Button  from "$comp/Core/Button/Button.svelte";
    import Menu    from "$comp/Other/Menu/Menu.svelte";
