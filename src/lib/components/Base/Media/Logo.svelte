@@ -2,8 +2,6 @@
 <!--  JS  -->
 <!--      -->
 <script lang="ts">
-   export let width = 600;
-   let height = width * 0.1555184;
 
    export let color = "fill-primary";
    export let xcolor = 'fill-[#AFB1C6]';
@@ -14,7 +12,7 @@
 <!-- HTML -->
 <!--      -->
 <svg 
-   {width} {height} 
+	class="h-auto w-40 md:w-48"
    viewBox="0 0 598 83" 
    xmlns="http://www.w3.org/2000/svg"
 >
