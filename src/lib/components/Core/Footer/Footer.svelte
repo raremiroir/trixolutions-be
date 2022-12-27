@@ -1,5 +1,5 @@
 <script>
-	import Logo from "../../Base/Media/Logo.svelte";
+	import Logo from "$comp/Base/Media/Logo.svelte";
 
 </script>
 <footer class="bg-gray-700 w-full">
