@@ -1,0 +1,183 @@
+// Train virtual trainer
+{ 
+   "first": "Op een attractieve en interactieve manier deelnemers betrekken en engageren in digitale opleidingen, workshops en meetings is een nieuwe belangrijke vaardigheid geworden.",
+   "second": "In onze Trixolutions Virtual Classroom begeleiden we onze deelnemers in de knepen van het vak!",
+   "list": {
+      "1": "Voorafgaande intake met alle deelnemers.",
+      "2": "Intro en opstart.",
+      "3": "Managen van jezelf en de omgeving.",
+      "4": "Managen van je digitale sessie.",
+      "5": "Managen van je digitale tools.",
+      "6": "Managen van je (virtuele) deelnemers.",
+      "7": "Persoonlijke opdrachten en feedback."
+   }
+}
+// Frustraties virtuele teams
+{ 
+   "first": "In het begin gaat dat digitaal samenwerken goed…. Iedereen op Zoom en MS TEAMS (Skype). Van de virtuele koffiepauzes tot aan de virtuele apero’s probeert elk team in de beginperiode zijn plan te trekken.",
+   "second": "Maar dan komt het besef dat het virtueel samenwerken toch niet vanzelf gaat, het loopt anders, moeilijker en de eerste barsten beginnen te ontstaan….",
+   "list": {
+      "1": "Vertrouwen opbouwen in Virtuele Teams.",
+      "2": "Respectvolle conflicten (leren) hebben.",
+      "3": "Teambetrokkenheid creëren.",
+      "4": "Aansprakelijkheid aanwakkeren.",
+      "5": "Resultaatgerichtheid bekomen."
+   }
+}
+// Hybride werken
+{ 
+   "first": "Is jouw organisatie ook druk bezig met een post-corona werkbeleid te schrijven en te organiseren? En is er 1 woord dat terugkomt: ‘hybride’?",
+   "second": "Het nieuwe hybride werken vraagt om een vernieuwde aanpak, vaardigheden en bouwstenen. Dit programma van 9 interactieve sessies bekwaamt je als werknemer, teamlid, teamlead of manager in de vaardigheden en bouwstenen die je nodig hebt om succesvol te zijn in de toekomst van het ‘nieuwe Hybride werken’.",
+   "list": {
+      "1": "Hybride (zelf)leiderschap",
+      "2": "Hybride teamwork",
+      "3": "Hybride welzijn"
+   }
+}
+
+
+// 6 Types of Working Genius
+{ 
+   "first": "“Als je succesvol, tevreden en voldaan wil zijn als persoon, teamlid of teamleader moet je jouw energiebronnen en talenten aanspreken. Wat natuurlijk niet lukt als je die niet kent.”",
+   "list": {
+      "1": "The Genius of Wonder (Verwondering)",
+      "2": "The Genius of Invention (Uitvinden)",
+      "3": "The Genius of Discernment (Evalueren)",
+      "4": "The Genius of Galvanizing (Dynamiseren)",
+      "5": "The Genius of Enablement (Activeren)",
+      "6": "The Genius of Tenacity (Landen)"
+   },
+   "list_2": {
+      "1": "(Digitale) Opleiding en Coaching",
+      "2": "Assessment"
+   }
+}
+// 5 Frustraties van teamwork
+{ 
+   "first": "If you get all the people in an organization rowing in the same direction, you could dominate any industry, in any market, against any competition, at any time.",
+   "list": {
+      "1": "Het Model",
+      "2": "Vertrouwen",
+      "3": "Respectvolle conflicten",
+      "4": "Teambetrokkenheid",
+      "5": "Aansprakelijkheid",
+      "6": "Resultaatgerichtheid"
+   },
+   "list_2": {
+      "1": "(Digitale) Opleiding en Coaching",
+      "2": "Assessment"
+   }
+}
+// beslissende voorsprong
+{ 
+   "first": "“De grootste voorsprong en competitief voordeel die een bedrijf kan nemen, is het creëren en hebben van een gezonde organisatie- en teamcultuur.” (Patrick Lencioni)",
+   "list": {
+      "1": "Het Model",
+      "2": "Gezonde Teams",
+      "3": "Helderheid",
+      "4": "Overcommuniceren",
+      "5": "Integratie in HR systemen"
+   },
+   "list_2": {
+      "1": "(Digitale) Opleiding en Coaching",
+      "2": "Consulting",
+      "3": "Assessment"
+   }
+}
+
+
+// ideale teamspeler
+{ 
+   "first": "Wat het bekende Lencioni model zo krachtig en ook zo moeilijk maakt, is de benodigde combinatie van 3 unieke eigenschappen bij iemand. Zelfs bij gebrek aan 1 van de drie  wordt teamwork beduidend moeilijker en soms zelfs onmogelijk.",
+   "list": {
+      "1": "Het Model",
+      "2": "Bescheiden",
+      "3": "Gedreven",
+      "4": "Emotioneel Intelligent"
+   },
+   "list_2": {
+      "1": "Assessment",
+      "2": "Opleiding en Coaching"
+   }
+}
+// betrokkenheid creëren
+{ 
+   "first": "Betrokken, enthousiaste en loyale medewerkers zijn een sleutelfactor in de groei en gezondheid van teams en organisaties. Maar des te moeilijker om dit te verhogen en op te bouwen als het op een laag pitje staat. De kosten van onbetrokkenheid van teamleden is niet te onderschatten.",
+   "list": {
+      "1": "Het Model",
+      "2": "Anonimiteit",
+      "3": "Irrelevantie",
+      "4": "Onmeetbaarheid"
+   },
+   "list_2": {
+      "1": "Opleiding en Coaching"
+   }
+}
+// deep democracy
+{ 
+   "first": "De nieuwe generatie leiders beseft steeds meer en meer dat echt luisteren, samenwerking, diversiteit, respectvolle conflicten en synergie, écht belangrijk zijn voor een gedegen én gedragen besluitvorming.",
+   "list": {
+      "1": "Het Model",
+      "2": "Verzamel invalshoeken",
+      "3": "Zoek het alternatief",
+      "4": "Verspreid alternatief",
+      "5": "Voeg minderheidswijsheid toe",
+      "6": "Werken met de onderstroom"
+   },
+   "list_2": {
+      "1": "Opleiding en Coaching"
+   }
+}
+
+
+// commerciële vaardigheden
+{ 
+   "list": {
+      "1": "Business Development",
+      "2": "Prospectie",
+      "3": "Solution Selling",
+      "4": "Onderhandelingsstijlen",
+      "5": "Rules of Engagement",
+      "6": "Closing the deal",
+      "7": "Jouw Elevator Pitch"
+   },
+   "list_2": {
+      "1": "De Bouwstenen",
+      "2": "Sales Assessment",
+      "3": "Opleiding en Coaching"
+   }
+}
+// trusted advisor - advanced
+{ 
+   "list": {
+      "1": "Het Model",
+      "2": "Jouw Trust Pitch",
+      "3": "Vertrouwensnoden",
+      "4": "Van Tactiek naar Strategie",
+      "5": "Adviseren op CxO Level",
+      "6": "Omgaan met 'Politiek'",
+      "7": "'Getting Naked'"
+   },
+   "list_2": {
+      "1": "De Bouwstenen",
+      "2": "Trust Assessment",
+      "3": "Opleiding en Coaching"
+   }
+}
+// trusted advisor - basis
+{ 
+   "list": {
+      "1": "Het Model",
+      "2": "De 7 Fases van Adviesrelatie",
+      "3": "Formule van Vertrouwen",
+      "4": "Partnering",
+      "5": "Authenticiteit",
+      "6": "Empathisch Luisteren",
+      "7": "Start Ineens Juist"
+   },
+   "list_2": {
+      "1": "De Bouwstenen",
+      "2": "Trust Assessment",
+      "3": "Opleiding en Coaching"
+   }
+}

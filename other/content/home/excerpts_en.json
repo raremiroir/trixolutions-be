@@ -1,0 +1,183 @@
+// Train virtual trainer
+{ 
+   "first": "",
+   "second": "",
+   "list": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": ""
+   }
+}
+// Frustraties virtuele teams
+{ 
+   "first": "",
+   "second": "",
+   "list": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+   }
+}
+// Hybride werken
+{ 
+   "first": "",
+   "second": "",
+   "list": {
+      "1": "",
+      "2": "",
+      "3": ""
+   }
+}
+
+
+// 6 Types of Working Genius
+{ 
+   "first": "",
+   "list": {
+      "1": "The Genius of Wonder (Verwondering)",
+      "2": "The Genius of Invention (Uitvinden)",
+      "3": "The Genius of Discernment (Evalueren)",
+      "4": "The Genius of Galvanizing (Dynamiseren)",
+      "5": "The Genius of Enablement (Activeren)",
+      "6": "The Genius of Tenacity (Landen)"
+   },
+   "list_2": {
+      "1": "(Digitale) Opleiding en Coaching",
+      "2": "Assessment"
+   }
+}
+// 5 Frustraties van teamwork
+{ 
+   "first": "If you get all the people in an organization rowing in the same direction, you could dominate any industry, in any market, against any competition, at any time.",
+   "list": {
+      "1": "Het Model",
+      "2": "Vertrouwen",
+      "3": "Respectvolle conflicten",
+      "4": "Teambetrokkenheid",
+      "5": "Aansprakelijkheid",
+      "6": "Resultaatgerichtheid"
+   },
+   "list_2": {
+      "1": "(Digitale) Opleiding en Coaching",
+      "2": "Assessment"
+   }
+}
+// beslissende voorsprong
+{ 
+   "first": "“De grootste voorsprong en competitief voordeel die een bedrijf kan nemen, is het creëren en hebben van een gezonde organisatie- en teamcultuur.” (Patrick Lencioni)",
+   "list": {
+      "1": "Het Model",
+      "2": "Gezonde Teams",
+      "3": "Helderheid",
+      "4": "Overcommuniceren",
+      "5": "Integratie in HR systemen"
+   },
+   "list_2": {
+      "1": "(Digitale) Opleiding en Coaching",
+      "2": "Consulting",
+      "3": "Assessment"
+   }
+}
+
+
+// ideale teamspeler
+{ 
+   "first": "Wat het bekende Lencioni model zo krachtig en ook zo moeilijk maakt, is de benodigde combinatie van 3 unieke eigenschappen bij iemand. Zelfs bij gebrek aan 1 van de drie  wordt teamwork beduidend moeilijker en soms zelfs onmogelijk.",
+   "list": {
+      "1": "Het Model",
+      "2": "Bescheiden",
+      "3": "Gedreven",
+      "4": "Emotioneel Intelligent"
+   },
+   "list_2": {
+      "1": "Assessment",
+      "2": "Opleiding en Coaching"
+   }
+}
+// betrokkenheid creëren
+{ 
+   "first": "Betrokken, enthousiaste en loyale medewerkers zijn een sleutelfactor in de groei en gezondheid van teams en organisaties. Maar des te moeilijker om dit te verhogen en op te bouwen als het op een laag pitje staat. De kosten van onbetrokkenheid van teamleden is niet te onderschatten.",
+   "list": {
+      "1": "Het Model",
+      "2": "Anonimiteit",
+      "3": "Irrelevantie",
+      "4": "Onmeetbaarheid"
+   },
+   "list_2": {
+      "1": "Opleiding en Coaching"
+   }
+}
+// deep democracy
+{ 
+   "first": "De nieuwe generatie leiders beseft steeds meer en meer dat echt luisteren, samenwerking, diversiteit, respectvolle conflicten en synergie, écht belangrijk zijn voor een gedegen én gedragen besluitvorming.",
+   "list": {
+      "1": "Het Model",
+      "2": "Verzamel invalshoeken",
+      "3": "Zoek het alternatief",
+      "4": "Verspreid alternatief",
+      "5": "Voeg minderheidswijsheid toe",
+      "6": "Werken met de onderstroom"
+   },
+   "list_2": {
+      "1": "Opleiding en Coaching"
+   }
+}
+
+
+// commerciële vaardigheden
+{ 
+   "list": {
+      "1": "Business Development",
+      "2": "Prospectie",
+      "3": "Solution Selling",
+      "4": "Onderhandelingsstijlen",
+      "5": "Rules of Engagement",
+      "6": "Closing the deal",
+      "7": "Jouw Elevator Pitch"
+   },
+   "list_2": {
+      "1": "De Bouwstenen",
+      "2": "Sales Assessment",
+      "3": "Opleiding en Coaching"
+   }
+}
+// trusted advisor - advanced
+{ 
+   "list": {
+      "1": "Het Model",
+      "2": "Jouw Trust Pitch",
+      "3": "Vertrouwensnoden",
+      "4": "Van Tactiek naar Strategie",
+      "5": "Adviseren op CxO Level",
+      "6": "Omgaan met 'Politiek'",
+      "7": "'Getting Naked'"
+   },
+   "list_2": {
+      "1": "De Bouwstenen",
+      "2": "Trust Assessment",
+      "3": "Opleiding en Coaching"
+   }
+}
+// trusted advisor - basis
+{ 
+   "list": {
+      "1": "Het Model",
+      "2": "De 7 Fases van Adviesrelatie",
+      "3": "Formule van Vertrouwen",
+      "4": "Partnering",
+      "5": "Authenticiteit",
+      "6": "Empathisch Luisteren",
+      "7": "Start Ineens Juist"
+   },
+   "list_2": {
+      "1": "De Bouwstenen",
+      "2": "Trust Assessment",
+      "3": "Opleiding en Coaching"
+   }
+}
