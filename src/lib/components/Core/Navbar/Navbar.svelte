@@ -16,10 +16,12 @@
 
    // Import locale from i18n
    import { locale } from "$i18n/i18n-svelte";
+   $: $locale;
+   $: console.log($locale);
 
 
    // Define links in navbar
-   const navItems = [
+   let navItems = [
       { name: 'Home', link: `/${$locale}/`, dropdown: false, pages: [] },
       { name: 'Over Ons', link: `/${$locale}/over-ons`, dropdown: false, pages: [] },
       { name: 'Referenties', link: `/${$locale}/referenties`, dropdown: false, pages: [] },

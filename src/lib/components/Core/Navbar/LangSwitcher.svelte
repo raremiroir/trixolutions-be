@@ -1,13 +1,16 @@
 <script lang="ts">
    // import env variables
    import { browser } from '$app/environment'
+   import { invalidateAll } from '$app/navigation'
 	import { page } from '$app/stores'
+
    // import i18n
    import { setLocale, locale } from '$i18n/i18n-svelte'
 	import type { Locales } from '$i18n/i18n-types'
 	import { locales } from '$i18n/i18n-util'
 	import { loadLocaleAsync } from '$i18n/i18n-util.async'
 	import { replaceLocaleInUrl } from '$lib/utils'
+   
    // import components
    import Button  from "$comp/Core/Button/Button.svelte";
    import Menu    from "$comp/Other/Menu/Menu.svelte";
@@ -23,18 +26,18 @@
 		document.querySelector('html').setAttribute('lang', newLocale)
 		if (updateHistoryState) {
 			// update url to reflect locale changes
-			history.pushState({ locale: newLocale }, '', replaceLocaleInUrl(location, newLocale))
+			history.pushState({ locale: newLocale }, '', replaceLocaleInUrl($page.url, newLocale))
 		}
-
+		// run the `load` function again
+		invalidateAll()
 	}
-   // update locale when navigating via browser back/forward buttons
+	// update locale when navigating via browser back/forward buttons
 	const handlePopStateEvent = async ({ state }: PopStateEvent) => switchLocale(state.locale, false)
-	
-   // update locale when page store changes
+	// update locale when page store changes
 	$: if (browser) {
 		const lang = $page.params.lang as Locales
 		switchLocale(lang, false)
-		history.replaceState({ ...history.state, locale: lang }, '', replaceLocaleInUrl(location, lang))
+		history.replaceState({ ...history.state, locale: lang }, '', replaceLocaleInUrl($page.url, lang))
 	}
 </script>
 
@@ -51,28 +54,29 @@
    <ul class="flex flex-col gap-1 p-2">
       {#each locales as l}
          <li>
-            <Button
-               on:click={() => switchLocale(l)}
-               color="{l === $locale ? 'secondary' : 'transparent'}"
-               flat block size="xs"
-               >
-               <div class="w-full flex flex-row items-center justify-start gap-2">
-                  <Icon icon="emojione:flag-for-{l === 'nl' ? 'belgium' : l === 'en' ? 'united-kingdom' : l === 'fr' ? 'france' : ''}" 
-                        width="20" />
-                  <div class="flex flex-col items-start justify-center">
-                     {l === 'en' ? 'English' 
-                     : l === 'fr' ? 'Français' 
-                     : l === 'nl' ? 'Nederlands' 
-                     : 'Error'}
-                     <span class="text-xs italic text-gray-600 capitalize drop-shadow-none font-light">
-                        { l === 'en' ? 'Engels' 
-                        : l === 'fr' ? 'Frans' 
+            <a href={`${replaceLocaleInUrl($page.url, l)}`}>
+               <Button
+                  color="{l === $locale ? 'secondary' : 'transparent'}"
+                  flat block size="xs"
+                  >
+                  <div class="w-full flex flex-row items-center justify-start gap-2">
+                     <Icon icon="emojione:flag-for-{l === 'nl' ? 'belgium' : l === 'en' ? 'united-kingdom' : l === 'fr' ? 'france' : ''}" 
+                           width="20" />
+                     <div class="flex flex-col items-start justify-center">
+                        {l === 'en' ? 'English' 
+                        : l === 'fr' ? 'Français' 
                         : l === 'nl' ? 'Nederlands' 
                         : 'Error'}
-                     </span>
-                  </div>
-               </div> 
-            </Button>
+                        <span class="text-xs italic text-gray-600 capitalize drop-shadow-none font-light">
+                           { l === 'en' ? 'Engels' 
+                           : l === 'fr' ? 'Frans' 
+                           : l === 'nl' ? 'Nederlands' 
+                           : 'Error'}
+                        </span>
+                     </div>
+                  </div> 
+               </Button>
+            </a>
          </li>
       {/each}
    </ul>

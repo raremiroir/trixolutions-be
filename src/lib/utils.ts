@@ -2,9 +2,14 @@ const { randomBytes } = await import('node:crypto')
 
 // replaces the locale slug in a relative url
 // e.g. /en/blog/article-1 => /de/blog/article-1
-export const replaceLocaleInUrl = ({ pathname, search }: Location, locale: string): string => {
-	const [, , ...rest] = pathname.split('/')
-	return `/${[locale, ...rest].join('/')}${search}`
+export const replaceLocaleInUrl = (url: URL, locale: string, full = false): string => {
+	const [, , ...rest] = url.pathname.split('/')
+	const new_pathname = `/${[locale, ...rest].join('/')}`
+	if (!full) {
+		return `${new_pathname}${url.search}`
+	}
+	url.pathname = new_pathname
+	return url.toString()
 }
 
 // Capitalize first letter of each word in string

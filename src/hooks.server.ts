@@ -16,26 +16,27 @@ const L = i18n()
 export const handle: Handle = async ({ event, resolve }) => {
 	// i18n
 		// read language slug
-		const [, lang] = event.url.pathname.split('/')
+	const [, lang] = event.url.pathname.split('/')
 
-		// redirect to base locale if no locale slug was found or if locale is not supported
-		if (!lang || !isLocale(lang)) {
-			const locale = getPreferredLocale(event)
+	// redirect to base locale if no locale slug was found
+	if (!lang) {
+		const locale = getPreferredLocale(event)
 
-			return new Response(null, {
-				status: 302,
-				headers: { 'Location': `/${locale}` }
-			})
-		}
+		return new Response(null, {
+			status: 302,
+			headers: { Location: `/${locale}` },
+		})
+	}
 
-		const locale = lang as Locales
-		const LL = L[locale]
+	// if slug is not a locale, use base locale (e.g. api endpoints)
+	const locale = isLocale(lang) ? (lang as Locales) : getPreferredLocale(event)
+	const LL = L[locale]
 
-		// bind locale and translation functions to current request
-		event.locals.locale = locale
-		event.locals.LL = LL
+	// bind locale and translation functions to current request
+	event.locals.locale = locale
+	event.locals.LL = LL
 
-		console.info(LL.log({ fileName: 'hooks.server.ts' }))
+	console.info(LL.log({ fileName: 'hooks.server.ts' }))
 
 	// Create PocketBase
 	event.locals.pb = new PocketBase('http://127.0.0.1:8090')
