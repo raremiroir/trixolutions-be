@@ -27,8 +27,34 @@
    import WG1080     from '$img/stock/Working-Genius_1080w_Stock.webp'
 	import Navbar from "$src/lib/components/Core/Navbar/Navbar.svelte";
 	import Footer from "$src/lib/components/Core/Footer/Footer.svelte";
+   
+   // console.info($LL.log({ fileName: '+page.svelte' }))
 
+   import PocketBase from "pocketbase";
+   import { pageResult, secondPageResult } from "$lib/stores";
+	import { page } from "$app/stores";
+	import { json } from "@sveltejs/kit";
+	import { each } from "svelte/internal";
+   const pb = new PocketBase('http://127.0.0.1:8090')
+   
+   
+   async function itemsList() {
+      $pageResult = await pb.collection('pages_home_categories')
+                     .getFullList(200 /* batch size */, {
+         sort: 'order',
+      });
+      $secondPageResult = await pb.collection('pages_home_items')
+                     .getFullList(200 /* batch size */, {
+         sort: 'order',
+         expand: 'category'
+      });
+
+      
+   }
+   itemsList();
    let heroHeight="h-200 lg:h-140"
+
+   
 </script>
 
 <header>
@@ -106,52 +132,50 @@
 </header>
 
 <Main noMargin cta>
-   <SectionWrapper name="digitale-opleidingstoppers">
-      <Title slot="title" type="h2">Digitale Opleidingstoppers!</Title>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-         
-         <Card link="/" equalHeight titleSmaller titleType="h3">
-            <span slot="title">Train-the-Virtual-Trainer</span>
-            Op een attractieve en interactieve manier deelnemers betrekken en engageren in digitale opleidingen, 
-            workshops en meetings is een nieuwe belangrijke vaardigheid geworden.<br/><br/>
-            In onze Trixolutions Virtual Classroom begeleiden we onze deelnemers in de knepen van het vak! 
-            <Link underlineOnHover
-               slot="append-inner" href="/"
-               klass='my-2 font-bold'>
-               Meer Info
-            </Link>
-         </Card>
-         
-         <Card link="/" equalHeight titleSmaller titleType="h3">
-            <span slot="title">De 5 Frustraties van Virtuele Teams</span>
-            In het begin gaat dat digitaal samenwerken goed…. Iedereen op Zoom en MS TEAMS (Skype). 
-            Van de virtuele koffiepauzes tot aan de virtuele apero’s probeert elk team in de beginperiode zijn plan te trekken.
-            Maar dan komt het besef dat het virtueel samenwerken toch niet vanzelf gaat, het loopt anders, 
-            moeilijker en de eerste barsten beginnen te ontstaan…
-            <Link underlineOnHover
-               slot="append-inner" href="/"
-               klass='my-2 font-bold'>
-               Meer Info
-            </Link>
-         </Card>
-         
-         <Card link="/" equalHeight titleSmaller titleType="h3">
-            <span slot="title">Hybride Werken</span>
-            Is jouw organisatie ook druk bezig met een post-corona werkbeleid te schrijven en te organiseren? 
-            En is er 1 woord dat terugkomt: ‘hybride’? <br/><br/>
-            Het nieuwe hybride werken vraagt om een vernieuwde aanpak, vaardigheden en bouwstenen. 
-            Dit programma van 9 interactieve sessies bekwaamt je als werknemer, teamlid, 
-            teamlead of manager in de vaardigheden en bouwstenen die je nodig hebt om succesvol te zijn in 
-            de toekomst van het ‘nieuwe Hybride werken’.
-            <Link underlineOnHover
-               slot="append-inner" href="/"
-               klass='my-2 font-bold bottom-0'>
-               Meer Info
-            </Link>
-         </Card>
-         
-      </div>
-   </SectionWrapper>
+   {#each $pageResult as category}
+      <SectionWrapper name="{String(category['name_nl']).replaceAll(' ', '-').replaceAll('“', '').replaceAll('”', '').replaceAll('(', '').replaceAll(')', '').toLowerCase()}">
+         <Title slot="title" type="h2">{category['name_nl']}</Title>
+         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {#each $secondPageResult as item}
+               {#if item['expand']['category']['name_nl'] === category['name_nl']}
+                  <Card link="/" equalHeight titleSmaller titleType="h3">
+                     <span slot="title">{item['title_nl']}</span>
+                     <!-- TODO: ADD PROSE -->
+                     <P klass="prose-ol:list-decimal prose-ul:list-disc prose-li:ml-6"> 
+                        {#if Object(item['excerpt_nl']).first !== undefined}
+                           {Object(item['excerpt_nl']).first} <br/> <br/>
+                        {/if}
+                        {#if Object(item['excerpt_nl']).second !== undefined}
+                           {Object(item['excerpt_nl']).second} <br/> <br/>
+                        {/if}
+                        
+                        
+                        <ul>
+                           {#each Object(item['excerpt_nl'].list) as listItem}
+                              <li>{listItem}</li>
+                           {/each}
+                        </ul>
+
+                        {#if Object(item['excerpt_nl']).list_2 !== undefined}
+                        <br/>
+                        <ol>
+                           {#each Object(item['excerpt_nl'].list_2) as listItem2}
+                              <li>{listItem2}</li>
+                           {/each}
+                        </ol>
+                        {/if}
+                     </P>
+                     <Link underlineOnHover
+                        slot="append-inner" href="/"
+                        klass='my-2 font-bold'>
+                        Meer Info
+                     </Link>
+                  </Card>
+               {/if}
+            {/each}
+         </div>
+      </SectionWrapper>
+   {/each}
 </Main>
 
 <Footer/>

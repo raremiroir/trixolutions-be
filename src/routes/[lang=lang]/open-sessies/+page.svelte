@@ -14,6 +14,7 @@
    import PocketBase from "pocketbase";
    import { formatTime, formatDateFull } from "$lib/utils";
    import { pageResult, secondPageResult } from "$lib/stores";
+	import NavHrefLangs from "$src/lib/components/Core/Navbar/NavHrefLangs.svelte";
    const pb = new PocketBase('http://127.0.0.1:8090')
    
    
@@ -36,6 +37,7 @@
 <Main cta>
    <SectionWrapper name="open-workshops">
       <Title type="h1" slot="title">Open Sessies</Title>
+
       <ul class="m-0 flex flex-col gap-8">
          <li>
             <Card direction="row" titleType="h2" titleSmallest>
