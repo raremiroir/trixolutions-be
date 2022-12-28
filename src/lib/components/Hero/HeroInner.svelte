@@ -1,13 +1,11 @@
-<script>
+<script lang="ts">
    // Import components
 	import Image from "$comp/Base/Media/Image.svelte";
 	import Title from "$comp/Common/Text/Title.svelte";
+   import Img from '@zerodevx/svelte-img';
 
-   // Define images
-   export let img400 = '';
-   export let img600 = '';
-   export let img800 = '';
-   export let img1080 = '';
+   // Define image
+   export let imgSrc:any;
    // Set image alt
    export let imgAlt = 'No alt';
    // Set image position
@@ -15,6 +13,7 @@
 
    // Define height of hero slide (all slides should be same height) (default = h-160)
    export let height = ''
+
 
    // Set type of title
    export let titleType = 'h1'
@@ -30,12 +29,21 @@
 
 
 <!-- Image -->
-<Image
+
+
+<Img 
+   class="
+      w-full {imgPos} object-cover
+      {height ? height : 'h-156 lg:h-160'}" 
+   src={imgSrc} alt={imgAlt}
+   />
+
+<!-- <Image
 	w400={img400} w600={img600} w800={img800} w1080={img1080}
 	alt={imgAlt}
    objectPos={imgPos}
 	klass="w-full {height ? height : 'h-156 lg:h-160'}"
-/>
+/> -->
 
 <!-- Image Overlay -->
 <div class="

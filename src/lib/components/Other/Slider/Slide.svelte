@@ -1,4 +1,4 @@
-<script>
+<script lang='ts'>
 	// Import Swiper Svelte components
 	import { SwiperSlide } from 'swiper/svelte';
 
@@ -13,10 +13,7 @@
 	export let height = ''
 
 	// Set img sources
-	export let img400 = '';
-	export let img600 = '';
-	export let img800 = '';
-	export let img1080 = '';
+	export let imgSrc:any;
 	// Set img alt
 	export let imgAlt = 'No Alt'
 	// Set img position
@@ -33,8 +30,7 @@
 {#if hero}
 	<SwiperSlide>
 		<HeroInner 
-			{img400} {img600} {img800} {img1080} 
-			{imgAlt} {height} {imgPos}
+			{imgSrc} {imgAlt} {height} {imgPos}
 			{titleType} {titleSmall} {titleSmaller} {titleSmallest}>
 			<slot name="title" slot="title">Title</slot>
 			<slot/>

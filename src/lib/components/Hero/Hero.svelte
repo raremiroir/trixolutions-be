@@ -10,20 +10,14 @@
 	import HeroInner  from '$comp/Hero/HeroInner.svelte';
    
    // Import Image
-   import IMGw400    from '$img/stock/Kracht-Van-Gezonde-Teams_400w_Stock.webp';
-   import IMGw600    from '$img/stock/Kracht-Van-Gezonde-Teams_600w_Stock.webp';
-   import IMGw800    from '$img/stock/Kracht-Van-Gezonde-Teams_800w_Stock.webp';
-   import IMGw1080   from '$img/stock/Kracht-Van-Gezonde-Teams_1080w_Stock.webp';
+   import IMGw1080   from '$img/stock/Kracht_Van_Gezonde_Teams_Stock.webp';
    
    // Set image sources
-   export let img400 = IMGw400;
-   export let img600 = IMGw600;
-   export let img800 = IMGw800;
-   export let img1080 = IMGw1080;
+   export let imgSrc = IMGw1080;
    // Set image alt
    export let imgAlt = 'No Alt';
    // Set image position
-   export let imgPos = 'object-center';
+   // export let imgPos = 'object-center';
 
    // Set height of hero 
    export let height = '';
@@ -51,8 +45,7 @@
       </Slider>
    {:else}
       <HeroInner 
-         {img400} {img600} {img800} {img1080} 
-         {imgAlt} {height} {imgPos}
+         {imgSrc} {imgAlt} {height}
          {titleType} {titleSmall} {titleSmaller} {titleSmallest}>
          <slot name="title" slot="title">Title</slot>
          <slot/>
