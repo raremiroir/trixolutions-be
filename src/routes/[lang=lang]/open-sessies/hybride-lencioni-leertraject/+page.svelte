@@ -15,11 +15,25 @@
 	import Hero             from "$comp/Hero/Hero.svelte";
 	import Tabs             from "$comp/Other/Tabs/Tabs.svelte";
 
-   import { formatDateMonthFull } from "$lib/utils";
+   import { formatDateMonthFull, formatPrice } from "$lib/utils";
 
-   import lencioni_pyramid from '$img/lencioni/pyramide/pyramid-lencioni-1.png'
-	import Link from "$src/lib/components/Common/Link/Link.svelte";
+   import Link from "$src/lib/components/Common/Link/Link.svelte";
 	import Icon from "@iconify/svelte";
+
+   import PocketBase from "pocketbase";
+   import { pageResult } from "$lib/stores";
+   const pb = new PocketBase('http://127.0.0.1:8090')
+
+   async function sessionsList() {
+      $pageResult =  await pb.collection('session_types')
+                     .getFullList(200 /* batch size */, {
+         filter: 'type = "level_1_full" || type = "level_1_basic"',
+         sort: 'created',
+      });
+      // console.log($pageResult);
+   }
+   sessionsList();
+   // export let data:any;
 
    let lencioni_features = [
       {content: 'Toegang tot het Hybride Lencioni Traject voor 12 maanden', firstCheck: true},
@@ -47,12 +61,12 @@
 </script>
 
 <header>
-   <Hero height="h-92" titleSmall>
+   <Hero height="h-92" titleSmall imgSrc="Working_Genius" imgAlt="No alt" imgPos="object-top">
       <span slot="title">Trixolutions / Lencioni Hybride Teamcoaching Leertraject</span>   
    </Hero>
 </header>
 
-<Main noMargin>
+<Main noMargin cta>
    <Breadcrumbs/>
    
    <SectionWrapper name="hybride-lencioni-leertraject">
@@ -117,7 +131,7 @@
                         <ListItem large>...</ListItem>
                      </List>
                      <div class="w-5/12">
-                        <Image src={lencioni_pyramid} alt="Pyramide van Lencioni" height="h-80" objectFit="object-contain"/>
+                        <Image imgSrc='lencioni_pyramid' alt="Pyramide van Lencioni" height="h-80" imgFit="object-contain"/>
                      </div>
                   </div>
                </div>
@@ -129,93 +143,53 @@
    <SectionWrapper name="infosessies-praktische-info">
       <div class="flex flex-row gap-4">
 
-         <Card link="/" equalHeight titleSmallest titleType="h2" centerTitle>
-            <span 
-               slot="title" 
-               class="text-center flex flex-col gap-0 justify-center w-full m-0 p-0">
-               <span class="text-[18px] uppercase font-normal m-0 p-0">
-                  Leertraject
-               </span>
-               <span class="leading-tight lg:whitespace-nowrap">
-                  Zonder<br class="lg:hidden"/> Tweedaagse Masterclass
-               </span>
-            </span>
-            <P klass="sm:h-90 md:h-50 lg:h-48 xl:h-40 2xl:h-36">
-               Dit leertraject raden we aan als je al redelijk goed met de Piramide 
-               aan de slag kan en vooral naar verdieping en extra inspiratie zoekt 
-               op vlak van zijn assessments, speciale oefeningen, bruggen met andere 
-               modellen, podcasts, Lencioni filmpjes….<br/>
-               Dit is de 'do it yourself' aanpak, wél met een uur coaching van onze 
-               Trixolutions/Lencioni expert inbegrepen.<br/>
-               Wil je daarna toch wel meedoen aan de tweedaagse Masterclass? Dat kan! 
-               Enkel het verschil in prijs rekenen we dan aan.
-            </P>
-            <List title klass="rounded-lg overflow-hidden border-2 border-primary">
-               <div 
+         {#each $pageResult as item}   
+            <Card link="/" equalHeight titleSmallest titleType="h2" centerTitle>
+               <span 
                   slot="title" 
-                  class="
-                     text-gray-50 bg-primary 
-                     py-2 font-body font-normal
-                     w-full text-center
-                     flex items-center justify-center flex-col
-                     ">
-                  <span>€ 690,00</span>
-                  <span class="text-sm font-thin">12 Maanden Toegang</span>
-               </div>
+                  class="text-center flex flex-col gap-0 justify-center w-full m-0 p-0">
+                  <span class="text-[18px] uppercase font-normal m-0 p-0">
+                     Leertraject
+                  </span>
+                  <span class="leading-tight lg:whitespace-nowrap">
+                     {Object(item.title_nl).first}<br class="lg:hidden"/> {Object(item.title_nl).second}
+                  </span>
+               </span>
+               <P klass="sm:h-90 md:h-50 lg:h-48 xl:h-40 2xl:h-36">
+                  {Object(item.excerpt_nl).first}<br/>
+                  {Object(item.excerpt_nl).second}<br/>
+                  {Object(item.excerpt_nl).third}
+               </P>
+               <List title klass="rounded-lg overflow-hidden border-2 border-primary">
+                  <div 
+                     slot="title" 
+                     class="
+                        text-gray-50 bg-primary 
+                        py-2 font-body font-normal
+                        w-full text-center
+                        flex items-center justify-center flex-col
+                        ">
+                     <span>€ {formatPrice(item.price)}</span>
+                     <span class="text-sm font-thin">12 Maanden Toegang</span>
+                  </div>
 
-               {#each lencioni_features as item}
-                  {#if item.firstCheck}
-                     <ListItem icon="check">{item.content}</ListItem>
-                  {:else}
-                     <ListItem icon="cancel" disabled>{item.content}</ListItem>
-                  {/if}
-               {/each}
+                  {#each Array(Object(item.features_nl).features) as feature}
+                     {#each feature as listItem}
+                        {#if listItem.checked == "true"}
+                           <ListItem icon="check">{listItem.name}</ListItem>
+                        {:else if listItem.checked == "false"}
+                           <ListItem icon="cancel" disabled>{listItem.name}</ListItem>
+                        {/if}
+                     {/each}
+                  {/each}
 
-            </List>
-            <Button size="xl" klass="flex flex-col w-4/5 mx-auto" block>
-               <span class="font-light">INSCHRIJVEN VOOR LEERTRAJECT</span>
-               <span>ZONDER TWEEDAAGSE MASTERCLASS</span>
-            </Button>
-         </Card>
-
-         <Card link="/" equalHeight titleSmallest titleType="h2" centerTitle>
-            <span slot="title" class="text-center flex flex-col gap-0 justify-center w-full m-0 p-0">
-               <span class="text-[18px] uppercase font-normal m-0 p-0">Leertraject</span>
-               <span class="leading-tight lg:whitespace-nowrap">Mét<br class="lg:hidden"/> Tweedaagse Masterclass</span>
-            </span>
-            <P klass="sm:h-90 md:h-50 lg:h-48 xl:h-40 2xl:h-36">
-               Dit extensieve leertraject raden we aan als je geen of een beperkte 
-               kennis van de Piramide van Lencioni hebt.<br/> 
-               We gaan immers in detail door het Lencioni Werkboek en leren je een 
-               Lencioni traject opbouwen en uitrollen, verdiepende kennis en 
-               oefeningen in de verschillende lagen van de Piramide, hoe de 
-               assessments in te zetten.<br/>
-               In deze module zit ook een uur opvolgcoaching inbegrepen, alsook 
-               15 Lencioni Piramides én een Trixolutions/Lencioni Certificaat!
-            </P>
-            <List title klass="rounded-lg overflow-hidden border-2 border-primary">
-               <div 
-                  slot="title" 
-                  class="
-                     text-gray-50 bg-primary 
-                     py-2 font-body font-normal
-                     w-full text-center
-                     flex items-center justify-center flex-col
-                     ">
-                  <span>€ 1.390,00</span>
-                  <span class="text-sm font-thin">12 Maanden Toegang</span>
-               </div>
-
-               {#each lencioni_features as item}
-                  <ListItem icon="check">{item.content}</ListItem>
-               {/each}
-
-            </List>
-            <Button size="xl" klass="flex flex-col w-4/5 mx-auto" block>
-               <span class="font-light">INSCHRIJVEN VOOR LEERTRAJECT</span>
-               <span>MÉT TWEEDAAGSE MASTERCLASS</span>
-            </Button>
-         </Card>         
+               </List>
+               <Button size="xl" klass="flex flex-col w-4/5 mx-auto" block>
+                  <span class="font-light">INSCHRIJVEN VOOR LEERTRAJECT</span>
+                  <span>{`${String(Object(item.title_nl).first).toUpperCase()} ${String(Object(item.title_nl).second).toUpperCase()}`} </span>
+               </Button>
+            </Card>
+         {/each}
 
       </div>
    </SectionWrapper>
