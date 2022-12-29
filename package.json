@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"dev:backend": "cd ../backend && pocketbase serve",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -13,17 +14,27 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"typesafe-i18n": "typesafe-i18n"
 	},
+	"dependencies": {
+		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+		"pocketbase": "^0.9.1",
+		"swiper": "^8.4.5",
+		"typesafe-i18n": "^5.17.2"
+	},
 	"devDependencies": {
 		"@iconify/svelte": "^3.0.1",
 		"@playwright/test": "^1.29.0",
+		"@rodneylab/sveltekit-components": "^2.0.0",
+		"@rodneylab/sveltekit-map-component": "^2.0.1",
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/kit": "^1.0.1",
 		"@tailwindcss/forms": "^0.5.2",
 		"@tailwindcss/line-clamp": "^0.4.2",
 		"@tailwindcss/typography": "^0.5.3",
+		"@types/node": "^18.11.18",
 		"@zerodevx/svelte-img": "^1.2.3",
 		"autoprefixer": "^10.4.7",
 		"daisyui": "^2.46.0",
+		"pocketbase-typegen": "^1.1.2",
 		"postcss": "^8.4.20",
 		"postcss-import": "^15.1.0",
 		"postcss-load-config": "^4.0.1",
@@ -32,16 +43,27 @@
 		"svelte": "^3.55.0",
 		"svelte-check": "^2.10.2",
 		"svelte-preprocess": "^5.0.0",
+		"svimg": "^3.1.0",
 		"tailwindcss": "^3.1.5",
 		"tslib": "^2.3.1",
 		"typescript": "^4.9.4",
-		"vite": "^4.0.2"
+		"vanilla-lazyload": "^17.8.3",
+		"vite": "^4.0.2",
+		"vite-imagetools": "^4.0.12"
 	},
+	"license": "MIT",
+	"repository": "github:raremiroir/trixolutions-be",
+	"keywords": [
+		"trixolutions",
+		"mist media",
+		"coaching",
+		"consultancy",
+		"tom van dorst",
+		"patrick lencioni",
+		"lencioni"
+	],
 	"type": "module",
-	"dependencies": {
-		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-		"pocketbase": "^0.9.1",
-		"swiper": "^8.4.5",
-		"typesafe-i18n": "^5.17.2"
+	"peerDependencies": {
+		"leaflet": "^1.9.3"
 	}
 }
