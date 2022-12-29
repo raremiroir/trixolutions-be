@@ -10,10 +10,10 @@
 	export let hero = false;
 	
 	// Set height of slide (should be equal for all slides) (default = h-160)
-	export let height = ''
+	export let height = 'h-160'
 
 	// Set img sources
-	export let imgSrc:any;
+	export let imgSrc = '';
 	// Set img alt
 	export let imgAlt = 'No Alt'
 	// Set img position

@@ -5,14 +5,16 @@
    import Img from '@zerodevx/svelte-img';
 
    // Define image
-   export let imgSrc:any;
+   export let imgSrc = '';
    // Set image alt
    export let imgAlt = 'No alt';
    // Set image position
    export let imgPos = 'object-center';
+   // Set image cover
+   export let imgFit = 'object-cover';
 
    // Define height of hero slide (all slides should be same height) (default = h-160)
-   export let height = ''
+   export let height = 'h-120'
 
 
    // Set type of title
@@ -29,26 +31,18 @@
 
 
 <!-- Image -->
-
-
-<Img 
-   class="
-      w-full {imgPos} object-cover
-      {height ? height : 'h-156 lg:h-160'}" 
-   src={imgSrc} alt={imgAlt}
-   />
-
-<!-- <Image
-	w400={img400} w600={img600} w800={img800} w1080={img1080}
+<Image eager
 	alt={imgAlt}
-   objectPos={imgPos}
-	klass="w-full {height ? height : 'h-156 lg:h-160'}"
-/> -->
+   {imgSrc} {imgPos} {imgFit} 
+   {height}
+	klass="w-full"
+/>
 
 <!-- Image Overlay -->
 <div class="
       w-full h-full 
       bg-black/50 mix-blend-multiply
+      backdrop-blur-[3px]
       absolute top-0
       flex items-center">
 	<br />

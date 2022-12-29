@@ -8,32 +8,6 @@
 	import Card from "$src/lib/components/Common/Card/Card.svelte";
 	import Image from "$src/lib/components/Base/Media/Image.svelte";
 
-   // Import images
-      // Tom BW
-      import tom_bw400 from '$img/team/Tom-BW_400w.webp'
-      import tom_bw600 from '$img/team/Tom-BW_600w.webp'
-      import tom_bw800 from '$img/team/Tom-BW_800w.webp'
-      import tom_bw1080 from '$img/team/Tom-BW_1080w.webp'
-      // Tom
-      import tom400 from '$img/team/Tom-Color_400w.webp'
-      import tom600 from '$img/team/Tom-Color_600w.webp'
-      import tom800 from '$img/team/Tom-Color_800w.webp'
-      import tom1080 from '$img/team/Tom-Color_1080w.webp'
-      // Christoph
-      import christoph400 from '$img/team/Christoph_400w.webp'
-      import christoph600 from '$img/team/Christoph_600w.webp'
-      import christoph800 from '$img/team/Christoph_800w.webp'
-      import christoph1080 from '$img/team/Christoph_1080w.webp'
-      // Frederik
-      import frederik400 from '$img/team/Frederik_400w.webp'
-      import frederik600 from '$img/team/Frederik_600w.webp'
-      import frederik800 from '$img/team/Frederik_800w.webp'
-      import frederik1080 from '$img/team/Frederik_1080w.webp'
-      // Tamara
-      import tamara400 from '$img/team/Tamara_400w.webp'
-      import tamara600 from '$img/team/Tamara_600w.webp'
-      import tamara800 from '$img/team/Tamara_800w.webp'
-      import tamara1080 from '$img/team/Tamara_1080w.webp'
       
 </script>
 
@@ -42,8 +16,8 @@
       <Title slot="title" type='h1'>Over Ons</Title>
       <div class="grid grid-cols-3 gap-12">
          <Image 
-            alt="Tom van Dorst - CEO Trixolutions" klass="rounded-xl shadow-md" height="h-full"
-            w400={tom400} w600={tom600} w800={tom800} w1080={tom1080}
+            alt="Tom van Dorst - CEO Trixolutions" klass="rounded-xl shadow-md"
+            imgSrc="tom_color"
          />
          <P klass="col-span-2 h-fit" large>
             Trixolutions is als enige in de Benelux lid van de 
@@ -77,10 +51,12 @@
          <li>
             <Card titleType="h3" titleSmall>
                <span slot="title">Tom van Dorst</span>
-               <Image 
-                  slot="image" height="h-80" alt="Tom van Dorst - CEO Trixolutions"
-                  w400={tom_bw400} w600={tom_bw600} w800={tom_bw800} w1080={tom_bw1080}
-               />
+               <div class="h-80" slot="image">
+                  <Image 
+                     alt="Tom van Dorst - CEO Trixolutions"
+                     imgSrc="tom"
+                  />
+               </div>
                CEO / Trainer / Coach
             </Card>
          </li>
@@ -89,7 +65,7 @@
                <span slot="title">Tamara</span>
                <Image 
                   slot="image" height="h-80" alt="Tamara - Trixolutions Office Manager"
-                  w400={tamara400} w600={tamara600} w800={tamara800} w1080={tamara1080}
+                  imgSrc="tamara"
                />
                Office Manager
             </Card>
@@ -99,7 +75,7 @@
                <span slot="title">Roger</span>
                <Image 
                   slot="image" height="h-80" alt="Roger - Trixolutions Trainer / Acteur"
-                  w400={tamara400} w600={tamara600} w800={tamara800} w1080={tamara1080}
+                  imgSrc="placeholder"
                />
                Trainer / Acteur
             </Card>
@@ -109,7 +85,7 @@
                <span slot="title">Kelly</span>
                <Image 
                   slot="image" height="h-80" alt="Kelly - Trixolutions Trainer / Facilitator"
-                  w400={tamara400} w600={tamara600} w800={tamara800} w1080={tamara1080}
+                  imgSrc="placeholder"
                />
                Trainer / Facilitator
             </Card>
@@ -119,8 +95,8 @@
                <span slot="title">Christoph</span>
                <Image 
                   slot="image" height="h-80" alt="Christoph - Trixolutions Trainer / Facilitator"
-                  w400={christoph400} w600={christoph600} w800={christoph800} w1080={christoph1080}
-                  objectPos="object-top" klass="w-full"
+                  imgSrc="christoph"
+                  imgPos="object-top" klass="w-full"
                />
                Trainer / Facilitator
             </Card>
@@ -130,8 +106,8 @@
                <span slot="title">Frederik</span>
                <Image 
                   slot="image" height="h-80" alt="Frederik - Trixolutions Senior Trainer"
-                  w400={frederik400} w600={frederik600} w800={frederik800} w1080={frederik1080}
-                  objectPos="object-top" klass="w-full"
+                  imgSrc="frederik"
+                  imgPos="object-top" klass="w-full"
                />
                Senior Trainer
             </Card>

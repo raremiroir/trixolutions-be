@@ -2,7 +2,6 @@
 	import Button           from "$comp/Core/Button/Button.svelte";
 	import Main             from "$comp/Base/Wrapper/Main.svelte";
    import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
-	import Image            from "$comp/Base/Media/Image.svelte";
 	import Breadcrumbs      from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
 	import Card             from "$comp/Common/Card/Card.svelte";
 	import P                from "$comp/Common/Text/P.svelte";
@@ -18,11 +17,13 @@
    
    
    async function sessionsList() {
-      $pageResult =  await pb.collection('info_sessions')
+      $pageResult =  await pb.collection('sessions')
                      .getFullList(200 /* batch size */, {
+         filter: 'type = "info_session"',
          sort: 'created',
          expand: 'trainer'
       });
+      console.log($pageResult);
    }
    sessionsList();
    export let data:any;
@@ -30,7 +31,7 @@
 </script>
 
 <header>
-   <Hero height="h-92">
+   <Hero height="h-92" imgSrc="Kracht_Gezonde_Teams" imgAlt="No Alt">
       <span slot="title">
          Gratis Online Open Infosessies
       </span>

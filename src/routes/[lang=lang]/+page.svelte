@@ -9,24 +9,15 @@
 	import P                from "$comp/Common/Text/P.svelte";
 	import Hero             from "$comp/Hero/Hero.svelte";
 	import Slide            from "$comp/Other/Slider/Slide.svelte";
-   import Img              from "@zerodevx/svelte-img";
    
 	import Navbar from "$src/lib/components/Core/Navbar/Navbar.svelte";
 	import Footer from "$src/lib/components/Core/Footer/Footer.svelte";
    
-   // Import Images
-   import Kracht_Van_Gezonde_Teams   from '$img/stock/Kracht_Van_Gezonde_Teams_Stock.webp?run&lqip=1'
-   import Beslissende_Voorsprong_2    from '$img/stock/Beslissende_Voorsprong_2_Stock.webp?run&lqip=1'
-   import Working_Genius     from '$img/stock/Working_Genius_Stock.webp?run&lqip=1'
-   
-   
    // console.info($LL.log({ fileName: '+page.svelte' }))
-
    import PocketBase from "pocketbase";
    import { pageResult, secondPageResult } from "$lib/stores";
 	import { page } from "$app/stores";
-	import { json } from "@sveltejs/kit";
-	import { each } from "svelte/internal";
+	import Image from "$src/lib/components/Base/Media/Image.svelte";
    const pb = new PocketBase('http://127.0.0.1:8090')
 
    async function itemsList() {
@@ -42,7 +33,15 @@
    }
 
    itemsList();
-   let heroHeight="h-200 lg:h-140"
+   let heroHeight="h-160"
+
+   // export let imageData;
+
+	// onMount(() => {
+	// 	if (browser) {
+	// 		document.lazyloadInstance.update();
+	// 	}
+	// });
 
 </script>
 
@@ -53,7 +52,7 @@
       <Slide hero 
          imgAlt="Trixolutions Lencioni - De Kracht van Gezonde Teams" 
          height="{heroHeight}"
-         imgSrc={Kracht_Van_Gezonde_Teams}>
+         imgSrc='Kracht_Gezonde_Teams'>
          <span slot="title">De Kracht van Gezonde Teams</span>
          <div class="flex flex-col gap-2">
             <Title type='subheader' color="text-gray-50">
@@ -81,7 +80,7 @@
       <Slide hero 
          titleType='fake-h1' titleSmall imgPos="object-top" height={heroHeight}
          imgAlt="Trixolutions Lencioni - De Beslissende Voorsprong"
-         imgSrc={Beslissende_Voorsprong_2}>
+         imgSrc='Beslissende_Voorsprong_2'>
          <span slot="title">Neem als Organisatie of Team de ❛Beslissende Voorsprong❜ van Patrick Lencioni!</span>
          <div class="flex flex-col gap-2">
             <Title type='subheader' color="text-gray-50">
@@ -101,7 +100,7 @@
       <Slide hero 
          titleType='fake-h1' imgPos="object-top" height={heroHeight}
          imgAlt="Trixolutions Lencioni - The 6 Types of Working Genius"
-         imgSrc={Working_Genius}>
+         imgSrc='Working_Genius'>
          <span slot="title">The 6 Types of Working Genius</span>
          <div class="flex flex-col gap-2">
             <Title type='subheader' color="text-gray-50">
@@ -122,9 +121,14 @@
 </header>
 
 <Main noMargin cta>
+   <!-- <img src="{Working_Genius}" alt=""> -->
+
    {#each $pageResult as category}
       <SectionWrapper name="{String(category['name_nl']).replaceAll(' ', '-').replaceAll('“', '').replaceAll('”', '').replaceAll('(', '').replaceAll(')', '').toLowerCase()}">
          <Title slot="title" type="h2">{category['name_nl']}</Title>
+
+
+
          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {#each $secondPageResult as item}
                {#if item['expand']['category']['name_nl'] === category['name_nl']}
@@ -133,11 +137,12 @@
 
                      <div slot="image">
                         {#if item['expand']['img']['type'] === 'local'}
-                           <Img src={String(`${$page.url.origin}/src/lib/images${item['expand']['img']['src']}?run`)} alt="no alt"/>
+                           <img src={`${$page.url.origin}/src/lib/images${item['expand']['img']['src']}?run`} alt="no alt"/>
                         {:else if item['expand']['img']['type'] === 'url'}
-                           <Img src={String(`${item['expand']['img']['src']}?run`)} alt="no alt"/>
+                           <img src={`${item['expand']['img']['src']}?run`} alt="no alt"/>
                         {/if}
                      </div>
+
                      <P klass="prose-ol:list-decimal prose-ul:list-disc prose-li:ml-6"> 
                         {#if Object(item['excerpt_nl']).first !== undefined}
                            {Object(item['excerpt_nl']).first} <br/> <br/>
