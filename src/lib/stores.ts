@@ -9,3 +9,4 @@ export const verified = writable();
 
 export const pageResult = writable([]);
 export const secondPageResult = writable([]);
+export const imgSrc = writable('');
