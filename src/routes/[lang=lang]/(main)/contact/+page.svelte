@@ -35,9 +35,9 @@
 </script>
 
 <Breadcrumbs/>
-<Main>
+<Main cta>
    <SectionWrapper name="contact-us">
-      <Title type="h1">Contact</Title>
+      <Title slot="title" type="h1">Contact</Title>
       <div class="flex flex-row gap-8">
          {#each places as place}
             <Card titleType="h2" titleSmallest centerTitle>
@@ -65,14 +65,11 @@
             </Card>
          {/each}
       </div>
+   </SectionWrapper>
+
+   <SectionWrapper name="cta-buttons">
 
       <div class="flex flex-row gap-8 items-center justify-center">
-         <Button size="xxl" color="primary" lowercase>
-            <div class="flex flex-row gap-2 items-center">
-               <Icon icon="material-symbols:location-on-rounded" color="#f6ece7" width="40" />
-               Bekijk ons op de Kaart!
-            </div>
-         </Button>
          <Button size="xxl" color="primary" lowercase>
             <div class="flex flex-row gap-2 items-center">
                <Icon icon="material-symbols:mark-email-read-rounded" color="#f6ece7" width="40" />
@@ -80,8 +77,11 @@
             </div>
          </Button>
       </div>
+   </SectionWrapper>
 
-      <div class="w-full h-100">
+   <SectionWrapper name="trixolutions-map">
+      <Title type="h2" small slot="title">Vind ons op de kaart!</Title>
+      <div class="w-full h-140">
          <Map/>
       </div>
    </SectionWrapper>
