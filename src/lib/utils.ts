@@ -77,3 +77,8 @@ export const serializeNonPOJOs = (obj) => {
 export const generateUsername = (first_name, last_name) => {
 	return `${first_name.replaceAll(' ', '')}.${last_name.replaceAll(' ', '')}`
 }
+
+// Price formatter
+export const formatPrice = (number) => {
+	return (number).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+}
