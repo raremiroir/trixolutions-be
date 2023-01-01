@@ -82,3 +82,15 @@ export const generateUsername = (first_name, last_name) => {
 export const formatPrice = (number) => {
 	return (number).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
+
+// Url formatter for dynamic pages
+export const formatUrl = (string) => {
+	let newString = String(string).toLowerCase();
+	newString = newString.replaceAll('-', '');
+	newString = newString.replaceAll('.', '');
+	newString = newString.replaceAll('?', '');
+	newString = newString.replaceAll('!', '');
+	newString = newString.replaceAll(',', '');
+	newString = newString.replaceAll(' ', '-');
+	return newString;
+}
