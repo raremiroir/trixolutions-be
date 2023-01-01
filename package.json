@@ -16,6 +16,8 @@
 	},
 	"dependencies": {
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+		"@types/marked": "^4.0.8",
+		"marked": "^4.2.5",
 		"pocketbase": "^0.9.1",
 		"swiper": "^8.4.5",
 		"typesafe-i18n": "^5.17.2"
