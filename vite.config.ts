@@ -3,7 +3,6 @@ import type { UserConfig } from 'vite';
 import { imagetools } from 'vite-imagetools';
 
 
-
 const config: UserConfig = {
 	plugins: [
 		imagetools(),
