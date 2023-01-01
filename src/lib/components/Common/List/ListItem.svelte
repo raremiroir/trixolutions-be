@@ -17,12 +17,13 @@
 
 <li class="
       w-full
-      flex flex-row items-center justify-start gap-2
+      {icon ? 'flex flex-row items-center justify-start' : ''}
+      gap-2
       {icon ? 'list-none' : 'list-disc' }
-      {indent ? 'ml-8 pl-1' : 'px-2 mx-auto py-1'}
-      font-body leading-relaxed font-medium tracking-tight
+      {indent ? 'ml-8 pl-1' : 'px-1 mx-1 py-1'}
+      font-body leading-relaxed font-normal tracking-tight
       { large ? 'text-lg' : 'text-base' }
-      text-gray-800 
+      text-gray-700 
       {klass}">
 
    {#if icon}
@@ -42,7 +43,7 @@
       {/if}
    </div>
    {/if}
-   <div class="{icon ? 'w-11/12' : 'w-full'} {disabled ? 'text-gray-500 line-through' : 'text-primary-d2'}">
+   <div class="{icon ? 'w-11/12' : 'w-full'} {disabled ? 'text-gray-500 line-through' : ''}">
       <slot/>
    </div>
 </li>
