@@ -27,7 +27,7 @@
                      .getFullList(200 /* batch size */, {
          sort: 'created',
       });
-      console.log($pageResult);
+      // console.log($pageResult);
    }
    sessionsList();
 
