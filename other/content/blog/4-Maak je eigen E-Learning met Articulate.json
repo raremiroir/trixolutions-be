@@ -1,0 +1,309 @@
+[
+   {
+      "type": "section",
+      "content": [
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "normal",
+                  "text": "E-Learning Modules zijn niet meer enkel weggelegd voor de grote internationale bedrijven. Vandaag de dag zijn er reeds haalbare en budgetvriendelijke mogelijkheden om zeer kwalitatieve E-Learnings te ontwikkelen. Onder andere met de software van 'Articulate' (Rise/Storyline)."
+               },
+               {
+                  "type": "normal",
+                  "text": "Trixolutions kan jou helpen om je E-Learnings zelf te leren maken via onze Articulate opleiding OF kan voor jou je opleiding omzetten in een E-LEarning."
+               },
+               {
+                  "type": "normal",
+                  "text": "Benieuwd naar de mogelijkheden?"
+               },
+               {
+                  "type": "link",
+                  "text": "Vraag hier een gratis demo aan!",
+                  "link": "/"
+               },
+               {
+                  "type": "normal",
+                  "text": "De voordelen van de E-Learning zijn, helaas ook een stuk door de coronacrisis, meer in de belangstelling komen te staan."
+               }
+            ]
+         },
+         {
+            "type": "list",
+            "content": [
+               { "text": "Schaalbaarheid: eens de module gemaakt is kan die voor een onbeperkt aantal deelnemers ingezet worden." },
+               { "text": "Aanpassing: de module kan makkelijk, bij veranderingen naar inhoud, aangepast worden." },
+               { "text": "Herhaling: deelnemers kunnen er makkelijk een tweede of derde keer doorgaan om zo de leerdoelen nog beter te behalen." },
+               { "text": "Tempo: deelnemers kunnen door de E-Learning Module gaan wanneer het hen het beste uitkomt." },
+               { "text": "Controle: de inhoudelijke kennis kan getest worden alsook de vooruitgang in de module." }
+            ]
+         },
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "normal",
+                  "text": "Om je alvast op gang te helpen hierbij onze 10 tips helpen jou bij het opzetten van je E-Learning!"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "type": "section",
+      "content": [
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "h2",
+                  "text": "Tip 1. Wat wil je bereiken?"
+               },
+               {
+                  "type": "normal",
+                  "text": "Het is verstandig om bij het maken van je e-learning na te denken over wat je met je e-learning wilt bereiken. Bedenk dus wat je cursisten moeten weten aan het einde van de training."
+               },
+               {
+                  "type": "note",
+                  "text": "Denk dus na over de leerdoelen van je e-learning"
+               },
+               {
+                  "type": "normal",
+                  "text": "Dit kun je aan de hand van een structuur doen:"
+               }
+            ]
+         },
+         {
+            "type": "list-ol",
+            "content": [
+               {"text": "Schrijf alles op wat een deelnemer moet kunnen na het volgen van jouw online training. Maak dit zo concreet mogelijk, zoals “een sollicitatiebrief  kunnen schrijven” of “de basis van SEO snappen”. Dit kun je zien als leerdoelen."},
+               {"text": "Schrijf alle stappen op die iemand moet nemen om de leerdoelen te bereiken. Probeer het pad zo logisch mogelijk te omschrijven. Dit zijn je subdoelen."},
+               {"text": "Verdeel de stappen in secties. Secties maken het volgen van je lesstof overzichtelijker voor cursisten, omdat je gerelateerde onderwerpen bij elkaar bundelt. Een sectie is is bijvoorbeeld ‘de motivatiebrief’. Deze secties ga je zo onderverdelen in lessen, waar de daadwerkelijke content van je training in zit."},
+               {"text": "Vul de secties met lessen. Dit is in het voorbeeld ‘indeling van de brief’ en ‘je motivatiebrief laten nalezen’, welke beide bij de sectie ‘de motivatiebrief’ horen."},
+               {"text": "Zet de secties in een logische volgorde."}
+            ]
+         }
+      ]
+   },
+   {
+      "type": "section",
+      "content": [
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "h2",
+                  "text": "Tip 2. Kies een geschikte e-learning tool"
+               },
+               {
+                  "type": "normal",
+                  "text": "Dit klinkt misschien een beetje als ‘wij van WC-eend adviseren WC-eend’. Toch is het essentieel om de juiste tool te kiezen voor je e-learning."
+               },
+               {
+                  "type": "normal",
+                  "text": "Dit moet een tool zijn die aansluit bij jouw online training. Gebruiksvriendelijkheid is ook een punt van overweging. Je wilt natuurlijk niet uren bezig zijn met het uitvinden van een tool: je wilt meteen kunnen beginnen met het in elkaar zetten van je training."
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "type": "section",
+      "content": [
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "h2",
+                  "text": "Tip 3. Betere leesbaarheid"
+               },
+               {
+                  "type": "normal",
+                  "text": "Bij een online training ligt afleiding al snel op de loer. Facebook en LinkedIn zijn namelijk zo geopend. Je wilt dus dat je cursisten hun aandacht bij jouw training houden. Wat helpt is het verbeteren van de leesbaarheid van je training. Hier zijn trucjes voor."
+               }
+            ]
+         },
+         {
+            "type": "list",
+            "content": [
+               {
+                  "type": "strong",
+                  "text": "Korte zinnen",
+                  "items": [
+                     {
+                        "type": "text",
+                        "text": "Zorg voor korte zinnen. Dit leest een stuk makkelijker. Zo houden je cursisten hun aandacht beter bij je training."
+                     }
+                  ]
+               },
+               {
+                  "type": "strong",
+                  "text": "Jargon",
+                  "items": [
+                     {
+                        "type": "text",
+                        "text": "Let ook op jargon. Woorden die jij dagelijks in je werk gebruikt, zijn misschien onbekend bij je cursisten. Mocht je dit echt willen gebruiken, dan kun je deze woorden de eerste keer uitleggen."
+                     }
+                  ]
+               },
+               {
+                  "type": "strong",
+                  "text": "Kopjes",
+                  "items": [
+                     {
+                        "type": "text",
+                        "text": "Deel je training op in korte alinea’s, zodat het makkelijker wordt om een alinea uit te lezen. Zorg wel voor duidelijke kopjes boven de alinea's."
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "type": "section",
+      "content": [
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "h2",
+                  "text": "Tip 4. Microlearning = awesome"
+               },
+               {
+                  "type": "normal",
+                  "text": "Microlearning betekent dat je jouw training opdeelt in kleine, hapklare brokken. Dit leert makkelijker dan één lange online cursus. Denk bijvoorbeeld aan Duolingo. Hier kun je telkens nieuwe woorden en grammatica leren, opgedeeld in kleine ‘hapjes’. Microlearning stimuleert bovendien je cursist om je training af te ronden."
+               },
+               {
+                  "type": "normal",
+                  "text": "Wanneer je cursist een deel van de cursus heeft gehaald, voelt hij/zij zich vaak gemotiveerd om door te gaan. Dit in tegenstelling tot een lange cursus waar je halverwege de lesstof geen zin meer hebt om verder te lezen. Microlearning helpt je e-learning succesvol te maken!"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "type": "section",
+      "content": [
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "h2",
+                  "text": "Tip 5. Wees een contentkoning(in)"
+               },
+               {
+                  "type": "normal",
+                  "text": "Wissel de soorten content in je e-learning af. Zo hou je jouw e-learning interessant. Neem bijvoorbeeld een video op, of voeg er een van Youtube toe. Link naar een interessante infographic of nieuwsartikel. Voeg foto’s toe. Of een quiz. De mogelijkheden zijn legio."
+               },
+               {
+                  "type": "normal",
+                  "text": "Podcasts zijn tegenwoordig ook helemaal hip en worden ook steeds vaker binnen e-learning gebruikt."
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "type": "section",
+      "content": [
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "h2",
+                  "text": "Tip 6. Ieder z'n eigen leerpad"
+               },
+               {
+                  "type": "normal",
+                  "text": "Een van de voordelen van het geven van een online training is dat je elke deelnemer een eigen leerpad kunt aanbieden. Zo kun je heel gemakkelijk inspelen op de behoeften van je cursisten. Wanneer je cursist iets niet begrijpt, kun je hem/haar extra content aanbieden."
+               },
+               {
+                  "type": "note",
+                  "text": "Andersom werkt dit natuurlijk ook: wanneer jouw cursist een deel van je online cursus erg makkelijk vindt, kun je hem/haar verdiepende stof geven. Zo verhoog je de resultaten van je deelnemers!"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "type": "section",
+      "content": [
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "h2",
+                  "text": "Tip 7. Herhalen, herhalen, herhalen"
+               },
+               {
+                  "type": "normal",
+                  "text": "Leraars die vroeger zeiden dat herhaling noodzakelijk was om dingen te leren, hadden stiekem wel gelijk."
+               },
+               {
+                  "type": "normal",
+                  "text": "Het is wetenschappelijk bewezen dat lesstof niet herhalen leidt tot vergeten. Wanneer je cursist vandaag iets leest, en je dit niet herhaalt, zal 80% tot 90% binnen een week weer vergeten zijn."
+               },
+               {
+                  "type": "strong",
+                  "text": "Zorg dus daarom voor voldoende herhaling in je e-learning. Denk aan samenvattingen, quizzen en toetsen."
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "type": "section",
+      "content": [
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "h2",
+                  "text": "Tip 8. Groepsgevoel aanwakkeren"
+               },
+               {
+                  "type": "normal",
+                  "text": "De meeste mensen zijn groepsdieren, maar e-learnings zijn vooral op het individu gericht. Toch kun je het groepsgevoel stimuleren. Laat je cursisten bijvoorbeeld samen een opdracht doen. Naast een fijne afwisseling motiveert dit ook je deelnemers om je cursus af te ronden."
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "type": "section",
+      "content": [
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "h2",
+                  "text": "Tip 9. Even testen"
+               },
+               {
+                  "type": "normal",
+                  "text": "Het mooie aan een online cursus maken is dat je kennis meteen kan toetsen. Dit helpt je cursisten ook bij het onthouden van je leerstof (weet je nog, herhaling, herhalen, herhalen!). Herhaal de geleerde lesstof aan het eind van een hoofdstuk met een oefentoets en sluit een module af met een eindtoets. Zo zullen ze nooit meer jouw content vergeten!"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "type": "section",
+      "content": [
+         {
+            "type": "text",
+            "content": [
+               {
+                  "type": "h2",
+                  "text": "Tip 10. Niet te serieus"
+               },
+               {
+                  "type": "normal",
+                  "text": "Af en toe kun je prima een grapje in je training maken. Lachen ontspant het lichaam namelijk en een ontspannen lichaam is ontvankelijker voor nieuwe ideeën. Zo blijven je cursisten uiteindelijk langer geconcentreerd!"
+               }
+            ]
+         }
+      ]
+   }
+]
