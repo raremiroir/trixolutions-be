@@ -15,10 +15,11 @@
 		"typesafe-i18n": "typesafe-i18n"
 	},
 	"dependencies": {
+		"@supabase/auth-helpers-sveltekit": "^0.8.6",
+		"@supabase/supabase-js": "^2.2.3",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"@types/marked": "^4.0.8",
 		"marked": "^4.2.5",
-		"pocketbase": "^0.9.1",
 		"swiper": "^8.4.5",
 		"typesafe-i18n": "^5.17.2"
 	},
@@ -36,7 +37,6 @@
 		"@zerodevx/svelte-img": "^1.2.3",
 		"autoprefixer": "^10.4.7",
 		"daisyui": "^2.46.0",
-		"pocketbase-typegen": "^1.1.2",
 		"postcss": "^8.4.20",
 		"postcss-import": "^15.1.0",
 		"postcss-load-config": "^4.0.1",

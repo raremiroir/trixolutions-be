@@ -1,20 +1,9 @@
 const { randomBytes } = await import('node:crypto')
 
-// replaces the locale slug in a relative url
-// e.g. /en/blog/article-1 => /de/blog/article-1
-export const replaceLocaleInUrl = (url: URL, locale: string, full = false): string => {
-	const [, , ...rest] = url.pathname.split('/')
-	const new_pathname = `/${[locale, ...rest].join('/')}`
-	if (!full) {
-		return `${new_pathname}${url.search}`
-	}
-	url.pathname = new_pathname
-	return url.toString()
-}
-
 // Capitalize first letter of each word in string
-export const titleCase = (str:string) => {
-	let splitStr = str.toLowerCase().split(' ');
+export const titleCase = (str:any) => {
+	str = String(str).toLowerCase();
+	let splitStr = str.split(' ');
 	for (let i = 0; i < splitStr.length; i++) {
 		splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
 	}
@@ -68,29 +57,41 @@ export const formatTime = (date:any) => {
 	let minute = dateString.substring((dateString.indexOf(':') + 1), dateString.indexOf(':') + 3);
 	return `${hour}:${minute}`;
 }
+// Year format
+export const formatYear = (date:any) => {
+	let dateString = String(date).substring(0, 10);
+	let year = dateString.substring(0, dateString.indexOf('-'));
 
-export const serializeNonPOJOs = (obj) => {
-	return structuredClone(obj);
+	return `${year}`;
 }
 
 // Generates username from name
-export const generateUsername = (first_name, last_name) => {
+export const generateUsername = (first_name:string, last_name:string) => {
 	return `${first_name.replaceAll(' ', '')}.${last_name.replaceAll(' ', '')}`
 }
 
 // Price formatter
-export const formatPrice = (number) => {
+export const formatPrice = (number:number) => {
 	return (number).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
 
 // Url formatter for dynamic pages
-export const formatUrl = (string) => {
-	let newString = String(string).toLowerCase();
-	newString = newString.replaceAll('-', '');
-	newString = newString.replaceAll('.', '');
-	newString = newString.replaceAll('?', '');
-	newString = newString.replaceAll('!', '');
-	newString = newString.replaceAll(',', '');
-	newString = newString.replaceAll(' ', '-');
+export const formatUrl = (string:string) => {
+
+	let newString = string ? string : ''; 
+
+	newString = replaceAll(newString, '-', '');
+	newString = replaceAll(newString, /\?/, '');
+	newString = replaceAll(newString, /\…/, '');
+	newString = replaceAll(newString, /\./, '');
+
+	newString = replaceAll(newString, ' ', '-');
+	newString = newString.toLowerCase();
+
 	return newString;
 }
+
+// Replace all override
+function replaceAll(str:string, find:any, replace:string) {
+	return str.replace(new RegExp((find), 'g'), replace);
+ }

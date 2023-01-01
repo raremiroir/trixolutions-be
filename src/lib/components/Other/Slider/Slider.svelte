@@ -1,11 +1,10 @@
-<script lang="ts">
+<script>
 	// import Swiper core and required modules
 	import { Navigation, Scrollbar, A11y, Autoplay } from 'swiper';
 	// Import Swiper component
 	import { Swiper } from 'swiper/svelte';
 	// Import Swiper styles
 	import 'swiper/css';
-	import 'swiper/css/navigation';
 	import 'swiper/css/scrollbar';
 	import 'swiper/css/autoplay';
 
@@ -15,10 +14,10 @@
 	import Icon 	from '@iconify/svelte';
 
 	// Define swiper variable
-	let swiper:any;
+	let swiper;
 
 	// 'swiper' event emitted when swiper instance argument
-	const onSwiper = (e:any) => {
+	const onSwiper = (e) => {
 		[swiper] = e.detail;
 		console.log(swiper);
 	}
@@ -31,13 +30,12 @@
 </script>
 
 <Swiper
-	on:swiper={onSwiper}
 	modules={[ Autoplay, Scrollbar, A11y]}
 	spaceBetween={0}
 	grabCursor loop
 	slidesPerView={1}
 	scrollbar={{ draggable: true }}
-	autoplay={{ delay: 5000 }}
+	autoplay={{ delay: 50000 }}
 >
 	<div slot="container-start" 
 		  class="absolute bottom-1/2 translate-y-1/2 left-10 z-2 flex-row hidden md:flex">
