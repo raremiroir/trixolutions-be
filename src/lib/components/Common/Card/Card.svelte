@@ -51,6 +51,7 @@
 
 <!-- Outer Wrap -->
 <svelte:component
+   href='{link}'
    this={wrapComp}
    klass="
       group overflow-hidden
