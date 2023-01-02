@@ -46,6 +46,7 @@
       
       export let imgSrc = 'placeholder';
       let convertedSrc;
+      let converted = true;
       switch (imgSrc) {
          
          case 'tom-color':                      convertedSrc = tom_color;  break;
@@ -90,7 +91,10 @@
          case 'model-business-intelligence':    convertedSrc = BP30;         break;
          
          case 'placeholder':                    convertedSrc = placeholder;  break;
-         default: convertedSrc = imgSrc; break;
+         default: 
+            convertedSrc = imgSrc; 
+            converted = false;
+            break;
       }
 
    import { onMount } from "svelte";
@@ -108,70 +112,76 @@
    export let imgFit = 'object-cover';
    export let imgPos = 'object-center';
 
+   // If you want to import your own special image link through the component
+   export let customSource = false;
+
    // Eager loading ? (standard lazy)
    export let eager = false;
 
-
-
-
-
-   const srcArr = convertedSrc.split(', ');
-   // console.log(srcArr);
    
    const sources = [
       { type: 'image/webp', srcset: [{src: '', size: ''},] },
       { type: 'image/avif', srcset: [{src: '', size: ''},] },
       { type: 'image/jpeg', srcset: [{src: '', size: ''},] },
    ]
+   let fallback:any;
 
-   for (let index = 0; index < srcArr.length; index++) {
-      const source = srcArr[index];
-      const splitSource = source.split(' ');
+      if (converted || customSource) {
+         const srcArr = convertedSrc.split(', ');
+         // console.log(srcArr);
+         
       
-      if (index % 3 === 0) {
-         sources[0].srcset.push({
-            src: splitSource[0],
-            size: splitSource[1].replaceAll('w', '')
-         });
-      } else if ((index - 1) % 3 === 0) {
-         sources[1].srcset.push({
-            src: splitSource[0],
-            size: splitSource[1].replaceAll('w', '')
-         });
-      } else if ((index + 1) % 3 === 0) {
-         sources[2].srcset.push({
-            src: splitSource[0],
-            size: splitSource[1].replaceAll('w', '')
-         });
-      }
-   }
+         for (let index = 0; index < srcArr.length; index++) {
+            const source = srcArr[index];
+            const splitSource = source.split(' ');
+            
+            if (index % 3 === 0) {
+               sources[0].srcset.push({
+                  src: splitSource[0],
+                  size: splitSource[1].replaceAll('w', '')
+               });
+            } else if ((index - 1) % 3 === 0) {
+               sources[1].srcset.push({
+                  src: splitSource[0],
+                  size: splitSource[1].replaceAll('w', '')
+               });
+            } else if ((index + 1) % 3 === 0) {
+               sources[2].srcset.push({
+                  src: splitSource[0],
+                  size: splitSource[1].replaceAll('w', '')
+               });
+            }
+         }
 
-   // console.log(sources);
-   const fallback = sources[0].srcset[4].src;
+         // console.log(sources);
+         fallback = sources[0].srcset[4].src;
+      }
 </script>
 
 <div class="{klass} overflow-hidden {width} {height}">
-   <picture>
-      {#each sources as source}
-         {#each source.srcset as item}
-            <source 
-               srcset="{item.src}" 
-               type="{source.type}" 
-               media="(min-width: {item.size}px)"
-               />
+   {#if converted || customSource}
+      <picture>
+         {#each sources as source}
+            {#each source.srcset as item}
+               <source 
+                  srcset="{item.src}" 
+                  type="{source.type}" 
+                  media="(min-width: {item.size}px)"
+                  />
+            {/each}
          {/each}
-      {/each}
-      <!-- <source srcset="{sources[0].srcset[4].src}" type="{sources[0].type}" media="(min-width: 0px)" /> -->
-      <img 
-         src={fallback}
-         loading="{eager ? 'eager' : 'lazy'}"
-         class=" 
-            opacity-100
-            transition-all duration-300 ease-in
-            {imgFit} {imgPos} {imgClass}
-            h-full w-full
-            "
-         {alt}
-           />
-   </picture>
+         <!-- <source srcset="{sources[0].srcset[4].src}" type="{sources[0].type}" media="(min-width: 0px)" /> -->
+         <img 
+            src={fallback}
+            loading="{eager ? 'eager' : 'lazy'}"
+            class=" 
+               opacity-100
+               transition-all duration-300 ease-in
+               {imgFit} {imgPos} {imgClass}
+               h-full w-full
+               "
+            {alt}
+            />
+      </picture>
+   {/if}
 </div>
