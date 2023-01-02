@@ -1,5 +1,5 @@
 <script>
-   import { locale } from "$src/i18n/i18n-svelte";
+	import { locale } from "svelte-i18n";
 </script>
 
 <div class="w-full h-full relative bg-white p-4 rounded-lg shadow-lg">
