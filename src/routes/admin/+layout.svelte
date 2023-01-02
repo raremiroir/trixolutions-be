@@ -1,16 +1,35 @@
 <script lang="ts">
-	import LL, { setLocale, locale } from '$i18n/i18n-svelte'
-
-	export let data;
-    console.log(data);
-	
-	// at the very top, set the locale before you access the store and before the actual rendering takes place
-	setLocale(data.locale)
-
 	// Import Components
 	import "$src/app.postcss";
 	import Dashboard from '$src/lib/components/Admin/Dashboard.svelte';
 	import Icon from '@iconify/svelte';
+
+    import { page } from '$app/stores';
+	import { browser } from '$app/environment';
+	import type { LayoutData } from './$types'
+	import { onMount } from 'svelte';
+	import { invalidate } from '$app/navigation';
+	import supabase from '$lib/db';
+	
+	export let data: LayoutData
+
+	// Import Components
+	import Footer from "$comp/Core/Footer/Footer.svelte";
+	import Navbar from "$comp/Core/Navbar/Navbar.svelte";
+	import "$src/app.postcss";
+
+		// Supabase Auth
+		onMount(() => {
+		const {
+			data: { subscription },
+		} = supabase.auth.onAuthStateChange(() => {
+			invalidate('supabase:auth')
+		})
+
+		return () => {
+			subscription.unsubscribe()
+		}
+	})
 
 
 </script>
