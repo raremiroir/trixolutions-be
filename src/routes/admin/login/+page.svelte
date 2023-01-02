@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { locale } from '$src/i18n/i18n-svelte';
 	import Icon from '@iconify/svelte';
 	export let form;
 </script>
