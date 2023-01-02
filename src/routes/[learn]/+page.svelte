@@ -1,6 +1,5 @@
 <script lang="ts">
     import type { PageData } from './$types';
-    import { locale } from '$src/i18n/i18n-svelte';
 	import Hero from '$src/lib/components/Hero/Hero.svelte';
 	import SectionWrapper from '$comp/Base/Wrapper/SectionWrapper.svelte';
 	import Title from '$src/lib/components/Common/Text/Title.svelte';
