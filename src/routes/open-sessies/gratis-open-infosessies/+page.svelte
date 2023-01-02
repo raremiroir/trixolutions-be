@@ -11,21 +11,6 @@
 
    import { formatDateMonthFull, formatTime, formatDateShort } from "$lib/utils";
    
-   import PocketBase from "pocketbase";
-   import { pageResult } from "$lib/stores";
-   const pb = new PocketBase('http://127.0.0.1:8090')
-   
-   
-   async function sessionsList() {
-      $pageResult =  await pb.collection('sessions')
-                     .getFullList(200 /* batch size */, {
-         filter: 'type = "info_session"',
-         sort: 'created',
-         expand: 'trainer'
-      });
-      console.log($pageResult);
-   }
-   sessionsList();
    export let data:any;
 
 </script>
@@ -68,7 +53,7 @@
       <Title type="h2" slot="title">Praktische Info</Title>
       <div class="grid grid-cols-2 gap-8">
          <!-- <pre>{JSON.stringify($pageResult, null, 2)}</pre> -->
-            {#each $pageResult as session}
+            <!-- {#each $pageResult as session}
                <Card label="{formatDateMonthFull(session["starts_on"])}" labelPrimary titleType="h3" titleSmallest>
                   <span slot="title">Online Infosessie</span>
                   <div class="flex flex-col gap-4 w-full">
@@ -85,7 +70,7 @@
                      </Button>
                   </div>
                </Card>
-            {/each}
+            {/each} -->
       </div>
       <div class="m-0 px-0 py-16 w-full flex justify-center items-center">
          <Button size="xxl">
