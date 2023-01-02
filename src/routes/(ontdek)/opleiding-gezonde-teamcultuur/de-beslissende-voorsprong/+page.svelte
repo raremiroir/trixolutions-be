@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { locale } from '$src/i18n/i18n-svelte';
 	import Hero from '$src/lib/components/Hero/Hero.svelte';
 	import SectionWrapper from '$comp/Base/Wrapper/SectionWrapper.svelte';
 	import Title from '$src/lib/components/Common/Text/Title.svelte';
@@ -29,25 +28,6 @@
             content: ''
         }
     ]
-
-   import PocketBase from "pocketbase";
-   import { formatTime, formatDateFull } from "$lib/utils";
-   import { pageResult, secondPageResult } from "$lib/stores";
-   const pb = new PocketBase('http://127.0.0.1:8090')
-   
-   
-   async function sessionsList() {
-      $pageResult =  await pb.collection('info_sessions')
-                     .getFullList(200 /* batch size */, {
-         sort: 'created'
-      });
-      $secondPageResult =  await pb.collection('level_2_sessions')
-                     .getFullList(200 /* batch size */, {
-         sort: 'created',
-      });
-      console.log($pageResult);
-   }
-   sessionsList();
 
 
 </script>
