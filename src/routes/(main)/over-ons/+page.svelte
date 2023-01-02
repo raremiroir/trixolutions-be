@@ -17,7 +17,7 @@
       <div class="grid grid-cols-3 gap-12">
          <Image 
             alt="Tom van Dorst - CEO Trixolutions" klass="rounded-xl shadow-md"
-            imgSrc="tom_color"
+            imgSrc="tom-color"
          />
          <P klass="col-span-2 h-fit" large>
             Trixolutions is als enige in de Benelux lid van de 
@@ -54,7 +54,7 @@
                <div class="h-80" slot="image">
                   <Image 
                      alt="Tom van Dorst - CEO Trixolutions"
-                     imgSrc="tom"
+                     imgSrc="tom-bw"
                   />
                </div>
                CEO / Trainer / Coach
@@ -65,7 +65,7 @@
                <span slot="title">Tamara</span>
                <Image 
                   slot="image" height="h-80" alt="Tamara - Trixolutions Office Manager"
-                  imgSrc="tamara"
+                  imgSrc="tamara-bw"
                />
                Office Manager
             </Card>
@@ -95,7 +95,7 @@
                <span slot="title">Christoph</span>
                <Image 
                   slot="image" height="h-80" alt="Christoph - Trixolutions Trainer / Facilitator"
-                  imgSrc="christoph"
+                  imgSrc="christoph-bw"
                   imgPos="object-top" klass="w-full"
                />
                Trainer / Facilitator
@@ -106,7 +106,7 @@
                <span slot="title">Frederik</span>
                <Image 
                   slot="image" height="h-80" alt="Frederik - Trixolutions Senior Trainer"
-                  imgSrc="frederik"
+                  imgSrc="frederik-bw"
                   imgPos="object-top" klass="w-full"
                />
                Senior Trainer

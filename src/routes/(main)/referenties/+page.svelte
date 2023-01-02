@@ -121,6 +121,7 @@
       <div class="flex flex-wrap justify-between items-center gap-8">
          {#each references as img}
             <Image
+               customSource
                imgSrc={img.src} alt="{img.alt}" 
                height="{img.height ? img.height : 'h-6 sm:h-8 md:h-10 xl:h-12 2xl:h-14'}" width="w-auto"
                />
