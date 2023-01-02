@@ -17,9 +17,8 @@ const config = {
          $src: 'src',
          $lib: 'src/lib',
          $comp: 'src/lib/components',
-         $img: 'src/lib/images',
-         $route: 'src/routes',
-         $i18n: 'src/i18n',
+         $img: 'src/lib/assets/images',
+         $i18n: 'src/lib/i18n',
       }
 	}
 };

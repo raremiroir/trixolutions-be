@@ -4,7 +4,7 @@
 		"src/**/*.d.ts",
 		"src/**/*.js",
 		"src/**/*.ts",
-		"src/**/*.svelte",
+		"src/**/*.svelte"
 	],
 	"compilerOptions": {
 		"allowJs": true,

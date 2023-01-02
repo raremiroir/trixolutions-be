@@ -1,16 +1,4 @@
-const { randomBytes } = await import('node:crypto')
 
-// replaces the locale slug in a relative url
-// e.g. /en/blog/article-1 => /de/blog/article-1
-export const replaceLocaleInUrl = (url: URL, locale: string, full = false): string => {
-	const [, , ...rest] = url.pathname.split('/')
-	const new_pathname = `/${[locale, ...rest].join('/')}`
-	if (!full) {
-		return `${new_pathname}${url.search}`
-	}
-	url.pathname = new_pathname
-	return url.toString()
-}
 
 // Capitalize first letter of each word in string
 export const titleCase = (str:string) => {
@@ -67,10 +55,6 @@ export const formatTime = (date:any) => {
 	let hour = dateString.substring(0, dateString.indexOf(':'));
 	let minute = dateString.substring((dateString.indexOf(':') + 1), dateString.indexOf(':') + 3);
 	return `${hour}:${minute}`;
-}
-
-export const serializeNonPOJOs = (obj) => {
-	return structuredClone(obj);
 }
 
 // Generates username from name

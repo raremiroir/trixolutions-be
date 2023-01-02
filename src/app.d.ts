@@ -12,12 +12,9 @@ type TranslationFunctions = import('$i18n/i18n-types').TranslationFunctions
 
 declare global {
 	declare namespace App {
-		interface Locals {
-			locale: Locales
-			LL: TranslationFunctions
-			pb: PocketBase
-		}
+		// interface Locals {}
 		// interface PageData {}
+		// interface LayoutLoad{}
 		// interface Error {}
 		// interface Platform {}
 	}
