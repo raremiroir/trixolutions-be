@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
    // Import Components
    import Button           from "$comp/Core/Button/Button.svelte";
 	import Main             from "$comp/Base/Wrapper/Main.svelte";
@@ -12,6 +12,7 @@
    
 	import Navbar from "$src/lib/components/Core/Navbar/Navbar.svelte";
 	import Footer from "$src/lib/components/Core/Footer/Footer.svelte";
+
    
    // Import globals
    import { pageResult, secondPageResult } from "$lib/stores";
@@ -24,6 +25,7 @@
    // Import supabase
    import supabase from "$lib/db";
 	import Image from "$src/lib/components/Base/Media/Image.svelte";
+	import TwicPic from "$src/lib/components/Base/Media/TwicPic.svelte";
 
 
    // Get category data from supabase
@@ -43,6 +45,11 @@
             *,
             category (
                name
+            ),
+            img (
+               name,
+               folder,
+               type
             )
             `);
 
@@ -69,7 +76,7 @@
       <Slide hero 
          imgAlt="Trixolutions Lencioni - De Kracht van Gezonde Teams" 
          height="{heroHeight}"
-         imgSrc='kracht-gezonde-teams'>
+         imgSrc='home/kracht-gezonde-teams.webp'>
          <span slot="title">De Kracht van Gezonde Teams</span>
          <div class="flex flex-col gap-2">
             <Title type='subheader' color="text-gray-50">
@@ -97,7 +104,7 @@
       <Slide hero 
          titleType='fake-h1' titleSmall imgPos="object-top" height={heroHeight}
          imgAlt="Trixolutions Lencioni - De Beslissende Voorsprong"
-         imgSrc='beslissende-voorsprong-2'>
+         imgSrc='home/beslissende-voorsprong-2.webp'>
          <span slot="title">Neem als Organisatie of Team de ❛Beslissende Voorsprong❜ van Patrick Lencioni!</span>
          <div class="flex flex-col gap-2">
             <Title type='subheader' color="text-gray-50">
@@ -117,7 +124,7 @@
       <Slide hero 
          titleType='fake-h1' imgPos="object-top" height={heroHeight}
          imgAlt="Trixolutions Lencioni - The 6 Types of Working Genius"
-         imgSrc='working-genius'>
+         imgSrc='home/working-genius.webp'>
          <span slot="title">The 6 Types of Working Genius</span>
          <div class="flex flex-col gap-2">
             <Title type='subheader' color="text-gray-50">
@@ -139,6 +146,7 @@
 
 <Main noMargin cta>
    <!-- <img src="{Working_Genius}" alt=""> -->
+
 
    {#await getCategoryData()}
       <div class="dui-alert dui-alert-info">
@@ -170,7 +178,11 @@
    
 
                            <div slot="image">
-                              <Image imgSrc={item.img} height="h-52" imgPos="object-center"/>
+                              <TwicPic 
+                                 src="{item.img.folder}/{item.img.name}.{item.img.type}"
+                                 mode="contain" anchor="top"
+                                 ratio="3x2"
+                              />
                            </div>
    
                            <P klass="prose-ol:list-decimal prose-ul:list-disc prose-li:ml-6"> 

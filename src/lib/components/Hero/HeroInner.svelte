@@ -2,7 +2,7 @@
    // Import components
 	import Image from "$comp/Base/Media/Image.svelte";
 	import Title from "$comp/Common/Text/Title.svelte";
-   import Img from '@zerodevx/svelte-img';
+	import TwicPic from "../Base/Media/TwicPic.svelte";
 
    // Define image
    export let imgSrc = '';
@@ -31,11 +31,20 @@
 
 
 <!-- Image -->
-<Image eager
+<!-- <Image eager
 	alt={imgAlt}
    {imgSrc} {imgPos} {imgFit} 
    {height}
 	klass="w-full"
+/> -->
+<TwicPic 
+   alt={imgAlt}
+   src="{imgSrc}" eager
+   mode="cover" anchor="top"
+   placeholder="preview"
+   transition="fade" transitionDuration="250ms"
+   transitionTimingFunction="ease-in-out"
+   ratio="6:4" intrinsic="1920x1080"
 />
 
 <!-- Image Overlay -->

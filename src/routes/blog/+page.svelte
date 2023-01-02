@@ -9,15 +9,24 @@
 	import Link from "$src/lib/components/Common/Link/Link.svelte";
 	import P from "$src/lib/components/Common/Text/P.svelte";
 	import Image from "$src/lib/components/Base/Media/Image.svelte";
+	import TwicPic from "$src/lib/components/Base/Media/TwicPic.svelte";
    
    import { formatUrl } from '$lib/utils'
    import { pageResult } from "$lib/stores";
 	import supabase from "$lib/db";
 
+
    const getData = async () => {
       const {data, error} = await supabase
          .from('blog_posts')
-         .select('*');
+         .select(`
+            *,
+            img (
+               name,
+               folder,
+               type
+            )
+         `);
 
       if (error) throw new Error(error.message);
 
@@ -47,7 +56,12 @@
                   <span slot="title">{blogPost.title}</span>
                   
                   <div class="" slot="image">
-                     <Image imgSrc="{blogPost.img}" height="h-40" />
+                     <!-- <Image imgSrc="{blogPost.img}" height="h-40" /> -->
+                     <TwicPic 
+                        src="{blogPost.img.folder}/{blogPost.img.name}.{blogPost.img.type}"
+                        mode="contain" anchor="top"
+                        ratio="3x2"
+                     />
                   </div>
       
                   <P klass="prose-ol:list-decimal prose-ul:list-disc prose-li:ml-6"> 
