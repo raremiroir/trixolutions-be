@@ -10,8 +10,24 @@
 	import Hero 	         from "$comp/Hero/Hero.svelte";
 
    import { formatDateMonthFull, formatTime, formatDateShort } from "$lib/utils";
+	import supabase from "$src/lib/db";
    
-   export let data:any;
+   const getData = async () => {
+      const {data, error} = await supabase
+         .from('sessions')
+         .select(`
+            *,
+            trainer (
+               first_name,
+               last_name
+            )
+         `);
+
+      if (error) throw new Error(error.message);
+
+      console.log(data);
+      return data;
+   }
 
 </script>
 
@@ -49,28 +65,36 @@
 
    </SectionWrapper>
 
-   <SectionWrapper name="infosessies-praktische-info">
+   <SectionWrapper name="infosessies-praktische-info">»
       <Title type="h2" slot="title">Praktische Info</Title>
       <div class="grid grid-cols-2 gap-8">
+         {#await getData()}
+            Loading...
+         {:then data} 
          <!-- <pre>{JSON.stringify($pageResult, null, 2)}</pre> -->
-            <!-- {#each $pageResult as session}
-               <Card label="{formatDateMonthFull(session["starts_on"])}" labelPrimary titleType="h3" titleSmallest>
-                  <span slot="title">Online Infosessie</span>
-                  <div class="flex flex-col gap-4 w-full">
-                     <div class="flex flex-row justify-between w-full">
-                        <Tag large outlined>
-                           {formatDateShort(session["starts_on"])} || {formatTime(session["starts_on"])} - {formatTime(session["ends_on"])}
-                        </Tag>
-                        <Tag large outlined>
-                           {session['expand']['trainer']['first_name']} {session['expand']['trainer']['last_name']}
-                        </Tag>
+            {#each data as session}
+               {#if session.type === 'info_session'}
+                  <Card label="{formatDateMonthFull(session.starts_on)}" labelPrimary titleType="h3" titleSmallest>
+                     <span slot="title">Online Infosessie</span>
+                     <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-row justify-between w-full">
+                           <Tag outlined>
+                              {session.trainer.first_name} {session.trainer.last_name}
+                           </Tag>
+                           <Tag primary>
+                              {formatTime(session.starts_on)} - {formatTime(session.ends_on)}
+                           </Tag>
+                        </div>
+                        <Button size="lg" color="primary">
+                           Inschrijven
+                        </Button>
                      </div>
-                     <Button size="lg" color="primary">
-                        Inschrijven
-                     </Button>
-                  </div>
-               </Card>
-            {/each} -->
+                  </Card>
+               {/if}
+            {/each}
+         {:catch error}
+            {error}
+         {/await}
       </div>
       <div class="m-0 px-0 py-16 w-full flex justify-center items-center">
          <Button size="xxl">
