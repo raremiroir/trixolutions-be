@@ -5,6 +5,7 @@
 	import type { LayoutData } from './$types'
 	import { onMount } from 'svelte';
 	import { invalidate } from '$app/navigation';
+	import supabase from '$lib/db';
 	
 	export let data: LayoutData
 	
