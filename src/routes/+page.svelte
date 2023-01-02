@@ -157,15 +157,20 @@
                </div>
             </div>
             {:then data} 
-               <div class="grid grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+               <div class="
+                     grid 
+                     grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+                     gap-4 md:gap-6 lg:gap-8">
                   {#each data as item}
                      {#if item.category.name.nl === section.name.nl}
-                        <Card link="/" equalHeight titleSmaller titleType="h3">
+                        <Card 
+                           link="/" equalHeight 
+                           titleSmaller titleType="h3" >
                            <span slot="title">{item.title.nl}</span>
    
 
                            <div slot="image">
-                              <Image imgSrc={item.img}/>
+                              <Image imgSrc={item.img} height="h-52" imgPos="object-center"/>
                            </div>
    
                            <P klass="prose-ol:list-decimal prose-ul:list-disc prose-li:ml-6"> 

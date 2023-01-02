@@ -31,7 +31,7 @@
    <SectionWrapper name="blog">
       <Title slot="title" type='h1'>Trixolutions Blog</Title>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
          {#await getData()}
          <div class="dui-toast dui-toast-top dui-toast-center">
@@ -76,7 +76,7 @@
                      {/if}
                   </P>
                   <Link underlineOnHover
-                     slot="append-inner" href="./blog/{formatUrl(blogPost.title)}"
+                     slot="append-outer" href="./blog/{formatUrl(blogPost.title)}"
                      klass='my-2 font-bold'>
                      Meer Info
                   </Link>

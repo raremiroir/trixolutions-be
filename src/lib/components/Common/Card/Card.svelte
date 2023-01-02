@@ -11,6 +11,8 @@
 	import Link    from "$comp/Common/Link/Link.svelte";
 	import Tag     from "$comp/Common/Text/Tag.svelte";
 
+   export let klass = '';
+
    // Choose type of title
    export let titleType = "h3";
    // Center title?
@@ -55,7 +57,7 @@
    this={wrapComp}
    klass="
       group overflow-hidden
-      flex gap-2  items-center justify-center
+      flex flex-col gap-2  items-start justify-between
       { direction === 'row' ? 'flex-row' 
       : direction === 'row-reverse' ? 'flex-row-reverse'
       : 'flex-col'} 
@@ -64,22 +66,23 @@
       rounded-xl shadow-lg
       {equalHeight ? 'h-full' : 'h-fit'}
       w-full
+      {klass}
       ">
    <slot name="prepend-outer"/>
    
    <div class="
          { direction === 'row' ? 'w-1/2' 
          : direction === 'col' ? 'w-full' 
-         : 'w-fit'} h-full overflow-hidden">
+         : 'w-fit'} h-fit overflow-hidden">
       <slot name="image"/>
    </div>
    
     <!-- Inner Wrap -->
-   <div class="pt-2 px-4 pb-4 flex flex-col h-full gap-4 items-start justify-start relative w-full">
+   <div class="pt-2 px-4 pb-4 flex flex-col min-h-fit h-full gap-4 items-start justify-start relative w-full">
 
       <slot name="prepend-inner"/>
       
-      <div class="m-0 p-0 flex flex-row w-full h-fit items-center justify-between">
+      <div class="m-0 p-0 flex flex-row w-full h-fit items-start justify-center">
          <Title 
             type={titleType} 
             small={titleSmall} smaller={titleSmaller} smallest={titleSmallest} 
@@ -102,7 +105,9 @@
       <slot name="append-inner"/>
    </div>
 
-   <slot name="append-outer"/>
+   <div class="pt-2 px-4 pb-4">
+      <slot name="append-outer"/>
+   </div>
 </svelte:component>
 
 
