@@ -11,7 +11,7 @@
 	import Breadcrumbs from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
 	import Hero from "$src/lib/components/Hero/Hero.svelte";
 
-   import { titleCase, formatDateMonthFull, formatTime, formatUrl } from "$src/lib/utils";
+   import { titleCase, formatDateMonthFull, formatTime, formatUrl } from "$lib/utils";
 
    export let data;
    
