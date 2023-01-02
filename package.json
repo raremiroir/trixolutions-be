@@ -19,6 +19,7 @@
 		"@supabase/auth-helpers-sveltekit": "^0.8.6",
 		"@supabase/supabase-js": "^2.2.3",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+		"@twicpics/components": "^0.14.2",
 		"@types/marked": "^4.0.8",
 		"marked": "^4.2.5",
 		"svelte-i18n": "^3.6.0",
