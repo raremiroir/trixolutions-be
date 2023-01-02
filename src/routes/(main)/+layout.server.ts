@@ -1,18 +1,8 @@
 import type { LayoutServerLoad } from './$types'
+import { getServerSession } from '@supabase/auth-helpers-sveltekit'
 
-export const load: LayoutServerLoad = ({ locals: { locale, LL }, locals }) => {
-	console.info(LL.log({ fileName: '+layout.server.ts' }))
-
-	if (locals.user) {
-		return {
-			user: locals.user,
-			locale
-		}
-	}
-
-	// pass locale information from "server-context" to "shared server + client context"
-	return { 
-		user: undefined,
-		locale 
-	}
+export const load: LayoutServerLoad = async (event) => {
+  return {
+    session: await getServerSession(event),
+  }
 }

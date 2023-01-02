@@ -1,8 +1,6 @@
 <script>
-   import { locale } from "$src/i18n/i18n-svelte";
+   import { locale } from "svelte-i18n";
 
-   import PocketBase from "pocketbase";
-   import { pageResult } from "$lib/stores";
 	import Breadcrumbs from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
 	import Main from "$src/lib/components/Base/Wrapper/Main.svelte";
 	import Title from "$src/lib/components/Common/Text/Title.svelte";
@@ -11,20 +9,21 @@
 	import Link from "$src/lib/components/Common/Link/Link.svelte";
 	import P from "$src/lib/components/Common/Text/P.svelte";
 	import Image from "$src/lib/components/Base/Media/Image.svelte";
-   const pb = new PocketBase('http://127.0.0.1:8090')
    
    import { formatUrl } from '$lib/utils'
-   
-   
-   async function postsList() {
-      $pageResult =  await pb.collection('pages_blog_items')
-                  .getFullList(200 /* batch size */, {
-                     sort: '-initial_created',
-                     expand: 'author, img'
-                  });
-      // console.log($pageResult);
+   import { pageResult } from "$lib/stores";
+	import supabase from "$lib/db";
+
+   const getData = async () => {
+      const {data, error} = await supabase
+         .from('blog_posts')
+         .select('*');
+
+      if (error) throw new Error(error.message);
+
+      console.log(data);
+      return data;
    }
-   postsList();
 </script>
 
 <Main cta>
@@ -34,7 +33,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
-         {#await $pageResult}
+         {#await getData()}
          <div class="dui-toast dui-toast-top dui-toast-center">
             <div class="dui-alert dui-alert-info">
               <div>
@@ -42,42 +41,42 @@
               </div>
             </div>
           </div>
-         {:then result}
-            {#each result as blogPost}
-               <Card link="./blog/{formatUrl(blogPost.title_nl)}" equalHeight titleSmaller titleType="h3">
-                  <span slot="title">{blogPost.title_nl}</span>
+         {:then data}
+            {#each data as blogPost}
+               <Card link="./blog/{formatUrl(blogPost.title)}" equalHeight titleSmaller titleType="h3">
+                  <span slot="title">{blogPost.title}</span>
                   
                   <div class="" slot="image">
-                     <Image imgSrc="{blogPost['expand']['img']['name']}" height="h-40" />
+                     <Image imgSrc="{blogPost.img}" height="h-40" />
                   </div>
       
                   <P klass="prose-ol:list-decimal prose-ul:list-disc prose-li:ml-6"> 
-                     {#if blogPost.excerpt_nl.first !== undefined}
-                        {blogPost.excerpt_nl.first} <br/> <br/>
+                     {#if blogPost.excerpt.first !== undefined}
+                        {blogPost.excerpt.first} <br/> <br/>
                      {/if}
-                     {#if blogPost.excerpt_nl.second !== undefined}
-                        {blogPost.excerpt_nl.second} <br/> <br/>
+                     {#if blogPost.excerpt.second !== undefined}
+                        {blogPost.excerpt.second} <br/> <br/>
                      {/if}
                      
                      
-                     {#if blogPost.excerpt_nl.list !== undefined}
+                     {#if blogPost.excerpt.list !== undefined}
                         <ul>
-                           {#each blogPost.excerpt_nl.list as listItem}
+                           {#each blogPost.excerpt.list as listItem}
                               <li>{listItem}</li>
                            {/each}
                         </ul>
                      {/if}
-                     {#if blogPost.excerpt_nl.list_2 !== undefined}
+                     {#if blogPost.excerpt.list_2 !== undefined}
                         <br/>
                         <ol>
-                           {#each blogPost.excerpt_nl.list_2 as listItem2}
+                           {#each blogPost.excerpt.list_2 as listItem2}
                               <li>{listItem2}</li>
                            {/each}
                         </ol>
                      {/if}
                   </P>
                   <Link underlineOnHover
-                     slot="append-inner" href="./blog/{formatUrl(blogPost.title_nl)}"
+                     slot="append-inner" href="./blog/{formatUrl(blogPost.title)}"
                      klass='my-2 font-bold'>
                      Meer Info
                   </Link>
