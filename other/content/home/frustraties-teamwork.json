@@ -1,0 +1,317 @@
+{
+   "title": {
+      "1": {
+         "type": "h2",
+         "items": [
+            "Het Model",
+            "by Patrick Lencioni"
+         ]
+      }
+   },
+   "content": [
+      {
+         "type": "paragraph",
+         "items": [
+            {
+               "type": "p",
+               "items": [
+                  {
+                     "type": "normal",
+                     "items": [
+                        "Of je het nu leuk vindt of niet, alle teams zijn potentieel disfunctioneel.",
+                        "Dat is onvermijdelijk omdat ze uit feilbare, onvolmaakte mensen bestaan.",
+                        "Van het basketbalveld tot de executive suite, politiek en onduidelijkheid zijn meer regel dan uitzondering.",
+                        "Het disfunctioneren onder ogen zien en focussen op teamwerk is echter vooral van cruciaal belang aan de top van een organisatie, omdat het executive team de toon zet voor hoe alle werknemers met elkaar samenwerken."
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "type": "blockquote",
+         "items": [
+            {
+               "type": "p",
+               "items": [
+                  {
+                     "type": "normal",
+                     "items": [
+                        "Een voormalige klant, de oprichter van een miljardenbedrijf, beschreef de kracht van teamwerk het beste toen hij me eens vertelde:"
+                     ]
+                  }
+               ]
+            },
+            {
+               "type": "quote",
+               "items": [
+                  {
+                     "type": "normal",
+                     "items": [
+                        "“Als je alle mensen in de organisatie in dezelfde richting zou kunnen laten roeien, zou je elke sector en elke markt kunnen domineren tegenover eender welke concurrentie.”"
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "type": "grid-cards",
+         "items": [
+            {
+               "title": ["1", "Gebrek aan Vertrouwen"],
+               "content": [
+                  {
+                     "type": "paragraph",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": [
+                                    "De angst om kwetsbaar te zijn bij teamleden verhindert dat er vertrouwen wordt opgebouwd binnen het team."
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "title": ["2", "Angst voor Conflicten"],
+               "content": [
+                  {
+                     "type": "paragraph",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": [
+                                    "De wens om kunstmatige harmonie te bewaren, onderdrukt het ontstaan van productieve, ideologische conflicten."
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "title": ["3", "Gebrek aan Betrokkenheid"],
+               "content": [
+                  {
+                     "type": "paragraph",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": [
+                                    "Het gebrek aan duidelijkheid of buy-in verhindert teamleden om beslissingen te nemen waar ze zich aan houden."
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "title": ["4", "Aansprakelijkheid Vermijden"],
+               "content": [
+                  {
+                     "type": "paragraph",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": [
+                                    "De behoefte om interpersoonlijk ongemak te vermijden, weerhoudt teamleden ervan elkaar aansprakelijkheid te houden voor hun gedrag en prestaties."
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "title": ["5", "Geen Aandacht voor de Resultaten"],
+               "content": [
+                  {
+                     "type": "paragraph",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": [
+                                    "Het nastreven van individuele doelen en persoonlijke status vermindert de focus op het collectieve succes."
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "type": "accordeon",
+         "items": [
+            {
+               "title": "1. De frustraties aanpakken",
+               "content": [
+                  {
+                     "type": "list",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Om je team te verbeteren en het disfunctioneren waarmee je wordt geconfronteerd beter te begrijpen, stel je jezelf deze eenvoudige vragen:"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Geven teamleden openlijk en gemakkelijk hun mening?"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Zijn teamvergaderingen boeiend en productief?"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Komt het team snel tot beslissingen en voorkomt het dat het vastloopt door consensus?"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Confronteren teamleden elkaar over hun tekortkomingen?"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Offeren teamleden hun eigen belangen op voor het welzijn van het team?"]
+                              }
+                           ]
+                        }
+                     ]
+                  },
+                  {
+                     "type": "paragraph",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": [
+                                    "Hoewel geen enkel team perfect is en zelfs de beste teams soms worstelen met een of meer van deze problemen, werken de beste organisaties er constant aan om ervoor te zorgen dat hun antwoorden ‘ja’ zijn. Als je veel van deze vragen met ‘nee’ hebt beantwoord, heeft jouw team wellicht wat werk nodig.",
+                                    "",
+                                    "De eerste stap om politiek en onduidelijkheid binnen jouw team te verminderen, is begrijpen dat er vijf frustraties zijn en dat de frustraties die van toepassing zijn, één voor één moeten worden aangepakt."
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "title": "De frustraties",
+               "content": [
+                  {
+                     "type": "grid-flipcards",
+                     "items": [
+                        {
+                           "title": ["1", "Gebrek aan Vertrouwen"],
+                           "content": [
+                              {
+                                 "type": "paragraph",
+                                 "items": [
+                                    {
+                                       "type": "p",
+                                       "items": [
+                                          {
+                                             "type": "normal",
+                                             "items": [
+                                                "Dit gebeurt wanneer teamleden terughoudend zijn om zich kwetsbaar op te stellen tegenover elkaar en niet bereid zijn hun fouten, zwakheden of behoeften toe te geven. Zonder een bepaald comfortniveau onder de teamleden is een basis van vertrouwen onmogelijk."
+                                             ]
+                                          }
+                                       ]
+                                    }
+                                 ]
+                              }
+                           ],
+                           "content-flip": [
+                              {
+                                 
+                              }
+                           ]
+                        },
+                        {
+                           "title": ["2", "Angst voor Conflicten"],
+                           "content": [
+                              {
+                                 "type": "paragraph",
+                                 "items": [
+                                    {
+                                       "type": "p",
+                                       "items": [
+                                          {
+                                             "type": "normal",
+                                             "items": [
+                                                "Dit gebeurt wanneer teamleden terughoudend zijn om zich kwetsbaar op te stellen tegenover elkaar en niet bereid zijn hun fouten, zwakheden of behoeften toe te geven. Zonder een bepaald comfortniveau onder de teamleden is een basis van vertrouwen onmogelijk."
+                                             ]
+                                          }
+                                       ]
+                                    }
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
+
+
+
+

@@ -1,0 +1,294 @@
+{
+   "title": {
+      "1": {
+         "type": "h2",
+         "items": [
+            "Het Model",
+            "by Patrick Lencioni"
+         ]
+      }
+   },
+   "content": [
+      {
+         "type": "accordeon",
+         "items": [
+            {  
+               "title": "1. Een samenhangend leiderschapsteam opbouwen",
+               "content": [
+                  {
+                     "type": "paragraph",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": [
+                                    "De eerste stap is ervoor zorgen dat de leiders van de organisatie zich op een functionele, samenhangende manier gedragen.",
+                                    "Als de mensen die verantwoordelijk zijn voor het runnen van een organisatie – of dat nu een bedrijf is, een afdeling binnen dat bedrijf, een startende onderneming, een restaurant, een school of een kerk – zich disfunctioneel gedragen, dan zal dat disfunctioneren zich trapsgewijs voortzetten in de rest van de organisatie en een rem zetten op een gezonde organisatie.",
+                                    "En ja, er zijn concrete stappen die een leiderschapsteam kan nemen om dit te voorkomen."
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  },
+                  {
+                     "type": "list",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Samenhangende teams elimineren politiek en vergroten hun effectiviteit door het volgende te doen:"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Open zijn en vertrouwen opbouwen"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Constructieve ideologische conflicten aangaan"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Zich inzetten voor duidelijke beslissingen"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Elkaar verantwoordelijk houden voor gedrag en prestaties"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Focussen op collectieve resultaten"]
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "title": "2. Helderheid scheppen",
+               "content": [
+                  {
+                     "type": "paragraph",
+                     "items": [
+                        "De tweede stap om een gezonde organisatie op te bouwen, is ervoor zorgen dat de leden van dat leiderschapsteam intellectueel op één lijn liggen rond zes eenvoudige maar cruciale vragen.",
+                        "Leiders moeten duidelijk zijn over onderwerpen als waarom de organisatie bestaat en wat de belangrijkste prioriteit is voor de komende maanden.",
+                        "Leiders moeten eventuele hiaten tussen hen wegwerken, zodat mensen een, twee of drie niveaus lager volledige duidelijkheid hebben over wat ze moeten doen om de organisatie succesvol te maken."
+                     ]
+                  },
+                  {
+                     "type": "list",
+                     "text": "Gezonde organisaties verkleinen de kans op verwarring door het volgende te verduidelijken.",
+                     "items": [
+                        "Waarom bestaan we?",
+                        "Hoe gedragen we ons?",
+                        "Wat doen we?",
+                        "Hoe zullen we slagen?",
+                        "Wat is op dit moment het belangrijkste?",
+                        "Wie moet wat doen?"
+                     ]
+                  }
+               ]
+            },
+            {
+               "title": "3. De helderheid versterken",
+               "content": [
+                  {
+                     "type": "paragraph",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type":"normal",
+                                 "items": [
+                                    "Tot slot moeten leiders, naast overcommunicatie, ervoor zorgen dat de antwoorden op de zes cruciale vragen herhaaldelijk worden benadrukt met behulp van eenvoudige menselijke systemen.",
+                                    "Dat betekent dat elk proces waarbij mensen betrokken zijn, van aanwerving en ontslag tot prestatiebeheer en besluitvorming, op een aangepaste manier is ontworpen om opzettelijk het unieke karakter van de organisatie te ondersteunen en te benadrukken.",
+                                    "",
+                                    "Naast deze vier stappen is het essentieel dat een gezonde organisatie beter wordt in die ene activiteit die ten grondslag ligt aan alles wat ze doet: vergaderingen. Ja, vergaderingen.",
+                                    "Zonder een paar eenvoudige maar fundamentele wijzigingen aan te brengen in de manier waarop vergaderingen plaatsvinden, zal een gezonde organisatie moeite hebben om datgene te behouden waaraan ze hard heeft gewerkt om het op te bouwen.",
+                                    "",
+                                    "Kan een gezonde organisatie falen?",
+                                    "Ja. Maar dat gebeurt bijna nooit. Echt waar. Wanneer politiek, ambiguïteit, disfunctioneren en onduidelijkheid tot een minimum worden beperkt, worden mensen geïnspireerd om producten te ontwerpen, klanten te bedienen, problemen op te lossen en elkaar te helpen op een manier waar ongezonde organisaties alleen maar van kunnen dromen.",
+                                    "",
+                                    "Gezonde organisaties herstellen van tegenslagen, trekken de beste mensen aan, stoten de anderen af en creëren kansen die ze niet hadden kunnen verwachten.",
+                                    "Aan het einde van de dag, aan het einde van het kwartaal, zijn werknemers gelukkiger, is het resultaat sterker en zijn leidinggevenden gerust omdat ze weten dat ze hun belangrijkste verantwoordelijkheid hebben vervuld: het creëren van een succesvolle omgeving."
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  },
+                  {
+                     "type": "list",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Organisaties verstevigen hun gezondheid door te zorgen voor consistentie in:"]
+
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Het aanwerven"]
+
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Beheren van de prestaties"]
+
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Beloningen en erkenning"]
+
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Ontslag van de werknemer"]
+
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Vergaderingen"]
+
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "title": "4. Helderheid over communiceren",
+               "content": [
+                  {
+                     "type": "paragraph",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type":"normal",
+                                 "items": [
+                                    "Pas nadat deze eerste twee stappen aan de gang zijn (gedrags- en intellectuele afstemming), kan een organisatie de derde stap ondernemen: de antwoorden op de zes vragen overcommuniceren.",
+                                    "Leiders van een gezonde organisatie herhalen zich constant – en ik bedoel constant – en benadrukken wat waar en belangrijk is. Ze maken altijd de fout om te veel te zeggen in plaats van te weinig.",
+                                    "Alleen al deze kwaliteit onderscheidt leiders van gezonde organisaties van anderen."
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  },
+                  {
+                     "type": "list",
+                     "items": [
+                        {
+                           "type": "p",
+                           "items": [
+                              {
+                                 "type": "normal",
+                                 "items": ["Gezonde organisaties brengen hun werknemers op één lijn rond organisatorische duidelijkheid door kernboodschappen te communiceren via:"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "strong",
+                                 "items": ["Herhaling"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "strong",
+                                 "items": ["Eenvoud"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "strong",
+                                 "items": ["Meerdere mediums"]
+                              }
+                           ]
+                        },
+                        {
+                           "type": "listitem",
+                           "items": [
+                              {
+                                 "type": "strong",
+                                 "items": ["Trapsgewijze berichten"]
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
