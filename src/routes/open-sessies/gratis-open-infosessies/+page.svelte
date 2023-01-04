@@ -1,15 +1,8 @@
 <script lang="ts">
-	import Button           from "$comp/Core/Button/Button.svelte";
-	import Main             from "$comp/Base/Wrapper/Main.svelte";
-   import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
-	import Breadcrumbs      from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
-	import Card             from "$comp/Common/Card/Card.svelte";
-	import P                from "$comp/Common/Text/P.svelte";
-	import Tag              from "$comp/Common/Text/Tag.svelte";
-	import Title            from "$comp/Common/Text/Title.svelte";
-	import Hero 	         from "$comp/Hero/Hero.svelte";
+   import { Main, SectionWrapper, Breadcrumbs, Title, P, Tag, Button } from "$comp/core";
+   import { Card, Hero } from "$comp/common";
 
-   import { formatDateMonthFull, formatTime, formatDateShort } from "$lib/utils";
+   import { formatDateMonthFull, formatTime, formatDateShort } from "$utils";
 	import supabase from "$src/lib/db";
    
    const getData = async () => {

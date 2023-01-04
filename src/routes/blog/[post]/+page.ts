@@ -1,8 +1,9 @@
 import supabase from '$lib/db'
-import { formatUrl } from '$lib/utils';
+import { formatUrl } from '../../../lib/utils/formatText';
+
 
 export const load = ({ fetch, params }) => {
-   // console.log(params);
+   console.log(params);
 
    const fetchPost = async (url) => {
       const {data, error} = await supabase
@@ -21,7 +22,7 @@ export const load = ({ fetch, params }) => {
          data.forEach(el => {
             if (formatUrl(el.title) === url) {
                postData = el;
-               console.log(url);
+               // console.log(url);
             }
          });
          return postData;

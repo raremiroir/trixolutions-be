@@ -1,14 +1,7 @@
 <script>
-	import Button           from "$comp/Core/Button/Button.svelte";
-	import Main             from "$comp/Base/Wrapper/Main.svelte";
-   import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
-	import Image            from "$comp/Base/Media/Image.svelte";
-	import Breadcrumbs      from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
-	import Card             from "$comp/Common/Card/Card.svelte";
-	import P                from "$comp/Common/Text/P.svelte";
-	import Tag              from "$comp/Common/Text/Tag.svelte";
-	import Title            from "$comp/Common/Text/Title.svelte";
-
+   import { Main, SectionWrapper, Title, Button, Breadcrumbs, Tag } from "$src/lib/components/core";
+   import { Card } from "$comp/common";
+	import Image            from "$comp/Common/Media/Image.svelte";
 </script>
 
 <Breadcrumbs/>
@@ -18,7 +11,7 @@
 
       <ul class="m-0 flex flex-col gap-8">
          <li>
-            <Card direction="row" titleType="h2" titleSmallest>
+            <Card direction="row">
                <!-- Image -->
                <Image 
                   src="http://via.placeholder.com/640x360" slot="image"
@@ -26,7 +19,7 @@
                <!-- Prepend Inner -->
                <Tag slot="prepend-inner" small>Online Infosessie</Tag>
                <!-- Title -->
-               <span slot="title">Gratis Online Open Infosessies</span>
+               <Title type="h2" smallest slot="title">Gratis Online Open Infosessies</Title>
                <!-- Content -->
                Een gratis, open infosessie over onze veelzijdige Lencioni 
                Teamcoaching Opleiding. Aarzel niet en schrijf je in!
@@ -52,7 +45,7 @@
             </Card>
          </li>
          <li>
-            <Card direction="row-reverse" titleType="h2" titleSmallest>
+            <Card direction="row-reverse">
                <!-- Image -->
                <Image 
                   src="http://via.placeholder.com/640x360" slot="image"
@@ -63,7 +56,7 @@
                   <Tag small>Hybride Traject</Tag>
                </div>
                <!-- Title -->
-               <span slot="title">Hybride Lencioni Leertraject</span>
+               <Title type="h2" smallest slot="title">Hybride Lencioni Leertraject</Title>
                <!-- Content -->
                Een gratis, open infosessie over onze veelzijdige Lencioni 
                Teamcoaching Opleiding. Aarzel niet en schrijf je in!
@@ -86,7 +79,7 @@
             </Card>
          </li>
          <li>
-            <Card direction="row" titleType="h2" titleSmallest>
+            <Card direction="row">
                <!-- Image -->
                <Image 
                   src="http://via.placeholder.com/640x360" slot="image"
@@ -97,7 +90,7 @@
                   <Tag small>Hybride Traject</Tag>
                </div>
                <!-- Title -->
-               <span slot="title">Lencioni DeepDive / <br/>Advanced Opleiding</span>
+               <Title type="h2" smallest slot="title">Lencioni DeepDive / <br/>Advanced Opleiding</Title>
                <!-- Content -->
                Een gratis, open infosessie over onze veelzijdige Lencioni 
                Teamcoaching Opleiding. Aarzel niet en schrijf je in!

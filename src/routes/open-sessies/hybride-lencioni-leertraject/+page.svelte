@@ -1,23 +1,11 @@
 <script>
-	import Button           from "$comp/Core/Button/Button.svelte";
-	import Main             from "$comp/Base/Wrapper/Main.svelte";
-   import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
-   import Image            from "$comp/Base/Media/Image.svelte";
-	import Breadcrumbs      from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
-	import Card             from "$comp/Common/Card/Card.svelte";
-	import List             from "$comp/Common/List/List.svelte";
-	import ListItem         from "$comp/Common/List/ListItem.svelte";
-	import Blockquote       from "$comp/Common/Text/Blockquote.svelte";
-	import P                from "$comp/Common/Text/P.svelte";
-	import Tag              from "$comp/Common/Text/Tag.svelte";
-	import Title            from "$comp/Common/Text/Title.svelte";
-	import Accordeon        from "$comp/Other/Accordeon/Accordeon.svelte";
-	import Hero             from "$comp/Hero/Hero.svelte";
-	import Tabs             from "$comp/Other/Tabs/Tabs.svelte";
+   import { Main, SectionWrapper, Title, P, Breadcrumbs, List, ListItem, Blockquote } from "$comp/core";
+   import { Hero } from "$comp/common";
+   import { Accordeon, AccordeonItem } from "$comp/content";
+   import Image            from "$src/lib/components/Common/Media/Image.svelte";
+	
+   import { formatDateMonthFull, formatPrice } from "$utils";
 
-   import { formatDateMonthFull, formatPrice } from "$lib/utils";
-
-   import Link from "$src/lib/components/Common/Link/Link.svelte";
 	import Icon from "@iconify/svelte";
 
    // export let data:any;
@@ -44,7 +32,6 @@
       {content: 'Toegang tot de DeepDive – Laag “Resultaatgerichtheid”', firstCheck: true},
       {content: 'Jaarlijks te verlengen voor €490,00', firstCheck: true},
    ]
-
 </script>
 
 <header>
@@ -73,57 +60,59 @@
          leertrajecten</strong> gegoten:
       </P>
       <ul class="flex flex-col gap-4">
-         <li>
-            <Accordeon title="Het Partnership tussen Trixolutions en Patrick Lencioni" titleSmaller>
-               <div class="flex flex-col gap-2">
-                  <Title type="h4" smaller>Trixolutions is als enige in de Benelux lid van de Table Group van Patrick Lencioni. (CAPA Pro)</Title>
-                  <P large>
-                     We worden in de Lencioni CAPA Pro Academy op wekelijkse basis begeleid, gecoacht en 
-                     getraind in de verschillende Lencioni modellen, assessment en toepassingen door 
-                     Patrick Lencioni en zijn consultants zelf.<br/>
-                     Deze kennis, gecombineerd met meer dan 200 teamtrajecten op de teller, zijn we de 
-                     ideale partner om jouw Lencioni kennis te verhogen naar het hoogste niveau.
-                  </P>
-                  <Blockquote author="Patrick Lencioni">
-                     Niet de operationele en strategische sterktes van een team zijn doorslaggevend … 
-                     maar wel de kracht en gezondheid van dit team zullen hét ultieme competitief voordeel zijn in de toekomst …
-                  </Blockquote>
-                  <P large>
-                     De kracht van een gezond team zit voornamelijk in de vaardigheid van teamleden 
-                     om <strong>vertrouwen</strong> op te bouwen, met elkaar <strong>respectvolle conflicten</strong> te kunnen hebben, 
-                     <strong>betrokkenheid bij het team</strong> te voelen, elkaar <strong>aansprakelijk</strong> te durven stellen en 
-                     <strong>resultaatgericht</strong> te kunnen werken.
-                  </P>
-               </div>
-            </Accordeon>
-         </li>
-         <li>
-            <Accordeon title="Welke Vragen zullen We voor Je Oplossen?" titleSmaller>
-               <div class="flex flex-col gap-2">
-                  <Title type="h4" smaller>In deze opleiding zal je antwoorden vinden op vragen als:</Title>
-                  <div class="flex flex-row w-full justify-between">
-                     <List klass="w-7/12">
-                        <ListItem large>Hoe werk ik aan een gezonde teamcultuur met dit model?</ListItem>
-                        <ListItem large>Hoe verkoop ik een Lencioni traject aan mijn (interne) klant?</ListItem>
-                        <ListItem large>Hoe creëer ik voldoende "goesting" of "burning platform" om een Lencioni traject te starten?</ListItem>
-                        <ListItem large>Hoe ontwikkel ik een Lencioni teamcoaching traject?</ListItem>
-                        <ListItem large>Wat zijn de verschillende stappen in een Lencioni teamcoachingstraject?</ListItem>
-                        <ListItem large>Welke Lencioni oefeningen zijn er (extra) om met teams in de verschillende lagen van de Piramide te werk te gaan?</ListItem>
-                        <ListItem large>Met welke andere “modellen” kan de Piramide gecombineerd worden?</ListItem>
-                        <ListItem large>Hoe zet ik het volledige Lencioni Team Assessment juist in?</ListItem>
-                        <ListItem large>Hoe gebruik ik het Lencioni Persoonlijk Teamlid Assessment?</ListItem>
-                        <ListItem large>Welke vaardigheden heeft een Lencioni Teamcoach juist nodig?</ListItem>
-                        <ListItem large>Welke Lencioni Tools en materiaal is er en kan ik inzetten?</ListItem>
-                        <ListItem large>Waar kan ik hulp vinden als ik vastloop in een teamtraject?</ListItem>
-                        <ListItem large>...</ListItem>
-                     </List>
-                     <div class="w-5/12">
-                        <Image imgSrc='lencioni_pyramid' alt="Pyramide van Lencioni" height="h-80" imgFit="object-contain"/>
+         <Accordeon>
+            <li>
+               <AccordeonItem id={1} title="Het Partnership tussen Trixolutions en Patrick Lencioni" titleSmaller>
+                  <div class="flex flex-col gap-2">
+                     <Title type="h4" smaller>Trixolutions is als enige in de Benelux lid van de Table Group van Patrick Lencioni. (CAPA Pro)</Title>
+                     <P large>
+                        We worden in de Lencioni CAPA Pro Academy op wekelijkse basis begeleid, gecoacht en 
+                        getraind in de verschillende Lencioni modellen, assessment en toepassingen door 
+                        Patrick Lencioni en zijn consultants zelf.<br/>
+                        Deze kennis, gecombineerd met meer dan 200 teamtrajecten op de teller, zijn we de 
+                        ideale partner om jouw Lencioni kennis te verhogen naar het hoogste niveau.
+                     </P>
+                     <Blockquote author="Patrick Lencioni">
+                        Niet de operationele en strategische sterktes van een team zijn doorslaggevend … 
+                        maar wel de kracht en gezondheid van dit team zullen hét ultieme competitief voordeel zijn in de toekomst …
+                     </Blockquote>
+                     <P large>
+                        De kracht van een gezond team zit voornamelijk in de vaardigheid van teamleden 
+                        om <strong>vertrouwen</strong> op te bouwen, met elkaar <strong>respectvolle conflicten</strong> te kunnen hebben, 
+                        <strong>betrokkenheid bij het team</strong> te voelen, elkaar <strong>aansprakelijk</strong> te durven stellen en 
+                        <strong>resultaatgericht</strong> te kunnen werken.
+                     </P>
+                  </div>
+               </AccordeonItem>
+            </li>
+            <li>
+               <AccordeonItem id={2} title="Welke Vragen zullen We voor Je Oplossen?" titleSmaller>
+                  <div class="flex flex-col gap-2">
+                     <Title type="h4" smaller>In deze opleiding zal je antwoorden vinden op vragen als:</Title>
+                     <div class="flex flex-row w-full justify-between">
+                        <List class="w-7/12">
+                           <ListItem large>Hoe werk ik aan een gezonde teamcultuur met dit model?</ListItem>
+                           <ListItem large>Hoe verkoop ik een Lencioni traject aan mijn (interne) klant?</ListItem>
+                           <ListItem large>Hoe creëer ik voldoende "goesting" of "burning platform" om een Lencioni traject te starten?</ListItem>
+                           <ListItem large>Hoe ontwikkel ik een Lencioni teamcoaching traject?</ListItem>
+                           <ListItem large>Wat zijn de verschillende stappen in een Lencioni teamcoachingstraject?</ListItem>
+                           <ListItem large>Welke Lencioni oefeningen zijn er (extra) om met teams in de verschillende lagen van de Piramide te werk te gaan?</ListItem>
+                           <ListItem large>Met welke andere “modellen” kan de Piramide gecombineerd worden?</ListItem>
+                           <ListItem large>Hoe zet ik het volledige Lencioni Team Assessment juist in?</ListItem>
+                           <ListItem large>Hoe gebruik ik het Lencioni Persoonlijk Teamlid Assessment?</ListItem>
+                           <ListItem large>Welke vaardigheden heeft een Lencioni Teamcoach juist nodig?</ListItem>
+                           <ListItem large>Welke Lencioni Tools en materiaal is er en kan ik inzetten?</ListItem>
+                           <ListItem large>Waar kan ik hulp vinden als ik vastloop in een teamtraject?</ListItem>
+                           <ListItem large>...</ListItem>
+                        </List>
+                        <div class="w-5/12">
+                           <Image imgSrc='lencioni_pyramid' alt="Pyramide van Lencioni" height="h-80" imgFit="object-contain"/>
+                        </div>
                      </div>
                   </div>
-               </div>
-            </Accordeon>
-         </li>
+               </AccordeonItem>
+            </li>
+         </Accordeon>
       </ul>
    </SectionWrapper>
 

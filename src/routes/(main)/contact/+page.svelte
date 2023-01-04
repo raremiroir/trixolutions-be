@@ -1,18 +1,8 @@
 <script>
-	import Button           from "$comp/Core/Button/Button.svelte";
-	import Main             from "$comp/Base/Wrapper/Main.svelte";
-   import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
-	import Map              from "$comp/Base/Media/Map.svelte";
-	import Image            from "$comp/Base/Media/Image.svelte";
-	import Breadcrumbs      from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
-	import Card             from "$comp/Common/Card/Card.svelte";
-	import Link             from "$comp/Common/Link/Link.svelte";
-	import P                from "$comp/Common/Text/P.svelte";
-	import Title            from "$comp/Common/Text/Title.svelte";
-	import Tabs             from "$comp/Other/Tabs/Tabs.svelte";
-	import Tab              from "$comp/Other/Tabs/Tab.svelte";
-	import TabPanel         from "$comp/Other/Tabs/TabPanel.svelte";
-	import Icon             from "@iconify/svelte";
+   
+   import { Button, Main, SectionWrapper, Breadcrumbs, Link, P, Title } from "$comp/core";
+   import { Map, Card } from "$comp/common";
+	import Icon from "@iconify/svelte";
 
 
    const places = [
@@ -40,13 +30,13 @@
       <Title slot="title" type="h1">Contact</Title>
       <div class="flex flex-row gap-8">
          {#each places as place}
-            <Card titleType="h2" titleSmallest centerTitle>
+            <Card textCenter>
                <div slot="prepend-inner" class="w-full flex items-center justify-center">
                   <div class="border-4 border-primary w-fit h-fit rounded-full m-0 p-0">
                      <Icon icon="emojione:flag-for-{place.country === 'België' ? 'belgium' : place.country === 'Nederland' ? 'netherlands' : 'usa' }" width="140" />
                   </div>
                </div>
-               <span slot="title" class="uppercase font-extrabold">Vestiging {place.country}</span>
+               <Title slot="title" type="h2" smallest class="text-center uppercase font-extrabold">Vestiging {place.country}</Title>
                <P large thickness="font-semibold" center>
                   {place.address}<br/>
                   {place.address2},<br/>

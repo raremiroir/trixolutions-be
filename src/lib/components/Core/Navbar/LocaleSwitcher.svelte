@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
    import { locale, locales } from 'svelte-i18n'
-	import Menu from '$comp/Other/Menu/Menu.svelte';
-	import Button from '../Button/Button.svelte';
-   import { page } from '$app/stores';
+	
+   import Icon from '@iconify/svelte';
+   import { Menu } from '$comp/content';
+   import { Button } from '$comp/core';
 
    const switchLocale = async (newLocale:any) => {
 		$locale = newLocale;
@@ -15,7 +15,7 @@
       slot="trigger"
       color="transparent" flat rounded
       size="square-md" 
-      klass="flex items-center justify-center">
+      class="flex items-center justify-center">
       <Icon icon="ic:round-translate" width="24" />
    </Button>
    <ul class="flex flex-col gap-1 p-2">

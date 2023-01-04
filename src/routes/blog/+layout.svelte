@@ -1,22 +1,11 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import lazyload from 'vanilla-lazyload'
-	import { browser } from '$app/environment';
-	import type { LayoutData } from './$types'
 	import { onMount } from 'svelte';
 	import { invalidate } from '$app/navigation';
-	import supabase from '$lib/db';
-	
-	export let data: LayoutData
-	
-	
-	if (browser && !document.lazyloadInstance) {
-    document.lazyloadInstance = new lazyload();
-  	}
+	import supabase from '$lib/db';	
+
 
 	// Import Components
-	import Footer from "$comp/Core/Footer/Footer.svelte";
-	import Navbar from "$comp/Core/Navbar/Navbar.svelte";
+	import { Navbar, Footer } from '$comp/core';
 	import "$src/app.postcss";
 
 		// Supabase Auth

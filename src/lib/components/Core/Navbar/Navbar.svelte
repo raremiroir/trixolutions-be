@@ -5,14 +5,15 @@
    // Import navigation functions
    import { page, navigating }   from "$app/stores";
    import { slide }     from "svelte/transition";
+
    // Import components
-   import Button        from "$comp/Core/Button/Button.svelte";
-   import Hamburger     from "$comp/Core/Navbar/Hamburger.svelte";
-	import LangSwitcher  from "$comp/Core/Navbar/LocaleSwitcher.svelte";
-   import Logo          from "$comp/Base/Media/Logo.svelte";
-   import Link          from "$comp/Common/Link/Link.svelte";
-   import Menu          from "$comp/Other/Menu/Menu.svelte";
+   import { Button, Link } from "$comp/core";
+   import { Logo } from "$comp/common";
+   import { Menu } from "$comp/content";
+   import Hamburger     from "./Hamburger.svelte";
+	import LangSwitcher  from "./LocaleSwitcher.svelte";
    import Icon          from '@iconify/svelte';
+
 
    // Import locale from i18n
    import { locale } from "svelte-i18n";
@@ -80,7 +81,7 @@
       
          <!-- Logo/Brand -->
       <div class="w-1/3 lg:w-1/5">
-         <Link href="/" klass="max-w-fit">
+         <Link href="/" class="max-w-fit">
             <Logo width="180"/>  
          </Link>
       </div>
@@ -170,7 +171,7 @@
                      color="transparent-alt" 
                      flat lowercase square block
                      size="text-lg px-5 pt-[14px] pb-3"
-                     klass="font-bold font-body text-primary-d2 group-hover:text-primary-l1">
+                     class="font-bold font-body text-primary-d2 group-hover:text-primary-l1">
                      {page.name}
                      <Icon icon="mdi:chevron-down" />
                   </Button>
@@ -195,7 +196,7 @@
                      color="transparent-alt" 
                      flat lowercase square block
                      size="text-lg px-5 pt-[14px] pb-3"
-                     klass="font-bold font-body text-primary-d2 group-hover:text-primary-l1">
+                     class="font-bold font-body text-primary-d2 group-hover:text-primary-l1">
                      {page.name}
                   </Button>
                </Link>

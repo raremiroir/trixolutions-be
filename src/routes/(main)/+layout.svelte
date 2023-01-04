@@ -1,7 +1,6 @@
 <script lang="ts">
 	// Import Components
-	import Footer from "$comp/Core/Footer/Footer.svelte";
-	import Navbar from "$comp/Core/Navbar/Navbar.svelte";
+	import { Footer, Navbar } from "$comp/core";
 	import "$src/app.postcss";
 
 </script>

@@ -2,7 +2,7 @@
 <!--  JS  -->
 <!--      -->
 <script lang="ts">
-	import Button from "$comp/Core/Button/Button.svelte";
+   import { Button } from "$comp/core";
 
    export let color = `
       bg-primary group-hover:bg-primary-l1 group-hover:drop-shadow-lg
@@ -22,7 +22,7 @@
 
 <Button 
    color="transparent" on:click={onClick}
-   size="square-md" rounded flat klass="group flex items-center justify-center">
+   size="square-md" rounded flat class="group flex items-center justify-center">
    <label for="check" class="flex flex-col justify-center items-end w-5 relative cursor-pointer">
       <input type="checkbox" id="check" bind:checked={onCheck} on:click={onClick}
             class="hidden peer"/>

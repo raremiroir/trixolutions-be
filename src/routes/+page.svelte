@@ -1,83 +1,57 @@
 <script lang="ts">
    // Import Components
-   import Button           from "$comp/Core/Button/Button.svelte";
-	import Main             from "$comp/Base/Wrapper/Main.svelte";
-	import SectionWrapper   from "$comp/Base/Wrapper/SectionWrapper.svelte";
-	import Card             from "$comp/Common/Card/Card.svelte";
-	import Link             from "$comp/Common/Link/Link.svelte";
-	import Title            from "$comp/Common/Text/Title.svelte";
-	import P                from "$comp/Common/Text/P.svelte";
-	import Hero             from "$comp/Hero/Hero.svelte";
-	import Slide            from "$comp/Other/Slider/Slide.svelte";
-   
-	import Navbar from "$src/lib/components/Core/Navbar/Navbar.svelte";
-	import Footer from "$src/lib/components/Core/Footer/Footer.svelte";
-
+   import { Button, Main, SectionWrapper, Title, P, Footer, Navbar } from "$comp/core";
+   import { Hero, Alert } from "$comp/common";
+   import { Slide } from "$comp/content";
+   import { PostCard, PostGrid } from "$comp/posts";
    
    // Import globals
-   import { pageResult, secondPageResult } from "$lib/stores";
-   import { formatUrl } from "$lib/utils";
-	import { page } from "$app/stores";
+   import { formatUrl } from "$utils/formatText";
 
    // Import i18n
    import { _ } from 'svelte-i18n';
 
    // Import supabase
    import supabase from "$lib/db";
-	import Image from "$src/lib/components/Base/Media/Image.svelte";
-	import TwicPic from "$src/lib/components/Base/Media/TwicPic.svelte";
 
 
    // Get category data from supabase
    const getCategoryData = async () => {
       const {data, error} = await supabase
          .from('home_pages_categories')
-         .select('*');
+         .select('*')
+         .order('id', { ascending: true });
 
       if (error) throw new Error(error.message);
-      return data;
+
+      const categoryData = data;
+      return categoryData;
    }
    // Get pages data from supabase
    const getPagesData = async () => {
       const {data, error} = await supabase
          .from('home_pages')
-         .select(`
-            *,
-            category (
-               name
-            ),
-            img (
-               name,
-               folder,
-               type
-            )
-            `);
-
+         .select(`*, category (name), hero_img (name, folder, type)`)
+         .order('order', { ascending: true });
+               
       if (error) throw new Error(error.message);
-      return data;
+
+      const pagesData = data;
+      return pagesData;
    }
 
    let heroHeight="h-160"
-
-   // export let imageData;
-
-	// onMount(() => {
-	// 	if (browser) {
-	// 		document.lazyloadInstance.update();
-	// 	}
-	// });
-
 </script>
 
 <header>
    <Navbar/>
 
    <Hero slider>
-      <Slide hero 
-         imgAlt="Trixolutions Lencioni - De Kracht van Gezonde Teams" 
-         height="{heroHeight}"
-         imgSrc='home/kracht-gezonde-teams.webp'>
-         <span slot="title">De Kracht van Gezonde Teams</span>
+      <Slide hero large
+         imgAlt="Trixolutions Lencioni - De Kracht van Gezonde Teams"
+         imgSrc='home/kracht-gezonde-teams.webp'
+         >
+         <Title type="h1" slot="title" color="text-gray-100">De Kracht van Gezonde Teams</Title>
          <div class="flex flex-col gap-2">
             <Title type='subheader' color="text-gray-50">
               Opleiding in Teamcoaching
@@ -101,11 +75,11 @@
          </div>
       </Slide>
 
-      <Slide hero 
-         titleType='fake-h1' titleSmall imgPos="object-top" height={heroHeight}
+      <Slide hero large
          imgAlt="Trixolutions Lencioni - De Beslissende Voorsprong"
-         imgSrc='home/beslissende-voorsprong-2.webp'>
-         <span slot="title">Neem als Organisatie of Team de ❛Beslissende Voorsprong❜ van Patrick Lencioni!</span>
+         imgSrc='home/beslissende-voorsprong-2.webp'
+         >
+         <Title type="fake-h1" slot="title" small color="text-gray-100">Neem als Organisatie of Team de ❛Beslissende Voorsprong❜ van Patrick Lencioni!</Title>
          <div class="flex flex-col gap-2">
             <Title type='subheader' color="text-gray-50">
               Opleiding in Teamcoaching
@@ -121,11 +95,11 @@
          </div>
       </Slide>
 
-      <Slide hero 
-         titleType='fake-h1' imgPos="object-top" height={heroHeight}
+      <Slide hero large
          imgAlt="Trixolutions Lencioni - The 6 Types of Working Genius"
-         imgSrc='home/working-genius.webp'>
-         <span slot="title">The 6 Types of Working Genius</span>
+         imgSrc='home/working-genius.webp'
+         >
+         <Title type="fake-h1" slot="title" color="text-gray-100">The 6 Types of Working Genius</Title>
          <div class="flex flex-col gap-2">
             <Title type='subheader' color="text-gray-50">
               Het Laatste Succes Assessment van Patrick Lencioni!
@@ -145,85 +119,42 @@
 </header>
 
 <Main noMargin cta>
-   <!-- <img src="{Working_Genius}" alt=""> -->
-
-
    {#await getCategoryData()}
-      <div class="dui-alert dui-alert-info">
-         <div>
-            <span>Posts laden...</span>
-         </div>
-      </div>
-   {:then data} 
-      {#each data as section}
+      <Alert preset="primary">
+         Laden...
+      </Alert>
+   {:then categoryData} 
+      {#each categoryData as section}
          <SectionWrapper name={formatUrl(section.name.nl)}>
-            <Title slot="title" type="h2">{section.name.nl}</Title>
+            <Title slot="title" type="h2">
+               {section.name.nl}
+            </Title>
             {#await getPagesData()}
-            <div class="dui-alert dui-alert-info">
-               <div>
-                  <span>Posts laden...</span>
-               </div>
-            </div>
-            {:then data} 
-               <div class="
-                     grid 
-                     grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
-                     gap-4 md:gap-6 lg:gap-8">
-                  {#each data as item}
+               <Alert preset="primary">
+                  Laden...
+               </Alert>
+            {:then pagesData} 
+               <PostGrid>
+                  {#each pagesData as item}
                      {#if item.category.name.nl === section.name.nl}
-                        <Card 
-                           link="/" equalHeight 
-                           titleSmaller titleType="h3" >
-                           <span slot="title">{item.title.nl}</span>
-   
-
-                           <div slot="image">
-                              <TwicPic 
-                                 src="{item.img.folder}/{item.img.name}.{item.img.type}"
-                                 mode="contain" anchor="top"
-                                 ratio="3x2"
-                              />
-                           </div>
-   
-                           <P klass="prose-ol:list-decimal prose-ul:list-disc prose-li:ml-6"> 
-                              {#if item.excerpt.nl.first !== undefined}
-                                 {item.excerpt.nl.first} <br/> <br/>
-                              {/if}
-                              {#if item.excerpt.nl.second !== undefined}
-                                 {item.excerpt.nl.second} <br/> <br/>
-                              {/if}
-                              
-                              
-                              <ul>
-                                 {#each item.excerpt.nl.list as listItem}
-                                    <li>{listItem}</li>
-                                 {/each}
-                              </ul>
-   
-                              {#if item.excerpt.nl.list_2 !== undefined}
-                              <br/>
-                              <ol>
-                                 {#each item.excerpt.nl.list_2 as listItem2}
-                                    <li>{listItem2}</li>
-                                 {/each}
-                              </ol>
-                              {/if}
-                           </P>
-                           <Link underlineOnHover ariaLabel="More Info"
-                              slot="append-inner" href="/"
-                              klass='my-2 font-bold'>
-                              Meer Info
-                           </Link>
-                        </Card>
+                        {@const slug = item.slug ? item.slug : `${formatUrl(section.slug.nl)}/${formatUrl(item.title.nl)}`}
+                        <PostCard
+                           title={item.title.nl}
+                           imgSrc={`${item.hero_img.folder}/${item.hero_img.name}.${item.hero_img.type}`}
+                           slug={slug}
+                           excerpt={item.excerpt.nl}
+                        />
                      {/if}
                   {/each}
-               </div>
+               </PostGrid>
             {:catch error}
-               <div class="dui-alert dui-alert-error">
-                  <div>
-                     <span>Er is iets fout gegaan bij het laden van de data:</span>
-                     <pre>{error}</pre>
-                  </div>
+               <div class="flex flex-col gap-0">
+                  <Alert preset="error">
+                     Er is iets fout gegaan bij het laden van de data.
+                  </Alert>
+                  <Alert preset="error-outlined">
+                     {error}
+                  </Alert>
                </div>
             {/await}
 

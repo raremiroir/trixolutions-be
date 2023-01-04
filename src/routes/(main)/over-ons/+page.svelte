@@ -1,12 +1,9 @@
 <script>
    // Import Components
-	import Main             from "$src/lib/components/Base/Wrapper/Main.svelte";
-   import SectionWrapper   from "$src/lib/components/Base/Wrapper/SectionWrapper.svelte";
-	import Title            from "$src/lib/components/Common/Text/Title.svelte";
+   import { Main, SectionWrapper, Title, P } from "$comp/core";
+   import { Card, TwicPic } from "$comp/common";
 
-	import P from "$src/lib/components/Common/Text/P.svelte";
-	import Card from "$src/lib/components/Common/Card/Card.svelte";
-	import Image from "$src/lib/components/Base/Media/Image.svelte";
+	import Image from "$src/lib/components/Common/Media/Image.svelte";
 
       
 </script>
@@ -19,7 +16,7 @@
             alt="Tom van Dorst - CEO Trixolutions" klass="rounded-xl shadow-md"
             imgSrc="tom-color"
          />
-         <P klass="col-span-2 h-fit" large>
+         <P class="col-span-2 h-fit" large>
             Trixolutions is als enige in de Benelux lid van de 
             Table Group van Patrick Lencioni. (CAPA Pro)<br/>
             <br/>
@@ -49,20 +46,21 @@
 
       <ul class="grid grid-cols-2 lg:grid-cols-3 gap-8">
          <li>
-            <Card titleType="h3" titleSmall>
-               <span slot="title">Tom van Dorst</span>
+            <Card>
+               <Title type="h3" small slot="title">Tom van Dorst</Title>
                <div class="h-80" slot="image">
-                  <Image 
+                  <TwicPic
+                     src="tom-bw"
                      alt="Tom van Dorst - CEO Trixolutions"
-                     imgSrc="tom-bw"
+                     mode="cover"
                   />
                </div>
                CEO / Trainer / Coach
             </Card>
          </li>
          <li>
-            <Card titleType="h3" titleSmall>
-               <span slot="title">Tamara</span>
+            <Card>
+               <Title type="h3" small slot="title">Tamara</Title>
                <Image 
                   slot="image" height="h-80" alt="Tamara - Trixolutions Office Manager"
                   imgSrc="tamara-bw"
@@ -71,8 +69,8 @@
             </Card>
          </li>
          <li>
-            <Card titleType="h3" titleSmall>
-               <span slot="title">Roger</span>
+            <Card>
+               <Title type="h3" small slot="title">Roger</Title>
                <Image 
                   slot="image" height="h-80" alt="Roger - Trixolutions Trainer / Acteur"
                   imgSrc="placeholder"
@@ -81,8 +79,8 @@
             </Card>
          </li>
          <li>
-            <Card titleType="h3" titleSmall>
-               <span slot="title">Kelly</span>
+            <Card>
+               <Title type="h3" small slot="title">Kelly</Title>
                <Image 
                   slot="image" height="h-80" alt="Kelly - Trixolutions Trainer / Facilitator"
                   imgSrc="placeholder"
@@ -91,8 +89,8 @@
             </Card>
          </li>
          <li>
-            <Card titleType="h3" titleSmall>
-               <span slot="title">Christoph</span>
+            <Card>
+               <Title type="h3" small slot="title">Christoph</Title>
                <Image 
                   slot="image" height="h-80" alt="Christoph - Trixolutions Trainer / Facilitator"
                   imgSrc="christoph-bw"
@@ -102,8 +100,8 @@
             </Card>
          </li>
          <li>
-            <Card titleType="h3" titleSmall>
-               <span slot="title">Frederik</span>
+            <Card>
+               <Title type="h3" small slot="title">Frederik</Title>
                <Image 
                   slot="image" height="h-80" alt="Frederik - Trixolutions Senior Trainer"
                   imgSrc="frederik-bw"

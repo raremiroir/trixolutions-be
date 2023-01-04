@@ -1,11 +1,9 @@
 <script>
    // Import components
-	import SectionWrapper from "$src/lib/components/Base/Wrapper/SectionWrapper.svelte";
-	import Title from "$src/lib/components/Common/Text/Title.svelte";
-	import P from "$src/lib/components/Common/Text/P.svelte";
-	import Main from "$src/lib/components/Base/Wrapper/Main.svelte";
-	import Image from "$src/lib/components/Base/Media/Image.svelte";
-	import Card from "$src/lib/components/Common/Card/Card.svelte";
+   import { Main, SectionWrapper, Title, Breadcrumbs } from "$comp/core";
+
+   import Video from "$src/lib/components/Common/Media/Video.svelte";
+   import Image from "$src/lib/components/Common/Media/Image.svelte";
 
    // Import Video
    import cegeka_video from '$lib/videos/referentiefilmpje-cegeka-min.mp4'
@@ -54,10 +52,6 @@
    import tessgroup     from '$img/references/tessenderlo_group-logo.png?w=1536;1280;768;640&format=webp;avif;jpeg&srcset'; 
    import vulkoprin     from '$img/references/vulkoprin-logo.png?w=1536;1280;768;640&format=webp;avif;jpeg&srcset'; 
    import wgn           from '$img/references/wijngaardnatie-logo.png?w=1536;1280;768;640&format=webp;avif;jpeg&srcset'; 
-
-
-	import Video         from "$src/lib/components/Base/Media/Video.svelte";
-	import Breadcrumbs   from "$src/lib/components/Core/Breadcrumbs/Breadcrumbs.svelte";
 
    let references = [
       { src: vulkoprin,    alt: 'Vulkoprin Logo' }, 
