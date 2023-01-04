@@ -19,6 +19,7 @@ const config = {
          $comp: 'src/lib/components',
          $img: 'src/lib/assets/images',
          $i18n: 'src/lib/i18n',
+         $utils: 'src/lib/utils'
       }
 	}
 };
