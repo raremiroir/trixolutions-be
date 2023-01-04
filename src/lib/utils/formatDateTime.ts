@@ -1,14 +1,4 @@
 
-
-// Capitalize first letter of each word in string
-export const titleCase = (str:string) => {
-	let splitStr = str.toLowerCase().split(' ');
-	for (let i = 0; i < splitStr.length; i++) {
-		splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-	}
-	return splitStr.join(' ');
-}
-
 // Full day/month Date format
 export const formatDateMonthFull = (date:any) => {
 	let dateString = String(date).substring(0, 10);
@@ -55,26 +45,4 @@ export const formatTime = (date:any) => {
 	let hour = dateString.substring(0, dateString.indexOf(':'));
 	let minute = dateString.substring((dateString.indexOf(':') + 1), dateString.indexOf(':') + 3);
 	return `${hour}:${minute}`;
-}
-
-// Generates username from name
-export const generateUsername = (first_name, last_name) => {
-	return `${first_name.replaceAll(' ', '')}.${last_name.replaceAll(' ', '')}`
-}
-
-// Price formatter
-export const formatPrice = (number) => {
-	return (number).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-}
-
-// Url formatter for dynamic pages
-export const formatUrl = (string) => {
-	let newString = String(string).toLowerCase();
-	newString = newString.replaceAll('-', '');
-	newString = newString.replaceAll('.', '');
-	newString = newString.replaceAll('?', '');
-	newString = newString.replaceAll('!', '');
-	newString = newString.replaceAll(',', '');
-	newString = newString.replaceAll(' ', '-');
-	return newString;
 }
