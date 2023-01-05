@@ -1,6 +1,8 @@
 <script lang="ts">
     import { Title, P } from '$comp/core';
     import { Accordeon, AccordeonItem} from '$comp/content';
+
+    import { locale } from 'svelte-i18n';
     
     // Import utils and stores
     import { breakpoints, currentHero, currentTitle } from '$src/lib/stores';
@@ -14,7 +16,14 @@
 
     let heroImgSrc = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
     $currentHero = heroImgSrc;
-    $currentTitle = pageData.title.nl;
+
+    $: if ($locale == 'fr') {
+        $currentTitle = pageData.title.fr;
+    } else if ($locale == 'en') {
+        $currentTitle = pageData.title.en;
+    } else {
+        $currentTitle = pageData.title.nl;
+    }
 
     // Set 'active' variable for accordeon component
 	let active:any = null;
@@ -36,10 +45,10 @@
 <svelte:window bind:innerWidth />
 
 
-<IntroSection title={pageData.title.nl} imgSrc={heroImgSrc}>
+<IntroSection title={$currentTitle} imgSrc={heroImgSrc}>
     <div class="" slot="title">
         <Title type="h2" small>
-            Het Model - {pageData.title.nl}
+            Het Model - {$currentTitle}
         </Title>
         <Title type="subheader">by Patrick Lencioni</Title>
     </div>

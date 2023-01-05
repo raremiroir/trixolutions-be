@@ -1,5 +1,69 @@
 {
+   "base": {
+      "db": {
+         "loading": "laden",
+         "error_loading": "er is iets fout gegaan bij het laden van de data"
+      },
+      "geo": {
+         "country": {
+            "belgium": "België",
+            "netherlands": "Nederland"
+         },
+         "city": {
+            "antwerp": "Antwerpen"
+         },
+         "lang": {
+            "dutch": "Nederlands",
+            "french": "Frans",
+            "english": "Engels"
+         }
+      }
+   },
    "home": {
-      "title": "De Kracht van Gezonde Teams"
+      "title": "De Kracht van Gezonde Teams",
+      "pages": {
+         
+      }
+   },
+   "pages": {
+      "contact": {
+         "title": "contact",
+         "establishment": "vestiging",
+         "find_on_map": "vind ons op de kaart",
+         "btn": {
+            "contact_us": "contacteer ons"
+         }
+      },
+      "about": {
+         "title": "Over Ons",
+         "intro": [
+            "Trixolutions is als enige in de Benelux lid van de Table Group van Patrick Lencioni. (CAPA Pro)<br/><br/>",
+            "We zijn een dynamisch trainingskantoor met een sterke focus op teamcoaching en leiderschapsvaardigheden met de Lencioni inzichten, ervaring en methodieken.<br/><br/>",
+            "Reeds jaren worden we in de Lencioni CAPA Pro Academy op wekelijkse basis begeleid, gecoacht en getraind in de verschillende Lencioni modellen, assessment en toepassingen door Patrick Lencioni en zijn consultants zelf.<br/><br/>",
+            "In samenwerking met The Table Group zetten we de modellen, assessments, inzichten en methodieken om naar de Nederlandse en Vlaamse markt, cultuur en taal.<br/><br/>",
+            "Door deze kennis, gecombineerd met meer dan 200 teamtrajecten op de teller en meer dan 100 afgestudeerde Lencioni Coaches op de Belgische en Nederlandse markt, zijn we de ideale partner om jouw Lencioni kennis te verhogen naar het hoogste niveau!"
+         ],
+         "team": {
+            "title": "Ons Team",
+            "tom": {
+               "job": "CEO / Trainer / Coach"
+            },
+            "tamara": {
+               "job": "Office Manager"
+            },
+            "roger": {
+               "job": "Trainer / Acteur"
+            },
+            "kelly": {
+               "job": "Trainer / Facilitator"
+            },
+            "christoph": {
+               "job": "Trainer / Facilitator"
+            },
+            "frederik": {
+               "job": "Senior Trainer"
+            }
+         }
+      }
    }
 }

@@ -6,7 +6,7 @@
    import { PostCard, PostGrid } from "$comp/posts";
    
    // Import globals
-   import { formatUrl } from "$utils/formatText";
+   import { firstLetterCase, formatUrl } from "$utils/formatText";
 
    // Import i18n
    import { _ } from 'svelte-i18n';
@@ -121,7 +121,7 @@
 <Main noMargin cta>
    {#await getCategoryData()}
       <Alert preset="primary">
-         Laden...
+         {firstLetterCase($_('base.db.loading'))}...
       </Alert>
    {:then categoryData} 
       {#each categoryData as section}
@@ -131,7 +131,7 @@
             </Title>
             {#await getPagesData()}
                <Alert preset="primary">
-                  Laden...
+                  {firstLetterCase($_('base.db.loading'))}...
                </Alert>
             {:then pagesData} 
                <PostGrid>
@@ -150,7 +150,7 @@
             {:catch error}
                <div class="flex flex-col gap-0">
                   <Alert preset="error">
-                     Er is iets fout gegaan bij het laden van de data.
+                     {firstLetterCase($_('base.db.error_loading'))}:
                   </Alert>
                   <Alert preset="error-outlined">
                      {error}
@@ -163,7 +163,7 @@
    {:catch error}
       <div class="dui-alert dui-alert-error">
          <div>
-            <span>Er is iets fout gegaan bij het laden van de data:</span>
+            <span>{firstLetterCase($_('base.db.error_loading'))}:</span>
             <pre>{error}</pre>
          </div>
       </div>

@@ -3,20 +3,19 @@
    import { Button, Main, SectionWrapper, Breadcrumbs, Link, P, Title } from "$comp/core";
    import { Map, Card } from "$comp/common";
 	import Icon from "@iconify/svelte";
-
+	import { firstLetterCase, titleCase } from "$utils";
+   import { _ } from "svelte-i18n";
 
    const places = [
       {
-         country: 'België',
-         address: 'Krommelei 14',
-         address2: '2110 Wijnegem',
+         code: "be",
+         address: 'Krommelei 1 <br/>2110 Wijnegem',
          place: 'Antwerpen',
          email: 'info@trixolutions.be',
       },
       {
-         country: 'Nederland',
-         address: 'Vakwerkhuis',
-         address2: 'Professor Snijdersstraat 2',
+         code: "nl",
+         address: 'Vakwerkhuis<br/>Professor Snijdersstraat 2',
          place: '2628 RA Delft',
          email: 'info@trixolutions.nl'
       },
@@ -27,20 +26,21 @@
 <Breadcrumbs/>
 <Main cta>
    <SectionWrapper name="contact-us">
-      <Title slot="title" type="h1">Contact</Title>
+      <Title slot="title" type="h1">{titleCase($_('pages.contact.title'))}</Title>
       <div class="flex flex-row gap-8">
          {#each places as place}
             <Card textCenter>
                <div slot="prepend-inner" class="w-full flex items-center justify-center">
                   <div class="border-4 border-primary w-fit h-fit rounded-full m-0 p-0">
-                     <Icon icon="emojione:flag-for-{place.country === 'België' ? 'belgium' : place.country === 'Nederland' ? 'netherlands' : 'usa' }" width="140" />
+                     <Icon icon="emojione:flag-for-{place.code === 'be' ? 'belgium' : place.code === 'nl' ? 'netherlands' : 'usa' }" width="140" />
                   </div>
                </div>
-               <Title slot="title" type="h2" smallest class="text-center uppercase font-extrabold">Vestiging {place.country}</Title>
+               <Title slot="title" type="h2" smallest class="text-center uppercase font-extrabold">
+                  {firstLetterCase($_('pages.contact.establishment'))} {place.code === 'be' ? $_('base.geo.country.belgium') : place.code === 'nl' ? $_('base.geo.country.netherlands') : 'error' }
+               </Title>
                <P large thickness="font-semibold" center>
-                  {place.address}<br/>
-                  {place.address2},<br/>
-                  {place.place}
+                  {@html place.address}<br/>
+                  {place.code === 'be' ? $_('base.geo.city.antwerp') : place.code === 'nl' ? place.place : 'error' }
                </P>
                <div class="w-full flex items-center justify-center" slot="append-inner">
                   <Link href="mailto:{place.email}">
@@ -63,14 +63,14 @@
          <Button size="xxl" color="primary" lowercase>
             <div class="flex flex-row gap-2 items-center">
                <Icon icon="material-symbols:mark-email-read-rounded" color="#f6ece7" width="40" />
-               Contacteer Ons!
+               {titleCase($_('pages.contact.btn.contact_us'))}!
             </div>
          </Button>
       </div>
    </SectionWrapper>
 
    <SectionWrapper name="trixolutions-map">
-      <Title type="h2" small slot="title">Vind ons op de kaart!</Title>
+      <Title type="h2" small slot="title">{firstLetterCase($_('pages.contact.find_on_map'))}!</Title>
       <div class="w-full h-140">
          <Map/>
       </div>
