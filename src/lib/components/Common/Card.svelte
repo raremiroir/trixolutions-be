@@ -3,7 +3,7 @@
 <!--      -->
 <script lang="ts">
 	// Import components
-   import { Div, Link, Tag } from "$comp/core";
+   import { Div, Link, Tag, Article } from "$comp/core";
 
    let klass = '';
    export { klass as class };
@@ -13,6 +13,8 @@
    
    // If card is link, enter url
    export let link = '';
+   // If card is article
+   export let article = false;
    
    // If card has label, enter here
    export let label = '';
@@ -25,6 +27,9 @@
    export let equalHeight = false;
 
    let wrapComp = Div;
+   let outerWrapComp = Div;
+   // If article isnt specified, make div
+   outerWrapComp = article ? Article : Div;
    // If link isnt specified, make div
    wrapComp = link ? Link : Div;
 
@@ -53,13 +58,15 @@
       {klass}
       ">
       <!-- Outer Wrap -->
-      <div class="
-         flex gap-0 items-start
-         justify-between w-full
-         {equalHeight ? 'h-full' : 'h-fit'}
-         { direction === 'row' ? 'flex-row' 
-         : direction === 'row-reverse' ? 'flex-row-reverse'
-         : 'flex-col'} ">
+      <svelte:component
+         this={outerWrapComp} 
+         class="
+            flex gap-0 items-start
+            justify-between w-full
+            {equalHeight ? 'h-full' : 'h-fit'}
+            { direction === 'row' ? 'flex-row' 
+            : direction === 'row-reverse' ? 'flex-row-reverse'
+            : 'flex-col'} ">
 
          <slot name="prepend-outer"/>
          
@@ -119,7 +126,7 @@
          <div class="pt-0 px-4 pb-4">
             <slot name="append-outer"/>
          </div>
-      </div>
+      </svelte:component>
 </svelte:component>
 
 
