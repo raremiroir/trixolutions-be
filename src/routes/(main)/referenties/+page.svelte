@@ -2,6 +2,8 @@
    // Import components
    import { Main, SectionWrapper, Title, Breadcrumbs } from "$comp/core";
 
+   import { _ } from "svelte-i18n";
+
    import Video from "$src/lib/components/Common/Media/Video.svelte";
    import Image from "$src/lib/components/Common/Media/Image.svelte";
 
@@ -105,7 +107,7 @@
 <Breadcrumbs/>
 <Main cta>
    <SectionWrapper name="references">
-      <Title slot="title" type='h1'>Referenties</Title>
+      <Title slot="title" type='h1'>{$_('pages.references.title')}</Title>
       <div class="w-full mx-auto">
          <Video src={cegeka_video} poster={cegeka_thumbnail}/>
       </div>

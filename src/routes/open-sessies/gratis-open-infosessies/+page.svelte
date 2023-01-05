@@ -1,9 +1,11 @@
 <script lang="ts">
    import { Main, SectionWrapper, Breadcrumbs, Title, P, Tag, Button } from "$comp/core";
-   import { Card, Hero } from "$comp/common";
+   import { Card, Hero, Alert } from "$comp/common";
 
-   import { formatDateMonthFull, formatTime, formatDateShort } from "$utils";
+   import { formatDateMonthFull, formatTime, formatDateShort, titleCase, firstLetterCase } from "$utils";
 	import supabase from "$src/lib/db";
+
+   import { _ } from "svelte-i18n";
    
    const getData = async () => {
       const {data, error} = await supabase
@@ -25,9 +27,9 @@
 </script>
 
 <header>
-   <Hero height="h-92" imgSrc="Kracht_Gezonde_Teams" imgAlt="No Alt">
+   <Hero height="h-92" imgSrc="home/kracht-gezonde-teams.webp" imgAlt="No Alt">
       <span slot="title">
-         Gratis Online Open Infosessies
+         {titleCase($_('open_sessions.info.title'))}
       </span>
    </Hero>
 </header>
@@ -36,39 +38,32 @@
    <Breadcrumbs/>
    
    <SectionWrapper name="gratis-online-open-infosessies">
-      <Title type="h2" slot="title" large>Teamcoaching met Lencioni</Title>
+      <Title type="h2" slot="title" large>{$_('open_sessions.info.intro.title')}</Title>
 
       <P large>
-         Trixolutions is partner van de Table Group van Patrick Lencioni. 
-         We zijn geaccrediteerd om, niet enkel zijn gedachtegoed, verschillende 
-         modellen en assessments in te zetten in bedrijven, maar ook om de 
-         beroemde Lencioni Coach-the-Coach opleidingen te organiseren. <br/>
-         Meer dan 110 coaches mochten we zo al op de markt loslaten!<br/>
-         <br/>
-         In deze gratis online infosessie verdiepen we op zijn meest beroemde 
-         model uit “De 5 Frustraties van Teamwork” en hoe deze juist in te 
-         zetten in teams en bedrijven. We verdiepen en lichten onze tweedaagse 
-         Masterclass “Lencioni Coach-the-Coach” (Level 1) toe alsook zijn 
-         andere modellen rond “De Beslissende Voorsprong”, “De Ideale Teamplayer” 
-         en “The 6 Types of Working Genius”.<br/>
-         <br/>
-         Meer informatie nodig of inschrijven voor één van de gratis open 
-         infosessies? Vragen? Klik dan op onderstaande knop en vul het formulier in.
+         {@const introItems = $_('open_sessions.info.intro.content')}
+         {#each introItems as item}
+            {@html item}
+         {/each}
       </P>
 
    </SectionWrapper>
 
-   <SectionWrapper name="infosessies-praktische-info">»
-      <Title type="h2" slot="title">Praktische Info</Title>
+   <SectionWrapper name="infosessies-praktische-info">
+      <Title type="h2" slot="title">{titleCase($_('open_sessions.info.practical.title'))}</Title>
       <div class="grid grid-cols-2 gap-8">
          {#await getData()}
-            Loading...
+            <Alert>
+               {firstLetterCase($_('base.db.loading'))}...
+            </Alert>
          {:then data} 
          <!-- <pre>{JSON.stringify($pageResult, null, 2)}</pre> -->
             {#each data as session}
                {#if session.type === 'info_session'}
-                  <Card label="{formatDateMonthFull(session.starts_on)}" labelPrimary titleType="h3" titleSmallest>
-                     <span slot="title">Online Infosessie</span>
+                  <Card label="{formatDateMonthFull(session.starts_on)}" labelPrimary>
+                     <Title slot="title" type="h3 smallest">
+                        {titleCase($_('open_sessions.info.single'))}
+                     </Title>
                      <div class="flex flex-col gap-4 w-full">
                         <div class="flex flex-row justify-between w-full">
                            <Tag outlined>
@@ -79,7 +74,7 @@
                            </Tag>
                         </div>
                         <Button size="lg" color="primary">
-                           Inschrijven
+                           {firstLetterCase($_('open_sessions.info.btn.subscribe'))}
                         </Button>
                      </div>
                   </Card>
@@ -91,7 +86,7 @@
       </div>
       <div class="m-0 px-0 py-16 w-full flex justify-center items-center">
          <Button size="xxl">
-            Inschrijven voor Infosessie
+            {titleCase($_('open_sessions.info.btn.subscribe_to_session'))}
          </Button>
       </div>
    </SectionWrapper>
