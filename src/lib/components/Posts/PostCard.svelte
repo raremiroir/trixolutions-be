@@ -22,7 +22,7 @@
 
 <svelte:window bind:innerWidth={innerWidth} />
 
-<Card link="{slug}" equalHeight direction="col">
+<Card link="{slug}" equalHeight direction="col" article>
 	<Title 
 		slot = "title"
 		type='h3' smaller color="text-primary"
