@@ -5,6 +5,7 @@ export { generateUsername as generateUsername } from './formatText';
 
 export { formatPrice as formatPrice } from './formatPrice';
 
+export { formatYear as formatYear } from './formatDateTime'
 export { formatDateMonthFull as formatDateMonthFull } from './formatDateTime'
 export { formatDateFull as formatDateFull } from './formatDateTime'
 export { formatDateShort as formatDateShort } from './formatDateTime'
