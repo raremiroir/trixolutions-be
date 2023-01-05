@@ -4,7 +4,8 @@
    import { Accordeon, AccordeonItem } from "$comp/content";
    import Image            from "$src/lib/components/Common/Media/Image.svelte";
 	
-   import { formatDateMonthFull, formatPrice, titleCase } from "$utils";
+   import { date } from "svelte-i18n";
+   import { formatDateFull, formatDateMonthFull, formatDateShort, formatTime, formatYear, titleCase } from "$utils";
 
    import { _ } from "svelte-i18n";
 
@@ -13,8 +14,9 @@
 	import MasterclassCard from "./MasterclassCard.svelte";
 
    export let data;
-   let pageData = Object(data.data);
-   console.log(pageData);
+   let pageData = Object(data.sessionTypes);
+   let sessionData = Object(data.sessionData);
+   console.log(sessionData);
 
 </script>
 
@@ -37,13 +39,64 @@
       <PartnershipAccordeon />
    </SectionWrapper>
 
-   <SectionWrapper name="infosessies-praktische-info">
+   <SectionWrapper name="hybride-lencioni-leertraject-features">
       <div class="flex flex-row gap-4">
 
          {#each pageData as session}
             <MasterclassCard {session} />
          {/each}
 
+      </div>
+   </SectionWrapper>
+
+   <SectionWrapper name="hybride-lencioni-leertraject-praktische-info">
+      <div class="flex flex-row w-full gap-16 items-center justify-start" slot="title">
+         <Title type="h2" small>
+            Praktische Info:
+         </Title>
+         <div class="">
+            <Title type="subheader" smaller italic>
+               Hybride Lencioni Teamcoaching Leertraject
+            </Title>
+            <Title type="h3" smaller thin>
+               Mét Tweedaagse Masterclass
+            </Title>
+         </div>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 xl:gap-8">
+         {#each sessionData as session}
+            {#if session.type == "level_1_full"}
+               <Card class="
+                     last-of-type:col-span-full md:last-of-type:col-span-1
+                     last-of-type:w-1/2 md:last-of-type:w-full
+                     last-of-type:mx-auto"
+               >
+                  <div slot="title" 
+                     class="flex items-center justify-center w-full h-fit gap-2">
+                     <Icon 
+                        icon="material-symbols:calendar-month-rounded" 
+                        class="w-10 h-10 p-[5px] text-white bg-primary/90 rounded-full" />
+                     <Title type="h4" class="uppercase pt-[5px]" small>
+                        {#if session.is_full}
+                           Volzet
+                        {:else}
+                           <div class="flex flex-col gap-0 leading-none">
+                              {formatDateShort(session.starts_on)} - {formatDateShort(session.ends_on)}<br/>
+                              <span class="text-xl font-medium m-0">{formatYear(session.starts_on)}</span>
+                           </div>
+                        {/if}
+                     </Title>
+                  </div>
+
+                  <P large center class="w-full text-2xl">
+                     {formatTime(session.starts_on)} - {formatTime(session.ends_on)}
+                  </P>
+               </Card>
+
+
+            {/if}
+         {/each}
       </div>
    </SectionWrapper>
 </Main>
