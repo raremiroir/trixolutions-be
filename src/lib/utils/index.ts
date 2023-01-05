@@ -1,3 +1,4 @@
+export { firstLetterCase as firstLetterCase } from './formatText';
 export { titleCase as titleCase } from './formatText';
 export { formatUrl as formatUrl } from './formatText';
 export { generateUsername as generateUsername } from './formatText';

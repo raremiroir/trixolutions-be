@@ -1,4 +1,8 @@
 
+// Capitalize first letter of string
+export const firstLetterCase = (string) => {
+	return string.charAt(0).toUpperCase() + string.slice(1);
+ }
 
 // Capitalize first letter of each word in string
 export const titleCase = (str:string) => {
@@ -8,6 +12,7 @@ export const titleCase = (str:string) => {
 	}
 	return splitStr.join(' ');
 }
+
 
 // Generates username from name
 export const generateUsername = (first_name, last_name) => {
