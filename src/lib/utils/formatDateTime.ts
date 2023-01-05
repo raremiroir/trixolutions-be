@@ -46,3 +46,9 @@ export const formatTime = (date:any) => {
 	let minute = dateString.substring((dateString.indexOf(':') + 1), dateString.indexOf(':') + 3);
 	return `${hour}:${minute}`;
 }
+
+// Format only year
+export const formatYear = (date:any) => {
+	let dateString = String(date).substring(0, 10);
+	return dateString.substring(0, dateString.indexOf('-')); 
+}
