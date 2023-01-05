@@ -22,6 +22,11 @@
 // Use larger case
    export let large = false;
 
+// Make title italic
+export let italic = false;
+// Make title thinner
+export let thin = false;
+
 </script>
 
 <!--      -->
@@ -32,66 +37,80 @@
    <!-- If type is h1 -->
    {#if type === 'h1'}
       <h1 class=" text-xl
-            font-title font-bold leading-none
+            font-title leading-none
             {color ? color : 'text-primary'} 
-            {small ? 'text-7xl' : 'h1-size'}">
+            {small ? 'text-7xl' : 'h1-size'}
+            { thin ? 'font-semibold' : 'font-bold'}"
+          class:italic={italic}>
          <slot/>
       </h1>
    {:else if type === 'fake-h1'}
       <span class=" text-xl
-            font-title font-bold leading-none
+            font-title leading-none
             {color ? color : 'text-primary'} 
-            {small ? 'text-7xl' : 'h1-size'}">
+            {small ? 'text-7xl' : 'h1-size'}
+            { thin ? 'font-semibold' : 'font-bold'}"
+            class:italic={italic}>
          <slot/>
       </span>
       <!-- If type is h2 -->
    {:else if type === 'h2'}
       <h2 class="
-            font-title font-bold leading-none
+            font-title leading-none
             { color ? color : 'text-primary'} 
             { small ? 'h3-size'
             : smaller ? 'h4-size'
             : smallest ? 'h6-size'
             : large ? 'h1-size-sm'
-            : 'h2-size'}">
+            : 'h2-size'}
+            { thin ? 'font-semibold' : 'font-bold'}"
+          class:italic={italic}>
          <slot/>
       </h2>
    <!-- If type is h3 -->
    {:else if type === 'h3'}
       <h3 class="
-            font-title leading-tight font-bold
+            font-title leading-tight
             { color ? color : 'text-primary-d1' } 
             { small ? 'h4-size' 
             : smaller ? 'h6-size'
             : smallest ? 'h6-size-sm'
-            : 'h3-size'}">
+            : 'h3-size'}
+            { thin ? 'font-semibold' : 'font-bold'}"
+          class:italic={italic}>
          <slot/>
       </h3>
    <!-- If type is h4 -->
    {:else if type === 'h4'}
       <h4 class="
-            font-title leading-normal font-bold
+            font-title leading-normal
             { color ? color : 'text-primary-d1' } 
             { small ? 'h5-size' 
             : smaller ? 'h6-size-sm'
             : smallest ? ''
-            : 'h4-size'}">
+            : 'h4-size'}
+            { thin ? 'font-semibold' : 'font-bold'}"
+          class:italic={italic}>
          <slot/>
       </h4>
    <!-- If type is h5 -->
    {:else if type === 'h5'}
       <h5 class="
-            font-title leading-normal font-semibold
+            font-title leading-normal
             {color ? color : 'text-primary-d2'} 
-            {small ? 'text-xl' : 'h5-size'}">
+            {small ? 'text-xl' : 'h5-size'}
+            { thin ? 'font-normal' : 'font-semibold'}"
+          class:italic={italic}>
          <slot/>
       </h5>
    <!-- If type is h6 -->
    {:else if type === 'h6'}
       <h6 class="
             font-title leading-normal 
-            {color ? color : 'text-primary-d2'} font-semibold italic
-            {small ? 'text-lg' : 'h6-size'}">
+            {color ? color : 'text-primary-d2'} italic
+            {small ? 'text-lg' : 'h6-size'}
+            { thin ? 'font-normal' : 'font-semibold'} "
+          class:italic={italic}>
          <slot/>
       </h6>
    <!-- If type is subtitle -->
@@ -101,16 +120,21 @@
             { small ? 'subtitle-size-sm' 
             : smaller ? 'subtitle-size-xs' 
             : 'subtitle-size'}
-            italic font-normal font-title
-         ">
+            { thin ? 'font-light' : 'font-normal'} 
+            font-title"
+            class:italic={italic}>
          <slot/>
       </span>
    <!-- If type is subheader -->
    {:else if type === 'subtitle' || type === 'subheader'}
       <span class="
             { color ? color : 'text-primary' }
-            subheader-size font-normal font-title
-         ">
+            { small ? 'subtitle-size' 
+            : smaller ? 'subtitle-size-sm' 
+            : 'subheader-size'}
+            { thin ? 'font-light' : 'font-normal'} 
+            font-title"
+            class:italic={italic}>
          <slot/>
       </span>
    {/if}
