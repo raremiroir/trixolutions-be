@@ -2,7 +2,7 @@ import supabase from '$lib/db'
 
 export const load = () => {
 
-   const getData = async () => {
+   const getSessionTypes = async () => {
       const {data, error} = await supabase
          .from('session_types')
          .select(`*`);
@@ -13,9 +13,21 @@ export const load = () => {
          return data;
       };
    }
+   const getSessionData = async () => {
+      const {data, error} = await supabase
+         .from('sessions')
+         .select(`*`);
+
+      if (error) {
+         throw new Error(error.message)
+      } else if (data) {
+         return data;
+      };
+   }
 
    return {
-      data: getData()
+      sessionTypes: getSessionTypes(),
+      sessionData: getSessionData(),
    }
 }
 
