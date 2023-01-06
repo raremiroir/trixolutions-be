@@ -2,6 +2,8 @@ export { default as Flipper }    from './Common/Flipper.svelte';
 
 export { default as Alert }      from './Common/Alert.svelte';
 
+export { default as Modal }      from './Common/Modal.svelte';
+
 export { default as Card }       from './Common/Card.svelte';
 
 export { default as Tooltip }    from './Common/Tooltip.svelte';
