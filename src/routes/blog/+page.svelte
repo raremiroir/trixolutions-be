@@ -8,7 +8,7 @@
 	import supabase from "$lib/db";
 
    import { _ } from "svelte-i18n";
-	import { firstLetterCase } from "$/utils";
+	import { firstLetterCase } from "$utils";
 
    
    const getData = async () => {
