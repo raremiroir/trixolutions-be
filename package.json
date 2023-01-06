@@ -22,8 +22,10 @@
 		"@twicpics/components": "^0.14.2",
 		"@types/marked": "^4.0.8",
 		"marked": "^4.2.5",
+		"svelte-forms-lib": "^2.0.1",
 		"svelte-i18n": "^3.6.0",
-		"swiper": "^8.4.5"
+		"swiper": "^8.4.5",
+		"yup": "^0.32.11"
 	},
 	"devDependencies": {
 		"@iconify/svelte": "^3.0.1",
