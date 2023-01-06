@@ -38,13 +38,13 @@
             use:clickOutside on:click_outside={closeModal}
             class="
                w-fit h-fit 
-               min-h-[12rem] min-w-[12rem]
-               mx-auto p-4
+               min-h-[50%] min-w-[60%]
+               mx-auto pb-4 px-4 pt-2
                rounded-2xl shadow-2xl shadow-black/70
                bg-white">
             
             <!-- Header Wrap -->
-            <div class="px-2 w-full flex justify-between items-center gap-8">
+            <div class="w-full flex justify-between items-center gap-8">
                <div class="pt-2">
                   <slot name="title-prepend" />
                   <slot name="title">
@@ -77,7 +77,10 @@
                </div>
             </div>
             <hr class="border-2 border-primary/70"/>
-
+            <div class="py-4 px-1">
+               <slot/>
+            </div>
+            <hr class="border-2 border-primary/70"/>
          </div>
    </div>
 {/if}
