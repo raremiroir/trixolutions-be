@@ -19,6 +19,9 @@
    // -- primary - error - success - warning - info
    export let color = 'primary'
 
+   // Tooltip small variant
+   export let small = false;
+
    // Is the user hovering over the trigger?
    let isHovered = false;
    let x = 0;
@@ -54,13 +57,14 @@
       <div 
          transition:fly={{duration:300, y:flyY, x:flyX}}
          class="
-            absolute opacity-100
+            absolute
             backdrop-blur-lg
             {placement}
             whitespace-nowrap z-2
-            text-sm font-semibold 
-            px-2 py-1 rounded-lg
-            border-2 shadow-lg
+            { small ? 'text-xs border opacity-80' : 'text-sm border-2 opacity-100'} 
+            font-semibold 
+            { small ? 'px-1 py-0.5' : 'px-2 py-1'} 
+            rounded-lg shadow-lg
             { color === 'primary' ? 'bg-primary-l2/10 text-primary-l3 border-primary-l3 '
             : color === 'error'   ? 'bg-error-l/10    text-error-d    border-error-d'
             : color === 'success' ? 'bg-success-l/10  text-success-d  border-success-d'
