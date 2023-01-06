@@ -2,6 +2,7 @@
 
    import { Title, Button } from "$comp/core";
    import { Modal } from "$comp/common";
+	import ContactForm from "../Forms/ContactForm.svelte";
 
 </script>
 
@@ -22,7 +23,8 @@
          </Button>
 
          <Title slot="title" type="h3" small>Contacteer Ons!</Title>
-
+         
+         <ContactForm />
          
 
       </Modal>
