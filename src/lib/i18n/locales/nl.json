@@ -20,6 +20,12 @@
       },
       "btn": {
          "close": "sluiten"
+      },
+      "validation": {
+         "required": "Dit veld is verplicht.",
+         "default_fixed": "Dit veld is ongeldig.",
+         "field_too_short": "{item} moet minstens {min} letters lang zijn.",
+         "field_too_long": "{item} mag maximaal {max} letters lang zijn."
       }
    },
    "home": {
