@@ -9,7 +9,7 @@
    import { breakpoints } from "$lib/stores";
       
    let innerWidth:number;
-   $: console.log(innerWidth);
+   $: innerWidth;
    // Change image ratio according to breakpoint
    let ratio = '3:1'
    $: if (innerWidth < $breakpoints.xs) { ratio = "3:2"; } 
