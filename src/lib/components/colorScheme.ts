@@ -16,6 +16,13 @@ const colors = {
                          ring-secondary  hover:ring-secondary-l1`,
          outline_text:  `text-secondary  hover:text-secondary-l1`
       },
+      error: {
+         default:       `bg-error/70 ring-0 hover:bg-error`,
+         default_text:  `text-gray-50 hover:text-white`,
+         outline:       `bg-transparent ring-2  hover:bg-error/5 
+                         ring-error  hover:ring-error-d`,
+         outline_text:  `text-error  hover:text-error-d`
+      },
       transparent: {
          default:       `bg-transparent hover:bg-gray-500/30 
                          active:bg-gray-600/20 ring-none border-none`,
