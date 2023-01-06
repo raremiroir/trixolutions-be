@@ -1,5 +1,6 @@
 import { writable } from 'svelte/store'
 
+// TODO: Clean up stores
 
 export const status = writable(false);
 export const username = writable("");
