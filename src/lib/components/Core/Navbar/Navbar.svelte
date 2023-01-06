@@ -11,31 +11,32 @@
    import { Logo } from "$comp/common";
    import { Menu } from "$comp/content";
    import Hamburger     from "./Hamburger.svelte";
-	import LangSwitcher  from "./LocaleSwitcher.svelte";
+	import LangSwitcher  from "./LangSwitcher.svelte";
    import Icon          from '@iconify/svelte';
 
 
    // Import locale from i18n
-   import { locale } from "svelte-i18n";
-   $: $locale;
-   $: console.log($locale);
+   import { locale } from '$i18n/i18n-svelte'
+   // console.log("nav locale: ", $locale);
+   // $: $locale;
+   // $: console.log($locale);
 
 
    // Define links in navbar
    let navItems = [
-      { name: 'Home', link: `/`, dropdown: false, pages: [] },
-      { name: 'Over Ons', link: `/over-ons`, dropdown: false, pages: [] },
-      { name: 'Referenties', link: `/referenties`, dropdown: false, pages: [] },
-      { name: 'Blog', link: `/blog`, dropdown: false, pages: [] },
+      { name: 'Home', link: `/${$locale}`, dropdown: false, pages: [] },
+      { name: 'Over Ons', link: `/${$locale}/over-ons`, dropdown: false, pages: [] },
+      { name: 'Referenties', link: `/${$locale}/referenties`, dropdown: false, pages: [] },
+      { name: 'Blog', link: `/${$locale}/blog`, dropdown: false, pages: [] },
       { 
-         name: 'Open Workshops', link: `/open-sessies`, dropdown: true, 
+         name: 'Open Workshops', link: `/${$locale}/open-sessies`, dropdown: true, 
          pages: [
-               { title: 'Gratis Open Infosessies', link: `/open-sessies/gratis-open-infosessies` },
-               { title: 'Hybride Lencioni Leertraject', link: `/open-sessies/hybride-lencioni-leertraject` },
-               { title: 'Lencioni DeepDive - Level 2', link: `/open-sessies/lencioni-deepdive-level-2` },
+               { title: 'Gratis Open Infosessies', link: `/${$locale}/open-sessies/gratis-open-infosessies` },
+               { title: 'Hybride Lencioni Leertraject', link: `/${$locale}/open-sessies/hybride-lencioni-leertraject` },
+               { title: 'Lencioni DeepDive - Level 2', link: `/${$locale}/open-sessies/lencioni-deepdive-level-2` },
          ] 
       },
-      { name: 'Contact', link: `/contact`, dropdown: false, pages: [] },
+      { name: 'Contact', link: `/${$locale}/contact`, dropdown: false, pages: [] },
    ]
 
    // Get current url/pathname

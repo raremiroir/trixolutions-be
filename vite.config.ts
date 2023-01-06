@@ -7,7 +7,9 @@ const config: UserConfig = {
 	plugins: [
 		imagetools(),
 		sveltekit(), 
-	]
+	],
+	server: { port: 3000 },
+	preview: { port: 3000 },
 };
 
 export default config;

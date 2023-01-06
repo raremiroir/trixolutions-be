@@ -10,3 +10,5 @@ export { formatDateMonthFull as formatDateMonthFull } from './formatDateTime'
 export { formatDateFull as formatDateFull } from './formatDateTime'
 export { formatDateShort as formatDateShort } from './formatDateTime'
 export { formatTime as formatTime } from './formatDateTime'
+
+export { replaceLocaleInUrl as replaceLocaleInUrl } from './i18n'

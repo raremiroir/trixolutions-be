@@ -1,7 +1,12 @@
 <script lang="ts">
+	import { page } from '$app/stores'
+
+	// Import i18n
+	import LL, { setLocale } from '$i18n/i18n-svelte'
 	import type { LayoutData } from './$types'
-	import { onMount } from 'svelte';
-	import { invalidate } from '$app/navigation';
+	import HeadHrefLangs from '$comp/Core/HeadHrefLangs.svelte';
+	
+	// Import supabase
 	import supabase from '$lib/db';
 
 	// import TwicPics svelte3 components
@@ -15,23 +20,25 @@
 	})
 	
 	export let data: LayoutData
+	setLocale(data.locale)
 
 	// Import Components
 	import { Footer, Navbar, Title } from '$comp/core';
 	
 	import "$src/app.postcss";
-		// Supabase Auth
-		onMount(() => {
-		const {
-			data: { subscription },
-		} = supabase.auth.onAuthStateChange(() => {
-			invalidate('supabase:auth')
-		})
+	
+	// 	// Supabase Auth
+	// 	onMount(() => {
+	// 	const {
+	// 		data: { subscription },
+	// 	} = supabase.auth.onAuthStateChange(() => {
+	// 		invalidate('supabase:auth')
+	// 	})
 
-		return () => {
-			subscription.unsubscribe()
-		}
-	})
+	// 	return () => {
+	// 		subscription.unsubscribe()
+	// 	}
+	// })
 
 	export const ssr = false;
 
@@ -42,6 +49,11 @@
 	<slot />
 	
 </div>
+
+<svelte:head>
+	<title>{$page.data.title || 'Trixolutions'}</title>
+	<HeadHrefLangs />
+</svelte:head>
 
 <style global>
 	.app {

@@ -18,7 +18,7 @@ const config = {
          $lib: 'src/lib',
          $comp: 'src/lib/components',
          $img: 'src/lib/assets/images',
-         $i18n: 'src/lib/i18n',
+         $i18n: 'src/i18n',
          $utils: 'src/lib/utils'
       }
 	}

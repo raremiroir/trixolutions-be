@@ -4,7 +4,7 @@
    // Import yup
    import * as yup from 'yup';
 
-   import { _ } from 'svelte-i18n';
+	import LL from '$i18n/i18n-svelte'
 
    // Import components
    import { Button } from "$comp/core";
@@ -15,8 +15,8 @@
    let schema = yup.object().shape({
          first_name: yup
             .string()
-            .min(2, $_('base.validation.field_too_short', {  min: '2' }))
-            .required($_('base.validation.required')),
+            .min(2)
+            .required($LL.base.validation.required()),
          last_name: yup
             .string()
             .min(3)

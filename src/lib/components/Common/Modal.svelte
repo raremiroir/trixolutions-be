@@ -1,5 +1,5 @@
 <script lang="ts">
-   import { _ } from "svelte-i18n";
+	import LL from '$i18n/i18n-svelte'
    import { fade } from "svelte/transition";
    import { clickOutside } from "$lib/actions";
    import { firstLetterCase } from "$utils";
@@ -56,7 +56,7 @@
                <div class="h-8 w-8">
                   <Tooltip
                      color="error"
-                     title={firstLetterCase($_('base.btn.close'))}
+                     title={firstLetterCase($LL.base.btn.close())}
                      placement="bottom-9 left-1/2 -translate-x-1/2">
                      <div 
                         class="w-full h-full"
