@@ -17,6 +17,9 @@
             "french": "Frans",
             "english": "Engels"
          }
+      },
+      "btn": {
+         "close": "sluiten"
       }
    },
    "home": {
