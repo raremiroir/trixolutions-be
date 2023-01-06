@@ -15,6 +15,10 @@
    // Set length to fly on x-axis
    export let flyX = 0;
 
+   // Choose color
+   // -- primary - error - success - warning - info
+   export let color = 'primary'
+
    // Is the user hovering over the trigger?
    let isHovered = false;
    let x = 0;
@@ -35,6 +39,8 @@
    const mouseLeave = () => {
       isHovered = false;
    }
+
+
 </script>
 
 <div 
@@ -52,10 +58,15 @@
             backdrop-blur-lg
             {placement}
             whitespace-nowrap z-2
-            bg-primary-l2/10 text-primary-l3
             text-sm font-semibold 
             px-2 py-1 rounded-lg
-            border-primary-l3 border-2 shadow-lg
+            border-2 shadow-lg
+            { color === 'primary' ? 'bg-primary-l2/10 text-primary-l3 border-primary-l3 '
+            : color === 'error'   ? 'bg-error-l/10    text-error-d    border-error-d'
+            : color === 'success' ? 'bg-success-l/10  text-success-d  border-success-d'
+            : color === 'warning' ? 'bg-warning-l/10  text-warning-d  border-warning-d'
+            : color === 'info'    ? 'bg-info-l/10     text-info-d     border-info-d'
+            : color }
          "> 
          {title}
       </div>   
