@@ -38,6 +38,7 @@
 
 <button 
    {type} on:click
+   {disabled}
    class="
       flex flex-row items-center justify-start gap-1
       whitespace-nowrap group {klass}
@@ -98,6 +99,11 @@
             `${colors.button.secondary.default} ${textColor ? textColor : colors.button.secondary.default_text}`
        : color === 'secondary'   && outlined  ? 
             `${colors.button.secondary.outline} ${textColor ? textColor : colors.button.secondary.outline_text}`
+
+       : color === 'error'       && !outlined ? 
+            `${colors.button.error.default} ${textColor ? textColor : colors.button.error.default_text}`
+       : color === 'error'       && outlined  ? 
+            `${colors.button.error.outline} ${textColor ? textColor : colors.button.error.outline_text}`
 
        : color === 'transparent' && !outlined  ? 
             `${colors.button.transparent.default} ${textColor ? textColor : colors.button.transparent.default_text}`
