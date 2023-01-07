@@ -4,8 +4,6 @@
 	import Dashboard from '$src/lib/components/Admin/Dashboard.svelte';
 	import Icon from '@iconify/svelte';
 
-    import { page } from '$app/stores';
-	import { browser } from '$app/environment';
 	import type { LayoutData } from './$types'
 	import { onMount } from 'svelte';
 	import { invalidate } from '$app/navigation';

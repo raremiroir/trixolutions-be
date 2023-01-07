@@ -1,11 +1,13 @@
 <script lang="ts">
 	import type { LayoutData } from './$types'
 	
-	export let data: LayoutData
+	export let data;
+	setLocale(data.locale);
 	
 	// Import Components
 	import { Navbar, Footer } from '$comp/core';
 	import "$src/app.postcss";
+	import { setLocale } from '$src/i18n/i18n-svelte';
 </script>
 
 

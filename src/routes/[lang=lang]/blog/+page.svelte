@@ -1,5 +1,4 @@
 <script>
-   import { locale } from "svelte-i18n";
 
    import { Main, SectionWrapper, Breadcrumbs, Title } from "$src/lib/components/core";
    import { Alert } from "$comp/common";
@@ -7,7 +6,7 @@
 
 	import supabase from "$lib/db";
 
-   import { _ } from "svelte-i18n";
+   import LL, { locale } from "$src/i18n/i18n-svelte";
 	import { firstLetterCase } from "$utils";
 
    
@@ -37,14 +36,14 @@
 
       {#await getData()}
          <Alert preset="primary">
-            {firstLetterCase($_('base.db.loading'))}
+            {firstLetterCase($LL.base.db.loading())}
          </Alert>
       {:then data} 
          <PostScroll pageData={data} />
       {:catch error}
          <div class="flex flex-col gap-0">
             <Alert preset="error">
-               {firstLetterCase($_('base.db.error_loading'))}
+               {firstLetterCase($LL.base.db.error_loading())}
             </Alert>
             <Alert preset="error-outlined">
                {error}

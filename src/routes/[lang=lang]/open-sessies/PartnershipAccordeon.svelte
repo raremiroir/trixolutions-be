@@ -4,7 +4,7 @@
    import { Accordeon, AccordeonItem } from "$comp/content";
    import { TwicPic } from "$comp/common";
 
-   import { _ } from "svelte-i18n";
+   import LL from "$src/i18n/i18n-svelte";
    import { breakpoints } from "$src/lib/stores";
 
    let innerWidth:number;
@@ -24,20 +24,20 @@
 <ul class="flex flex-col gap-4">
    <Accordeon>
       <li>
-         <AccordeonItem id={1} title={$_('components.open_sessions_accordeon.first.title')} titleSmaller>
+         <AccordeonItem id={1} title={$LL.components.open_sessions_accordeon.first.title()} titleSmaller>
             <div class="flex flex-col gap-2">
-               <Title type="h4" smaller>{$_('components.open_sessions_accordeon.first.content_title')}</Title>
+               <Title type="h4" smaller>{$LL.components.open_sessions_accordeon.first.content_title()}</Title>
                <P large>
-                  {@const firstItemContentFirst = $_('components.open_sessions_accordeon.first.first')}
+                  {@const firstItemContentFirst = $LL.components.open_sessions_accordeon.first.first()}
                   {#each firstItemContentFirst as item}
                      {@html item}
                   {/each}
                </P>
                <Blockquote author="Patrick Lencioni">
-                  {$_('components.open_sessions_accordeon.first.quote')}
+                  {$LL.components.open_sessions_accordeon.first.quote()}
                </Blockquote>
                <P large>
-                  {@const firstItemContentLast = $_('components.open_sessions_accordeon.first.last')}
+                  {@const firstItemContentLast = $LL.components.open_sessions_accordeon.first.last()}
                   {#each firstItemContentLast as item}
                      {@html item}
                   {/each}
@@ -50,13 +50,13 @@
          </AccordeonItem>
       </li>
       <li>
-         <AccordeonItem id={2} title={$_('components.open_sessions_accordeon.second.title')} titleSmaller>
+         <AccordeonItem id={2} title={$LL.components.open_sessions_accordeon.second.title()} titleSmaller>
             <div class="flex flex-col gap-2">
-               <Title type="h4" smaller>{$_('components.open_sessions_accordeon.second.content_title')}:</Title>
+               <Title type="h4" smaller>{$LL.components.open_sessions_accordeon.second.content_title()}:</Title>
                <div class="flex flex-col-reverse lg:flex-row w-full justify-between">
                   <List class="w-full lg:w-8/12">
-                     <P large class="lg:hidden">{$_('components.open_sessions_accordeon.second.list_title')}</P>
-                     {@const secondItemList = $_('components.open_sessions_accordeon.second.list')}
+                     <P large class="lg:hidden">{$LL.components.open_sessions_accordeon.second.list_title()}</P>
+                     {@const secondItemList = $LL.components.open_sessions_accordeon.second.list()}
                      {#each secondItemList as item}
                         <ListItem large>{item}</ListItem>
                      {/each}

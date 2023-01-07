@@ -1,5 +1,5 @@
 import supabase from '$lib/db'
-import { formatUrl } from '../../../lib/utils/formatText';
+import { formatUrl } from '$utils/formatText';
 
 
 export const load = ({ fetch, params }) => {

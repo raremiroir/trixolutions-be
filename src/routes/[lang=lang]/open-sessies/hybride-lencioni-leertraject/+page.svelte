@@ -3,11 +3,10 @@
    import { Hero, Card } from "$comp/common";
    import { Accordeon, AccordeonItem } from "$comp/content";
    import Image            from "$src/lib/components/Common/Media/Image.svelte";
-	
-   import { date } from "svelte-i18n";
+   
    import { formatDateFull, formatDateMonthFull, formatDateShort, formatTime, formatYear, titleCase } from "$utils";
 
-   import { _ } from "svelte-i18n";
+   import LL from "$src/i18n/i18n-svelte";
 
 	import Icon from "@iconify/svelte";
 	import PartnershipAccordeon from "../PartnershipAccordeon.svelte";
@@ -22,7 +21,7 @@
 
 <header>
    <Hero titleSmall imgSrc="home/working-genius.webp" imgAlt="No alt">
-      <span slot="title">{titleCase($_('open_sessions.level_1.title'))}</span>   
+      <span slot="title">{titleCase($LL.open_sessions.level_1.title())}</span>   
    </Hero>
 </header>
 
@@ -31,7 +30,7 @@
    
    <SectionWrapper name="hybride-lencioni-leertraject">
       <P large>
-         {@const introContent = $_('open_sessions.level_1.intro.content')}
+         {@const introContent = $LL.open_sessions.level_1.intro.content()}
          {#each introContent as item}
             {@html item}
          {/each}
