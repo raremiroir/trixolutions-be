@@ -10,8 +10,7 @@
    import { Button, Link } from "$comp/core";
    import { Logo } from "$comp/common";
    import { Menu } from "$comp/content";
-   import Hamburger     from "./Hamburger.svelte";
-	import LangSwitcher  from "./LangSwitcher.svelte";
+   import { Hamburger, LangSwitcher, NavItem, DropdownItem, MobileNavItem, MobileDropdownItem } from "./navItems";
    import Icon          from '@iconify/svelte';
 
 
@@ -20,24 +19,6 @@
    // console.log("nav locale: ", $locale);
    // $: $locale;
    // $: console.log($locale);
-
-
-   // Define links in navbar
-   let navItems = [
-      { name: 'Home', link: `/${$locale}`, dropdown: false, pages: [] },
-      { name: 'Over Ons', link: `/${$locale}/over-ons`, dropdown: false, pages: [] },
-      { name: 'Referenties', link: `/${$locale}/referenties`, dropdown: false, pages: [] },
-      { name: 'Blog', link: `/${$locale}/blog`, dropdown: false, pages: [] },
-      { 
-         name: 'Open Workshops', link: `/${$locale}/open-sessies`, dropdown: true, 
-         pages: [
-               { title: 'Gratis Open Infosessies', link: `/${$locale}/open-sessies/gratis-open-infosessies` },
-               { title: 'Hybride Lencioni Leertraject', link: `/${$locale}/open-sessies/hybride-lencioni-leertraject` },
-               { title: 'Lencioni DeepDive - Level 2', link: `/${$locale}/open-sessies/lencioni-deepdive-level-2` },
-         ] 
-      },
-      { name: 'Contact', link: `/${$locale}/contact`, dropdown: false, pages: [] },
-   ]
 
    // Get current url/pathname
    let path = '';
@@ -82,7 +63,7 @@
       
          <!-- Logo/Brand -->
       <div class="w-1/3 lg:w-1/5">
-         <Link href="/" class="max-w-fit">
+         <Link href="/{$locale}" class="max-w-fit">
             <Logo width="180"/>  
          </Link>
       </div>
@@ -95,46 +76,16 @@
          z-10 hidden lg:block
       ">
          <ul class="flex flex-row gap-1 xl:gap-2 w-full justify-end items-center">
-            {#each navItems as page}
-               <li class="w-fit">
-                  {#if page.dropdown}
-                     <Menu hoverState>
-                        <a href={page.link} slot="trigger" class="w-fit h-fit m-0 p-0">
-                           <Button 
-                              color="transparent" 
-                              flat lowercase 
-                              size="text-lg px-2 xl:px-5 pt-[14px] pb-3">
-                              {page.name}
-                              <Icon icon="mdi:chevron-down" />
-                           </Button>
-                        </a>
-                        <ul class="flex flex-col gap-1 py-2">
-                           {#each page.pages as item}
-                              <li>
-                                 <Link href={item.link}>
-                                    <Button 
-                                       color="transparent" 
-                                       size="text-base px-4 pt-[14px] pb-3" 
-                                       flat lowercase block>
-                                       {item.title}
-                                    </Button>
-                                 </Link>
-                              </li>
-                           {/each}
-                        </ul>      
-                    </Menu>
-                  {:else if !page.dropdown}
-                     <Link href={page.link}>
-                        <Button 
-                           color="transparent" 
-                           flat lowercase
-                           size="text-lg px-2 xl:px-5 pt-[14px] pb-3">
-                           {page.name}
-                        </Button>
-                     </Link>
-                  {/if}
-               </li>
-            {/each}
+            <NavItem name="Home" link="/{$locale}" />
+            <NavItem name="Over Ons" link="/{$locale}/over-ons" />
+            <NavItem name="Referenties" link="/{$locale}/referenties" />
+            <NavItem name="Blog" link="/{$locale}/blog" />
+            <NavItem name="Open Workshops" link="/{$locale}/open-sessies" dropdown>
+               <DropdownItem name="Gratis Open Infosesssies" link="/${$locale}/open-sessies/gratis-open-infosessies"/>
+               <DropdownItem name="Hybride Lencioni Leertraject" link="/${$locale}/open-sessies/hybride-lencioni-leertraject"/>
+               <DropdownItem name="Lencioni Deepdive - Level 2" link="/${$locale}/open-sessies/lencioni-deepdive-level-2"/>
+            </NavItem>
+            <NavItem name="Contact" link="/{$locale}/contact" />
          </ul>
       </nav>
    
@@ -163,47 +114,16 @@
       shadow-lg shadow-black/30
       ">
    <ul class="flex flex-col gap-2 w-full justify-center items-center">
-      {#each navItems as page}
-         <li class="w-full lg:w-fit">
-            {#if page.dropdown}
-               <Menu>
-                  <Button 
-                     slot="trigger"
-                     color="transparent-alt" 
-                     flat lowercase square block
-                     size="text-lg px-5 pt-[14px] pb-3"
-                     class="font-bold font-body text-primary-d2 group-hover:text-primary-l1">
-                     {page.name}
-                     <Icon icon="mdi:chevron-down" />
-                  </Button>
-                  <ul class="flex flex-col gap-1 py-2">
-                     {#each page.pages as item}
-                        <li>
-                           <Link href={item.link}>
-                              <Button 
-                                 color="transparent" 
-                                 size="text-base px-4 pt-[14px] pb-3" 
-                                 flat lowercase block>
-                                 {item.title}
-                              </Button>
-                           </Link>
-                        </li>
-                     {/each}
-                  </ul>      
-            </Menu>
-            {:else if !page.dropdown}
-               <Link href={page.link}>
-                  <Button 
-                     color="transparent-alt" 
-                     flat lowercase square block
-                     size="text-lg px-5 pt-[14px] pb-3"
-                     class="font-bold font-body text-primary-d2 group-hover:text-primary-l1">
-                     {page.name}
-                  </Button>
-               </Link>
-            {/if}
-         </li>
-      {/each}
+      <MobileNavItem name="Home" link="/{$locale}" />
+      <MobileNavItem name="Over Ons" link="/{$locale}/over-ons" />
+      <MobileNavItem name="Referenties" link="/{$locale}/referenties" />
+      <MobileNavItem name="Blog" link="/{$locale}/blog" />
+      <MobileNavItem name="Open Workshops" link="/{$locale}/open-sessies" dropdown>
+         <MobileDropdownItem name="Gratis Open Infosesssies" link="/${$locale}/open-sessies/gratis-open-infosessies"/>
+         <MobileDropdownItem name="Hybride Lencioni Leertraject" link="/${$locale}/open-sessies/hybride-lencioni-leertraject"/>
+         <MobileDropdownItem name="Lencioni Deepdive - Level 2" link="/${$locale}/open-sessies/lencioni-deepdive-level-2"/>
+      </MobileNavItem>
+      <MobileNavItem name="Contact" link="/{$locale}/contact" />
    </ul>
 </nav>
    
