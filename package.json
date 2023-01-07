@@ -18,6 +18,7 @@
 		"typesafe-i18n": "typesafe-i18n"
 	},
 	"dependencies": {
+		"@mailchimp/mailchimp_marketing": "^3.0.80",
 		"@supabase/auth-helpers-sveltekit": "^0.8.6",
 		"@supabase/supabase-js": "^2.2.3",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
