@@ -10,6 +10,8 @@
    let klass = '';
    export { klass as class };
 
+
+   // ! TODO: MAKE WORKAROUND FOR THIS
    let sessionData = {
       title: '',
       intro: [],
