@@ -9,10 +9,41 @@ import en from './en'
 import fr from './fr'
 import nl from './nl'
 
+import en_components from './en/components'
+import en_other from './en/other'
+import en_pages from './en/pages'
+import en_sessions from './en/sessions'
+import fr_components from './fr/components'
+import fr_other from './fr/other'
+import fr_pages from './fr/pages'
+import fr_sessions from './fr/sessions'
+import nl_components from './nl/components'
+import nl_other from './nl/other'
+import nl_pages from './nl/pages'
+import nl_sessions from './nl/sessions'
+
 const localeTranslations = {
-	en,
-	fr,
-	nl,
+	en: {
+		...en,
+		components: en_components,
+		other: en_other,
+		pages: en_pages,
+		sessions: en_sessions
+	},
+	fr: {
+		...fr,
+		components: fr_components,
+		other: fr_other,
+		pages: fr_pages,
+		sessions: fr_sessions
+	},
+	nl: {
+		...nl,
+		components: nl_components,
+		other: nl_other,
+		pages: nl_pages,
+		sessions: nl_sessions
+	},
 }
 
 export const loadLocale = (locale: Locales): void => {
