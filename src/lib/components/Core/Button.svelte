@@ -1,6 +1,7 @@
 <script>
    // Import colors scheme
    import colors from "$comp/colorScheme";
+	import Icon from "@iconify/svelte";
 
    // Extra classes on button component
    let klass = '';
@@ -34,17 +35,28 @@
       // Tile (only top-right and bottom-left are rounded)
       export let tile = false;
 
+     //  Center text
+      export let center = false
+     //  Bold text
+      export let bold = false
+
+     //  Add icon to button
+     export let icon = ''
+     export let iconClass = ''
+
 </script>
 
 <button 
    {type} on:click
    {disabled}
    class="
-      flex flex-row items-center justify-start gap-1
+      flex flex-row gap-1
+      items-center 
+      { center ? 'justify-center' : 'justify-start'} 
       whitespace-nowrap group {klass}
       transition-all ease-out duration-300
-      font-body font-semibold
-   
+      font-body 
+      { bold ? 'font-bold' : 'font-semibold'}
      md:active:translate-y-0.5
 
       { disabled ? 'opacity-70 saturate-50' : 'opacity-100 saturate-100' } 
@@ -57,12 +69,12 @@
       : tile    ? 'rounded-tl-xl rounded-tr-sm rounded-bl-sm rounded-br-xl'
       : 'rounded-md'}
 
-      { size === 'xs'         ? 'text-xs      px-[10px] pt-[8px]     pb-[5px]' 
-      : size === 'sm'         ? 'text-sm      px-4      pt-[14px]    pb-3    ' 
-      : size === 'md'         ? 'text-base    px-5      pt-[14px]    pb-3    ' 
-      : size === 'lg'         ? 'text-lg      px-8      pt-[18px]    pb-4    ' 
-      : size === 'xl'         ? 'text-lg  lg:text-2xl   px-8 lg:px-12    py-3 lg:py-4                 ' 
-      : size === 'xxl'        ? 'text-5xl     px-15     py-6                 ' 
+      { size === 'xs'         ? 'text-xs      px-[10px] pt-[8px]     pb-[5px] h-fit' 
+      : size === 'sm'         ? 'text-sm      px-4      pt-[14px]    pb-3     h-fit' 
+      : size === 'md'         ? 'text-base    px-5      pt-[14px]    pb-3     h-fit' 
+      : size === 'lg'         ? 'text-lg      px-8      pt-[18px]    pb-4     h-fit' 
+      : size === 'xl'         ? 'text-lg  lg:text-2xl   px-8 lg:px-12    py-3 lg:py-4 h-fit' 
+      : size === 'xxl'        ? 'text-5xl     px-15     py-6                  h-fit' 
 
       : size === 'xs-resp'    ? `   text-xs        px-2      pt-2           pb-1
                                  lg:text-sm     md:px-3   lg:pt-3        lg:pb-2` 
@@ -116,5 +128,8 @@
       }
    "
    >
-   <slot/>
+   {#if icon}
+     <Icon {icon} class="{iconClass ? iconClass : 'h-6 w-6 text-primary'}"/>
+   {/if}
+   <span class="{icon ? 'pt-1' : ''} font-body"><slot/></span>
 </button>
