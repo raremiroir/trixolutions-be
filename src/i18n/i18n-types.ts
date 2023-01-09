@@ -125,6 +125,20 @@ type RootTranslation = {
 				 */
 				contact_us: string
 			}
+			newsletter: {
+				/**
+				 * B​l​i​j​f​ ​A​l​t​i​j​d​ ​o​p​ ​d​e​ ​H​o​o​g​t​e
+				 */
+				up_to_date: string
+				/**
+				 * A​b​o​n​n​e​e​r​ ​o​p​ ​o​n​z​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​N​i​e​u​w​s​b​r​i​e​f
+				 */
+				subtitle: string
+				/**
+				 * s​c​h​r​i​j​f​ ​j​e​ ​i​n
+				 */
+				subscribe: string
+			}
 		}
 		about: {
 			/**
@@ -158,42 +172,6 @@ type RootTranslation = {
 				 * O​n​s​ ​T​e​a​m
 				 */
 				title: string
-				tom: {
-					/**
-					 * C​E​O​ ​/​ ​T​r​a​i​n​e​r​ ​/​ ​C​o​a​c​h
-					 */
-					job: string
-				}
-				tamara: {
-					/**
-					 * O​f​f​i​c​e​ ​M​a​n​a​g​e​r
-					 */
-					job: string
-				}
-				roger: {
-					/**
-					 * T​r​a​i​n​e​r​ ​/​ ​A​c​t​e​u​r
-					 */
-					job: string
-				}
-				kelly: {
-					/**
-					 * T​r​a​i​n​e​r​ ​/​ ​F​a​c​i​l​i​t​a​t​o​r
-					 */
-					job: string
-				}
-				christoph: {
-					/**
-					 * T​r​a​i​n​e​r​ ​/​ ​F​a​c​i​l​i​t​a​t​o​r
-					 */
-					job: string
-				}
-				frederik: {
-					/**
-					 * S​e​n​i​o​r​ ​T​r​a​i​n​e​r
-					 */
-					job: string
-				}
 			}
 		}
 		references: {
@@ -240,6 +218,10 @@ type RootTranslation = {
 		}
 	}
 	open_sessions: {
+		/**
+		 * v​o​l​z​e​t
+		 */
+		is_full: string
 		/**
 		 * I​n​s​c​h​r​i​j​v​e​n
 		 */
@@ -307,6 +289,14 @@ type RootTranslation = {
 			 * g​r​a​t​i​s​ ​o​n​l​i​n​e​ ​o​p​e​n​ ​i​n​f​o​s​e​s​s​i​e​s
 			 */
 			title: string
+			/**
+			 * t​r​a​i​n​e​r
+			 */
+			trainer: string
+			/**
+			 * t​i​j​d
+			 */
+			time: string
 			intro: {
 				/**
 				 * T​e​a​m​c​o​a​c​h​i​n​g​ ​m​e​t​ ​L​e​n​c​i​o​n​i
@@ -1852,6 +1842,20 @@ export type TranslationFunctions = {
 				 */
 				contact_us: () => LocalizedString
 			}
+			newsletter: {
+				/**
+				 * Blijf Altijd op de Hoogte
+				 */
+				up_to_date: () => LocalizedString
+				/**
+				 * Abonneer op onze Trixolutions Nieuwsbrief
+				 */
+				subtitle: () => LocalizedString
+				/**
+				 * schrijf je in
+				 */
+				subscribe: () => LocalizedString
+			}
 		}
 		about: {
 			/**
@@ -1885,42 +1889,6 @@ export type TranslationFunctions = {
 				 * Ons Team
 				 */
 				title: () => LocalizedString
-				tom: {
-					/**
-					 * CEO / Trainer / Coach
-					 */
-					job: () => LocalizedString
-				}
-				tamara: {
-					/**
-					 * Office Manager
-					 */
-					job: () => LocalizedString
-				}
-				roger: {
-					/**
-					 * Trainer / Acteur
-					 */
-					job: () => LocalizedString
-				}
-				kelly: {
-					/**
-					 * Trainer / Facilitator
-					 */
-					job: () => LocalizedString
-				}
-				christoph: {
-					/**
-					 * Trainer / Facilitator
-					 */
-					job: () => LocalizedString
-				}
-				frederik: {
-					/**
-					 * Senior Trainer
-					 */
-					job: () => LocalizedString
-				}
 			}
 		}
 		references: {
@@ -1967,6 +1935,10 @@ export type TranslationFunctions = {
 		}
 	}
 	open_sessions: {
+		/**
+		 * volzet
+		 */
+		is_full: () => LocalizedString
 		/**
 		 * Inschrijven
 		 */
@@ -2034,6 +2006,14 @@ export type TranslationFunctions = {
 			 * gratis online open infosessies
 			 */
 			title: () => LocalizedString
+			/**
+			 * trainer
+			 */
+			trainer: () => LocalizedString
+			/**
+			 * tijd
+			 */
+			time: () => LocalizedString
 			intro: {
 				/**
 				 * Teamcoaching met Lencioni
