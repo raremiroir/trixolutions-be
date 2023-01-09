@@ -25,7 +25,7 @@
    export let large = false;
    
    let innerWidth:number;
-   $: console.log(innerWidth);
+   
    // Change image ratio according to breakpoint
    let ratio = '3:1'
    $: if (innerWidth < $breakpoints.xs) { 
