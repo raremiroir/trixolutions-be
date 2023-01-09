@@ -47,6 +47,11 @@ const en: Translation = {
          find_on_map: "vind ons op de kaart",
          btn: {
             contact_us: "contacteer ons"
+         },
+         newsletter: {
+            up_to_date: "Blijf Altijd op de Hoogte",
+            subtitle: "Abonneer op onze Trixolutions Nieuwsbrief",
+            subscribe: "schrijf je in"
          }
       },
       about: {
@@ -60,24 +65,6 @@ const en: Translation = {
          ],
          team: {
             title: "Ons Team",
-            tom: {
-               job: "CEO / Trainer / Coach"
-            },
-            tamara: {
-               job: "Office Manager"
-            },
-            roger: {
-               job: "Trainer / Acteur"
-            },
-            kelly: {
-               job: "Trainer / Facilitator"
-            },
-            christoph: {
-               job: "Trainer / Facilitator"
-            },
-            frederik: {
-               job: "Senior Trainer"
-            }
          }
       },
       references: {
@@ -103,6 +90,7 @@ const en: Translation = {
       }
    },
    open_sessions: {
+      is_full: "volzet",
       subscribe: "Inschrijven",
       subscribe_to: "Inschrijven voor",
       subscribe_disclaim: "Na inschrijving ontvang je een factuur. Je deelname is pas definitief na betaling. Indien we het minimum aantal deelnemers niet bereiken gaat de opleiding niet door en wordt je inschrijvingsgeld terugbetaald. Meer details krijg je via de inschrijvingsbevestiging.",
@@ -122,6 +110,8 @@ const en: Translation = {
       info: {
          single: "infosessie",
          title: "gratis online open infosessies",
+         trainer: "trainer",
+         time: "tijd",
          intro: {
             title: "Teamcoaching met Lencioni",
             content: [
