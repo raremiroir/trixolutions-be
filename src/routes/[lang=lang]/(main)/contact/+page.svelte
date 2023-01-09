@@ -32,6 +32,14 @@
 <Main cta>
    <SectionWrapper name="contact-us">
       <Title slot="title" type="h1">{titleCase($LL.pages.contact.title())}</Title>
+      <div class="flex flex-row gap-8 items-center justify-center">
+         <Button size="xxl" color="primary" lowercase>
+            <div class="flex flex-row gap-2 items-center">
+               <Icon icon="material-symbols:mark-email-read-rounded" color="#f6ece7" width="40" />
+               {titleCase($LL.pages.contact.btn.contact_us())}!
+            </div>
+         </Button>
+      </div>
       <div class="flex flex-row gap-8">
          {#each places as place}
             <Card textCenter>
@@ -61,19 +69,7 @@
          {/each}
       </div>
    </SectionWrapper>
-
-   <SectionWrapper name="cta-buttons">
-
-      <div class="flex flex-row gap-8 items-center justify-center">
-         <Button size="xxl" color="primary" lowercase>
-            <div class="flex flex-row gap-2 items-center">
-               <Icon icon="material-symbols:mark-email-read-rounded" color="#f6ece7" width="40" />
-               {titleCase($LL.pages.contact.btn.contact_us())}!
-            </div>
-         </Button>
-      </div>
-   </SectionWrapper>
-
+   
    <SectionWrapper name="trixolutions-map">
       <Title type="h2" small slot="title">{firstLetterCase($LL.pages.contact.find_on_map())}!</Title>
       <div class="w-full h-140">
