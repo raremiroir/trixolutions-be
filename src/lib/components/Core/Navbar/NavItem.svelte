@@ -16,8 +16,10 @@
                color="transparent" 
                flat lowercase 
                size="text-lg px-2 xl:px-5 pt-[14px] pb-3">
-               {name}
-               <Icon icon="mdi:chevron-down" />
+               <div class="flex flex-row gap-1 items-center justify-center">
+                  {name}
+                  <Icon icon="mdi:chevron-down" class="w-5 h-5" />
+               </div>
             </Button>
          </a>
          <ul class="flex flex-col gap-1 py-2">

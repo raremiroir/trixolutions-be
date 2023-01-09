@@ -19,8 +19,10 @@
             flat lowercase square block
             size="text-lg px-5 pt-[14px] pb-3"
             class="font-bold font-body text-primary-d2 group-hover:text-primary-l1">
-            {name}
-            <Icon icon="mdi:chevron-down" />
+            <div class="flex flex-row gap-2 items-center">
+               {name}
+               <Icon icon="mdi:chevron-down" class="w-4 h-4" />
+            </div>
          </Button>
          <ul class="flex flex-col gap-1 py-2">
             <slot/>
