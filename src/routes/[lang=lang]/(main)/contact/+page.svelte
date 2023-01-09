@@ -40,9 +40,9 @@
             </div>
          </Button>
       </div>
-      <div class="flex flex-row gap-8">
+      <div class="grid grid-cols-2 w-full gap-8">
          {#each places as place}
-            <Card textCenter>
+            <Card textCenter class="col-span-1">
                <div slot="prepend-inner" class="w-full flex items-center justify-center">
                   <div class="border-4 border-primary w-fit h-fit rounded-full m-0 p-0">
                      <Icon icon="emojione:flag-for-{place.code === 'be' ? 'belgium' : place.code === 'nl' ? 'netherlands' : 'usa' }" width="140" />
