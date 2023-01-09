@@ -64,7 +64,7 @@
          <!-- Logo/Brand -->
       <div class="w-1/3 lg:w-1/5">
          <Link href="/{$locale}" class="max-w-fit">
-            <Logo width="180"/>  
+            <Logo />  
          </Link>
       </div>
    
@@ -81,9 +81,9 @@
             <NavItem name="Referenties" link="/{$locale}/referenties" />
             <NavItem name="Blog" link="/{$locale}/blog" />
             <NavItem name="Open Workshops" link="/{$locale}/open-sessies" dropdown>
-               <DropdownItem name="Gratis Open Infosesssies" link="/${$locale}/open-sessies/gratis-open-infosessies"/>
-               <DropdownItem name="Hybride Lencioni Leertraject" link="/${$locale}/open-sessies/hybride-lencioni-leertraject"/>
-               <DropdownItem name="Lencioni Deepdive - Level 2" link="/${$locale}/open-sessies/lencioni-deepdive-level-2"/>
+               <DropdownItem name="Gratis Open Infosesssies" link="/{$locale}/open-sessies/gratis-open-infosessies"/>
+               <DropdownItem name="Hybride Lencioni Leertraject" link="/{$locale}/open-sessies/hybride-lencioni-leertraject"/>
+               <DropdownItem name="Lencioni Deepdive - Level 2" link="/{$locale}/open-sessies/lencioni-deepdive-level2"/>
             </NavItem>
             <NavItem name="Contact" link="/{$locale}/contact" />
          </ul>
@@ -101,12 +101,11 @@
 <nav
    transition:slide={{duration:200}}
    class="
-      lg:hidden
+      lg:hidden fixed
       w-screen h-fit left-0
       { yscroll >= 10
          ? 'top-[58px]' 
          : 'top-[74px] md:top-[78px]'}
-      fixed
       z-10 flex
       bg-gray-100/30 backdrop-blur-lg
       transition-all duration-200 ease-in-out
@@ -119,9 +118,9 @@
       <MobileNavItem name="Referenties" link="/{$locale}/referenties" />
       <MobileNavItem name="Blog" link="/{$locale}/blog" />
       <MobileNavItem name="Open Workshops" link="/{$locale}/open-sessies" dropdown>
-         <MobileDropdownItem name="Gratis Open Infosesssies" link="/${$locale}/open-sessies/gratis-open-infosessies"/>
-         <MobileDropdownItem name="Hybride Lencioni Leertraject" link="/${$locale}/open-sessies/hybride-lencioni-leertraject"/>
-         <MobileDropdownItem name="Lencioni Deepdive - Level 2" link="/${$locale}/open-sessies/lencioni-deepdive-level-2"/>
+         <MobileDropdownItem name="Gratis Open Infosesssies" link="/{$locale}/open-sessies/gratis-open-infosessies"/>
+         <MobileDropdownItem name="Hybride Lencioni Leertraject" link="/{$locale}/open-sessies/hybride-lencioni-leertraject"/>
+         <MobileDropdownItem name="Lencioni Deepdive - Level 2" link="/{$locale}/open-sessies/lencioni-deepdive-level2"/>
       </MobileNavItem>
       <MobileNavItem name="Contact" link="/{$locale}/contact" />
    </ul>
