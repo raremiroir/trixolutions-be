@@ -2,4 +2,5 @@ export { default as PartnershipAccordeon }   from './components/PartnershipAccor
 export { default as WorkshopCard }           from './components/WorkshopCard.svelte'
 export { default as SessionDateCard }        from './components/SessionDateCard.svelte'
 
-export { default as ModalLocation }        from './components/ModalLocation.svelte'
+export { default as ModalLocation }          from './components/ModalLocation.svelte'
+export { default as ModalTrainerTom }        from './components/ModalTrainerTom.svelte'
