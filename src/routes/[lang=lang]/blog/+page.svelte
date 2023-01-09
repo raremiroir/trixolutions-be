@@ -14,22 +14,13 @@
       const {data, error} = await supabase
          .from('blog_posts')
          .select(`
-            *,
-            img (
-               name,
-               folder,
-               type
-            ),
-            author (
-               first_name,
-               last_name,
-               img
-            )
-         `);
+            *, 
+            img ( name, folder, type ),
+            author ( first_name, last_name, img )`)
+         .order('created_at', { ascending: false });
 
       if (error) throw new Error(error.message);
 
-      console.log(data);
       return data;
    }
 </script>
