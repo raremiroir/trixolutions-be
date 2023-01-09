@@ -3,8 +3,7 @@
    
    // Import Components
    import { Button, Main, SectionWrapper, Title, P, Footer, Navbar } from "$comp/core";
-   import { Hero, Alert } from "$comp/common";
-   import { Slide } from "$comp/content";
+   import { Hero, Alert, HeroSlide } from "$comp/common";
    import { PostCard, PostGrid } from "$comp/posts";
    
    // Import globals
@@ -49,7 +48,7 @@
    <Navbar/>
 
    <Hero slider>
-      <Slide hero large
+      <HeroSlide large
          imgAlt="Trixolutions Lencioni - De Kracht van Gezonde Teams"
          imgSrc='home/kracht-gezonde-teams.webp'
          >
@@ -75,9 +74,9 @@
             <Button size="lg" color="transparent" outlined>Meer Info</Button>
             <Button size="lg" color="primary">Over Trixolutions</Button>
          </div>
-      </Slide>
+      </HeroSlide>
 
-      <Slide hero large
+      <HeroSlide large
          imgAlt="Trixolutions Lencioni - De Beslissende Voorsprong"
          imgSrc='home/beslissende-voorsprong-2.webp'
          >
@@ -95,9 +94,9 @@
          <div class="flex flex-row gap-4">
             <Button size="lg" color="transparent" outlined>Meer Info</Button>
          </div>
-      </Slide>
+      </HeroSlide>
 
-      <Slide hero large
+      <HeroSlide large
          imgAlt="Trixolutions Lencioni - The 6 Types of Working Genius"
          imgSrc='home/working-genius.webp'
          >
@@ -115,7 +114,7 @@
          <div class="flex flex-row gap-4">
             <Button size="lg" color="transparent" outlined>Meer Info</Button>
          </div>
-      </Slide>
+      </HeroSlide>
       
    </Hero>
 </header>
