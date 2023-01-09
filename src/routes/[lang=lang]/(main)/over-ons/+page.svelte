@@ -38,9 +38,8 @@
             />
          </div>
          <P class="col-span-5 md:col-span-1 xl:col-span-3 h-fit" large>
-            {@const introItems = $LL.pages.about.intro()}
-            {#each introItems as item}
-               {@html item}
+            {#each Object.entries($LL.pages.about.intro) as [key, item]}
+               {@html item()}
             {/each}
          </P>
       </div>
@@ -53,32 +52,32 @@
          <MemberCard
             src="team/tom-bw.webp" alt="Tom van Dorst - CEO Trixolutions"
             name="Tom van Dorst">
-            {$LL.pages.about.team.tom.job()}
+            <Title type="subtitle" smaller italic>{$LL.pages.about.team.tom.job()}</Title>
          </MemberCard>
          <MemberCard
             src="team/tamara-bw.webp" alt="Tamara - Trixolutions Office Manager"
             name="Tamara">
-            {$LL.pages.about.team.tamara.job()}
+            <Title type="subtitle" smaller italic>{$LL.pages.about.team.tamara.job()}</Title>
          </MemberCard>
          <MemberCard
-            src="placeholder/placeholder.png" alt="Roger - Trixolutions Trainer / Actor"
+            src="" alt="Roger - Trixolutions Trainer / Actor"
             name="Roger">
-            {$LL.pages.about.team.roger.job()}
+            <Title type="subtitle" smaller italic>{$LL.pages.about.team.roger.job()}</Title>
          </MemberCard>
          <MemberCard
-            src="placeholder/placeholder.png" alt="Kelly - Trixolutions Trainer / Facilitator"
+            src="" alt="Kelly - Trixolutions Trainer / Facilitator"
             name="Kelly">
-            {$LL.pages.about.team.kelly.job()}
+            <Title type="subtitle" smaller italic>{$LL.pages.about.team.kelly.job()}</Title>
          </MemberCard>
          <MemberCard
             src="team/christoph-bw.webp" alt="Christoph - Trixolutions Trainer / Facilitator"
             name="Christoph" position="top">
-            {$LL.pages.about.team.christoph.job()}
+            <Title type="subtitle" smaller italic>{$LL.pages.about.team.christoph.job()}</Title>
          </MemberCard>
          <MemberCard
             src="team/frederik-bw.webp" alt="Frederik - Trixolutions Senior Trainer"
             name="Frederik" position="top">
-            {$LL.pages.about.team.frederik.job()}
+            <Title type="subtitle" smaller italic>{$LL.pages.about.team.frederik.job()}</Title>
          </MemberCard>
       </ul>
 
