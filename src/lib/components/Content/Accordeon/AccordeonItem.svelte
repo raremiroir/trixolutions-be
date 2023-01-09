@@ -18,6 +18,9 @@
    // Title smallest case
    export let titleSmallest = false
 
+   // Set icon if needed
+   export let icon = ''
+
    let isHovered = false
    let isFocused = false
 
@@ -51,12 +54,21 @@
          on:mouseleave={() => isHovered = false}
          >
       
-      <div class="">
+      <div class="flex items-center justify-start gap-2">
+         {#if icon}
+            <Icon 
+               {icon} 
+               class="
+                  w-10 h-10 bg-transparent 
+                  transition-all duration-300 ease-in-out
+                  text-primary group-hover:text-primary-l1" 
+            />
+         {/if}
          <Title 
             type="{titleType}" 
             color="text-primary group-hover:text-primary-l1" 
             small={titleSmall} smaller={titleSmaller} smallest={titleSmallest}
-            class="pt-1">
+            class="{icon ? 'pt-2' : 'pt-1'}">
             {title}
          </Title>
       </div>
@@ -68,7 +80,7 @@
                bg-primary group-hover:bg-primary-l1
                group-active:scale-90 group-active:bg-primary-l2 
                { isCurrentActive ? 'rotate-90 group-active:rotate-0' : 'rotate-0 group-active:rotate-90'} 
-               transition-all duration-300 ease-out">
+               transition-all duration-300 ease-in-out">
             <Icon icon="material-symbols:arrow-right-alt-rounded" color="#fff" class=" " width="40" />
          </div>
       </div>
@@ -76,7 +88,7 @@
    
    {#if isCurrentActive}
       <div class=" 
-            transition-all duration-300 ease-out
+            transition-all duration-300 ease-in-out
             rounded-b-xl bg-white px-4 pt-2 pb-4 
             shadow-lg shadow-black/20"
             transition:slide>
