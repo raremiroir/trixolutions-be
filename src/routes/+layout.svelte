@@ -2,7 +2,7 @@
 	import { page } from '$app/stores'
 
 	// Import i18n
-	import LL, { setLocale } from '$i18n/i18n-svelte'
+	import LL, { locale, setLocale } from '$i18n/i18n-svelte'
 	import type { LayoutData } from './$types'
 	import HeadHrefLangs from '$comp/Core/HeadHrefLangs.svelte';
 	
@@ -22,10 +22,21 @@
 	export let data: LayoutData
 	setLocale(data.locale)
 
+	// Load pages dictionary
+   const displayPagesText = async (locale) => {
+         await loadNamespaceAsync(locale, 'components')
+         await loadNamespaceAsync(locale, 'pages')
+         await loadNamespaceAsync(locale, 'other')
+         await loadNamespaceAsync(locale, 'sessions')
+         setLocale(locale)
+      }
+   displayPagesText($locale);
+
 	// Import Components
 	import { Footer, Navbar, Title } from '$comp/core';
 	
 	import "$src/app.postcss";
+	import { loadNamespaceAsync } from '$src/i18n/i18n-util.async';
 	
 	// 	// Supabase Auth
 	// 	onMount(() => {

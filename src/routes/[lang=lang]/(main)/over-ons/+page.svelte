@@ -67,10 +67,10 @@
             {#each data as member}
                <MemberCard
                   src="{member.img.folder}/{member.img.name}.{member.img.type}" 
-                  alt="{member.first_name} {member.last_name} - {member.job.nl}"
+                  alt="{member.first_name} {member.last_name} - {$locale === 'fr' ? member.job.fr : $locale === 'en' ? member.job.en : member.job.nl}"
                   name="{member.first_name} {member.last_name}"
                   position={member.unique_name === 'christoph' || member.unique_name === 'frederik' ? 'top' : ''}>
-                  <Title type="subtitle" smaller italic>{member.job.nl}</Title>
+                  <Title type="subtitle" smaller italic>{$locale === 'fr' ? member.job.fr : $locale === 'en' ? member.job.en : member.job.nl}</Title>
                </MemberCard>
             {/each}
          {:catch error}

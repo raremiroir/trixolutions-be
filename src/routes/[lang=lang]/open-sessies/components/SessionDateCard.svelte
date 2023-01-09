@@ -22,7 +22,7 @@
 		/>
 		<Title type="h4" class="uppercase pt-[5px]" small>
 			{#if session.is_full}
-				{titleCase($LL.open_sessions.is_full())}
+				{titleCase($LL.sessions.is_full())}
 			{:else}
 				<div class="flex flex-col gap-0 leading-none">
 					{formatDateShort(session.starts_on)} - {formatDateShort(session.ends_on)}<br />

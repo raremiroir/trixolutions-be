@@ -43,7 +43,7 @@
       </div>
 
       <slot name="features">
-         {#each Object.entries($LL.open_sessions.level_1.features) as [key, feature]}
+         {#each Object.entries($LL.sessions.level_1.features) as [key, feature]}
             <ListItem icon="check">Included</ListItem>
             <ListItem icon="cancel" disabled>Not included</ListItem>
          {/each}

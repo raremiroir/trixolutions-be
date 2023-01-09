@@ -37,7 +37,7 @@
 
 <header>
    <Hero titleSmall imgSrc="home/working-genius.webp" imgAlt="No alt">
-      <span slot="title">{titleCase($LL.open_sessions.level_1.title())}</span>   
+      <span slot="title">{titleCase($LL.sessions.level_1.title())}</span>   
    </Hero>
 </header>
 
@@ -47,7 +47,7 @@
    <SectionWrapper name="hybride-lencioni-leertraject">
 
       <P large>
-         {#each Object.entries($LL.open_sessions.level_1.intro.content) as [key, item]}
+         {#each Object.entries($LL.sessions.level_1.intro.content) as [key, item]}
             {@html item()}
          {/each}
       </P>
@@ -64,14 +64,14 @@
    <SectionWrapper name="hybride-lencioni-leertraject-praktische-info">
       <div class="flex flex-row w-full gap-16 items-center justify-start" slot="title">
          <Title type="h2" small>
-            {titleCase($LL.open_sessions.practical())}:
+            {titleCase($LL.sessions.practical())}:
          </Title>
          <div class="">
             <Title type="subheader" smaller italic>
-               {titleCase($LL.open_sessions.level_1.title_alt())}
+               {titleCase($LL.sessions.level_1.title_alt())}
             </Title>
             <Title type="h3" smaller thin>
-               {titleCase(`${$LL.open_sessions.level_1.full.title()} ${$LL.open_sessions.level_1.two_day()}`)}
+               {titleCase(`${$LL.sessions.level_1.full.title()} ${$LL.sessions.level_1.two_day()}`)}
             </Title>
          </div>
       </div>
@@ -149,26 +149,26 @@
 
          <Modal icon="mdi:account-group-outline">
             <Button slot="trigger" block outlined center bold size="lg" icon="mdi:account-group-outline">
-               {titleCase($LL.open_sessions.audience())}
+               {titleCase($LL.sessions.audience())}
             </Button>
-            <Title slot="title" type="h3" small>{titleCase($LL.open_sessions.audience())}</Title>
+            <Title slot="title" type="h3" small>{titleCase($LL.sessions.audience())}</Title>
             <P large>
-               {$LL.open_sessions.level_1.audience()}
+               {$LL.sessions.level_1.audience()}
             </P>
          </Modal>
 
          <!-- Aanpak -->
          <Modal icon="mdi:tools">
             <Button slot="trigger" block outlined center bold size="lg" icon="mdi:tools">
-               {titleCase($LL.open_sessions.approach())}
+               {titleCase($LL.sessions.approach())}
             </Button>
-            <Title slot="title" type="h3" small>{titleCase($LL.open_sessions.approach())}</Title>
+            <Title slot="title" type="h3" small>{titleCase($LL.sessions.approach())}</Title>
             <P large italic>
-               {$LL.open_sessions.level_1.approach.intro()}
+               {$LL.sessions.level_1.approach.intro()}
             </P><br/>
             <List>
-               <Title type="h4" small>{titleCase($LL.open_sessions.level_1.approach.results.title())}</Title>
-               {#each Object.entries($LL.open_sessions.level_1.approach.results.items) as [key, item]}
+               <Title type="h4" small>{titleCase($LL.sessions.level_1.approach.results.title())}</Title>
+               {#each Object.entries($LL.sessions.level_1.approach.results.items) as [key, item]}
                   <ListItem large>{item()}</ListItem>
                {/each}
             </List>
@@ -177,9 +177,9 @@
          <!-- Recensies -->
          <Modal icon="mdi:star">
             <Button slot="trigger" block outlined center bold size="lg" icon="mdi:star">
-               {titleCase($LL.open_sessions.ratings())}
+               {titleCase($LL.sessions.ratings())}
             </Button>
-            <Title slot="title" type="h3" small>{titleCase($LL.open_sessions.ratings())}</Title>
+            <Title slot="title" type="h3" small>{titleCase($LL.sessions.ratings())}</Title>
             <div class="columns-3">
                {#each ratingData as rating}
                   {#if rating.session_rated === 'level_1_full'}
@@ -218,14 +218,14 @@
 
    <SectionWrapper name="hybride-lencioni-leertraject-features">
       <Title slot="title" type="h2" small>
-         {$LL.open_sessions.level_1.features_title()}
+         {$LL.sessions.level_1.features_title()}
       </Title>
       <FeaturesSlider>
-         {#each Object.entries($LL.open_sessions.level_1.features_extended) as [key, feature]}
+         {#each Object.entries($LL.sessions.level_1.features_extended) as [key, feature]}
             <FeaturesSlide 
                modalId={Number(key)+1} 
                imgSrc="" imgAlt="placeholder" 
-               class="{(Number(key)+1) >= (Array.from($LL.open_sessions.level_1.features_extended).length) ? 'mb-20 hover:mb-16' : 'mb-8 hover:mb-4' }">
+               class="{(Number(key)+1) >= (Array.from($LL.sessions.level_1.features_extended).length) ? 'mb-20 hover:mb-16' : 'mb-8 hover:mb-4' }">
                <span slot="subtitle">{feature.title.before()}</span>
                <span slot="title">{feature.title.main()}</span>
             </FeaturesSlide>
@@ -236,16 +236,16 @@
       <Accordeon bind:active>
          <AccordeonItem 
             id={1} 
-            title={$LL.open_sessions.level_1.expand.title()} titleSmaller
+            title={$LL.sessions.level_1.expand.title()} titleSmaller
             icon="majesticons:arrows-expand-full">
             <P large>
-               {@html $LL.open_sessions.level_1.expand.text()}
+               {@html $LL.sessions.level_1.expand.text()}
             </P>
          </AccordeonItem>
       </Accordeon>
    </SectionWrapper>
 
-   {#each Object.entries($LL.open_sessions.level_1.features_extended) as [key, feature]}
+   {#each Object.entries($LL.sessions.level_1.features_extended) as [key, feature]}
       <FeaturesModalContent id={Number(key)+1} imgSrc="" imgAlt="placeholder">
          <span slot="title">
             {#each Object.entries(feature.title) as [titleKey, title]}

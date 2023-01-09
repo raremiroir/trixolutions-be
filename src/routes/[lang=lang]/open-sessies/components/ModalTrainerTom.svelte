@@ -7,17 +7,17 @@
 </script>
 <Modal icon="ph:student-bold">
    <Button slot="trigger" block outlined center bold size="lg" icon="ph:student-bold">
-      {titleCase($LL.open_sessions.your_trainer.title())}
+      {titleCase($LL.sessions.your_trainer.title())}
    </Button>
    
-   <Title slot="title" type="h3" small>{titleCase($LL.open_sessions.your_trainer.title())}</Title>
+   <Title slot="title" type="h3" small>{titleCase($LL.sessions.your_trainer.title())}</Title>
    <div class="grid grid-cols-12 gap-4 w-full mx-auto">
       <div class="col-span-4 items-center justify-center">
          <div class="flex flex-col">
-            <Title type="subheader" italic>{titleCase($LL.open_sessions.your_trainer.tom())}</Title>
+            <Title type="subheader" italic>{titleCase($LL.sessions.your_trainer.tom())}</Title>
             <hr/>
             <P large>
-               {@html $LL.open_sessions.your_trainer.content()}
+               {@html $LL.sessions.your_trainer.content()}
             </P>
          </div>
       </div>

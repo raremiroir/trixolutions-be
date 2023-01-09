@@ -18,8 +18,8 @@
       features: []
    };
    if (session.type === 'level_1_basic') {
-      sessionData.title = $LL.open_sessions.level_1.basic.title();
-      for (const entry of $LL.open_sessions.level_1.basic.intro) {
+      sessionData.title = $LL.sessions.level_1.basic.title();
+      for (const entry of $LL.sessions.level_1.basic.intro) {
          sessionData.intro.push(`${entry()}`)
       }
       sessionData.features = [
@@ -27,9 +27,9 @@
                true, true, true, true, true, true, true, true, true
             ]
    } else if (session.type === 'level_1_full') {
-      sessionData.title = $LL.open_sessions.level_1.full.title();
-      for (const prop in $LL.open_sessions.level_1.full.intro) {
-         sessionData.intro.push(`${$LL.open_sessions.level_1.full.intro[prop]()}`)
+      sessionData.title = $LL.sessions.level_1.full.title();
+      for (const prop in $LL.sessions.level_1.full.intro) {
+         sessionData.intro.push(`${$LL.sessions.level_1.full.intro[prop]()}`)
       }
       sessionData.features = [
                true, true, true, true, true, true,  true, true, true, true, 
@@ -43,8 +43,8 @@
 
 {#if session.type == 'level_1_basic' || session.type == 'level_1_full' }
    <PricingCard price={session.price} class={klass}>
-      <span slot="subtitle">{$LL.open_sessions.level_1.traject()}</span>
-      <span slot="title">{sessionData.title}<br class="lg:hidden"/> {$LL.open_sessions.level_1.two_day()}</span>
+      <span slot="subtitle">{$LL.sessions.level_1.traject()}</span>
+      <span slot="title">{sessionData.title}<br class="lg:hidden"/> {$LL.sessions.level_1.two_day()}</span>
 
       <p slot="intro">
          {#each sessionData.intro as item}
@@ -53,7 +53,7 @@
       </p>
 
       <List slot="features">
-         {#each Object.entries($LL.open_sessions.level_1.features) as [key, feature]}
+         {#each Object.entries($LL.sessions.level_1.features) as [key, feature]}
             {#if sessionData.features[Number(key)] === true}
                <ListItem icon="check">{feature()}</ListItem>
             {:else if sessionData.features[Number(key)] === false}
@@ -63,8 +63,8 @@
       </List>
 
       <span slot="btn">
-         <span class="font-light">{$LL.open_sessions.subscribe_to()} {$LL.open_sessions.level_1.traject()}</span><br/>
-         <span>{sessionData.title} {$LL.open_sessions.level_1.two_day()}</span>
+         <span class="font-light">{$LL.sessions.subscribe_to()} {$LL.sessions.level_1.traject()}</span><br/>
+         <span>{sessionData.title} {$LL.sessions.level_1.two_day()}</span>
       </span>
 
    </PricingCard>

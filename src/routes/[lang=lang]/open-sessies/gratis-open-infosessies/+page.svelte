@@ -28,7 +28,7 @@
 <header>
    <Hero imgSrc="home/kracht-gezonde-teams.webp" imgAlt="No Alt">
       <span slot="title">
-         {titleCase($LL.open_sessions.info.title())}
+         {titleCase($LL.sessions.info.title())}
       </span>
    </Hero>
 </header>
@@ -37,10 +37,10 @@
    <Breadcrumbs/>
    
    <SectionWrapper name="gratis-online-open-infosessies">
-      <Title type="h2" slot="title" large>{$LL.open_sessions.info.intro.title()}</Title>
+      <Title type="h2" slot="title" large>{$LL.sessions.info.intro.title()}</Title>
 
       <P large>
-         {#each Object.entries($LL.open_sessions.info.intro.content) as [key, item]}
+         {#each Object.entries($LL.sessions.info.intro.content) as [key, item]}
             {@html item()}
          {/each}
       </P>
@@ -48,7 +48,7 @@
    </SectionWrapper>
 
    <SectionWrapper name="infosessies-praktische-info">
-      <Title type="h2" slot="title">{titleCase($LL.open_sessions.practical())}</Title>
+      <Title type="h2" slot="title">{titleCase($LL.sessions.practical())}</Title>
       <div class="grid grid-cols-2 gap-8">
          {#await getData()}
             <Alert>
@@ -59,21 +59,21 @@
                {#if session.type === 'info_session'}
                   <Card label="{formatDateMonthFull(session.starts_on)}" labelPrimary>
                      <Title slot="title" type="h3" smallest>
-                        {titleCase($LL.open_sessions.info.single())}
+                        {titleCase($LL.sessions.info.single())}
                      </Title>
                      <div class="flex flex-col gap-4 w-full">
                         <div class="flex flex-row justify-between w-full">
                            <Tag outlined>
-                              <span class="text-xs italic">{titleCase($LL.open_sessions.info.trainer())}:</span><br/>
+                              <span class="text-xs italic">{titleCase($LL.sessions.info.trainer())}:</span><br/>
                               {session.trainer.first_name} {session.trainer.last_name}
                            </Tag>
                            <Tag primary>
-                              <span class="text-xs italic">{titleCase($LL.open_sessions.info.time())}:</span><br/>
+                              <span class="text-xs italic">{titleCase($LL.sessions.info.time())}:</span><br/>
                               {formatTime(session.starts_on)} - {formatTime(session.ends_on)}
                            </Tag>
                         </div>
                         <Button size="lg" color="primary">
-                           {firstLetterCase($LL.open_sessions.subscribe())}
+                           {firstLetterCase($LL.sessions.subscribe())}
                         </Button>
                      </div>
                   </Card>
@@ -91,8 +91,8 @@
                text-primary group-hover:text-primary-d2
                mr-2 mt-0.5 px-1 pb-1 pt-[5px]
                rounded-full bg-gray-50">
-            {titleCase($LL.open_sessions.subscribe_to())}
-            {titleCase($LL.open_sessions.info.single())}
+            {titleCase($LL.sessions.subscribe_to())}
+            {titleCase($LL.sessions.info.single())}
          </Button>
       </div>
    </SectionWrapper>

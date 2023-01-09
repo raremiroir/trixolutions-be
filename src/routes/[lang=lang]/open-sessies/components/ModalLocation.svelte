@@ -8,13 +8,13 @@
 </script>
 <Modal icon='mdi:map-marker-radius'>
    <Button slot="trigger" block outlined center bold size="lg" icon="mdi:map-marker-radius">
-      {titleCase($LL.open_sessions.location())}
+      {titleCase($LL.sessions.location())}
    </Button>
-   <Title slot="title" type="h3" small>{titleCase($LL.open_sessions.location())}</Title>
+   <Title slot="title" type="h3" small>{titleCase($LL.sessions.location())}</Title>
    <div class="relative text-right h-full w-full">
       <div class="overflow-hidden bg-none h-full w-full">
          <iframe 
-            title="{titleCase($LL.open_sessions.location())} {titleCase($LL.open_sessions.level_1.title_alt())}"
+            title="{titleCase($LL.sessions.location())} {titleCase($LL.sessions.level_1.title_alt())}"
             class="w-full min-w-full h-120"
             id="gmap_canvas" 
             src="https://maps.google.com/maps?q=Domein%20Martinus&t=&z=9&ie=UTF8&iwloc=&output=embed" 
