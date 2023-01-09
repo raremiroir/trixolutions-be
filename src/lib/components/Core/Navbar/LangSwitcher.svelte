@@ -7,6 +7,12 @@
 	import { locales } from '$i18n/i18n-util'
 	import { loadLocaleAsync } from '$i18n/i18n-util.async'
 	import { replaceLocaleInUrl } from '$utils'
+
+	import { Button } from '../../core'
+	import { Menu } from '../../content'
+	import Icon from '@iconify/svelte'
+	import Link from '../Link.svelte';
+
 	const switchLocale = async (newLocale: Locales, updateHistoryState = true) => {
 		if (!newLocale || $locale === newLocale) return
 		// load new dictionary from server
@@ -35,13 +41,47 @@
 
 <svelte:window on:popstate={handlePopStateEvent} />
 
-<ul>
-	{#each locales as l}
-		<li>
-			<a class:active={l === $locale} 
-				href={`${replaceLocaleInUrl($page.url, l)}`}>
-				{l}
-			</a>
-		</li>
-	{/each}
-</ul>
+<Menu hoverState padding="p-0.5">
+   <Button
+      slot="trigger"
+      color="transparent" flat rounded
+      size="md" 
+      class="flex items-center justify-center">
+		<div class="flex flex-row gap-1 items-center justify-center">
+			<Icon icon="ic:round-translate" class="w-5 h-5" />
+			<span class="text-md font-body font-semibold flex items-center justify-center gap-1">
+				| <span class="pt-0.5">{$locale.toUpperCase()}</span>
+			</span>
+		</div>
+   </Button>
+   <ul class="flex flex-col gap-1 p-2">
+      {#each locales as l}
+         <li>
+				<Link href={`${replaceLocaleInUrl($page.url, l)}`}>
+					<Button
+						color="{l === $locale ? 'secondary' : 'transparent'}"
+						flat block size="xs"
+						>
+						<div class="w-full flex flex-row items-center justify-start gap-2">
+							<Icon icon="emojione:flag-for-{l === 'nl' ? 'belgium' : l === 'en' ? 'united-kingdom' : l === 'fr' ? 'france' : ''}" 
+									width="20" />
+							<div class="flex flex-col items-start justify-center">
+								{l === 'en' ? 'English' 
+								: l === 'fr' ? 'Français' 
+								: l === 'nl' ? 'Nederlands' 
+								: 'Error'}
+								<span class="text-xs italic text-gray-600 capitalize drop-shadow-none font-light">
+									{ l === 'en' ? 'Engels' 
+									: l === 'fr' ? 'Frans' 
+									: l === 'nl' ? 'Nederlands' 
+									: 'Error'}
+								</span>
+							</div>
+						</div> 
+					</Button>
+				</Link>
+         </li>
+      {/each}
+   </ul>
+</Menu>
+ 
