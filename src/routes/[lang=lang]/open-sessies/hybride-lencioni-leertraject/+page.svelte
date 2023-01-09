@@ -1,18 +1,24 @@
 <script lang="ts">
    
-   import { formatDateShort, formatTime, formatYear, titleCase } from "$utils";
    
    import LL from "$src/i18n/i18n-svelte";
+   import { titleCase } from "$utils";
    
    import { 
       Main, SectionWrapper, Title, P, Breadcrumbs, 
-      List, ListItem, Button } from "$comp/core";
-   import { Hero, Card, TwicPic, Modal } from "$comp/common";
+      List, ListItem, Button 
+   } from "$comp/core";
    import { 
-         Accordeon, AccordeonItem, RatingCard, FeaturesSlider, FeaturesSlide, 
-         FeaturesModalContent, Tab, TabList, TabPanel, Tabs 
-      } from "$comp/content";
-   import { PartnershipAccordeon, WorkshopCard, SessionDateCard } from "../open-sessies";
+      Hero, Card, TwicPic, Modal 
+   } from "$comp/common";
+   import { 
+      Accordeon, AccordeonItem, RatingCard, FeaturesSlider, FeaturesSlide, 
+      FeaturesModalContent, Tab, TabList, TabPanel, Tabs 
+   } from "$comp/content";
+   import { 
+      PartnershipAccordeon, WorkshopCard, 
+      SessionDateCard, ModalLocation, ModalTrainerTom
+   } from "../open-sessies";
 	
 
    export let data;
@@ -80,49 +86,9 @@
       <hr class="border-2 border-primary/70"/>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4 xl:gap-8">
          
-         <Modal icon="ph:student-bold">
-            <Button slot="trigger" block outlined center bold size="lg" icon="ph:student-bold">
-               {titleCase($LL.open_sessions.your_trainer.title())}
-            </Button>
-            
-            <Title slot="title" type="h3" small>{titleCase($LL.open_sessions.your_trainer.title())}</Title>
-            <div class="grid grid-cols-12 gap-4 w-full mx-auto">
-               <div class="col-span-4 items-center justify-center">
-                  <div class="flex flex-col">
-                     <Title type="subheader" italic>{titleCase($LL.open_sessions.your_trainer.tom())}</Title>
-                     <hr/>
-                     <P large>
-                        {@html $LL.open_sessions.your_trainer.content()}
-                     </P>
-                  </div>
-               </div>
-               <div class="col-span-8">
-                  <TwicPic 
-                     alt="Tom van Dorst - Trixolutions CEO / Trainer / Coach"
-                     src="team/tom-bw.webp" 
-                     mode="cover" position="top" 
-                     ratio="3:2" class="w-full h-auto"/>
-                  </div>
-               </div>
-         </Modal>
+         <ModalTrainerTom/>
 
-         <Modal icon='mdi:map-marker-radius'>
-            <Button slot="trigger" block outlined center bold size="lg" icon="mdi:map-marker-radius">
-               {titleCase($LL.open_sessions.location())}
-            </Button>
-            <Title slot="title" type="h3" small>{titleCase($LL.open_sessions.location())}</Title>
-            <div class="relative text-right h-full w-full">
-               <div class="overflow-hidden bg-none h-full w-full">
-                  <iframe 
-                     title="{titleCase($LL.open_sessions.location())} {titleCase($LL.open_sessions.level_1.title_alt())}"
-                     class="w-full min-w-full h-120"
-                     id="gmap_canvas" 
-                     src="https://maps.google.com/maps?q=Domein%20Martinus&t=&z=9&ie=UTF8&iwloc=&output=embed" 
-                     frameborder="0" scrolling="no" 
-                     marginheight="0" marginwidth="0"></iframe>
-               </div>
-            </div>
-         </Modal>
+         <ModalLocation/>
 
          <Modal icon="mdi:calendar-text">
             <Button slot="trigger" block outlined center bold size="lg" icon="mdi:calendar-text">

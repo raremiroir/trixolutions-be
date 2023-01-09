@@ -36,6 +36,7 @@
             mode="{imgMode}"
             {ratio}
             {position}
+            intrinsic="800:600"
             anchor={position}
          />
       </div>

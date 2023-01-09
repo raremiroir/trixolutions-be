@@ -64,11 +64,11 @@
                      <div class="flex flex-col gap-4 w-full">
                         <div class="flex flex-row justify-between w-full">
                            <Tag outlined>
-                              <span class="text-xs italic">Trainer:</span><br/>
+                              <span class="text-xs italic">{titleCase($LL.open_sessions.info.trainer())}:</span><br/>
                               {session.trainer.first_name} {session.trainer.last_name}
                            </Tag>
                            <Tag primary>
-                              <span class="text-xs italic">Tijd:</span><br/>
+                              <span class="text-xs italic">{titleCase($LL.open_sessions.info.time())}:</span><br/>
                               {formatTime(session.starts_on)} - {formatTime(session.ends_on)}
                            </Tag>
                         </div>

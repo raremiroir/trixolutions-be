@@ -1,23 +1,23 @@
 <script>
-
+   import LL from "$src/i18n/i18n-svelte";
 	import { Modal, TwicPic } from "$src/lib/components/common";
 	import { Button, P, Title } from "$src/lib/components/core";
+	import { titleCase } from "$src/lib/utils";
 
 </script>
 <Modal icon="ph:student-bold">
    <Button slot="trigger" block outlined center bold size="lg" icon="ph:student-bold">
-      Uw Trainer
+      {titleCase($LL.open_sessions.your_trainer.title())}
    </Button>
    
-   <Title slot="title" type="h3" small>Uw Trainers</Title>
+   <Title slot="title" type="h3" small>{titleCase($LL.open_sessions.your_trainer.title())}</Title>
    <div class="grid grid-cols-12 gap-4 w-full mx-auto">
       <div class="col-span-4 items-center justify-center">
          <div class="flex flex-col">
-            <Title type="subheader" italic>Tom van Dorst</Title>
+            <Title type="subheader" italic>{titleCase($LL.open_sessions.your_trainer.tom())}</Title>
             <hr/>
             <P large>
-               Tom van Dorst is een gedreven trainer en coach, en CEO van Trixolutions. <br/>
-               Hij is een echte expert op het vlak van Lencioni.
+               {@html $LL.open_sessions.your_trainer.content()}
             </P>
          </div>
       </div>

@@ -1,8 +1,9 @@
 <script lang="ts">
+	import LL from "$src/i18n/i18n-svelte";
+	import { formatDateShort, formatTime, formatYear, titleCase } from "$src/lib/utils";
 
 	import { Card } from "$src/lib/components/common";
 	import { P, Title } from "$src/lib/components/core";
-	import { formatDateShort, formatTime, formatYear } from "$src/lib/utils";
 	import Icon from "@iconify/svelte";
 
    export let session:any;
@@ -21,7 +22,7 @@
 		/>
 		<Title type="h4" class="uppercase pt-[5px]" small>
 			{#if session.is_full}
-				Volzet
+				{titleCase($LL.open_sessions.is_full())}
 			{:else}
 				<div class="flex flex-col gap-0 leading-none">
 					{formatDateShort(session.starts_on)} - {formatDateShort(session.ends_on)}<br />

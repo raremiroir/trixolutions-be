@@ -1,4 +1,6 @@
 <script>
+   import LL from "$src/i18n/i18n-svelte";
+	import { titleCase } from "$src/lib/utils";
 
    import { Title, Button } from "$comp/core";
    import { Modal } from "$comp/common";
@@ -19,10 +21,10 @@
                py-3 px-2 lg:py-5 lg:px-4
                " 
             block>
-            Contacteer Ons!
+            {titleCase($LL.pages.contact.btn.contact_us())}!
          </Button>
 
-         <Title slot="title" type="h3" small>Contacteer Ons!</Title>
+         <Title slot="title" type="h3" small>{titleCase($LL.pages.contact.btn.contact_us())}!</Title>
          
          <ContactForm />
          
@@ -31,16 +33,23 @@
    </div>
    <div class="w-1/2 flex items-center justify-center flex-col gap-4">
       <div class="w-2/3 text-center">
-         <Title type="h4" small >Blijf Altijd op de Hoogte!</Title>
-         <Title type="subtitle" small>Abonneer op onze Trixolutions Nieuwsbrief!</Title>
+         <Title type="h4" small >{$LL.pages.contact.newsletter.up_to_date()}!</Title>
+         <Title type="subtitle" small>{$LL.pages.contact.newsletter.subtitle()}!</Title>
       </div>
-      <Button 
-         size="
-            text-center 
-            text-lg md:text-xl lg:text-3xl
-            py-3 px-2 lg:py-5 lg:px-4
-            ">
-         Schrijf Je In!
-      </Button>
+      <Modal>
+         <Button
+            slot="trigger" 
+            size="
+               text-center 
+               text-lg md:text-xl lg:text-3xl
+               py-3 px-2 lg:py-5 lg:px-4
+               ">
+               {$LL.pages.contact.newsletter.subscribe()}!
+         </Button>
+
+         <Title slot="title" type="h3" small>{$LL.pages.contact.newsletter.subtitle()}!</Title>
+
+         Abonneer
+      </Modal>
    </div>
 </div>
