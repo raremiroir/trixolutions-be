@@ -4,7 +4,7 @@
 
 	// Import Swiper styles
 	import 'swiper/css';
-	import { HeroInner } from '../../common';
+	import { HeroInner } from './hero';
 
 	// Use slide for hero?
 	export let hero = false;
@@ -25,15 +25,9 @@
 	}
 </script>
 
-{#if hero}
-	<SwiperSlide>
-		<HeroInner {large} {imgSrc} {imgAlt} {...heroProps}>
-			<slot name="title" slot="title">Title</slot>
-			<slot/>
-		</HeroInner>
-	</SwiperSlide>
-{:else}
-	<SwiperSlide>
+<SwiperSlide>
+	<HeroInner {large} {imgSrc} {imgAlt} {...heroProps}>
+		<slot name="title" slot="title">Title</slot>
 		<slot/>
-	</SwiperSlide>
-{/if}
+	</HeroInner>
+</SwiperSlide>
