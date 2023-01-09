@@ -1,6 +1,7 @@
 <script>
 	import Icon from "@iconify/svelte";
-	import Link from "../Core/Link.svelte";
+
+   import { Link } from "../core";
 
    const menuItems = [
       {

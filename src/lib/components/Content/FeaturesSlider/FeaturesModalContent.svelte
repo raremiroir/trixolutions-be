@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ExternalModal, TwicPic } from "../../common";
+	import { Modal, TwicPic } from "../../common";
 	import { P, Title } from "../../core";
 
    import { breakpoints } from "$src/lib/stores";
@@ -23,7 +23,7 @@
 
 <svelte:window bind:innerWidth={innerWidth} />
 
-<ExternalModal content {id}>
+<Modal content {id}>
    <Title type="h3" smaller slot="title">
       <slot name="title">Title</slot>
    </Title>
@@ -43,4 +43,4 @@
             intrinsic="600x400"/>
       </div>
    </div>
-</ExternalModal>
+</Modal>

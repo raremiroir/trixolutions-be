@@ -3,7 +3,7 @@
 	import { fade } from "svelte/transition";
 
 	import { SwiperSlide } from "swiper/svelte";
-	import { Card, ExternalModal, TwicPic } from "$comp/common";
+	import { Card, Modal, TwicPic } from "$comp/common";
    import { Title, P } from "$comp/core";
 
    export let modalId:number;
@@ -37,7 +37,7 @@
          "
    on:mouseenter={() => hovered = true}
    on:mouseleave={() => hovered = false}>
-      <ExternalModal trigger id={modalId}>
+      <Modal trigger id={modalId}>
          <Card 
             slot="trigger" equalHeight hoverFx compact
             class="h-56 sm:h-64 md:h-72 lg:h-64 2xl:h-64">
@@ -64,6 +64,6 @@
                </div>
             {/if}
          </Card>
-      </ExternalModal>
+      </Modal>
    </div>
 </SwiperSlide>
