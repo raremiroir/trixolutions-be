@@ -3,7 +3,6 @@ export { default as Flipper }    from './Common/Flipper.svelte';
 export { default as Alert }      from './Common/Alert.svelte';
 
 export { default as Modal }      from './Common/Modal/Modal.svelte';
-export { default as ExternalModal }      from './Common/Modal/ExternalModal.svelte';
 
 export { default as Card }       from './Common/Card.svelte';
 
