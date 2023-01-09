@@ -2,20 +2,13 @@
 <!--  JS  -->
 <!--      -->
 <script>
-   import { Slider } from '$comp/content';
+   import { Slider } from './slider';
    import { HeroInner } from './hero';
    
    // Set image sources
    export let imgSrc = '';
    // Set image alt
    export let imgAlt = 'No Alt';
-   // Set image position
-   export let imgPos = 'object-center';
-   // Set image fitting
-   export let imgFit = 'object-cover';
-
-   // Set height of hero 
-   export let height = '';
 
    // Using slides?
    export let slider = false;
@@ -42,7 +35,7 @@
       </Slider>
    {:else}
       <HeroInner {large}
-         {imgSrc} {imgAlt} {height} {imgFit} {imgPos}
+         {imgSrc} {imgAlt}
          {titleType} {titleSmall} {titleSmaller} {titleSmallest}>
          <slot name="title" slot="title">Title</slot>
          <slot/>
