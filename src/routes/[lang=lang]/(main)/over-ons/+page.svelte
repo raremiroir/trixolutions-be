@@ -1,12 +1,24 @@
 <script lang="ts">
+   import { breakpoints } from "$lib/stores";
+	import supabase from "$src/lib/db";
+   import LL, { locale } from "$src/i18n/i18n-svelte";
+	import { firstLetterCase } from "$src/lib/utils";
+
    // Import Components
    import { Main, SectionWrapper, Title, P } from "$comp/core";
-   import { Card, TwicPic } from "$comp/common";
+   import { Card, TwicPic, Alert } from "$comp/common";
 	import MemberCard from "./MemberCard.svelte";
 
-   import LL from "$src/i18n/i18n-svelte";
 
-   import { breakpoints } from "$lib/stores";
+
+   const getData = async () => {
+      const {data, error} = await supabase
+         .from('team_members')
+         .select(`*, img(name, folder, type)`)
+         .order('order', { ascending: true });
+      if (error) throw new Error(error.message);
+      return data;
+   }
       
    let innerWidth:number;
    $: innerWidth;
@@ -49,37 +61,23 @@
       <Title type="h2">{$LL.pages.about.team.title()}</Title>
 
       <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-         <MemberCard
-            src="team/tom-bw.webp" alt="Tom van Dorst - CEO Trixolutions"
-            name="Tom van Dorst">
-            <Title type="subtitle" smaller italic>{$LL.pages.about.team.tom.job()}</Title>
-         </MemberCard>
-         <MemberCard
-            src="team/tamara-bw.webp" alt="Tamara - Trixolutions Office Manager"
-            name="Tamara">
-            <Title type="subtitle" smaller italic>{$LL.pages.about.team.tamara.job()}</Title>
-         </MemberCard>
-         <MemberCard
-            src="" alt="Roger - Trixolutions Trainer / Actor"
-            name="Roger">
-            <Title type="subtitle" smaller italic>{$LL.pages.about.team.roger.job()}</Title>
-         </MemberCard>
-         <MemberCard
-            src="" alt="Kelly - Trixolutions Trainer / Facilitator"
-            name="Kelly">
-            <Title type="subtitle" smaller italic>{$LL.pages.about.team.kelly.job()}</Title>
-         </MemberCard>
-         <MemberCard
-            src="team/christoph-bw.webp" alt="Christoph - Trixolutions Trainer / Facilitator"
-            name="Christoph" position="top">
-            <Title type="subtitle" smaller italic>{$LL.pages.about.team.christoph.job()}</Title>
-         </MemberCard>
-         <MemberCard
-            src="team/frederik-bw.webp" alt="Frederik - Trixolutions Senior Trainer"
-            name="Frederik" position="top">
-            <Title type="subtitle" smaller italic>{$LL.pages.about.team.frederik.job()}</Title>
-         </MemberCard>
-      </ul>
-
+         {#await getData()}
+            <Alert>{firstLetterCase($LL.base.db.loading())}</Alert>
+         {:then data} 
+            {#each data as member}
+               <MemberCard
+                  src="{member.img.folder}/{member.img.name}.{member.img.type}" 
+                  alt="{member.first_name} {member.last_name} - {member.job.nl}"
+                  name="{member.first_name} {member.last_name}"
+                  position={member.unique_name === 'christoph' || member.unique_name === 'frederik' ? 'top' : ''}>
+                  <Title type="subtitle" smaller italic>{member.job.nl}</Title>
+               </MemberCard>
+            {/each}
+         {:catch error}
+            <div class="flex flex-col gap-0">
+               <Alert preset="error">{firstLetterCase($LL.base.db.error_loading())}:</Alert>
+               <Alert preset="error-outlined">{error}:</Alert>
+            </div>
+         {/await}
    </SectionWrapper>
 </Main>
