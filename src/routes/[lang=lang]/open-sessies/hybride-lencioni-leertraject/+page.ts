@@ -24,10 +24,22 @@ export const load = () => {
          return data;
       };
    }
+   const getRatingData = async () => {
+      const {data, error} = await supabase
+         .from('ratings')
+         .select(`*`);
+
+      if (error) {
+         throw new Error(error.message)
+      } else if (data) {
+         return data;
+      };
+   }
 
    return {
       sessionTypes: getSessionTypes(),
       sessionData: getSessionData(),
+      ratingData: getRatingData(),
    }
 }
 
