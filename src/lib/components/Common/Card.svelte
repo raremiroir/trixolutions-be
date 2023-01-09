@@ -10,9 +10,13 @@
 
    // Choose direction of card
    export let direction = 'col';
+   // Compact layout
+   export let compact = false;
    
    // If card is link, enter url
    export let link = '';
+   // If card is not link, but still needs effects on hover, make true
+   export let hoverFx = false;
    // If card is article
    export let article = false;
    
@@ -34,6 +38,7 @@
    wrapComp = link ? Link : Div;
 
    export let textCenter = false;
+   export let featureCard = false;
    
 </script>
 
@@ -48,13 +53,13 @@
    class="
       group overflow-hidden
       bg-white
-      {link ? ` hover:bg-gray-200/70 active:bg-gray-200/70
-                  hover:shadow-xl hover:shadow-gray-900/30` 
-            : ''}  
+      {link || hoverFx ? ` hover:bg-gray-200/70 active:bg-gray-200/70
+                             hover:shadow-xl hover:shadow-gray-900/30` 
+                       : ''}  
       rounded-xl shadow-lg
-      transition-all duration-300 ease-in-out
+      transition-all duration-500 ease-in-out
       {equalHeight ? 'h-full' : 'h-fit'}
-      w-full
+      max-w-full min-w-full
       {klass}
       ">
       <!-- Outer Wrap -->
@@ -81,23 +86,23 @@
                   { direction === 'row' ? 'w-1/2' 
                   : direction === 'col' ? 'w-full' 
                   : 'w-fit'} overflow-hidden
-                  rounded-t-lg
-                  z-0 max-h-fit
-                  transition-all duration-300 ease-in-out
+                  rounded-t-lg z-0 
+                  transition-all duration-500 ease-in-out
+                  { hoverFx ? 'h-full group-hover:h-32' : 'max-h-fit'}
                   { link ? `group-hover:brightness-75 group-hover:-mt-2 sm:group-hover:-mt-3` : ''}">
                <slot name="image"/>
             </div>
             
              <!-- Inner Wrap -->
             <div class="
-                  py-2 px-4 
-                  transition-all duration-300 ease-in-out
+                  {compact ? 'py-0 px-3' : 'py-2 px-4' }
+                  transition-all duration-500 ease-in-out
                   z-3 w-full
-                  {link ? 'group-hover:mt-2 sm:group-hover:mt-3' : ''}
+                  {link || hoverFx ? 'group-hover:mt-2 sm:group-hover:mt-3' : ''}
                   relative 
                   flex flex-col {textCenter ? 'items-center' : 'items-start'} 
                   justify-start
-                   w-full gap-4 h-fit
+                   w-full { compact ? 'gap-1' : 'gap-4'} h-fit
                   ">
          
                <slot name="prepend-inner"/>
@@ -106,7 +111,7 @@
                <div class="
                      m-0 p-0 w-full h-fit overflow-none 
                      flex flex-row items-start 
-                     {textCenter ? 'justify-center' : 'justify-start'}
+                     {textCenter ? 'justify-center' : 'justify-between'}
                      ">
                   <slot name="title"/>
          
@@ -123,7 +128,7 @@
             </div>
          </div>
       
-         <div class="pt-0 px-4 pb-4">
+         <div class="pt-0 px-4 pb-4 w-full">
             <slot name="append-outer"/>
          </div>
       </svelte:component>
