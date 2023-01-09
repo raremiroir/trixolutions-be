@@ -14,6 +14,7 @@ export const imgSrc = writable('');
 
 export const currentHero = writable('');
 export const currentTitle = writable('');
+export const currentModal = writable();
 
 export const breakpoints = writable({
    xs:  520,
