@@ -46,7 +46,7 @@ export let thin = false;
       </h1>
    {:else if type === 'fake-h1'}
       <span class=" text-xl
-            font-title leading-none
+            font-title leading-10
             {color ? color : 'text-primary'} 
             {small ? 'text-7xl' : 'h1-size'}
             { thin ? 'font-semibold' : 'font-bold'}"
@@ -83,11 +83,11 @@ export let thin = false;
    <!-- If type is h4 -->
    {:else if type === 'h4'}
       <h4 class="
-            font-title leading-normal
+            font-title leading-none
             { color ? color : 'text-primary-d1' } 
             { small ? 'h5-size' 
             : smaller ? 'h6-size-sm'
-            : smallest ? ''
+            : smallest ? 'h6-size-xs'
             : 'h4-size'}
             { thin ? 'font-semibold' : 'font-bold'}"
           class:italic={italic}>
@@ -119,21 +119,22 @@ export let thin = false;
             { color ? color : 'text-gray-600' }
             { small ? 'subtitle-size-sm' 
             : smaller ? 'subtitle-size-xs' 
+            : smallest ? 'subtitle-size-xxs' 
             : 'subtitle-size'}
             { thin ? 'font-light' : 'font-normal'} 
-            font-title"
+            font-title leading-none"
             class:italic={italic}>
          <slot/>
       </span>
    <!-- If type is subheader -->
-   {:else if type === 'subtitle' || type === 'subheader'}
+   {:else if type === 'subheader'}
       <span class="
             { color ? color : 'text-primary' }
             { small ? 'subtitle-size' 
             : smaller ? 'subtitle-size-sm' 
             : 'subheader-size'}
             { thin ? 'font-light' : 'font-normal'} 
-            font-title"
+            font-title leading-none"
             class:italic={italic}>
          <slot/>
       </span>
@@ -160,5 +161,6 @@ export let thin = false;
    .subtitle-size { font-size: clamp(1.125rem, 0.8125rem + 1.25vw, 1.75rem); }
    .subtitle-size-sm { font-size: clamp(1rem, 0.875rem + 0.5vw, 1.25rem); }
    .subtitle-size-xs { font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1.125rem); }
+   .subtitle-size-xxs { font-size: clamp(0.75rem, 0.5rem + 1vw, 1.25rem); }
    .subheader-size { font-size: clamp(1.25rem, 0.875rem + 1.5vw, 2rem); }
 </style>
