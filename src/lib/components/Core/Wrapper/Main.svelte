@@ -20,6 +20,7 @@
 
 <main 
    class="
+      overflow-x-hidden w-full
       {noMargin ? 'mt-6' : 'mt-24'}
       mb-20
       {klass}">
