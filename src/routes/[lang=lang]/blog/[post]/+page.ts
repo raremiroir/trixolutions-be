@@ -12,7 +12,8 @@ export const load = ({ fetch, params }) => {
             *,
             author (
                first_name,
-               last_name
+               last_name,
+               img
             )`);
 
       if (error) {

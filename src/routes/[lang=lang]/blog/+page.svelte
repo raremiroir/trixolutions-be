@@ -19,6 +19,11 @@
                name,
                folder,
                type
+            ),
+            author (
+               first_name,
+               last_name,
+               img
             )
          `);
 
@@ -39,7 +44,7 @@
             {firstLetterCase($LL.base.db.loading())}
          </Alert>
       {:then data} 
-         <PostScroll pageData={data} />
+         <PostScroll pageData={data} blog />
       {:catch error}
          <div class="flex flex-col gap-0">
             <Alert preset="error">

@@ -3,11 +3,17 @@
 	import { Link, P, Title } from '../core';
 
    import { breakpoints } from '$src/lib/stores';
+	import { locale } from '$src/i18n/i18n-svelte';
+	import { formatDateShort, formatYear } from '$src/lib/utils';
 
    export let slug:string;
 	export let title: string;
 	export let imgSrc: string;
    export let excerpt: any;
+
+	export let date = '';
+	export let author = '';
+	export let authorImg = '';
 
    let innerWidth:number;
    let ratio = '5:3'
@@ -18,6 +24,8 @@
       else if (innerWidth < $breakpoints.xl) { ratio = "3:2"; } 
       else if (innerWidth < $breakpoints.xxl) { ratio = "3:2"; }
       else { ratio = "5:3"}
+
+	slug = `${$locale}/${slug}`
 </script>
 
 <svelte:window bind:innerWidth={innerWidth} />
@@ -37,7 +45,7 @@
          src={imgSrc} 
          mode="cover" position="top" 
          ratio="{ratio}"
-         intrinsic="600x400"/>
+         intrinsic="1200x900"/>
 	</div>
 
 	<P class="prose-ol:list-decimal prose-ul:list-disc prose-li:ml-6">
@@ -49,12 +57,27 @@
 			{excerpt}<br/>	
 		{/if}
 	</P>
-	<Link
-		underlineOnHover
-		slot="append-outer"
-		href="{slug}"
-		class="my-2 font-bold"
-	>
-		Meer Info
-	</Link>
+	<div class="flex flex-row w-full justify-between items-center" slot="append-outer">
+		<Link
+			underlineOnHover
+			href="{slug}"
+			class="my-2 font-bold"
+		>
+			Meer Info
+		</Link>
+		{#if date || author}
+			<div class="flex flex-row justify-end items-center gap-2">
+				<div class="flex flex-col gap-0">
+					<div class="text-sm font-semibold text-gray-800">{author}</div>
+					<span class="text-sm text-gray-500 text-end italic">{formatDateShort(date)}/{formatYear(date)}</span>
+				</div>
+				<TwicPic 
+					alt={title}
+					src={authorImg} 
+					mode="cover" position="top" 
+					ratio="1" class="h-10 w-10 rounded-full"
+					intrinsic="600x400"/>
+			</div>
+		{/if}
+	</div>
 </Card>
