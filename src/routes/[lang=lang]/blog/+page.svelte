@@ -1,6 +1,6 @@
 <script>
 
-   import { Main, SectionWrapper, Breadcrumbs, Title } from "$src/lib/components/core";
+   import { Main, SectionWrapper, Breadcrumbs, Title, Loading } from "$src/lib/components/core";
    import { Alert } from "$comp/common";
    import { PostScroll } from "$comp/posts";
 
@@ -29,11 +29,8 @@
    <Breadcrumbs/>
    <SectionWrapper name="blog">
       <Title slot="title" type='h1'>Trixolutions Blog</Title>
-
       {#await getData()}
-         <Alert preset="primary">
-            {firstLetterCase($LL.base.db.loading())}
-         </Alert>
+         <Loading/>
       {:then data} 
          <PostScroll pageData={data} blog />
       {:catch error}
