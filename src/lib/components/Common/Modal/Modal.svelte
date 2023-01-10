@@ -21,6 +21,9 @@
    export let id:number = 1;
    export let icon = '';
 
+   export let width = '';
+   export let height = '';
+
    export let trigger = false;
    export let content = false;
    let isOpen = false;
@@ -67,7 +70,7 @@
             flex items-center justify-center"
          transition:fade={{duration:200}}>
 
-            <ModalContent closeModal={() => closeModal()} {icon}>
+            <ModalContent closeModal={() => closeModal()} {icon} {width} {height}>
                <slot name="title-prepend" slot="title-prepend"/>
                <slot name="title" slot="title"/>
                <slot/>
