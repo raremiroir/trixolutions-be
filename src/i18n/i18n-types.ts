@@ -72,25 +72,159 @@ type RootTranslation = {
 		}
 		validation: {
 			/**
-			 * D​i​t​ ​v​e​l​d​ ​i​s​ ​v​e​r​p​l​i​c​h​t​.
+			 * {​i​t​e​m​}​ ​i​s​ ​e​e​n​ ​v​e​r​p​l​i​c​h​t​ ​v​e​l​d​.
+			 * @param {string} item
 			 */
-			required: string
+			required: RequiredParams<'item'>
 			/**
-			 * D​i​t​ ​v​e​l​d​ ​i​s​ ​o​n​g​e​l​d​i​g​.
+			 * {​i​t​e​m​}​ ​i​s​ ​o​n​g​e​l​d​i​g​.
+			 * @param {string} item
 			 */
-			default_fixed: string
+			default_fixed: RequiredParams<'item'>
 			/**
 			 * {​i​t​e​m​}​ ​m​o​e​t​ ​m​i​n​s​t​e​n​s​ ​{​m​i​n​}​ ​l​e​t​t​e​r​s​ ​l​a​n​g​ ​z​i​j​n​.
-			 * @param {unknown} item
-			 * @param {unknown} min
+			 * @param {string} item
+			 * @param {number} min
 			 */
 			field_too_short: RequiredParams<'item' | 'min'>
 			/**
 			 * {​i​t​e​m​}​ ​m​a​g​ ​m​a​x​i​m​a​a​l​ ​{​m​a​x​}​ ​l​e​t​t​e​r​s​ ​l​a​n​g​ ​z​i​j​n​.
-			 * @param {unknown} item
-			 * @param {unknown} max
+			 * @param {string} item
+			 * @param {number} max
 			 */
 			field_too_long: RequiredParams<'item' | 'max'>
+			/**
+			 * D​i​t​ ​e​-​m​a​i​l​a​d​r​e​s​ ​i​s​ ​o​n​g​e​l​d​i​g​.
+			 */
+			email_error: string
+			/**
+			 * {​i​t​e​m​}​ ​z​o​u​ ​g​e​e​n​ ​s​p​e​c​i​a​l​e​ ​k​a​r​a​k​t​e​r​s​ ​o​f​ ​n​u​m​m​e​r​s​ ​m​o​g​e​n​ ​b​e​v​a​t​t​e​n​.
+			 * @param {string} item
+			 */
+			only_alpha: RequiredParams<'item'>
+		}
+		form: {
+			/**
+			 * v​o​o​r​n​a​a​m
+			 */
+			first_name: string
+			/**
+			 * a​c​h​t​e​r​n​a​a​m
+			 */
+			last_name: string
+			/**
+			 * e​-​m​a​i​l
+			 */
+			email: string
+			/**
+			 * o​r​g​a​n​i​s​a​t​i​e
+			 */
+			company: string
+			/**
+			 * o​n​d​e​r​w​e​r​p
+			 */
+			subject: string
+			/**
+			 * b​e​r​i​c​h​t
+			 */
+			message: string
+			/**
+			 * t​e​l​e​f​o​o​n​n​u​m​m​e​r
+			 */
+			telephone: string
+			/**
+			 * k​i​e​s​ ​e​e​n​ ​{​s​e​s​s​i​o​n​}
+			 * @param {unknown} session
+			 */
+			pick_session: RequiredParams<'session'>
+			content: {
+				/**
+				 * o​p​t​i​o​n​e​e​l
+				 */
+				optional: string
+				/**
+				 * b​e​r​i​c​h​t​ ​v​e​r​z​e​n​d​e​n
+				 */
+				send_msg: string
+				/**
+				 * b​e​r​i​c​h​t​ ​v​e​r​z​o​n​d​e​n
+				 */
+				sent_success: string
+				/**
+				 * n​o​g​ ​e​e​n​t​j​e​ ​v​e​r​s​t​u​r​e​n
+				 */
+				send_another_one: string
+				/**
+				 * V​u​l​ ​a​l​l​e​ ​v​e​l​d​e​n​ ​i​n​ ​a​l​v​o​r​e​n​s​ ​j​e​ ​b​e​r​i​c​h​t​ ​t​e​ ​v​e​r​z​e​n​d​e​n​.
+				 */
+				fill_out_all: string
+				/**
+				 * A​l​l​e​ ​v​e​l​d​e​n​ ​r​e​s​e​t​t​e​n
+				 */
+				reset_form: string
+				/**
+				 * V​e​l​d​ ​r​e​s​e​t​t​e​n
+				 */
+				reset_value: string
+				/**
+				 * A​u​t​o​m​a​t​i​s​c​h​ ​g​e​g​e​n​e​r​e​e​r​d
+				 */
+				automatic: string
+			}
+			sessions: {
+				subscribe_message: {
+					/**
+					 * {​n​a​m​e​}​ ​w​e​n​s​t​ ​z​i​c​h​ ​i​n​ ​t​e​ ​s​c​h​r​i​j​v​e​n​ ​i​n​ ​e​e​n​ ​{​s​e​s​s​i​o​n​}
+					 * @param {unknown} name
+					 * @param {unknown} session
+					 */
+					subject: RequiredParams<'name' | 'session'>
+					/**
+					 * B​e​s​t​e​,​ ​
+				​
+				​G​r​a​a​g​ ​z​o​u​ ​i​k​ ​m​e​ ​i​n​s​c​h​r​i​j​v​e​n​ ​o​p​ ​e​e​n​ ​{​s​e​s​s​i​o​n​}​.​
+			
+					 * @param {unknown} session
+					 */
+					intro: RequiredParams<'session'>
+					/**
+					 * M​i​j​n​ ​n​a​a​m​ ​i​s​ ​{​n​a​m​e​}
+					 * @param {unknown} name
+					 */
+					name: RequiredParams<'name'>
+					/**
+					 * I​k​ ​z​o​u​ ​m​e​ ​g​r​a​a​g​ ​i​n​s​c​h​r​i​j​v​e​n​ ​o​p​ ​d​e​ ​{​s​e​s​s​i​o​n​}​ ​o​p​ ​{​d​a​t​e​_​p​i​c​k​e​d​}​.​
+			
+					 * @param {unknown} date_picked
+					 * @param {unknown} session
+					 */
+					session_picked: RequiredParams<'date_picked' | 'session'>
+					/**
+					 * M​i​j​n​ ​e​-​m​a​i​l​a​d​r​e​s​ ​i​s​ ​{​e​m​a​i​l​}​
+			
+					 * @param {unknown} email
+					 */
+					email: RequiredParams<'email'>
+					/**
+					 * H​e​t​ ​b​e​d​r​i​j​f​ ​w​a​a​r​ ​i​k​ ​w​e​r​k​ ​h​e​e​t​ ​{​c​o​m​p​a​n​y​}​
+			
+					 * @param {unknown} company
+					 */
+					company: RequiredParams<'company'>
+					/**
+					 * M​i​j​n​ ​t​e​l​e​f​o​o​n​n​u​m​m​e​r​ ​i​s​ ​{​p​h​o​n​e​}​
+			
+					 * @param {unknown} phone
+					 */
+					phone: RequiredParams<'phone'>
+					/**
+					 * 
+				​M​e​t​ ​v​r​i​e​n​d​e​l​i​j​k​e​ ​g​r​o​e​t​,​
+			
+					 */
+					regards: string
+				}
+			}
 		}
 		slide: {
 			/**
@@ -1829,21 +1963,142 @@ export type TranslationFunctions = {
 		}
 		validation: {
 			/**
-			 * Dit veld is verplicht.
+			 * {item} is een verplicht veld.
 			 */
-			required: () => LocalizedString
+			required: (arg: { item: string }) => LocalizedString
 			/**
-			 * Dit veld is ongeldig.
+			 * {item} is ongeldig.
 			 */
-			default_fixed: () => LocalizedString
+			default_fixed: (arg: { item: string }) => LocalizedString
 			/**
 			 * {item} moet minstens {min} letters lang zijn.
 			 */
-			field_too_short: (arg: { item: unknown, min: unknown }) => LocalizedString
+			field_too_short: (arg: { item: string, min: number }) => LocalizedString
 			/**
 			 * {item} mag maximaal {max} letters lang zijn.
 			 */
-			field_too_long: (arg: { item: unknown, max: unknown }) => LocalizedString
+			field_too_long: (arg: { item: string, max: number }) => LocalizedString
+			/**
+			 * Dit e-mailadres is ongeldig.
+			 */
+			email_error: () => LocalizedString
+			/**
+			 * {item} zou geen speciale karakters of nummers mogen bevatten.
+			 */
+			only_alpha: (arg: { item: string }) => LocalizedString
+		}
+		form: {
+			/**
+			 * voornaam
+			 */
+			first_name: () => LocalizedString
+			/**
+			 * achternaam
+			 */
+			last_name: () => LocalizedString
+			/**
+			 * e-mail
+			 */
+			email: () => LocalizedString
+			/**
+			 * organisatie
+			 */
+			company: () => LocalizedString
+			/**
+			 * onderwerp
+			 */
+			subject: () => LocalizedString
+			/**
+			 * bericht
+			 */
+			message: () => LocalizedString
+			/**
+			 * telefoonnummer
+			 */
+			telephone: () => LocalizedString
+			/**
+			 * kies een {session}
+			 */
+			pick_session: (arg: { session: unknown }) => LocalizedString
+			content: {
+				/**
+				 * optioneel
+				 */
+				optional: () => LocalizedString
+				/**
+				 * bericht verzenden
+				 */
+				send_msg: () => LocalizedString
+				/**
+				 * bericht verzonden
+				 */
+				sent_success: () => LocalizedString
+				/**
+				 * nog eentje versturen
+				 */
+				send_another_one: () => LocalizedString
+				/**
+				 * Vul alle velden in alvorens je bericht te verzenden.
+				 */
+				fill_out_all: () => LocalizedString
+				/**
+				 * Alle velden resetten
+				 */
+				reset_form: () => LocalizedString
+				/**
+				 * Veld resetten
+				 */
+				reset_value: () => LocalizedString
+				/**
+				 * Automatisch gegenereerd
+				 */
+				automatic: () => LocalizedString
+			}
+			sessions: {
+				subscribe_message: {
+					/**
+					 * {name} wenst zich in te schrijven in een {session}
+					 */
+					subject: (arg: { name: unknown, session: unknown }) => LocalizedString
+					/**
+					 * Beste, 
+			
+				Graag zou ik me inschrijven op een {session}.
+			
+					 */
+					intro: (arg: { session: unknown }) => LocalizedString
+					/**
+					 * Mijn naam is {name}
+					 */
+					name: (arg: { name: unknown }) => LocalizedString
+					/**
+					 * Ik zou me graag inschrijven op de {session} op {date_picked}.
+			
+					 */
+					session_picked: (arg: { date_picked: unknown, session: unknown }) => LocalizedString
+					/**
+					 * Mijn e-mailadres is {email}
+			
+					 */
+					email: (arg: { email: unknown }) => LocalizedString
+					/**
+					 * Het bedrijf waar ik werk heet {company}
+			
+					 */
+					company: (arg: { company: unknown }) => LocalizedString
+					/**
+					 * Mijn telefoonnummer is {phone}
+			
+					 */
+					phone: (arg: { phone: unknown }) => LocalizedString
+					/**
+					 * 
+				Met vriendelijke groet,
+			
+					 */
+					regards: () => LocalizedString
+				}
+			}
 		}
 		slide: {
 			/**
