@@ -46,13 +46,13 @@
 
 </script>
 
-<div 
-   on:mouseover={mouseOver}
-   on:mouseleave={mouseLeave}
-   on:mousemove={mouseMove} on:focus
-   class="{klass} relative"
->
-   <slot/>
+<div class="relative">
+   <div  on:mouseover={mouseOver}
+         on:mouseleave={mouseLeave}
+         on:mousemove={mouseMove} on:focus
+         class="{klass}">
+      <slot/>
+   </div>
    {#if isHovered}
       <div 
          transition:fly={{duration:300, y:flyY, x:flyX}}
@@ -60,7 +60,7 @@
             absolute
             backdrop-blur-lg
             {placement}
-            whitespace-nowrap z-2
+            z-2 whitespace-nowrap
             { small ? 'text-xs border opacity-80' : 'text-sm border-2 opacity-100'} 
             font-semibold 
             { small ? 'px-1 py-0.5' : 'px-2 py-1'} 
