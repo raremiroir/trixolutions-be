@@ -1,4 +1,5 @@
 export { default as Loading }           from './Core/Loading.svelte';
+export { default as Reveal }           from './Core/Reveal.svelte';
 
 export { default as Div }           from './Core/Div.svelte';
 export { default as Article }       from './Core/Article.svelte';

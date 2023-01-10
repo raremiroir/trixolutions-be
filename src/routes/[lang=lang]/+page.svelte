@@ -2,17 +2,22 @@
    
    
    // Import Components
-   import { Button, Main, SectionWrapper, Title, P, Footer, Navbar, Loading } from "$comp/core";
+   import { 
+         Button, Main, SectionWrapper, Title, P, 
+         Footer, Navbar, Loading, Reveal
+      } from "$comp/core";
    import { Hero, Alert, HeroSlide } from "$comp/common";
    import { PostCard, PostGrid } from "$comp/posts";
    
    // Import globals
    import { firstLetterCase, formatUrl } from "$utils/formatText";
    
+
    // Import i18n
    import LL from '$i18n/i18n-svelte'
 	// console.info($LL.log({ fileName: '+page.svelte' }))
    
+
    // Import supabase
    import supabase from "$lib/db";
 
@@ -40,8 +45,6 @@
       const pagesData = data;
       return pagesData;
    }
-
-   let heroHeight="h-160"
 </script>
 
 <header>
@@ -52,7 +55,7 @@
          imgAlt="Trixolutions Lencioni - De Kracht van Gezonde Teams"
          imgSrc='home/kracht-gezonde-teams.webp'
          >
-         <Title type="h1" slot="title" color="text-gray-100">De Kracht van Gezonde Teams</Title>
+         <Title slot="title" type="h1" color="text-gray-100">De Kracht van Gezonde Teams</Title>
          <div class="flex flex-col gap-2">
             <Title type='subheader' color="text-gray-50">
               Opleiding in Teamcoaching
@@ -124,23 +127,29 @@
       <Loading/>
    {:then categoryData} 
       {#each categoryData as section}
-         <SectionWrapper name={formatUrl(section.name.nl)}>
-            <Title slot="title" type="h2">
-               {section.name.nl}
-            </Title>
+      <SectionWrapper name={formatUrl(section.name.nl)}>
+         <div slot="title">
+            <Reveal>
+               <Title type="h2">
+                  {section.name.nl}
+               </Title>
+            </Reveal>
+         </div>
             {#await getPagesData()}
                <Loading/>
             {:then pagesData} 
                <PostGrid>
                   {#each pagesData as item}
                      {#if item.category.name.nl === section.name.nl}
-                        {@const slug = item.slug ? item.slug : `${formatUrl(section.slug.nl)}/${formatUrl(item.title.nl)}`}
-                        <PostCard
-                           title={item.title.nl}
-                           imgSrc={`${item.hero_img.folder}/${item.hero_img.name}.${item.hero_img.type}`}
-                           slug={slug}
-                           excerpt={item.excerpt.nl}
-                        />
+                        <Reveal>
+                           {@const slug = item.slug ? item.slug : `${formatUrl(section.slug.nl)}/${formatUrl(item.title.nl)}`}
+                           <PostCard
+                              title={item.title.nl}
+                              imgSrc={`${item.hero_img.folder}/${item.hero_img.name}.${item.hero_img.type}`}
+                              slug={slug}
+                              excerpt={item.excerpt.nl}
+                           />
+                        </Reveal>
                      {/if}
                   {/each}
                </PostGrid>
