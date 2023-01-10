@@ -67,6 +67,7 @@
          class="
             flex gap-0 items-start
             justify-between w-full
+            transition-all duration-500 ease-in-out
             {equalHeight ? 'h-full' : 'h-fit'}
             { direction === 'row' ? 'flex-row' 
             : direction === 'row-reverse' ? 'flex-row-reverse'
