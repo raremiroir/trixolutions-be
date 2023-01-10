@@ -2,7 +2,7 @@
    
    
    // Import Components
-   import { Button, Main, SectionWrapper, Title, P, Footer, Navbar } from "$comp/core";
+   import { Button, Main, SectionWrapper, Title, P, Footer, Navbar, Loading } from "$comp/core";
    import { Hero, Alert, HeroSlide } from "$comp/common";
    import { PostCard, PostGrid } from "$comp/posts";
    
@@ -121,9 +121,7 @@
 
 <Main noMargin cta>
    {#await getCategoryData()}
-      <Alert preset="primary">
-         {firstLetterCase($LL.base.db.loading())}...
-      </Alert>
+      <Loading/>
    {:then categoryData} 
       {#each categoryData as section}
          <SectionWrapper name={formatUrl(section.name.nl)}>
@@ -131,9 +129,7 @@
                {section.name.nl}
             </Title>
             {#await getPagesData()}
-               <Alert preset="primary">
-                  {firstLetterCase($LL.base.db.loading())}...
-               </Alert>
+               <Loading/>
             {:then pagesData} 
                <PostGrid>
                   {#each pagesData as item}

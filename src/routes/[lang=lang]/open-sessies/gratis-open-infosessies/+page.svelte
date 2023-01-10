@@ -1,12 +1,15 @@
 <script lang="ts">
    import { Main, SectionWrapper, Breadcrumbs, Title, P, Tag, Button } from "$comp/core";
-   import { Card, Hero, Alert } from "$comp/common";
+   import { Card, Hero, Alert, Modal } from "$comp/common";
 
-   import { formatDateMonthFull, formatTime, formatDateShort, titleCase, firstLetterCase } from "$utils";
+   import { formatDateMonthFull, formatTime, formatDateShort, titleCase, firstLetterCase, formatDateFull } from "$utils";
 	import supabase from "$src/lib/db";
 
    import LL from "$src/i18n/i18n-svelte";
+	import { SessionSubscribeForm } from "$src/lib/components/forms";
    
+   let sessionDates:any = [];
+
    const getData = async () => {
       const {data, error} = await supabase
          .from('sessions')
@@ -20,9 +23,15 @@
 
       if (error) throw new Error(error.message);
 
-      // console.log(data);
+      data.forEach(session => {
+         if (session.type === 'info_session') {
+            sessionDates.push(formatDateFull(session.starts_on));
+         }
+      });
+      
       return data;
    }
+
 </script>
 
 <header>
@@ -49,51 +58,54 @@
 
    <SectionWrapper name="infosessies-praktische-info">
       <Title type="h2" slot="title">{titleCase($LL.sessions.practical())}</Title>
-      <div class="grid grid-cols-2 gap-8">
-         {#await getData()}
-            <Alert>
-               {firstLetterCase($LL.base.db.loading())}...
-            </Alert>
-         {:then data} 
+      {#await getData()}
+         <Alert>
+            {firstLetterCase($LL.base.db.loading())}...
+         </Alert>
+      {:then data} 
+         <div class="grid grid-cols-2 gap-8">
             {#each data as session}
                {#if session.type === 'info_session'}
                   <Card label="{formatDateMonthFull(session.starts_on)}" labelPrimary>
                      <Title slot="title" type="h3" smallest>
-                        {titleCase($LL.sessions.info.single())}
+                        {titleCase($LL.sessions.info.title())}
                      </Title>
-                     <div class="flex flex-col gap-4 w-full">
-                        <div class="flex flex-row justify-between w-full">
-                           <Tag outlined>
-                              <span class="text-xs italic">{titleCase($LL.sessions.info.trainer())}:</span><br/>
-                              {session.trainer.first_name} {session.trainer.last_name}
-                           </Tag>
-                           <Tag primary>
-                              <span class="text-xs italic">{titleCase($LL.sessions.info.time())}:</span><br/>
-                              {formatTime(session.starts_on)} - {formatTime(session.ends_on)}
-                           </Tag>
-                        </div>
-                        <Button size="lg" color="primary">
-                           {firstLetterCase($LL.sessions.subscribe())}
-                        </Button>
+                     <div class="flex flex-row justify-between w-full">
+                        <Tag outlined>
+                           <span class="text-xs italic">{titleCase($LL.sessions.info.trainer())}:</span><br/>
+                           {session.trainer.first_name} {session.trainer.last_name}
+                        </Tag>
+                        <Tag primary>
+                           <span class="text-xs italic">{titleCase($LL.sessions.info.time())}:</span><br/>
+                           {formatTime(session.starts_on)} - {formatTime(session.ends_on)}
+                        </Tag>
                      </div>
                   </Card>
                {/if}
             {/each}
-         {:catch error}
-            {error}
-         {/await}
-      </div>
-      <div class="m-0 px-0 py-16 w-full flex justify-center items-center">
-         <Button 
-            size="xxl" icon="mdi:pen-plus" 
-            iconClass="
-               h-10 w-10 
-               text-primary group-hover:text-primary-d2
-               mr-2 mt-0.5 px-1 pb-1 pt-[5px]
-               rounded-full bg-gray-50">
-            {titleCase($LL.sessions.subscribe_to())}
-            {titleCase($LL.sessions.info.single())}
-         </Button>
-      </div>
+         </div>
+         <div class="m-0 px-0 py-16 w-full flex justify-center items-center">
+            <Modal width="min-w-fit w-3/4 max-w-[80%] xl:max-w-[40%]">
+               <Button 
+                  slot="trigger"
+                  size="xxl" icon="mdi:pen-plus" 
+                  iconClass="
+                  h-10 w-10 
+                  text-primary group-hover:text-primary-d2
+                  mr-2 mt-0.5 px-1 pb-1 pt-[5px]
+                  rounded-full bg-gray-50">
+                  {titleCase($LL.sessions.subscribe_to())}
+                  {titleCase($LL.sessions.info.single())}
+               </Button>
+            
+               <Title slot="title" type="h3" small>{titleCase($LL.pages.contact.btn.contact_us())}!</Title>   
+
+               <SessionSubscribeForm session="info_session" {sessionDates}/>
+            
+            </Modal>
+         </div>
+      {:catch error}
+         {error}
+      {/await}
    </SectionWrapper>
 </Main>

@@ -1,13 +1,14 @@
 <script>
-   
-   import { Button, Main, SectionWrapper, Breadcrumbs, Link, P, Title } from "$comp/core";
-   import { Map, Card } from "$comp/common";
-	import Icon from "@iconify/svelte";
-	import { firstLetterCase, titleCase } from "$utils";
-   
    // Import i18n
    import LL from '$i18n/i18n-svelte'
    import { locale } from "$src/i18n/i18n-svelte";
+	import { firstLetterCase, titleCase } from "$utils";
+   
+   import { Button, Main, SectionWrapper, Breadcrumbs, Link, P, Title } from "$comp/core";
+   import { Map, Card, Modal } from "$comp/common";
+	import { ContactForm } from "$src/lib/components/forms";
+	import Icon from "@iconify/svelte";
+   
    
    const places = [
       {
@@ -33,12 +34,22 @@
    <SectionWrapper name="contact-us">
       <Title slot="title" type="h1">{titleCase($LL.pages.contact.title())}</Title>
       <div class="flex flex-row gap-8 items-center justify-center">
-         <Button size="xxl" color="primary" lowercase>
-            <div class="flex flex-row gap-2 items-center">
-               <Icon icon="material-symbols:mark-email-read-rounded" color="#f6ece7" width="40" />
-               {titleCase($LL.pages.contact.btn.contact_us())}!
-            </div>
-         </Button>
+         
+         <Modal width="min-w-[60%] max-w-[95%] xl:min-w-[40%] xl:max-w-[50%]">
+            <Button
+               slot="trigger" 
+               size="xxl" color="primary" 
+               lowercase>
+               <div class="flex flex-row gap-2 items-center">
+                  <Icon icon="material-symbols:mark-email-read-rounded" color="#f6ece7" width="40" />
+                  {titleCase($LL.pages.contact.btn.contact_us())}!
+               </div>
+            </Button>
+   
+            <Title slot="title" type="h3" small>{titleCase($LL.pages.contact.btn.contact_us())}!</Title>
+            <ContactForm />
+            
+         </Modal>
       </div>
       <div class="grid grid-cols-2 w-full gap-8">
          {#each places as place}
