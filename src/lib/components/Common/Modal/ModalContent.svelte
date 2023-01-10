@@ -6,6 +6,9 @@
 
 	export let closeModal: any;
    export let icon = '';
+
+   export let width = '';
+   export let height = '';
 </script>
 
 <!-- Box -->
@@ -13,8 +16,9 @@
 	use:clickOutside
 	on:click_outside={closeModal}
 	class="
-   w-fit h-fit min-w-[60%] max-w-[90%]
-   max-h-[80%] overflow-y-auto overflow-x-hidden
+   {width ? width : 'w-fit min-w-[60%] max-w-[90%]'}
+   {height ? height : 'h-fit max-h-[80%]'} 
+   overflow-y-auto overflow-x-hidden
    mx-auto pb-4 px-4 pt-2
    rounded-2xl shadow-2xl shadow-black/70
    bg-white flex flex-col justify-between"
