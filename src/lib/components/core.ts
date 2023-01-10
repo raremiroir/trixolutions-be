@@ -1,3 +1,5 @@
+export { default as Loading }           from './Core/Loading.svelte';
+
 export { default as Div }           from './Core/Div.svelte';
 export { default as Article }       from './Core/Article.svelte';
 export { default as Markup }        from './Core/Markup.svelte';
