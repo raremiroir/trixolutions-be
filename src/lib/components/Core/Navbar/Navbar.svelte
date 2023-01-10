@@ -57,7 +57,7 @@
       {openMobile ? 'border-primary' : 'border-transparent'}">
    <!-- Navbar Wrapper -->
    <div class="
-         w-11/12 lg:w-4/5 xl:w-3/4 
+         w-11/12 xl:w-5/6 2xl:w-3/4 
          h-fit mx-auto 
          flex flex-row justify-between items-center">
       
@@ -75,7 +75,7 @@
          translate-y-0 relative
          z-10 hidden lg:block
       ">
-         <ul class="flex flex-row gap-1 xl:gap-2 w-full justify-end items-center">
+         <ul class="flex flex-row gap-1 2xl:gap-2 w-full justify-end items-center">
             <NavItem name="Home" link="/{$locale}" />
             <NavItem name="Over Ons" link="/{$locale}/over-ons" />
             <NavItem name="Referenties" link="/{$locale}/referenties" />
