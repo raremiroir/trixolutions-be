@@ -1,6 +1,7 @@
 <script lang="ts">
+	import Loader from './Loader.svelte';
+	
 	import { page } from '$app/stores'
-
 	// Import i18n
 	import LL, { locale, setLocale } from '$i18n/i18n-svelte'
 	import type { LayoutData } from './$types'
@@ -37,6 +38,7 @@
 	
 	import "$src/app.postcss";
 	import { loadNamespaceAsync } from '$src/i18n/i18n-util.async';
+	import { onMount } from 'svelte';
 	
 	// 	// Supabase Auth
 	// 	onMount(() => {
@@ -51,12 +53,19 @@
 	// 	}
 	// })
 
-	export const ssr = false;
+	let hasPageLoaded = false;
+	onMount(() => {
+		hasPageLoaded = true;
+		console.log('page loaded');
+	})
 
 </script>
 
 <div class="app bg-gray-50">
 
+	{#if !hasPageLoaded}
+		<Loader />
+	{/if}
 	<slot />
 	
 </div>
