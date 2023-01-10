@@ -6,14 +6,7 @@
    import LL from "$src/i18n/i18n-svelte";
 
    export let prev = false;
-   export let next = false;
-
-   export let swiper:any;
-
-   	// Slide to next
-	const nextSlide = () => swiper.slideNext(300, true);
-	// Slide to previous
-	const prevSlide = () => swiper.slidePrev(300, true);
+   export let next = false;	
 
 	export let small = false;
 	export let reverseTooltip = false;
@@ -32,7 +25,6 @@
 	>
 	<Button
 		color="primary-alt"
-		on:click={prev ? prevSlide() : nextSlide()}
 		size="square-2xl"
 		flat
 		class="flex items-center justify-center z-3"

@@ -18,6 +18,8 @@
 		"typesafe-i18n": "typesafe-i18n"
 	},
 	"dependencies": {
+		"@splidejs/splide-extension-grid": "^0.4.1",
+		"@splidejs/svelte-splide": "^0.2.9",
 		"@supabase/auth-helpers-sveltekit": "^0.8.6",
 		"@supabase/supabase-js": "^2.2.3",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
@@ -26,6 +28,7 @@
 		"marked": "^4.2.5",
 		"svelte-confetti": "^1.2.2",
 		"svelte-forms-lib": "^2.0.1",
+		"svelte-reveal": "^0.7.0",
 		"swiper": "^8.4.5",
 		"typesafe-i18n": "^5.18.1",
 		"yup": "^0.32.11"

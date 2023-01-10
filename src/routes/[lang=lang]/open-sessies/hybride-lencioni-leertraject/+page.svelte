@@ -27,6 +27,8 @@
    let ratingData = Object(data.ratingData);
 
    import { currentModal } from "$src/lib/stores";
+	import Splider from "$src/lib/components/Common/Slider/Splider.svelte";
+	import SpliderSlide from "$src/lib/components/Common/Slider/SpliderSlide.svelte";
    $: $currentModal;
 
    // Set 'active' variable for accordeon component
@@ -220,6 +222,20 @@
       <Title slot="title" type="h2" small>
          {$LL.sessions.level_1.features_title()}
       </Title>
+
+      <Splider label="{$LL.sessions.level_1.features_title()}" visibleHeading>
+         {#each Object.entries($LL.sessions.level_1.features_extended) as [key, feature]}
+            <SpliderSlide 
+               modalId={Number(key)+1} 
+               imgSrc="" imgAlt="placeholder" 
+               class="transition-all duration-500 ease-in-out mb-4 hover:mb-0">
+            <span slot="subtitle">{feature.title.before()}</span>
+            <span slot="title">{feature.title.main()}</span>
+            </SpliderSlide>
+         {/each}
+      </Splider>
+
+
       <FeaturesSlider>
          {#each Object.entries($LL.sessions.level_1.features_extended) as [key, feature]}
             <FeaturesSlide 
