@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	export let form;
+	export let form:any;
 </script>
 
 <div class="flex flex-col items-center h-full w-full">
