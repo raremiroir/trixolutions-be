@@ -6,9 +6,6 @@
 	import 'swiper/css';
 	import { HeroInner } from './hero';
 
-	// Use slide for hero?
-	export let hero = false;
-
 	// Set img sources
 	export let imgSrc = '';
 	// Set img alt

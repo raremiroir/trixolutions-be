@@ -38,7 +38,6 @@
    wrapComp = link ? Link : Div;
 
    export let textCenter = false;
-   export let featureCard = false;
    
 </script>
 
