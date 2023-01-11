@@ -3,13 +3,13 @@
    import { formatDateMonthFull, formatTime, formatDateShort, titleCase, firstLetterCase, formatDateFull } from "$utils";
 	import supabase from "$src/lib/db";
 
-   import LL from "$src/i18n/i18n-svelte";   
+   import LL from "$i18n/i18n-svelte";   
    import { 
       Main, SectionWrapper, Breadcrumbs, 
       Title, P, Tag, Button, 
       Card, Hero, Alert, Modal, 
       SessionSubscribeForm 
-   } from "$src/lib/components";
+   } from "$comp";
 
    
    let sessionDates:any = [];

@@ -3,7 +3,7 @@
    
    
    import supabase from "$lib/db";
-   import LL, { locale } from "$src/i18n/i18n-svelte";
+   import LL, { locale } from "$i18n/i18n-svelte";
    
 	import { firstLetterCase } from "$utils";
    import { Main, SectionWrapper, Breadcrumbs, Title, Loading, Alert , PostScroll } from "$comp";

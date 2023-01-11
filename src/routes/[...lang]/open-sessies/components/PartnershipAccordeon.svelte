@@ -2,7 +2,7 @@
 
    import { Title, P, Blockquote, List, ListItem, Accordeon, AccordeonItem, TwicPic } from "$comp";
 
-   import LL from "$src/i18n/i18n-svelte";
+   import LL from "$i18n/i18n-svelte";
    import { breakpoints } from "$src/lib/stores";
 
    let innerWidth:number;

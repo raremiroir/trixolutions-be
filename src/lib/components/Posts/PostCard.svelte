@@ -2,7 +2,7 @@
 	import { Card, TwicPic, Link, P, Title } from '$comp';
 
    import { breakpoints } from '$src/lib/stores';
-	import { locale } from '$src/i18n/i18n-svelte';
+	import { locale } from '$i18n/i18n-svelte';
 	import { formatDateShort, formatYear } from '$src/lib/utils';
 
    export let slug:string;

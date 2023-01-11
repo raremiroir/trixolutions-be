@@ -1,8 +1,8 @@
 <script>
-   import LL from "$src/i18n/i18n-svelte";
+   import LL from "$i18n/i18n-svelte";
 
 	import { Modal, Button, Title } from "$comp";
-	import { titleCase } from "$src/lib/utils";
+	import { titleCase } from "$utils";
 
 </script>
 <Modal icon='mdi:map-marker-radius'>

@@ -1,7 +1,7 @@
 <script lang="ts">
    import { breakpoints } from "$lib/stores";
 	import supabase from "$src/lib/db";
-   import LL, { locale } from "$src/i18n/i18n-svelte";
+   import LL, { locale } from "$i18n/i18n-svelte";
 	import { firstLetterCase } from "$src/lib/utils";
 
    // Import Components

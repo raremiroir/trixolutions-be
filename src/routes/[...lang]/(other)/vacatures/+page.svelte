@@ -1,9 +1,8 @@
 <script lang="ts">
-    import LL from "$src/i18n/i18n-svelte";
+    import LL from "$i18n/i18n-svelte";
     
     // Import Components
-    import { Main, SectionWrapper, Title, P, Breadcrumbs } from "$comp/core";
-	import { Accordeon, AccordeonItem } from "$src/lib/components/content";
+    import { Main, SectionWrapper, Title, P, Breadcrumbs, Accordeon, AccordeonItem } from "$comp";
 
     let active:any = null;
  </script>

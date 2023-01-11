@@ -105,7 +105,7 @@
 <SEO {...seoProps}/>
 <header>
    <Navbar/>
-
+</header>
    <Hero slider>
       <HeroSlide large
          imgAlt="Trixolutions Lencioni - De Kracht van Gezonde Teams"
@@ -176,7 +176,6 @@
       </HeroSlide>
       
    </Hero>
-</header>
 
 <Main noMargin cta>
    {#await getCategoryData()}

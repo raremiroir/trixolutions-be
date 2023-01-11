@@ -71,6 +71,27 @@
    $: videoDuration = Math.round(duration);
    $: videoTime = Math.round(time);
 
+   function onKeyDown(e) {
+         switch(e.keyCode) {
+            // Pause/Play = P = 80
+            case 80:
+               playPauseVideo();
+               break;
+            // // Fullscreen = T = 84
+            // case 84:
+            //    toggleFullScreen();
+            //    break;
+            // Stop = X = 88
+            case 88:
+               stopVideo()
+               break;
+            // Mute = M = 77
+            case 77:
+               toggleVolume();
+               break;
+         }
+      }
+
    onMount(() => {
       const videoContainer:any = document.getElementById('video-container');
       const fullscreenButton:any = document.getElementById('btnFullScreen');
@@ -166,14 +187,15 @@
          <div class="flex flex-row gap-4">   
             <!-- Play/Pause Button -->
             <button 
-               id="btnPlayPause" title="play" accesskey="P"
+               id="btnPlayPause" title="play"
                class="
-                  w-8 h-8 z-3
-                  cursor-pointer 
-                  flex justify-center items-center
-                  border-primary border-2 rounded-full
-                  transition-shadow duration-300 ease-out
-                  bg-gray-50 hover:shadow-black/50 shadow-md" 
+               w-8 h-8 z-3
+               cursor-pointer 
+               flex justify-center items-center
+               border-primary border-2 rounded-full
+               transition-shadow duration-300 ease-out
+               bg-gray-50 hover:shadow-black/50 shadow-md" 
+               on:keydown|preventDefault={onKeyDown}
                on:click={() => playPauseVideo()}
                >
                {#if paused}
@@ -185,7 +207,8 @@
    
             <!-- Stop Button -->
             <button
-               id="btnStop" title="stop" accesskey="X"
+               id="btnStop" title="stop"
+               on:keydown|preventDefault={onKeyDown}
                class="
                   w-8 h-8 z-3
                   cursor-pointer 
@@ -208,6 +231,7 @@
                   border-primary border-2 rounded-full
                   transition-shadow duration-300 ease-out
                   bg-gray-50 hover:shadow-black/50 shadow-md" 
+               on:keydown|preventDefault={onKeyDown}
                on:click={() => toggleVolume()}
                on:mouseover={() => showVolume()}
                on:focus={() => showVolume()}
@@ -248,7 +272,8 @@
             <!-- Full Screen Toggle Button -->
             <!-- TODO: Icon not changing on doubleclick --> FIX -->
             <button
-               id="btnFullScreen" title="toggle full screen" accesskey="T"
+               id="btnFullScreen" title="toggle full screen" 
+               on:keydown|preventDefault={onKeyDown}
                class="
                   w-8 h-8 z-3
                   cursor-pointer 

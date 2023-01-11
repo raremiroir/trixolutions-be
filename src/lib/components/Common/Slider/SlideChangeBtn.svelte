@@ -2,7 +2,7 @@
 	import Icon from "@iconify/svelte";
 	import { Tooltip, Button } from "$comp";
 
-   import LL from "$src/i18n/i18n-svelte";
+   import LL from "$i18n/i18n-svelte";
 
    export let prev = false;
    export let next = false;	

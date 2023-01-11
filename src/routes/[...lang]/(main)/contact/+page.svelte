@@ -1,16 +1,24 @@
 <script>
+   
+   import ogSquareImageSrc from '$lib/assets/images/home/home-open-graph-square.jpg';
+	import ogImageSrc from '$lib/assets/images/home/home-open-graph.jpg';
+	import featuredImageSrc from '$lib/assets/images/home/home.jpg';
+   
    // Import i18n
    import LL from '$i18n/i18n-svelte'
-   import { locale } from "$src/i18n/i18n-svelte";
+   import { locale } from "$i18n/i18n-svelte";
 	import { firstLetterCase, titleCase } from "$utils";
    
    import { 
       Main, SectionWrapper, Breadcrumbs, 
       Link, P, Title, Button, 
       Map, Card, Modal, 
-      ContactForm 
+      ContactForm, 
+	  SEO
    } from "$comp";
 	import Icon from "@iconify/svelte";
+
+	import website from '$src/lib/config/website';
    
    
    const places = [
@@ -28,9 +36,57 @@
       },
    ]
 
-   $: console.log($locale);
+   
+   const { author, siteUrl } = website;
+	let title = 'Home';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: '',
+		},
+	];
+	let metadescription =
+		'SvelteKit MDsvex Blog Starter - starter code by Rodney Lab to help you get going on your next blog site';
+	const featuredImageAlt =
+		'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
+	const featuredImage = {
+		url: featuredImageSrc,
+		alt: featuredImageAlt,
+		width: 672,
+		height: 448,
+		caption: 'Home page',
+	};
+	const ogImage = {
+		url: ogImageSrc,
+		alt: featuredImageAlt,
+	};
+	const ogSquareImage = {
+		url: ogSquareImageSrc,
+		alt: featuredImageAlt,
+	};
+	const entityMeta = {
+		url: `${siteUrl}/`,
+		faviconWidth: 512,
+		faviconHeight: 512,
+		caption: author,
+	};
+	const seoProps = {
+		title,
+		slug: '',
+		entityMeta,
+		datePublished: '2023-01-11T12:31:00.000+0100',
+		lastUpdated: '2023-01-11T12:31:00.000+0100',
+		breadcrumbs,
+		metadescription,
+		featuredImage,
+		ogImage,
+		ogSquareImage,
+	};
 
 </script>
+
+
+<SEO {...seoProps}/>
 
 <Breadcrumbs/>
 <Main cta>

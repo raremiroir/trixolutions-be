@@ -7,7 +7,7 @@
 	// Import Components
 	import { Navbar, Footer } from '$comp';
 	import "$src/app.postcss";
-	import { setLocale } from '$src/i18n/i18n-svelte';
+	import { setLocale } from '$i18n/i18n-svelte';
 </script>
 
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { P, Title, List, ListItem } from '$comp/core';
+    import { P, Title, List, ListItem } from '$comp';
 	import IntroSection from '../../IntroSection.svelte';
     
     // Import utils and stores

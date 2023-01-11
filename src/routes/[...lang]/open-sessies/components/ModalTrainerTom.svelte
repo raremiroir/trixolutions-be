@@ -1,6 +1,6 @@
 <script>
-   import LL from "$src/i18n/i18n-svelte";
-	import { titleCase } from "$src/lib/utils";
+   import LL from "$i18n/i18n-svelte";
+	import { titleCase } from "$utils";
 	import { Modal, TwicPic, Button, P, Title } from "$comp";
 
 </script>

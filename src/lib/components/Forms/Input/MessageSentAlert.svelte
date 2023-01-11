@@ -1,5 +1,5 @@
 <script lang="ts">
-   import LL from "$src/i18n/i18n-svelte";
+   import LL from "$i18n/i18n-svelte";
 	import { firstLetterCase, titleCase } from "$src/lib/utils";
 
 

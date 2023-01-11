@@ -15,7 +15,7 @@
 	// Import i18n
 	import LL, { locale, setLocale } from '$i18n/i18n-svelte'
 	import type { LayoutData } from './$types'
-	import { loadNamespaceAsync } from '$src/i18n/i18n-util.async';
+	import { loadNamespaceAsync } from '$i18n/i18n-util.async';
 	import { HeadHrefLangs } from '$comp';
 	
 	// Import supabase
@@ -36,14 +36,14 @@
 	setLocale(data.locale)
 
 	// Load pages dictionaries
-   const displayPagesText = async (locale) => {
+   const displayPagesText = async (locale:any) => {
          await loadNamespaceAsync(locale, 'components')
          await loadNamespaceAsync(locale, 'pages')
          await loadNamespaceAsync(locale, 'other')
          await loadNamespaceAsync(locale, 'sessions')
          setLocale(locale)
       }
-   displayPagesText($locale);
+   $: displayPagesText($locale);
 
 	
 	// 	// Supabase Auth
@@ -59,6 +59,7 @@
 	// 	}
 	// })
 
+	// Page Loading Spinner
 	let hasPageLoaded = false;
 	onMount(() => {
 		hasPageLoaded = true;

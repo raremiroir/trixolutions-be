@@ -1,5 +1,5 @@
 <script>
-    import { P, List } from "$comp/core";
+    import { P, List } from "$comp";
 	import ContentCard from "../../ContentCard.svelte";
 </script>
 

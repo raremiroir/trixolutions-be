@@ -3,8 +3,8 @@
 	// Import Components
 	import { Footer, Navbar } from "$comp";
 	import "$src/app.postcss";
-	import { setLocale } from '$src/i18n/i18n-svelte';
-	import { locale } from '$src/i18n/i18n-svelte';
+	import { setLocale } from '$i18n/i18n-svelte';
+	import { locale } from '$i18n/i18n-svelte';
 
 	export let data: LayoutData
 	setLocale(data.locale)

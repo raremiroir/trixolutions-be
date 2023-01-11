@@ -1,6 +1,5 @@
 <script lang="ts">
-    import { P, Title, List, ListItem, Blockquote } from '$comp/core';
-    import { Accordeon, AccordeonItem } from '$comp/content';
+    import { P, Title, List, ListItem, Blockquote, Accordeon, AccordeonItem } from '$comp';
 	
     import IntroSection from '../../IntroSection.svelte';
 	import IndepthSection from '../../IndepthSection.svelte';

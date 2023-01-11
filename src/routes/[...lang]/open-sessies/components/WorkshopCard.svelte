@@ -1,8 +1,7 @@
 <script lang="ts">
    import { List, ListItem } from "$comp";
 
-   import LL from "$src/i18n/i18n-svelte";
-   import { formatPrice } from "$utils";
+   import LL from "$i18n/i18n-svelte";
 	import PricingCard from "./PricingCard.svelte";
 
    export let session:any;

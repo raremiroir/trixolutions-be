@@ -16,12 +16,11 @@ import defaultFeaturedImage from '$lib/assets/images/home/home.png';
 		siteShortTitle,
 		siteTitle,
 		siteUrl,
-		githubPage,
 		linkedinProfile,
 	} = website;
 	export let article = false;
 	export let breadcrumbs = [];
-	export let entityMeta = null;
+	export let entityMeta = undefined;
 	export let lastUpdated;
 	export let datePublished;
 	export let metadescription;
@@ -78,7 +77,6 @@ import defaultFeaturedImage from '$lib/assets/images/home/home.png';
 		title: pageTitle,
 		url,
 		facebookPage,
-		githubPage,
 		linkedinProfile,
 	};
 </script>

@@ -1,6 +1,5 @@
 <script lang="ts">
-    import { Title, P } from '$comp/core';
-    import { Accordeon, AccordeonItem} from '$comp/content';
+    import { Title, P, Accordeon, AccordeonItem} from '$comp';
 
     import { locale } from '$i18n/i18n-svelte';
     

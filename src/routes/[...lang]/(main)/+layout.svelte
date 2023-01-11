@@ -2,7 +2,7 @@
 	// Import Components
 	import { Footer, Navbar } from "$comp";
 	import "$src/app.postcss";
-	import { setLocale } from "$src/i18n/i18n-svelte";
+	import { setLocale } from "$i18n/i18n-svelte";
 	import type { LayoutData } from "./$types";
 	
 	export let data: LayoutData

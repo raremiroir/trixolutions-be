@@ -14,7 +14,7 @@
 </script>
 
 <header>
-   <Hero height="h-92" imgSrc="{blogPost.img}" imgAlt="{blogPost.title}">
+   <Hero imgSrc="{blogPost.img}" imgAlt="{blogPost.title}">
       <div slot="title">
          <Title type="subheader" color="text-gray-200">Trixolutions Blog</Title>
          <Title type="h1" color="text-gray-100">{titleCase(blogPost.title)}</Title>

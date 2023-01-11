@@ -1,14 +1,17 @@
 <!--      -->
 <!--  JS  -->
 <!--      -->
-<script>
+<script lang="ts">
    // Extra classes on link component
    let klass = '';
    export { klass as class};
    // Where does the link reference to?
-   export let href = '#';
+   export let href:string;
    // Target of the link ( '' / '_blank' / ... )
    export let target = '';
+
+   export let rel = '';
+   export let ariaLabel:string;
 
    // Color of text in link
    export let color = ` text-primary-l3 
@@ -27,7 +30,7 @@
 <!--      -->
 
 <!-- Link Tag -->
-<a {href} {target}
+<a {href} {target} {rel} aria-label={ariaLabel}
    class="
       group font-medium font-body
       transition-all duration-300 ease-out

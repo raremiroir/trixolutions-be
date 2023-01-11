@@ -2,7 +2,7 @@
    
    import { firstLetterCase, formatDateShort, formatTime, formatUrl, formatYear, titleCase } from "$utils";
    
-   import LL, { locale } from "$src/i18n/i18n-svelte";
+   import LL, { locale } from "$i18n/i18n-svelte";
    
    import 
       { 
