@@ -1,10 +1,21 @@
 <script lang="ts">
+	// Import Loader Component
 	import Loader from './Loader.svelte';
-	
+	// Import PWA Component
+	import { PWA } from '$comp';
+
+	// Import Styles
+	import "$src/style/normalize.css"
+	import "$src/app.postcss";
+
+	// Load svelte items
+	import { onMount } from 'svelte';
 	import { page } from '$app/stores'
+	
 	// Import i18n
 	import LL, { locale, setLocale } from '$i18n/i18n-svelte'
 	import type { LayoutData } from './$types'
+	import { loadNamespaceAsync } from '$src/i18n/i18n-util.async';
 	import { HeadHrefLangs } from '$comp';
 	
 	// Import supabase
@@ -20,10 +31,11 @@
 		domain: 'https://trixolutions.twic.pics'
 	})
 	
+	// Import data
 	export let data: LayoutData
 	setLocale(data.locale)
 
-	// Load pages dictionary
+	// Load pages dictionaries
    const displayPagesText = async (locale) => {
          await loadNamespaceAsync(locale, 'components')
          await loadNamespaceAsync(locale, 'pages')
@@ -33,9 +45,6 @@
       }
    displayPagesText($locale);
 
-	import "$src/app.postcss";
-	import { loadNamespaceAsync } from '$src/i18n/i18n-util.async';
-	import { onMount } from 'svelte';
 	
 	// 	// Supabase Auth
 	// 	onMount(() => {
@@ -58,6 +67,7 @@
 
 </script>
 
+<PWA />
 <div class="app bg-gray-50">
 
 	{#if !hasPageLoaded}
