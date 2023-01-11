@@ -8,10 +8,8 @@
 	import { loadLocaleAsync } from '$i18n/i18n-util.async'
 	import { replaceLocaleInUrl } from '$utils'
 
-	import { Button } from '../../core'
-	import { Menu } from '../../content'
+	import { Button, Menu, Link } from '$comp'
 	import Icon from '@iconify/svelte'
-	import Link from '../Link.svelte';
 
 	const switchLocale = async (newLocale: Locales, updateHistoryState = true) => {
 		if (!newLocale || $locale === newLocale) return

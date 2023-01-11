@@ -2,7 +2,7 @@
    import { getContext } from "svelte";
    import { slide } from "svelte/transition";
 
-   import { Title } from "$comp/core";
+   import { Title } from "$comp";
 	import Icon from "@iconify/svelte";
 
    // set id

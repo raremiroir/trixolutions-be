@@ -1,7 +1,7 @@
 <script>
 	import Icon from "@iconify/svelte";
 
-   import { Link } from "../core";
+   import { Link } from "$comp";
 
    const menuItems = [
       {

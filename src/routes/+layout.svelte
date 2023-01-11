@@ -5,7 +5,7 @@
 	// Import i18n
 	import LL, { locale, setLocale } from '$i18n/i18n-svelte'
 	import type { LayoutData } from './$types'
-	import HeadHrefLangs from '$comp/Core/HeadHrefLangs.svelte';
+	import { HeadHrefLangs } from '$comp';
 	
 	// Import supabase
 	import supabase from '$lib/db';
@@ -33,9 +33,6 @@
       }
    displayPagesText($locale);
 
-	// Import Components
-	import { Footer, Navbar, Title } from '$comp/core';
-	
 	import "$src/app.postcss";
 	import { loadNamespaceAsync } from '$src/i18n/i18n-util.async';
 	import { onMount } from 'svelte';

@@ -1,7 +1,6 @@
 <script lang='ts'>
 
-	import { Button, Link } from "../../core";
-   import { Menu } from "../../content";
+	import { Button, Link, Menu } from "$comp";
 	import Icon from "@iconify/svelte";
 
    export let name:string;

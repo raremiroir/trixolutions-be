@@ -3,7 +3,7 @@
 <!--      -->
 <script lang="ts">
 	// Import components
-   import { Div, Link, Tag, Article } from "$comp/core";
+   import { Div, Link, Tag, Article } from "$comp";
 
    let klass = '';
    export { klass as class };
@@ -38,6 +38,9 @@
    wrapComp = link ? Link : Div;
 
    export let textCenter = false;
+
+   // Make animation fast
+   export let fast = false;
    
 </script>
 
@@ -51,12 +54,10 @@
    this={wrapComp}
    class="
       group overflow-hidden
-      bg-white
-      {link || hoverFx ? ` hover:bg-gray-200/70 active:bg-gray-200/70
-                             hover:shadow-xl hover:shadow-gray-900/30` 
-                       : ''}  
       rounded-xl shadow-lg
-      transition-all duration-500 ease-in-out
+      bg-white
+      {link || hoverFx ? `hover:bg-gray-100 active:bg-gray-200 hover:shadow-xl hover:shadow-gray-900/30 cursor-pointer` : ''}
+      transition-all {fast ? 'duration-300' : 'duration-500'} ease-in-out
       {equalHeight ? 'h-full' : 'h-fit'}
       max-w-full min-w-full
       {klass}
@@ -67,17 +68,19 @@
          class="
             flex gap-0 items-start
             justify-between w-full
-            transition-all duration-500 ease-in-out
+            transition-all {fast ? 'duration-300' : 'duration-500'} ease-in-out
+            bg-white rounded-xl overflow-hidden
+            {link || hoverFx ? ` group-hover:bg-gray-100 group-active:bg-gray-200 group-hover:shadow-xl group-hover:shadow-gray-900/30 cursor-pointer` : ''}
             {equalHeight ? 'h-full' : 'h-fit'}
             { direction === 'row' ? 'flex-row' 
-            : direction === 'row-reverse' ? 'flex-row-reverse'
+            : direction === 'row-reverse' ? 'flex-row-reverse' 
             : 'flex-col'} ">
 
          <slot name="prepend-outer"/>
          
          <!-- Content Wrap -->
          <div class="
-               flex flex-col gap-2  w-full
+               flex flex-col gap-0  w-full
                items-start justify-start
                { direction === 'row' ? 'flex-row' 
                : direction === 'row-reverse' ? 'flex-row-reverse'
@@ -87,18 +90,23 @@
                   : direction === 'col' ? 'w-full' 
                   : 'w-fit'} overflow-hidden
                   rounded-t-lg z-0 
-                  transition-all duration-500 ease-in-out
-                  { hoverFx ? 'h-full group-hover:h-32' : 'max-h-fit'}
+                  transition-all {fast ? 'duration-300' : 'duration-500'} ease-in-out
+                  { hoverFx ? 'h-full group-hover:h-[40%]' : 'max-h-fit'}
                   { link ? `group-hover:brightness-75 group-hover:-mt-2 sm:group-hover:-mt-3` : ''}">
                <slot name="image"/>
             </div>
             
              <!-- Inner Wrap -->
             <div class="
-                  {compact ? 'py-0 px-3' : 'py-2 px-4' }
-                  transition-all duration-500 ease-in-out
+                  {compact ? 'py-2 px-3' : 'py-6 px-4' }
+                  transition-all {fast ? 'duration-300' : 'duration-500'} ease-in-out
+                  bg-white h-fit
+                  {link || hoverFx 
+                     ? ` group-hover:bg-gray-100 group-active:bg-gray-200
+                         ${compact ? 'py-2 px-3 group-hover:pt-4 group-hover:pb-0' : 'py-6 group-hover:pt-5 group-hover:pb-1 px-4' }` 
+                     : `${compact ? 'py-2 px-3' : 'py-6 px-4' }`}  
                   z-3 w-full
-                  {link || hoverFx ? 'group-hover:mt-2 sm:group-hover:mt-3' : ''}
+                  {link || hoverFx ? '' : ''}
                   relative 
                   flex flex-col {textCenter ? 'items-center' : 'items-start'} 
                   justify-start
@@ -128,7 +136,11 @@
             </div>
          </div>
       
-         <div class="pt-0 px-4 pb-4 w-full">
+         <div class="
+               pt-0 px-4 pb-4 w-full
+               bg-white h-fit rounded-b-xl
+               transition-all {fast ? 'duration-300' : 'duration-500'} ease-in-out
+               {link || hoverFx ? ` group-hover:bg-gray-100 group-active:bg-gray-200` : ''}">
             <slot name="append-outer"/>
          </div>
       </svelte:component>

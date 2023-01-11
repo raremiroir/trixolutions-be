@@ -1,21 +1,19 @@
 <script lang="ts">
+   import supabase from '$src/lib/db';
    // Import svelte-forms-lib
    import { createForm } from 'svelte-forms-lib'
    // Import yup
    import * as yup from 'yup';
 	import LL from '$i18n/i18n-svelte'
-
+   
+	import { firstLetterCase, titleCase } from '$src/lib/utils';
    // Import components
    import { Confetti } from 'svelte-confetti';
-   import { Button, Loading } from "$comp/core";
-   import { Tooltip } from '$comp/common';
-   import { FormInput, RowWrap } from './Input/input'
+   import { Button, Tooltip } from '$comp';
+   
+   import { FormInput, RowWrap, ResetFormBtn, MessageSentAlert } from './Input/input'
 	import Icon from '@iconify/svelte';
-	import { firstLetterCase, titleCase } from '$src/lib/utils';
-	import Alert from '../Common/Alert.svelte';
-	import ResetFormBtn from './Input/ResetFormBtn.svelte';
-	import MessageSentAlert from './Input/MessageSentAlert.svelte';
-	import supabase from '$src/lib/db';
+
 
    // Define validation schema
    const initialValidationSchema = {

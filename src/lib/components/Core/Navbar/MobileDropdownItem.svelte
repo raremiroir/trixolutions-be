@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Link } from "../../core";
+	import { Button, Link } from "$comp";
 
    export let name:string
    export let link:string

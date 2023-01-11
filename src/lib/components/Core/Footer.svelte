@@ -1,8 +1,8 @@
 <script>
-   import { Logo } from "$comp/common";
+   import { Logo } from "$src/lib/components";
    import { locale } from "$src/i18n/i18n-svelte";
-	import Link from "./Link.svelte";
-	import Title from "./Text/Title.svelte";
+
+   import { Link, Title } from "$comp";
 </script>
 
 <!-- Footer -->

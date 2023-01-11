@@ -4,8 +4,7 @@
    import { breakpoints } from '$lib/stores';
    
    import { SplideSlide } from '@splidejs/svelte-splide';
-	import { Card, Modal, TwicPic } from '../../common';
-	import { P, Title } from '../../core';
+	import { Card, Modal, TwicPic, P, Title } from '$comp';
 
 
    export let modalId:number;
@@ -38,7 +37,7 @@
 
       <Modal trigger id={modalId}>
          <Card 
-            slot="trigger" equalHeight hoverFx compact
+            slot="trigger" equalHeight hoverFx compact fast
             class="w-full">
             <div class="h-fit w-full" slot="image">
                <!-- <Image imgSrc="{blogPost.img}" height="h-40" /> -->

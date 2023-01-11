@@ -3,7 +3,7 @@
 	import { firstLetterCase, titleCase } from "$src/lib/utils";
 
 
-	import { Alert } from "../../common";
+	import { Alert } from "$comp";
 
    export let resetForm:any;
 

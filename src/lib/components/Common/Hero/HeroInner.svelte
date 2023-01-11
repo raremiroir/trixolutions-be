@@ -1,7 +1,6 @@
 <script lang="ts">
    // Import components
-   import { Title } from "$comp/core";
-   import { TwicPic } from "$comp/common";
+   import { Title, TwicPic } from "$comp";
 
    import { breakpoints } from "$src/lib/stores";
 

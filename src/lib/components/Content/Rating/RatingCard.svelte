@@ -1,7 +1,5 @@
 <script>
-	import { Card } from "../../common";
-	import { P } from "../../core";
-   import Rating from "./Rating.svelte";
+	import { P, Card, Rating } from "$comp";
 
    export let rating = 3
 

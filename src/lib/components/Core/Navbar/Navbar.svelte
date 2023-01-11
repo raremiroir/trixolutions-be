@@ -7,9 +7,7 @@
    import { slide }     from "svelte/transition";
 
    // Import components
-   import { Button, Link } from "$comp/core";
-   import { Logo } from "$comp/common";
-   import { Menu } from "$comp/content";
+   import { Link, Logo } from "$comp";
    import { Hamburger, LangSwitcher, NavItem, DropdownItem, MobileNavItem, MobileDropdownItem } from "./navItems";
    import Icon          from '@iconify/svelte';
 

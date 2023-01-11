@@ -2,7 +2,7 @@
 <!--  JS  -->
 <!--      -->
 <script lang="ts">
-   import { Button } from "$comp/core";
+   import { Button } from "$comp";
 
    export let color = `
       bg-primary group-hover:bg-primary-l1 group-hover:drop-shadow-lg

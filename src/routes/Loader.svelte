@@ -1,5 +1,5 @@
 <script>
-	import Loading from "$src/lib/components/Core/Loading.svelte";
+	import { Loading } from "$comp";
 
         import { fade } from "svelte/transition";
 </script>

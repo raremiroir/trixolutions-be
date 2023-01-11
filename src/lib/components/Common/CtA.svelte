@@ -2,9 +2,7 @@
    import LL from "$src/i18n/i18n-svelte";
 	import { titleCase } from "$src/lib/utils";
 
-   import { Title, Button, Reveal } from "$comp/core";
-   import { Modal } from "$comp/common";
-	import ContactForm from "../Forms/ContactForm.svelte";
+   import { Title, Button, Reveal, Modal, ContactForm } from "$comp";
 	import Icon from "@iconify/svelte";
 
 </script>

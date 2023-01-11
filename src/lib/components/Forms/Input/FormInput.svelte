@@ -6,8 +6,7 @@
 	import { firstLetterCase, formatUrl, titleCase } from "$src/lib/utils";
    // Import components
 	import Icon from "@iconify/svelte";
-   import { Tooltip } from "$comp/common";
-   import { Button, P } from "$comp/core";
+   import { Tooltip, P } from "$comp";
 	import ValidationError from "./ValidationError.svelte";
 
    import TextArea from "./TextArea.svelte";

@@ -1,7 +1,6 @@
 <script lang="ts">
 
-   import { CtA } from "$comp/common";
-   import { Accordeon, AccordeonItem } from "$comp/content";
+   import { Accordeon, AccordeonItem, CtA } from "$comp";
    import { SectionWrapper } from "./wrapper";
 
 

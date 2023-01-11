@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { Card, TwicPic } from '../common';
-	import { Link, P, Title } from '../core';
+	import { Card, TwicPic, Link, P, Title } from '$comp';
 
    import { breakpoints } from '$src/lib/stores';
 	import { locale } from '$src/i18n/i18n-svelte';
@@ -30,7 +29,7 @@
 
 <svelte:window bind:innerWidth={innerWidth} />
 
-<Card link="{slug}" equalHeight direction="col" article>
+<Card link="{slug}" equalHeight direction="col" article hoverFx>
 	<Title 
 		slot = "title"
 		type='h3' smaller color="text-primary"

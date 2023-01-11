@@ -3,7 +3,7 @@
 	import { Grid } from '@splidejs/splide-extension-grid';
 	import '@splidejs/svelte-splide/css/core';
 
-	import { TwicPic } from '../../common';
+	import { TwicPic } from '$comp';
 
 	import SlideChangeBtn from './SlideChangeBtn.svelte';
 	import { onMount } from 'svelte';
@@ -51,7 +51,6 @@
 		gap: '1rem',
 		padding: '0.5rem',
 		autoplay: autoplay,
-		perMove: 1,
 		grid: {
 			rows: 3,
 			cols: 4,
@@ -101,6 +100,7 @@
 			520: {
 				height: '32rem',
 				perMove: 1,
+				perPage: 1,
 				grid: {
 					rows: 2,
 					cols: 1,
@@ -114,11 +114,11 @@
 	onMount(() => {
 		console.log(mySlider.splide);
 	});
+
 </script>
 
 <Splide
-	on:arrowsMounted={(e) => {}}
-	on:paginationMounted={(e) => {}}
+	on:paginationMounted={(e) => e.items.forEach( function (item) { item.button.textContent = String( item.page + 1 ) }) }
    on:mounted={ e => console.log( e.detail.splide.length ) }
    on:move={ e => console.log( 'move to', e.detail.index ) }
 	bind:this={mySlider}
@@ -127,12 +127,16 @@
 	aria-label={visibleHeading ? '' : label}
 	aria-labelledby={visibleHeading ? label : ''}
 	hasTrack={false}
-	class="w-full relative cursor-grab active:cursor-grabbing"
+	class="w-full h-fit relative cursor-grab active:cursor-grabbing bg-primary/10 py-2 rounded-2xl"
+   classes={{
+		pagination: 'splide__pagination features-pagination',
+		page      : 'splide__pagination__page features-page bg-primary w-4 h-4',
+  }},
 >
 	<div
 		class="
          custom-wrapper 
-         w-full h-full min-h-[20rem]
+         w-full h-fit min-h-[20rem]
          flex flex-col justify-between"
 	>
 		<!-- Navigation Arrows -->
@@ -140,14 +144,14 @@
 			<button
 				class="
                splide__arrow splide__arrow--prev
-               absolute left-0"
+               absolute left-2"
 			>
 				<SlideChangeBtn prev />
 			</button>
 			<button
 				class="
                splide__arrow splide__arrow--next
-               absolute right-0"
+               absolute right-2"
 			>
 				<SlideChangeBtn next />
 			</button>
@@ -158,14 +162,10 @@
 			<div class="splide__progress__bar" />
 		</div>
 
-		<ul
-			class="splide__pagination splide__pagination--ltr splide__pagination--custom bg-primary absolute top-8"
-			role="tablist"
-			aria-label="Select a slide to show"
-		>
-			<li role="presentation">
+      <ul class="splide__pagination top-0 features-pagination">
+         <li role="presentation">
 				<button
-					class="splide__pagination__page is-active bg-success"
+					class="splide__pagination__page !bg-primary !w-10 !h-10 features-page"
 					type="button"
 					role="tab"
 					aria-controls="splide01-slide01"
@@ -173,20 +173,10 @@
 					aria-selected="true"
 				/>
 			</li>
-			<li role="presentation">
-				<button
-					class="splide__pagination__page"
-					type="button"
-					role="tab"
-					aria-controls="splide01-slide02"
-					aria-label="Go to slide 2"
-					tabindex="-1"
-				/>
-			</li>
-		</ul>
+      </ul>
 
 		<!-- Slides -->
-		<SplideTrack class="mt-24">
+		<SplideTrack class="mt-8">
 			<slot />
 		</SplideTrack>
 	</div>
@@ -197,8 +187,10 @@
 		counter-reset: pagination-num;
 	}
 
-	.splide__pagination__page:before :global() {
+	.splide__pagination__page :global(),
+	.features-page :global() {
 		counter-increment: pagination-num;
 		content: counter(pagination-num);
 	}
+
 </style>

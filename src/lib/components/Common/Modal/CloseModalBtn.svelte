@@ -4,7 +4,7 @@
 	import { firstLetterCase } from "$utils";
    
 	import Icon from "@iconify/svelte";
-	import { Tooltip } from "../../common";
+	import { Tooltip } from "$comp";
 
    export let onClick:any;
 

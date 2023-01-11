@@ -1,8 +1,7 @@
 <script lang="ts">
    import LL from "$src/i18n/i18n-svelte";
 
-	import { Tooltip } from "../../common";
-	import { Button } from "../../core";
+	import { Tooltip, Button } from "$comp";
 	import Icon from "@iconify/svelte";
 
    export let formEmpty:any;

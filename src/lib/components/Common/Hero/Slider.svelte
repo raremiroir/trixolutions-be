@@ -11,7 +11,7 @@
 
 	// Import custom components
 	import Icon 	from '@iconify/svelte';
-	import { SlideChangeBtn } from '$comp/common';
+	import { SlideChangeBtn } from '$comp';
 
 	// Define swiper variable
 	let swiper:any;

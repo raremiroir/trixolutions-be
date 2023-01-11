@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { Modal, TwicPic } from "../../common";
-	import { P, Title } from "../../core";
+	import { Modal, TwicPic, P, Title } from "$comp";
 
    import { breakpoints } from "$src/lib/stores";
 

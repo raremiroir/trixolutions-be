@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { clickOutside } from '$lib/actions';
 	import Icon from '@iconify/svelte';
-	import { Title } from '../../core';
+	import { Title } from '$comp';
 	import CloseModalBtn from './CloseModalBtn.svelte';
 
 	export let closeModal: any;

@@ -3,8 +3,7 @@
 	import { fade } from "svelte/transition";
 
 	import { SwiperSlide } from "swiper/svelte";
-	import { Card, Modal, TwicPic } from "$comp/common";
-   import { Title, P } from "$comp/core";
+	import { Card, Modal, TwicPic, Title, P } from "$comp";
 
    export let modalId:number;
    export let imgSrc:string;
