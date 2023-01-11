@@ -2,3 +2,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.splide__pagination {
+   counter-reset: pagination-num;
+   height: 68px;
+}
+
+.splide__pagination__page {
+   counter-increment: pagination-num;
+   content: counter(pagination-num);
+   @apply bg-primary/70;
+   height: 20px;
+   width: 20px;
+   padding: 2px;
+   margin: 0 4px;
+   border-radius: 100%;
+   color: white;
+   font-size: 16px;
+   transition: all 150ms ease-out;
+   border: 2px solid;
+   @apply border-primary;
+
+   &:hover {
+      @apply bg-primary;
+   }
+}
+
+.splide__pagination__page.is-active {
+      @apply bg-primary-l3;
+   }
