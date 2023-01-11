@@ -19,8 +19,10 @@ const config = {
          $comp: 'src/lib/components',
          $img: 'src/lib/assets/images',
          $i18n: 'src/i18n',
-         $utils: 'src/lib/utils'
-      }
+         $utils: 'src/lib/utils',
+         $stores: 'src/lib/stores'
+      },
+      // csp: { mode: 'auto' }
 	}
 };
 
