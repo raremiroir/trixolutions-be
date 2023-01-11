@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Card, TwicPic, Link, P, Title } from '$comp';
 
-   import { breakpoints } from '$src/lib/stores';
+   import { breakpoints } from '$stores/breakpoints';
 	import { locale } from '$i18n/i18n-svelte';
 	import { formatDateShort, formatYear } from '$src/lib/utils';
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Modal, TwicPic, P, Title } from "$comp";
 
-   import { breakpoints } from "$src/lib/stores";
+   import { breakpoints } from "$stores/breakpoints";
 
    export let id:number;
 

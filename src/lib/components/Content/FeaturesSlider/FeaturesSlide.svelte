@@ -1,5 +1,5 @@
 <script lang="ts">
-   import { breakpoints } from "$src/lib/stores";
+   import { breakpoints } from "$stores/breakpoints";
 	import { fade } from "svelte/transition";
 
 	import { SwiperSlide } from "swiper/svelte";

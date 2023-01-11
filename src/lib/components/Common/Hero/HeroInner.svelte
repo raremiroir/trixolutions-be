@@ -2,8 +2,7 @@
    // Import components
    import { Title, TwicPic } from "$comp";
 
-   import { breakpoints } from "$src/lib/stores";
-
+   import { breakpoints } from '$stores/breakpoints'
 
    // Define image
    export let imgSrc = '';

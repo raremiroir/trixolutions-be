@@ -1,6 +1,6 @@
 <script>
-	import website from '$lib/config/website';
-	const { themeColor } = website;
+	import { website } from '$lib/config/website';
+	const themeColor = website.themeColor;
 </script>
 
 <svelte:head>
