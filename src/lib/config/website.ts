@@ -1,3 +1,6 @@
+import type { Site } from '$lib/types/site';
+import type { DD } from '$lib/types/dd';
+
 import {
 	PUBLIC_CONTACT_EMAIL,
 	PUBLIC_FACEBOOK_AUTHOR_PAGE,
@@ -7,10 +10,32 @@ import {
 	PUBLIC_SITE_URL,
 } from '$env/static/public';
 
+import SiteCover from '$img/home/home.png';
+
 const facebookPageName = PUBLIC_FACEBOOK_PAGE;
 const facebookAuthorPageName = PUBLIC_FACEBOOK_AUTHOR_PAGE;
 
-const website = {
+const siteConfig: Site.Config = {
+	url: 'https://trixolutions.be',
+	title: 'Trixolutions',
+	subtitle: 'Trixolutions - Training, Coaching & Consultancy',
+	description: 'Trixolutions - Opleidingen en Training in Lencioni Teamcoaching en Consultancy',
+	lang: 'nl',
+	timeZone: 'Europe/Brussels',
+	since: 2023,
+	cover: SiteCover,
+	author: {
+	  name: 'Mist Media',
+	  status: 'Developing',
+	  website: 'https://mistmedia.be',
+	  github: 'https://github.com/raremiroir',
+	  email: 'miro@mistmedia.be',
+	  bio: `Made with 💪 by Mist Media.`,
+	},
+ };
+ export default siteConfig;
+
+export const website = {
 	author: 'Miro Storm',
 	ogLanguage: 'nl-BE',
 	siteLanguage: 'nl-BE',
@@ -30,4 +55,87 @@ const website = {
 	linkedinProfile: PUBLIC_LINKEDIN_PROFILE,
 	};
 
-export { website as default };
+	export const navConfig: (DD.Nav | DD.Link)[] = [
+		{
+			name: 'Home',
+			url: '/',
+		 },
+		 {
+			name: 'Over Ons',
+			url: '/over-ons',
+		 },
+		 {
+			name: 'Referenties',
+			url: '/referenties',
+		 },
+		 {
+			name: 'Blog',
+			url: '/blog',
+		 },
+		 {
+			name: 'Open Sessies',
+			url: '/open-sessies',
+			links: [
+				{
+					name: "Gratis Open Infosesssies", 
+					url: "/gratis-open-infosessies"
+				},
+				{
+					name: "Hybride Lencioni Leertraject",
+					url: "/open-sessies/hybride-lencioni-leertraject"
+				},
+				{
+					name: "Lencioni Deepdive - Level 2" ,
+					url: "/lencioni-deepdive-level2"
+				}
+			]
+		 },
+		 {
+			name: 'Contact',
+			url: '/contact',
+		 },
+	 ];
+	 
+	 export const mobilenavConfig: DD.Nav = {
+		orientation: 2,
+		links: [
+			{
+				name: 'Home',
+				url: '/',
+			 },
+			 {
+				name: 'Over Ons',
+				url: '/over-ons',
+			 },
+			 {
+				name: 'Referenties',
+				url: '/referenties',
+			 },
+			 {
+				name: 'Blog',
+				url: '/blog',
+			 },
+			 {
+				name: 'Open Sessies',
+				url: '/open-sessies',
+				links: [
+					{
+						name: "Gratis Open Infosesssies", 
+						url: "/gratis-open-infosessies"
+					},
+               {
+						name: "Hybride Lencioni Leertraject",
+						url: "/open-sessies/hybride-lencioni-leertraject"
+					},
+               {
+						name: "Lencioni Deepdive - Level 2" ,
+						url: "/lencioni-deepdive-level2"
+					}
+				]
+			 },
+			 {
+				name: 'Contact',
+				url: '/contact',
+			 },
+		],
+	 };
