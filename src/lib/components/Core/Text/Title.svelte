@@ -6,6 +6,7 @@
 // Add extra classes when calling component
    let klass = ''
    export { klass as class };
+   export let innerClass = '';
 
 // Choose type of title or leave blank for default (h2)
    export let type = 'h2'
@@ -40,7 +41,7 @@ export let thin = false;
             font-title leading-none
             {color ? color : 'text-primary'} 
             {small ? 'text-7xl' : 'h1-size'}
-            { thin ? 'font-semibold' : 'font-bold'}"
+            { thin ? 'font-semibold' : 'font-bold'} {innerClass}"
           class:italic={italic}>
          <slot/>
       </h1>
