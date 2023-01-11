@@ -17,12 +17,11 @@
    
    // Import globals
    import { firstLetterCase, formatUrl } from "$utils/formatText";
-   import website from '$lib/config/website';
+   // import { website } from '$lib/config/website';
    
 
    // Import i18n
    import LL from '$i18n/i18n-svelte'
-	// console.info($LL.log({ fileName: '+page.svelte' }))
    
 
    // Import supabase
@@ -53,56 +52,57 @@
       return pagesData;
    }
 
-   const { author, siteUrl } = website;
-	let title = 'Home';
-	const breadcrumbs = [
-		{
-			name: 'Home',
-			slug: '',
-		},
-	];
-	let metadescription =
-		'SvelteKit MDsvex Blog Starter - starter code by Rodney Lab to help you get going on your next blog site';
-	const featuredImageAlt =
-		'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
-	const featuredImage = {
-		url: featuredImageSrc,
-		alt: featuredImageAlt,
-		width: 672,
-		height: 448,
-		caption: 'Home page',
-	};
-	const ogImage = {
-		url: ogImageSrc,
-		alt: featuredImageAlt,
-	};
-	const ogSquareImage = {
-		url: ogSquareImageSrc,
-		alt: featuredImageAlt,
-	};
-	const entityMeta = {
-		url: `${siteUrl}/`,
-		faviconWidth: 512,
-		faviconHeight: 512,
-		caption: author,
-	};
-	const seoProps = {
-		title,
-		slug: '',
-		entityMeta,
-		datePublished: '2023-01-11T12:31:00.000+0100',
-		lastUpdated: '2023-01-11T12:31:00.000+0100',
-		breadcrumbs,
-		metadescription,
-		featuredImage,
-		ogImage,
-		ogSquareImage,
-	};
+   // const author = website.author;
+   // const siteUrl = website.siteUrl;
+	// let title = 'Home';
+	// const breadcrumbs = [
+	// 	{
+	// 		name: 'Home',
+	// 		slug: '',
+	// 	},
+	// ];
+	// let metadescription =
+	// 	'SvelteKit MDsvex Blog Starter - starter code by Rodney Lab to help you get going on your next blog site';
+	// const featuredImageAlt =
+	// 	'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
+	// const featuredImage = {
+	// 	url: featuredImageSrc,
+	// 	alt: featuredImageAlt,
+	// 	width: 672,
+	// 	height: 448,
+	// 	caption: 'Home page',
+	// };
+	// const ogImage = {
+	// 	url: ogImageSrc,
+	// 	alt: featuredImageAlt,
+	// };
+	// const ogSquareImage = {
+	// 	url: ogSquareImageSrc,
+	// 	alt: featuredImageAlt,
+	// };
+	// const entityMeta = {
+	// 	url: `${siteUrl}/`,
+	// 	faviconWidth: 512,
+	// 	faviconHeight: 512,
+	// 	caption: author,
+	// };
+	// const seoProps = {
+	// 	title,
+	// 	slug: '',
+	// 	entityMeta,
+	// 	datePublished: '2023-01-11T12:31:00.000+0100',
+	// 	lastUpdated: '2023-01-11T12:31:00.000+0100',
+	// 	breadcrumbs,
+	// 	metadescription,
+	// 	featuredImage,
+	// 	ogImage,
+	// 	ogSquareImage,
+	// };
 
 </script>
 
 
-<SEO {...seoProps}/>
+<!-- <SEO {...seoProps}/> -->
 <header>
    <Navbar/>
 </header>
