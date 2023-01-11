@@ -2,6 +2,9 @@
 // =============== //
 // CORE COMPONENTS //
 // =============== //
+   // PWA & SEO
+   export { default as SEO }           from './Core/SEO/index.svelte'
+   export { default as PWA }           from './Core/PWA.svelte'
    // Empty elements
    export { default as Div }           from './Core/Div.svelte';
    export { default as Article }       from './Core/Article.svelte';
