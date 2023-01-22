@@ -37,6 +37,9 @@
    // Delay of transition effect
    export let transitionDelay:string = "0ms"
 
+   // Make css transitions slower
+   export let slow = false;
+
    ////// MODES //////
    // Cover: image fills area and is cropped
    // Contain: image will sit inside area with no cropping
@@ -79,5 +82,5 @@
       
       {preTransform}
    
-      class="transition-all duration-300 ease-out {klass}"
+      class="transition-all { slow ? 'duration-500' : 'duration-300'} ease-in-out {klass}"
    />
