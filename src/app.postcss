@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 /* Titles Sizes */
 .h1-size                        { font-size: clamp(3rem, 2rem + 4vw, 5rem); }
 .h1-size-sm                     { font-size: clamp(2.5rem, 1.375rem + 4.5vw, 4.75rem); }
@@ -76,6 +78,21 @@
    .btn-size-xxl { 
       @apply px-10 h-15 lg:px-12 lg:h-18 rounded-xl text-2xl lg:text-3xl;
    }
+
+/* Scrollbar */
+
+ ::-webkit-scrollbar {
+  width: 12px;
+  @apply bg-gray-100;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-l1/70 hover:bg-primary-l1 active:bg-primary;
+  transition: all 200ms ease-out;
+  border-radius: 10px;
+} 
 
 /* TODO Try removing these and see what happens */
    /* Splider Styles */
