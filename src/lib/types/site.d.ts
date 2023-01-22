@@ -50,15 +50,15 @@ export namespace Site {
     toUpdatedString: { locales: string; options: Intl.DateTimeFormatOptions };
   };
 
-  declare module '*&imagetools' {
-    /**
-     * Workaround found here
-     * - issue https://github.com/JonasKruckenberg/imagetools/issues/160#issuecomment-1009292026
-     * actual types
-     * - code https://github.com/JonasKruckenberg/imagetools/blob/main/packages/core/src/output-formats.ts
-     * - docs https://github.com/JonasKruckenberg/imagetools/blob/main/docs/guide/getting-started.md#metadata
-     */
-    const out;
-    export default out;
-  }
+  // declare module '*&imagetools' {
+  //   /**
+  //    * Workaround found here
+  //    * - issue https://github.com/JonasKruckenberg/imagetools/issues/160#issuecomment-1009292026
+  //    * actual types
+  //    * - code https://github.com/JonasKruckenberg/imagetools/blob/main/packages/core/src/output-formats.ts
+  //    * - docs https://github.com/JonasKruckenberg/imagetools/blob/main/docs/guide/getting-started.md#metadata
+  //    */
+  //   const out;
+  //   export default out;
+  // }
 }

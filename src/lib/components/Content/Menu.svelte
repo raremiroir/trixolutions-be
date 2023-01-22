@@ -39,7 +39,7 @@
 <!--      -->
 
 <!-- Component Wrapper -->
-<div class="min-w-fit {wrapClass}"
+<div class="min-w-fit {wrapClass} relative"
      on:focusout={handleMenuFocusLoss}>
 
 

@@ -2,57 +2,79 @@ import type { Translation } from '../i18n-types'
 
 const en: Translation = {
    base: {
+      nav: {
+         home: "home",
+         about: "about us",
+         references: "references",
+         blog: "blog",
+         open_sessions: "open workshops",
+         info_sessions: "free open info sessions",
+         hybrid_traject: "hybrid lencioni learning track",
+         deepdive: "lencioni deepdive - level 2",
+         contact: "contact",
+         hamburger: {
+            toggle_nav: "show or hide the navigation bar"
+         },
+         lang: {
+            change_lang: "change language",
+            change_lang_to: "change language to"
+         }
+      },
       db: {
-         loading: "laden",
-         error_loading: "er is iets fout gegaan bij het laden van de data"
+         loading: "loading",
+         error_loading: "something went wrong when loading the data"
       },
       geo: {
          country: {
-            belgium: "België",
-            netherlands: "Nederland"
+            belgium: "Belgium",
+            netherlands: "Netherlands"
          },
          city: {
-            antwerp: "Antwerpen"
+            antwerp: "Antwerp"
          },
          lang: {
-            dutch: "Nederlands",
-            french: "Frans",
-            english: "Engels"
+            dutch: "Dutch",
+            french: "French",
+            english: "English"
          }
       },
       btn: {
-         close: "sluiten"
+         close: "close",
+         back_to_home: "Back to Home Page"
+      },
+      error: {
+         not_found: "Sorry! The page you were looking for was not found. <br/>Return to our home page by clicking the button, or just use the navigation bar."
       },
       validation: {
-         required: "{item:string} is een verplicht veld.",
-         default_fixed: "{item:string} is ongeldig.",
-         field_too_short: "{item:string} moet minstens {min:number} letters lang zijn.",
-         field_too_long: "{item:string} mag maximaal {max:number} letters lang zijn.",
-         email_error: "Dit e-mailadres is ongeldig.",
-         only_alpha: "{item:string} zou geen speciale karakters of nummers mogen bevatten."
+         required: "{item:string} is a required field.",
+         default_fixed: "{item:string} is invalid.",
+         field_too_short: "{item:string} should be at least {min:number} letters long.",
+         field_too_long: "{item:string} should be at most {max:number} letters long.",
+         email_error: "This email in invalid.",
+         only_alpha: "{item:string} should not contain any numbers or special characters."
       },
       form: {
-         first_name: "voornaam",
-         last_name: "achternaam",
-         email: "e-mail",
-         company: "organisatie",
-         subject: "onderwerp",
-         message: "bericht",
-         telephone: "telefoonnummer",
-         pick_session: "kies een {session}",
+         first_name: "first name",
+         last_name: "last name",
+         email: "email",
+         company: "organisation",
+         subject: "subject",
+         message: "message",
+         telephone: "phone",
+         pick_session: "choose {session}",
          content: {
-            optional: "optioneel",
-            send_msg: "bericht verzenden",
-            sent_success: "bericht verzonden",
-            send_another_one: "nog eentje versturen",
-            fill_out_all: "Vul alle velden in alvorens je bericht te verzenden.",
-            reset_form: "Alle velden resetten",
-            reset_value: "Veld resetten",
-            automatic: "Automatisch gegenereerd",
+            optional: "optional",
+            send_msg: "send message",
+            sent_success: "message sent",
+            send_another_one: "send another one",
+            fill_out_all: "Please fill out all fields before sending the message.",
+            reset_form: "Reset all fields",
+            reset_value: "Reset field",
+            automatic: "Automatically generated",
          },
          sessions: {
             subscribe_message: {
-               subject: "{name} wenst zich in te schrijven in een {session}",
+               subject: "{name} would like to subscribe on {session}",
                intro: "Beste, \n\nGraag zou ik me inschrijven op een {session}.\n",
                name: "Mijn naam is {name}",
                session_picked: "Ik zou me graag inschrijven op de {session} op {date_picked}.\n",
@@ -64,10 +86,10 @@ const en: Translation = {
          }
       },
       slide: {
-         prev: "Vorige Slide",
-         next: "Volgende Slide"
+         prev: "Previous Slide",
+         next: "Next Slide"
       }
    }
-};
+}
 
 export default en;

@@ -1,20 +1,23 @@
 <script lang="ts">
+   // Import sb
    import supabase from '$src/lib/db';
+   // Import i18n
+	import LL from '$i18n/i18n-svelte'
+   
    // Import svelte-forms-lib
    import { createForm } from 'svelte-forms-lib'
    // Import yup
    import * as yup from 'yup';
-	import LL from '$i18n/i18n-svelte'
    
+   // Import utils
 	import { firstLetterCase, titleCase } from '$src/lib/utils';
    // Import components
-   import { Confetti } from 'svelte-confetti';
    import { Button, Tooltip } from '$comp';
-   
-   import { FormInput, RowWrap, ResetFormBtn, MessageSentAlert } from './Input/input'
+   import { RowWrap, ResetFormBtn, MessageSentAlert } from './FormUtils'
+   import FormInput from './FormInput/index.svelte'
 	import Icon from '@iconify/svelte';
-
-
+   import { Confetti } from 'svelte-confetti';
+   
    // Define validation schema
    const initialValidationSchema = {
       first_name: yup
@@ -50,7 +53,6 @@
          .required( $LL.base.validation.required({ item: titleCase($LL.base.form.message()) }) )
    }
 
-   
    let valSchema = yup.object().shape({
          first_name: initialValidationSchema.first_name,
          last_name: initialValidationSchema.last_name,

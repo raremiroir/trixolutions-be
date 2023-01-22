@@ -10,7 +10,7 @@
    // Set title
    export let title:string;
    // Set title type
-   export let titleType = 'h3'
+   export let titleType = ''
    // Title small case
    export let titleSmall = false
    // Title smaller case
@@ -55,7 +55,7 @@
          >
       
       <div class="flex items-center justify-start gap-2">
-         {#if icon}
+         {#if icon !== ''}
             <Icon 
                {icon} 
                class="
@@ -65,9 +65,9 @@
             />
          {/if}
          <Title 
-            type="{titleType}" 
+            type="{titleType ? titleType : 'h3'}" 
             color="text-primary group-hover:text-primary-l1" 
-            small={titleSmall} smaller={titleSmaller} smallest={titleSmallest}
+            small={titleSmall} smaller={titleType ? titleSmaller : true} smallest={titleSmallest}
             class="{icon ? 'pt-2' : 'pt-1'}">
             {title}
          </Title>

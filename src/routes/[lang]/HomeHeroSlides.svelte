@@ -1,0 +1,80 @@
+<script>
+   import LL from "$i18n/i18n-svelte";
+	import { Hero, HeroSlide, Title, Text, Button, H1, Subheader } from "$comp";
+
+   $: heroSlides = [
+      {
+         title: $LL.pages.home.hero.slides[0].title(),
+         subheader: $LL.pages.home.hero.slides[0].subheader(),
+         content: $LL.pages.home.hero.slides[0].content(),
+         extra: $LL.pages.home.hero.slides[0].extra(),
+         src: 'home/kracht-gezonde-teams.webp',
+         link: '',
+         extra_btn: {
+            title: 'Over Trixolutions',
+            link: '',
+         }
+      },
+      {
+         title: $LL.pages.home.hero.slides[1].title(), title_type: 'fake',
+         subheader: $LL.pages.home.hero.slides[1].subheader(),
+         content: $LL.pages.home.hero.slides[1].content(),
+         src: 'home/beslissende-voorsprong-2.webp',
+         link: '',
+      },
+      {
+         title: $LL.pages.home.hero.slides[2].title(), title_type: 'fake',
+         subheader: $LL.pages.home.hero.slides[2].subheader(),
+         content: $LL.pages.home.hero.slides[2].content(),
+         src: 'home/working-genius.webp',
+         link: '',
+      },
+   ];
+</script>
+
+<Hero slider>
+   {#each heroSlides as slide}
+      <HeroSlide
+         imgAlt="Trixolutions Lencioni - {slide.title}"
+         imgSrc='{slide.src}'
+         >
+         <H1 
+            slot="title" 
+            fake="{slide.title_type === 'fake'}" 
+            small={slide.title_type === 'fake'}
+            leading={slide.title_type === 'fake' ? 'leading-3' : ''}
+            color="text-gray-100">
+            {slide.title}
+         </H1>
+         <div class="flex flex-col gap-2">
+            <Subheader color="text-gray-50">
+               {slide.subheader}
+            </Subheader>
+            <Text semibold color="text-gray-200">
+               {@html slide.content}
+            </Text>
+            {#if slide.extra}
+               <Text bold color="text-gray-50">
+                  {@html slide.extra}
+               </Text>
+            {/if}
+         </div>
+         <div class="flex flex-row gap-4">
+            <Button 
+               ariaLabel="Meer info" outlined
+               size="lg" color="secondary"
+               href={slide.link}>
+               Meer Info
+            </Button>
+            {#if slide.extra_btn}
+               <Button 
+                  ariaLabel={slide.extra_btn.title} 
+                  size="lg" color="primary"
+                  href={slide.extra_btn.link}>
+                  {slide.extra_btn.title}
+               </Button>
+            {/if}
+         </div>
+      </HeroSlide>
+   {/each}
+</Hero>

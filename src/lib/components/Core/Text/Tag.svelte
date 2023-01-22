@@ -12,6 +12,9 @@
    export let small = false;
    // Larger tag
    export let large = false;
+
+   // unused props
+   export const content = '';
 </script>
 
 <!-- HTML -->

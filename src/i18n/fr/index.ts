@@ -2,6 +2,24 @@ import type { Translation } from '../i18n-types'
 
 const fr: Translation = {
    base: {
+      nav: {
+         home: "home",
+         about: "over ons",
+         references: "referenties",
+         blog: "blog",
+         open_sessions: "open workshops",
+         info_sessions: "gratis open infosessies",
+         hybrid_traject: "hybride lencioni leertraject",
+         deepdive: "lencioni deepdive - level 2",
+         contact: "contact",
+         hamburger: {
+            toggle_nav: "bekijk of verberg de navigatiebalk"
+         },
+         lang: {
+            change_lang: "verander van taal",
+            change_lang_to: "verander taal naar"
+         }
+      },
       db: {
          loading: "laden",
          error_loading: "er is iets fout gegaan bij het laden van de data"
@@ -21,7 +39,11 @@ const fr: Translation = {
          }
       },
       btn: {
-         close: "sluiten"
+         close: "sluiten",
+         back_to_home: "Terug naar Homepagina"
+      },
+      error: {
+         not_found: "Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk."
       },
       validation: {
          required: "{item:string} is een verplicht veld.",

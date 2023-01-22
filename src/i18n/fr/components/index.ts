@@ -5,20 +5,16 @@ const fr_components: NamespaceComponentsTranslation = {
       first: {
          title: "Het Partnership tussen Trixolutions en Patrick Lencioni",
          content_title: "Trixolutions is als enige in de Benelux lid van de Table Group van Patrick Lencioni. (CAPA Pro)",
-         first: [
-            "We worden in de Lencioni CAPA Pro Academy op wekelijkse basis begeleid, gecoacht en ",
-            "getraind in de verschillende Lencioni modellen, assessment en toepassingen door ",
-            "Patrick Lencioni en zijn consultants zelf.<br/>",
-            "Deze kennis, gecombineerd met meer dan 200 teamtrajecten op de teller, zijn we de ",
-            "ideale partner om jouw Lencioni kennis te verhogen naar het hoogste niveau."
-         ],
+         first:   `We worden in de Lencioni CAPA Pro Academy op wekelijkse basis begeleid, gecoacht en 
+                  getraind in de verschillende Lencioni modellen, assessment en toepassingen door 
+                  Patrick Lencioni en zijn consultants zelf.<br/>
+                  Deze kennis, gecombineerd met meer dan 200 teamtrajecten op de teller, zijn we de 
+                  ideale partner om jouw Lencioni kennis te verhogen naar het hoogste niveau.`,
          quote: "Niet de operationele en strategische sterktes van een team zijn doorslaggevend … maar wel de kracht en gezondheid van dit team zullen hét ultieme competitief voordeel zijn in de toekomst …",
-         last: [
-            "De kracht van een gezond team zit voornamelijk in de vaardigheid van teamleden ",
-            "om <strong>vertrouwen</strong> op te bouwen, met elkaar <strong>respectvolle conflicten</strong> te kunnen hebben, ",
-            "<strong>betrokkenheid bij het team</strong> te voelen, elkaar <strong>aansprakelijk</strong> te durven stellen en ",
-            "<strong>resultaatgericht</strong> te kunnen werken."
-         ]
+         last: `De kracht van een gezond team zit voornamelijk in de vaardigheid van teamleden 
+               om <strong>vertrouwen</strong> op te bouwen, met elkaar <strong>respectvolle conflicten</strong> te kunnen hebben, 
+               <strong>betrokkenheid bij het team</strong> te voelen, elkaar <strong>aansprakelijk</strong> te durven stellen en 
+               <strong>resultaatgericht</strong> te kunnen werken.`
       },
       second: {
          title: "Welke Vragen zullen We voor Je Oplossen?",
@@ -41,7 +37,6 @@ const fr_components: NamespaceComponentsTranslation = {
          ]
       }
    }
-
 }
 
 export default fr_components

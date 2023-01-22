@@ -3,7 +3,82 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Titles Sizes */
+.h1-size                        { font-size: clamp(3rem, 2rem + 4vw, 5rem); }
+.h1-size-sm                     { font-size: clamp(2.5rem, 1.375rem + 4.5vw, 4.75rem); }
+.h2-size                        { font-size: clamp(2rem, 0.75rem + 5vw, 4.5rem); }
+.h3-size                        { font-size: clamp(1.75rem, 1.125rem + 2.5vw, 3rem); }
+.h4-size                        { font-size: clamp(1.5rem, 1rem + 2vw, 2.5rem); }
+.h5-size, .subheader-size       { font-size: clamp(1.25rem, 0.875rem + 1.5vw, 2rem); }
+.h6-size, .subtitle-size        { font-size: clamp(1.125rem, 0.8125rem + 1.25vw, 1.75rem); }
+.h6-size-sm, .subheader-size-sm { font-size: clamp(1rem, 0.875rem + 0.5vw, 1.25rem); }
+.h6-size-xs, .subtitle-size-sm  { font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1.125rem); }
+.subtitle-size-xs               { font-size: clamp(0.75rem, 0.5rem + 1vw, 1.25rem); }
 
+/* Button styles */
+.btn-color-info  { 
+      &-outlined {
+         @apply text-info-d border-info-d;
+         &:hover { @apply !bg-info/20 border-info-d text-info-d }
+         &:active { @apply !bg-info/30 }
+      }
+   }
+   .btn-color-success  { 
+      &-default {
+         @apply !bg-success;
+         &:hover { @apply !bg-success-d }
+      }
+      &-outlined {
+         @apply text-success-d border-success-d;
+         &:hover { @apply !bg-success/20 border-success-d text-success-d }
+         &:active { @apply !bg-success/30 }
+      }
+   }
+   .btn-color-warning  { 
+      &-default {
+         @apply !bg-warning;
+         &:hover { @apply !bg-warning-d }
+      }
+      &-outlined {
+         @apply text-warning-d border-warning-d;
+         &:hover { @apply !bg-warning/20 border-warning-d text-warning-d }
+         &:active { @apply !bg-warning/30 }
+      }
+   }
+   .btn-color-error  { 
+      &-default {
+         @apply !bg-error;
+         &:hover { @apply !bg-error-d }
+      }
+      &-outlined {
+         @apply text-error-d border-error-d;
+         &:hover { @apply !bg-error/20 border-error-d text-error-d }
+         &:active { @apply !bg-error/30 }
+      }
+   }
+
+   .btn-size-xs  { 
+      @apply py-1 px-[6px] rounded text-sm;
+   }
+   .btn-size-sm  { 
+      @apply py-1 px-[6px] lg:px-4 lg:h-8 rounded-md text-sm lg:text-base;
+   }
+   .btn-size-md  { 
+      @apply px-4 h-8 lg:px-6 lg:h-11 rounded-lg;
+      @apply text-base lg:text-lg;
+   }
+   .btn-size-lg  { 
+      @apply px-6 h-11 lg:px-8 lg:h-13 rounded-[10px] text-lg lg:text-xl;
+   }
+   .btn-size-xl  { 
+      @apply px-8 h-13 lg:px-10 lg:h-15 rounded-xl text-xl lg:text-2xl;
+   }
+   .btn-size-xxl { 
+      @apply px-10 h-15 lg:px-12 lg:h-18 rounded-xl text-2xl lg:text-3xl;
+   }
+
+/* TODO Try removing these and see what happens */
+   /* Splider Styles */
 .splide__pagination {
    counter-reset: pagination-num;
    height: 68px;

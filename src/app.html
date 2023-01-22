@@ -3,7 +3,7 @@
 	<head prefix="og: https://ogp.me/ns#">
 		<meta charset="utf-8" />
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
-		<link rel="icon" href="icon.svg" type="image/svg+xml" />
+		<link rel="icon" href="/icon.svg" type="image/svg+xml" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
 		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
@@ -18,6 +18,8 @@
 		%sveltekit.head%
 	</head>
 	<body itemscope itemtype="https://schema.org/WebPage" data-sveltekit-prefetch>
-		<div id="svelte">%sveltekit.body%</div>
+		<div id="svelte">
+				%sveltekit.body%
+		 </div>
 	</body>
 </html>

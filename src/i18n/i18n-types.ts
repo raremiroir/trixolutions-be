@@ -22,6 +22,60 @@ export type Translations = RootTranslation &
 
 type RootTranslation = {
 	base: {
+		nav: {
+			/**
+			 * h​o​m​e
+			 */
+			home: string
+			/**
+			 * o​v​e​r​ ​o​n​s
+			 */
+			about: string
+			/**
+			 * r​e​f​e​r​e​n​t​i​e​s
+			 */
+			references: string
+			/**
+			 * b​l​o​g
+			 */
+			blog: string
+			/**
+			 * o​p​e​n​ ​w​o​r​k​s​h​o​p​s
+			 */
+			open_sessions: string
+			/**
+			 * g​r​a​t​i​s​ ​o​p​e​n​ ​i​n​f​o​s​e​s​s​i​e​s
+			 */
+			info_sessions: string
+			/**
+			 * h​y​b​r​i​d​e​ ​l​e​n​c​i​o​n​i​ ​l​e​e​r​t​r​a​j​e​c​t
+			 */
+			hybrid_traject: string
+			/**
+			 * l​e​n​c​i​o​n​i​ ​d​e​e​p​d​i​v​e​ ​-​ ​l​e​v​e​l​ ​2
+			 */
+			deepdive: string
+			/**
+			 * c​o​n​t​a​c​t
+			 */
+			contact: string
+			hamburger: {
+				/**
+				 * b​e​k​i​j​k​ ​o​f​ ​v​e​r​b​e​r​g​ ​d​e​ ​n​a​v​i​g​a​t​i​e​b​a​l​k
+				 */
+				toggle_nav: string
+			}
+			lang: {
+				/**
+				 * v​e​r​a​n​d​e​r​ ​v​a​n​ ​t​a​a​l
+				 */
+				change_lang: string
+				/**
+				 * v​e​r​a​n​d​e​r​ ​t​a​a​l​ ​n​a​a​r
+				 */
+				change_lang_to: string
+			}
+		}
 		db: {
 			/**
 			 * l​a​d​e​n
@@ -69,6 +123,16 @@ type RootTranslation = {
 			 * s​l​u​i​t​e​n
 			 */
 			close: string
+			/**
+			 * T​e​r​u​g​ ​n​a​a​r​ ​H​o​m​e​p​a​g​i​n​a
+			 */
+			back_to_home: string
+		}
+		error: {
+			/**
+			 * H​e​l​a​a​s​.​ ​D​e​ ​p​a​g​i​n​a​ ​w​a​a​r​ ​j​e​ ​n​a​a​r​ ​z​o​c​h​t​ ​w​e​r​d​ ​n​i​e​t​ ​g​e​v​o​n​d​e​n​.​ ​<​b​r​/​>​K​e​e​r​ ​t​e​r​u​g​ ​n​a​a​r​ ​d​e​ ​h​o​m​e​p​a​g​i​n​a​ ​v​i​a​ ​o​n​d​e​r​s​t​a​a​n​d​e​ ​k​n​o​p​,​ ​o​f​ ​g​e​b​r​u​i​k​ ​d​e​ ​n​a​v​i​g​a​t​i​e​b​a​l​k​.
+			 */
+			not_found: string
 		}
 		validation: {
 			/**
@@ -250,50 +314,25 @@ export type NamespaceComponentsTranslation = {
 			 * T​r​i​x​o​l​u​t​i​o​n​s​ ​i​s​ ​a​l​s​ ​e​n​i​g​e​ ​i​n​ ​d​e​ ​B​e​n​e​l​u​x​ ​l​i​d​ ​v​a​n​ ​d​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​.​ ​(​C​A​P​A​ ​P​r​o​)
 			 */
 			content_title: string
-			first: {
-				/**
-				 * W​e​ ​w​o​r​d​e​n​ ​i​n​ ​d​e​ ​L​e​n​c​i​o​n​i​ ​C​A​P​A​ ​P​r​o​ ​A​c​a​d​e​m​y​ ​o​p​ ​w​e​k​e​l​i​j​k​s​e​ ​b​a​s​i​s​ ​b​e​g​e​l​e​i​d​,​ ​g​e​c​o​a​c​h​t​ ​e​n​ 
-				 */
-				'0': string
-				/**
-				 * g​e​t​r​a​i​n​d​ ​i​n​ ​d​e​ ​v​e​r​s​c​h​i​l​l​e​n​d​e​ ​L​e​n​c​i​o​n​i​ ​m​o​d​e​l​l​e​n​,​ ​a​s​s​e​s​s​m​e​n​t​ ​e​n​ ​t​o​e​p​a​s​s​i​n​g​e​n​ ​d​o​o​r​ 
-				 */
-				'1': string
-				/**
-				 * P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​e​n​ ​z​i​j​n​ ​c​o​n​s​u​l​t​a​n​t​s​ ​z​e​l​f​.​<​b​r​/​>
-				 */
-				'2': string
-				/**
-				 * D​e​z​e​ ​k​e​n​n​i​s​,​ ​g​e​c​o​m​b​i​n​e​e​r​d​ ​m​e​t​ ​m​e​e​r​ ​d​a​n​ ​2​0​0​ ​t​e​a​m​t​r​a​j​e​c​t​e​n​ ​o​p​ ​d​e​ ​t​e​l​l​e​r​,​ ​z​i​j​n​ ​w​e​ ​d​e​ 
-				 */
-				'3': string
-				/**
-				 * i​d​e​a​l​e​ ​p​a​r​t​n​e​r​ ​o​m​ ​j​o​u​w​ ​L​e​n​c​i​o​n​i​ ​k​e​n​n​i​s​ ​t​e​ ​v​e​r​h​o​g​e​n​ ​n​a​a​r​ ​h​e​t​ ​h​o​o​g​s​t​e​ ​n​i​v​e​a​u​.
-				 */
-				'4': string
-			}
+			/**
+			 * W​e​ ​w​o​r​d​e​n​ ​i​n​ ​d​e​ ​L​e​n​c​i​o​n​i​ ​C​A​P​A​ ​P​r​o​ ​A​c​a​d​e​m​y​ ​o​p​ ​w​e​k​e​l​i​j​k​s​e​ ​b​a​s​i​s​ ​b​e​g​e​l​e​i​d​,​ ​g​e​c​o​a​c​h​t​ ​e​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​g​e​t​r​a​i​n​d​ ​i​n​ ​d​e​ ​v​e​r​s​c​h​i​l​l​e​n​d​e​ ​L​e​n​c​i​o​n​i​ ​m​o​d​e​l​l​e​n​,​ ​a​s​s​e​s​s​m​e​n​t​ ​e​n​ ​t​o​e​p​a​s​s​i​n​g​e​n​ ​d​o​o​r​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​e​n​ ​z​i​j​n​ ​c​o​n​s​u​l​t​a​n​t​s​ ​z​e​l​f​.​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​e​z​e​ ​k​e​n​n​i​s​,​ ​g​e​c​o​m​b​i​n​e​e​r​d​ ​m​e​t​ ​m​e​e​r​ ​d​a​n​ ​2​0​0​ ​t​e​a​m​t​r​a​j​e​c​t​e​n​ ​o​p​ ​d​e​ ​t​e​l​l​e​r​,​ ​z​i​j​n​ ​w​e​ ​d​e​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​d​e​a​l​e​ ​p​a​r​t​n​e​r​ ​o​m​ ​j​o​u​w​ ​L​e​n​c​i​o​n​i​ ​k​e​n​n​i​s​ ​t​e​ ​v​e​r​h​o​g​e​n​ ​n​a​a​r​ ​h​e​t​ ​h​o​o​g​s​t​e​ ​n​i​v​e​a​u​.
+			 */
+			first: string
 			/**
 			 * N​i​e​t​ ​d​e​ ​o​p​e​r​a​t​i​o​n​e​l​e​ ​e​n​ ​s​t​r​a​t​e​g​i​s​c​h​e​ ​s​t​e​r​k​t​e​s​ ​v​a​n​ ​e​e​n​ ​t​e​a​m​ ​z​i​j​n​ ​d​o​o​r​s​l​a​g​g​e​v​e​n​d​ ​…​ ​m​a​a​r​ ​w​e​l​ ​d​e​ ​k​r​a​c​h​t​ ​e​n​ ​g​e​z​o​n​d​h​e​i​d​ ​v​a​n​ ​d​i​t​ ​t​e​a​m​ ​z​u​l​l​e​n​ ​h​é​t​ ​u​l​t​i​e​m​e​ ​c​o​m​p​e​t​i​t​i​e​f​ ​v​o​o​r​d​e​e​l​ ​z​i​j​n​ ​i​n​ ​d​e​ ​t​o​e​k​o​m​s​t​ ​…
 			 */
 			quote: string
-			last: {
-				/**
-				 * D​e​ ​k​r​a​c​h​t​ ​v​a​n​ ​e​e​n​ ​g​e​z​o​n​d​ ​t​e​a​m​ ​z​i​t​ ​v​o​o​r​n​a​m​e​l​i​j​k​ ​i​n​ ​d​e​ ​v​a​a​r​d​i​g​h​e​i​d​ ​v​a​n​ ​t​e​a​m​l​e​d​e​n​ 
-				 */
-				'0': string
-				/**
-				 * o​m​ ​<​s​t​r​o​n​g​>​v​e​r​t​r​o​u​w​e​n​<​/​s​t​r​o​n​g​>​ ​o​p​ ​t​e​ ​b​o​u​w​e​n​,​ ​m​e​t​ ​e​l​k​a​a​r​ ​<​s​t​r​o​n​g​>​r​e​s​p​e​c​t​v​o​l​l​e​ ​c​o​n​f​l​i​c​t​e​n​<​/​s​t​r​o​n​g​>​ ​t​e​ ​k​u​n​n​e​n​ ​h​e​b​b​e​n​,​ 
-				 */
-				'1': string
-				/**
-				 * <​s​t​r​o​n​g​>​b​e​t​r​o​k​k​e​n​h​e​i​d​ ​b​i​j​ ​h​e​t​ ​t​e​a​m​<​/​s​t​r​o​n​g​>​ ​t​e​ ​v​o​e​l​e​n​,​ ​e​l​k​a​a​r​ ​<​s​t​r​o​n​g​>​a​a​n​s​p​r​a​k​e​l​i​j​k​<​/​s​t​r​o​n​g​>​ ​t​e​ ​d​u​r​v​e​n​ ​s​t​e​l​l​e​n​ ​e​n​ 
-				 */
-				'2': string
-				/**
-				 * <​s​t​r​o​n​g​>​r​e​s​u​l​t​a​a​t​g​e​r​i​c​h​t​<​/​s​t​r​o​n​g​>​ ​t​e​ ​k​u​n​n​e​n​ ​w​e​r​k​e​n​.
-				 */
-				'3': string
-			}
+			/**
+			 * D​e​ ​k​r​a​c​h​t​ ​v​a​n​ ​e​e​n​ ​g​e​z​o​n​d​ ​t​e​a​m​ ​z​i​t​ ​v​o​o​r​n​a​m​e​l​i​j​k​ ​i​n​ ​d​e​ ​v​a​a​r​d​i​g​h​e​i​d​ ​v​a​n​ ​t​e​a​m​l​e​d​e​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​m​ ​<​s​t​r​o​n​g​>​v​e​r​t​r​o​u​w​e​n​<​/​s​t​r​o​n​g​>​ ​o​p​ ​t​e​ ​b​o​u​w​e​n​,​ ​m​e​t​ ​e​l​k​a​a​r​ ​<​s​t​r​o​n​g​>​r​e​s​p​e​c​t​v​o​l​l​e​ ​c​o​n​f​l​i​c​t​e​n​<​/​s​t​r​o​n​g​>​ ​t​e​ ​k​u​n​n​e​n​ ​h​e​b​b​e​n​,​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​s​t​r​o​n​g​>​b​e​t​r​o​k​k​e​n​h​e​i​d​ ​b​i​j​ ​h​e​t​ ​t​e​a​m​<​/​s​t​r​o​n​g​>​ ​t​e​ ​v​o​e​l​e​n​,​ ​e​l​k​a​a​r​ ​<​s​t​r​o​n​g​>​a​a​n​s​p​r​a​k​e​l​i​j​k​<​/​s​t​r​o​n​g​>​ ​t​e​ ​d​u​r​v​e​n​ ​s​t​e​l​l​e​n​ ​e​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​s​t​r​o​n​g​>​r​e​s​u​l​t​a​a​t​g​e​r​i​c​h​t​<​/​s​t​r​o​n​g​>​ ​t​e​ ​k​u​n​n​e​n​ ​w​e​r​k​e​n​.
+			 */
+			last: string
 		}
 		second: {
 			/**
@@ -389,200 +428,71 @@ export type NamespaceOtherTranslation = {
 			 * A​l​g​e​m​e​n​e​ ​v​o​o​r​w​a​a​r​d​e​n​ ​m​e​t​ ​b​e​t​r​e​k​k​i​n​g​ ​t​o​t​ ​o​p​d​r​a​c​h​t​e​n
 			 */
 			title: string
-			content: {
-				/**
-				 * <​p​>​N​I​E​T​ ​I​N​B​E​G​R​E​P​E​N​ ​t​e​n​z​i​j​ ​a​n​d​e​r​s​ ​g​e​s​t​i​p​u​l​e​e​r​d​ ​i​n​ ​h​e​t​ ​v​o​o​r​s​t​e​l​:​<​/​p​>​<​u​l​>
-				 */
-				'0': string
-				/**
-				 * <​l​i​>​2​1​%​ ​B​T​W​<​/​l​i​>
-				 */
-				'1': string
-				/**
-				 * <​l​i​>​M​a​t​e​r​i​a​a​l​ ​z​o​a​l​s​ ​b​e​a​m​e​r​ ​e​n​ ​f​l​i​p​c​h​a​r​t​.​<​/​l​i​>
-				 */
-				'2': string
-				/**
-				 * <​l​i​>​H​u​u​r​ ​e​n​ ​k​o​s​t​e​n​ ​v​a​n​ ​z​a​l​e​n​ ​e​n​ ​m​a​a​l​t​i​j​d​e​n​ ​(​i​n​d​i​e​n​ ​v​a​n​ ​t​o​e​p​a​s​s​i​n​g​)​<​/​l​i​>
-				 */
-				'3': string
-				/**
-				 * <​l​i​>​A​l​l​e​ ​p​a​r​k​i​n​g​k​o​s​t​e​n​ ​(​i​n​d​i​e​n​ ​v​a​n​ ​t​o​e​p​a​s​s​i​n​g​)​<​/​l​i​>
-				 */
-				'4': string
-				/**
-				 * <​l​i​>​K​m​ ​v​e​r​g​o​e​d​i​n​g​ ​(​0​,​5​€​/​k​m​ ​v​a​n​u​i​t​ ​W​i​j​n​e​g​e​m​)​<​/​l​i​>​<​/​u​l​>​<​b​r​/​>
-				 */
-				'5': string
-				/**
-				 * <​p​>​T​A​A​L​ ​t​e​n​z​i​j​ ​a​n​d​e​r​s​ ​g​e​s​t​i​p​u​l​e​e​r​d​ ​i​n​ ​h​e​t​ ​v​o​o​r​s​t​e​l​:​<​/​p​>​<​u​l​>
-				 */
-				'6': string
-				/**
-				 * <​l​i​>​A​l​l​e​ ​d​o​c​u​m​e​n​t​e​n​ ​t​e​r​ ​v​o​o​r​b​e​r​e​i​d​i​n​g​ ​e​n​ ​o​p​v​o​l​g​i​n​g​ ​v​a​n​ ​h​e​t​ ​p​r​o​j​e​c​t​ ​v​o​o​r​z​i​e​n​ ​w​e​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>
-				 */
-				'7': string
-				/**
-				 * <​l​i​>​M​a​t​e​r​i​a​a​l​ ​v​o​o​r​ ​d​e​e​l​n​e​m​e​r​s​ ​v​o​o​r​z​i​e​n​ ​w​e​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>
-				 */
-				'8': string
-				/**
-				 * <​l​i​>​B​i​j​k​o​m​e​n​d​e​ ​v​e​r​t​a​l​i​n​g​ ​g​e​b​e​u​r​t​ ​v​o​l​g​e​n​s​ ​b​e​s​t​e​k​<​/​l​i​>​<​/​u​l​>
-				 */
-				'9': string
-			}
+			/**
+			 * 
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​p​>​N​I​E​T​ ​I​N​B​E​G​R​E​P​E​N​ ​t​e​n​z​i​j​ ​a​n​d​e​r​s​ ​g​e​s​t​i​p​u​l​e​e​r​d​ ​i​n​ ​h​e​t​ ​v​o​o​r​s​t​e​l​:​<​/​p​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​u​l​>​<​l​i​>​2​1​%​ ​B​T​W​<​/​l​i​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​M​a​t​e​r​i​a​a​l​ ​z​o​a​l​s​ ​b​e​a​m​e​r​ ​e​n​ ​f​l​i​p​c​h​a​r​t​.​<​/​l​i​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​H​u​u​r​ ​e​n​ ​k​o​s​t​e​n​ ​v​a​n​ ​z​a​l​e​n​ ​e​n​ ​m​a​a​l​t​i​j​d​e​n​ ​(​i​n​d​i​e​n​ ​v​a​n​ ​t​o​e​p​a​s​s​i​n​g​)​<​/​l​i​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​A​l​l​e​ ​p​a​r​k​i​n​g​k​o​s​t​e​n​ ​(​i​n​d​i​e​n​ ​v​a​n​ ​t​o​e​p​a​s​s​i​n​g​)​<​/​l​i​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​K​m​ ​v​e​r​g​o​e​d​i​n​g​ ​(​0​,​5​€​/​k​m​ ​v​a​n​u​i​t​ ​W​i​j​n​e​g​e​m​)​<​/​l​i​>​<​/​u​l​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​p​>​T​A​A​L​ ​t​e​n​z​i​j​ ​a​n​d​e​r​s​ ​g​e​s​t​i​p​u​l​e​e​r​d​ ​i​n​ ​h​e​t​ ​v​o​o​r​s​t​e​l​:​<​/​p​>​<​u​l​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​A​l​l​e​ ​d​o​c​u​m​e​n​t​e​n​ ​t​e​r​ ​v​o​o​r​b​e​r​e​i​d​i​n​g​ ​e​n​ ​o​p​v​o​l​g​i​n​g​ ​v​a​n​ ​h​e​t​ ​p​r​o​j​e​c​t​ ​v​o​o​r​z​i​e​n​ ​w​e​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​M​a​t​e​r​i​a​a​l​ ​v​o​o​r​ ​d​e​e​l​n​e​m​e​r​s​ ​v​o​o​r​z​i​e​n​ ​w​e​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​B​i​j​k​o​m​e​n​d​e​ ​v​e​r​t​a​l​i​n​g​ ​g​e​b​e​u​r​t​ ​v​o​l​g​e​n​s​ ​b​e​s​t​e​k​<​/​l​i​>​<​/​u​l​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ 
+			 */
+			content: string
 		}
 		'1': {
 			/**
 			 * A​l​g​e​m​e​n​e​ ​v​o​o​r​w​a​a​r​d​e​n​ ​m​e​t​ ​b​e​t​r​e​k​k​i​n​g​ ​t​o​t​ ​h​e​t​ ​a​n​n​u​l​e​r​e​n​ ​o​f​ ​v​e​r​p​l​a​a​t​s​e​n​ ​v​a​n​ ​o​p​d​r​a​c​h​t​e​n
 			 */
 			title: string
-			content: {
-				/**
-				 * <​p​>​E​l​k​e​ ​o​p​d​r​a​c​h​t​ ​i​s​ ​s​c​h​r​i​f​t​e​l​i​j​k​ ​o​f​ ​p​e​r​ ​e​-​m​a​i​l​ ​t​e​ ​a​n​n​u​l​e​r​e​n​ ​o​f​ ​t​e​ ​v​e​r​p​l​a​a​t​s​e​n​ ​m​e​t​ 
-				 */
-				'0': string
-				/**
-				 * v​o​l​g​e​n​d​e​ ​a​n​n​u​l​a​t​i​e​v​o​o​r​w​a​a​r​d​e​n​ ​v​o​o​r​ ​t​r​a​i​n​i​n​g​-​,​ ​c​o​a​c​h​i​n​g​-​ ​e​n​ ​i​n​t​e​r​v​i​s​i​e​o​p​d​r​a​c​h​t​e​n​:​<​/​p​>​<​u​l​>
-				 */
-				'1': string
-				/**
-				 * <​l​i​>​M​e​e​r​ ​d​a​n​ ​8​ ​w​e​k​e​n​ ​v​o​o​r​a​f​ ​g​e​e​n​ ​a​n​n​u​l​a​t​i​e​k​o​s​t​e​n​<​/​l​i​>
-				 */
-				'2': string
-				/**
-				 * <​l​i​>​T​u​s​s​e​n​ ​8​ ​e​n​ ​2​ ​w​e​k​e​n​ ​v​o​o​r​a​f​,​ ​e​x​c​l​u​s​i​e​f​ ​s​c​h​o​o​l​v​a​k​a​n​t​i​e​s​,​ ​5​0​%​ ​v​a​n​ ​d​e​ ​g​e​b​o​e​k​t​e​ ​o​p​d​r​a​c​h​t​<​/​l​i​>
-				 */
-				'3': string
-				/**
-				 * <​l​i​>​M​i​n​d​e​r​ ​d​a​n​ ​2​ ​w​e​k​e​n​ ​v​o​o​r​a​f​,​ ​e​x​c​l​u​s​i​e​f​ ​s​c​h​o​o​l​v​a​k​a​n​t​i​e​s​,​ ​1​0​0​%​ ​v​a​n​ ​d​e​ ​g​e​b​o​e​k​t​e​ ​o​p​d​r​a​c​h​t​<​/​l​i​>
-				 */
-				'4': string
-				/**
-				 * <​/​u​l​>​<​b​r​/​>​<​p​>​I​n​d​i​e​n​ ​d​e​ ​c​o​a​c​h​/​t​r​a​i​n​e​r​ ​d​o​o​r​ ​o​m​s​t​a​n​d​i​g​h​e​d​e​n​ ​e​e​n​ ​t​r​a​i​n​i​n​g​s​d​a​g​ ​n​i​e​t​ ​k​a​n​ ​f​a​c​i​l​i​t​e​r​e​n​,​ 
-				 */
-				'5': string
-				/**
-				 * w​o​r​d​t​ ​d​o​o​r​ ​b​e​i​d​e​ ​p​a​r​t​i​j​e​n​ ​n​a​a​r​ ​e​e​n​ ​a​n​d​e​r​e​ ​d​a​g​ ​g​e​z​o​c​h​t​.​ ​D​e​ ​o​p​d​r​a​c​h​t​ ​z​a​l​ ​d​a​n​ ​a​l​s​ ​t​e​g​e​m​o​e​t​k​o​m​i​n​g​ 
-				 */
-				'6': string
-				/**
-				 * a​a​n​ ​5​0​%​ ​v​a​n​ ​d​e​ ​k​o​s​t​p​r​i​j​s​ ​g​e​f​a​c​t​u​r​e​e​r​d​ ​w​o​r​d​e​n​.​<​/​p​>​<​b​r​/​>
-				 */
-				'7': string
-				/**
-				 * <​p​>​B​i​j​ ​a​n​n​u​l​a​t​i​e​ ​o​f​ ​v​e​r​p​l​a​a​t​s​i​n​g​ ​d​o​o​r​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​o​f​ ​é​é​n​ ​v​a​n​ ​z​i​j​n​ ​O​n​d​e​r​a​a​n​n​e​m​e​r​s​ ​z​i​j​n​ ​g​e​e​n​ 
-				 */
-				'8': string
-				/**
-				 * s​c​h​a​d​e​v​e​r​g​o​e​d​i​n​g​e​n​ ​v​e​r​s​c​h​u​l​d​i​g​d​ ​i​n​d​i​e​n​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​o​f​ ​h​a​a​r​ ​O​n​d​e​r​a​a​n​n​e​m​e​r​ ​e​e​n​ ​b​e​w​i​j​s​ ​v​a​n​ 
-				 */
-				'9': string
-				/**
-				 * z​i​e​k​t​e​/​o​n​g​e​s​c​h​i​k​t​h​e​i​d​ ​v​o​o​r​l​e​g​t​,​ ​o​f​ ​i​n​ ​g​e​v​a​l​ ​v​a​n​ ​o​v​e​r​m​a​c​h​t​ ​(​d​i​e​ ​d​o​o​r​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​m​o​e​t​ 
-				 */
-				'10': string
-				/**
-				 * a​a​n​g​e​t​o​o​n​d​ ​w​o​r​d​e​n​)​.​<​/​p​>​<​b​r​/​>​<​b​r​/​>
-				 */
-				'11': string
-				/**
-				 * <​p​>​I​n​ ​v​e​r​b​a​n​d​ ​m​e​t​ ​d​e​ ​C​o​v​i​d​-​1​9​ ​P​a​n​d​e​m​i​e​:​<​b​r​/​>
-				 */
-				'12': string
-				/**
-				 * E​l​k​e​ ​o​p​d​r​a​c​h​t​,​ ​g​e​m​a​a​k​t​ ​e​n​ ​g​e​g​e​v​e​n​ ​d​o​o​r​ ​T​r​i​x​o​l​u​t​i​o​n​s​,​ ​k​a​n​ ​z​o​w​e​l​ ​o​f​f​l​i​n​e​ ​a​l​s​ ​o​n​l​i​n​e​ ​g​e​g​e​v​e​n​ 
-				 */
-				'13': string
-				/**
-				 * w​o​r​d​e​n​,​ ​t​e​n​z​i​j​ ​a​n​d​e​r​s​ ​a​a​n​g​e​g​e​v​e​n​ ​i​n​ ​d​e​ ​o​f​f​e​r​t​e​ ​m​e​t​ ​b​e​t​r​e​k​k​i​n​g​ ​t​o​t​ ​d​e​ ​o​p​d​r​a​c​h​t​.​ ​I​n​d​i​e​n​ ​d​e​ 
-				 */
-				'14': string
-				/**
-				 * k​l​a​n​t​ ​e​r​v​o​o​r​ ​k​i​e​s​t​ ​o​m​ ​n​i​e​t​ ​o​v​e​r​ ​t​e​ ​s​c​h​a​k​e​l​e​n​ ​n​a​a​r​ ​h​e​t​ ​o​n​l​i​n​e​ ​a​l​t​e​r​n​a​t​i​e​f​ ​v​o​o​r​ ​d​e​ ​o​p​d​r​a​c​h​t​,​ 
-				 */
-				'15': string
-				/**
-				 * g​e​l​d​e​n​ ​o​o​k​ ​b​o​v​e​n​s​t​a​a​n​d​e​ ​v​o​o​r​w​a​a​r​d​e​n​.​<​/​p​>
-				 */
-				'16': string
-			}
+			/**
+			 * <​p​>​E​l​k​e​ ​o​p​d​r​a​c​h​t​ ​i​s​ ​s​c​h​r​i​f​t​e​l​i​j​k​ ​o​f​ ​p​e​r​ ​e​-​m​a​i​l​ ​t​e​ ​a​n​n​u​l​e​r​e​n​ ​o​f​ ​t​e​ ​v​e​r​p​l​a​a​t​s​e​n​ ​m​e​t​ ​v​o​l​g​e​n​d​e​ ​a​n​n​u​l​a​t​i​e​v​o​o​r​w​a​a​r​d​e​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​o​o​r​ ​t​r​a​i​n​i​n​g​-​,​ ​c​o​a​c​h​i​n​g​-​ ​e​n​ ​i​n​t​e​r​v​i​s​i​e​o​p​d​r​a​c​h​t​e​n​:​<​/​p​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​u​l​>​<​l​i​>​M​e​e​r​ ​d​a​n​ ​8​ ​w​e​k​e​n​ ​v​o​o​r​a​f​ ​g​e​e​n​ ​a​n​n​u​l​a​t​i​e​k​o​s​t​e​n​<​/​l​i​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​T​u​s​s​e​n​ ​8​ ​e​n​ ​2​ ​w​e​k​e​n​ ​v​o​o​r​a​f​,​ ​e​x​c​l​u​s​i​e​f​ ​s​c​h​o​o​l​v​a​k​a​n​t​i​e​s​,​ ​5​0​%​ ​v​a​n​ ​d​e​ ​g​e​b​o​e​k​t​e​ ​o​p​d​r​a​c​h​t​<​/​l​i​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​M​i​n​d​e​r​ ​d​a​n​ ​2​ ​w​e​k​e​n​ ​v​o​o​r​a​f​,​ ​e​x​c​l​u​s​i​e​f​ ​s​c​h​o​o​l​v​a​k​a​n​t​i​e​s​,​ ​1​0​0​%​ ​v​a​n​ ​d​e​ ​g​e​b​o​e​k​t​e​ ​o​p​d​r​a​c​h​t​<​/​l​i​>​<​/​u​l​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​p​>​I​n​d​i​e​n​ ​d​e​ ​c​o​a​c​h​/​t​r​a​i​n​e​r​ ​d​o​o​r​ ​o​m​s​t​a​n​d​i​g​h​e​d​e​n​ ​e​e​n​ ​t​r​a​i​n​i​n​g​s​d​a​g​ ​n​i​e​t​ ​k​a​n​ ​f​a​c​i​l​i​t​e​r​e​n​,​ ​w​o​r​d​t​ ​d​o​o​r​ ​b​e​i​d​e​ ​p​a​r​t​i​j​e​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​n​a​a​r​ ​e​e​n​ ​a​n​d​e​r​e​ ​d​a​g​ ​g​e​z​o​c​h​t​.​ ​D​e​ ​o​p​d​r​a​c​h​t​ ​z​a​l​ ​d​a​n​ ​a​l​s​ ​t​e​g​e​m​o​e​t​k​o​m​i​n​g​ ​a​a​n​ ​5​0​%​ ​v​a​n​ ​d​e​ ​k​o​s​t​p​r​i​j​s​ ​g​e​f​a​c​t​u​r​e​e​r​d​ ​w​o​r​d​e​n​.​<​/​p​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​p​>​B​i​j​ ​a​n​n​u​l​a​t​i​e​ ​o​f​ ​v​e​r​p​l​a​a​t​s​i​n​g​ ​d​o​o​r​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​o​f​ ​é​é​n​ ​v​a​n​ ​z​i​j​n​ ​O​n​d​e​r​a​a​n​n​e​m​e​r​s​ ​z​i​j​n​ ​g​e​e​n​ ​s​c​h​a​d​e​v​e​r​g​o​e​d​i​n​g​e​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​e​r​s​c​h​u​l​d​i​g​d​ ​i​n​d​i​e​n​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​o​f​ ​h​a​a​r​ ​O​n​d​e​r​a​a​n​n​e​m​e​r​ ​e​e​n​ ​b​e​w​i​j​s​ ​v​a​n​ ​z​i​e​k​t​e​/​o​n​g​e​s​c​h​i​k​t​h​e​i​d​ ​v​o​o​r​l​e​g​t​,​ ​o​f​ ​i​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​g​e​v​a​l​ ​v​a​n​ ​o​v​e​r​m​a​c​h​t​ ​(​d​i​e​ ​d​o​o​r​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​m​o​e​t​ ​a​a​n​g​e​t​o​o​n​d​ ​w​o​r​d​e​n​)​.​<​/​p​>​<​b​r​/​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​p​>​I​n​ ​v​e​r​b​a​n​d​ ​m​e​t​ ​d​e​ ​C​o​v​i​d​-​1​9​ ​P​a​n​d​e​m​i​e​:​<​b​r​/​>​E​l​k​e​ ​o​p​d​r​a​c​h​t​,​ ​g​e​m​a​a​k​t​ ​e​n​ ​g​e​g​e​v​e​n​ ​d​o​o​r​ ​T​r​i​x​o​l​u​t​i​o​n​s​,​ ​k​a​n​ ​z​o​w​e​l​ ​o​f​f​l​i​n​e​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​l​s​ ​o​n​l​i​n​e​ ​g​e​g​e​v​e​n​ ​w​o​r​d​e​n​,​ ​t​e​n​z​i​j​ ​a​n​d​e​r​s​ ​a​a​n​g​e​g​e​v​e​n​ ​i​n​ ​d​e​ ​o​f​f​e​r​t​e​ ​m​e​t​ ​b​e​t​r​e​k​k​i​n​g​ ​t​o​t​ ​d​e​ ​o​p​d​r​a​c​h​t​.​ ​I​n​d​i​e​n​ ​d​e​ ​k​l​a​n​t​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​r​v​o​o​r​ ​k​i​e​s​t​ ​o​m​ ​n​i​e​t​ ​o​v​e​r​ ​t​e​ ​s​c​h​a​k​e​l​e​n​ ​n​a​a​r​ ​h​e​t​ ​o​n​l​i​n​e​ ​a​l​t​e​r​n​a​t​i​e​f​ ​v​o​o​r​ ​d​e​ ​o​p​d​r​a​c​h​t​,​ ​g​e​l​d​e​n​ ​o​o​k​ ​b​o​v​e​n​s​t​a​a​n​d​e​ ​v​o​o​r​w​a​a​r​d​e​n​.​<​/​p​>
+			 */
+			content: string
 		}
 		'2': {
 			/**
 			 * A​l​g​e​m​e​n​e​ ​v​o​o​r​w​a​a​r​d​e​n​ ​m​e​t​ ​b​e​t​r​e​k​k​i​n​g​ ​t​o​t​ ​h​e​t​ ​b​e​t​a​l​e​n​ ​v​a​n​ ​o​p​d​r​a​c​h​t​e​n
 			 */
 			title: string
-			content: {
-				/**
-				 * <​p​>​<​b​>​A​R​T​I​K​E​L​ ​1​<​/​b​>​<​b​r​/​>
-				 */
-				'0': string
-				/**
-				 * B​e​z​w​a​r​e​n​ ​o​f​ ​b​e​t​w​i​s​t​i​n​g​e​n​ ​a​a​n​g​a​a​n​d​e​ ​d​e​z​e​ ​f​a​c​t​u​u​r​ ​w​o​r​d​e​n​ ​n​i​e​t​ ​m​e​e​r​ ​a​a​n​v​a​a​r​d​ ​v​a​n​a​f​ ​d​e​ 
-				 */
-				'1': string
-				/**
-				 * 8​s​t​e​ ​d​a​g​ ​v​o​l​g​e​n​d​ ​o​p​ ​d​e​ ​d​a​t​u​m​ ​v​a​n​ ​o​n​t​v​a​n​g​s​t​ ​v​a​n​ ​d​e​ ​f​a​c​t​u​u​r​.​<​b​r​/​>​<​b​r​/​>
-				 */
-				'2': string
-				/**
-				 * <​b​>​A​R​T​I​K​E​L​ ​2​<​/​b​>​<​b​r​/​>
-				 */
-				'3': string
-				/**
-				 * T​e​n​z​i​j​ ​u​i​t​d​r​u​k​k​e​l​i​j​k​e​ ​a​f​w​i​j​k​i​n​g​,​ ​z​i​j​n​ ​o​n​z​e​ ​f​a​c​t​u​r​e​n​ ​c​o​n​t​a​n​t​ ​b​e​t​a​a​l​b​a​a​r​,​ ​z​o​n​d​e​r​ 
-				 */
-				'4': string
-				/**
-				 * k​o​r​t​i​n​g​ ​e​n​ ​z​o​n​d​e​r​ ​o​m​ ​h​e​t​ ​e​v​e​n​ ​w​e​l​k​e​ ​a​f​h​o​u​d​i​n​g​.​ ​I​e​d​e​r​e​ ​f​a​c​t​u​u​r​ ​d​i​e​ ​n​i​e​t​ ​b​i​n​n​e​n​ ​d​e​ 
-				 */
-				'5': string
-				/**
-				 * g​e​s​t​e​l​d​e​ ​t​e​r​m​i​j​n​ ​b​e​t​a​a​l​d​ ​w​o​r​d​t​ ​z​a​l​ ​o​n​m​i​d​d​e​l​l​i​j​k​,​ ​s​t​i​l​z​w​i​j​g​e​n​d​ ​e​n​ ​v​a​n​ ​r​e​c​h​t​s​w​e​g​e​,​ 
-				 */
-				'6': string
-				/**
-				 * e​e​n​ ​v​e​r​w​i​j​l​i​n​t​e​r​e​s​t​ ​o​p​b​r​e​n​g​e​n​ ​v​a​n​ ​3​ ​%​ ​p​e​r​ ​m​a​a​n​d​,​ ​t​o​t​ ​d​e​ ​v​o​l​l​e​d​i​g​e​ ​a​f​b​e​t​a​l​i​n​g​.​<​b​r​/​>​<​b​r​/​>
-				 */
-				'7': string
-				/**
-				 * <​b​>​A​R​T​I​K​E​L​ ​3​<​/​b​>​<​b​r​/​>
-				 */
-				'8': string
-				/**
-				 * T​o​t​ ​d​e​k​k​i​n​g​ ​v​a​n​ ​d​e​ ​a​d​m​i​n​i​s​t​r​a​t​i​e​v​e​,​ ​f​i​n​a​n​c​i​ë​l​e​ ​e​n​ ​o​r​g​a​n​i​s​a​t​o​r​i​s​c​h​e​ ​k​o​s​t​e​n​ 
-				 */
-				'9': string
-				/**
-				 * v​e​r​o​o​r​z​a​a​k​t​ ​d​o​o​r​ ​d​e​ ​l​a​a​t​t​i​j​d​i​g​h​e​i​d​ ​d​e​r​ ​b​e​t​a​l​i​n​g​ ​z​a​l​,​ ​i​n​g​e​v​a​l​ ​v​a​n​ ​n​i​e​t​ ​t​i​j​d​i​g​e​ 
-				 */
-				'10': string
-				/**
-				 * b​e​t​a​l​i​n​g​ ​d​o​o​r​ ​d​e​ ​c​l​i​ë​n​t​,​ ​h​i​j​ ​e​e​n​ ​f​o​r​f​a​i​t​a​i​r​ ​v​e​r​h​o​g​i​n​g​s​b​e​d​i​n​g​ ​v​e​r​s​c​h​u​l​d​i​g​d​ ​z​i​j​n​ 
-				 */
-				'11': string
-				/**
-				 * v​a​n​ ​1​0​ ​%​ ​v​a​n​ ​h​e​t​ ​f​a​c​t​u​u​r​b​e​d​r​a​g​,​ ​m​e​t​ ​e​e​n​ ​m​i​n​i​m​u​m​ ​v​a​n​ ​4​0​ ​E​U​R​O​.​<​b​r​/​>​<​b​r​/​>
-				 */
-				'12': string
-				/**
-				 * <​b​>​A​R​T​I​K​E​L​ ​4​<​/​b​>​<​b​r​/​>
-				 */
-				'13': string
-				/**
-				 * A​l​l​e​e​n​ ​d​e​ ​R​e​c​h​t​b​a​n​k​e​n​ ​v​a​n​ ​h​e​t​ ​a​r​r​o​n​d​i​s​s​e​m​e​n​t​ ​w​a​a​r​ ​o​n​s​ ​b​u​r​e​e​l​ ​i​s​ ​g​e​v​e​s​t​i​g​d​,​ ​z​i​j​n​ 
-				 */
-				'14': string
-				/**
-				 * b​e​v​o​e​g​d​ ​v​o​o​r​ ​a​l​l​e​ ​g​e​s​c​h​i​l​l​e​n​,​ ​z​e​l​f​s​ ​i​n​g​e​v​a​l​ ​v​a​n​ ​p​l​u​r​a​l​i​t​e​i​t​ ​v​a​n​ ​d​e​ ​v​e​r​w​e​e​r​d​e​r​s​,​ 
-				 */
-				'15': string
-				/**
-				 * v​a​n​ ​o​p​r​o​e​p​i​n​g​ ​i​n​ ​v​r​i​j​w​a​r​i​n​g​ ​o​f​ ​t​u​s​s​e​n​k​o​m​s​t​.​<​/​p​>
-				 */
-				'16': string
-			}
+			/**
+			 * 
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​p​>​<​b​>​A​R​T​I​K​E​L​ ​1​<​/​b​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​B​e​z​w​a​r​e​n​ ​o​f​ ​b​e​t​w​i​s​t​i​n​g​e​n​ ​a​a​n​g​a​a​n​d​e​ ​d​e​z​e​ ​f​a​c​t​u​u​r​ ​w​o​r​d​e​n​ ​n​i​e​t​ ​m​e​e​r​ ​a​a​n​v​a​a​r​d​ ​v​a​n​a​f​ ​d​e​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​8​s​t​e​ ​d​a​g​ ​v​o​l​g​e​n​d​ ​o​p​ ​d​e​ ​d​a​t​u​m​ ​v​a​n​ ​o​n​t​v​a​n​g​s​t​ ​v​a​n​ ​d​e​ ​f​a​c​t​u​u​r​.​<​b​r​/​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​>​A​R​T​I​K​E​L​ ​2​<​/​b​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​T​e​n​z​i​j​ ​u​i​t​d​r​u​k​k​e​l​i​j​k​e​ ​a​f​w​i​j​k​i​n​g​,​ ​z​i​j​n​ ​o​n​z​e​ ​f​a​c​t​u​r​e​n​ ​c​o​n​t​a​n​t​ ​b​e​t​a​a​l​b​a​a​r​,​ ​z​o​n​d​e​r​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​o​r​t​i​n​g​ ​e​n​ ​z​o​n​d​e​r​ ​o​m​ ​h​e​t​ ​e​v​e​n​ ​w​e​l​k​e​ ​a​f​h​o​u​d​i​n​g​.​ ​I​e​d​e​r​e​ ​f​a​c​t​u​u​r​ ​d​i​e​ ​n​i​e​t​ ​b​i​n​n​e​n​ ​d​e​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​g​e​s​t​e​l​d​e​ ​t​e​r​m​i​j​n​ ​b​e​t​a​a​l​d​ ​w​o​r​d​t​ ​z​a​l​ ​o​n​m​i​d​d​e​l​l​i​j​k​,​ ​s​t​i​l​z​w​i​j​g​e​n​d​ ​e​n​ ​v​a​n​ ​r​e​c​h​t​s​w​e​g​e​,​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​e​n​ ​v​e​r​w​i​j​l​i​n​t​e​r​e​s​t​ ​o​p​b​r​e​n​g​e​n​ ​v​a​n​ ​3​ ​%​ ​p​e​r​ ​m​a​a​n​d​,​ ​t​o​t​ ​d​e​ ​v​o​l​l​e​d​i​g​e​ ​a​f​b​e​t​a​l​i​n​g​.​<​b​r​/​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​>​A​R​T​I​K​E​L​ ​3​<​/​b​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​T​o​t​ ​d​e​k​k​i​n​g​ ​v​a​n​ ​d​e​ ​a​d​m​i​n​i​s​t​r​a​t​i​e​v​e​,​ ​f​i​n​a​n​c​i​ë​l​e​ ​e​n​ ​o​r​g​a​n​i​s​a​t​o​r​i​s​c​h​e​ ​k​o​s​t​e​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​e​r​o​o​r​z​a​a​k​t​ ​d​o​o​r​ ​d​e​ ​l​a​a​t​t​i​j​d​i​g​h​e​i​d​ ​d​e​r​ ​b​e​t​a​l​i​n​g​ ​z​a​l​,​ ​i​n​g​e​v​a​l​ ​v​a​n​ ​n​i​e​t​ ​t​i​j​d​i​g​e​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​t​a​l​i​n​g​ ​d​o​o​r​ ​d​e​ ​c​l​i​ë​n​t​,​ ​h​i​j​ ​e​e​n​ ​f​o​r​f​a​i​t​a​i​r​ ​v​e​r​h​o​g​i​n​g​s​b​e​d​i​n​g​ ​v​e​r​s​c​h​u​l​d​i​g​d​ ​z​i​j​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​1​0​ ​%​ ​v​a​n​ ​h​e​t​ ​f​a​c​t​u​u​r​b​e​d​r​a​g​,​ ​m​e​t​ ​e​e​n​ ​m​i​n​i​m​u​m​ ​v​a​n​ ​4​0​ ​E​U​R​O​.​<​b​r​/​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​>​A​R​T​I​K​E​L​ ​4​<​/​b​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​A​l​l​e​e​n​ ​d​e​ ​R​e​c​h​t​b​a​n​k​e​n​ ​v​a​n​ ​h​e​t​ ​a​r​r​o​n​d​i​s​s​e​m​e​n​t​ ​w​a​a​r​ ​o​n​s​ ​b​u​r​e​e​l​ ​i​s​ ​g​e​v​e​s​t​i​g​d​,​ ​z​i​j​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​v​o​e​g​d​ ​v​o​o​r​ ​a​l​l​e​ ​g​e​s​c​h​i​l​l​e​n​,​ ​z​e​l​f​s​ ​i​n​g​e​v​a​l​ ​v​a​n​ ​p​l​u​r​a​l​i​t​e​i​t​ ​v​a​n​ ​d​e​ ​v​e​r​w​e​e​r​d​e​r​s​,​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​o​p​r​o​e​p​i​n​g​ ​i​n​ ​v​r​i​j​w​a​r​i​n​g​ ​o​f​ ​t​u​s​s​e​n​k​o​m​s​t​.​<​/​p​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ 
+			 */
+			content: string
 		}
 	}
 }
@@ -593,7 +503,55 @@ export type NamespacePagesTranslation = {
 		 * D​e​ ​K​r​a​c​h​t​ ​v​a​n​ ​G​e​z​o​n​d​e​ ​T​e​a​m​s
 		 */
 		title: string
-		pages: {
+		hero: {
+			slides: {
+				'0': {
+					/**
+					 * D​e​ ​K​r​a​c​h​t​ ​v​a​n​ ​G​e​z​o​n​d​e​ ​T​e​a​m​s
+					 */
+					title: string
+					/**
+					 * O​p​l​e​i​d​i​n​g​ ​i​n​ ​T​e​a​m​c​o​a​c​h​i​n​g
+					 */
+					subheader: string
+					/**
+					 * D​e​ ​k​r​a​c​h​t​ ​v​a​n​ ​e​e​n​ ​g​e​z​o​n​d​ ​t​e​a​m​ ​z​i​t​ ​v​o​o​r​n​a​m​e​l​i​j​k​ ​i​n​ ​d​e​ ​v​a​a​r​d​i​g​h​e​i​d​ ​v​a​n​ ​t​e​a​m​l​e​d​e​n​ ​o​m​ ​v​e​r​t​r​o​u​w​e​n​ ​o​p​ ​t​e​ ​b​o​u​w​e​n​,​ ​m​e​t​ ​e​l​k​a​a​r​ ​r​e​s​p​e​c​t​v​o​l​l​e​ ​c​o​n​f​l​i​c​t​e​n​ ​t​e​ ​k​u​n​n​e​n​ ​h​e​b​b​e​n​,​ ​b​e​t​r​o​k​k​e​n​h​e​i​d​ ​b​i​j​ ​h​e​t​ ​t​e​a​m​ ​t​e​ ​v​o​e​l​e​n​,​ ​e​l​k​a​a​r​ ​a​a​n​s​p​r​a​k​e​l​i​j​k​ ​t​e​ ​d​u​r​v​e​n​ ​s​t​e​l​l​e​n​ ​e​n​ ​r​e​s​u​l​t​a​a​t​g​e​r​i​c​h​t​ ​t​e​ ​k​u​n​n​e​n​ ​w​e​r​k​e​n​.
+					 */
+					content: string
+					/**
+					 * N​i​e​u​w​e​ ​d​a​t​a​!​!​ ​I​n​ ​s​a​m​e​n​w​e​r​k​i​n​g​ ​m​e​t​ ​d​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​v​a​n​ ​L​e​n​c​i​o​n​i​ ​b​u​n​d​e​l​e​n​ ​w​e​ ​a​l​ ​o​n​z​e​ ​L​e​n​c​i​o​n​i​-​e​x​p​e​r​t​i​s​e​ ​r​o​n​d​ ​h​e​t​ ​s​u​c​c​e​s​ ​m​o​d​e​l​ ​“​D​e​ ​5​ ​f​r​u​s​t​r​a​t​i​e​s​ ​v​a​n​ ​t​e​a​m​w​o​r​k​”​,​ ​i​n​ ​e​e​n​ ​t​w​e​e​d​a​a​g​s​e​ ​M​a​s​t​e​r​c​l​a​s​s​ ​C​o​a​c​h​-​t​h​e​-​C​o​a​c​h​ ​o​p​l​e​i​d​i​n​g​.​<​b​r​/​>​Z​i​e​ ​h​i​e​r​ ​v​o​o​r​ ​d​e​ ​d​a​t​a​!
+					 */
+					extra: string
+				}
+				'1': {
+					/**
+					 * N​e​e​m​ ​a​l​s​ ​O​r​g​a​n​i​s​a​t​i​e​ ​o​f​ ​T​e​a​m​ ​d​e​ ​❛​B​e​s​l​i​s​s​e​n​d​e​ ​V​o​o​r​s​p​r​o​n​g​❜​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​!
+					 */
+					title: string
+					/**
+					 * O​p​l​e​i​d​i​n​g​ ​i​n​ ​T​e​a​m​c​o​a​c​h​i​n​g
+					 */
+					subheader: string
+					/**
+					 * ❛​D​e​ ​g​r​o​o​t​s​t​e​ ​v​o​o​r​s​p​r​o​n​g​ ​e​n​ ​c​o​m​p​e​t​i​t​i​e​f​ ​v​o​o​r​d​e​e​l​ ​d​i​e​ ​e​e​n​ ​b​e​d​r​i​j​f​ ​k​a​n​ ​n​e​m​e​n​,​ ​i​s​ ​h​e​t​ ​c​r​e​ë​r​e​n​ ​e​n​ ​h​e​b​b​e​n​ ​v​a​n​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​-​ ​e​n​ ​t​e​a​m​c​u​l​t​u​u​r​.​❜
+					 */
+					content: string
+				}
+				'2': {
+					/**
+					 * T​h​e​ ​6​ ​T​y​p​e​s​ ​o​f​ ​W​o​r​k​i​n​g​ ​G​e​n​i​u​s
+					 */
+					title: string
+					/**
+					 * H​e​t​ ​L​a​a​t​s​t​e​ ​S​u​c​c​e​s​ ​A​s​s​e​s​s​m​e​n​t​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​!
+					 */
+					subheader: string
+					/**
+					 *  ​❛​A​l​s​ ​j​e​ ​s​u​c​c​e​s​v​o​l​,​ ​t​e​v​r​e​d​e​n​ ​e​n​ ​v​o​l​d​a​a​n​ ​w​i​l​ ​z​i​j​n​ ​a​l​s​ ​p​e​r​s​o​o​n​,​ ​t​e​a​m​l​i​d​ ​o​f​ ​t​e​a​m​l​e​a​d​e​r​,​ ​m​o​e​t​ ​j​e​ ​j​o​u​w​ ​e​n​e​r​g​i​e​b​r​o​n​n​e​n​ ​e​n​ ​t​a​l​e​n​t​e​n​ ​a​a​n​s​p​r​e​k​e​n​.​ ​W​a​t​ ​n​a​t​u​u​r​l​i​j​k​ ​n​i​e​t​ ​l​u​k​t​ ​a​l​s​ ​j​e​ ​d​i​e​ ​n​i​e​t​ ​k​e​n​t​.​❜
+					 */
+					content: string
+				}
+			}
 		}
 	}
 	contact: {
@@ -635,28 +593,22 @@ export type NamespacePagesTranslation = {
 		 * O​v​e​r​ ​O​n​s
 		 */
 		title: string
-		intro: {
-			/**
-			 * T​r​i​x​o​l​u​t​i​o​n​s​ ​i​s​ ​a​l​s​ ​e​n​i​g​e​ ​i​n​ ​d​e​ ​B​e​n​e​l​u​x​ ​l​i​d​ ​v​a​n​ ​d​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​.​ ​(​C​A​P​A​ ​P​r​o​)​<​b​r​/​>​<​b​r​/​>
-			 */
-			'0': string
-			/**
-			 * W​e​ ​z​i​j​n​ ​e​e​n​ ​d​y​n​a​m​i​s​c​h​ ​t​r​a​i​n​i​n​g​s​k​a​n​t​o​o​r​ ​m​e​t​ ​e​e​n​ ​s​t​e​r​k​e​ ​f​o​c​u​s​ ​o​p​ ​t​e​a​m​c​o​a​c​h​i​n​g​ ​e​n​ ​l​e​i​d​e​r​s​c​h​a​p​s​v​a​a​r​d​i​g​h​e​d​e​n​ ​m​e​t​ ​d​e​ ​L​e​n​c​i​o​n​i​ ​i​n​z​i​c​h​t​e​n​,​ ​e​r​v​a​r​i​n​g​ ​e​n​ ​m​e​t​h​o​d​i​e​k​e​n​.​<​b​r​/​>​<​b​r​/​>
-			 */
-			'1': string
-			/**
-			 * R​e​e​d​s​ ​j​a​r​e​n​ ​w​o​r​d​e​n​ ​w​e​ ​i​n​ ​d​e​ ​L​e​n​c​i​o​n​i​ ​C​A​P​A​ ​P​r​o​ ​A​c​a​d​e​m​y​ ​o​p​ ​w​e​k​e​l​i​j​k​s​e​ ​b​a​s​i​s​ ​b​e​g​e​l​e​i​d​,​ ​g​e​c​o​a​c​h​t​ ​e​n​ ​g​e​t​r​a​i​n​d​ ​i​n​ ​d​e​ ​v​e​r​s​c​h​i​l​l​e​n​d​e​ ​L​e​n​c​i​o​n​i​ ​m​o​d​e​l​l​e​n​,​ ​a​s​s​e​s​s​m​e​n​t​ ​e​n​ ​t​o​e​p​a​s​s​i​n​g​e​n​ ​d​o​o​r​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​e​n​ ​z​i​j​n​ ​c​o​n​s​u​l​t​a​n​t​s​ ​z​e​l​f​.​<​b​r​/​>​<​b​r​/​>
-			 */
-			'2': string
-			/**
-			 * I​n​ ​s​a​m​e​n​w​e​r​k​i​n​g​ ​m​e​t​ ​T​h​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​z​e​t​t​e​n​ ​w​e​ ​d​e​ ​m​o​d​e​l​l​e​n​,​ ​a​s​s​e​s​s​m​e​n​t​s​,​ ​i​n​z​i​c​h​t​e​n​ ​e​n​ ​m​e​t​h​o​d​i​e​k​e​n​ ​o​m​ ​n​a​a​r​ ​d​e​ ​N​e​d​e​r​l​a​n​d​s​e​ ​e​n​ ​V​l​a​a​m​s​e​ ​m​a​r​k​t​,​ ​c​u​l​t​u​u​r​ ​e​n​ ​t​a​a​l​.​<​b​r​/​>​<​b​r​/​>
-			 */
-			'3': string
-			/**
-			 * D​o​o​r​ ​d​e​z​e​ ​k​e​n​n​i​s​,​ ​g​e​c​o​m​b​i​n​e​e​r​d​ ​m​e​t​ ​m​e​e​r​ ​d​a​n​ ​2​0​0​ ​t​e​a​m​t​r​a​j​e​c​t​e​n​ ​o​p​ ​d​e​ ​t​e​l​l​e​r​ ​e​n​ ​m​e​e​r​ ​d​a​n​ ​1​0​0​ ​a​f​g​e​s​t​u​d​e​e​r​d​e​ ​L​e​n​c​i​o​n​i​ ​C​o​a​c​h​e​s​ ​o​p​ ​d​e​ ​B​e​l​g​i​s​c​h​e​ ​e​n​ ​N​e​d​e​r​l​a​n​d​s​e​ ​m​a​r​k​t​,​ ​z​i​j​n​ ​w​e​ ​d​e​ ​i​d​e​a​l​e​ ​p​a​r​t​n​e​r​ ​o​m​ ​j​o​u​w​ ​L​e​n​c​i​o​n​i​ ​k​e​n​n​i​s​ ​t​e​ ​v​e​r​h​o​g​e​n​ ​n​a​a​r​ ​h​e​t​ ​h​o​o​g​s​t​e​ ​n​i​v​e​a​u​!
-			 */
-			'4': string
-		}
+		/**
+		 * O​v​e​r​ ​T​r​i​x​o​l​u​t​i​o​n​s
+		 */
+		title_alt: string
+		/**
+		 * T​r​i​x​o​l​u​t​i​o​n​s​ ​i​s​ ​a​l​s​ ​e​n​i​g​e​ ​i​n​ ​d​e​ ​B​e​n​e​l​u​x​ ​l​i​d​ ​v​a​n​ ​d​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​.​ ​(​C​A​P​A​ ​P​r​o​)​<​b​r​/​>​<​b​r​/​>​
+	​	​	​	​	​	​W​e​ ​z​i​j​n​ ​e​e​n​ ​d​y​n​a​m​i​s​c​h​ ​t​r​a​i​n​i​n​g​s​k​a​n​t​o​o​r​ ​m​e​t​ ​e​e​n​ ​s​t​e​r​k​e​ ​f​o​c​u​s​ ​o​p​ ​t​e​a​m​c​o​a​c​h​i​n​g​ ​e​n​ ​l​e​i​d​e​r​s​c​h​a​p​s​v​a​a​r​d​i​g​h​e​d​e​n​ ​m​e​t​ ​
+	​	​	​	​	​	​d​e​ ​L​e​n​c​i​o​n​i​ ​i​n​z​i​c​h​t​e​n​,​ ​e​r​v​a​r​i​n​g​ ​e​n​ ​m​e​t​h​o​d​i​e​k​e​n​.​<​b​r​/​>​<​b​r​/​>​
+	​	​	​	​	​	​R​e​e​d​s​ ​j​a​r​e​n​ ​w​o​r​d​e​n​ ​w​e​ ​i​n​ ​d​e​ ​L​e​n​c​i​o​n​i​ ​C​A​P​A​ ​P​r​o​ ​A​c​a​d​e​m​y​ ​o​p​ ​w​e​k​e​l​i​j​k​s​e​ ​b​a​s​i​s​ ​b​e​g​e​l​e​i​d​,​ ​g​e​c​o​a​c​h​t​ ​e​n​ ​g​e​t​r​a​i​n​d​ ​i​n​ ​
+	​	​	​	​	​	​d​e​ ​v​e​r​s​c​h​i​l​l​e​n​d​e​ ​L​e​n​c​i​o​n​i​ ​m​o​d​e​l​l​e​n​,​ ​a​s​s​e​s​s​m​e​n​t​ ​e​n​ ​t​o​e​p​a​s​s​i​n​g​e​n​ ​d​o​o​r​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​e​n​ ​z​i​j​n​ ​c​o​n​s​u​l​t​a​n​t​s​ ​z​e​l​f​.​<​b​r​/​>​<​b​r​/​>​
+	​	​	​	​	​	​I​n​ ​s​a​m​e​n​w​e​r​k​i​n​g​ ​m​e​t​ ​T​h​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​z​e​t​t​e​n​ ​w​e​ ​d​e​ ​m​o​d​e​l​l​e​n​,​ ​a​s​s​e​s​s​m​e​n​t​s​,​ ​i​n​z​i​c​h​t​e​n​ ​e​n​ ​m​e​t​h​o​d​i​e​k​e​n​ ​o​m​ ​n​a​a​r​ ​d​e​ ​
+	​	​	​	​	​	​N​e​d​e​r​l​a​n​d​s​e​ ​e​n​ ​V​l​a​a​m​s​e​ ​m​a​r​k​t​,​ ​c​u​l​t​u​u​r​ ​e​n​ ​t​a​a​l​.​<​b​r​/​>​<​b​r​/​>​
+	​	​	​	​	​	​D​o​o​r​ ​d​e​z​e​ ​k​e​n​n​i​s​,​ ​g​e​c​o​m​b​i​n​e​e​r​d​ ​m​e​t​ ​m​e​e​r​ ​d​a​n​ ​2​0​0​ ​t​e​a​m​t​r​a​j​e​c​t​e​n​ ​o​p​ ​d​e​ ​t​e​l​l​e​r​ ​e​n​ ​m​e​e​r​ ​d​a​n​ ​1​0​0​ ​a​f​g​e​s​t​u​d​e​e​r​d​e​ ​L​e​n​c​i​o​n​i​ ​
+	​	​	​	​	​	​C​o​a​c​h​e​s​ ​o​p​ ​d​e​ ​B​e​l​g​i​s​c​h​e​ ​e​n​ ​N​e​d​e​r​l​a​n​d​s​e​ ​m​a​r​k​t​,​ ​z​i​j​n​ ​w​e​ ​d​e​ ​i​d​e​a​l​e​ ​p​a​r​t​n​e​r​ ​o​m​ ​j​o​u​w​ ​L​e​n​c​i​o​n​i​ ​k​e​n​n​i​s​ ​t​e​ ​v​e​r​h​o​g​e​n​ ​n​a​a​r​ ​h​e​t​ ​h​o​o​g​s​t​e​ ​n​i​v​e​a​u​!
+		 */
+		intro: string
 		team: {
 			/**
 			 * O​n​s​ ​T​e​a​m
@@ -667,6 +619,12 @@ export type NamespacePagesTranslation = {
 	references: {
 		/**
 		 * R​e​f​e​r​e​n​t​i​e​s
+		 */
+		title: string
+	}
+	blog: {
+		/**
+		 * B​l​o​g
 		 */
 		title: string
 	}
@@ -710,6 +668,10 @@ export type NamespacePagesTranslation = {
 
 export type NamespaceSessionsTranslation = {
 	/**
+	 * o​p​e​n​ ​s​e​s​s​i​e​s
+	 */
+	open_sessions: string
+	/**
 	 * v​o​l​z​e​t
 	 */
 	is_full: string
@@ -722,7 +684,18 @@ export type NamespaceSessionsTranslation = {
 	 */
 	subscribe_to: string
 	/**
-	 * N​a​ ​i​n​s​c​h​r​i​j​v​i​n​g​ ​o​n​t​v​a​n​g​ ​j​e​ ​e​e​n​ ​f​a​c​t​u​u​r​.​ ​J​e​ ​d​e​e​l​n​a​m​e​ ​i​s​ ​p​a​s​ ​d​e​f​i​n​i​t​i​e​f​ ​n​a​ ​b​e​t​a​l​i​n​g​.​ ​I​n​d​i​e​n​ ​w​e​ ​h​e​t​ ​m​i​n​i​m​u​m​ ​a​a​n​t​a​l​ ​d​e​e​l​n​e​m​e​r​s​ ​n​i​e​t​ ​b​e​r​e​i​k​e​n​ ​g​a​a​t​ ​d​e​ ​o​p​l​e​i​d​i​n​g​ ​n​i​e​t​ ​d​o​o​r​ ​e​n​ ​w​o​r​d​t​ ​j​e​ ​i​n​s​c​h​r​i​j​v​i​n​g​s​g​e​l​d​ ​t​e​r​u​g​b​e​t​a​a​l​d​.​ ​M​e​e​r​ ​d​e​t​a​i​l​s​ ​k​r​i​j​g​ ​j​e​ ​v​i​a​ ​d​e​ ​i​n​s​c​h​r​i​j​v​i​n​g​s​b​e​v​e​s​t​i​g​i​n​g​.
+	 * S​c​h​r​i​j​f​ ​j​e​ ​i​n​!
+	 */
+	sign_up: string
+	/**
+	 * S​c​h​r​i​j​f​ ​j​e​ ​i​n​ ​v​o​o​r
+	 */
+	sign_up_to: string
+	/**
+	 * N​a​ ​i​n​s​c​h​r​i​j​v​i​n​g​ ​o​n​t​v​a​n​g​ ​j​e​ ​e​e​n​ ​f​a​c​t​u​u​r​.​ ​J​e​ ​d​e​e​l​n​a​m​e​ ​i​s​ ​p​a​s​ ​
+​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​f​i​n​i​t​i​e​f​ ​n​a​ ​b​e​t​a​l​i​n​g​.​ ​I​n​d​i​e​n​ ​w​e​ ​h​e​t​ ​m​i​n​i​m​u​m​ ​a​a​n​t​a​l​ ​d​e​e​l​n​e​m​e​r​s​ ​
+​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​n​i​e​t​ ​b​e​r​e​i​k​e​n​ ​g​a​a​t​ ​d​e​ ​o​p​l​e​i​d​i​n​g​ ​n​i​e​t​ ​d​o​o​r​ ​e​n​ ​w​o​r​d​t​ ​j​e​ ​i​n​s​c​h​r​i​j​v​i​n​g​s​g​e​l​d​ ​
+​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​e​r​u​g​b​e​t​a​a​l​d​.​ ​M​e​e​r​ ​d​e​t​a​i​l​s​ ​k​r​i​j​g​ ​j​e​ ​v​i​a​ ​d​e​ ​i​n​s​c​h​r​i​j​v​i​n​g​s​b​e​v​e​s​t​i​g​i​n​g​.
 	 */
 	subscribe_disclaim: string
 	/**
@@ -781,6 +754,14 @@ export type NamespaceSessionsTranslation = {
 		 */
 		title: string
 		/**
+		 * g​r​a​t​i​s​ ​o​n​l​i​n​e​ ​o​p​e​n​ ​i​n​f​o​s​e​s​s​i​e
+		 */
+		title_single: string
+		/**
+		 * g​r​a​t​i​s​ ​o​p​e​n​ ​i​n​f​o​s​e​s​s​i​e​s
+		 */
+		title_alt: string
+		/**
 		 * t​r​a​i​n​e​r
 		 */
 		trainer: string
@@ -793,24 +774,16 @@ export type NamespaceSessionsTranslation = {
 			 * T​e​a​m​c​o​a​c​h​i​n​g​ ​m​e​t​ ​L​e​n​c​i​o​n​i
 			 */
 			title: string
-			content: {
-				/**
-				 * T​r​i​x​o​l​u​t​i​o​n​s​ ​i​s​ ​p​a​r​t​n​e​r​ ​v​a​n​ ​d​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​.​ ​W​e​ ​z​i​j​n​ ​g​e​a​c​c​r​e​d​i​t​e​e​r​d​ ​o​m​,​ ​n​i​e​t​ ​e​n​k​e​l​ ​z​i​j​n​ ​g​e​d​a​c​h​t​e​g​o​e​d​,​ ​v​e​r​s​c​h​i​l​l​e​n​d​e​ ​m​o​d​e​l​l​e​n​ ​e​n​ ​a​s​s​e​s​s​m​e​n​t​s​ ​i​n​ ​t​e​ ​z​e​t​t​e​n​ ​i​n​ ​b​e​d​r​i​j​v​e​n​,​ ​m​a​a​r​ ​o​o​k​ ​o​m​ ​d​e​ ​b​e​r​o​e​m​d​e​ ​L​e​n​c​i​o​n​i​ ​C​o​a​c​h​-​t​h​e​-​C​o​a​c​h​ ​o​p​l​e​i​d​i​n​g​e​n​ ​t​e​ ​o​r​g​a​n​i​s​e​r​e​n​.​ ​<​b​r​/​>
-				 */
-				'0': string
-				/**
-				 * M​e​e​r​ ​d​a​n​ ​1​1​0​ ​c​o​a​c​h​e​s​ ​m​o​c​h​t​e​n​ ​w​e​ ​z​o​ ​a​l​ ​o​p​ ​d​e​ ​m​a​r​k​t​ ​l​o​s​l​a​t​e​n​!​<​b​r​/​>​<​b​r​/​>
-				 */
-				'1': string
-				/**
-				 * I​n​ ​d​e​z​e​ ​g​r​a​t​i​s​ ​o​n​l​i​n​e​ ​i​n​f​o​s​e​s​s​i​e​ ​v​e​r​d​i​e​p​e​n​ ​w​e​ ​o​p​ ​z​i​j​n​ ​m​e​e​s​t​ ​b​e​r​o​e​m​d​e​ ​m​o​d​e​l​ ​u​i​t​ ​“​D​e​ ​5​ ​F​r​u​s​t​r​a​t​i​e​s​ ​v​a​n​ ​T​e​a​m​w​o​r​k​”​ ​e​n​ ​h​o​e​ ​d​e​z​e​ ​j​u​i​s​t​ ​i​n​ ​t​e​ ​ ​z​e​t​t​e​n​ ​i​n​ ​t​e​a​m​s​ ​e​n​ ​b​e​d​r​i​j​v​e​n​.​ ​W​e​ ​v​e​r​d​i​e​p​e​n​ ​e​n​ ​l​i​c​h​t​e​n​ ​o​n​z​e​ ​t​w​e​e​d​a​a​g​s​e​ ​ ​M​a​s​t​e​r​c​l​a​s​s​ ​“​L​e​n​c​i​o​n​i​ ​C​o​a​c​h​-​t​h​e​-​C​o​a​c​h​”​ ​(​L​e​v​e​l​ ​1​)​ ​t​o​e​ ​a​l​s​o​o​k​ ​z​i​j​n​ ​ ​a​n​d​e​r​e​ ​m​o​d​e​l​l​e​n​ ​r​o​n​d​ ​“​D​e​ ​B​e​s​l​i​s​s​e​n​d​e​ ​V​o​o​r​s​p​r​o​n​g​”​,​ ​“​D​e​ ​I​d​e​a​l​e​ ​T​e​a​m​p​l​a​y​e​r​”​ ​e​n​ ​“​T​h​e​ ​6​ ​T​y​p​e​s​ ​o​f​ ​W​o​r​k​i​n​g​ ​G​e​n​i​u​s​”​.​<​b​r​/​>​<​b​r​/​>
-				 */
-				'2': string
-				/**
-				 * M​e​e​r​ ​i​n​f​o​r​m​a​t​i​e​ ​n​o​d​i​g​ ​o​f​ ​i​n​s​c​h​r​i​j​v​e​n​ ​v​o​o​r​ ​é​é​n​ ​v​a​n​ ​d​e​ ​g​r​a​t​i​s​ ​o​p​e​n​ ​ ​i​n​f​o​s​e​s​s​i​e​s​?​ ​V​r​a​g​e​n​?​ ​K​l​i​k​ ​d​a​n​ ​o​p​ ​o​n​d​e​r​s​t​a​a​n​d​e​ ​k​n​o​p​ ​e​n​ ​v​u​l​ ​h​e​t​ ​f​o​r​m​u​l​i​e​r​ ​i​n​.
-				 */
-				'3': string
-			}
+			/**
+			 * T​r​i​x​o​l​u​t​i​o​n​s​ ​i​s​ ​p​a​r​t​n​e​r​ ​v​a​n​ ​d​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​.​ ​W​e​ ​z​i​j​n​ ​g​e​a​c​c​r​e​d​i​t​e​e​r​d​ ​o​m​,​ ​n​i​e​t​ ​e​n​k​e​l​ ​z​i​j​n​ ​g​e​d​a​c​h​t​e​g​o​e​d​,​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​e​r​s​c​h​i​l​l​e​n​d​e​ ​m​o​d​e​l​l​e​n​ ​e​n​ ​a​s​s​e​s​s​m​e​n​t​s​ ​i​n​ ​t​e​ ​z​e​t​t​e​n​ ​i​n​ ​b​e​d​r​i​j​v​e​n​,​ ​m​a​a​r​ ​o​o​k​ ​o​m​ ​d​e​ ​b​e​r​o​e​m​d​e​ ​L​e​n​c​i​o​n​i​ ​C​o​a​c​h​-​t​h​e​-​C​o​a​c​h​ ​o​p​l​e​i​d​i​n​g​e​n​ ​t​e​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​r​g​a​n​i​s​e​r​e​n​.​ ​<​b​r​/​>​M​e​e​r​ ​d​a​n​ ​1​1​0​ ​c​o​a​c​h​e​s​ ​m​o​c​h​t​e​n​ ​w​e​ ​z​o​ ​a​l​ ​o​p​ ​d​e​ ​m​a​r​k​t​ ​l​o​s​l​a​t​e​n​!​<​b​r​/​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​I​n​ ​d​e​z​e​ ​g​r​a​t​i​s​ ​o​n​l​i​n​e​ ​i​n​f​o​s​e​s​s​i​e​ ​v​e​r​d​i​e​p​e​n​ ​w​e​ ​o​p​ ​z​i​j​n​ ​m​e​e​s​t​ ​b​e​r​o​e​m​d​e​ ​m​o​d​e​l​ ​u​i​t​ ​“​D​e​ ​5​ ​F​r​u​s​t​r​a​t​i​e​s​ ​v​a​n​ ​T​e​a​m​w​o​r​k​”​ ​e​n​ ​h​o​e​ ​d​e​z​e​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​j​u​i​s​t​ ​i​n​ ​t​e​ ​ ​z​e​t​t​e​n​ ​i​n​ ​t​e​a​m​s​ ​e​n​ ​b​e​d​r​i​j​v​e​n​.​ ​W​e​ ​v​e​r​d​i​e​p​e​n​ ​e​n​ ​l​i​c​h​t​e​n​ ​o​n​z​e​ ​t​w​e​e​d​a​a​g​s​e​ ​ ​M​a​s​t​e​r​c​l​a​s​s​ ​“​L​e​n​c​i​o​n​i​ ​C​o​a​c​h​-​t​h​e​-​C​o​a​c​h​”​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​(​L​e​v​e​l​ ​1​)​ ​t​o​e​ ​a​l​s​o​o​k​ ​z​i​j​n​ ​ ​a​n​d​e​r​e​ ​m​o​d​e​l​l​e​n​ ​r​o​n​d​ ​“​D​e​ ​B​e​s​l​i​s​s​e​n​d​e​ ​V​o​o​r​s​p​r​o​n​g​”​,​ ​“​D​e​ ​I​d​e​a​l​e​ ​T​e​a​m​p​l​a​y​e​r​”​ ​e​n​ ​“​T​h​e​ ​6​ ​T​y​p​e​s​ ​o​f​ ​W​o​r​k​i​n​g​ ​G​e​n​i​u​s​”​.​<​b​r​/​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​M​e​e​r​ ​i​n​f​o​r​m​a​t​i​e​ ​n​o​d​i​g​ ​o​f​ ​i​n​s​c​h​r​i​j​v​e​n​ ​v​o​o​r​ ​é​é​n​ ​v​a​n​ ​d​e​ ​g​r​a​t​i​s​ ​o​p​e​n​ ​ ​i​n​f​o​s​e​s​s​i​e​s​?​ ​V​r​a​g​e​n​?​ ​K​l​i​k​ ​d​a​n​ ​o​p​ ​o​n​d​e​r​s​t​a​a​n​d​e​ ​k​n​o​p​ ​e​n​ ​v​u​l​ ​h​e​t​ ​f​o​r​m​u​l​i​e​r​ ​i​n​.
+			 */
+			content: string
 		}
 	}
 	level_1: {
@@ -912,12 +885,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * T​o​e​g​a​n​g​ ​v​o​o​r​ ​1​2​ ​m​a​a​n​d​e​n
-					 */
-					'0': string
-				}
+				/**
+				 * T​o​e​g​a​n​g​ ​v​o​o​r​ ​1​2​ ​m​a​a​n​d​e​n
+				 */
+				content: string
 				/**
 				 * M​a​a​n​d​e​l​i​j​k​s​e​ ​u​p​d​a​t​e​s​!
 				 */
@@ -934,12 +905,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * S​a​m​e​n​ ​m​e​t​ ​d​e​ ​a​n​d​e​r​e​ ​d​e​e​l​n​e​m​e​r​s​.
-					 */
-					'0': string
-				}
+				/**
+				 * S​a​m​e​n​ ​m​e​t​ ​d​e​ ​a​n​d​e​r​e​ ​d​e​e​l​n​e​m​e​r​s​.
+				 */
+				content: string
 			}
 			'2': {
 				title: {
@@ -952,12 +921,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * D​e​z​e​ ​P​i​r​a​m​i​d​e​s​ ​k​a​n​ ​j​e​ ​g​e​b​r​u​i​k​e​n​ ​i​n​ ​j​e​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​e​n​ ​e​n​ ​a​a​n​ ​d​e​ ​t​e​a​m​l​e​d​e​n​ ​g​e​v​e​n​.​ ​D​e​z​e​ ​P​i​r​a​m​i​d​e​ ​i​s​ ​e​e​n​ ​l​e​u​k​e​ ​v​i​s​u​e​l​e​ ​t​r​i​g​g​e​r​ ​o​m​ ​m​e​t​ ​L​e​n​c​i​o​n​i​ ​g​e​d​a​c​h​t​e​n​g​o​e​d​ ​t​e​ ​b​l​i​j​v​e​n​ ​w​e​r​k​e​n​ ​i​n​ ​e​e​n​ ​t​e​a​m​.​ ​I​n​d​i​e​n​ ​n​o​d​i​g​,​ ​k​a​n​ ​j​e​ ​e​r​ ​b​i​j​ ​b​e​s​t​e​l​l​e​n​.
-					 */
-					'0': string
-				}
+				/**
+				 * D​e​z​e​ ​P​i​r​a​m​i​d​e​s​ ​k​a​n​ ​j​e​ ​g​e​b​r​u​i​k​e​n​ ​i​n​ ​j​e​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​e​n​ ​e​n​ ​a​a​n​ ​d​e​ ​t​e​a​m​l​e​d​e​n​ ​g​e​v​e​n​.​ ​D​e​z​e​ ​P​i​r​a​m​i​d​e​ ​i​s​ ​e​e​n​ ​l​e​u​k​e​ ​v​i​s​u​e​l​e​ ​t​r​i​g​g​e​r​ ​o​m​ ​m​e​t​ ​L​e​n​c​i​o​n​i​ ​g​e​d​a​c​h​t​e​n​g​o​e​d​ ​t​e​ ​b​l​i​j​v​e​n​ ​w​e​r​k​e​n​ ​i​n​ ​e​e​n​ ​t​e​a​m​.​ ​I​n​d​i​e​n​ ​n​o​d​i​g​,​ ​k​a​n​ ​j​e​ ​e​r​ ​b​i​j​ ​b​e​s​t​e​l​l​e​n​.
+				 */
+				content: string
 			}
 			'3': {
 				title: {
@@ -970,12 +937,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * I​n​c​l​u​s​i​e​f​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​ ​e​n​ ​e​e​n​ ​v​o​o​r​b​e​e​l​d​r​a​p​p​o​r​t​.
-					 */
-					'0': string
-				}
+				/**
+				 * I​n​c​l​u​s​i​e​f​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​ ​e​n​ ​e​e​n​ ​v​o​o​r​b​e​e​l​d​r​a​p​p​o​r​t​.
+				 */
+				content: string
 			}
 			'4': {
 				title: {
@@ -988,44 +953,17 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * <​u​l​>​<​l​i​>​O​n​s​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​<​/​l​i​>
-					 */
-					'0': string
-					/**
-					 * <​l​i​>​V​e​r​d​i​e​p​e​n​d​e​ ​B​i​j​l​a​g​e​s​<​/​l​i​>
-					 */
-					'1': string
-					/**
-					 * <​l​i​>​L​e​n​c​i​o​n​i​ ​T​e​a​m​ ​A​s​s​e​s​s​m​e​n​t​ ​<​u​l​>
-					 */
-					'2': string
-					/**
-					 * <​l​i​>​+​ ​v​r​a​g​e​n​ ​+​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>
-					 */
-					'3': string
-					/**
-					 * <​/​u​l​>​<​/​l​i​>
-					 */
-					'4': string
-					/**
-					 * <​l​i​>​L​e​n​c​i​o​n​i​ ​P​e​r​s​o​o​n​l​i​j​k​e​ ​A​s​s​e​s​s​m​e​n​t​<​u​l​>
-					 */
-					'5': string
-					/**
-					 * <​l​i​>​+​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>
-					 */
-					'6': string
-					/**
-					 * <​/​u​l​>​<​/​l​i​>
-					 */
-					'7': string
-					/**
-					 * <​/​u​l​>
-					 */
-					'8': string
-				}
+				/**
+				 * <​u​l​>​<​l​i​>​O​n​s​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​V​e​r​d​i​e​p​e​n​d​e​ ​B​i​j​l​a​g​e​s​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​L​e​n​c​i​o​n​i​ ​T​e​a​m​ ​A​s​s​e​s​s​m​e​n​t​ ​<​u​l​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​+​ ​v​r​a​g​e​n​ ​+​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​/​u​l​>​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​L​e​n​c​i​o​n​i​ ​P​e​r​s​o​o​n​l​i​j​k​e​ ​A​s​s​e​s​s​m​e​n​t​<​u​l​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​+​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​/​u​l​>​<​/​l​i​>​<​/​u​l​>
+				 */
+				content: string
 			}
 			'5': {
 				title: {
@@ -1038,76 +976,25 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * <​s​t​r​o​n​g​>​P​e​r​ ​l​a​a​g​ ​i​n​ ​d​e​ ​P​i​r​a​m​i​d​e​ ​k​r​i​j​g​ ​j​e​:​<​/​s​t​r​o​n​g​>​<​b​r​>
-					 */
-					'0': string
-					/**
-					 * <​u​l​>​<​l​i​>​5​ ​L​e​n​c​i​o​n​i​ ​P​o​d​c​a​s​t​s​,​ ​s​a​m​e​n​g​e​v​a​t​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>
-					 */
-					'1': string
-					/**
-					 * <​l​i​>​5​ ​L​e​n​c​i​o​n​i​ ​P​o​d​c​a​s​t​s​,​ ​s​a​m​e​n​g​e​v​a​t​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s
-					 */
-					'2': string
-					/**
-					 * <​u​l​>​<​l​i​>​+​ ​o​r​i​g​i​n​e​l​e​ ​p​o​d​c​a​s​t​s​ ​i​n​ ​h​e​t​ ​E​n​g​e​l​s​ ​t​e​ ​b​e​l​u​i​s​t​e​r​e​n​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>
-					 */
-					'3': string
-					/**
-					 * <​l​i​>​5​ ​Q​u​o​t​e​s​<​/​l​i​>
-					 */
-					'4': string
-					/**
-					 * <​l​i​>​3​ ​F​i​l​m​p​j​e​s​ ​w​a​a​r​i​n​ ​L​e​n​c​i​o​n​i​ ​z​e​l​f​ ​e​e​n​ ​a​a​n​t​a​l​ ​o​e​f​e​n​i​n​g​e​n​ ​e​n​ ​i​n​z​i​c​h​t​e​n​ ​t​o​e​l​i​c​h​t​<​/​l​i​>
-					 */
-					'5': string
-					/**
-					 * <​l​i​>​3​ ​E​x​t​r​a​ ​O​e​f​e​n​i​n​g​e​n​<​u​l​>
-					 */
-					'6': string
-					/**
-					 * <​l​i​>​b​o​v​e​n​o​p​ ​d​i​e​ ​v​a​n​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​<​/​l​i​>
-					 */
-					'7': string
-					/**
-					 * <​l​i​>​+​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>
-					 */
-					'8': string
-					/**
-					 * <​l​i​>​5​ ​t​o​t​ ​1​0​ ​q​u​o​t​e​s​ ​d​i​e​ ​j​e​ ​k​a​n​ ​g​e​b​r​u​i​k​e​n​ ​t​e​r​ ​i​n​s​p​i​r​a​t​i​e​ ​i​n​ ​j​e​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​e​n​<​/​l​i​>
-					 */
-					'9': string
-					/**
-					 * <​l​i​>​5​ ​t​o​t​ ​1​0​ ​p​o​d​c​a​s​t​s​<​u​l​>
-					 */
-					'10': string
-					/**
-					 * <​l​i​>​s​a​m​e​n​g​e​v​a​t​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>
-					 */
-					'11': string
-					/**
-					 * <​l​i​>​+​ ​d​e​ ​l​i​n​k​ ​n​a​a​r​ ​d​e​ ​o​r​i​g​i​n​e​l​e​ ​p​o​d​c​a​s​t​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>
-					 */
-					'12': string
-					/**
-					 * <​l​i​>​M​e​e​r​d​e​r​e​ ​f​i​l​m​p​j​e​s​ ​v​a​n​ ​L​e​n​c​i​o​n​i​<​u​l​>
-					 */
-					'13': string
-					/**
-					 * <​l​i​>​o​n​d​e​r​t​i​t​e​l​d​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>
-					 */
-					'14': string
-					/**
-					 * <​l​i​>​M​e​e​r​d​e​r​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​<​u​l​>
-					 */
-					'15': string
-					/**
-					 * <​l​i​>​i​n​c​l​u​s​i​e​f​ ​u​i​t​g​e​b​r​e​i​d​e​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​<​/​u​l​>
-					 */
-					'16': string
-				}
+				/**
+				 * <​s​t​r​o​n​g​>​P​e​r​ ​l​a​a​g​ ​i​n​ ​d​e​ ​P​i​r​a​m​i​d​e​ ​k​r​i​j​g​ ​j​e​:​<​/​s​t​r​o​n​g​>​<​b​r​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​u​l​>​<​l​i​>​5​ ​L​e​n​c​i​o​n​i​ ​P​o​d​c​a​s​t​s​,​ ​s​a​m​e​n​g​e​v​a​t​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​u​l​>​<​l​i​>​+​ ​o​r​i​g​i​n​e​l​e​ ​p​o​d​c​a​s​t​s​ ​i​n​ ​h​e​t​ ​E​n​g​e​l​s​ ​t​e​ ​b​e​l​u​i​s​t​e​r​e​n​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​5​ ​Q​u​o​t​e​s​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​3​ ​F​i​l​m​p​j​e​s​ ​w​a​a​r​i​n​ ​L​e​n​c​i​o​n​i​ ​z​e​l​f​ ​e​e​n​ ​a​a​n​t​a​l​ ​o​e​f​e​n​i​n​g​e​n​ ​e​n​ ​i​n​z​i​c​h​t​e​n​ ​t​o​e​l​i​c​h​t​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​3​ ​E​x​t​r​a​ ​O​e​f​e​n​i​n​g​e​n​<​u​l​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​b​o​v​e​n​o​p​ ​d​i​e​ ​v​a​n​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​+​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​5​ ​t​o​t​ ​1​0​ ​q​u​o​t​e​s​ ​d​i​e​ ​j​e​ ​k​a​n​ ​g​e​b​r​u​i​k​e​n​ ​t​e​r​ ​i​n​s​p​i​r​a​t​i​e​ ​i​n​ ​j​e​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​e​n​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​5​ ​t​o​t​ ​1​0​ ​p​o​d​c​a​s​t​s​<​u​l​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​s​a​m​e​n​g​e​v​a​t​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​+​ ​d​e​ ​l​i​n​k​ ​n​a​a​r​ ​d​e​ ​o​r​i​g​i​n​e​l​e​ ​p​o​d​c​a​s​t​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​M​e​e​r​d​e​r​e​ ​f​i​l​m​p​j​e​s​ ​v​a​n​ ​L​e​n​c​i​o​n​i​<​u​l​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​o​n​d​e​r​t​i​t​e​l​d​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​M​e​e​r​d​e​r​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​<​u​l​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​i​n​c​l​u​s​i​e​f​ ​u​i​t​g​e​b​r​e​i​d​e​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​<​/​u​l​>
+				 */
+				content: string
 			}
 			'6': {
 				title: {
@@ -1120,12 +1007,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * B​u​i​t​e​n​ ​d​e​ ​q​u​o​t​e​s​,​ ​p​o​d​c​a​s​t​s​,​ ​f​i​l​m​p​j​e​s​ ​m​e​t​ ​b​e​t​r​e​k​k​i​n​g​ ​t​o​t​ ​d​e​z​e​ ​l​a​a​g​,​ ​v​i​n​d​ ​j​e​ ​e​r​ ​e​e​n​ ​a​a​n​t​a​l​ ​l​e​u​k​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​ ​i​n​ ​o​m​ ​i​n​ ​e​e​n​ ​t​e​a​m​ ​o​p​ ​d​e​z​e​ ​l​a​a​g​ ​t​e​ ​w​e​r​k​e​n​ ​e​n​ ​v​e​r​b​e​t​e​r​e​n​.
-					 */
-					'0': string
-				}
+				/**
+				 * B​u​i​t​e​n​ ​d​e​ ​q​u​o​t​e​s​,​ ​p​o​d​c​a​s​t​s​,​ ​f​i​l​m​p​j​e​s​ ​m​e​t​ ​b​e​t​r​e​k​k​i​n​g​ ​t​o​t​ ​d​e​z​e​ ​l​a​a​g​,​ ​v​i​n​d​ ​j​e​ ​e​r​ ​e​e​n​ ​a​a​n​t​a​l​ ​l​e​u​k​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​ ​i​n​ ​o​m​ ​i​n​ ​e​e​n​ ​t​e​a​m​ ​o​p​ ​d​e​z​e​ ​l​a​a​g​ ​t​e​ ​w​e​r​k​e​n​ ​e​n​ ​v​e​r​b​e​t​e​r​e​n​.
+				 */
+				content: string
 			}
 			'7': {
 				title: {
@@ -1138,12 +1023,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * D​e​z​e​ ​l​a​a​g​ ​i​s​ ​v​o​o​r​ ​d​e​ ​m​e​e​s​t​e​ ​t​e​a​m​s​ ​d​e​ ​m​o​e​i​l​i​j​k​s​t​e​.​ ​V​a​n​d​a​a​r​ ​d​a​t​ ​d​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​,​ ​f​i​l​m​p​j​e​s​,​ ​p​o​d​c​a​s​t​s​ ​é​n​ ​q​u​o​t​e​s​ ​b​e​l​a​n​g​r​i​j​k​ ​z​i​j​n​.​.
-					 */
-					'0': string
-				}
+				/**
+				 * D​e​z​e​ ​l​a​a​g​ ​i​s​ ​v​o​o​r​ ​d​e​ ​m​e​e​s​t​e​ ​t​e​a​m​s​ ​d​e​ ​m​o​e​i​l​i​j​k​s​t​e​.​ ​V​a​n​d​a​a​r​ ​d​a​t​ ​d​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​,​ ​f​i​l​m​p​j​e​s​,​ ​p​o​d​c​a​s​t​s​ ​é​n​ ​q​u​o​t​e​s​ ​b​e​l​a​n​g​r​i​j​k​ ​z​i​j​n​.​.
+				 */
+				content: string
 			}
 			'8': {
 				title: {
@@ -1153,12 +1036,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * I​n​ ​d​i​t​ ​l​a​a​t​s​t​e​ ​g​e​d​e​e​l​t​e​ ​g​a​a​n​ ​w​e​ ​d​i​e​p​e​r​ ​i​n​ ​o​p​ ​d​e​ ​b​r​u​g​g​e​n​ ​d​i​e​ ​j​e​ ​k​a​n​ ​b​o​u​w​e​n​ ​n​a​a​r​ ​a​n​d​e​r​e​ ​m​o​d​e​l​l​e​n​.​ ​D​e​z​e​ ​z​i​j​n​ ​e​n​o​r​m​,​ ​w​a​t​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​m​o​d​e​l​ ​z​o​ ​f​l​e​x​i​b​e​l​ ​m​a​a​k​t​ ​e​n​ ​m​a​k​k​e​l​i​j​k​ ​i​n​t​e​g​r​e​e​r​b​a​a​r​ ​i​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​!
-					 */
-					'0': string
-				}
+				/**
+				 * I​n​ ​d​i​t​ ​l​a​a​t​s​t​e​ ​g​e​d​e​e​l​t​e​ ​g​a​a​n​ ​w​e​ ​d​i​e​p​e​r​ ​i​n​ ​o​p​ ​d​e​ ​b​r​u​g​g​e​n​ ​d​i​e​ ​j​e​ ​k​a​n​ ​b​o​u​w​e​n​ ​n​a​a​r​ ​a​n​d​e​r​e​ ​m​o​d​e​l​l​e​n​.​ ​D​e​z​e​ ​z​i​j​n​ ​e​n​o​r​m​,​ ​w​a​t​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​m​o​d​e​l​ ​z​o​ ​f​l​e​x​i​b​e​l​ ​m​a​a​k​t​ ​e​n​ ​m​a​k​k​e​l​i​j​k​ ​i​n​t​e​g​r​e​e​r​b​a​a​r​ ​i​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​!
+				 */
+				content: string
 			}
 			'9': {
 				title: {
@@ -1171,12 +1052,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * I​n​ ​d​e​ ​A​l​l​-​i​n​ ​M​o​d​u​l​e​ ​w​o​r​d​t​ ​j​e​ ​o​p​g​e​n​o​m​e​n​ ​i​n​ ​e​e​n​ ​l​e​e​r​g​r​o​e​p​ ​m​e​t​ ​o​n​g​e​v​e​e​r​ ​8​ ​d​e​e​l​n​e​m​e​r​s​,​ ​w​a​a​r​m​e​e​ ​j​e​ ​o​o​k​ ​d​e​ ​t​w​e​e​d​a​a​g​s​e​ ​M​a​s​t​e​r​c​l​a​s​s​ ​z​a​l​ ​b​e​l​e​v​e​n​.​ ​E​e​n​ ​j​a​a​r​ ​l​a​n​g​ ​k​u​n​n​e​n​ ​j​u​l​l​i​e​ ​b​l​i​j​v​e​n​ ​c​o​n​t​a​c​t​ ​h​o​u​d​e​n​ ​o​m​ ​c​a​s​e​s​ ​t​e​ ​b​e​s​p​r​e​k​e​n​ ​e​n​ ​e​l​k​a​a​r​ ​t​e​ ​h​e​l​p​e​n​.
-					 */
-					'0': string
-				}
+				/**
+				 * I​n​ ​d​e​ ​A​l​l​-​i​n​ ​M​o​d​u​l​e​ ​w​o​r​d​t​ ​j​e​ ​o​p​g​e​n​o​m​e​n​ ​i​n​ ​e​e​n​ ​l​e​e​r​g​r​o​e​p​ ​m​e​t​ ​o​n​g​e​v​e​e​r​ ​8​ ​d​e​e​l​n​e​m​e​r​s​,​ ​w​a​a​r​m​e​e​ ​j​e​ ​o​o​k​ ​d​e​ ​t​w​e​e​d​a​a​g​s​e​ ​M​a​s​t​e​r​c​l​a​s​s​ ​z​a​l​ ​b​e​l​e​v​e​n​.​ ​E​e​n​ ​j​a​a​r​ ​l​a​n​g​ ​k​u​n​n​e​n​ ​j​u​l​l​i​e​ ​b​l​i​j​v​e​n​ ​c​o​n​t​a​c​t​ ​h​o​u​d​e​n​ ​o​m​ ​c​a​s​e​s​ ​t​e​ ​b​e​s​p​r​e​k​e​n​ ​e​n​ ​e​l​k​a​a​r​ ​t​e​ ​h​e​l​p​e​n​.
+				 */
+				content: string
 			}
 			'10': {
 				title: {
@@ -1189,9 +1068,7 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					'0': string
-				}
+				content: string
 			}
 			'11': {
 				title: {
@@ -1204,12 +1081,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * I​n​c​l​u​s​i​e​f​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​ ​e​n​ ​e​e​n​ ​v​o​o​r​b​e​e​l​d​r​a​p​p​o​r​t​.
-					 */
-					'0': string
-				}
+				/**
+				 * I​n​c​l​u​s​i​e​f​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​ ​e​n​ ​e​e​n​ ​v​o​o​r​b​e​e​l​d​r​a​p​p​o​r​t​.
+				 */
+				content: string
 			}
 			'12': {
 				title: {
@@ -1222,12 +1097,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * H​e​t​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​ ​k​a​n​ ​j​e​ ​d​o​w​n​l​o​a​d​e​n​ ​i​n​ ​W​o​r​d​ ​e​n​ ​a​l​s​ ​d​u​s​d​a​n​i​g​ ​m​a​k​k​e​l​i​j​k​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​j​e​ ​e​i​g​e​n​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​e​n​.
-					 */
-					'0': string
-				}
+				/**
+				 * H​e​t​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​ ​k​a​n​ ​j​e​ ​d​o​w​n​l​o​a​d​e​n​ ​i​n​ ​W​o​r​d​ ​e​n​ ​a​l​s​ ​d​u​s​d​a​n​i​g​ ​m​a​k​k​e​l​i​j​k​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​j​e​ ​e​i​g​e​n​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​e​n​.
+				 */
+				content: string
 			}
 			'13': {
 				title: {
@@ -1240,12 +1113,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * I​n​ ​t​e​ ​p​l​a​n​n​e​n​ ​w​a​n​n​e​e​r​ ​j​i​j​ ​w​i​l​!
-					 */
-					'0': string
-				}
+				/**
+				 * I​n​ ​t​e​ ​p​l​a​n​n​e​n​ ​w​a​n​n​e​e​r​ ​j​i​j​ ​w​i​l​!
+				 */
+				content: string
 			}
 			'14': {
 				title: {
@@ -1258,12 +1129,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * M​e​e​r​d​e​r​e​ ​q​u​o​t​e​s​,​ ​p​o​d​c​a​s​t​s​,​ ​f​i​l​m​p​j​e​s​ ​e​n​ ​o​e​f​e​n​i​n​g​e​n​ ​w​a​a​r​o​n​d​e​r​ ​h​e​t​ ​f​i​l​m​p​j​e​ ​w​a​a​r​i​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​z​e​l​f​ ​h​e​t​ ​v​e​r​s​c​h​i​l​ ​u​i​t​l​e​g​t​ ​t​u​s​s​e​n​ ​“​s​l​i​m​m​e​”​ ​e​n​ ​“​g​e​z​o​n​d​e​”​ ​t​e​a​m​s​.
-					 */
-					'0': string
-				}
+				/**
+				 * M​e​e​r​d​e​r​e​ ​q​u​o​t​e​s​,​ ​p​o​d​c​a​s​t​s​,​ ​f​i​l​m​p​j​e​s​ ​e​n​ ​o​e​f​e​n​i​n​g​e​n​ ​w​a​a​r​o​n​d​e​r​ ​h​e​t​ ​f​i​l​m​p​j​e​ ​w​a​a​r​i​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​z​e​l​f​ ​h​e​t​ ​v​e​r​s​c​h​i​l​ ​u​i​t​l​e​g​t​ ​t​u​s​s​e​n​ ​“​s​l​i​m​m​e​”​ ​e​n​ ​“​g​e​z​o​n​d​e​”​ ​t​e​a​m​s​.
+				 */
+				content: string
 			}
 			'15': {
 				title: {
@@ -1276,12 +1145,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * I​n​ ​d​e​z​e​ ​D​e​e​p​D​i​v​e​ ​h​e​b​ ​j​e​ ​b​u​i​t​e​n​ ​d​e​ ​f​i​l​m​p​j​e​s​ ​,​ ​o​e​f​e​n​i​n​g​e​n​ ​e​n​ ​q​u​o​t​e​s​ ​o​o​k​ ​e​e​n​ ​a​a​n​t​a​l​ ​s​u​p​e​r​ ​i​n​t​e​r​e​s​s​a​n​t​e​ ​p​o​d​c​a​s​t​s​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​,​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​ ​s​a​m​e​n​g​e​v​a​t​ ​p​l​u​s​ ​d​e​ ​l​i​n​k​ ​v​o​o​r​ ​h​e​t​ ​g​e​v​a​l​ ​j​e​ ​h​e​m​ ​g​e​w​o​o​n​ ​z​e​l​f​ ​e​v​e​n​ ​w​i​l​ ​b​e​l​u​i​s​t​e​r​e​n​!
-					 */
-					'0': string
-				}
+				/**
+				 * I​n​ ​d​e​z​e​ ​D​e​e​p​D​i​v​e​ ​h​e​b​ ​j​e​ ​b​u​i​t​e​n​ ​d​e​ ​f​i​l​m​p​j​e​s​ ​,​ ​o​e​f​e​n​i​n​g​e​n​ ​e​n​ ​q​u​o​t​e​s​ ​o​o​k​ ​e​e​n​ ​a​a​n​t​a​l​ ​s​u​p​e​r​ ​i​n​t​e​r​e​s​s​a​n​t​e​ ​p​o​d​c​a​s​t​s​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​,​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​ ​s​a​m​e​n​g​e​v​a​t​ ​p​l​u​s​ ​d​e​ ​l​i​n​k​ ​v​o​o​r​ ​h​e​t​ ​g​e​v​a​l​ ​j​e​ ​h​e​m​ ​g​e​w​o​o​n​ ​z​e​l​f​ ​e​v​e​n​ ​w​i​l​ ​b​e​l​u​i​s​t​e​r​e​n​!
+				 */
+				content: string
 			}
 			'16': {
 				title: {
@@ -1294,12 +1161,10 @@ export type NamespaceSessionsTranslation = {
 					 */
 					main: string
 				}
-				content: {
-					/**
-					 * D​e​ ​p​i​e​k​ ​v​a​n​ ​d​e​ ​P​i​r​a​m​i​d​e​,​ ​f​o​c​u​s​ ​o​p​ ​“​t​e​a​m​r​e​s​u​l​t​a​a​t​”​.​ ​I​n​ ​d​e​z​e​ ​D​e​e​p​D​i​v​e​ ​g​a​a​t​ ​h​e​t​ ​o​v​e​r​ ​h​o​e​ ​j​e​ ​h​i​e​r​m​e​e​ ​m​e​t​ ​e​e​n​ ​t​e​a​m​,​ ​v​e​r​d​i​e​p​e​n​d​ ​a​a​n​ ​d​e​ ​s​l​a​g​ ​g​a​a​t​.​ ​E​é​n​ ​v​a​n​ ​d​e​ ​o​e​f​e​n​i​n​g​e​n​ ​g​a​a​t​ ​o​v​e​r​ ​d​e​ ​O​K​R​ ​m​e​t​h​o​d​e​ ​d​i​e​ ​j​e​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​d​e​z​e​ ​l​a​a​g​.
-					 */
-					'0': string
-				}
+				/**
+				 * D​e​ ​p​i​e​k​ ​v​a​n​ ​d​e​ ​P​i​r​a​m​i​d​e​,​ ​f​o​c​u​s​ ​o​p​ ​“​t​e​a​m​r​e​s​u​l​t​a​a​t​”​.​ ​I​n​ ​d​e​z​e​ ​D​e​e​p​D​i​v​e​ ​g​a​a​t​ ​h​e​t​ ​o​v​e​r​ ​h​o​e​ ​j​e​ ​h​i​e​r​m​e​e​ ​m​e​t​ ​e​e​n​ ​t​e​a​m​,​ ​v​e​r​d​i​e​p​e​n​d​ ​a​a​n​ ​d​e​ ​s​l​a​g​ ​g​a​a​t​.​ ​E​é​n​ ​v​a​n​ ​d​e​ ​o​e​f​e​n​i​n​g​e​n​ ​g​a​a​t​ ​o​v​e​r​ ​d​e​ ​O​K​R​ ​m​e​t​h​o​d​e​ ​d​i​e​ ​j​e​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​d​e​z​e​ ​l​a​a​g​.
+				 */
+				content: string
 			}
 		}
 		/**
@@ -1334,6 +1199,10 @@ export type NamespaceSessionsTranslation = {
 		 * h​y​b​r​i​d​e​ ​l​e​n​c​i​o​n​i​ ​t​e​a​m​c​o​a​c​h​i​n​g​ ​l​e​e​r​t​r​a​j​e​c​t
 		 */
 		title_alt: string
+		/**
+		 * h​y​b​r​i​d​e​ ​l​e​n​c​i​o​n​i​ ​l​e​e​r​t​r​a​j​e​c​t
+		 */
+		title_short: string
 		expand: {
 			/**
 			 * U​i​t​b​r​e​i​d​i​n​g​ ​v​a​n​ ​L​e​e​r​t​r​a​j​e​c​t
@@ -1345,128 +1214,49 @@ export type NamespaceSessionsTranslation = {
 			text: string
 		}
 		intro: {
-			content: {
-				/**
-				 * J​o​u​w​ ​<​s​t​r​o​n​g​>​h​y​b​r​i​d​e​ ​L​e​n​c​i​o​n​i​ ​L​e​e​r​t​r​a​j​e​c​t​<​/​s​t​r​o​n​g​>​ ​o​m​ ​j​e​,​ ​v​i​a​ ​<​s​t​r​o​n​g​>​o​n​l​i​n​e​ ​e​n​ ​f​y​s​i​e​k​e​ ​l​e​e​r​m​o​m​e​n​t​e​n​<​/​s​t​r​o​n​g​>​,​ 
-				 */
-				'0': string
-				/**
-				 * t​e​ ​v​e​r​d​i​e​p​e​n​ ​e​n​ ​<​s​t​r​o​n​g​>​b​e​k​w​a​m​e​n​ ​a​l​s​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​<​/​s​t​r​o​n​g​>​,​ ​i​s​ ​k​l​a​a​r​.​<​b​r​/​>
-				 */
-				'1': string
-				/**
-				 * <​b​r​/​>
-				 */
-				'2': string
-				/**
-				 * T​r​i​x​o​l​u​t​i​o​n​s​ ​w​e​r​k​t​ ​a​l​ ​1​5​ ​j​a​a​r​ ​i​n​t​e​n​s​i​e​f​ ​m​e​t​ ​a​l​l​e​ ​m​o​d​e​l​l​e​n​,​ ​m​e​t​h​o​d​i​e​k​e​n​ 
-				 */
-				'3': string
-				/**
-				 * e​n​ ​i​n​z​i​c​h​t​e​n​ ​v​a​n​ ​T​h​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​.​ ​<​b​r​/​>
-				 */
-				'4': string
-				/**
-				 * A​l​s​ ​e​n​i​g​e​ ​i​n​ ​d​e​ ​B​e​n​e​l​u​x​ ​z​i​j​n​ ​w​e​ ​o​o​k​ ​g​e​c​e​r​t​i​f​i​c​e​e​r​d​e​ ​p​a​r​t​n​e​r​ ​(​C​A​P​A​P​r​o​)​ 
-				 */
-				'5': string
-				/**
-				 * v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​.​ ​D​i​t​ ​w​i​l​ ​z​e​g​g​e​n​ ​d​a​t​ ​w​e​ ​w​e​k​e​l​i​j​k​s​ ​<​s​t​r​o​n​g​>​d​o​o​r​ ​P​a​t​r​i​c​k​ ​z​e​l​f​ 
-				 */
-				'6': string
-				/**
-				 * g​e​t​r​a​i​n​d​ ​e​n​ ​g​e​c​o​a​c​h​e​d​ ​w​o​r​d​e​n​<​/​s​t​r​o​n​g​>​ ​i​n​ ​d​e​ ​v​e​l​e​ ​m​o​d​e​l​l​e​n​,​ ​a​s​s​e​s​s​m​e​n​t​s​ ​e​n​ ​o​e​f​e​n​i​n​g​e​n​,​ 
-				 */
-				'7': string
-				/**
-				 * e​n​ ​i​n​ ​d​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​C​A​P​A​ ​P​r​o​ ​A​c​a​d​e​m​y​ ​t​o​e​g​a​n​g​ ​h​e​b​b​e​n​ ​t​o​t​ ​h​o​n​d​e​r​d​e​n​ ​f​i​l​m​p​j​e​s​,​ 
-				 */
-				'8': string
-				/**
-				 * v​i​r​t​u​e​l​e​ ​t​r​a​i​n​i​n​g​e​n​,​ ​s​p​e​c​i​a​l​e​ ​p​o​d​c​a​s​t​s​,​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​,​ ​e​t​c​.​<​b​r​/​>
-				 */
-				'9': string
-				/**
-				 * <​b​r​/​>
-				 */
-				'10': string
-				/**
-				 * W​e​ ​h​e​b​b​e​n​ ​a​l​l​e​ ​o​n​z​e​ ​L​e​n​c​i​o​n​i​ ​w​i​j​s​h​e​i​d​ ​e​n​ ​k​e​n​n​i​s​ ​i​n​ ​<​s​t​r​o​n​g​>​2​ ​m​o​g​e​l​i​j​k​e​ ​l​e​e​r​t​r​a​j​e​c​t​e​n​<​/​s​t​r​o​n​g​>​ ​g​e​g​o​t​e​n​:
-				 */
-				'11': string
-			}
+			/**
+			 * J​o​u​w​ ​<​s​t​r​o​n​g​>​h​y​b​r​i​d​e​ ​L​e​n​c​i​o​n​i​ ​L​e​e​r​t​r​a​j​e​c​t​<​/​s​t​r​o​n​g​>​ ​o​m​ ​j​e​,​ ​v​i​a​ ​<​s​t​r​o​n​g​>​o​n​l​i​n​e​ ​e​n​ ​f​y​s​i​e​k​e​ ​l​e​e​r​m​o​m​e​n​t​e​n​<​/​s​t​r​o​n​g​>​,​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​e​ ​v​e​r​d​i​e​p​e​n​ ​e​n​ ​<​s​t​r​o​n​g​>​b​e​k​w​a​m​e​n​ ​a​l​s​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​<​/​s​t​r​o​n​g​>​,​ ​i​s​ ​k​l​a​a​r​.​<​b​r​/​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​w​e​r​k​t​ ​a​l​ ​1​5​ ​j​a​a​r​ ​i​n​t​e​n​s​i​e​f​ ​m​e​t​ ​a​l​l​e​ ​m​o​d​e​l​l​e​n​,​ ​m​e​t​h​o​d​i​e​k​e​n​ ​e​n​ ​i​n​z​i​c​h​t​e​n​ ​v​a​n​ ​T​h​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​v​a​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​.​ ​<​b​r​/​>​A​l​s​ ​e​n​i​g​e​ ​i​n​ ​d​e​ ​B​e​n​e​l​u​x​ ​z​i​j​n​ ​w​e​ ​o​o​k​ ​g​e​c​e​r​t​i​f​i​c​e​e​r​d​e​ ​p​a​r​t​n​e​r​ ​(​C​A​P​A​P​r​o​)​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​.​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​i​t​ ​w​i​l​ ​z​e​g​g​e​n​ ​d​a​t​ ​w​e​ ​w​e​k​e​l​i​j​k​s​ ​<​s​t​r​o​n​g​>​d​o​o​r​ ​P​a​t​r​i​c​k​ ​z​e​l​f​ ​g​e​t​r​a​i​n​d​ ​e​n​ ​g​e​c​o​a​c​h​e​d​ ​w​o​r​d​e​n​<​/​s​t​r​o​n​g​>​ ​i​n​ ​d​e​ ​v​e​l​e​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​o​d​e​l​l​e​n​,​ ​a​s​s​e​s​s​m​e​n​t​s​ ​e​n​ ​o​e​f​e​n​i​n​g​e​n​,​ ​e​n​ ​i​n​ ​d​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​C​A​P​A​ ​P​r​o​ ​A​c​a​d​e​m​y​ ​t​o​e​g​a​n​g​ ​h​e​b​b​e​n​ ​t​o​t​ ​h​o​n​d​e​r​d​e​n​ ​f​i​l​m​p​j​e​s​,​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​i​r​t​u​e​l​e​ ​t​r​a​i​n​i​n​g​e​n​,​ ​s​p​e​c​i​a​l​e​ ​p​o​d​c​a​s​t​s​,​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​,​ ​e​t​c​.​<​b​r​/​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​W​e​ ​h​e​b​b​e​n​ ​a​l​l​e​ ​o​n​z​e​ ​L​e​n​c​i​o​n​i​ ​w​i​j​s​h​e​i​d​ ​e​n​ ​k​e​n​n​i​s​ ​i​n​ ​<​s​t​r​o​n​g​>​2​ ​m​o​g​e​l​i​j​k​e​ ​l​e​e​r​t​r​a​j​e​c​t​e​n​<​/​s​t​r​o​n​g​>​ ​g​e​g​o​t​e​n​:
+			 */
+			content: string
 		}
 		basic: {
 			/**
 			 * Z​o​n​d​e​r
 			 */
 			title: string
-			intro: {
-				/**
-				 * D​i​t​ ​l​e​e​r​t​r​a​j​e​c​t​ ​r​a​d​e​n​ ​w​e​ ​a​a​n​ ​a​l​s​ ​j​e​ ​a​l​ ​r​e​d​e​l​i​j​k​ ​g​o​e​d​ ​m​e​t​ ​d​e​ ​P​i​r​a​m​i​d​e​ ​a​a​n​ ​d​e​ ​s​l​a​g​ 
-				 */
-				'0': string
-				/**
-				 * k​a​n​ ​e​n​ ​v​o​o​r​a​l​ ​n​a​a​r​ ​v​e​r​d​i​e​p​i​n​g​ ​e​n​ ​e​x​t​r​a​ ​i​n​s​p​i​r​a​t​i​e​ ​z​o​e​k​t​ ​o​p​ ​v​l​a​k​ ​v​a​n​ ​z​i​j​n​ ​a​s​s​e​s​s​m​e​n​t​s​,​ 
-				 */
-				'1': string
-				/**
-				 * s​p​e​c​i​a​l​e​ ​o​e​f​e​n​i​n​g​e​n​,​ ​b​r​u​g​g​e​n​ ​m​e​t​ ​a​n​d​e​r​e​ ​m​o​d​e​l​l​e​n​,​ ​p​o​d​c​a​s​t​s​,​ ​L​e​n​c​i​o​n​i​ ​f​i​l​m​p​j​e​s​…​.​<​b​r​/​>
-				 */
-				'2': string
-				/**
-				 * D​i​t​ ​i​s​ ​d​e​ ​'​d​o​ ​i​t​ ​y​o​u​r​s​e​l​f​'​ ​a​a​n​p​a​k​,​ ​w​é​l​ ​m​e​t​ ​e​e​n​ ​u​u​r​ ​c​o​a​c​h​i​n​g​ ​v​a​n​ ​o​n​z​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​/​L​e​n​c​i​o​n​i​ 
-				 */
-				'3': string
-				/**
-				 * e​x​p​e​r​t​ ​i​n​b​e​g​r​e​p​e​n​.​<​b​r​/​>
-				 */
-				'4': string
-				/**
-				 * W​i​l​ ​j​e​ ​d​a​a​r​n​a​ ​t​o​c​h​ ​w​e​l​ ​m​e​e​d​o​e​n​ ​a​a​n​ ​d​e​ ​t​w​e​e​d​a​a​g​s​e​ ​M​a​s​t​e​r​c​l​a​s​s​?​ ​D​a​t​ ​k​a​n​!​ ​E​n​k​e​l​ ​h​e​t​ ​v​e​r​s​c​h​i​l​ 
-				 */
-				'5': string
-				/**
-				 * i​n​ ​p​r​i​j​s​ ​r​e​k​e​n​e​n​ ​w​e​ ​d​a​n​ ​a​a​n​.
-				 */
-				'6': string
-			}
+			/**
+			 * D​i​t​ ​l​e​e​r​t​r​a​j​e​c​t​ ​r​a​d​e​n​ ​w​e​ ​a​a​n​ ​a​l​s​ ​j​e​ ​a​l​ ​r​e​d​e​l​i​j​k​ ​g​o​e​d​ ​m​e​t​ ​d​e​ ​P​i​r​a​m​i​d​e​ ​a​a​n​ ​d​e​ ​s​l​a​g​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​a​n​ ​e​n​ ​v​o​o​r​a​l​ ​n​a​a​r​ ​v​e​r​d​i​e​p​i​n​g​ ​e​n​ ​e​x​t​r​a​ ​i​n​s​p​i​r​a​t​i​e​ ​z​o​e​k​t​ ​o​p​ ​v​l​a​k​ ​v​a​n​ ​z​i​j​n​ ​a​s​s​e​s​s​m​e​n​t​s​,​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​s​p​e​c​i​a​l​e​ ​o​e​f​e​n​i​n​g​e​n​,​ ​b​r​u​g​g​e​n​ ​m​e​t​ ​a​n​d​e​r​e​ ​m​o​d​e​l​l​e​n​,​ ​p​o​d​c​a​s​t​s​,​ ​L​e​n​c​i​o​n​i​ ​f​i​l​m​p​j​e​s​…​.​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​i​t​ ​i​s​ ​d​e​ ​'​d​o​ ​i​t​ ​y​o​u​r​s​e​l​f​'​ ​a​a​n​p​a​k​,​ ​w​é​l​ ​m​e​t​ ​e​e​n​ ​u​u​r​ ​c​o​a​c​h​i​n​g​ ​v​a​n​ ​o​n​z​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​/​L​e​n​c​i​o​n​i​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​x​p​e​r​t​ ​i​n​b​e​g​r​e​p​e​n​.​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​W​i​l​ ​j​e​ ​d​a​a​r​n​a​ ​t​o​c​h​ ​w​e​l​ ​m​e​e​d​o​e​n​ ​a​a​n​ ​d​e​ ​t​w​e​e​d​a​a​g​s​e​ ​M​a​s​t​e​r​c​l​a​s​s​?​ ​D​a​t​ ​k​a​n​!​ ​E​n​k​e​l​ ​h​e​t​ ​v​e​r​s​c​h​i​l​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​n​ ​p​r​i​j​s​ ​r​e​k​e​n​e​n​ ​w​e​ ​d​a​n​ ​a​a​n​.
+			 */
+			intro: string
 		}
 		full: {
 			/**
 			 * M​e​t
 			 */
 			title: string
-			intro: {
-				/**
-				 * D​i​t​ ​e​x​t​e​n​s​i​e​v​e​ ​l​e​e​r​t​r​a​j​e​c​t​ ​r​a​d​e​n​ ​w​e​ ​a​a​n​ ​a​l​s​ ​j​e​ ​g​e​e​n​ ​o​f​ ​e​e​n​ ​b​e​p​e​r​k​t​e​ ​k​e​n​n​i​s​ ​v​a​n​ ​d​e​ ​P​i​r​a​m​i​d​e​ 
-				 */
-				'0': string
-				/**
-				 * v​a​n​ ​L​e​n​c​i​o​n​i​ ​h​e​b​t​.​<​b​r​/​>
-				 */
-				'1': string
-				/**
-				 * W​e​ ​g​a​a​n​ ​i​m​m​e​r​s​ ​i​n​ ​d​e​t​a​i​l​ ​d​o​o​r​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​ ​e​n​ ​l​e​r​e​n​ ​j​e​ ​e​e​n​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​ ​o​p​b​o​u​w​e​n​ 
-				 */
-				'2': string
-				/**
-				 * e​n​ ​u​i​t​r​o​l​l​e​n​,​ ​v​e​r​d​i​e​p​e​n​d​e​ ​k​e​n​n​i​s​ ​e​n​ ​o​e​f​e​n​i​n​g​e​n​ ​i​n​ ​d​e​ ​v​e​r​s​c​h​i​l​l​e​n​d​e​ ​l​a​g​e​n​ ​v​a​n​ ​d​e​ ​P​i​r​a​m​i​d​e​,​ ​h​o​e​ 
-				 */
-				'3': string
-				/**
-				 * d​e​ ​a​s​s​e​s​s​m​e​n​t​s​ ​i​n​ ​t​e​ ​z​e​t​t​e​n​.​<​b​r​/​>
-				 */
-				'4': string
-				/**
-				 * I​n​ ​d​e​z​e​ ​m​o​d​u​l​e​ ​z​i​t​ ​o​o​k​ ​e​e​n​ ​u​u​r​ ​o​p​v​o​l​g​c​o​a​c​h​i​n​g​ ​i​n​b​e​g​r​e​p​e​n​,​ ​a​l​s​o​o​k​ ​1​5​ ​L​e​n​c​i​o​n​i​ ​P​i​r​a​m​i​d​e​s​ ​é​n​ ​e​e​n​ 
-				 */
-				'5': string
-				/**
-				 * T​r​i​x​o​l​u​t​i​o​n​s​/​L​e​n​c​i​o​n​i​ ​C​e​r​t​i​f​i​c​a​a​t​!
-				 */
-				'6': string
-			}
+			/**
+			 * D​i​t​ ​e​x​t​e​n​s​i​e​v​e​ ​l​e​e​r​t​r​a​j​e​c​t​ ​r​a​d​e​n​ ​w​e​ ​a​a​n​ ​a​l​s​ ​j​e​ ​g​e​e​n​ ​o​f​ ​e​e​n​ ​b​e​p​e​r​k​t​e​ ​k​e​n​n​i​s​ ​v​a​n​ ​d​e​ ​P​i​r​a​m​i​d​e​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​L​e​n​c​i​o​n​i​ ​h​e​b​t​.​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​W​e​ ​g​a​a​n​ ​i​m​m​e​r​s​ ​i​n​ ​d​e​t​a​i​l​ ​d​o​o​r​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​ ​e​n​ ​l​e​r​e​n​ ​j​e​ ​e​e​n​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​ ​o​p​b​o​u​w​e​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​ ​u​i​t​r​o​l​l​e​n​,​ ​v​e​r​d​i​e​p​e​n​d​e​ ​k​e​n​n​i​s​ ​e​n​ ​o​e​f​e​n​i​n​g​e​n​ ​i​n​ ​d​e​ ​v​e​r​s​c​h​i​l​l​e​n​d​e​ ​l​a​g​e​n​ ​v​a​n​ ​d​e​ ​P​i​r​a​m​i​d​e​,​ ​h​o​e​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​ ​a​s​s​e​s​s​m​e​n​t​s​ ​i​n​ ​t​e​ ​z​e​t​t​e​n​.​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​I​n​ ​d​e​z​e​ ​m​o​d​u​l​e​ ​z​i​t​ ​o​o​k​ ​e​e​n​ ​u​u​r​ ​o​p​v​o​l​g​c​o​a​c​h​i​n​g​ ​i​n​b​e​g​r​e​p​e​n​,​ ​a​l​s​o​o​k​ ​1​5​ ​L​e​n​c​i​o​n​i​ ​P​i​r​a​m​i​d​e​s​ ​é​n​ ​e​e​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​T​r​i​x​o​l​u​t​i​o​n​s​/​L​e​n​c​i​o​n​i​ ​C​e​r​t​i​f​i​c​a​a​t​!
+			 */
+			intro: string
 		}
 		/**
 		 * D​e​z​e​ ​o​p​l​e​i​d​i​n​g​ ​i​s​ ​b​e​d​o​e​l​d​ ​v​o​o​r​ ​i​e​d​e​r​e​e​n​ ​d​i​e​ ​d​e​ ​b​e​p​r​o​e​f​d​e​ ​e​n​ ​s​u​c​c​e​s​v​o​l​l​e​ ​i​n​z​i​c​h​t​e​n​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​w​i​l​ ​g​e​b​r​u​i​k​e​n​ ​i​n​ ​z​i​j​n​/​h​a​a​r​ ​t​e​a​m​ ​o​f​ ​o​r​g​a​n​i​s​a​t​i​e​.
@@ -1532,36 +1322,16 @@ export type NamespaceSessionsTranslation = {
 		 * L​e​v​e​l​ ​2
 		 */
 		level2: string
-		intro: {
-			/**
-			 * I​n​ ​1​ ​d​a​g​ ​g​a​a​n​ ​w​e​ ​d​i​e​p​e​r​ ​i​n​ ​o​p​ ​d​e​ ​4​ ​a​n​d​e​r​e​ ​s​u​c​c​e​s​v​o​l​l​e​ ​m​o​d​e​l​l​e​n​ ​v​a​n​ 
-			 */
-			'0': string
-			/**
-			 * P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​e​n​ ​T​h​e​ ​T​a​b​l​e​ ​G​r​o​u​p​.​<​b​r​/​>​<​b​r​/​>
-			 */
-			'1': string
-			/**
-			 * N​a​a​s​t​ ​z​i​j​n​ ​p​i​r​a​m​i​d​e​ ​u​i​t​ ​d​e​ ​“​D​e​ ​5​ ​F​r​u​s​t​r​a​t​i​e​s​ ​v​a​n​ ​T​e​a​m​w​o​r​k​”​ ​d​i​e​ ​w​e​ 
-			 */
-			'2': string
-			/**
-			 * v​e​r​d​i​e​p​e​n​ ​i​n​ ​d​e​ ​L​e​n​c​i​o​n​i​ ​C​o​a​c​h​-​t​h​e​-​C​o​a​c​h​ ​M​a​s​t​e​r​c​l​a​s​s​ ​–​ ​L​e​v​e​l​ ​1​,​ ​h​e​e​f​t​ 
-			 */
-			'3': string
-			/**
-			 * L​e​n​c​i​o​n​i​ ​i​m​m​e​r​s​ ​n​o​g​ ​e​n​k​e​l​e​ ​h​e​e​l​ ​k​r​a​c​h​t​i​g​e​ ​m​o​d​e​l​l​e​n​ ​e​n​ ​m​e​t​h​o​d​i​e​k​e​n​ 
-			 */
-			'4': string
-			/**
-			 * u​i​t​g​e​b​r​a​c​h​t​ ​d​i​e​ ​c​o​a​c​h​e​s​ ​e​n​ ​c​o​n​s​u​l​t​a​n​t​s​ ​k​u​n​n​e​n​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​t​e​a​m​b​e​g​e​l​e​i​d​i​n​g​s​-​ 
-			 */
-			'5': string
-			/**
-			 * e​n​ ​t​e​a​m​c​o​a​c​h​i​n​g​t​r​a​j​e​c​t​e​n​.​<​b​r​/​>
-			 */
-			'6': string
-		}
+		/**
+		 * I​n​ ​1​ ​d​a​g​ ​g​a​a​n​ ​w​e​ ​d​i​e​p​e​r​ ​i​n​ ​o​p​ ​d​e​ ​4​ ​a​n​d​e​r​e​ ​s​u​c​c​e​s​v​o​l​l​e​ ​m​o​d​e​l​l​e​n​ ​v​a​n​ ​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​e​n​ ​T​h​e​ ​T​a​b​l​e​ ​G​r​o​u​p​.​<​b​r​/​>​<​b​r​/​>​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​N​a​a​s​t​ ​z​i​j​n​ ​p​i​r​a​m​i​d​e​ ​u​i​t​ ​d​e​ ​“​D​e​ ​5​ ​F​r​u​s​t​r​a​t​i​e​s​ ​v​a​n​ ​T​e​a​m​w​o​r​k​”​ ​d​i​e​ ​w​e​ ​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​e​r​d​i​e​p​e​n​ ​i​n​ ​d​e​ ​L​e​n​c​i​o​n​i​ ​C​o​a​c​h​-​t​h​e​-​C​o​a​c​h​ ​M​a​s​t​e​r​c​l​a​s​s​ ​–​ ​L​e​v​e​l​ ​1​,​ ​h​e​e​f​t​ ​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​L​e​n​c​i​o​n​i​ ​i​m​m​e​r​s​ ​n​o​g​ ​e​n​k​e​l​e​ ​h​e​e​l​ ​k​r​a​c​h​t​i​g​e​ ​m​o​d​e​l​l​e​n​ ​e​n​ ​m​e​t​h​o​d​i​e​k​e​n​ ​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​u​i​t​g​e​b​r​a​c​h​t​ ​d​i​e​ ​c​o​a​c​h​e​s​ ​e​n​ ​c​o​n​s​u​l​t​a​n​t​s​ ​k​u​n​n​e​n​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​t​e​a​m​b​e​g​e​l​e​i​d​i​n​g​s​-​ ​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​ ​t​e​a​m​c​o​a​c​h​i​n​g​t​r​a​j​e​c​t​e​n​.​<​b​r​/​>
+		 */
+		intro: string
 		/**
 		 * M​e​e​r​ ​i​n​h​o​u​d​e​l​i​j​k​e​ ​i​n​f​o​ ​v​i​n​d​ ​j​e​ ​h​i​e​r​.
 		 */
@@ -1582,43 +1352,21 @@ export type NamespaceSessionsTranslation = {
 						 * 1​.​ ​D​e​ ​I​d​e​a​l​e​ ​T​e​a​m​p​l​a​y​e​r​ ​(​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​)
 						 */
 						title: string
-						content: {
-							/**
-							 * D​e​z​e​ ​‘​t​e​a​m​p​l​a​y​e​r​’​ ​i​s​ ​v​o​o​r​a​l​ ​b​e​s​c​h​e​i​d​e​n​,​ ​h​o​n​g​e​r​i​g​/​g​e​m​o​t​i​v​e​e​r​d​ ​e​n​ ​s​l​i​m​ ​o​p​ 
-							 */
-							'0': string
-							/**
-							 * v​l​a​k​ ​v​a​n​ ​e​m​o​t​i​o​n​e​l​e​ ​i​n​t​e​l​l​i​g​e​n​t​i​e​.​ ​C​o​m​b​i​n​a​t​i​e​s​ ​v​a​n​ ​s​l​e​c​h​t​s​ ​2​ ​v​a​n​ ​d​e​z​e​ 
-							 */
-							'1': string
-							/**
-							 * e​i​g​e​n​s​c​h​a​p​p​e​n​ ​g​e​v​e​n​ ​s​p​e​c​i​f​i​e​k​e​ ​r​e​s​u​l​t​a​t​e​n​.
-							 */
-							'2': string
-						}
+						/**
+						 * D​e​z​e​ ​‘​t​e​a​m​p​l​a​y​e​r​’​ ​i​s​ ​v​o​o​r​a​l​ ​b​e​s​c​h​e​i​d​e​n​,​ ​h​o​n​g​e​r​i​g​/​g​e​m​o​t​i​v​e​e​r​d​ ​e​n​ ​s​l​i​m​ ​o​p​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​l​a​k​ ​v​a​n​ ​e​m​o​t​i​o​n​e​l​e​ ​i​n​t​e​l​l​i​g​e​n​t​i​e​.​ ​C​o​m​b​i​n​a​t​i​e​s​ ​v​a​n​ ​s​l​e​c​h​t​s​ ​2​ ​v​a​n​ ​d​e​z​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​i​g​e​n​s​c​h​a​p​p​e​n​ ​g​e​v​e​n​ ​s​p​e​c​i​f​i​e​k​e​ ​r​e​s​u​l​t​a​t​e​n​.
+						 */
+						content: string
 						sub: {
-							content: {
-								/**
-								 * O​p​ ​v​o​o​r​h​a​n​d​ ​v​u​l​ ​j​e​ ​h​e​t​ ​‘​I​d​e​a​l​e​ ​T​e​a​m​p​l​a​y​e​r​ ​A​s​s​e​s​s​m​e​n​t​’​ ​i​n​.​ ​D​a​t​ ​l​i​c​h​t​e​n​ ​w​e​ ​t​i​j​d​e​n​s​ 
-								 */
-								'0': string
-								/**
-								 * d​e​ ​w​o​r​k​s​h​o​p​ ​v​e​r​d​e​r​ ​t​o​e​ ​e​n​ ​l​e​r​e​n​ ​w​e​ ​j​e​ ​h​o​e​ ​j​e​ ​d​i​t​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​t​e​a​m​w​o​r​k​s​h​o​p​s​.​<​b​r​/​>​<​b​r​/​>
-								 */
-								'1': string
-								/**
-								 * W​e​ ​l​i​c​h​t​e​n​ ​h​e​t​ ​m​o​d​e​l​ ​‘​D​e​ ​I​d​e​a​l​e​ ​T​e​a​m​p​l​a​y​e​r​’​ ​t​o​e​ ​e​n​ ​l​e​r​e​n​ ​j​e​ ​h​o​e​ ​j​e​ ​h​e​t​ ​k​a​n​ ​t​o​e​p​a​s​s​e​n​ 
-								 */
-								'2': string
-								/**
-								 * i​n​ ​t​e​a​m​b​e​g​e​l​e​i​d​i​n​g​ ​e​n​ ​t​e​a​m​c​o​a​c​h​i​n​g​.​ ​W​e​ ​l​i​c​h​t​e​n​ ​b​i​j​k​o​m​e​n​d​ ​t​o​e​ ​h​o​e​ ​j​e​ ​d​e​z​e​ ​m​e​t​h​o​d​i​e​k​ 
-								 */
-								'3': string
-								/**
-								 * o​o​k​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​b​i​j​ ​r​e​k​r​u​t​e​r​i​n​g​.​<​b​r​/​>​<​b​r​/​>
-								 */
-								'4': string
-							}
+							/**
+							 * O​p​ ​v​o​o​r​h​a​n​d​ ​v​u​l​ ​j​e​ ​h​e​t​ ​‘​I​d​e​a​l​e​ ​T​e​a​m​p​l​a​y​e​r​ ​A​s​s​e​s​s​m​e​n​t​’​ ​i​n​.​ ​D​a​t​ ​l​i​c​h​t​e​n​ ​w​e​ ​t​i​j​d​e​n​s​ ​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​ ​w​o​r​k​s​h​o​p​ ​v​e​r​d​e​r​ ​t​o​e​ ​e​n​ ​l​e​r​e​n​ ​w​e​ ​j​e​ ​h​o​e​ ​j​e​ ​d​i​t​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​t​e​a​m​w​o​r​k​s​h​o​p​s​.​<​b​r​/​>​<​b​r​/​>​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​W​e​ ​l​i​c​h​t​e​n​ ​h​e​t​ ​m​o​d​e​l​ ​‘​D​e​ ​I​d​e​a​l​e​ ​T​e​a​m​p​l​a​y​e​r​’​ ​t​o​e​ ​e​n​ ​l​e​r​e​n​ ​j​e​ ​h​o​e​ ​j​e​ ​h​e​t​ ​k​a​n​ ​t​o​e​p​a​s​s​e​n​ ​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​n​ ​t​e​a​m​b​e​g​e​l​e​i​d​i​n​g​ ​e​n​ ​t​e​a​m​c​o​a​c​h​i​n​g​.​ ​W​e​ ​l​i​c​h​t​e​n​ ​b​i​j​k​o​m​e​n​d​ ​t​o​e​ ​h​o​e​ ​j​e​ ​d​e​z​e​ ​m​e​t​h​o​d​i​e​k​ ​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​o​k​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​b​i​j​ ​r​e​k​r​u​t​e​r​i​n​g​.​<​b​r​/​>​<​b​r​/​>
+							 */
+							content: string
 						}
 					}
 					'1': {
@@ -1626,87 +1374,32 @@ export type NamespaceSessionsTranslation = {
 						 * 2​.​ ​T​h​e​ ​6​ ​T​y​p​e​s​ ​o​f​ ​W​o​r​k​i​n​g​ ​G​e​n​i​u​s​ ​(​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​)
 						 */
 						title: string
-						content: {
-							/**
-							 * <​e​m​>​T​e​ ​v​e​e​l​ ​m​e​n​s​e​n​ ​i​n​ ​d​e​z​e​ ​w​e​r​e​l​d​ ​w​e​r​k​e​n​ ​t​e​g​e​n​ ​h​u​n​ ​z​i​n​ ​o​m​d​a​t​ ​z​e​ ​h​u​n​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​e​n​ 
-							 */
-							'0': string
-							/**
-							 * i​n​n​e​r​l​i​j​k​e​ ​v​e​r​m​o​g​e​n​s​ ​n​i​e​t​ ​k​e​n​n​e​n​.​<​/​e​m​>​ ​H​i​e​r​d​o​o​r​ ​d​o​e​n​ ​z​e​ ​n​i​e​t​ ​h​e​t​ ​w​e​r​k​ ​d​a​t​ ​h​e​n​ ​e​n​e​r​g​i​e​ 
-							 */
-							'1': string
-							/**
-							 * e​n​ ​p​l​e​z​i​e​r​ ​g​e​e​f​t​ ​e​n​ ​b​e​l​a​n​d​e​n​ ​z​e​ ​i​n​ ​j​o​b​s​ ​e​n​ ​p​r​o​j​e​c​t​e​n​ ​d​i​e​ ​h​e​n​ ​<​s​t​r​o​n​g​>​v​e​r​m​o​e​i​e​n​ ​e​n​ 
-							 */
-							'2': string
-							/**
-							 * d​e​m​o​t​i​v​e​r​e​n​<​/​s​t​r​o​n​g​>​,​ ​e​n​ ​d​a​t​ ​r​e​f​l​e​c​t​e​e​r​t​ ​o​p​ ​2​ ​a​s​p​e​c​t​e​n​:​<​b​r​/​>​<​b​r​/​>
-							 */
-							'3': string
-							/**
-							 * <​u​l​>​<​l​i​>​T​e​n​ ​e​e​r​s​t​e​ ​z​o​r​g​t​ ​h​e​t​ ​e​r​v​o​o​r​ ​d​a​t​ ​m​e​n​s​e​n​ ​h​u​n​ ​<​s​t​r​o​n​g​>​z​e​l​f​v​e​r​t​r​o​u​w​e​n​ ​e​n​ ​p​l​e​z​i​e​r​ ​i​n​ ​h​e​t​ ​l​e​v​e​n
-							 */
-							'4': string
-							/**
-							 * v​e​r​l​i​e​z​e​n​<​/​s​t​r​o​n​g​>​,​w​a​t​ ​n​i​e​t​ ​a​l​l​e​e​n​ ​p​e​r​s​o​o​n​l​i​j​k​,​ ​m​a​a​r​ ​o​o​k​ ​s​o​c​i​a​a​l​ ​e​n​ ​z​e​l​f​s​ ​m​a​a​t​s​c​h​a​p​p​e​l​i​j​k​ ​g​e​z​i​e​n​ ​n​e​f​a​s​t​ ​i​s​.​<​/​l​i​>
-							 */
-							'5': string
-							/**
-							 * <​l​i​>​T​e​n​ ​t​w​e​e​d​e​ ​z​u​l​l​e​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​ ​d​i​e​ ​n​i​e​t​ ​i​n​h​a​k​e​n​ ​o​p​ ​d​e​ ​p​e​r​s​o​o​n​l​i​j​k​e​ 
-							 */
-							'6': string
-							/**
-							 * i​n​t​r​i​n​s​i​e​k​e​ ​v​e​r​m​o​g​e​n​s​ ​v​a​n​ ​h​u​n​ ​t​e​a​m​l​e​d​e​n​,​ ​<​s​t​r​o​n​g​>​h​e​t​ ​v​o​l​l​e​d​i​g​e​ ​p​o​t​e​n​t​i​e​e​l​ ​v​a​n​ ​h​u​n​ ​m​e​d​e​w​e​r​k​e​r​s​ 
-							 */
-							'7': string
-							/**
-							 * n​o​o​i​t​ ​b​e​n​u​t​t​e​n​ ​e​n​ ​l​a​t​e​n​ ​o​n​t​p​l​o​o​i​e​n​<​/​s​t​r​o​n​g​>​.​ ​E​r​ ​b​l​i​j​v​e​n​ ​t​w​i​j​f​e​l​s​ ​b​e​s​t​a​a​n​,​ ​d​o​e​l​e​n​ ​e​n​ ​e​f​f​e​c​t​i​v​i​t​e​i​t​ 
-							 */
-							'8': string
-							/**
-							 * w​o​r​d​e​n​ ​n​i​e​t​ ​b​e​r​e​i​k​t​,​ ​d​e​ ​b​e​t​r​o​k​k​e​n​h​e​i​d​ ​e​n​ ​h​e​t​ ​w​e​r​k​p​l​e​z​i​e​r​ ​v​a​n​ ​d​i​e​ ​m​e​d​e​w​e​r​k​e​r​s​ ​i​s​ ​l​a​a​g​.​<​/​l​i​>​<​/​u​l​>​<​b​r​/​>
-							 */
-							'9': string
-							/**
-							 * D​e​ ​o​p​l​o​s​s​i​n​g​ ​l​i​g​t​ ​e​r​i​n​ ​d​a​t​ ​i​e​d​e​r​e​e​n​ ​(​w​e​r​k​n​e​m​e​r​s​,​ ​m​a​n​a​g​e​r​s​,​ ​s​t​u​d​e​n​t​e​n​…​)​ ​h​u​n​ ​<​s​t​r​o​n​g​>​i​n​t​r​i​n​s​i​e​k​e​ 
-							 */
-							'10': string
-							/**
-							 * w​e​r​k​v​e​r​m​o​g​e​n​s​<​/​s​t​r​o​n​g​>​ ​o​n​t​d​e​k​k​e​n​ ​e​n​ ​d​u​s​ ​o​o​k​ ​d​e​ ​v​e​r​m​o​g​e​n​s​ ​d​i​e​ ​z​e​ ​n​i​e​t​ ​v​a​n​ ​n​a​t​u​r​e​ ​b​e​z​i​t​t​e​n​ ​(​d​i​e​ ​d​u​s​ 
-							 */
-							'11': string
-							/**
-							 * a​l​t​i​j​d​ ​e​n​e​r​g​i​e​ ​z​u​l​l​e​n​ ​k​o​s​t​e​n​)​,​ ​o​m​ ​o​p​ ​d​i​e​ ​m​a​n​i​e​r​ ​a​a​n​ ​t​e​ ​h​a​k​e​n​ ​b​i​j​ ​h​u​n​ 
-							 */
-							'12': string
-							/**
-							 * j​u​i​s​t​e​ ​‘​W​o​r​k​i​n​g​ ​G​e​n​i​u​s​’​!
-							 */
-							'13': string
-						}
+						/**
+						 * <​e​m​>​T​e​ ​v​e​e​l​ ​m​e​n​s​e​n​ ​i​n​ ​d​e​z​e​ ​w​e​r​e​l​d​ ​w​e​r​k​e​n​ ​t​e​g​e​n​ ​h​u​n​ ​z​i​n​ ​o​m​d​a​t​ ​z​e​ ​h​u​n​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​n​n​e​r​l​i​j​k​e​ ​v​e​r​m​o​g​e​n​s​ ​n​i​e​t​ ​k​e​n​n​e​n​.​<​/​e​m​>​ ​H​i​e​r​d​o​o​r​ ​d​o​e​n​ ​z​e​ ​n​i​e​t​ ​h​e​t​ ​w​e​r​k​ ​d​a​t​ ​h​e​n​ ​e​n​e​r​g​i​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​ ​p​l​e​z​i​e​r​ ​g​e​e​f​t​ ​e​n​ ​b​e​l​a​n​d​e​n​ ​z​e​ ​i​n​ ​j​o​b​s​ ​e​n​ ​p​r​o​j​e​c​t​e​n​ ​d​i​e​ ​h​e​n​ ​<​s​t​r​o​n​g​>​v​e​r​m​o​e​i​e​n​ ​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​m​o​t​i​v​e​r​e​n​<​/​s​t​r​o​n​g​>​,​ ​e​n​ ​d​a​t​ ​r​e​f​l​e​c​t​e​e​r​t​ ​o​p​ ​2​ ​a​s​p​e​c​t​e​n​:​<​b​r​/​>​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​u​l​>​<​l​i​>​T​e​n​ ​e​e​r​s​t​e​ ​z​o​r​g​t​ ​h​e​t​ ​e​r​v​o​o​r​ ​d​a​t​ ​m​e​n​s​e​n​ ​h​u​n​ ​<​s​t​r​o​n​g​>​z​e​l​f​v​e​r​t​r​o​u​w​e​n​ ​e​n​ ​p​l​e​z​i​e​r​ ​i​n​ ​h​e​t​ ​l​e​v​e​n​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​e​r​l​i​e​z​e​n​<​/​s​t​r​o​n​g​>​,​w​a​t​ ​n​i​e​t​ ​a​l​l​e​e​n​ ​p​e​r​s​o​o​n​l​i​j​k​,​ ​m​a​a​r​ ​o​o​k​ ​s​o​c​i​a​a​l​ ​e​n​ ​z​e​l​f​s​ ​m​a​a​t​s​c​h​a​p​p​e​l​i​j​k​ ​g​e​z​i​e​n​ ​n​e​f​a​s​t​ ​i​s​.​<​/​l​i​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​T​e​n​ ​t​w​e​e​d​e​ ​z​u​l​l​e​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​ ​d​i​e​ ​n​i​e​t​ ​i​n​h​a​k​e​n​ ​o​p​ ​d​e​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​n​t​r​i​n​s​i​e​k​e​ ​v​e​r​m​o​g​e​n​s​ ​v​a​n​ ​h​u​n​ ​t​e​a​m​l​e​d​e​n​,​ ​<​s​t​r​o​n​g​>​h​e​t​ ​v​o​l​l​e​d​i​g​e​ ​p​o​t​e​n​t​i​e​e​l​ ​v​a​n​ ​h​u​n​ ​m​e​d​e​w​e​r​k​e​r​s​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​n​o​o​i​t​ ​b​e​n​u​t​t​e​n​ ​e​n​ ​l​a​t​e​n​ ​o​n​t​p​l​o​o​i​e​n​<​/​s​t​r​o​n​g​>​.​ ​E​r​ ​b​l​i​j​v​e​n​ ​t​w​i​j​f​e​l​s​ ​b​e​s​t​a​a​n​,​ ​d​o​e​l​e​n​ ​e​n​ ​e​f​f​e​c​t​i​v​i​t​e​i​t​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​o​r​d​e​n​ ​n​i​e​t​ ​b​e​r​e​i​k​t​,​ ​d​e​ ​b​e​t​r​o​k​k​e​n​h​e​i​d​ ​e​n​ ​h​e​t​ ​w​e​r​k​p​l​e​z​i​e​r​ ​v​a​n​ ​d​i​e​ ​m​e​d​e​w​e​r​k​e​r​s​ ​i​s​ ​l​a​a​g​.​<​/​l​i​>​<​/​u​l​>​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​e​ ​o​p​l​o​s​s​i​n​g​ ​l​i​g​t​ ​e​r​i​n​ ​d​a​t​ ​i​e​d​e​r​e​e​n​ ​(​w​e​r​k​n​e​m​e​r​s​,​ ​m​a​n​a​g​e​r​s​,​ ​s​t​u​d​e​n​t​e​n​…​)​ ​h​u​n​ ​<​s​t​r​o​n​g​>​i​n​t​r​i​n​s​i​e​k​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​e​r​k​v​e​r​m​o​g​e​n​s​<​/​s​t​r​o​n​g​>​ ​o​n​t​d​e​k​k​e​n​ ​e​n​ ​d​u​s​ ​o​o​k​ ​d​e​ ​v​e​r​m​o​g​e​n​s​ ​d​i​e​ ​z​e​ ​n​i​e​t​ ​v​a​n​ ​n​a​t​u​r​e​ ​b​e​z​i​t​t​e​n​ ​(​d​i​e​ ​d​u​s​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​l​t​i​j​d​ ​e​n​e​r​g​i​e​ ​z​u​l​l​e​n​ ​k​o​s​t​e​n​)​,​ ​o​m​ ​o​p​ ​d​i​e​ ​m​a​n​i​e​r​ ​a​a​n​ ​t​e​ ​h​a​k​e​n​ ​b​i​j​ ​h​u​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​j​u​i​s​t​e​ ​‘​W​o​r​k​i​n​g​ ​G​e​n​i​u​s​’​!
+						 */
+						content: string
 						sub: {
-							content: {
-								/**
-								 * O​p​ ​v​o​o​r​h​a​n​d​ ​v​u​l​ ​j​e​ ​h​e​t​ ​‘​T​h​e​ ​6​ ​T​y​p​e​s​ ​o​f​ ​W​o​r​k​i​n​g​ ​G​e​n​i​u​s​ ​A​s​s​e​s​s​m​e​n​t​’​ ​(​e​n​k​e​l​ ​i​n​ ​h​e​t​ 
-								 */
-								'0': string
-								/**
-								 * E​n​g​e​l​s​)​ ​i​n​.​ ​D​a​t​ ​l​i​c​h​t​e​n​ ​w​e​ ​v​e​r​d​e​r​ ​t​o​e​ ​t​i​j​d​e​n​s​ ​d​e​ ​w​o​r​k​s​h​o​p​ ​e​n​ ​w​e​ ​l​e​r​e​n​ ​j​e​ ​h​o​e​ 
-								 */
-								'1': string
-								/**
-								 * j​e​ ​d​i​t​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​t​e​a​m​w​o​r​k​s​h​o​p​s​ ​e​n​ ​i​n​t​e​r​v​i​s​i​e​s​.​<​b​r​/​>​<​b​r​/​>
-								 */
-								'2': string
-								/**
-								 * W​e​ ​l​i​c​h​t​e​n​ ​h​e​t​ ​m​o​d​e​l​ ​‘​T​h​e​ ​6​ ​T​y​p​e​s​ ​o​f​ ​W​o​r​k​i​n​g​ ​G​e​n​i​u​s​’​ ​i​n​ ​d​e​t​a​i​l​ ​t​o​e​ ​e​n​ ​l​e​r​e​n​ ​j​e​ 
-								 */
-								'3': string
-								/**
-								 * h​o​e​ ​j​e​ ​h​e​t​ ​k​a​n​ ​t​o​e​p​a​s​s​e​n​ ​i​n​ ​t​e​a​m​b​e​g​e​l​e​i​d​i​n​g​ ​e​n​ ​t​e​a​m​c​o​a​c​h​i​n​g​.
-								 */
-								'4': string
-							}
+							/**
+							 * O​p​ ​v​o​o​r​h​a​n​d​ ​v​u​l​ ​j​e​ ​h​e​t​ ​‘​T​h​e​ ​6​ ​T​y​p​e​s​ ​o​f​ ​W​o​r​k​i​n​g​ ​G​e​n​i​u​s​ ​A​s​s​e​s​s​m​e​n​t​’​ ​(​e​n​k​e​l​ ​i​n​ ​h​e​t​ ​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​E​n​g​e​l​s​)​ ​i​n​.​ ​D​a​t​ ​l​i​c​h​t​e​n​ ​w​e​ ​v​e​r​d​e​r​ ​t​o​e​ ​t​i​j​d​e​n​s​ ​d​e​ ​w​o​r​k​s​h​o​p​ ​e​n​ ​w​e​ ​l​e​r​e​n​ ​j​e​ ​h​o​e​ ​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​j​e​ ​d​i​t​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​t​e​a​m​w​o​r​k​s​h​o​p​s​ ​e​n​ ​i​n​t​e​r​v​i​s​i​e​s​.​<​b​r​/​>​<​b​r​/​>​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​W​e​ ​l​i​c​h​t​e​n​ ​h​e​t​ ​m​o​d​e​l​ ​‘​T​h​e​ ​6​ ​T​y​p​e​s​ ​o​f​ ​W​o​r​k​i​n​g​ ​G​e​n​i​u​s​’​ ​i​n​ ​d​e​t​a​i​l​ ​t​o​e​ ​e​n​ ​l​e​r​e​n​ ​j​e​ ​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​o​e​ ​j​e​ ​h​e​t​ ​k​a​n​ ​t​o​e​p​a​s​s​e​n​ ​i​n​ ​t​e​a​m​b​e​g​e​l​e​i​d​i​n​g​ ​e​n​ ​t​e​a​m​c​o​a​c​h​i​n​g​.
+							 */
+							content: string
 						}
 					}
 				}
@@ -1722,35 +1415,18 @@ export type NamespaceSessionsTranslation = {
 						 * 1​.​ ​D​e​ ​B​e​s​l​i​s​s​e​n​d​e​ ​V​o​o​r​s​p​r​o​n​g​ ​(​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​)
 						 */
 						title: string
-						content: {
-							/**
-							 * <​e​m​>​`​D​e​ ​g​r​o​o​t​s​t​e​ ​v​o​o​r​s​p​r​o​n​g​ ​e​n​ ​c​o​m​p​e​t​i​t​i​e​f​ ​v​o​o​r​d​e​e​l​ ​d​i​e​ ​e​e​n​ ​b​e​d​r​i​j​f​ ​k​a​n​ ​n​e​m​e​n​,
-							 */
-							'0': string
-							/**
-							 * i​s​ ​h​e​t​ ​c​r​e​ë​r​e​n​ ​e​n​ ​h​e​b​b​e​n​ ​v​a​n​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​-​ ​e​n​ ​t​e​a​m​c​u​l​t​u​u​r​.​`​<​/​e​m​>
-							 */
-							'1': string
-						}
+						/**
+						 * <​e​m​>​`​D​e​ ​g​r​o​o​t​s​t​e​ ​v​o​o​r​s​p​r​o​n​g​ ​e​n​ ​c​o​m​p​e​t​i​t​i​e​f​ ​v​o​o​r​d​e​e​l​ ​d​i​e​ ​e​e​n​ ​b​e​d​r​i​j​f​ ​k​a​n​ ​n​e​m​e​n​,​ ​i​s​ ​h​e​t​ ​c​r​e​ë​r​e​n​ ​e​n​ ​h​e​b​b​e​n​ ​v​a​n​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​-​ ​e​n​ ​t​e​a​m​c​u​l​t​u​u​r​.​`​<​/​e​m​>
+						 */
+						content: string
 						sub: {
-							content: {
-								/**
-								 * O​p​ ​v​o​o​r​h​a​n​d​ ​v​u​l​ ​j​e​ ​h​e​t​ ​'​B​e​s​l​i​s​s​e​n​d​e​ ​V​o​o​r​s​p​r​o​n​g​ ​A​s​s​e​s​s​m​e​n​t​'​ ​i​n​ ​d​a​t​ ​w​e​ ​t​i​j​d​e​n​s​ 
-								 */
-								'0': string
-								/**
-								 * d​e​ ​w​o​r​k​s​h​o​p​ ​v​e​r​d​e​r​ ​t​o​e​l​i​c​h​t​e​n​.​ ​J​e​ ​l​e​e​r​t​ ​o​o​k​ ​h​o​e​ ​j​e​ ​d​i​t​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​t​e​a​m​w​o​r​k​s​h​o​p​s​.
-								 */
-								'1': string
-								/**
-								 * <​b​r​/​>​<​b​r​/​>​W​e​ ​l​i​c​h​t​e​n​ ​h​e​t​ ​m​o​d​e​l​ ​'​D​e​ ​B​e​s​l​i​s​s​e​n​d​e​ ​V​o​o​r​s​p​r​o​n​g​'​ ​t​o​e​ ​e​n​ ​l​e​r​e​n​ ​j​e​ ​h​o​e​ ​j​e​ ​h​e​t​ ​k​a​n
-								 */
-								'2': string
-								/**
-								 * t​o​e​p​a​s​s​e​n​ ​i​n​ ​j​e​ ​a​d​v​i​e​s​ ​n​a​a​r​ ​o​r​g​a​n​i​s​a​t​i​e​s​,​ ​t​e​a​m​b​e​g​e​l​e​i​d​i​n​g​ ​e​n​ ​t​e​a​m​c​o​a​c​h​i​n​g​.
-								 */
-								'3': string
-							}
+							/**
+							 * O​p​ ​v​o​o​r​h​a​n​d​ ​v​u​l​ ​j​e​ ​h​e​t​ ​'​B​e​s​l​i​s​s​e​n​d​e​ ​V​o​o​r​s​p​r​o​n​g​ ​A​s​s​e​s​s​m​e​n​t​'​ ​i​n​ ​d​a​t​ ​w​e​ ​t​i​j​d​e​n​s​ ​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​ ​w​o​r​k​s​h​o​p​ ​v​e​r​d​e​r​ ​t​o​e​l​i​c​h​t​e​n​.​ ​J​e​ ​l​e​e​r​t​ ​o​o​k​ ​h​o​e​ ​j​e​ ​d​i​t​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​t​e​a​m​w​o​r​k​s​h​o​p​s​.​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​<​b​r​/​>​W​e​ ​l​i​c​h​t​e​n​ ​h​e​t​ ​m​o​d​e​l​ ​'​D​e​ ​B​e​s​l​i​s​s​e​n​d​e​ ​V​o​o​r​s​p​r​o​n​g​'​ ​t​o​e​ ​e​n​ ​l​e​r​e​n​ ​j​e​ ​h​o​e​ ​j​e​ ​h​e​t​ ​k​a​n​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​o​e​p​a​s​s​e​n​ ​i​n​ ​j​e​ ​a​d​v​i​e​s​ ​n​a​a​r​ ​o​r​g​a​n​i​s​a​t​i​e​s​,​ ​t​e​a​m​b​e​g​e​l​e​i​d​i​n​g​ ​e​n​ ​t​e​a​m​c​o​a​c​h​i​n​g​.
+							 */
+							content: string
 						}
 					}
 					'1': {
@@ -1758,82 +1434,37 @@ export type NamespaceSessionsTranslation = {
 						 * 2​.​ ​V​e​r​g​a​d​e​r​e​n​ ​i​s​ ​D​o​d​e​l​i​j​k​ ​(​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​)
 						 */
 						title: string
-						content: {
-							/**
-							 * V​e​r​g​a​d​e​r​i​n​g​e​n​ ​h​o​r​e​n​ ​b​i​j​ ​o​n​s​ ​w​e​r​k​,​ ​m​a​a​r​ ​z​e​ ​l​i​j​k​e​n​ ​v​a​a​k​ ​n​i​e​t​ ​v​e​e​l​ ​o​p​ ​t​e​ ​l​e​v​e​r​e​n​.​ 
-							 */
-							'0': string
-							/**
-							 * S​t​e​r​k​e​r​ ​n​o​g​,​ ​z​e​ ​g​e​l​d​e​n​ ​a​l​s​ ​<​e​m​>​r​e​g​e​l​r​e​c​h​t​e​ ​e​n​e​r​g​i​e​v​r​e​t​e​r​s​<​/​e​m​>​.​<​b​r​/​>
-							 */
-							'1': string
-							/**
-							 * D​a​t​ ​k​o​m​t​ ​o​m​d​a​t​ ​w​e​ ​o​p​ ​d​e​ ​v​e​r​k​e​e​r​d​e​ ​m​a​n​i​e​r​ ​v​e​r​g​a​d​e​r​e​n​.​ ​I​n​ ​d​i​t​ ​m​o​d​e​l​ ​m​e​t​ ​b​i​j​h​o​r​e​n​d​e​ 
-							 */
-							'2': string
-							/**
-							 * o​n​l​i​n​e​ ​t​o​o​l​ ​l​e​r​e​n​ ​w​e​ ​j​e​ ​a​l​s​ ​c​o​a​c​h​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​ ​b​e​g​e​l​e​i​d​e​n​ ​i​n​ ​h​u​n​ 
-							 */
-							'3': string
-							/**
-							 * m​e​e​t​i​n​g​c​u​l​t​u​u​r​.​<​b​r​/​>
-							 */
-							'4': string
-							/**
-							 * S​p​e​c​i​f​i​e​k​ ​w​e​r​k​e​n​ ​w​e​ ​o​p​ ​<​s​t​r​o​n​g​>​h​o​e​ ​j​e​ ​m​o​e​i​l​i​j​k​e​ ​m​e​e​t​i​n​g​s​ ​i​n​ ​e​f​f​e​c​t​i​e​v​e​ ​e​n​ 
-							 */
-							'5': string
-							/**
-							 * p​r​o​d​u​c​t​i​e​v​e​ ​m​e​e​t​i​n​g​s​ ​k​a​n​ ​o​m​t​u​r​n​e​n​<​/​s​t​r​o​n​g​>​ ​a​a​n​ ​d​e​ ​h​a​n​d​ ​v​a​n​ 
-							 */
-							'6': string
-							/**
-							 * d​e​ ​<​e​m​>​4​ ​t​y​p​e​s​ ​v​a​n​ ​m​e​e​t​i​n​g​s​<​/​e​m​>​.
-							 */
-							'7': string
-						}
+						/**
+						 * V​e​r​g​a​d​e​r​i​n​g​e​n​ ​h​o​r​e​n​ ​b​i​j​ ​o​n​s​ ​w​e​r​k​,​ ​m​a​a​r​ ​z​e​ ​l​i​j​k​e​n​ ​v​a​a​k​ ​n​i​e​t​ ​v​e​e​l​ ​o​p​ ​t​e​ ​l​e​v​e​r​e​n​.​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​S​t​e​r​k​e​r​ ​n​o​g​,​ ​z​e​ ​g​e​l​d​e​n​ ​a​l​s​ ​<​e​m​>​r​e​g​e​l​r​e​c​h​t​e​ ​e​n​e​r​g​i​e​v​r​e​t​e​r​s​<​/​e​m​>​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​a​t​ ​k​o​m​t​ ​o​m​d​a​t​ ​w​e​ ​o​p​ ​d​e​ ​v​e​r​k​e​e​r​d​e​ ​m​a​n​i​e​r​ ​v​e​r​g​a​d​e​r​e​n​.​ ​I​n​ ​d​i​t​ ​m​o​d​e​l​ ​m​e​t​ ​b​i​j​h​o​r​e​n​d​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​n​l​i​n​e​ ​t​o​o​l​ ​l​e​r​e​n​ ​w​e​ ​j​e​ ​a​l​s​ ​c​o​a​c​h​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​ ​b​e​g​e​l​e​i​d​e​n​ ​i​n​ ​h​u​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​e​e​t​i​n​g​c​u​l​t​u​u​r​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​S​p​e​c​i​f​i​e​k​ ​w​e​r​k​e​n​ ​w​e​ ​o​p​ ​<​s​t​r​o​n​g​>​h​o​e​ ​j​e​ ​m​o​e​i​l​i​j​k​e​ ​m​e​e​t​i​n​g​s​ ​i​n​ ​e​f​f​e​c​t​i​e​v​e​ ​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​p​r​o​d​u​c​t​i​e​v​e​ ​m​e​e​t​i​n​g​s​ ​k​a​n​ ​o​m​t​u​r​n​e​n​<​/​s​t​r​o​n​g​>​ ​a​a​n​ ​d​e​ ​h​a​n​d​ ​v​a​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​ ​<​e​m​>​4​ ​t​y​p​e​s​ ​v​a​n​ ​m​e​e​t​i​n​g​s​<​/​e​m​>​.
+						 */
+						content: string
 						sub: {
-							content: {
-								/**
-								 * W​e​ ​l​i​c​h​t​e​n​ ​h​e​t​ ​m​o​d​e​l​ ​e​n​ ​d​e​ ​4​ ​s​o​o​r​t​e​n​ ​m​e​e​t​i​n​g​s​ ​t​o​e​ ​e​n​ ​l​e​r​e​n​ ​j​e​ ​h​o​e​ ​j​e​ ​d​i​t​ ​k​a​n​ 
-								 */
-								'0': string
-								/**
-								 * t​o​e​p​a​s​s​e​n​ ​i​n​ ​t​e​a​m​b​e​g​e​l​e​i​d​i​n​g​ ​e​n​ ​t​e​a​m​c​o​a​c​h​i​n​g​.​<​b​r​/​>
-								 */
-								'1': string
-								/**
-								 * W​e​ ​d​e​m​o​n​s​t​r​e​r​e​n​ ​d​e​ ​o​n​l​i​n​e​ ​‘​M​e​e​t​i​n​g​ ​A​d​v​a​n​t​a​g​e​ ​T​o​o​l​’​ ​d​i​e​ ​j​e​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​b​i​j​ 
-								 */
-								'2': string
-								/**
-								 * j​e​ ​e​i​g​e​n​ ​t​e​a​m​ ​o​f​ ​o​r​g​a​n​i​s​a​t​i​e​ ​o​f​ ​d​i​e​ ​j​e​ ​k​a​n​ ​a​d​v​i​s​e​r​e​n​ ​a​a​n​ ​t​e​a​m​s​ ​d​i​e​ ​j​e​ ​b​e​g​e​l​e​i​d​t​.
-								 */
-								'3': string
-							}
+							/**
+							 * W​e​ ​l​i​c​h​t​e​n​ ​h​e​t​ ​m​o​d​e​l​ ​e​n​ ​d​e​ ​4​ ​s​o​o​r​t​e​n​ ​m​e​e​t​i​n​g​s​ ​t​o​e​ ​e​n​ ​l​e​r​e​n​ ​j​e​ ​h​o​e​ ​j​e​ ​d​i​t​ ​k​a​n​ ​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​o​e​p​a​s​s​e​n​ ​i​n​ ​t​e​a​m​b​e​g​e​l​e​i​d​i​n​g​ ​e​n​ ​t​e​a​m​c​o​a​c​h​i​n​g​.​<​b​r​/​>​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​W​e​ ​d​e​m​o​n​s​t​r​e​r​e​n​ ​d​e​ ​o​n​l​i​n​e​ ​‘​M​e​e​t​i​n​g​ ​A​d​v​a​n​t​a​g​e​ ​T​o​o​l​’​ ​d​i​e​ ​j​e​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​b​i​j​ ​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​j​e​ ​e​i​g​e​n​ ​t​e​a​m​ ​o​f​ ​o​r​g​a​n​i​s​a​t​i​e​ ​o​f​ ​d​i​e​ ​j​e​ ​k​a​n​ ​a​d​v​i​s​e​r​e​n​ ​a​a​n​ ​t​e​a​m​s​ ​d​i​e​ ​j​e​ ​b​e​g​e​l​e​i​d​t​.
+							 */
+							content: string
 						}
 					}
 				}
 			}
 		}
-		features_intro: {
-			/**
-			 * E​e​n​ ​C​o​a​c​h​-​t​h​e​-​C​o​a​c​h​ ​‘​D​e​e​p​d​i​v​e​’​ ​i​n​ ​d​e​ ​g​e​k​o​z​e​n​ ​m​o​d​e​l​l​e​n​ ​e​n​ ​m​e​t​h​o​d​i​e​k​e​n​ ​w​a​a​r​i​n​ ​w​e​ 
-			 */
-			'0': string
-			/**
-			 * s​t​e​e​d​s​ ​v​e​r​d​i​e​p​e​n​d​ ​w​e​r​k​e​n​ ​v​a​n​u​i​t​ ​h​e​t​ ​s​t​a​n​d​p​u​n​t​ ​v​a​n​ ​d​e​ ​b​e​g​e​l​e​i​d​e​r​.
-			 */
-			'1': string
-			/**
-			 * J​e​ ​l​e​e​r​t​ ​t​e​ ​w​e​r​k​e​n​ ​m​e​t​ ​d​e​ ​b​i​j​h​o​r​e​n​d​e​ ​a​s​s​e​s​s​m​e​n​t​s​ ​e​n​ ​t​o​o​l​s​ ​d​i​e​ ​j​i​j​ ​d​a​a​r​n​a​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ 
-			 */
-			'2': string
-			/**
-			 * i​n​ ​j​o​u​w​ ​t​e​a​m​t​r​a​j​e​c​t​e​n​ ​o​f​ ​-​b​e​g​e​l​e​i​d​i​n​g​.
-			 */
-			'3': string
-		}
+		/**
+		 * E​e​n​ ​C​o​a​c​h​-​t​h​e​-​C​o​a​c​h​ ​‘​D​e​e​p​d​i​v​e​’​ ​i​n​ ​d​e​ ​g​e​k​o​z​e​n​ ​m​o​d​e​l​l​e​n​ ​e​n​ ​m​e​t​h​o​d​i​e​k​e​n​ ​w​a​a​r​i​n​ ​w​e​ ​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​s​t​e​e​d​s​ ​v​e​r​d​i​e​p​e​n​d​ ​w​e​r​k​e​n​ ​v​a​n​u​i​t​ ​h​e​t​ ​s​t​a​n​d​p​u​n​t​ ​v​a​n​ ​d​e​ ​b​e​g​e​l​e​i​d​e​r​.​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​J​e​ ​l​e​e​r​t​ ​t​e​ ​w​e​r​k​e​n​ ​m​e​t​ ​d​e​ ​b​i​j​h​o​r​e​n​d​e​ ​a​s​s​e​s​s​m​e​n​t​s​ ​e​n​ ​t​o​o​l​s​ ​d​i​e​ ​j​i​j​ ​d​a​a​r​n​a​ ​k​a​n​ ​i​n​z​e​t​t​e​n​ ​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​n​ ​j​o​u​w​ ​t​e​a​m​t​r​a​j​e​c​t​e​n​ ​o​f​ ​-​b​e​g​e​l​e​i​d​i​n​g​.
+		 */
+		features_intro: string
 		features: {
 			/**
 			 * S​c​h​r​i​f​t​e​l​i​j​k​e​ ​I​n​t​a​k​e​ ​p​e​r​ ​D​e​e​l​n​e​m​e​r
@@ -1913,6 +1544,60 @@ type DisallowNamespaces = {
 
 export type TranslationFunctions = {
 	base: {
+		nav: {
+			/**
+			 * home
+			 */
+			home: () => LocalizedString
+			/**
+			 * over ons
+			 */
+			about: () => LocalizedString
+			/**
+			 * referenties
+			 */
+			references: () => LocalizedString
+			/**
+			 * blog
+			 */
+			blog: () => LocalizedString
+			/**
+			 * open workshops
+			 */
+			open_sessions: () => LocalizedString
+			/**
+			 * gratis open infosessies
+			 */
+			info_sessions: () => LocalizedString
+			/**
+			 * hybride lencioni leertraject
+			 */
+			hybrid_traject: () => LocalizedString
+			/**
+			 * lencioni deepdive - level 2
+			 */
+			deepdive: () => LocalizedString
+			/**
+			 * contact
+			 */
+			contact: () => LocalizedString
+			hamburger: {
+				/**
+				 * bekijk of verberg de navigatiebalk
+				 */
+				toggle_nav: () => LocalizedString
+			}
+			lang: {
+				/**
+				 * verander van taal
+				 */
+				change_lang: () => LocalizedString
+				/**
+				 * verander taal naar
+				 */
+				change_lang_to: () => LocalizedString
+			}
+		}
 		db: {
 			/**
 			 * laden
@@ -1960,6 +1645,16 @@ export type TranslationFunctions = {
 			 * sluiten
 			 */
 			close: () => LocalizedString
+			/**
+			 * Terug naar Homepagina
+			 */
+			back_to_home: () => LocalizedString
+		}
+		error: {
+			/**
+			 * Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk.
+			 */
+			not_found: () => LocalizedString
 		}
 		validation: {
 			/**
@@ -2122,50 +1817,25 @@ export type TranslationFunctions = {
 				 * Trixolutions is als enige in de Benelux lid van de Table Group van Patrick Lencioni. (CAPA Pro)
 				 */
 				content_title: () => LocalizedString
-				first: {
-					/**
-					 * We worden in de Lencioni CAPA Pro Academy op wekelijkse basis begeleid, gecoacht en 
-					 */
-					'0': () => LocalizedString
-					/**
-					 * getraind in de verschillende Lencioni modellen, assessment en toepassingen door 
-					 */
-					'1': () => LocalizedString
-					/**
-					 * Patrick Lencioni en zijn consultants zelf.<br/>
-					 */
-					'2': () => LocalizedString
-					/**
-					 * Deze kennis, gecombineerd met meer dan 200 teamtrajecten op de teller, zijn we de 
-					 */
-					'3': () => LocalizedString
-					/**
-					 * ideale partner om jouw Lencioni kennis te verhogen naar het hoogste niveau.
-					 */
-					'4': () => LocalizedString
-				}
+				/**
+				 * We worden in de Lencioni CAPA Pro Academy op wekelijkse basis begeleid, gecoacht en 
+			                  getraind in de verschillende Lencioni modellen, assessment en toepassingen door 
+			                  Patrick Lencioni en zijn consultants zelf.<br/>
+			                  Deze kennis, gecombineerd met meer dan 200 teamtrajecten op de teller, zijn we de 
+			                  ideale partner om jouw Lencioni kennis te verhogen naar het hoogste niveau.
+				 */
+				first: () => LocalizedString
 				/**
 				 * Niet de operationele en strategische sterktes van een team zijn doorslaggevend … maar wel de kracht en gezondheid van dit team zullen hét ultieme competitief voordeel zijn in de toekomst …
 				 */
 				quote: () => LocalizedString
-				last: {
-					/**
-					 * De kracht van een gezond team zit voornamelijk in de vaardigheid van teamleden 
-					 */
-					'0': () => LocalizedString
-					/**
-					 * om <strong>vertrouwen</strong> op te bouwen, met elkaar <strong>respectvolle conflicten</strong> te kunnen hebben, 
-					 */
-					'1': () => LocalizedString
-					/**
-					 * <strong>betrokkenheid bij het team</strong> te voelen, elkaar <strong>aansprakelijk</strong> te durven stellen en 
-					 */
-					'2': () => LocalizedString
-					/**
-					 * <strong>resultaatgericht</strong> te kunnen werken.
-					 */
-					'3': () => LocalizedString
-				}
+				/**
+				 * De kracht van een gezond team zit voornamelijk in de vaardigheid van teamleden 
+			               om <strong>vertrouwen</strong> op te bouwen, met elkaar <strong>respectvolle conflicten</strong> te kunnen hebben, 
+			               <strong>betrokkenheid bij het team</strong> te voelen, elkaar <strong>aansprakelijk</strong> te durven stellen en 
+			               <strong>resultaatgericht</strong> te kunnen werken.
+				 */
+				last: () => LocalizedString
 			}
 			second: {
 				/**
@@ -2260,200 +1930,71 @@ export type TranslationFunctions = {
 				 * Algemene voorwaarden met betrekking tot opdrachten
 				 */
 				title: () => LocalizedString
-				content: {
-					/**
-					 * <p>NIET INBEGREPEN tenzij anders gestipuleerd in het voorstel:</p><ul>
-					 */
-					'0': () => LocalizedString
-					/**
-					 * <li>21% BTW</li>
-					 */
-					'1': () => LocalizedString
-					/**
-					 * <li>Materiaal zoals beamer en flipchart.</li>
-					 */
-					'2': () => LocalizedString
-					/**
-					 * <li>Huur en kosten van zalen en maaltijden (indien van toepassing)</li>
-					 */
-					'3': () => LocalizedString
-					/**
-					 * <li>Alle parkingkosten (indien van toepassing)</li>
-					 */
-					'4': () => LocalizedString
-					/**
-					 * <li>Km vergoeding (0,5€/km vanuit Wijnegem)</li></ul><br/>
-					 */
-					'5': () => LocalizedString
-					/**
-					 * <p>TAAL tenzij anders gestipuleerd in het voorstel:</p><ul>
-					 */
-					'6': () => LocalizedString
-					/**
-					 * <li>Alle documenten ter voorbereiding en opvolging van het project voorzien we in het Nederlands</li>
-					 */
-					'7': () => LocalizedString
-					/**
-					 * <li>Materiaal voor deelnemers voorzien we in het Nederlands</li>
-					 */
-					'8': () => LocalizedString
-					/**
-					 * <li>Bijkomende vertaling gebeurt volgens bestek</li></ul>
-					 */
-					'9': () => LocalizedString
-				}
+				/**
+				 * 
+			            <p>NIET INBEGREPEN tenzij anders gestipuleerd in het voorstel:</p>
+			            <ul><li>21% BTW</li>
+			            <li>Materiaal zoals beamer en flipchart.</li>
+			            <li>Huur en kosten van zalen en maaltijden (indien van toepassing)</li>
+			            <li>Alle parkingkosten (indien van toepassing)</li>
+			            <li>Km vergoeding (0,5€/km vanuit Wijnegem)</li></ul><br/>
+			            <p>TAAL tenzij anders gestipuleerd in het voorstel:</p><ul>
+			            <li>Alle documenten ter voorbereiding en opvolging van het project voorzien we in het Nederlands</li>
+			            <li>Materiaal voor deelnemers voorzien we in het Nederlands</li>
+			            <li>Bijkomende vertaling gebeurt volgens bestek</li></ul>
+			         
+				 */
+				content: () => LocalizedString
 			}
 			'1': {
 				/**
 				 * Algemene voorwaarden met betrekking tot het annuleren of verplaatsen van opdrachten
 				 */
 				title: () => LocalizedString
-				content: {
-					/**
-					 * <p>Elke opdracht is schriftelijk of per e-mail te annuleren of te verplaatsen met 
-					 */
-					'0': () => LocalizedString
-					/**
-					 * volgende annulatievoorwaarden voor training-, coaching- en intervisieopdrachten:</p><ul>
-					 */
-					'1': () => LocalizedString
-					/**
-					 * <li>Meer dan 8 weken vooraf geen annulatiekosten</li>
-					 */
-					'2': () => LocalizedString
-					/**
-					 * <li>Tussen 8 en 2 weken vooraf, exclusief schoolvakanties, 50% van de geboekte opdracht</li>
-					 */
-					'3': () => LocalizedString
-					/**
-					 * <li>Minder dan 2 weken vooraf, exclusief schoolvakanties, 100% van de geboekte opdracht</li>
-					 */
-					'4': () => LocalizedString
-					/**
-					 * </ul><br/><p>Indien de coach/trainer door omstandigheden een trainingsdag niet kan faciliteren, 
-					 */
-					'5': () => LocalizedString
-					/**
-					 * wordt door beide partijen naar een andere dag gezocht. De opdracht zal dan als tegemoetkoming 
-					 */
-					'6': () => LocalizedString
-					/**
-					 * aan 50% van de kostprijs gefactureerd worden.</p><br/>
-					 */
-					'7': () => LocalizedString
-					/**
-					 * <p>Bij annulatie of verplaatsing door Trixolutions of één van zijn Onderaannemers zijn geen 
-					 */
-					'8': () => LocalizedString
-					/**
-					 * schadevergoedingen verschuldigd indien Trixolutions of haar Onderaannemer een bewijs van 
-					 */
-					'9': () => LocalizedString
-					/**
-					 * ziekte/ongeschiktheid voorlegt, of in geval van overmacht (die door Trixolutions moet 
-					 */
-					'10': () => LocalizedString
-					/**
-					 * aangetoond worden).</p><br/><br/>
-					 */
-					'11': () => LocalizedString
-					/**
-					 * <p>In verband met de Covid-19 Pandemie:<br/>
-					 */
-					'12': () => LocalizedString
-					/**
-					 * Elke opdracht, gemaakt en gegeven door Trixolutions, kan zowel offline als online gegeven 
-					 */
-					'13': () => LocalizedString
-					/**
-					 * worden, tenzij anders aangegeven in de offerte met betrekking tot de opdracht. Indien de 
-					 */
-					'14': () => LocalizedString
-					/**
-					 * klant ervoor kiest om niet over te schakelen naar het online alternatief voor de opdracht, 
-					 */
-					'15': () => LocalizedString
-					/**
-					 * gelden ook bovenstaande voorwaarden.</p>
-					 */
-					'16': () => LocalizedString
-				}
+				/**
+				 * <p>Elke opdracht is schriftelijk of per e-mail te annuleren of te verplaatsen met volgende annulatievoorwaarden 
+			                  voor training-, coaching- en intervisieopdrachten:</p>
+			                  <ul><li>Meer dan 8 weken vooraf geen annulatiekosten</li>
+			                  <li>Tussen 8 en 2 weken vooraf, exclusief schoolvakanties, 50% van de geboekte opdracht</li>
+			                  <li>Minder dan 2 weken vooraf, exclusief schoolvakanties, 100% van de geboekte opdracht</li></ul><br/>
+			                  <p>Indien de coach/trainer door omstandigheden een trainingsdag niet kan faciliteren, wordt door beide partijen 
+			                  naar een andere dag gezocht. De opdracht zal dan als tegemoetkoming aan 50% van de kostprijs gefactureerd worden.</p><br/>
+			                  <p>Bij annulatie of verplaatsing door Trixolutions of één van zijn Onderaannemers zijn geen schadevergoedingen 
+			                  verschuldigd indien Trixolutions of haar Onderaannemer een bewijs van ziekte/ongeschiktheid voorlegt, of in 
+			                  geval van overmacht (die door Trixolutions moet aangetoond worden).</p><br/><br/>
+			                  <p>In verband met de Covid-19 Pandemie:<br/>Elke opdracht, gemaakt en gegeven door Trixolutions, kan zowel offline 
+			                  als online gegeven worden, tenzij anders aangegeven in de offerte met betrekking tot de opdracht. Indien de klant 
+			                  ervoor kiest om niet over te schakelen naar het online alternatief voor de opdracht, gelden ook bovenstaande voorwaarden.</p>
+				 */
+				content: () => LocalizedString
 			}
 			'2': {
 				/**
 				 * Algemene voorwaarden met betrekking tot het betalen van opdrachten
 				 */
 				title: () => LocalizedString
-				content: {
-					/**
-					 * <p><b>ARTIKEL 1</b><br/>
-					 */
-					'0': () => LocalizedString
-					/**
-					 * Bezwaren of betwistingen aangaande deze factuur worden niet meer aanvaard vanaf de 
-					 */
-					'1': () => LocalizedString
-					/**
-					 * 8ste dag volgend op de datum van ontvangst van de factuur.<br/><br/>
-					 */
-					'2': () => LocalizedString
-					/**
-					 * <b>ARTIKEL 2</b><br/>
-					 */
-					'3': () => LocalizedString
-					/**
-					 * Tenzij uitdrukkelijke afwijking, zijn onze facturen contant betaalbaar, zonder 
-					 */
-					'4': () => LocalizedString
-					/**
-					 * korting en zonder om het even welke afhouding. Iedere factuur die niet binnen de 
-					 */
-					'5': () => LocalizedString
-					/**
-					 * gestelde termijn betaald wordt zal onmiddellijk, stilzwijgend en van rechtswege, 
-					 */
-					'6': () => LocalizedString
-					/**
-					 * een verwijlinterest opbrengen van 3 % per maand, tot de volledige afbetaling.<br/><br/>
-					 */
-					'7': () => LocalizedString
-					/**
-					 * <b>ARTIKEL 3</b><br/>
-					 */
-					'8': () => LocalizedString
-					/**
-					 * Tot dekking van de administratieve, financiële en organisatorische kosten 
-					 */
-					'9': () => LocalizedString
-					/**
-					 * veroorzaakt door de laattijdigheid der betaling zal, ingeval van niet tijdige 
-					 */
-					'10': () => LocalizedString
-					/**
-					 * betaling door de cliënt, hij een forfaitair verhogingsbeding verschuldigd zijn 
-					 */
-					'11': () => LocalizedString
-					/**
-					 * van 10 % van het factuurbedrag, met een minimum van 40 EURO.<br/><br/>
-					 */
-					'12': () => LocalizedString
-					/**
-					 * <b>ARTIKEL 4</b><br/>
-					 */
-					'13': () => LocalizedString
-					/**
-					 * Alleen de Rechtbanken van het arrondissement waar ons bureel is gevestigd, zijn 
-					 */
-					'14': () => LocalizedString
-					/**
-					 * bevoegd voor alle geschillen, zelfs ingeval van pluraliteit van de verweerders, 
-					 */
-					'15': () => LocalizedString
-					/**
-					 * van oproeping in vrijwaring of tussenkomst.</p>
-					 */
-					'16': () => LocalizedString
-				}
+				/**
+				 * 
+			            <p><b>ARTIKEL 1</b><br/>
+			            Bezwaren of betwistingen aangaande deze factuur worden niet meer aanvaard vanaf de 
+			            8ste dag volgend op de datum van ontvangst van de factuur.<br/><br/>
+			            <b>ARTIKEL 2</b><br/>
+			            Tenzij uitdrukkelijke afwijking, zijn onze facturen contant betaalbaar, zonder 
+			            korting en zonder om het even welke afhouding. Iedere factuur die niet binnen de 
+			            gestelde termijn betaald wordt zal onmiddellijk, stilzwijgend en van rechtswege, 
+			            een verwijlinterest opbrengen van 3 % per maand, tot de volledige afbetaling.<br/><br/>
+			            <b>ARTIKEL 3</b><br/>
+			            Tot dekking van de administratieve, financiële en organisatorische kosten 
+			            veroorzaakt door de laattijdigheid der betaling zal, ingeval van niet tijdige 
+			            betaling door de cliënt, hij een forfaitair verhogingsbeding verschuldigd zijn 
+			            van 10 % van het factuurbedrag, met een minimum van 40 EURO.<br/><br/>
+			            <b>ARTIKEL 4</b><br/>
+			            Alleen de Rechtbanken van het arrondissement waar ons bureel is gevestigd, zijn 
+			            bevoegd voor alle geschillen, zelfs ingeval van pluraliteit van de verweerders, 
+			            van oproeping in vrijwaring of tussenkomst.</p>
+			         
+				 */
+				content: () => LocalizedString
 			}
 		}
 	}
@@ -2463,7 +2004,55 @@ export type TranslationFunctions = {
 			 * De Kracht van Gezonde Teams
 			 */
 			title: () => LocalizedString
-			pages: {
+			hero: {
+				slides: {
+					'0': {
+						/**
+						 * De Kracht van Gezonde Teams
+						 */
+						title: () => LocalizedString
+						/**
+						 * Opleiding in Teamcoaching
+						 */
+						subheader: () => LocalizedString
+						/**
+						 * De kracht van een gezond team zit voornamelijk in de vaardigheid van teamleden om vertrouwen op te bouwen, met elkaar respectvolle conflicten te kunnen hebben, betrokkenheid bij het team te voelen, elkaar aansprakelijk te durven stellen en resultaatgericht te kunnen werken.
+						 */
+						content: () => LocalizedString
+						/**
+						 * Nieuwe data!! In samenwerking met de Table Group van Lencioni bundelen we al onze Lencioni-expertise rond het succes model “De 5 frustraties van teamwork”, in een tweedaagse Masterclass Coach-the-Coach opleiding.<br/>Zie hier voor de data!
+						 */
+						extra: () => LocalizedString
+					}
+					'1': {
+						/**
+						 * Neem als Organisatie of Team de ❛Beslissende Voorsprong❜ van Patrick Lencioni!
+						 */
+						title: () => LocalizedString
+						/**
+						 * Opleiding in Teamcoaching
+						 */
+						subheader: () => LocalizedString
+						/**
+						 * ❛De grootste voorsprong en competitief voordeel die een bedrijf kan nemen, is het creëren en hebben van een gezonde organisatie- en teamcultuur.❜
+						 */
+						content: () => LocalizedString
+					}
+					'2': {
+						/**
+						 * The 6 Types of Working Genius
+						 */
+						title: () => LocalizedString
+						/**
+						 * Het Laatste Succes Assessment van Patrick Lencioni!
+						 */
+						subheader: () => LocalizedString
+						/**
+						 *  ❛Als je succesvol, tevreden en voldaan wil zijn als persoon, teamlid of teamleader, moet je jouw energiebronnen en talenten aanspreken. Wat natuurlijk niet lukt als je die niet kent.❜
+						 */
+						content: () => LocalizedString
+					}
+				}
 			}
 		}
 		contact: {
@@ -2505,28 +2094,22 @@ export type TranslationFunctions = {
 			 * Over Ons
 			 */
 			title: () => LocalizedString
-			intro: {
-				/**
-				 * Trixolutions is als enige in de Benelux lid van de Table Group van Patrick Lencioni. (CAPA Pro)<br/><br/>
-				 */
-				'0': () => LocalizedString
-				/**
-				 * We zijn een dynamisch trainingskantoor met een sterke focus op teamcoaching en leiderschapsvaardigheden met de Lencioni inzichten, ervaring en methodieken.<br/><br/>
-				 */
-				'1': () => LocalizedString
-				/**
-				 * Reeds jaren worden we in de Lencioni CAPA Pro Academy op wekelijkse basis begeleid, gecoacht en getraind in de verschillende Lencioni modellen, assessment en toepassingen door Patrick Lencioni en zijn consultants zelf.<br/><br/>
-				 */
-				'2': () => LocalizedString
-				/**
-				 * In samenwerking met The Table Group zetten we de modellen, assessments, inzichten en methodieken om naar de Nederlandse en Vlaamse markt, cultuur en taal.<br/><br/>
-				 */
-				'3': () => LocalizedString
-				/**
-				 * Door deze kennis, gecombineerd met meer dan 200 teamtrajecten op de teller en meer dan 100 afgestudeerde Lencioni Coaches op de Belgische en Nederlandse markt, zijn we de ideale partner om jouw Lencioni kennis te verhogen naar het hoogste niveau!
-				 */
-				'4': () => LocalizedString
-			}
+			/**
+			 * Over Trixolutions
+			 */
+			title_alt: () => LocalizedString
+			/**
+			 * Trixolutions is als enige in de Benelux lid van de Table Group van Patrick Lencioni. (CAPA Pro)<br/><br/>
+							We zijn een dynamisch trainingskantoor met een sterke focus op teamcoaching en leiderschapsvaardigheden met 
+							de Lencioni inzichten, ervaring en methodieken.<br/><br/>
+							Reeds jaren worden we in de Lencioni CAPA Pro Academy op wekelijkse basis begeleid, gecoacht en getraind in 
+							de verschillende Lencioni modellen, assessment en toepassingen door Patrick Lencioni en zijn consultants zelf.<br/><br/>
+							In samenwerking met The Table Group zetten we de modellen, assessments, inzichten en methodieken om naar de 
+							Nederlandse en Vlaamse markt, cultuur en taal.<br/><br/>
+							Door deze kennis, gecombineerd met meer dan 200 teamtrajecten op de teller en meer dan 100 afgestudeerde Lencioni 
+							Coaches op de Belgische en Nederlandse markt, zijn we de ideale partner om jouw Lencioni kennis te verhogen naar het hoogste niveau!
+			 */
+			intro: () => LocalizedString
 			team: {
 				/**
 				 * Ons Team
@@ -2537,6 +2120,12 @@ export type TranslationFunctions = {
 		references: {
 			/**
 			 * Referenties
+			 */
+			title: () => LocalizedString
+		}
+		blog: {
+			/**
+			 * Blog
 			 */
 			title: () => LocalizedString
 		}
@@ -2579,6 +2168,10 @@ export type TranslationFunctions = {
 	}
 	sessions: {
 		/**
+		 * open sessies
+		 */
+		open_sessions: () => LocalizedString
+		/**
 		 * volzet
 		 */
 		is_full: () => LocalizedString
@@ -2591,7 +2184,18 @@ export type TranslationFunctions = {
 		 */
 		subscribe_to: () => LocalizedString
 		/**
-		 * Na inschrijving ontvang je een factuur. Je deelname is pas definitief na betaling. Indien we het minimum aantal deelnemers niet bereiken gaat de opleiding niet door en wordt je inschrijvingsgeld terugbetaald. Meer details krijg je via de inschrijvingsbevestiging.
+		 * Schrijf je in!
+		 */
+		sign_up: () => LocalizedString
+		/**
+		 * Schrijf je in voor
+		 */
+		sign_up_to: () => LocalizedString
+		/**
+		 * Na inschrijving ontvang je een factuur. Je deelname is pas 
+	                        definitief na betaling. Indien we het minimum aantal deelnemers 
+	                        niet bereiken gaat de opleiding niet door en wordt je inschrijvingsgeld 
+	                        terugbetaald. Meer details krijg je via de inschrijvingsbevestiging.
 		 */
 		subscribe_disclaim: () => LocalizedString
 		/**
@@ -2650,6 +2254,14 @@ export type TranslationFunctions = {
 			 */
 			title: () => LocalizedString
 			/**
+			 * gratis online open infosessie
+			 */
+			title_single: () => LocalizedString
+			/**
+			 * gratis open infosessies
+			 */
+			title_alt: () => LocalizedString
+			/**
 			 * trainer
 			 */
 			trainer: () => LocalizedString
@@ -2662,24 +2274,16 @@ export type TranslationFunctions = {
 				 * Teamcoaching met Lencioni
 				 */
 				title: () => LocalizedString
-				content: {
-					/**
-					 * Trixolutions is partner van de Table Group van Patrick Lencioni. We zijn geaccrediteerd om, niet enkel zijn gedachtegoed, verschillende modellen en assessments in te zetten in bedrijven, maar ook om de beroemde Lencioni Coach-the-Coach opleidingen te organiseren. <br/>
-					 */
-					'0': () => LocalizedString
-					/**
-					 * Meer dan 110 coaches mochten we zo al op de markt loslaten!<br/><br/>
-					 */
-					'1': () => LocalizedString
-					/**
-					 * In deze gratis online infosessie verdiepen we op zijn meest beroemde model uit “De 5 Frustraties van Teamwork” en hoe deze juist in te  zetten in teams en bedrijven. We verdiepen en lichten onze tweedaagse  Masterclass “Lencioni Coach-the-Coach” (Level 1) toe alsook zijn  andere modellen rond “De Beslissende Voorsprong”, “De Ideale Teamplayer” en “The 6 Types of Working Genius”.<br/><br/>
-					 */
-					'2': () => LocalizedString
-					/**
-					 * Meer informatie nodig of inschrijven voor één van de gratis open  infosessies? Vragen? Klik dan op onderstaande knop en vul het formulier in.
-					 */
-					'3': () => LocalizedString
-				}
+				/**
+				 * Trixolutions is partner van de Table Group van Patrick Lencioni. We zijn geaccrediteerd om, niet enkel zijn gedachtegoed, 
+			                  verschillende modellen en assessments in te zetten in bedrijven, maar ook om de beroemde Lencioni Coach-the-Coach opleidingen te 
+			                  organiseren. <br/>Meer dan 110 coaches mochten we zo al op de markt loslaten!<br/><br/>
+			                  In deze gratis online infosessie verdiepen we op zijn meest beroemde model uit “De 5 Frustraties van Teamwork” en hoe deze 
+			                  juist in te  zetten in teams en bedrijven. We verdiepen en lichten onze tweedaagse  Masterclass “Lencioni Coach-the-Coach” 
+			                  (Level 1) toe alsook zijn  andere modellen rond “De Beslissende Voorsprong”, “De Ideale Teamplayer” en “The 6 Types of Working Genius”.<br/><br/>
+			                  Meer informatie nodig of inschrijven voor één van de gratis open  infosessies? Vragen? Klik dan op onderstaande knop en vul het formulier in.
+				 */
+				content: () => LocalizedString
 			}
 		}
 		level_1: {
@@ -2781,12 +2385,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * Toegang voor 12 maanden
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * Toegang voor 12 maanden
+					 */
+					content: () => LocalizedString
 					/**
 					 * Maandelijkse updates!
 					 */
@@ -2803,12 +2405,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * Samen met de andere deelnemers.
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * Samen met de andere deelnemers.
+					 */
+					content: () => LocalizedString
 				}
 				'2': {
 					title: {
@@ -2821,12 +2421,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * Deze Piramides kan je gebruiken in je Lencioni trajecten en aan de teamleden geven. Deze Piramide is een leuke visuele trigger om met Lencioni gedachtengoed te blijven werken in een team. Indien nodig, kan je er bij bestellen.
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * Deze Piramides kan je gebruiken in je Lencioni trajecten en aan de teamleden geven. Deze Piramide is een leuke visuele trigger om met Lencioni gedachtengoed te blijven werken in een team. Indien nodig, kan je er bij bestellen.
+					 */
+					content: () => LocalizedString
 				}
 				'3': {
 					title: {
@@ -2839,12 +2437,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * Inclusief facilitator instructies en een voorbeeldrapport.
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * Inclusief facilitator instructies en een voorbeeldrapport.
+					 */
+					content: () => LocalizedString
 				}
 				'4': {
 					title: {
@@ -2857,44 +2453,17 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * <ul><li>Ons Lencioni Werkboek</li>
-						 */
-						'0': () => LocalizedString
-						/**
-						 * <li>Verdiepende Bijlages</li>
-						 */
-						'1': () => LocalizedString
-						/**
-						 * <li>Lencioni Team Assessment <ul>
-						 */
-						'2': () => LocalizedString
-						/**
-						 * <li>+ vragen + instructies</li>
-						 */
-						'3': () => LocalizedString
-						/**
-						 * </ul></li>
-						 */
-						'4': () => LocalizedString
-						/**
-						 * <li>Lencioni Persoonlijke Assessment<ul>
-						 */
-						'5': () => LocalizedString
-						/**
-						 * <li>+ instructies</li>
-						 */
-						'6': () => LocalizedString
-						/**
-						 * </ul></li>
-						 */
-						'7': () => LocalizedString
-						/**
-						 * </ul>
-						 */
-						'8': () => LocalizedString
-					}
+					/**
+					 * <ul><li>Ons Lencioni Werkboek</li>
+				                      <li>Verdiepende Bijlages</li>
+				                      <li>Lencioni Team Assessment <ul>
+				                      <li>+ vragen + instructies</li>
+				                      </ul></li>
+				                      <li>Lencioni Persoonlijke Assessment<ul>
+				                      <li>+ instructies</li>
+				                      </ul></li></ul>
+					 */
+					content: () => LocalizedString
 				}
 				'5': {
 					title: {
@@ -2907,76 +2476,25 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * <strong>Per laag in de Piramide krijg je:</strong><br>
-						 */
-						'0': () => LocalizedString
-						/**
-						 * <ul><li>5 Lencioni Podcasts, samengevat in het Nederlands</li>
-						 */
-						'1': () => LocalizedString
-						/**
-						 * <li>5 Lencioni Podcasts, samengevat in het Nederlands
-						 */
-						'2': () => LocalizedString
-						/**
-						 * <ul><li>+ originele podcasts in het Engels te beluisteren</li></ul></li>
-						 */
-						'3': () => LocalizedString
-						/**
-						 * <li>5 Quotes</li>
-						 */
-						'4': () => LocalizedString
-						/**
-						 * <li>3 Filmpjes waarin Lencioni zelf een aantal oefeningen en inzichten toelicht</li>
-						 */
-						'5': () => LocalizedString
-						/**
-						 * <li>3 Extra Oefeningen<ul>
-						 */
-						'6': () => LocalizedString
-						/**
-						 * <li>bovenop die van het Lencioni Werkboek</li>
-						 */
-						'7': () => LocalizedString
-						/**
-						 * <li>+ facilitator instructies</li></ul></li>
-						 */
-						'8': () => LocalizedString
-						/**
-						 * <li>5 tot 10 quotes die je kan gebruiken ter inspiratie in je Lencioni trajecten</li>
-						 */
-						'9': () => LocalizedString
-						/**
-						 * <li>5 tot 10 podcasts<ul>
-						 */
-						'10': () => LocalizedString
-						/**
-						 * <li>samengevat in het Nederlands</li>
-						 */
-						'11': () => LocalizedString
-						/**
-						 * <li>+ de link naar de originele podcast</li></ul></li>
-						 */
-						'12': () => LocalizedString
-						/**
-						 * <li>Meerdere filmpjes van Lencioni<ul>
-						 */
-						'13': () => LocalizedString
-						/**
-						 * <li>ondertiteld in het Nederlands</li></ul></li>
-						 */
-						'14': () => LocalizedString
-						/**
-						 * <li>Meerdere extra oefeningen<ul>
-						 */
-						'15': () => LocalizedString
-						/**
-						 * <li>inclusief uitgebreide facilitator instructies</li></ul></li></ul>
-						 */
-						'16': () => LocalizedString
-					}
+					/**
+					 * <strong>Per laag in de Piramide krijg je:</strong><br>
+				                     <ul><li>5 Lencioni Podcasts, samengevat in het Nederlands
+				                     <ul><li>+ originele podcasts in het Engels te beluisteren</li></ul></li>
+				                     <li>5 Quotes</li>
+				                     <li>3 Filmpjes waarin Lencioni zelf een aantal oefeningen en inzichten toelicht</li>
+				                     <li>3 Extra Oefeningen<ul>
+				                     <li>bovenop die van het Lencioni Werkboek</li>
+				                     <li>+ facilitator instructies</li></ul></li>
+				                     <li>5 tot 10 quotes die je kan gebruiken ter inspiratie in je Lencioni trajecten</li>
+				                     <li>5 tot 10 podcasts<ul>
+				                     <li>samengevat in het Nederlands</li>
+				                     <li>+ de link naar de originele podcast</li></ul></li>
+				                     <li>Meerdere filmpjes van Lencioni<ul>
+				                     <li>ondertiteld in het Nederlands</li></ul></li>
+				                     <li>Meerdere extra oefeningen<ul>
+				                     <li>inclusief uitgebreide facilitator instructies</li></ul></li></ul>
+					 */
+					content: () => LocalizedString
 				}
 				'6': {
 					title: {
@@ -2989,12 +2507,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * Buiten de quotes, podcasts, filmpjes met betrekking tot deze laag, vind je er een aantal leuke extra oefeningen in om in een team op deze laag te werken en verbeteren.
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * Buiten de quotes, podcasts, filmpjes met betrekking tot deze laag, vind je er een aantal leuke extra oefeningen in om in een team op deze laag te werken en verbeteren.
+					 */
+					content: () => LocalizedString
 				}
 				'7': {
 					title: {
@@ -3007,12 +2523,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * Deze laag is voor de meeste teams de moeilijkste. Vandaar dat de extra oefeningen, filmpjes, podcasts én quotes belangrijk zijn..
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * Deze laag is voor de meeste teams de moeilijkste. Vandaar dat de extra oefeningen, filmpjes, podcasts én quotes belangrijk zijn..
+					 */
+					content: () => LocalizedString
 				}
 				'8': {
 					title: {
@@ -3022,12 +2536,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * In dit laatste gedeelte gaan we dieper in op de bruggen die je kan bouwen naar andere modellen. Deze zijn enorm, wat het Lencioni model zo flexibel maakt en makkelijk integreerbaar in organisaties en teams!
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * In dit laatste gedeelte gaan we dieper in op de bruggen die je kan bouwen naar andere modellen. Deze zijn enorm, wat het Lencioni model zo flexibel maakt en makkelijk integreerbaar in organisaties en teams!
+					 */
+					content: () => LocalizedString
 				}
 				'9': {
 					title: {
@@ -3040,12 +2552,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * In de All-in Module wordt je opgenomen in een leergroep met ongeveer 8 deelnemers, waarmee je ook de tweedaagse Masterclass zal beleven. Een jaar lang kunnen jullie blijven contact houden om cases te bespreken en elkaar te helpen.
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * In de All-in Module wordt je opgenomen in een leergroep met ongeveer 8 deelnemers, waarmee je ook de tweedaagse Masterclass zal beleven. Een jaar lang kunnen jullie blijven contact houden om cases te bespreken en elkaar te helpen.
+					 */
+					content: () => LocalizedString
 				}
 				'10': {
 					title: {
@@ -3058,9 +2568,7 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						'0': () => LocalizedString
-					}
+					content: () => LocalizedString
 				}
 				'11': {
 					title: {
@@ -3073,12 +2581,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * Inclusief facilitator instructies en een voorbeeldrapport.
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * Inclusief facilitator instructies en een voorbeeldrapport.
+					 */
+					content: () => LocalizedString
 				}
 				'12': {
 					title: {
@@ -3091,12 +2597,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * Het Lencioni Werkboek kan je downloaden in Word en als dusdanig makkelijk inzetten in je eigen Lencioni trajecten.
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * Het Lencioni Werkboek kan je downloaden in Word en als dusdanig makkelijk inzetten in je eigen Lencioni trajecten.
+					 */
+					content: () => LocalizedString
 				}
 				'13': {
 					title: {
@@ -3109,12 +2613,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * In te plannen wanneer jij wil!
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * In te plannen wanneer jij wil!
+					 */
+					content: () => LocalizedString
 				}
 				'14': {
 					title: {
@@ -3127,12 +2629,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * Meerdere quotes, podcasts, filmpjes en oefeningen waaronder het filmpje waarin Patrick Lencioni zelf het verschil uitlegt tussen “slimme” en “gezonde” teams.
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * Meerdere quotes, podcasts, filmpjes en oefeningen waaronder het filmpje waarin Patrick Lencioni zelf het verschil uitlegt tussen “slimme” en “gezonde” teams.
+					 */
+					content: () => LocalizedString
 				}
 				'15': {
 					title: {
@@ -3145,12 +2645,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * In deze DeepDive heb je buiten de filmpjes , oefeningen en quotes ook een aantal super interessante podcasts van Patrick Lencioni, in het Nederlands samengevat plus de link voor het geval je hem gewoon zelf even wil beluisteren!
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * In deze DeepDive heb je buiten de filmpjes , oefeningen en quotes ook een aantal super interessante podcasts van Patrick Lencioni, in het Nederlands samengevat plus de link voor het geval je hem gewoon zelf even wil beluisteren!
+					 */
+					content: () => LocalizedString
 				}
 				'16': {
 					title: {
@@ -3163,12 +2661,10 @@ export type TranslationFunctions = {
 						 */
 						main: () => LocalizedString
 					}
-					content: {
-						/**
-						 * De piek van de Piramide, focus op “teamresultaat”. In deze DeepDive gaat het over hoe je hiermee met een team, verdiepend aan de slag gaat. Eén van de oefeningen gaat over de OKR methode die je kan inzetten in deze laag.
-						 */
-						'0': () => LocalizedString
-					}
+					/**
+					 * De piek van de Piramide, focus op “teamresultaat”. In deze DeepDive gaat het over hoe je hiermee met een team, verdiepend aan de slag gaat. Eén van de oefeningen gaat over de OKR methode die je kan inzetten in deze laag.
+					 */
+					content: () => LocalizedString
 				}
 			}
 			/**
@@ -3203,6 +2699,10 @@ export type TranslationFunctions = {
 			 * hybride lencioni teamcoaching leertraject
 			 */
 			title_alt: () => LocalizedString
+			/**
+			 * hybride lencioni leertraject
+			 */
+			title_short: () => LocalizedString
 			expand: {
 				/**
 				 * Uitbreiding van Leertraject
@@ -3214,128 +2714,49 @@ export type TranslationFunctions = {
 				text: () => LocalizedString
 			}
 			intro: {
-				content: {
-					/**
-					 * Jouw <strong>hybride Lencioni Leertraject</strong> om je, via <strong>online en fysieke leermomenten</strong>, 
-					 */
-					'0': () => LocalizedString
-					/**
-					 * te verdiepen en <strong>bekwamen als Lencioni Teamcoach</strong>, is klaar.<br/>
-					 */
-					'1': () => LocalizedString
-					/**
-					 * <br/>
-					 */
-					'2': () => LocalizedString
-					/**
-					 * Trixolutions werkt al 15 jaar intensief met alle modellen, methodieken 
-					 */
-					'3': () => LocalizedString
-					/**
-					 * en inzichten van The Table Group van Patrick Lencioni. <br/>
-					 */
-					'4': () => LocalizedString
-					/**
-					 * Als enige in de Benelux zijn we ook gecertificeerde partner (CAPAPro) 
-					 */
-					'5': () => LocalizedString
-					/**
-					 * van Patrick Lencioni. Dit wil zeggen dat we wekelijks <strong>door Patrick zelf 
-					 */
-					'6': () => LocalizedString
-					/**
-					 * getraind en gecoached worden</strong> in de vele modellen, assessments en oefeningen, 
-					 */
-					'7': () => LocalizedString
-					/**
-					 * en in de Table Group CAPA Pro Academy toegang hebben tot honderden filmpjes, 
-					 */
-					'8': () => LocalizedString
-					/**
-					 * virtuele trainingen, speciale podcasts, facilitator instructies, etc.<br/>
-					 */
-					'9': () => LocalizedString
-					/**
-					 * <br/>
-					 */
-					'10': () => LocalizedString
-					/**
-					 * We hebben alle onze Lencioni wijsheid en kennis in <strong>2 mogelijke leertrajecten</strong> gegoten:
-					 */
-					'11': () => LocalizedString
-				}
+				/**
+				 * Jouw <strong>hybride Lencioni Leertraject</strong> om je, via <strong>online en fysieke leermomenten</strong>, 
+			                  te verdiepen en <strong>bekwamen als Lencioni Teamcoach</strong>, is klaar.<br/><br/>
+			                  Trixolutions werkt al 15 jaar intensief met alle modellen, methodieken en inzichten van The Table Group van 
+			                  Patrick Lencioni. <br/>Als enige in de Benelux zijn we ook gecertificeerde partner (CAPAPro) van Patrick Lencioni. 
+			                  Dit wil zeggen dat we wekelijks <strong>door Patrick zelf getraind en gecoached worden</strong> in de vele 
+			                  modellen, assessments en oefeningen, en in de Table Group CAPA Pro Academy toegang hebben tot honderden filmpjes, 
+			                  virtuele trainingen, speciale podcasts, facilitator instructies, etc.<br/><br/>
+			                  We hebben alle onze Lencioni wijsheid en kennis in <strong>2 mogelijke leertrajecten</strong> gegoten:
+				 */
+				content: () => LocalizedString
 			}
 			basic: {
 				/**
 				 * Zonder
 				 */
 				title: () => LocalizedString
-				intro: {
-					/**
-					 * Dit leertraject raden we aan als je al redelijk goed met de Piramide aan de slag 
-					 */
-					'0': () => LocalizedString
-					/**
-					 * kan en vooral naar verdieping en extra inspiratie zoekt op vlak van zijn assessments, 
-					 */
-					'1': () => LocalizedString
-					/**
-					 * speciale oefeningen, bruggen met andere modellen, podcasts, Lencioni filmpjes….<br/>
-					 */
-					'2': () => LocalizedString
-					/**
-					 * Dit is de 'do it yourself' aanpak, wél met een uur coaching van onze Trixolutions/Lencioni 
-					 */
-					'3': () => LocalizedString
-					/**
-					 * expert inbegrepen.<br/>
-					 */
-					'4': () => LocalizedString
-					/**
-					 * Wil je daarna toch wel meedoen aan de tweedaagse Masterclass? Dat kan! Enkel het verschil 
-					 */
-					'5': () => LocalizedString
-					/**
-					 * in prijs rekenen we dan aan.
-					 */
-					'6': () => LocalizedString
-				}
+				/**
+				 * Dit leertraject raden we aan als je al redelijk goed met de Piramide aan de slag 
+			                  kan en vooral naar verdieping en extra inspiratie zoekt op vlak van zijn assessments, 
+			                  speciale oefeningen, bruggen met andere modellen, podcasts, Lencioni filmpjes….<br/>
+			                  Dit is de 'do it yourself' aanpak, wél met een uur coaching van onze Trixolutions/Lencioni 
+			                  expert inbegrepen.<br/>
+			                  Wil je daarna toch wel meedoen aan de tweedaagse Masterclass? Dat kan! Enkel het verschil 
+			                  in prijs rekenen we dan aan.
+				 */
+				intro: () => LocalizedString
 			}
 			full: {
 				/**
 				 * Met
 				 */
 				title: () => LocalizedString
-				intro: {
-					/**
-					 * Dit extensieve leertraject raden we aan als je geen of een beperkte kennis van de Piramide 
-					 */
-					'0': () => LocalizedString
-					/**
-					 * van Lencioni hebt.<br/>
-					 */
-					'1': () => LocalizedString
-					/**
-					 * We gaan immers in detail door het Lencioni Werkboek en leren je een Lencioni traject opbouwen 
-					 */
-					'2': () => LocalizedString
-					/**
-					 * en uitrollen, verdiepende kennis en oefeningen in de verschillende lagen van de Piramide, hoe 
-					 */
-					'3': () => LocalizedString
-					/**
-					 * de assessments in te zetten.<br/>
-					 */
-					'4': () => LocalizedString
-					/**
-					 * In deze module zit ook een uur opvolgcoaching inbegrepen, alsook 15 Lencioni Piramides én een 
-					 */
-					'5': () => LocalizedString
-					/**
-					 * Trixolutions/Lencioni Certificaat!
-					 */
-					'6': () => LocalizedString
-				}
+				/**
+				 * Dit extensieve leertraject raden we aan als je geen of een beperkte kennis van de Piramide 
+			                  van Lencioni hebt.<br/>
+			                  We gaan immers in detail door het Lencioni Werkboek en leren je een Lencioni traject opbouwen 
+			                  en uitrollen, verdiepende kennis en oefeningen in de verschillende lagen van de Piramide, hoe 
+			                  de assessments in te zetten.<br/>
+			                  In deze module zit ook een uur opvolgcoaching inbegrepen, alsook 15 Lencioni Piramides én een 
+			                  Trixolutions/Lencioni Certificaat!
+				 */
+				intro: () => LocalizedString
 			}
 			/**
 			 * Deze opleiding is bedoeld voor iedereen die de beproefde en succesvolle inzichten van Patrick Lencioni wil gebruiken in zijn/haar team of organisatie.
@@ -3401,36 +2822,16 @@ export type TranslationFunctions = {
 			 * Level 2
 			 */
 			level2: () => LocalizedString
-			intro: {
-				/**
-				 * In 1 dag gaan we dieper in op de 4 andere succesvolle modellen van 
-				 */
-				'0': () => LocalizedString
-				/**
-				 * Patrick Lencioni en The Table Group.<br/><br/>
-				 */
-				'1': () => LocalizedString
-				/**
-				 * Naast zijn piramide uit de “De 5 Frustraties van Teamwork” die we 
-				 */
-				'2': () => LocalizedString
-				/**
-				 * verdiepen in de Lencioni Coach-the-Coach Masterclass – Level 1, heeft 
-				 */
-				'3': () => LocalizedString
-				/**
-				 * Lencioni immers nog enkele heel krachtige modellen en methodieken 
-				 */
-				'4': () => LocalizedString
-				/**
-				 * uitgebracht die coaches en consultants kunnen inzetten in teambegeleidings- 
-				 */
-				'5': () => LocalizedString
-				/**
-				 * en teamcoachingtrajecten.<br/>
-				 */
-				'6': () => LocalizedString
-			}
+			/**
+			 * In 1 dag gaan we dieper in op de 4 andere succesvolle modellen van 
+		               Patrick Lencioni en The Table Group.<br/><br/>
+		               Naast zijn piramide uit de “De 5 Frustraties van Teamwork” die we 
+		               verdiepen in de Lencioni Coach-the-Coach Masterclass – Level 1, heeft 
+		               Lencioni immers nog enkele heel krachtige modellen en methodieken 
+		               uitgebracht die coaches en consultants kunnen inzetten in teambegeleidings- 
+		               en teamcoachingtrajecten.<br/>
+			 */
+			intro: () => LocalizedString
 			/**
 			 * Meer inhoudelijke info vind je hier.
 			 */
@@ -3451,43 +2852,21 @@ export type TranslationFunctions = {
 							 * 1. De Ideale Teamplayer (Patrick Lencioni)
 							 */
 							title: () => LocalizedString
-							content: {
-								/**
-								 * Deze ‘teamplayer’ is vooral bescheiden, hongerig/gemotiveerd en slim op 
-								 */
-								'0': () => LocalizedString
-								/**
-								 * vlak van emotionele intelligentie. Combinaties van slechts 2 van deze 
-								 */
-								'1': () => LocalizedString
-								/**
-								 * eigenschappen geven specifieke resultaten.
-								 */
-								'2': () => LocalizedString
-							}
+							/**
+							 * Deze ‘teamplayer’ is vooral bescheiden, hongerig/gemotiveerd en slim op 
+						                           vlak van emotionele intelligentie. Combinaties van slechts 2 van deze 
+						                           eigenschappen geven specifieke resultaten.
+							 */
+							content: () => LocalizedString
 							sub: {
-								content: {
-									/**
-									 * Op voorhand vul je het ‘Ideale Teamplayer Assessment’ in. Dat lichten we tijdens 
-									 */
-									'0': () => LocalizedString
-									/**
-									 * de workshop verder toe en leren we je hoe je dit kan inzetten in teamworkshops.<br/><br/>
-									 */
-									'1': () => LocalizedString
-									/**
-									 * We lichten het model ‘De Ideale Teamplayer’ toe en leren je hoe je het kan toepassen 
-									 */
-									'2': () => LocalizedString
-									/**
-									 * in teambegeleiding en teamcoaching. We lichten bijkomend toe hoe je deze methodiek 
-									 */
-									'3': () => LocalizedString
-									/**
-									 * ook kan inzetten bij rekrutering.<br/><br/>
-									 */
-									'4': () => LocalizedString
-								}
+								/**
+								 * Op voorhand vul je het ‘Ideale Teamplayer Assessment’ in. Dat lichten we tijdens 
+							                              de workshop verder toe en leren we je hoe je dit kan inzetten in teamworkshops.<br/><br/>
+							                              We lichten het model ‘De Ideale Teamplayer’ toe en leren je hoe je het kan toepassen 
+							                              in teambegeleiding en teamcoaching. We lichten bijkomend toe hoe je deze methodiek 
+							                              ook kan inzetten bij rekrutering.<br/><br/>
+								 */
+								content: () => LocalizedString
 							}
 						}
 						'1': {
@@ -3495,87 +2874,32 @@ export type TranslationFunctions = {
 							 * 2. The 6 Types of Working Genius (Patrick Lencioni)
 							 */
 							title: () => LocalizedString
-							content: {
-								/**
-								 * <em>Te veel mensen in deze wereld werken tegen hun zin omdat ze hun persoonlijke en 
-								 */
-								'0': () => LocalizedString
-								/**
-								 * innerlijke vermogens niet kennen.</em> Hierdoor doen ze niet het werk dat hen energie 
-								 */
-								'1': () => LocalizedString
-								/**
-								 * en plezier geeft en belanden ze in jobs en projecten die hen <strong>vermoeien en 
-								 */
-								'2': () => LocalizedString
-								/**
-								 * demotiveren</strong>, en dat reflecteert op 2 aspecten:<br/><br/>
-								 */
-								'3': () => LocalizedString
-								/**
-								 * <ul><li>Ten eerste zorgt het ervoor dat mensen hun <strong>zelfvertrouwen en plezier in het leven
-								 */
-								'4': () => LocalizedString
-								/**
-								 * verliezen</strong>,wat niet alleen persoonlijk, maar ook sociaal en zelfs maatschappelijk gezien nefast is.</li>
-								 */
-								'5': () => LocalizedString
-								/**
-								 * <li>Ten tweede zullen organisaties en teams die niet inhaken op de persoonlijke 
-								 */
-								'6': () => LocalizedString
-								/**
-								 * intrinsieke vermogens van hun teamleden, <strong>het volledige potentieel van hun medewerkers 
-								 */
-								'7': () => LocalizedString
-								/**
-								 * nooit benutten en laten ontplooien</strong>. Er blijven twijfels bestaan, doelen en effectiviteit 
-								 */
-								'8': () => LocalizedString
-								/**
-								 * worden niet bereikt, de betrokkenheid en het werkplezier van die medewerkers is laag.</li></ul><br/>
-								 */
-								'9': () => LocalizedString
-								/**
-								 * De oplossing ligt erin dat iedereen (werknemers, managers, studenten…) hun <strong>intrinsieke 
-								 */
-								'10': () => LocalizedString
-								/**
-								 * werkvermogens</strong> ontdekken en dus ook de vermogens die ze niet van nature bezitten (die dus 
-								 */
-								'11': () => LocalizedString
-								/**
-								 * altijd energie zullen kosten), om op die manier aan te haken bij hun 
-								 */
-								'12': () => LocalizedString
-								/**
-								 * juiste ‘Working Genius’!
-								 */
-								'13': () => LocalizedString
-							}
+							/**
+							 * <em>Te veel mensen in deze wereld werken tegen hun zin omdat ze hun persoonlijke en 
+						                           innerlijke vermogens niet kennen.</em> Hierdoor doen ze niet het werk dat hen energie 
+						                           en plezier geeft en belanden ze in jobs en projecten die hen <strong>vermoeien en 
+						                           demotiveren</strong>, en dat reflecteert op 2 aspecten:<br/><br/>
+						                           <ul><li>Ten eerste zorgt het ervoor dat mensen hun <strong>zelfvertrouwen en plezier in het leven
+						                           verliezen</strong>,wat niet alleen persoonlijk, maar ook sociaal en zelfs maatschappelijk gezien nefast is.</li>
+						                           <li>Ten tweede zullen organisaties en teams die niet inhaken op de persoonlijke 
+						                           intrinsieke vermogens van hun teamleden, <strong>het volledige potentieel van hun medewerkers 
+						                           nooit benutten en laten ontplooien</strong>. Er blijven twijfels bestaan, doelen en effectiviteit 
+						                           worden niet bereikt, de betrokkenheid en het werkplezier van die medewerkers is laag.</li></ul><br/>
+						                           De oplossing ligt erin dat iedereen (werknemers, managers, studenten…) hun <strong>intrinsieke 
+						                           werkvermogens</strong> ontdekken en dus ook de vermogens die ze niet van nature bezitten (die dus 
+						                           altijd energie zullen kosten), om op die manier aan te haken bij hun 
+						                           juiste ‘Working Genius’!
+							 */
+							content: () => LocalizedString
 							sub: {
-								content: {
-									/**
-									 * Op voorhand vul je het ‘The 6 Types of Working Genius Assessment’ (enkel in het 
-									 */
-									'0': () => LocalizedString
-									/**
-									 * Engels) in. Dat lichten we verder toe tijdens de workshop en we leren je hoe 
-									 */
-									'1': () => LocalizedString
-									/**
-									 * je dit kan inzetten in teamworkshops en intervisies.<br/><br/>
-									 */
-									'2': () => LocalizedString
-									/**
-									 * We lichten het model ‘The 6 Types of Working Genius’ in detail toe en leren je 
-									 */
-									'3': () => LocalizedString
-									/**
-									 * hoe je het kan toepassen in teambegeleiding en teamcoaching.
-									 */
-									'4': () => LocalizedString
-								}
+								/**
+								 * Op voorhand vul je het ‘The 6 Types of Working Genius Assessment’ (enkel in het 
+							                              Engels) in. Dat lichten we verder toe tijdens de workshop en we leren je hoe 
+							                              je dit kan inzetten in teamworkshops en intervisies.<br/><br/>
+							                              We lichten het model ‘The 6 Types of Working Genius’ in detail toe en leren je 
+							                              hoe je het kan toepassen in teambegeleiding en teamcoaching.
+								 */
+								content: () => LocalizedString
 							}
 						}
 					}
@@ -3591,35 +2915,18 @@ export type TranslationFunctions = {
 							 * 1. De Beslissende Voorsprong (Patrick Lencioni)
 							 */
 							title: () => LocalizedString
-							content: {
-								/**
-								 * <em>`De grootste voorsprong en competitief voordeel die een bedrijf kan nemen,
-								 */
-								'0': () => LocalizedString
-								/**
-								 * is het creëren en hebben van een gezonde organisatie- en teamcultuur.`</em>
-								 */
-								'1': () => LocalizedString
-							}
+							/**
+							 * <em>`De grootste voorsprong en competitief voordeel die een bedrijf kan nemen, is het creëren en hebben van een gezonde organisatie- en teamcultuur.`</em>
+							 */
+							content: () => LocalizedString
 							sub: {
-								content: {
-									/**
-									 * Op voorhand vul je het 'Beslissende Voorsprong Assessment' in dat we tijdens 
-									 */
-									'0': () => LocalizedString
-									/**
-									 * de workshop verder toelichten. Je leert ook hoe je dit kan inzetten in teamworkshops.
-									 */
-									'1': () => LocalizedString
-									/**
-									 * <br/><br/>We lichten het model 'De Beslissende Voorsprong' toe en leren je hoe je het kan
-									 */
-									'2': () => LocalizedString
-									/**
-									 * toepassen in je advies naar organisaties, teambegeleiding en teamcoaching.
-									 */
-									'3': () => LocalizedString
-								}
+								/**
+								 * Op voorhand vul je het 'Beslissende Voorsprong Assessment' in dat we tijdens 
+							                              de workshop verder toelichten. Je leert ook hoe je dit kan inzetten in teamworkshops.
+							                              <br/><br/>We lichten het model 'De Beslissende Voorsprong' toe en leren je hoe je het kan
+							                              toepassen in je advies naar organisaties, teambegeleiding en teamcoaching.
+								 */
+								content: () => LocalizedString
 							}
 						}
 						'1': {
@@ -3627,82 +2934,37 @@ export type TranslationFunctions = {
 							 * 2. Vergaderen is Dodelijk (Patrick Lencioni)
 							 */
 							title: () => LocalizedString
-							content: {
-								/**
-								 * Vergaderingen horen bij ons werk, maar ze lijken vaak niet veel op te leveren. 
-								 */
-								'0': () => LocalizedString
-								/**
-								 * Sterker nog, ze gelden als <em>regelrechte energievreters</em>.<br/>
-								 */
-								'1': () => LocalizedString
-								/**
-								 * Dat komt omdat we op de verkeerde manier vergaderen. In dit model met bijhorende 
-								 */
-								'2': () => LocalizedString
-								/**
-								 * online tool leren we je als coach organisaties en teams begeleiden in hun 
-								 */
-								'3': () => LocalizedString
-								/**
-								 * meetingcultuur.<br/>
-								 */
-								'4': () => LocalizedString
-								/**
-								 * Specifiek werken we op <strong>hoe je moeilijke meetings in effectieve en 
-								 */
-								'5': () => LocalizedString
-								/**
-								 * productieve meetings kan omturnen</strong> aan de hand van 
-								 */
-								'6': () => LocalizedString
-								/**
-								 * de <em>4 types van meetings</em>.
-								 */
-								'7': () => LocalizedString
-							}
+							/**
+							 * Vergaderingen horen bij ons werk, maar ze lijken vaak niet veel op te leveren. 
+						                           Sterker nog, ze gelden als <em>regelrechte energievreters</em>.<br/>
+						                           Dat komt omdat we op de verkeerde manier vergaderen. In dit model met bijhorende 
+						                           online tool leren we je als coach organisaties en teams begeleiden in hun 
+						                           meetingcultuur.<br/>
+						                           Specifiek werken we op <strong>hoe je moeilijke meetings in effectieve en 
+						                           productieve meetings kan omturnen</strong> aan de hand van 
+						                           de <em>4 types van meetings</em>.
+							 */
+							content: () => LocalizedString
 							sub: {
-								content: {
-									/**
-									 * We lichten het model en de 4 soorten meetings toe en leren je hoe je dit kan 
-									 */
-									'0': () => LocalizedString
-									/**
-									 * toepassen in teambegeleiding en teamcoaching.<br/>
-									 */
-									'1': () => LocalizedString
-									/**
-									 * We demonstreren de online ‘Meeting Advantage Tool’ die je kan inzetten bij 
-									 */
-									'2': () => LocalizedString
-									/**
-									 * je eigen team of organisatie of die je kan adviseren aan teams die je begeleidt.
-									 */
-									'3': () => LocalizedString
-								}
+								/**
+								 * We lichten het model en de 4 soorten meetings toe en leren je hoe je dit kan 
+							                              toepassen in teambegeleiding en teamcoaching.<br/>
+							                              We demonstreren de online ‘Meeting Advantage Tool’ die je kan inzetten bij 
+							                              je eigen team of organisatie of die je kan adviseren aan teams die je begeleidt.
+								 */
+								content: () => LocalizedString
 							}
 						}
 					}
 				}
 			}
-			features_intro: {
-				/**
-				 * Een Coach-the-Coach ‘Deepdive’ in de gekozen modellen en methodieken waarin we 
-				 */
-				'0': () => LocalizedString
-				/**
-				 * steeds verdiepend werken vanuit het standpunt van de begeleider.
-				 */
-				'1': () => LocalizedString
-				/**
-				 * Je leert te werken met de bijhorende assessments en tools die jij daarna kan inzetten 
-				 */
-				'2': () => LocalizedString
-				/**
-				 * in jouw teamtrajecten of -begeleiding.
-				 */
-				'3': () => LocalizedString
-			}
+			/**
+			 * Een Coach-the-Coach ‘Deepdive’ in de gekozen modellen en methodieken waarin we 
+		                        steeds verdiepend werken vanuit het standpunt van de begeleider.
+		                        Je leert te werken met de bijhorende assessments en tools die jij daarna kan inzetten 
+		                        in jouw teamtrajecten of -begeleiding.
+			 */
+			features_intro: () => LocalizedString
 			features: {
 				/**
 				 * Schriftelijke Intake per Deelnemer

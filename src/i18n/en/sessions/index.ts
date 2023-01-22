@@ -1,428 +1,394 @@
 import type { NamespaceSessionsTranslation } from '../../i18n-types'
 
 const en_sessions: NamespaceSessionsTranslation = {
-	is_full: "volzet",
-   subscribe: "Inschrijven",
-   subscribe_to: "Inschrijven voor",
-   subscribe_disclaim: "Na inschrijving ontvang je een factuur. Je deelname is pas definitief na betaling. Indien we het minimum aantal deelnemers niet bereiken gaat de opleiding niet door en wordt je inschrijvingsgeld terugbetaald. Meer details krijg je via de inschrijvingsbevestiging.",
-   practical: "praktische info",
+   open_sessions: "open sessies",
+	is_full: "full",
+   subscribe: "Sign up",
+   subscribe_to: "Sign up for",
+   sign_up: "Sign me up!",
+   sign_up_to: "Sign me up for",
+   subscribe_disclaim: "After registration you will receive an invoice. Your participation is only final after payment. If we do not reach the minimum number of participants, the training will not take place and your registration fee will be refunded. You will receive more details via the registration confirmation.",
+   practical: "practical info",
    by_lencioni: 'by Patrick Lencioni',
    workshop: "workshop",
-   audience: "doelgroep",
-   approach: "aanpak",
+   audience: "audience",
+   approach: "approach",
    your_trainer: {
-      title: "uw trainer",
+      title: "your trainer",
       tom: "Tom van Dorst",
-      content: "Tom van Dorst is een gedreven trainer en coach, en CEO van Trixolutions.<br/>Hij is een echte expert op het vlak van Lencioni."
+      content: "Tom van Dorst is a passionate trainer and coach, and CEO of Trixolutions.<br/>He is a real expert in the field of Lencioni."
    },
-   location: "locatie",
-   ratings: "recensies",
-   vat_not_included: 'btw niet inbegrepen',
+   location: "location",
+   ratings: "reviews",
+   vat_not_included: 'vat not included',
    info: {
-      single: "infosessie",
-      title: "gratis online open infosessies",
+      single: "info session",
+      title: "free online open info sessions",
+      title_single: "free online open info session",
+      title_alt: "free open info sessions",
       trainer: "trainer",
-      time: "tijd",
+      time: "time frame",
       intro: {
-         title: "Teamcoaching met Lencioni",
-         content: [
-            "Trixolutions is partner van de Table Group van Patrick Lencioni. We zijn geaccrediteerd om, niet enkel zijn gedachtegoed, verschillende modellen en assessments in te zetten in bedrijven, maar ook om de beroemde Lencioni Coach-the-Coach opleidingen te organiseren. <br/>",
-            "Meer dan 110 coaches mochten we zo al op de markt loslaten!<br/><br/>",
-            "In deze gratis online infosessie verdiepen we op zijn meest beroemde model uit “De 5 Frustraties van Teamwork” en hoe deze juist in te  zetten in teams en bedrijven. We verdiepen en lichten onze tweedaagse  Masterclass “Lencioni Coach-the-Coach” (Level 1) toe alsook zijn  andere modellen rond “De Beslissende Voorsprong”, “De Ideale Teamplayer” en “The 6 Types of Working Genius”.<br/><br/>",
-            "Meer informatie nodig of inschrijven voor één van de gratis open  infosessies? Vragen? Klik dan op onderstaande knop en vul het formulier in."
-         ]
+         title: "Teamcoaching with Lencioni",
+         content: `Trixolutions is a partner of Patrick Lencioni's Table Group. We are accredited not only to use his ideas, different models and 
+                  assessments in companies, but also to organize the famous Lencioni Coach-the-Coach training. <br/>We have already released more than 
+                  110 coaches on the market in this way!<br/><br/>In this free online open info session, we delve into his most famous model 
+                  from “The 5 Frustrations of Teamwork” and how to use it correctly in teams and companies. We deepen and explain our two-day 
+                  Masterclass “Lencioni Coach-the-Coach” (Level 1) as well as his other models around “The Decisive Lead”, “The Ideal Team Player” 
+                  and “The 6 Types of Working Genius”.<br/><br/>Need more information or register for one of the free open information sessions? 
+                  Questions? Click on the button below and fill in the form.`,
       }
    },
    level_1: {
-      features_title: "De Leertrajecten Bestaan uit Volgende Onderdelen",
+      features_title: "The Learning Paths Consist of Following Parts",
       features: [
-         "Toegang tot het Hybride Lencioni Traject voor 12 maanden",
-         "Regelmatige Updates",
-         "Integratie in een leergroep met 8 andere deelnemers",
+         "Access to the Hybrid Lencioni Track for 12 months",
+         "Regular Updates",
+         "Integration in a learning group with 8 other participants",
          "Intake",
-         "TWEEDAAGSE FYSIEKE MASTERCLASS onder begeleiding van een Trixolutions/Lencioni Expert",
-         "Certificaat",
-         "Je wordt toegevoegd aan de Lencioni CAPA Group (Consultants and Practitioners Alliance) op LinkedIn",
-         "Je wordt toegevoegd aan de Trixolutions/Lencioni Coach-the-Coach Groep/LEVEL 1 op LinkedIn",
-         "15 Kartonnen Lencioni Piramides",
-         "Toegang tot het volwaardige Lencioni Team Assessment + facilitator instructies",
-         "Toegang tot het volwaardige Lencioni Personal Assessment + facilitator instructies",
-         "Toegang tot het Lencioni Werkboek",
-         "Toegang tot de 10+ Lencioni Bijlages bij het werkboek",
-         "Een uur opvolgcoaching met een Trixolutions/Lencioni Expert",
-         "Toegang tot de DeepDive – Laag “Vertrouwen”",
-         "Toegang tot de DeepDive – Laag “Respectvolle Conflicten”",
-         "Toegang tot de DeepDive – Laag “Team Betrokkenheid”",
-         "Toegang tot de DeepDive – Laag “Aansprakelijkheid”",
-         "Toegang tot de DeepDive – Laag “Resultaatgerichtheid”",
-         "Jaarlijks te verlengen voor €490,00"
+         "TWO-DAY PHYSICAL MASTERCLASS supervised by a Trixolutions/Lencioni Expert",
+         "Certificate",
+         "You will be added to the Lencioni CAPA Group (Consultants and Practitioners Alliance) on LinkedIn",
+         "You will be added to the Trixolutions/Lencioni Coach-the-Coach Group/LEVEL 1 on LinkedIn",
+         "15 Cardboard Lencioni Pyramids",
+         "Access to the full Lencioni Team Assessment + facilitator instructions",
+         "Access to the full Lencioni Personal Assessment + facilitator instructions",
+         "Access to the Lencioni Workbook",
+         "Access to the 10+ Lencioni Workbook Appendices",
+         "One hour of follow-up coaching with a Trixolutions/Lencioni Expert",
+         "Access to the DeepDive – Layer “Trust”",
+         "Access to the DeepDive – Layer “Respectful Conflicts”",
+         "Access to the DeepDive – Layer “Team Engagement”",
+         "Access to the DeepDive – Layer “Accountability”",
+         "Access to the DeepDive – Layer “Results”",
+         "Can be renewed annually for €490.00"
       ],
       features_extended: [
          // 1
          {
             title: {
-               before: 'Inschrijving in de',
-               main: 'Hybride Trixolutions / Lencioni Tool',
+               before: 'Enrollment in the',
+               main: 'Hybrid Trixolutions / Lencioni Tool',
             },
-            content: ['Toegang voor 12 maanden'],
-            extra: 'Maandelijkse updates!' 
+            content: 'Access for 12 months',
+            extra: 'Monthly updates!' 
          },
          // 3
          {
             title: {
-               before: 'Tweedaagse Fysieke',
+               before: 'Two-Day Physical',
                main: 'Coach-the-Coach Masterclass',
             },
-            content: ['Samen met de andere deelnemers.']
+            content: 'Together with other participants.'
          },
          // 5
          {
             title: {
-               before: '15 Kartonnen',
-               main: 'Lencioni Piramides',
+               before: '15 Cardboard',
+               main: 'Lencioni Pyramids',
             },
-            content: ['Deze Piramides kan je gebruiken in je Lencioni trajecten en aan de teamleden geven. Deze Piramide is een leuke visuele trigger om met Lencioni gedachtengoed te blijven werken in een team. Indien nodig, kan je er bij bestellen.']
+            content: `You can use these Pyramids in your Lencioni trajectories and give 
+                     them to the team members. This Pyramid is a nice visual trigger to 
+                     keep working with Lencioni ideas in a team. If necessary, you can order extra pyramids.`
          },
          // 7
          {
             title: {
-               before: 'Toegang tot het',
-               main: 'Volwaardig & Up-to-Date Lencioni Personal Assessment',
+               before: 'Access to the',
+               main: 'Full & Up-to-Date Lencioni Personal Assessment',
             },
-            content: ['Inclusief facilitator instructies en een voorbeeldrapport.']
+            content: 'Includes facilitator instructions and a sample report.'
          },
          // 9
          {
             title: {
-               before: 'Online toegang tot',
-               main: 'Alle Documenten en Bijlages na de Tweedaagse',
+               before: 'Online access to',
+               main: 'All Documents and Attachments after the Two-Day Masterclass',
             },
-            content: [
-               '<ul><li>Ons Lencioni Werkboek</li>',
-               '<li>Verdiepende Bijlages</li>',
-               '<li>Lencioni Team Assessment <ul>',
-               '<li>+ vragen + instructies</li>',
-               '</ul></li>',
-               '<li>Lencioni Persoonlijke Assessment<ul>',
-               '<li>+ instructies</li>',
-               '</ul></li>',
-               '</ul>'
-            ],
+            content: `<ul><li>Our Lencioni Workbook</li>
+                     <li>In-depth Appendices</li>
+                     <li>Lencioni Team Assessment <ul>
+                     <li>+ questions + instructions</li>
+                     </ul></li>
+                     <li>Lencioni Personal Assessment<ul>
+                     <li>+ instructions</li>
+                     </ul></li></ul>`,
          },
          // 11
          {
             title: {
-               before: 'Toegang tot de',
+               before: 'Access to the',
                main: '5 Lencioni DeepDives',
             },
-            content: [
-               '<strong>Per laag in de Piramide krijg je:</strong><br>',
-               '<ul><li>5 Lencioni Podcasts, samengevat in het Nederlands</li>',
-               '<li>5 Lencioni Podcasts, samengevat in het Nederlands',
-               '<ul><li>+ originele podcasts in het Engels te beluisteren</li></ul></li>',
-               '<li>5 Quotes</li>',
-               '<li>3 Filmpjes waarin Lencioni zelf een aantal oefeningen en inzichten toelicht</li>',
-               '<li>3 Extra Oefeningen<ul>',
-               '<li>bovenop die van het Lencioni Werkboek</li>',
-               '<li>+ facilitator instructies</li></ul></li>',
-               '<li>5 tot 10 quotes die je kan gebruiken ter inspiratie in je Lencioni trajecten</li>',
-               '<li>5 tot 10 podcasts<ul>',
-               '<li>samengevat in het Nederlands</li>',
-               '<li>+ de link naar de originele podcast</li></ul></li>',
-               '<li>Meerdere filmpjes van Lencioni<ul>',
-               '<li>ondertiteld in het Nederlands</li></ul></li>',
-               '<li>Meerdere extra oefeningen<ul>',
-               '<li>inclusief uitgebreide facilitator instructies</li></ul></li></ul>'
-            ],
+            content: `<strong>Per layer in the Pyramid you get:</strong><br>
+                     <ul><li>5 Lencioni Podcasts, summarized in English
+                     <ul><li>+ original podcasts in English</li></ul></li>
+                     <li>5 Quotes</li>
+                     <li>3 Short videos in which Lencioni himself explains a number of exercises and insights</li>
+                     <li>3 Extra Exercises<ul>
+                     <li>in addition to those of the Lencioni Workbook</li>
+                     <li>+ facilitator instructions</li></ul></li>
+                     <li>5 to 10 quotes that you can use for inspiration in your Lencioni journeys</li>
+                     <li>5 to 10 podcasts<ul>
+                     <li>summarized in English</li>
+                     <li>+ link to the original podcast</li></ul></li>
+                     <li>Multiple Lencioni videos<ul>
+                     <li>spoken in English</li></ul></li>
+                     <li>Multiple extra exercises<ul>
+                     <li>including extensive facilitator instructions</li></ul></li></ul>`,
          },
          // 13
          {
             title: {
-               before: 'Toegang tot de DeepDive',
-               main: 'Laag Respectvolle Conflicten',
+               before: 'Access to the DeepDive',
+               main: 'Layer Respectful Conflicts',
             },
-            content: ['Buiten de quotes, podcasts, filmpjes met betrekking tot deze laag, vind je er een aantal leuke extra oefeningen in om in een team op deze laag te werken en verbeteren.']
+            content: 'Besides the quotes, podcasts, videos related to this layer, you will find a number of nice extra exercises to work and improve in a team on this layer.'
          },
          // 15
          {
             title: {
-               before: 'Toegang tot de DeepDive',
-               main: 'Laag Aansprakelijkheid',
+               before: 'Access to the DeepDive',
+               main: 'Layer Accountability',
             },
-            content: ['Deze laag is voor de meeste teams de moeilijkste. Vandaar dat de extra oefeningen, filmpjes, podcasts én quotes belangrijk zijn..']
+            content: 'This layer is the most difficult for most teams. That is why the extra exercises, videos, podcasts and quotes are important..'
          },
          // 17
          {
             title: {
                before: '',
-               main: 'Bruggen met Andere Modellen',
+               main: 'Bridges with Other Models',
             },
-            content: ['In dit laatste gedeelte gaan we dieper in op de bruggen die je kan bouwen naar andere modellen. Deze zijn enorm, wat het Lencioni model zo flexibel maakt en makkelijk integreerbaar in organisaties en teams!']
+            content: 'In this last section, we will take a closer look at the bridges you can build to other models. These are huge, which makes the Lencioni model so flexible and easy to integrate into organizations and teams!'
          },
          // 2
          {
             title: {
-               before: 'Integratie in een',
-               main: 'Leergroep met Andere Deelnemers',
+               before: 'Integration into a',
+               main: 'Learning Group with Other Participants',
             },
-            content: ['In de All-in Module wordt je opgenomen in een leergroep met ongeveer 8 deelnemers, waarmee je ook de tweedaagse Masterclass zal beleven. Een jaar lang kunnen jullie blijven contact houden om cases te bespreken en elkaar te helpen.']
+            content: 'In the All-in Module you will be included in a learning group with approximately 8 participants, with whom you will also experience the two-day Masterclass. You can stay in touch for a year to discuss cases and help each other.'
          },
          // 4
          {
             title: {
-               before: 'Officieel',
-               main: 'Trixolutions / Lencioni Certificaat',
+               before: 'Official',
+               main: 'Trixolutions / Lencioni Certificate',
             },
-            content: ['']
+            content: ''
          },
          // 6
          {
             title: {
-               before: 'Toegang tot het',
-               main: 'Volwaardig & Up-to-Date Lencioni Team Assessment',
+               before: 'Access to the',
+               main: 'Full & Up-to-Date Lencioni Team Assessment',
             },
-            content: ['Inclusief facilitator instructies en een voorbeeldrapport.']
+            content: 'Including facilitator instructions and a sample report.'
          },
          // 8
          {
             title: {
-               before: 'Toegang tot het',
-               main: 'Lencioni Werkboek',
+               before: 'Access to the',
+               main: 'Lencioni Workbook',
             },
-            content: ['Het Lencioni Werkboek kan je downloaden in Word en als dusdanig makkelijk inzetten in je eigen Lencioni trajecten.']
+            content: 'You can download the Lencioni Workbook in Word and use it as such in your own Lencioni processes.'
          },
          // 10
          {
             title: {
-               before: 'Inclusief',
-               main: 'Opvolgcoaching',
+               before: 'Including',
+               main: 'Follow-up coaching',
             },
-            content: ['In te plannen wanneer jij wil!']
+            content: 'Schedule whenever you want!'
          },
          // 12
          {
             title: {
-               before: 'Toegang tot de DeepDive',
-               main: 'Laag Vertrouwen',
+               before: 'Access to the DeepDive',
+               main: 'Layer Trust',
             },
-            content: ['Meerdere quotes, podcasts, filmpjes en oefeningen waaronder het filmpje waarin Patrick Lencioni zelf het verschil uitlegt tussen “slimme” en “gezonde” teams.'],
+            content: 'Several quotes, podcasts, videos and exercises, including the video in which Patrick Lencioni himself explains the difference between "smart" and "healthy" teams.'
          },
          // 14
          {
             title: {
-               before: 'Toegang tot de DeepDive',
-               main: 'Laag Team Betrokkenheid',
+               before: 'Access to the DeepDive',
+               main: 'Layer Team Engagement',
             },
-            content: ['In deze DeepDive heb je buiten de filmpjes , oefeningen en quotes ook een aantal super interessante podcasts van Patrick Lencioni, in het Nederlands samengevat plus de link voor het geval je hem gewoon zelf even wil beluisteren!'],
+            content: 'In addition to the videos, exercises and quotes, in this DeepDive you also have a number of super interesting podcasts by Patrick Lencioni, summarized in English plus the link in case you just want to listen to it yourself!'
          },
          // 16
          {
             title: {
-               before: 'Toegang tot de DeepDive',
-               main: 'Laag Resultaatgerichtheid',
+               before: 'Access to the DeepDive',
+               main: 'Layer Results',
             },
-            content: ['De piek van de Piramide, focus op “teamresultaat”. In deze DeepDive gaat het over hoe je hiermee met een team, verdiepend aan de slag gaat. Eén van de oefeningen gaat over de OKR methode die je kan inzetten in deze laag.'],
+            content: 'The peak of the Pyramid, focused on “team result”. This DeepDive is about how to work with a team in depth. One of the exercises is about the OKR method that you can use in this layer.'
          },
       ],
-      traject: "leertraject",
-      hybrid: "hybride",
-      teamcoaching: "teamcoaching",
-      two_day: "tweedaagse masterclass",
+      traject: "learning path",
+      hybrid: "hybrid",
+      teamcoaching: "team coaching",
+      two_day: "two-day masterclass",
       masterclass: "masterclass",
-      access_time: "12 maanden toegang",
-      title: "Trixolutions / Lencioni Hybride Teamcoaching Leertraject",
-      title_alt: "hybride lencioni teamcoaching leertraject",
+      access_time: "12 months access",
+      title: "Trixolutions / Lencioni Hybrid Team Coaching Learning Path",
+      title_alt: "hybrid lencioni team coaching learning path",
+      title_short: "hybrid lencioni learning path",
       expand: {
-         title: "Uitbreiding van Leertraject",
-         text: "Wil je eerst starten met het Leertraject zonder Tweedaagse Masterclass?<br/>Dat kan! Indien je je binnen het jaar ook inschrijft voor de fysieke tweedaagse Masterclass, betaal je enkel het verschil tussen de twee trajecten bij!"
+         title: "Expansion of Learning Path",
+         text: "Would you like to start with the Learning Path without a Two-Day Masterclass?<br/>You can! If you also register for the physical two-day Masterclass within the year, you only pay the difference between the two courses!"
       },
       intro: {
-         content: [
-            "Jouw <strong>hybride Lencioni Leertraject</strong> om je, via <strong>online en fysieke leermomenten</strong>, ",
-            "te verdiepen en <strong>bekwamen als Lencioni Teamcoach</strong>, is klaar.<br/>",
-            "<br/>",
-            "Trixolutions werkt al 15 jaar intensief met alle modellen, methodieken ",
-            "en inzichten van The Table Group van Patrick Lencioni. <br/>",
-            "Als enige in de Benelux zijn we ook gecertificeerde partner (CAPAPro) ",
-            "van Patrick Lencioni. Dit wil zeggen dat we wekelijks <strong>door Patrick zelf ",
-            "getraind en gecoached worden</strong> in de vele modellen, assessments en oefeningen, ",
-            "en in de Table Group CAPA Pro Academy toegang hebben tot honderden filmpjes, ",
-            "virtuele trainingen, speciale podcasts, facilitator instructies, etc.<br/>",
-            "<br/>",
-            "We hebben alle onze Lencioni wijsheid en kennis in <strong>2 mogelijke leertrajecten</strong> gegoten:",
-         ]
+         content: `Your <strong>hybrid Lencioni Learning Trajectory</strong> to <strong>become proficient as a 
+                  Lencioni Teamcoach</strong>, through <strong>online and physical learning moments</strong>, 
+                  is ready.<br/><br/>
+                  Trixolutions has been working intensively for 15 years with all models, methodologies and insights 
+                  of The Table Group by Patrick Lencioni.<br/>We are the only one in the Benelux to be a 
+                  certified partner (CAPAPro) of Patrick Lencioni. This means that we are <strong>coached weekly 
+                  by Patrick Lencioni himself</strong> in the many models, assessments and exercises, and that we have 
+                  access to hundreds of videos, virtual training courses, special podcasts, facilitator instructions and more 
+                  within the Table Group CAPA Pro Academy.<br/>
+                  We have poured all our Lencioi wisdom and knowledge into <strong>2 possible learning paths</strong>:`
       },
       basic: {
-         title: "Zonder",
-         intro: [
-            "Dit leertraject raden we aan als je al redelijk goed met de Piramide aan de slag ",
-            "kan en vooral naar verdieping en extra inspiratie zoekt op vlak van zijn assessments, ",
-            "speciale oefeningen, bruggen met andere modellen, podcasts, Lencioni filmpjes….<br/>",
-            "Dit is de 'do it yourself' aanpak, wél met een uur coaching van onze Trixolutions/Lencioni ",
-            "expert inbegrepen.<br/>",
-            "Wil je daarna toch wel meedoen aan de tweedaagse Masterclass? Dat kan! Enkel het verschil ",
-            "in prijs rekenen we dan aan."
-         ]
+         title: "Without",
+         intro:   `We recommend this learning path if you can already get started reasonably well with the Pyramid 
+                  and are especially looking for more depth and extra inspiration in terms of its assessments, 
+                  special exercises, bridges with other models, podcasts, Lencioni videos…<br/>This is the 
+                  'do it yourself' approach, but with an hour of coaching from our Trixolutions/Lencioni 
+                  expert included.<br/>Do you still want to participate in the two-day Masterclass after all? 
+                  You can! We only charge the difference in price`
       },
       full: {
-         title: "Met",
-         intro: [
-            "Dit extensieve leertraject raden we aan als je geen of een beperkte kennis van de Piramide ",
-            "van Lencioni hebt.<br/>",
-            "We gaan immers in detail door het Lencioni Werkboek en leren je een Lencioni traject opbouwen ",
-            "en uitrollen, verdiepende kennis en oefeningen in de verschillende lagen van de Piramide, hoe ",
-            "de assessments in te zetten.<br/>",
-            "In deze module zit ook een uur opvolgcoaching inbegrepen, alsook 15 Lencioni Piramides én een ",
-            "Trixolutions/Lencioni Certificaat!"
-         ]
+         title: "With",
+         intro:   `We recommend this extensive learning path if you have no or limited knowledge 
+                  of Lencioni's Pyramid.<br/>
+                  After all, we go through the Lencioni Workbook in detail and teach you how to build 
+                  and roll out a Lencioni trajectory, in-depth knowledge and exercises in the 
+                  different layers of the Pyramid, how to use the assessments.<br/>
+                  This module also includes one hour of follow-up coaching, as well as 15 Lencioni Pyramids and a 
+                  Trixolutions/Lencioni Certificate`
       },
-      audience: "Deze opleiding is bedoeld voor iedereen die de beproefde en succesvolle inzichten van Patrick Lencioni wil gebruiken in zijn/haar team of organisatie.",
+      audience: "This training is intended for anyone who wants to use the proven and successful insights of Patrick Lencioni in his / her team or organization.",
       approach: {
-         intro: "Onze opleidingen zijn steeds veilig doch dynamisch en interactief. Waarbij we theorie afwisselen met praktijk en oefeningen. Steeds vertrekkend vanuit de verwachtingen van de deelnemers.",
+         intro: "Our courses are always safe yet dynamic and interactive. We alternate theory with practice and exercises. Always starting from the expectations of the participants.",
          results: {
-            title: "resultaten",
+            title: "results",
             items: [
-               "Je weet wie Lencioni is en kent zijn meest succesvolle boeken en inzichten.",
-               "Je kent zeer diepgaand de Lencioni Piramide en kan deze inzetten naar verschillende types van teams.",
-               "Je kent en kunt in elke van de 5 lagen een aantal krachtige en typische Lencioni oefeningen inzetten en toepassen als coach.",
-               "Je kent en kunt de meestgebruikte additionele Lencioni tools inzetten.",
-               "Je mag deze tools ongelimiteerd gebruiken.",
-               "Je krijgt een geprinte syllabus met een overzicht van onze volledige Lencioni expertise .",
-               "Je krijgt vanaf dan maandelijks een Lencioni Newsletter met extra inzichten, oefeningen, …",
+               "You know who Lencioni is and know his most successful books and insights.",
+               "You know the Lencioni Pyramid very deeply and you can use it for different types of teams.",
+               "You know and can use a number of powerful and typical Lencioni exercises in each of the 5 layers and apply them as a coach.",
+               "You know and can use the most commonly used additional Lencioni tools.",
+               "You can use these tools as much as you want.",
+               "You will receive a printed syllabus with an overview of our full Lencioni expertise.",
+               "From then on you will receive a monthly Lencioni Newsletter with extra insights, exercises…",
             ]
          }
       },
    },
    level_2: {
       title: 'Lencioni Deepdive',
-      advanced_coaching: 'Advanced Opleiding',
+      advanced_coaching: 'Advanced Training',
       deepdive: 'deepdive',
       level2: 'Level 2',
-      intro: [
-         "In 1 dag gaan we dieper in op de 4 andere succesvolle modellen van ",
-         "Patrick Lencioni en The Table Group.<br/><br/>",
-         "Naast zijn piramide uit de “De 5 Frustraties van Teamwork” die we ",
-         "verdiepen in de Lencioni Coach-the-Coach Masterclass – Level 1, heeft ",
-         "Lencioni immers nog enkele heel krachtige modellen en methodieken ",
-         "uitgebracht die coaches en consultants kunnen inzetten in teambegeleidings- ",
-         "en teamcoachingtrajecten.<br/>"
-      ],
-      more_info: "Meer inhoudelijke info vind je hier.",
+      intro:   `In 1 day we take a closer look at the 4 other successful models of 
+               Patrick Lencioni and The Table Group.<br/><br/>
+               In addition to his pyramid from the “The 5 Frustrations of Teamwork” 
+               that we explore in the Lencioni Coach-the-Coach Masterclass – Level 1, 
+               Lencioni has released some very powerful models and methodologies that 
+               coaches and consultants can use in team guidance and team coaching processes. <br/>`,
+      more_info: "More content information can be found here.",
       workshop: 'workshop',
       accordeon: [
          {
-            title: "Lencioni - Deep Dive / Persoonlijk Niveau",
+            title: "Lencioni - Deep Dive / Personal Level",
             content: [
                {
-                  title: "1. De Ideale Teamplayer (Patrick Lencioni)",
-                  content: [
-                     "Deze ‘teamplayer’ is vooral bescheiden, hongerig/gemotiveerd en slim op ",
-                     "vlak van emotionele intelligentie. Combinaties van slechts 2 van deze ",
-                     "eigenschappen geven specifieke resultaten."
-                  ],
+                  title: "1. The Ideal Team Player (Patrick Lencioni)",
+                  content: `This 'team player' is above all humble, hungry/motivated and smart in terms of emotional intelligence. Combinations of only 2 of these properties give specific results.`,
                   sub: {
-                     content: [
-                        "Op voorhand vul je het ‘Ideale Teamplayer Assessment’ in. Dat lichten we tijdens ",
-                        "de workshop verder toe en leren we je hoe je dit kan inzetten in teamworkshops.<br/><br/>",
-                        "We lichten het model ‘De Ideale Teamplayer’ toe en leren je hoe je het kan toepassen ",
-                        "in teambegeleiding en teamcoaching. We lichten bijkomend toe hoe je deze methodiek ",
-                        "ook kan inzetten bij rekrutering.<br/><br/>",
-                     ]
+                     content: `You fill in the 'Ideal Teamplayer Assessment' in advance. We will explain this further during the 
+                              workshop and teach you how you can use it in team workshops.<br/><br/>We will explain the model 
+                              'The Ideal Team Player' and teach you how you can apply it in team guidance and team coaching. 
+                              We also explain how you can also use this method for recruitment.<br/><br/>`,
                   }
                },
                {
                   title: "2. The 6 Types of Working Genius (Patrick Lencioni)",
-                  content: [
-                     "<em>Te veel mensen in deze wereld werken tegen hun zin omdat ze hun persoonlijke en ",
-                     "innerlijke vermogens niet kennen.</em> Hierdoor doen ze niet het werk dat hen energie ",
-                     "en plezier geeft en belanden ze in jobs en projecten die hen <strong>vermoeien en ",
-                     "demotiveren</strong>, en dat reflecteert op 2 aspecten:<br/><br/>",
-                     "<ul><li>Ten eerste zorgt het ervoor dat mensen hun <strong>zelfvertrouwen en plezier in het leven",
-                     "verliezen</strong>,wat niet alleen persoonlijk, maar ook sociaal en zelfs maatschappelijk gezien nefast is.</li>",
-                     "<li>Ten tweede zullen organisaties en teams die niet inhaken op de persoonlijke ",
-                     "intrinsieke vermogens van hun teamleden, <strong>het volledige potentieel van hun medewerkers ",
-                     "nooit benutten en laten ontplooien</strong>. Er blijven twijfels bestaan, doelen en effectiviteit ",
-                     "worden niet bereikt, de betrokkenheid en het werkplezier van die medewerkers is laag.</li></ul><br/>",
-                     "De oplossing ligt erin dat iedereen (werknemers, managers, studenten…) hun <strong>intrinsieke ",
-                     "werkvermogens</strong> ontdekken en dus ook de vermogens die ze niet van nature bezitten (die dus ",
-                     "altijd energie zullen kosten), om op die manier aan te haken bij hun ",
-                     "juiste ‘Working Genius’!"
-                  ],
+                  content: `<em>Too many people in this world work against their will because they do not know their 
+                           personal and inner abilities.</em> As a result, they do not do the work that gives them energy 
+                           and pleasure and they end up in jobs and projects that <strong>tire and demotivate</strong> them, 
+                           which reflects on 2 aspects::<br/><br/>
+                           <ul><li>Firstly, it causes people to <strong>lose their zelfvertrouwen self-confidence 
+                           and enjoyment of life</strong>, which is not only a personal problem, but also a social and even a societal one.</li>
+                           <li>Secondly, organizations and teams that do not capitalize on the personal intrinsic capabilities 
+                           of their team members <strong>will never use and develop the full potential of their employees.</strong>. 
+                           Doubts remain, goals and effectiveness are not achieved, the involvement and job 
+                           satisfaction of those employees is low.</li></ul><br/>
+                           The solution lies in everyone (employees, managers, students…) discovering their 
+                           <strong>intrinsic working abilities</strong> and therefore also the abilities they 
+                           do not naturally possess (which will therefore always cost energy), in order to 
+                           link up with their right 'Working Genius'!`,
                   sub: {
-                     content: [
-                        "Op voorhand vul je het ‘The 6 Types of Working Genius Assessment’ (enkel in het ",
-                        "Engels) in. Dat lichten we verder toe tijdens de workshop en we leren je hoe ",
-                        "je dit kan inzetten in teamworkshops en intervisies.<br/><br/>",
-                        "We lichten het model ‘The 6 Types of Working Genius’ in detail toe en leren je ",
-                        "hoe je het kan toepassen in teambegeleiding en teamcoaching."
-                     ]
+                     content: `You fill in the 'The 6 Types of Working Genius Assessment' in advance. 
+                              We will explain this further during the workshop and we will teach you 
+                              how to use it in team workshops and intervisions.<br/><br/>We will explain 
+                              the model 'The 6 Types of Working Genius' in detail and teach you how to 
+                              it can apply in team guidance and team coaching.`
                   }
                }
             ]
          },
          {
-            title: "Lencioni - Deep Dive / Team Niveau",
+            title: "Lencioni - Deep Dive / Team Level",
             content: [
                {
-                  title: "1. De Beslissende Voorsprong (Patrick Lencioni)",
-                  content: [
-                     "<em>`De grootste voorsprong en competitief voordeel die een bedrijf kan nemen,",
-                     "is het creëren en hebben van een gezonde organisatie- en teamcultuur.`</em>"
-                  ],
+                  title: "1. The Decisive Lead (Patrick Lencioni)",
+                  content: `<em>❛The biggest head start and competitive advantage a company can take is creating and having a healthy organizational and team culture.</em>❜`,
                   sub: {
-                     content: [
-                        "Op voorhand vul je het 'Beslissende Voorsprong Assessment' in dat we tijdens ",
-                        "de workshop verder toelichten. Je leert ook hoe je dit kan inzetten in teamworkshops.",
-                        "<br/><br/>We lichten het model 'De Beslissende Voorsprong' toe en leren je hoe je het kan",
-                        "toepassen in je advies naar organisaties, teambegeleiding en teamcoaching."
-                     ]
+                     content: `You fill in the 'Decisive Progress Assessment' in advance, which we explain in more detail 
+                              during the workshop. You also learn how to use this in team workshops.<br/><br/>We explain 
+                              the model 'The Decisive Lead' and teach you how to apply it in your advice to organizations, 
+                              team guidance and team coaching.`,
                   }
                },
                {
-                  title: "2. Vergaderen is Dodelijk (Patrick Lencioni)",
-                  content: [
-                     "Vergaderingen horen bij ons werk, maar ze lijken vaak niet veel op te leveren. ",
-                     "Sterker nog, ze gelden als <em>regelrechte energievreters</em>.<br/>",
-                     "Dat komt omdat we op de verkeerde manier vergaderen. In dit model met bijhorende ",
-                     "online tool leren we je als coach organisaties en teams begeleiden in hun ",
-                     "meetingcultuur.<br/>",
-                     "Specifiek werken we op <strong>hoe je moeilijke meetings in effectieve en ",
-                     "productieve meetings kan omturnen</strong> aan de hand van ",
-                     "de <em>4 types van meetings</em>."
-                  ],
+                  title: "2. Meetings are Deadly (Patrick Lencioni)",
+                  content: `Meetings are part of our job, but they often don't seem to deliver much. In fact, 
+                           they are considered <em>downright energy guzzlers</em>.<br/>
+                           That's because we're meeting the wrong way. In this model with accompanying online tool, 
+                           we teach you as a coach to guide organizations and teams in their meeting culture.<br/>
+                           Specifically, we work on <strong>how to turn difficult meetings into effective 
+                           and productive meetings</strong> based on the <em>4 types of meetings</em>.`,
                   sub: {
-                     content: [
-                        "We lichten het model en de 4 soorten meetings toe en leren je hoe je dit kan ",
-                        "toepassen in teambegeleiding en teamcoaching.<br/>",
-                        "We demonstreren de online ‘Meeting Advantage Tool’ die je kan inzetten bij ",
-                        "je eigen team of organisatie of die je kan adviseren aan teams die je begeleidt."
-                     ]
+                     content: `We explain the model and the 4 types of meetings and teach you how you can apply 
+                              this in team guidance and team coaching.<br/>
+                              We demonstrate the online 'Meeting Advantage Tool' that you can use with your own 
+                              team or organization or that you can advise to teams you supervise.`
                   }
                }
             ]
          }
       ],
-      features_intro: [
-         "Een Coach-the-Coach ‘Deepdive’ in de gekozen modellen en methodieken waarin we ",
-         "steeds verdiepend werken vanuit het standpunt van de begeleider.",
-         "Je leert te werken met de bijhorende assessments en tools die jij daarna kan inzetten ",
-         "in jouw teamtrajecten of -begeleiding."
-      ],
+      features_intro:   `A Coach-the-Coach 'Deepdive' in the chosen models and methodologies in which we 
+                        always work in depth from the point of view of the coach.
+                        You learn to work with the associated assessments and tools that you can then 
+                        use in your team trajectories or guidance.`,
       features: [
-         "Schriftelijke Intake per Deelnemer",
-         "Lunch en drank inbegrepen",
+         "Written Intake per Participant",
+         "Lunch and drink included",
          "Assessments",
-         "Inloginstructies",
-         "Syllabus + Extra Bijlagen (Papier en Digitaal)",
+         "Login instructions",
+         "Syllabus + Extra Attachments (Paper and Digital)",
          "Lencioni Toolkit",
-         "Certificaat"
+         "Certificate"
       ],
-      target_audience: "Deze opleiding is bedoeld voor alle externe of interne coaches, begeleiders, managers en adviseurs die mensen en teams willen begeleiden naar effectievere en gezondere samenwerking via de succesvolle Lencioni inzichten en methodieken.",
-      target_audience_extra: "Voor deze workshops moet je Level 1 gevolgd hebben om succes te kunnen garanderen.",
-      approach: 'Deze open sessies vinden fysiek plaats en zijn steeds veilig doch dynamisch en hoogst interactief.',
+      target_audience: "This training is intended for all external or internal coaches, supervisors, managers and advisors who want to guide people and teams towards more effective and healthier cooperation through the successful Lencioni insights and methodologies.",
+      target_audience_extra: "For these workshops you must have followed Level 1 to guarantee success.",
+      approach: 'These open sessions take place physically and are always safe yet dynamic and highly interactive.',
 
    }, 
-
 }
 
 export default en_sessions

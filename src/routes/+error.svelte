@@ -1,9 +1,12 @@
 <script>
+   // Import components
+   import { Alert, Button, Footer, H1, Link, Main, Navbar, Section, Title } from '$comp';
+   // Import i18n
+   import LL, { locale } from '$i18n/i18n-svelte';
+	// Import constants
+   import { formatUrl } from '$src/lib/utils';
+   // Import page variables
    import { page } from '$app/stores';
-	import { Alert, Button, Footer, Link, Main, Navbar, SectionWrapper, Title } from '$comp';
-	import { formatUrl } from '$src/lib/utils';
-   import { locale } from '$i18n/i18n-svelte';
-
    const {
       status,
       error: { message },
@@ -19,34 +22,34 @@
 <Navbar />
 
 <Main>
-   <SectionWrapper name="{formatUrl(title)}">
+   <Section name="{formatUrl(title)}">
       <div class="flex justify-center items-center flex-col w-full" slot="title">
          {#if status === 404}
-            <Title type="h1" innerClass="!text-[240px]">
+            <H1 class="!text-[240px]">
                {status}
-            </Title>
-            <Title type="fake-h1">
+            </H1>
+            <H1 fake>
                {message}
-            </Title>
+            </H1>
          {/if}
       </div>
       {#if status === 404}
-         <Alert preset="error">
-            Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>
-            Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk.
+         <Alert color="error">
+            {@html $LL.base.error.not_found() }
          </Alert>
          <div class="w-full flex items-center justify-center">
-            <Link href="/{$locale}/">
+            <Link ariaLabel="Terug naar Homepagina" href="/{$locale}/">
                <Button 
+                  ariaLabel={$LL.base.btn.back_to_home()}
                   color="primary" size="xxl" 
                   icon="material-symbols:home-outline-rounded"
                   iconClass="w-10 h-10 text-gray-50 group-hover:text-white">
-                  Terug naar Homepagina
+                  {$LL.base.btn.back_to_home()}
                </Button>
             </Link>
          </div>
       {/if}
-   </SectionWrapper>
+   </Section>
 </Main>
 
 <Footer />

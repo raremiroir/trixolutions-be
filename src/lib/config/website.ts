@@ -15,7 +15,7 @@ import SiteCover from '$img/home/home.png';
 const facebookPageName = PUBLIC_FACEBOOK_PAGE;
 const facebookAuthorPageName = PUBLIC_FACEBOOK_AUTHOR_PAGE;
 
-const siteConfig: Site.Config = {
+export const siteConfig: Site.Config = {
 	url: 'https://trixolutions.be',
 	title: 'Trixolutions',
 	subtitle: 'Trixolutions - Training, Coaching & Consultancy',
@@ -33,16 +33,14 @@ const siteConfig: Site.Config = {
 	  bio: `Made with 💪 by Mist Media.`,
 	},
  };
- export default siteConfig;
 
 export const website = {
 	author: 'Miro Storm',
 	ogLanguage: 'nl-BE',
 	siteLanguage: 'nl-BE',
-	siteTitle: 'Trixolutions - Training, Coaching & Consultancy',
+	siteTitle: 'Trixolutions',
 	siteShortTitle: 'Trixolutions',
-	description:
-		'Trixolutions - Opleidingen en Training in Lencioni Teamcoaching en Consultancy',
+	description: 'Trixolutions - Opleidingen en Training in Lencioni Teamcoaching en Consultancy',
 	siteUrl: PUBLIC_SITE_URL,
 	backgroundColor: '#F0F0EF',
 	themeColor: '#0B3259',
@@ -95,47 +93,3 @@ export const website = {
 			url: '/contact',
 		 },
 	 ];
-	 
-	 export const mobilenavConfig: DD.Nav = {
-		orientation: 2,
-		links: [
-			{
-				name: 'Home',
-				url: '/',
-			 },
-			 {
-				name: 'Over Ons',
-				url: '/over-ons',
-			 },
-			 {
-				name: 'Referenties',
-				url: '/referenties',
-			 },
-			 {
-				name: 'Blog',
-				url: '/blog',
-			 },
-			 {
-				name: 'Open Sessies',
-				url: '/open-sessies',
-				links: [
-					{
-						name: "Gratis Open Infosesssies", 
-						url: "/gratis-open-infosessies"
-					},
-               {
-						name: "Hybride Lencioni Leertraject",
-						url: "/open-sessies/hybride-lencioni-leertraject"
-					},
-               {
-						name: "Lencioni Deepdive - Level 2" ,
-						url: "/lencioni-deepdive-level2"
-					}
-				]
-			 },
-			 {
-				name: 'Contact',
-				url: '/contact',
-			 },
-		],
-	 };

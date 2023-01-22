@@ -7,12 +7,16 @@
 <script>
    let klass = '';
    export { klass as class };
+   export let ariaLabel = '';
+
+   // unused props
+   export const href= '';
 </script>
 
 <!--      -->
 <!-- HTML -->
 <!--      -->
-<div class="{klass}">
+<div class="{klass}" aria-label={ariaLabel}>
    <slot/>
 </div>
 

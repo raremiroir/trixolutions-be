@@ -4,8 +4,8 @@
    // Add extra classes to component
    let klass = ''
    export { klass as class }
-   // Large text?
-   export let large = false;
+   // Small text?
+   export let small = false;
 
    // Custom icon?
    export let icon = '';
@@ -23,7 +23,7 @@
       {icon ? 'list-none' : 'list-disc' }
       {indent ? 'ml-8 pl-1' : 'px-1 ml-4 py-1'}
       font-body leading-relaxed font-normal tracking-tight
-      { large ? 'text-lg' : 'text-base' }
+      { small ? 'text-base' : 'text-lg' }
       text-gray-700 
       {klass}">
 

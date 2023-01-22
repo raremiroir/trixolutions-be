@@ -8,7 +8,8 @@
 
    // Import components
    import { Button, Tooltip } from '$comp'
-   import { FormInput, RowWrap, ResetFormBtn, MessageSentAlert } from './Input/input'
+   import { RowWrap, ResetFormBtn, MessageSentAlert } from './FormUtils'
+   import FormInput from './FormInput/index.svelte'
    import { Confetti } from 'svelte-confetti';
 	import Icon from '@iconify/svelte';
    

@@ -1,11 +1,32 @@
+<!-- 
+██       ██████   █████  ██████  ██ ███    ██  ██████  
+██      ██    ██ ██   ██ ██   ██ ██ ████   ██ ██       
+██      ██    ██ ███████ ██   ██ ██ ██ ██  ██ ██   ███ 
+██      ██    ██ ██   ██ ██   ██ ██ ██  ██ ██ ██    ██ 
+███████  ██████  ██   ██ ██████  ██ ██   ████  ██████  
+ -->
+
+<!--
+▄▄▄ ▄▄▄ 
+ █  █▄
+ █   ▀█
+ ▀  ▀▀▀
+-->
 <script>
-   // Color can be primary or light
+   // Define color 
+   // == primary | light
    export let color = 'primary';
    
+   // Define width 
    export let width = "w-80"
-
 </script>
 
+<!--
+▄  ▄ ▄▄▄ ▄▄   ▄▄ ▄
+█▄▄█  █  █ █ █ █ █
+█▀▀█  █  █ █ █ █ █
+▀  ▀  ▀  ▀  ▀  ▀ ▀▀▀
+-->
 <div class="
         w-full h-full 
         left-0 top-0 right-0 bottom-0 

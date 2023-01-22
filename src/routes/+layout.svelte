@@ -19,7 +19,7 @@
 	import { HeadHrefLangs } from '$comp';
 	
 	// Import supabase
-	import supabase from '$lib/db';
+	import supabase from '$src/lib/db';
 
 	// import TwicPics svelte3 components
 	import { installTwicPics } from '@twicpics/components/svelte3'
