@@ -2,6 +2,7 @@
    // Import components
 	import { Button, Link, Menu, Div } from "$comp";
 	import Icon from "@iconify/svelte";
+
    // Import utils
 	import { titleCase } from "$utils";
 
@@ -10,7 +11,7 @@
 
    // Whats the name of the item?
    export let name:string;
-   
+
    // What's the link of the item?
    export let link:string;
    export let dropdown = false;
@@ -27,8 +28,10 @@
       class: 'whitespace-nowrap', 
       flat: true,
       lowercase: true,
-      block: true
+      block: true,
+      alignStart: true
    }
+
    $: btnProps = {
       class: `font-bold font-body text-primary-d2 group-hover:text-primary-l1 group-active:text-primary-l2 whitespace-nowrap`,
       color: 'ghost',
@@ -40,7 +43,10 @@
    }
 </script>
 
-<li class="{mobile ? 'w-full' : 'w-fit'} transition-all duration-150 ease-in-out {klass}">
+<li class="
+      {mobile || dropdownItem ? 'w-full' : 'w-fit'} 
+      transition-all duration-150 ease-in-out 
+      {klass}">
    {#if dropdown}
       <Menu hoverState={!mobile} position="{mobile ? 'center' : 'left'}">
          <svelte:component 
