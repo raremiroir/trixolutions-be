@@ -56,6 +56,8 @@
    {#if isHovered}
       <div 
          transition:fly={{duration:300, y:flyY, x:flyX}}
+         on:mouseenter={mouseOver}
+         on:mouseleave={mouseLeave}
          class="
             absolute
             backdrop-blur-lg
