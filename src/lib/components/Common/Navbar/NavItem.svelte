@@ -21,36 +21,28 @@
 
    let dropDownWrapComp = mobile ? Div : Link;
 
-   const baseBtnClass = 
-      `font-bold font-body 
-      text-primary-d2 group-hover:text-primary-l1 group-active:text-primary-l2
-      text-lg pt-[14px] pb-3 rounded-[12px]`
-
-
    $: dropdownBtnProps = {
       color: 'ghost',
-      size: "text-base px-4 pt-[14px] pb-3", 
+      size: "text-base py-3 px-6 rounded-lg",
+      class: 'whitespace-nowrap', 
       flat: true,
       lowercase: true,
       block: true
    }
    $: btnProps = {
-      class: ` font-bold font-body 
-               text-primary-d2 group-hover:text-primary-l1 group-active:text-primary-l2
-               text-lg pt-[14px] pb-3 rounded-[12px]`,
+      class: `font-bold font-body text-primary-d2 group-hover:text-primary-l1 group-active:text-primary-l2 whitespace-nowrap`,
       color: 'ghost',
-      size: `${ mobile ? 'px-5' : 'px-2 xl:px-5' }`,
+      size: `text-lg py-3 rounded-xl ${ mobile ? 'px-6' : 'px-3 xl:px-6' }`,
       flat: true, 
       lowercase: true,
       square: mobile,
       block: mobile,
-      alignStart: mobile
    }
 </script>
 
 <li class="{mobile ? 'w-full' : 'w-fit'} transition-all duration-150 ease-in-out {klass}">
    {#if dropdown}
-      <Menu hoverState={!mobile}>
+      <Menu hoverState={!mobile} position="{mobile ? 'center' : 'left'}">
          <svelte:component 
             this={dropDownWrapComp}
             href={link} ariaLabel="{name}" 
