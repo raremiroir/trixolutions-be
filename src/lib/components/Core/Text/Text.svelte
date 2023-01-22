@@ -72,7 +72,7 @@
       { center ? 'text-center' : '' }
       { color }
       { bold ? 'font-bold' : semibold ? 'font-semibold' : 'font-normal' }
-      { small ? 'text-base' : 'text-lg' } 
+      { small ? 'text-base' : 'p-size' } 
       { italic ? 'italic' : '' }
 
       { klass }
