@@ -109,7 +109,7 @@
       active:brightness-75
 
       flex flex-row items-center 
-      { alignStart ? 'justify-center text-center' : 'justify-start text-start' } 
+      { alignStart ? 'justify-start text-start' : 'justify-center text-center' } 
       { icon ? 'gap-1' : '' }
 
       { noAnim   ? ''   : 'active:scale-95' }
@@ -122,7 +122,7 @@
       : noRounding ? 'rounded-none'
       : tile    ? 'rounded-tr-2xl rounded-bl-2xl rounded-tl-sm rounded-br-sm'
       : '' }
-      
+   
       { bold ? 'font-bold' : 'font-semibold'} 
       { lowercase ? 'capitalize' : 'uppercase' }
 
@@ -135,7 +135,6 @@
       { circle   ? 'dui-btn-circle'   : '' }
       { active   ? 'dui-btn-active'   : '' }
       { loading  ? 'dui-loading'   : '' }
-      { klass }
 
       { color === 'primary'   && !outlined ? `       text-gray-50            bg-primary 
                                                hover:text-white        hover:bg-primary-d2
@@ -193,6 +192,7 @@
                                       hover:bg-warning/20     hover:border-warning-d     hover:text-warning-d 
                                      active:bg-warning/30    active:border-warning-d    active:text-warning-d`
       : color}
+      { klass }
       ">
    {#if !noText}
    
