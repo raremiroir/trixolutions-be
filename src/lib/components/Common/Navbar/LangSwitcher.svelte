@@ -1,15 +1,4 @@
-<!-- 
-██       █████  ███    ██  ██████      ███████ ██     ██ ██ ████████  ██████ ██   ██
-██      ██   ██ ████   ██ ██           ██      ██     ██ ██    ██    ██      ██   ██
-██      ███████ ██ ██  ██ ██   ███     ███████ ██  █  ██ ██    ██    ██      ███████
-██      ██   ██ ██  ██ ██ ██    ██          ██ ██ ███ ██ ██    ██    ██      ██   ██
-███████ ██   ██ ██   ████  ██████      ███████  ███ ███  ██    ██     ██████ ██   ██
- -->
-<!--
-▄▄▄ ▄▄▄ 
- █  █▄▄
- █  ▄▄█
--->
+
 <script lang="ts">
 	import { browser } from '$app/environment'
    import { invalidateAll } from '$app/navigation'
@@ -51,17 +40,13 @@
 
 <svelte:window on:popstate={handlePopStateEvent} />
 
-<!--
-▄  ▄ ▄▄▄ ▄▄   ▄▄ ▄
-█▄▄█  █  █ █ █ █ █
-█  █  █  █ ▀▄▀ █ █▄▄
--->
-<Menu hoverState padding="p-0.5">
-   <Button flat
+<Menu hoverState padding="p-0.5" position="right">
+   <Button 
+		flat
       slot="trigger"
 		ariaLabel="{$LL.base.nav.lang.change_lang()}"
       color="ghost" rounded noAnim
-      size="lg" 
+      size="p-3 xl:px-6" 
 		icon="ic:round-translate" iconClass="w-5">
 			<span class="text-md font-body font-semibold flex items-center justify-center gap-1">
 				| <span class="pt-0.5">{$locale.toUpperCase()}</span>
@@ -74,12 +59,12 @@
 					ariaLabel="{$LL.base.nav.lang.change_lang_to()} {l}"
 					href={`${replaceLocaleInUrl($page.url, l)}`}
 					color="{l === $locale ? 'secondary' : 'ghost'}"
-					block alignStart noAnim
-					size="sm" flat
+					block alignStart noAnim flat
+					size="sm" 
 					icon="emojione:flag-for-{l === 'nl' ? 'belgium' : l === 'en' ? 'united-kingdom' : l === 'fr' ? 'france' : ''}"
 					iconClass="w-5"
 					>
-					<div class="flex flex-col items-start justify-center">
+					<div class="flex flex-col items-start justify-start w-full">
 						{ l === 'en' ? 'English' 
 						: l === 'fr' ? 'Français' 
 						: l === 'nl' ? 'Nederlands' 

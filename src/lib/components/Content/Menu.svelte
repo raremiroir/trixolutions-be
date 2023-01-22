@@ -29,9 +29,26 @@
    let klass = "";
    export { klass as class };
    // Position of menu
-   export let menuPos = 'translate-y-1 -translate-x-0';
+   export let menuPos = '';
    // Menu padding
    export let padding = 'px-2 py-0.5';
+
+   // Full width?
+   export let block = false;
+
+   // Define position of menu (center - left - right)
+   export let position = 'center';
+
+   const centerPosition = 'left-1/2 -translate-x-1/2'
+   const leftPosition = 'left-0'
+   const rightPosition = 'right-0'
+   
+   $: menuClass = `
+         absolute z-99
+         bg-white/90 backdrop-blur-lg
+         rounded-lg shadow-md p-4 
+         w-fit max-w-[95vw]
+         ${position === 'center' ? centerPosition : position === 'left' ? leftPosition : position === 'right' ? rightPosition : ''}`
 </script>
 
 <!--      -->
@@ -39,7 +56,7 @@
 <!--      -->
 
 <!-- Component Wrapper -->
-<div class="min-w-fit {wrapClass} relative"
+<div class="{block ? 'w-full' : ''} {wrapClass} relative"
      on:focusout={handleMenuFocusLoss}>
 
 
@@ -50,7 +67,8 @@
             on:mouseenter={() => openMenu()}
             on:mouseleave={() => closeMenu()}
             on:mouseover={() => openMenu()}
-            on:focus={() => openMenu()}>
+            on:focus={() => openMenu()}
+            on:blur={() => closeMenu()}>
                <slot name="trigger">Menu Trigger</slot>
          </div>
       {:else}
@@ -61,9 +79,8 @@
                <slot name="trigger">Menu Trigger</slot>
          </div>
       {/if}
-
-     <!-- Menu Wrapper -->
-     {#if menuOpen}
+      <!-- Menu Wrapper -->
+      {#if menuOpen}
          {#if hoverState}
             <div 
                transition:fade="{{duration: 200}}"
@@ -71,24 +88,17 @@
                on:mouseleave={() => closeMenu()}
                on:mouseover={() => openMenu()}
                on:focus={() => openMenu()}
-               class="
-                  absolute {menuPos} z-99
-                  bg-white rounded-lg
-                  shadow-md min-w-fit lg:min-w-fit max:w-full
-                  {padding}">
+               on:blur={() => closeMenu()}
+               class="{menuPos} {padding} {menuClass}">
                <slot/>
             </div>
          {:else}
             <div 
                transition:fade="{{duration: 200}}"
-               class="
-                  absolute {menuPos} z-99
-                  bg-white rounded-lg
-                  shadow-md min-w-fit lg:min-w-fit max:w-full
-                  {padding}">
+               class="{menuPos} {padding} {menuClass}">
                <slot/>
             </div>
          {/if}
-     {/if}
-   
+      {/if}
 </div>
+

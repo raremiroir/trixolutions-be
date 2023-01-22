@@ -101,7 +101,7 @@
    class="
       lg:hidden fixed
       w-screen h-fit left-0 right-0
-      { yscroll >= 10 ? 'top-[70px]' : 'top-[86px]'}
+      { yscroll >= 10 ? 'top-[68px]' : 'top-[84px]'}
       z-10 flex
       bg-gray-100/30 backdrop-blur-lg
       transition-all duration-200 ease-in-out
@@ -118,9 +118,9 @@
          </div>
       {/if}
       <NavItem mobile name={$LL.base.nav.open_sessions()} link="/{$locale}/open-sessies" dropdown>
-         <NavItem dropdownItem name={$LL.base.nav.info_sessions()} link="/{$locale}/open-sessies/gratis-open-infosessies"/>
-         <NavItem dropdownItem name={$LL.base.nav.hybrid_traject()} link="/{$locale}/open-sessies/hybride-lencioni-leertraject"/>
-         <NavItem dropdownItem name={$LL.base.nav.deepdive()} link="/{$locale}/open-sessies/lencioni-deepdive-level-2"/>
+         <NavItem dropdownItem mobile name={$LL.base.nav.info_sessions()} link="/{$locale}/open-sessies/gratis-open-infosessies"/>
+         <NavItem dropdownItem mobile name={$LL.base.nav.hybrid_traject()} link="/{$locale}/open-sessies/hybride-lencioni-leertraject"/>
+         <NavItem dropdownItem mobile name={$LL.base.nav.deepdive()} link="/{$locale}/open-sessies/lencioni-deepdive-level-2"/>
       </NavItem>
       <NavItem mobile name={$LL.base.nav.contact()} link="/{$locale}/contact" />
    </ul>
