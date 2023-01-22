@@ -81,9 +81,7 @@
          </Reveal>
          <Reveal class="col-span-5 md:col-span-1 xl:col-span-3" right>
             <Text class="h-fit">
-               {#each Object.entries($LL.pages.about.intro) as [key, item]}
-                  {@html item()}
-               {/each}
+               {@html $LL.pages.about.intro()}
             </Text>
          </Reveal>
       </div>
