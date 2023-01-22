@@ -35,7 +35,9 @@
 <Cardd
 	{ compactResponsive }
 	href="/{$locale}/{slug}" isLink
-	ariaLabel={title} article equalHeight
+	preset="DefHover"
+	ariaLabel={title} article
+	equalHeight
 	img={imgSrc} {title}
 	btn={{title: 'Meer Info', href: `/${$locale}/${slug}`, ariaLabel: `meer info over ${title}`}}
 	{author} {authorImg}
