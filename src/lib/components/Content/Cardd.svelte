@@ -66,8 +66,14 @@
    export let fit = false
    // Fill card width to parent content?
    export let fill = false
+   // Define card height
+   export let height = ''
    // Fill card height?
    export let equalHeight = false
+
+   // Define preset if needed
+   // --> DefHover, none
+   export let preset = 'none'
 
    // =========================================================
    
@@ -88,13 +94,13 @@
       }
    } else if (innerWidth < breakpoints.lg) {  
       if (imgPos === 'top' || imgPos === 'bottom') {
-         ratio = hovered ? "7:5" : "7:4" 
+         ratio = "7:4" 
       } else if (imgPos === 'responsive-l' || imgPos === 'responsive-r' || imgPos === 'left' || imgPos === 'right') {
          ratio = "1" 
       }
    } else if (innerWidth < breakpoints.xl) {  
       if (imgPos === 'top' || imgPos === 'bottom') {
-         ratio = hovered ? "5:3" : "5:2" 
+         ratio = "5:2" 
       } else if (imgPos === 'responsive-l' || imgPos === 'responsive-r' || imgPos === 'left' || imgPos === 'right') {
          ratio = "7:5" 
       }
@@ -112,21 +118,36 @@
       }
    }
 
-   let hovered = false;
-   $: console.log(hovered);
+   let hovered = false
+   $: hovered;
+
+   let cardHeight = 0;
+   let cardHeightClass = '';
+   if (preset === 'DefHover') {
+      cardHeightClass = 'h-[330px] md:h-[464px]'
+      cardHeight = 464;
+   }
+   let imgHeight:number;
+   $: cardHeight;
+   $: imgHeight;
+
+   const heightInNum = (Number(height.substring(3, (height.length - 3))))
+   if (typeof heightInNum === 'number') {
+      let customHeight = true;
+      console.log(heightInNum - imgHeight);
+   }
 </script>
 
 
 <svelte:window bind:innerWidth={innerWidth} />
-
 <li
    on:mouseenter={() => hovered = true}
    on:mouseleave={() => hovered = false}
    on:focus={() => hovered = true}
    on:blur={() => hovered = false}
    class="
-      { fit ? 'w-fit' : fill ? 'w-full' : '' } 
-      { equalHeight ? 'h-full' : '' }
+      { fit ? 'w-fit' : fill ? 'w-full' : '' }
+      { preset ? cardHeightClass : height ? height : equalHeight ? 'h-full' : '' }
    ">
    <!-- Outer Wrap -->
    <svelte:component
@@ -134,7 +155,7 @@
       wrap {ariaLabel} {href}
       class="
          { fit ? 'w-fit' : fill ? 'w-full' : '' } 
-         { equalHeight ? 'h-full' : '' }
+         { height ? height : equalHeight ? 'h-full' : '' }
       "
       >
       <!-- Card -->
@@ -143,10 +164,11 @@
          class="
             dui-card 
             { compact ? 'dui-card-compact' : '' }  
-            transition-all duration-300 ease-out
+            transition-all duration-500 ease-in-out
+            overflow-hidden rounded-2xl
             
             { fit ? 'w-fit' : fill ? 'w-full' : '' } 
-            { equalHeight ? 'h-full' : '' } 
+            { height ? height : equalHeight ? 'h-full' : '' }
       
             { imgPos === 'left' || imgPos === 'right' ? 'dui-card-side' 
             : imgPos === 'responsive-l' || imgPos === 'responsive-r' ? 'md:dui-card-side' 
@@ -157,40 +179,44 @@
             shadow-xl bg-white 
             { noHoverFx ? '' 
                : `hover:-translate-y-1 active:translate-y-0.5
-                  hover:shadow-2xl hover:shadow-black/50 active:shadow-black/50
+                  hover:shadow-2xl hover:shadow-black/50 active:shadow-black/50 focus:shadow-black/50
                   hover:bg-[#f8f8f7] active:bg-[#f8f8f7]`}
             ">
       
          {#if !noImg}
+         <div
+            bind:clientHeight={imgHeight} 
+            class="
+               { hovered && !noHoverFx ? 'h-56' : 'h-40' } 
+               overflow-hidden
+               transition-all duration-500 ease-in-out
+               { imgPos === 'top'          ? '' 
+               : imgPos === 'bottom'       ? ''
+               : imgPos === 'left'         ? ''
+               : imgPos === 'right'        ? ''
+               : imgPos === 'responsive-l' || imgPos === 'responsive-r' ? 'md:max-w-lg'
+               : ''}
+               { imgPos === 'top' || imgPos == 'left' || imgPos == 'responsive-l' ? 'order-first' 
+               : imgPos === 'bottom' || imgPos == 'right' ? 'order-last '
+               : imgPos === 'responsive-r' ? 'order-first md:order-last'
+               : ''}"
+             >
             <!-- Image -->
             <Image 
                   alt={title}
                   src={img} eager
-                  mode="cover" position="center"
+                  mode="contain" position="top"
                   placeholder="preview"
-                  {ratio}
-                  class="
-                     h-full w-full
-                     { imgPos === 'top'          ? '' 
-                     : imgPos === 'bottom'       ? ''
-                     : imgPos === 'left'         ? ''
-                     : imgPos === 'right'        ? ''
-                     : imgPos === 'responsive-l' || imgPos === 'responsive-r' ? 'md:max-w-lg'
-                     : ''}
-                     { imgPos === 'top'          ? 'order-first rounded-t-2xl' 
-                     : imgPos === 'bottom'       ? 'order-last rounded-b-2xl'
-                     : imgPos === 'left'         ? 'order-first rounded-l-2xl'
-                     : imgPos === 'right'        ? 'order-last rounded-r-2xl'
-                     : imgPos === 'responsive-l' ? 'order-first rounded-t-2xl md:rounded-tr-none md:rounded-l-2xl'
-                     : imgPos === 'responsive-r' ? 'order-first md:order-last rounded-t-2xl md:rounded-tl-none md:rounded-r-2xl'
-                     : ''}
-                     "
+                  ratio="auto" slow
+                  class="h-full w-full { hovered && !noHoverFx ? 'scale-110 md:translate-y-2 ' : '' }"
                />
+         </div>
          {/if}
       
          <!-- Body -->
          <div class="
                dui-card-body flex justify-between
+               transition-all duration-500 ease-in-out
                { compact ? 'gap-2' : 'gap-4 pt-6 pb-8 px-8'}
                { compactResponsive ? 'gap-2 !p-4 lg:gap-4 lg:!pt-6 lg:!pb-8 lg:!px-8' : ''}
                { centerText ? 'items-center text-center' : '' }
