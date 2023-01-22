@@ -22,13 +22,16 @@
 	import supabase from '$src/lib/db';
 
 	// import TwicPics svelte3 components
-	import { installTwicPics } from '@twicpics/components/svelte3'
+	import { installTwicPics } from '@twicpics/components/sveltekit'
 	// import TwicPics components css
 	import '@twicpics/components/style.css'
 
 	installTwicPics({
 		// domain is mandatory
-		domain: 'https://trixolutions.twic.pics'
+		domain: 'https://trixolutions.twic.pics',
+		anticipation: 0.2,
+		handleShadowDom: true,
+		step: 8
 	})
 	
 	// Import data

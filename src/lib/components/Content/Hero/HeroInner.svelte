@@ -2,8 +2,6 @@
    // Import components
    import { Image, H1 } from "$comp";
 
-   import { breakpoints } from "$lib/constants/breakpoints";
-
    // Define image
    export let imgSrc = '';
    // Set image alt
@@ -24,22 +22,7 @@
 
    // Is the hero a large one or not
    export let large = false;
-
-   
-   let innerWidth:number;
-   // Change image ratio according to breakpoint
-   let ratio = '3:1'
-   $: if (innerWidth < breakpoints.xs) { ratio = large ? "3:5" : "4:3";
-      } else if (innerWidth < breakpoints.sm) { ratio = large ? "1" : "3:2";
-      } else if (innerWidth < breakpoints.md) { ratio = large ? "3:2"   : "2:1";
-      } else if (innerWidth < breakpoints.lg) { ratio = large ? "3:2" : "7:4";
-      } else if (innerWidth < breakpoints.xl) { ratio = large ? "3:2" : "5:2";
-      } else if (innerWidth < breakpoints.xxl) { ratio = large ? "2:1" : "3:1";
-      } else { ratio = large ? "8:3" : "4:1"; }
 </script>
-
-
-<svelte:window bind:innerWidth={innerWidth} />
 
 <div class="w-full h-full bg-gray-900 ">
       <Image 
@@ -47,8 +30,8 @@
          src="{imgSrc}" eager
          mode="cover" position="center"
          placeholder="preview"
-         class="!opacity-50 !blur-sm"
-         {ratio}
+         class="!opacity-50 !blur-sm w-full { large ? 'h-148' : 'h-100'}"
+         ratio="none"
       />
       <!-- Image Overlay -->
       <div class="

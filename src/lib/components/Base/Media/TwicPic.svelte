@@ -1,5 +1,5 @@
 <script lang="ts">
-   import { onMount } from 'svelte';
+   import TwicImg from '@twicpics/components/sveltekit/TwicImg.svelte';
 
    export let src:string = '';
    export let alt:string;
@@ -9,7 +9,7 @@
 
    // Positioning of image (border-based)
    //  -- top - bottom - left - right - top-left - top-right - bottom-left - bottom-right --
-   export let anchor:string = '';
+   export let anchor = '';
 
    // Load image eagerly
    export let eager:boolean = false;
@@ -20,16 +20,16 @@
 
    // Specify placeholder until image is loaded
    // -- preview - meancolor - maincolor - none --
-   export let placeholder:string = 'maincolor'
+   export let placeholder = 'maincolor'
 
    // Define aspect ratio in
    // width/height or width:height
    // -- ratio - 1 - none --
-   export let ratio:string = 'none';
+   export let ratio = 'none';
 
    // Determines how the image will be revealed once loaded.
    // -- fade - zoom - none --
-   export let transition:string = 'fade';
+   export let transition = 'fade';
    // Duration of transition
    export let transitionDuration:string = "250ms"
    // Timing function applied to transition
@@ -40,7 +40,7 @@
    ////// MODES //////
    // Cover: image fills area and is cropped
    // Contain: image will sit inside area with no cropping
-   export let mode:string = 'cover'
+   export let mode = 'cover'
 
    //// COVER MODE ////
       // Sets focus point in cover mode
@@ -62,21 +62,10 @@
    export let preTransform:string = '';
 
 
-   let TwicImg;
-   onMount(async () => {
-      const module = await import('@twicpics/components/svelte3');
-      TwicImg = module.TwicImg;
-   });
 
 </script>
 
-<div class="
-      transition-all duration-300 ease-out 
-      overflow-hidden h-fit
-      {klass}">
-   <svelte:component 
-      this={TwicImg}
-   
+   <TwicImg
       {src} {alt} {anchor}
       {eager} {intrinsic}
       {placeholder}
@@ -90,6 +79,5 @@
       
       {preTransform}
    
-      class="transition-all duration-300 ease-out"
+      class="transition-all duration-300 ease-out {klass}"
    />
-</div>
