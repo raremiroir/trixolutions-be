@@ -33,16 +33,16 @@
 </script>
 
 <Hero slider>
-   {#each heroSlides as slide}
+   {#each heroSlides as slide, key}
       <HeroSlide
          imgAlt="Trixolutions Lencioni - {slide.title}"
          imgSrc='{slide.src}'
          >
          <H1 
             slot="title" 
-            fake="{slide.title_type === 'fake'}" 
-            small={slide.title_type === 'fake'}
-            leading={slide.title_type === 'fake' ? 'leading-3' : ''}
+            fake={key !== 0} 
+            small={key === 2}
+            smaller={key === 1}
             color="text-gray-100">
             {slide.title}
          </H1>

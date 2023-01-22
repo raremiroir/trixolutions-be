@@ -32,7 +32,7 @@
    {#if slider}
       <HeroSlider label="Welcome to Trixolutions!">
          <slot/>
-   </HeroSlider>
+      </HeroSlider>
    {:else}
       <HeroInner {large}
          {imgSrc} {imgAlt}

@@ -49,7 +49,7 @@
          { large ? 'pt-32 pb-12' : 'pt-16 pb-0' }
          flex items-center">
       <div class="
-            w-3/4 h-full mx-auto flex flex-col items-center justify-center gap-4">
+            w-11/12 md:w-3/4 h-full mx-auto flex flex-col items-center justify-center gap-4">
          <H1 
             fake={titleFake} color="text-gray-100/90" leading={titleLeading}
             small={titleSmall} smaller={titleSmaller} smallest={titleSmallest}>

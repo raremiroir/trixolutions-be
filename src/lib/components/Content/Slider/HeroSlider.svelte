@@ -38,14 +38,14 @@
 	>
 		<!-- Navigation Arrows -->
 		<div class="splide__arrows h-full w-full relative">
-			<button class="splide__arrow splide__arrow--prev absolute bottom-1/2 -translate-y-1/2 left-2 z-2">
+			<button class="splide__arrow splide__arrow--prev absolute hidden sm:block bottom-12 left-2 z-2">
 				<SlideChangeBtn prev />
 			</button>
 				<!-- Slides -->
 				<SplideTrack class="h-full bg-primary z-0">
 					<slot />
 				</SplideTrack>
-			<button class="splide__arrow splide__arrow--next absolute bottom-1/2 -translate-y-1/2 right-2 z-2">
+			<button class="splide__arrow splide__arrow--next absolute hidden sm:block bottom-12 right-2 z-2">
 				<SlideChangeBtn next />
 			</button>
 		</div>
