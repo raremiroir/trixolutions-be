@@ -24,32 +24,30 @@
    // Make a span which looks like h1
    export let fake = false;
 
+   $: titleClasses = `
+      font-title
+      ${ color ? color : 'text-primary' } 
+      ${ thin ? 'font-semibold' : 'font-bold' }
 
-   export let large = false;
+      ${ leading ? leading 
+       : smaller ? '!leading-[0px]'
+       : 'leading-none'}
+
+      ${ small ? 'h1-size-sm' : smaller ? 'h2-size' 
+       : smallest ? 'h3-size' : 'h1-size'}
+
+      ${ klass }
+   `
 </script>
 
 
 {#if fake}
-   <span class="
-         font-title
-         { color ? color : 'text-primary' } 
-         { leading ? leading : 'leading-none'}
-         { thin ? 'font-semibold' : 'font-bold' }
-         { small ? 'h1-size-sm' : smaller ? 'h2-size' 
-         : smallest ? 'h3-size' : 'h1-size'}
-         { klass }"
+   <span class="{ titleClasses }"
       class:italic>
       <slot/>
    </span>
 {:else}
-   <h1 class="
-         font-title
-         { color ? color : 'text-primary' } 
-         { leading ? leading : 'leading-none'}
-         { thin ? 'font-semibold' : 'font-bold' }
-         { small ? 'h1-size-sm' : smaller ? 'h2-size' 
-         : smallest ? 'h3-size' : 'h1-size'}
-         { klass }"
+   <h1 class="{ titleClasses }"
       class:italic>
       <slot/>
    </h1>   
