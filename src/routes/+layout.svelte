@@ -72,13 +72,15 @@
 </script>
 
 <PWA />
-<div class="app bg-gray-50">
-
-	{#if !hasPageLoaded}
-		<Loader />
-	{/if}
-	<slot />
-	
+<div class="
+		flex flex-col min-h-screen bg-gray-50
+		relative ">
+	<div class="content overflow-y-auto box-border w-full">
+		{#if !hasPageLoaded}
+			<Loader />
+		{/if}
+		<slot />
+	</div>
 </div>
 
 <svelte:head>
