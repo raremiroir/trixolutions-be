@@ -127,15 +127,6 @@
       cardHeightClass = 'h-[330px] md:h-[464px]'
       cardHeight = 464;
    }
-   let imgHeight:number;
-   $: cardHeight;
-   $: imgHeight;
-
-   const heightInNum = (Number(height.substring(3, (height.length - 3))))
-   if (typeof heightInNum === 'number') {
-      let customHeight = true;
-      console.log(heightInNum - imgHeight);
-   }
 </script>
 
 
@@ -185,9 +176,8 @@
       
          {#if !noImg}
          <div
-            bind:clientHeight={imgHeight} 
             class="
-               { hovered && !noHoverFx ? 'h-56' : 'h-40' } 
+               { hovered && isLink && !noHoverFx ? 'h-56' : 'h-40' } 
                overflow-hidden
                transition-all duration-500 ease-in-out
                { imgPos === 'top'          ? '' 
@@ -207,7 +197,7 @@
                   src={img} eager
                   mode="contain" position="top"
                   placeholder="preview"
-                  ratio="auto" slow
+                  ratio="{ preset === 'DefHover' ? 'auto' : ratio }" slow
                   class="h-full w-full { hovered && !noHoverFx ? 'scale-110 md:translate-y-2 ' : '' }"
                />
          </div>

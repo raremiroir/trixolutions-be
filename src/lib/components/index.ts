@@ -82,7 +82,8 @@
 // ██      ██    ██ ██  ██ ██    ██    ██      ██  ██ ██    ██    
 //  ██████  ██████  ██   ████    ██    ███████ ██   ████    ██    
 
-   export { default as Card }             from './Card.svelte';
+   export { default as CardBase }         from './Content/Card/CardBase.svelte';
+   export { default as Card }             from './Content/Card/Card.svelte';
    
    // Hero
    export { default as Hero }             from './Content/Hero/Hero.svelte';
