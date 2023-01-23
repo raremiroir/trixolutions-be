@@ -26,6 +26,7 @@ const en_sessions: NamespaceSessionsTranslation = {
       title: "free online open info sessions",
       title_single: "free online open info session",
       title_alt: "free open info sessions",
+      title_short: "online info session",
       trainer: "trainer",
       time: "time frame",
       intro: {
@@ -235,6 +236,8 @@ const en_sessions: NamespaceSessionsTranslation = {
       title: "Trixolutions / Lencioni Hybrid Team Coaching Learning Path",
       title_alt: "hybrid lencioni team coaching learning path",
       title_short: "hybrid lencioni learning path",
+      traject_shorter: "hybrid track",
+      tag: 'training in team coaching',
       expand: {
          title: "Expansion of Learning Path",
          text: "Would you like to start with the Learning Path without a Two-Day Masterclass?<br/>You can! If you also register for the physical two-day Masterclass within the year, you only pay the difference between the two courses!"

@@ -29,6 +29,7 @@ const fr_sessions: NamespaceSessionsTranslation = {
       title: "gratis online open infosessies",
       title_single: "gratis online open infosessie",
       title_alt: "gratis open infosessies",
+      title_short: "gratis open infosessies",
       trainer: "trainer",
       time: "tijd",
       intro: {
@@ -236,6 +237,8 @@ const fr_sessions: NamespaceSessionsTranslation = {
       title: "Trixolutions / Lencioni Hybride Teamcoaching Leertraject",
       title_alt: "hybride lencioni teamcoaching leertraject",
       title_short: "hybride lencioni leertraject",
+      traject_shorter: "hybride traject",
+      tag: 'opleiding in teamcoaching',
       expand: {
          title: "Uitbreiding van Leertraject",
          text: "Wil je eerst starten met het Leertraject zonder Tweedaagse Masterclass?<br/>Dat kan! Indien je je binnen het jaar ook inschrijft voor de fysieke tweedaagse Masterclass, betaal je enkel het verschil tussen de twee trajecten bij!"

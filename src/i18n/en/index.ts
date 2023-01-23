@@ -74,14 +74,14 @@ const en: Translation = {
          },
          sessions: {
             subscribe_message: {
-               subject: "{name} would like to subscribe on {session}",
-               intro: "Beste, \n\nGraag zou ik me inschrijven op een {session}.\n",
-               name: "Mijn naam is {name}",
-               session_picked: "Ik zou me graag inschrijven op de {session} op {date_picked}.\n",
-               email: "Mijn e-mailadres is {email}\n",
-               company: "Het bedrijf waar ik werk heet {company}\n",
-               phone: "Mijn telefoonnummer is {phone}\n",
-               regards: "\nMet vriendelijke groet,\n",
+               subject: "{name} would like to subscribe to {session}",
+               intro: "Dear, \n\nI would like to sign up for {session}.\n",
+               name: "My name is {name}",
+               session_picked: "I would like to sign up for the {session} on {date_picked}.\n",
+               email: "My e-mail address is {email}\n",
+               company: "The company where I work, is called {company}\n",
+               phone: "My phone number is {phone}\n",
+               regards: "\nKind regards,\n",
             }
          }
       },

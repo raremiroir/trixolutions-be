@@ -762,6 +762,10 @@ export type NamespaceSessionsTranslation = {
 		 */
 		title_alt: string
 		/**
+		 * o​n​l​i​n​e​ ​i​n​f​o​s​e​s​s​i​e
+		 */
+		title_short: string
+		/**
 		 * t​r​a​i​n​e​r
 		 */
 		trainer: string
@@ -1203,6 +1207,14 @@ export type NamespaceSessionsTranslation = {
 		 * h​y​b​r​i​d​e​ ​l​e​n​c​i​o​n​i​ ​l​e​e​r​t​r​a​j​e​c​t
 		 */
 		title_short: string
+		/**
+		 * h​y​b​r​i​d​e​ ​t​r​a​j​e​c​t
+		 */
+		traject_shorter: string
+		/**
+		 * o​p​l​e​i​d​i​n​g​ ​i​n​ ​t​e​a​m​c​o​a​c​h​i​n​g
+		 */
+		tag: string
 		expand: {
 			/**
 			 * U​i​t​b​r​e​i​d​i​n​g​ ​v​a​n​ ​L​e​e​r​t​r​a​j​e​c​t
@@ -2262,6 +2274,10 @@ export type TranslationFunctions = {
 			 */
 			title_alt: () => LocalizedString
 			/**
+			 * online infosessie
+			 */
+			title_short: () => LocalizedString
+			/**
 			 * trainer
 			 */
 			trainer: () => LocalizedString
@@ -2703,6 +2719,14 @@ export type TranslationFunctions = {
 			 * hybride lencioni leertraject
 			 */
 			title_short: () => LocalizedString
+			/**
+			 * hybride traject
+			 */
+			traject_shorter: () => LocalizedString
+			/**
+			 * opleiding in teamcoaching
+			 */
+			tag: () => LocalizedString
 			expand: {
 				/**
 				 * Uitbreiding van Leertraject
