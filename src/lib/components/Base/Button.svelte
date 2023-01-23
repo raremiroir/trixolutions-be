@@ -48,6 +48,8 @@
    // Tile rounding:
    export let tile = false
 
+   // Slower transition duration
+   export let slow = false
    // No shadow:
    export let flat = false
 
@@ -103,7 +105,7 @@
    {disabled} {ariaLabel}
 
    class="
-      transition-all duration-300 ease-in-out
+      transition-all { slow ? 'duration-500' : 'duration-300'} ease-in-out
       tracking-wide
       
       active:brightness-75
