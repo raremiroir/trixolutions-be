@@ -1,17 +1,3 @@
-<!-- 
-██      ██ ███    ██ ██   ██ 
-██      ██ ████   ██ ██  ██  
-██      ██ ██ ██  ██ █████   
-██      ██ ██  ██ ██ ██  ██  
-███████ ██ ██   ████ ██   ██ 
--->
-
-<!--
-▄▄▄ ▄▄▄ 
- █  █▄
- █   ▀█
- ▀  ▀▀▀
--->
 <script lang="ts">
    // Is the link just a wrap (to put a link on another component)
    // or an actual text link?
@@ -49,18 +35,11 @@
    export let linkStyle = 'none';
 
    // Export unused types
-   export const type = '';
-   export const tabindex = '-1';
-   export const disabled = false;
+   export let type = '';
+   export let tabindex = '-1';
+   export let disabled = false;
 </script>
 
-
-<!--
-▄  ▄ ▄▄▄ ▄▄   ▄▄ ▄
-█▄▄█  █  █ █ █ █ █
-█▀▀█  █  █ █ █ █ █
-▀  ▀  ▀  ▀  ▀  ▀ ▀▀▀
--->
 <!-- Link Tag -->
 <a 
    {href} 
