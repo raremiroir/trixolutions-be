@@ -7,17 +7,17 @@
    export let before = ""
    export let beforeUrl = ""
 
-   let currentUrl = $page.url.pathname;
+   $: currentUrl = $page.url.pathname;
    
    export let beforeIcon = "gg:smile"
    export let currentIcon = "gg:smile"
 
-   let slashIndex = currentUrl.indexOf("/", 3) + 1;
-   let secondSlashIndex = currentUrl.indexOf("/", 5) + 1;
+   $: slashIndex = currentUrl.indexOf("/", 3) + 1;
+   $: secondSlashIndex = currentUrl.indexOf("/", 5) + 1;
    
    let currentName = ''
 
-   if (secondSlashIndex <= 0) {
+   $: if (secondSlashIndex <= 0) {
       currentName = titleCase(currentUrl.substring(slashIndex).replaceAll('-', ' '));
       before = ""; 
    }
