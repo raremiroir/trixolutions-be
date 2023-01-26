@@ -3,53 +3,123 @@
    import { locale } from "$i18n/i18n-svelte";
 
    import { Link, Title } from "$comp";
+	import Icon from "@iconify/svelte";
+
+   // Import i18n
+   import LL from "$i18n/i18n-svelte";
+
+
+   $: socialMediaItems = [
+      {
+         title: 'LinkedIn',
+         link: 'https://be.linkedin.com/company/trixolutions---business-training-consulting-&-recruitment',
+         icon: 'mdi:linkedin'
+      },
+      {
+         title: 'Facebook',
+         link: 'https://www.facebook.com/people/trixolutions/100065334466305/?paipv=0&eav=AfbqMx7WZnqAY8xcvRH0Tvk6dBmrc7pFxDTz04b7dmxtHEyidCzPCHvVtNz6U8Yh4C4&_rdr',
+         icon: 'ri:facebook-box-fill'
+      }
+   ]
+   $: footerColItems = [
+      {
+         title: 'Over Trixolutions',
+         items: [
+            {
+               title: $LL.nav.about.title(),
+               link: $LL.nav.about.slug()
+            },
+            {
+               title: $LL.nav.contact.title(),
+               link: $LL.nav.contact.slug()
+            }
+         ]
+      },
+      {
+         title: 'Open Workshops',
+         items: [
+            {
+               title: $LL.nav.open_sessions.items.info_sessions.title(),
+               link: $LL.nav.open_sessions.items.info_sessions.slug()
+            },
+            {
+               title: $LL.nav.open_sessions.items.hybrid_traject.title(),
+               link: $LL.nav.open_sessions.items.hybrid_traject.slug()
+            },
+            {
+               title: $LL.nav.open_sessions.items.deepdive.title(),
+               link: $LL.nav.open_sessions.items.deepdive.slug()
+            },
+         ]
+      },
+      {
+         title: 'Meer Over Ons',
+         items: [
+            {
+               title: $LL.nav.others.job_offers.title(),
+               link: $LL.nav.others.job_offers.slug()
+            },
+            {
+               title: $LL.nav.others.terms_conditions.title(),
+               link: $LL.nav.others.terms_conditions.slug()
+            },
+            {
+               title: $LL.nav.others.terms_kmo.title(),
+               link: $LL.nav.others.terms_kmo.slug()
+            },
+            {
+               title: $LL.nav.others.privacy_policy.title(),
+               link: $LL.nav.others.privacy_policy.slug()
+            },
+         ]
+      },
+   ]
 </script>
 
 <!-- Footer -->
-<footer class="bg-gray-700 w-full">
+<footer class="px-4 divide-y bg-gray-700 text-gray-100">
+	<div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
 
-   <!-- Columns wrap -->
-   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 w-3/4 mx-auto pt-12 pb-16">
-      <!-- Column 1 -->
-      <div class="flex flex-col gap-4 w-full">
-         <div class="">
-            <Logo color='fill-gray-50' xcolor='fill-white'/>
-         </div>
-         <div class="grid grid-cols-2 w-full gap-2 md:gap-4 lg:gap-6 2xl:gap-8">
-            <div class="w-full flex flex-col gap-2">
-               <h6 class="w-full border-b-2 border-gray-50">Vestiging België</h6>
-               <span>
-                  Krommelei 14 <br/>
-                  Wijnegem - Antwerpen <br/>
-                     <a href="mailto:info@trixolutions.be">info@trixolutions.be</a>
-               </span>
+		<div class="lg:w-1/3">
+			<a rel="noopener noreferrer" href="/" class="flex justify-center space-x-3 lg:justify-start">
+				<Logo color="fill-gray-100/80" xcolor="fill-gray-300/80"/>
+			</a>
+		</div>
+
+		<div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+         <div class="space-y-3">
+				<div class="uppercase dark:text-gray-50">Social media</div>
+				<div class="flex justify-start space-x-3">
+               {#each socialMediaItems as item}
+                  <Link
+                     color="text-gray-100/80"
+                     rel="noopener noreferrer" target="_blank"
+                     title={item.title} ariaLabel={item.title} 
+                     href={item.link} class="flex items-center p-1">
+                     <Icon icon={item.icon} class="w-8 h-8 fill-gray-100/80" />
+                  </Link>
+               {/each}
+				</div>
+			</div>
+         {#each footerColItems as col_item}
+            <div class="space-y-3">
+               <h3 class="tracking-wide uppercase dark:text-gray-50">{col_item.title}</h3>
+               <ul class="space-y-1">
+                  {#each col_item.items as item}
+                     <li>
+                        <Link
+                           color="text-gray-100/80"
+                           rel="noopener noreferrer"
+                           title={item.title} ariaLabel={item.title} 
+                           href="/{$locale}/{item.link}" >
+                           {String(item.title)}
+                        </Link>
+                     </li>
+                  {/each}
+               </ul>
             </div>
-            <div class="w-full flex flex-col gap-2">
-               <h6 class="w-full border-b-2 border-gray-50">Vestiging Nederland</h6>
-               <span>
-                  Krommelei 14 <br/>
-                  Wijnegem - Antwerpen <br/>
-                     <a href="mailto:info@trixolutions.be">info@trixolutions.be</a>
-               </span>
-            </div>
-         </div>
-      </div>
-      <!-- Column 2 -->
-      <div class="flex flex-col gap-4 w-full">
-         <Title type="h6" class="font-bold" color="text-gray-50">Pagina's</Title>
-         <Link ariaLabel="Vacatures" linkStyle='underlineOnHover' href="/{$locale}/vacatures">Vacatures</Link>
-         <Link ariaLabel="Algemene Voorwaarden" linkStyle='underlineOnHover' href="/{$locale}/algemene-voorwaarden">Algemene Voorwaarden</Link>
-         <Link ariaLabel="Privacybeleid" linkStyle='underlineOnHover' href="/{$locale}/privacybeleid">Privacybeleid</Link>
-      </div>
-   </div>
-
-   <div class="">
-
-   </div>
-   <div class="px-1 pb-2 text-sm font-semibold tracking-wide text-center w-full">
-      <hr class="border-gray-400 mb-2"/>
-      <Link ariaLabel="Mist Media Website" linkStyle='underline' href="https://mistmedia.be" target="_blank">
-         Trixolutions.be - Ontworpen, ontwikkeld en beheerd door Mist Media
-      </Link>
-   </div>
+         {/each}
+		</div>
+	</div>
+	<div class="py-6 text-sm text-center dark:text-gray-400">© Trixolutions.be 2023 - Ontworpen, Ontwikkeld en Beheerd door Mist Media </div>
 </footer>
