@@ -38,7 +38,7 @@ const en_pages: NamespacePagesTranslation = {
 		}
 	},
 	about: {
-		title: 'Over Ons',
+		title: 'About Us',
 		title_alt: 'Over Trixolutions',
 		intro: 	`Trixolutions is als enige in de Benelux lid van de Table Group van Patrick Lencioni. (CAPA Pro)<br/><br/>
 					We zijn een dynamisch trainingskantoor met een sterke focus op teamcoaching en leiderschapsvaardigheden met 

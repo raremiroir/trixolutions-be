@@ -3,15 +3,6 @@ import type { Translation } from '../i18n-types'
 const fr: Translation = {
    base: {
       nav: {
-         home: "home",
-         about: "over ons",
-         references: "referenties",
-         blog: "blog",
-         open_sessions: "open workshops",
-         info_sessions: "gratis open infosessies",
-         hybrid_traject: "hybride lencioni leertraject",
-         deepdive: "lencioni deepdive - level 2",
-         contact: "contact",
          hamburger: {
             toggle_nav: "bekijk of verberg de navigatiebalk"
          },
