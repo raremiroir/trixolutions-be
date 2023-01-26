@@ -7,10 +7,9 @@
 	import type { Locales } from '$i18n/i18n-types'
 	import { locales } from '$i18n/i18n-util'
 	import { loadLocaleAsync } from '$i18n/i18n-util.async'
-	import { replaceLocaleInUrl } from '$utils'
+	import { replaceLocaleInUrl, changeUrlToLocale } from '$utils'
 
-	import { Button, Menu, Link } from '$comp'
-	import Icon from '@iconify/svelte'
+	import { Button, Menu } from '$comp'
 
 	const switchLocale = async (newLocale: Locales, updateHistoryState = true) => {
 		if (!newLocale || $locale === newLocale) return
@@ -33,8 +32,7 @@
 	$: if (browser) {
 		const lang = $page.params.lang as Locales
 		switchLocale(lang, false)
-		history.replaceState({ ...history.state, locale: lang }, '', replaceLocaleInUrl($page.url, lang))
-		console.log(lang);	
+		history.replaceState({ ...history.state, locale: lang }, '', replaceLocaleInUrl($page.url, lang))	
 	}
 </script>
 
@@ -57,7 +55,7 @@
          <li class="w-full">
 				<Button
 					ariaLabel="{$LL.base.nav.lang.change_lang_to()} {l}"
-					href={`${replaceLocaleInUrl($page.url, l)}`}
+					href={`${changeUrlToLocale($page.url, l)}`}
 					color="{l === $locale ? 'secondary' : 'ghost'}"
 					block alignStart noAnim flat
 					size="sm" 
