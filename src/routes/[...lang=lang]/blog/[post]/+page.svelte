@@ -15,6 +15,13 @@
    // console.log(blogPost);
 
    const url = formatUrl(blogPost.title);
+// Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: `blog/${formatUrl(blogPost.title)}`},
+      {locale: 'fr', slug: `blog/${formatUrl(blogPost.title)}`},
+      {locale: 'nl', slug: `blog/${formatUrl(blogPost.title)}`}
+   ];
 
    const seoProps = {
       language: blogPost.language,

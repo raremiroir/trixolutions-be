@@ -2,8 +2,7 @@
    // Import Components
    import { 
       Main, SEO, Section, Footer, Navbar, 
-      Loading, Reveal, 
-      PostCard, PostGrid, ErrorLoading, H2
+      Reveal, PostCard, PostGrid, H2
    } from "$comp";
 	import HomeHeroSlides from './HomeHeroSlides.svelte';
    
@@ -19,6 +18,14 @@
    export let data:PageData;
    const categoryData = data.categories;
    const pagesData = data.pages;
+
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: ''},
+      {locale: 'fr', slug: ''},
+      {locale: 'nl', slug: ''}
+   ];
 
 // SEO
 let pageSlug = `home`

@@ -18,8 +18,16 @@
 	// Import Video
 	import cegeka_video from '$lib/assets/videos/referentiefilmpje-cegeka-min.mp4';
 	import cegeka_thumbnail from '$lib/assets/videos/referentiefilmpje-cegeka-thumbnail-720.webp';
-	// Import images
-
+	
+	// Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'references'},
+      {locale: 'fr', slug: 'references'},
+      {locale: 'nl', slug: 'referenties'}
+   ];
+	
+	// Define images
    let references = [
 		{ src: 'vulkoprin-logo.png', alt: 'Vulkoprin Logo' },
 		{ src: 'kunlabora-logo.png', alt: 'Kunlabora Logo' },

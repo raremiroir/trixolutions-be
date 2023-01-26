@@ -21,6 +21,14 @@
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
 	
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'open-sessions/lencioni-deepdive-level-2'},
+      {locale: 'fr', slug: 'sessions-ouvertes/lencioni-deepdive-niveau-2'},
+      {locale: 'nl', slug: 'open-sessies/lencioni-deepdive-level-2'}
+   ];
+
    // Import data
    export let data;
    let pageData = Object(data.sessionTypes);

@@ -40,6 +40,7 @@
 
 	// Load pages dictionaries
    const displayPagesText = async (locale:any) => {
+         await loadNamespaceAsync(locale, 'nav')
          await loadNamespaceAsync(locale, 'components')
          await loadNamespaceAsync(locale, 'pages')
          await loadNamespaceAsync(locale, 'other')

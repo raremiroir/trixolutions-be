@@ -24,6 +24,14 @@
    // Import website config
 	import { website } from '$src/lib/config/website';
    
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'contact'},
+      {locale: 'fr', slug: 'contact'},
+      {locale: 'nl', slug: 'contact'}
+   ];
+   
    // Define Company establishments
    const places = [
       {

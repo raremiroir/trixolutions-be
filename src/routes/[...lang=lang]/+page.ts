@@ -2,16 +2,21 @@ import type { PageLoad } from './$types'
 import LL, { setLocale } from '$i18n/i18n-svelte'
 import { get } from 'svelte/store'
 import supabase from '$src/lib/db'
+import { isLocale } from '$src/i18n/i18n-util'
+import { error } from '@sveltejs/kit'
 
-export const load: PageLoad = async ({ parent }) => {
-	// wait for `+layout.ts` to load dictionary and pass locale information
-	const { locale } = await parent()
-
-	// if you need to output a localized string in a `load` function,
-	// you always need to call `setLocale` right before you access the `LL` store
-	setLocale(locale)
-	// get the translation functions value from the store
-	const $LL = get(LL)
+export const load: PageLoad = async ({ parent, params }) => {
+   
+   const loadI18nLib = async () => {
+      // wait for `+layout.ts` to load dictionary and pass locale information
+      const { locale } = await parent()
+   
+      // if you need to output a localized string in a `load` function,
+      // you always need to call `setLocale` right before you access the `LL` store
+      setLocale(locale)
+      // get the translation functions value from the store
+      const $LL = get(LL)
+   }
 
 	// Get category data from supabase
    const getCategoryData = async () => {
@@ -38,8 +43,18 @@ export const load: PageLoad = async ({ parent }) => {
       return pagesData;
    }
 
-	return {
-		categories: getCategoryData(),
-		pages: getPagesData()
-	}
+   if (!isLocale(params.lang)) {
+      params.lang = 'nl'
+   }
+
+   if (isLocale(params.lang)) {
+      loadI18nLib()
+      return {
+         categories: getCategoryData(),
+         pages: getPagesData()
+      }
+   } 
+
+   throw error (404, 'Not found');
+
 }

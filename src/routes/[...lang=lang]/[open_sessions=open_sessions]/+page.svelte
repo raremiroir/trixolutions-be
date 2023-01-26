@@ -8,7 +8,14 @@
    
    // Import utils
 	import { titleCase } from "$src/lib/utils";
-	import Cardd from "$src/lib/components/Content/Cardd.svelte";
+
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'open-sessions'},
+      {locale: 'fr', slug: 'sessions-ouvertes'},
+      {locale: 'nl', slug: 'open-sessies'}
+   ];
    
    let session_types = [
       {

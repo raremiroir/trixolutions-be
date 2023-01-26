@@ -10,6 +10,7 @@ export const load: LayoutLoad<{ locale: Locales }> = async ({ data: { locale } }
 	await loadLocaleAsync(locale)
 
 	// load namespaces into memory
+	await loadLocaleAsync(locale, 'nav')
 	await loadLocaleAsync(locale, 'components')
 	await loadLocaleAsync(locale, 'other')
 	await loadLocaleAsync(locale, 'pages')

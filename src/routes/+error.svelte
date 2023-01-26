@@ -38,7 +38,7 @@
             {@html $LL.base.error.not_found() }
          </Alert>
          <div class="w-full flex items-center justify-center">
-            <Link ariaLabel="Terug naar Homepagina" href="/{$locale}/">
+            <Link ariaLabel="Terug naar Homepagina" href="/{$locale}">
                <Button 
                   ariaLabel={$LL.base.btn.back_to_home()}
                   color="primary" size="xxl" 

@@ -35,6 +35,14 @@
    let sessionData = Object(data.sessionData);
    let ratingData = Object(data.ratingData);
 
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'open-sessions/hybrid-lencioni-learning-track'},
+      {locale: 'fr', slug: 'sessions-ouvertes/traject-hybride-lencioni'},
+      {locale: 'nl', slug: 'open-sessies/hybride-lencioni-leertraject'}
+   ];
+
 
    // Set 'active' variable for accordeon component
 	let active:any = null;

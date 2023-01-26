@@ -1,6 +1,8 @@
 import supabase from '$lib/db'
+import { error } from '@sveltejs/kit';
+import type { PageLoad } from '../../$types';
 
-export const load = () => {
+export const load: PageLoad = async ({ params }) => {
 
    const getSessionTypes = async () => {
       const {data, error} = await supabase
@@ -36,10 +38,18 @@ export const load = () => {
       };
    }
 
-   return {
-      sessionTypes: getSessionTypes(),
-      sessionData: getSessionData(),
-      ratingData: getRatingData(),
+   if (  params.hybrid_track === 'hybride-lencioni-leertraject'   && params.open_sessions === 'open-sessies'      && params.lang === 'nl'
+      || params.hybrid_track === 'hybrid-lencioni-learning-track' && params.open_sessions === 'open-sessions'     && params.lang === 'en'
+      || params.hybrid_track === 'traject-hybride-lencioni'       && params.open_sessions === 'sessions-ouvertes' && params.lang === 'fr') {
+         
+         return {
+            sessionTypes: getSessionTypes(),
+            sessionData: getSessionData(),
+            ratingData: getRatingData(),
+         }
    }
+
+   throw error (404, 'Not found');
+
 }
 

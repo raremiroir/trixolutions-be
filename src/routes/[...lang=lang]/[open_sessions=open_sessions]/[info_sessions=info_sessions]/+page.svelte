@@ -19,10 +19,18 @@
    import { formatDateMonthFull, formatTime, formatUrl, titleCase} from "$utils";
 	
    // Import data
-	import type { PageData } from "./$types";
+	import type { PageData } from "../gratis-open-infosessies/$types";
    export let data:PageData;
    let sessions = Object(data.sessions);
    let sessionDates = Object(data.sessionDates);
+
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'open-sessions/free-open-info-sessions'},
+      {locale: 'fr', slug: 'sessions-ouvertes/sessions-info-gratuites-ouvertes'},
+      {locale: 'nl', slug: 'open-sessies/gratis-open-infosessies'}
+   ];
 
    // SEO
 	let pageSlug = formatUrl($LL.sessions.info.title_alt());

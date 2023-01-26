@@ -14,6 +14,14 @@
       Navbar, Main, Section, 
       Breadcrumbs, SEO, PostScroll, H1
    } from "$comp";
+
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'blog'},
+      {locale: 'fr', slug: 'blog'},
+      {locale: 'nl', slug: 'blog'}
+   ];
    
    //   Import data
 	import type { PageData } from "./$types";
