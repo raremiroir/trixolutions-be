@@ -1,6 +1,6 @@
 
 // Capitalize first letter of string
-export const firstLetterCase = (string) => {
+export const firstLetterCase = (string:string) => {
 	return string.charAt(0).toUpperCase() + string.slice(1);
  }
 
@@ -15,12 +15,12 @@ export const titleCase = (str:string) => {
 
 
 // Generates username from name
-export const generateUsername = (first_name, last_name) => {
+export const generateUsername = (first_name:string, last_name:string) => {
 	return `${first_name.replaceAll(' ', '')}.${last_name.replaceAll(' ', '')}`
 }
 
 // Url formatter for dynamic pages
-export const formatUrl = (string) => {
+export const formatUrl = (string:string) => {
 	let newString = String(string).toLowerCase();
 	newString = newString.replaceAll('.', '');
 	newString = newString.replaceAll('?', '');
