@@ -30,6 +30,48 @@
    // Close mobile menu if navigating to other page
    $: if($navigating) openMobile = false;
 
+   // Create navLinks store
+   $: navLinks = [
+      {
+         title: $LL.nav.home.title(),
+         slug: ``
+      },
+      {
+         title: $LL.nav.about.title(),
+         slug: `/${$LL.nav.about.slug()}`
+      },
+      {
+         title: $LL.nav.references.title(),
+         slug: `/${$LL.nav.references.slug()}`
+      },
+      {
+         title: $LL.nav.blog.title(),
+         slug: `/${$LL.nav.blog.slug()}`
+      },
+      {
+         title: $LL.nav.open_sessions.title(),
+         slug: `/${$LL.nav.open_sessions.slug()}`,
+         items: [
+            {
+               title: $LL.nav.open_sessions.items.info_sessions.title(),
+               slug: `/${$LL.nav.open_sessions.items.info_sessions.slug()}`,
+            },
+            {
+               title: $LL.nav.open_sessions.items.hybrid_traject.title(),
+               slug: `/${$LL.nav.open_sessions.items.hybrid_traject.slug()}`,
+            },
+            {
+               title: $LL.nav.open_sessions.items.deepdive.title(),
+               slug: `/${$LL.nav.open_sessions.items.deepdive.slug()}`,
+            },
+         ]
+      },
+      {
+         title: $LL.nav.contact.title(),
+         slug: `/${$LL.nav.contact.slug()}`
+      },
+   ]
+
 </script>
 
 <!--      -->
@@ -70,20 +112,17 @@
          z-10 hidden lg:block
       ">
          <ul class="flex flex-row gap-1 2xl:gap-2 w-full justify-end items-center">
-            <NavItem name={$LL.base.nav.home()} link="/{$locale}" />
-            <NavItem name={$LL.base.nav.about()} link="/{$locale}/over-ons" />
-            <NavItem name={$LL.base.nav.references()} link="/{$locale}/referenties" />
-            {#if $locale === 'nl'}
-               <div class="w-fit h-fit p-0 m-0" transition:fade={{duration: 200}}>
-                  <NavItem name="{$LL.base.nav.blog()}" link="/nl/blog" />
-               </div>
-            {/if}
-            <NavItem name="{$LL.base.nav.open_sessions()}" link="/{$locale}/open-sessies" dropdown>
-               <NavItem dropdownItem name={$LL.base.nav.info_sessions()} link="/{$locale}/open-sessies/gratis-open-infosessies"/>
-               <NavItem dropdownItem name={$LL.base.nav.hybrid_traject()} link="/{$locale}/open-sessies/hybride-lencioni-leertraject"/>
-               <NavItem dropdownItem name={$LL.base.nav.deepdive()} link="/{$locale}/open-sessies/lencioni-deepdive-level-2"/>
-            </NavItem>
-            <NavItem name={$LL.base.nav.contact()} link="/{$locale}/contact" />
+            {#each navLinks as item}
+               {#if !item.items}
+                  <NavItem name={item.title} link="/{$locale}{item.slug}" class="{item.title === 'blog' && $locale !== 'nl' ? 'hidden' : ''}" />
+               {:else}
+                  <NavItem name="{item.title}" link="/{$locale}{item.slug}" dropdown>
+                     {#each item.items as menuItem}
+                        <NavItem dropdownItem name={menuItem.title} link="/{$locale}{menuItem.slug}"/>
+                     {/each}
+                  </NavItem>
+               {/if}
+            {/each}
          </ul>
       </nav>
    
@@ -109,20 +148,17 @@
       shadow-lg shadow-black/30
       ">
    <ul class="flex flex-col gap-2 w-full justify-center items-center">
-      <NavItem mobile name={$LL.base.nav.home()} link="/{$locale}" />
-      <NavItem mobile name={$LL.base.nav.about()} link="/{$locale}/over-ons" />
-      <NavItem mobile name={$LL.base.nav.references()} link="/{$locale}/referenties" />
-      {#if $locale === 'nl'}
-         <div class="w-full h-fit p-0 m-0" transition:fade={{duration: 200}}>
-            <NavItem mobile name={$LL.base.nav.blog()} link="/nl/blog" />
-         </div>
-      {/if}
-      <NavItem mobile name={$LL.base.nav.open_sessions()} link="/{$locale}/open-sessies" dropdown>
-         <NavItem dropdownItem mobile name={$LL.base.nav.info_sessions()} link="/{$locale}/open-sessies/gratis-open-infosessies"/>
-         <NavItem dropdownItem mobile name={$LL.base.nav.hybrid_traject()} link="/{$locale}/open-sessies/hybride-lencioni-leertraject"/>
-         <NavItem dropdownItem mobile name={$LL.base.nav.deepdive()} link="/{$locale}/open-sessies/lencioni-deepdive-level-2"/>
-      </NavItem>
-      <NavItem mobile name={$LL.base.nav.contact()} link="/{$locale}/contact" />
+      {#each navLinks as item}
+         {#if !item.items}
+            <NavItem mobile name={item.title} link="/{$locale}{item.slug}" class="{item.title === 'blog' && $locale !== 'nl' ? 'hidden' : ''}"  />
+         {:else}
+            <NavItem mobile name="{item.title}" link="/{$locale}{item.slug}" dropdown>
+               {#each item.items as menuItem}
+                  <NavItem mobile dropdownItem name={menuItem.title} link="/{$locale}{menuItem.slug}"/>
+               {/each}
+            </NavItem>
+         {/if}
+      {/each}
    </ul>
 </nav>
    
