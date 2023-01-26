@@ -1,52 +1,128 @@
-export const links = {
+export const navigationLinks = {
+home: {
+      nl: {
+         title: 'Home',
+         slug: ''
+      },
+      en: {
+         title: 'Home',
+         slug: ''
+      },
+      fr: {
+         title: "Page d'Acceuil",
+         slug: ''
+      }
+   },
    about: {
-      link: {
-         nl: '/over-ons',
-         en: '/about-us',
-         fr: '/a-propos'
+      nl: {
+         title: 'Over Ons',
+         slug: 'over-ons'
+      },
+      en: {
+         title: 'About Us',
+         slug: 'about-us'
+      },
+      fr: {
+         title: 'A Propos',
+         slug: 'a-propos'
       }
    },
    references: {
-      link: {
-         nl: '/referenties',
-         en: '/references',
-         fr: '/references'
+      nl: {
+         title: 'Referenties',
+         slug: 'referenties'
+      },
+      en: {
+         title: 'References',
+         slug: 'references'
+      },
+      fr: {
+         title: 'References',
+         slug: 'references'
       }
    },
    blog: {
-      link: {
-         nl: '/blog',
-         en: '/blog',
-         fr: '/blog'
+      nl: {
+         title: 'Blog',
+         slug: 'blog'
+      },
+      en: {
+         title: 'Blog',
+         slug: 'blog'
+      },
+      fr: {
+         title: 'Blog',
+         slug: 'blog'
       }
    },
    contact: {
-      link: {
-         nl: '/contact',
-         en: '/contact',
-         fr: '/contact',
-      }
+      nl: {
+         title: 'Contact',
+         slug: 'contact'
+      },
+      en: {
+         title: 'Contact',
+         slug: 'contact'
+      },
+      fr: {
+         title: 'Contact',
+         slug: 'contact'
+      },
    },
    open_sessions: {
-      link: {
-         nl: "/open-sessies",
-         en: "/open-sessions",
-         fr: "/sessions-ouvertes",
+      nl: {
+         title: "Open Sessies",
+         slug: 'open-sessies'
       },
-      info_sessions: { link: {
-         nl: "/gratis-open-infosessies",
-         en: "/free-open-info-sessions",
-         fr: "/sessions-infos-ouvertes-gratuites",
-      } },
-      hybrid_track: { link: { 
-         nl: "/hybride-lencioni-leertraject",
-         en: "/hybrid-lencioni-learning-track",
-         fr: "/trajet-hybride-lencioni",
-      } },
-      deepdive: { link: {
-         nl: "/lencioni-deepdive-level-2",
-         en: "/lencioni-deepdive-level-2",
-         fr: "/lencioni-deepdive-niveau-2",
-      } },
+      en: {
+         title: "Open Sessions",
+         slug: 'open-sessions'
+      },
+      fr: {
+         title: "Sessions Ouvertes",
+         slug: 'sessions-ouvertes'
+      },
+      info_sessions: {
+         nl: {
+            title: "Gratis Open Infosessies",
+            slug: 'gratis-open-infosessies'
+         },
+         en: {
+            title: "Free Open Info Sessions",
+            slug: 'free-open-info-sessions'
+         },
+         fr: {
+            title: "Sessions d'Information Gratuites et Ouvertes",
+            slug: 'sessions-info-gratuites-ouvertes'
+         },
+      },
+      hybrid_track: {
+         nl: {
+            title: "Hybride Lencioni Leertraject",
+            slug: 'hybride-lencioni-leertraject'
+         },
+         en: {
+            title: "Hybrid Lencioni Learning Track",
+            slug: 'hybrid-lencioni-learning-track'
+         },
+         fr: {
+            title: "Trajet Hybride Lencioni",
+            slug: 'traject-hybride-lencioni'
+         },
+      },
+      deepdive: {
+         nl: {
+            title: "Lencioni Deepdive - Level 2",
+            slug: 'lencioni-deepdive-level-2'
+         },
+         en: {
+            title: "Lencioni Deepdive - Level 2",
+            slug: 'lencioni-deepdive-level-2'
+         },
+         fr: {
+            title: "Lencioni Deepdive - Niveau 2",
+            slug: 'lencioni-deepdive-niveau-2'
+         },
+      },
    }
 }
