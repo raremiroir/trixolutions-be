@@ -4,81 +4,92 @@ const fr: Translation = {
    base: {
       nav: {
          hamburger: {
-            toggle_nav: "bekijk of verberg de navigatiebalk"
+            toggle_nav: "afficher ou masquer la barre de navigation"
          },
          lang: {
-            change_lang: "verander van taal",
-            change_lang_to: "verander taal naar"
+            change_lang: "changer de langue",
+            change_lang_to: "changer la langue en"
          }
       },
       db: {
-         loading: "laden",
-         error_loading: "er is iets fout gegaan bij het laden van de data"
+         loading: "charger",
+         error_loading: "une erreur s'est produite lors du chargement des données"
       },
       geo: {
          country: {
-            belgium: "België",
-            netherlands: "Nederland"
+            belgium: "Belgique",
+            netherlands: "Les Pays-Bas"
          },
          city: {
-            antwerp: "Antwerpen"
+            antwerp: "Anvers"
          },
          lang: {
-            dutch: "Nederlands",
-            french: "Frans",
-            english: "Engels"
+            dutch: "Néerlandais",
+            french: "Français",
+            english: "Anglais"
          }
       },
       btn: {
-         close: "sluiten",
-         back_to_home: "Terug naar Homepagina"
+         close: "fermer",
+         back_to_home: "Retour à la page d'accueil",
+         more_info: "plus d'infos",
+         about_trixo: "à propos de Trixolutions",
+         learn_more: 'apprendre encore plus',
+         read_more: 'lire plus',
+         go_to: 'aller à',
       },
       error: {
-         not_found: "Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk."
+         not_found: "Malheureusement. La page que vous recherchiez n'a pas été trouvée. <br/>Retournez à la page d'accueil via le bouton ci-dessous, ou utilisez la barre de navigation."
       },
       validation: {
-         required: "{item:string} is een verplicht veld.",
-         default_fixed: "{item:string} is ongeldig.",
-         field_too_short: "{item:string} moet minstens {min:number} letters lang zijn.",
-         field_too_long: "{item:string} mag maximaal {max:number} letters lang zijn.",
-         email_error: "Dit e-mailadres is ongeldig.",
-         only_alpha: "{item:string} zou geen speciale karakters of nummers mogen bevatten."
+         required: "{item:string} est un champ obligatoire.",
+         default_fixed: "{item:string} est invalide.",
+         field_too_short: "{item:string} doit comporter au moins {min:number} lettres.",
+         field_too_long: "{item:string} peut contenir jusqu'à 5 {max:number} lettres.",
+         email_error: "Cette adresse e-mail est invalide.",
+         only_alpha: "{item:string} ne doit pas contenir de caractères spéciaux ni de chiffres."
       },
       form: {
-         first_name: "voornaam",
-         last_name: "achternaam",
-         email: "e-mail",
-         company: "organisatie",
-         subject: "onderwerp",
-         message: "bericht",
-         telephone: "telefoonnummer",
-         pick_session: "kies een {session}",
+         first_name: "prénom",
+         last_name: "nom de famille",
+         email: "adresse e-mail",
+         company: "entreprise",
+         subject: "sujet",
+         message: "message",
+         telephone: "numéro de téléphone",
+         pick_session: "choisir une {session}",
          content: {
-            optional: "optioneel",
-            send_msg: "bericht verzenden",
-            sent_success: "bericht verzonden",
-            send_another_one: "nog eentje versturen",
-            fill_out_all: "Vul alle velden in alvorens je bericht te verzenden.",
-            reset_form: "Alle velden resetten",
-            reset_value: "Veld resetten",
-            automatic: "Automatisch gegenereerd",
+            optional: "optionnel",
+            send_msg: "envoyer le message",
+            sent_success: "message envoyé",
+            send_another_one: "en envoyer un autre",
+            fill_out_all: "Veuillez remplir tous les champs avant d'envoyer votre message.",
+            reset_form: "Réinitialiser tous les champs",
+            reset_value: "Réinitialiser le champ",
+            automatic: "Généré automatiquement",
          },
          sessions: {
             subscribe_message: {
-               subject: "{name} wenst zich in te schrijven in een {session}",
-               intro: "Beste, \n\nGraag zou ik me inschrijven op een {session}.\n",
-               name: "Mijn naam is {name}",
-               session_picked: "Ik zou me graag inschrijven op de {session} op {date_picked}.\n",
-               email: "Mijn e-mailadres is {email}\n",
-               company: "Het bedrijf waar ik werk heet {company}\n",
-               phone: "Mijn telefoonnummer is {phone}\n",
-               regards: "\nMet vriendelijke groet,\n",
+               subject: "{name} souhaite s'inscrire à une {session}",
+               intro: "Cher, \n\nJe souhaite m'inscrire à une {session}.\n",
+               name: "Mon nom est {name}",
+               session_picked: "Je souhaite m'inscrire pour la {session} du {date_picked}.\n",
+               email: "Mon adresse e-mail est {email}\n",
+               company: "L'entreprise pour laquelle je travaille s'appelle {company}\n",
+               phone: "Mon numéro de téléphone est {phone}\n",
+               regards: "\nCordialement,\n",
             }
          }
       },
       slide: {
-         prev: "Vorige Slide",
-         next: "Volgende Slide"
+         prev: "Diapo Précédente",
+         next: "Diapo Suivante"
+      },
+      footer: {
+         social_media: "des médias sociaux",
+         more_about_us: 'en savoir plus sur nous',
+         open_workshops: 'ateliers ouverts',
+         creator: "Conçu, Développé et Géré par Mist Media"
       }
    }
 }

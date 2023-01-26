@@ -3,36 +3,36 @@ import type { NamespaceComponentsTranslation } from '../../i18n-types'
 const fr_components: NamespaceComponentsTranslation = {
 	open_sessions_accordeon: {
       first: {
-         title: "Het Partnership tussen Trixolutions en Patrick Lencioni",
-         content_title: "Trixolutions is als enige in de Benelux lid van de Table Group van Patrick Lencioni. (CAPA Pro)",
-         first:   `We worden in de Lencioni CAPA Pro Academy op wekelijkse basis begeleid, gecoacht en 
-                  getraind in de verschillende Lencioni modellen, assessment en toepassingen door 
-                  Patrick Lencioni en zijn consultants zelf.<br/>
-                  Deze kennis, gecombineerd met meer dan 200 teamtrajecten op de teller, zijn we de 
-                  ideale partner om jouw Lencioni kennis te verhogen naar het hoogste niveau.`,
-         quote: "Niet de operationele en strategische sterktes van een team zijn doorslaggevend … maar wel de kracht en gezondheid van dit team zullen hét ultieme competitief voordeel zijn in de toekomst …",
-         last: `De kracht van een gezond team zit voornamelijk in de vaardigheid van teamleden 
-               om <strong>vertrouwen</strong> op te bouwen, met elkaar <strong>respectvolle conflicten</strong> te kunnen hebben, 
-               <strong>betrokkenheid bij het team</strong> te voelen, elkaar <strong>aansprakelijk</strong> te durven stellen en 
-               <strong>resultaatgericht</strong> te kunnen werken.`
+         title: "Le partenariat entre Trixolutions et Patrick Lencioni",
+         content_title: "Trixolutions est le seul membre du Table Group de Patrick Lencioni au Benelux. (CAPA Pro)",
+         first:   `Nous sommes guidés, coachés et formés chaque semaine à la Lencioni CAPA Pro Academy dans les différents 
+                  modèles, évaluations et applications Lencioni par Patrick Lencioni et ses consultants eux-mêmes.<br/>
+                  Cette connaissance, combinée à plus de 200 projets d'équipe au compteur, fait de nous le partenaire 
+                  idéal pour élever vos connaissances Lencioni au plus haut niveau.`,
+         quote: "Ce ne sont pas les forces opérationnelles et stratégiques d'une équipe qui sont décisives... mais la force et la santé de cette équipe seront l'ultime avantage concurrentiel à l'avenir...",
+         last: `La force d'une équipe saine réside principalement dans la capacité des membres de l'équipe à 
+               instaurer la <strong>confiance</strong>, à être capables d'avoir des 
+               <strong>conflits respectueux</strong> les uns avec les autres, à se sentir 
+               <strong>impliqués dans l'équipe</strong>, à oser se <strong>responsabiliser</strong> et à 
+               travailler de manière <strong>axée sur les résultats</strong>.`
       },
       second: {
-         title: "Welke Vragen zullen We voor Je Oplossen?",
-         content_title: "In deze opleiding zal je antwoorden vinden op vragen als",
-         list_title: "Deze teamcoaching opleiding zal je antwoord geven op vragen als:",
+         title: "Quelles questions allons-nous résoudre pour vous ?",
+         content_title: "Dans cette formation, vous trouverez des réponses à des questions telles que",
+         list_title: "Cette formation de coaching d'équipe vous apportera des réponses à des questions telles que :",
          list: [
-               "Hoe werk ik aan een gezonde teamcultuur met dit model?",
-               "Hoe verkoop ik een Lencioni traject aan mijn (interne) klant?",
-               "Hoe creëer ik voldoende 'goesting' of 'burning platform' om een Lencioni traject te starten?",
-               "Hoe ontwikkel ik een Lencioni teamcoaching traject?",
-               "Wat zijn de verschillende stappen in een Lencioni teamcoachingstraject?",
-               "Welke Lencioni oefeningen zijn er (extra) om met teams in de verschillende lagen van de Piramide te werk te gaan?",
-               "Met welke andere “modellen” kan de Piramide gecombineerd worden?",
-               "Hoe zet ik het volledige Lencioni Team Assessment juist in?",
-               "Hoe gebruik ik het Lencioni Persoonlijk Teamlid Assessment?",
-               "Welke vaardigheden heeft een Lencioni Teamcoach juist nodig?",
-               "Welke Lencioni Tools en materiaal is er en kan ik inzetten?",
-               "Waar kan ik hulp vinden als ik vastloop in een teamtraject?",
+               "Comment puis-je travailler sur une culture d'équipe saine avec ce modèle ?",
+               "Comment vendre une trajectoire Lencioni à mon client (interne) ?",
+               "Comment créer suffisamment d'« enthousiasme » ou de « plate-forme brûlante » pour démarrer une trajectoire Lencioni ?",
+               "Comment développer un processus de coaching d'équipe Lencioni ?",
+               "Quelles sont les différentes étapes d'un processus de coaching d'équipe Lencioni ?",
+               "Quels exercices de Lencioni existe-t-il (en plus) pour travailler avec des équipes dans les différentes couches de la Pyramide ?",
+               "Avec quels autres « modèles » peut-on combiner la Pyramide ?",
+               "Comment utiliser correctement l'évaluation complète de l'équipe Lencioni ?",
+               "Comment utiliser l'évaluation des membres de l'équipe personnelle de Lencioni ?",
+               "De quelles compétences un Team Coach Lencioni a-t-il réellement besoin ?",
+               "Quels outils et matériaux Lencioni existe-t-il et puis-je utiliser ?",
+               "Où puis-je trouver de l'aide si je suis bloqué dans un parcours d'équipe ?",
                "..."
          ]
       }

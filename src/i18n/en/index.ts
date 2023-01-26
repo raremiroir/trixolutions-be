@@ -31,7 +31,12 @@ const en: Translation = {
       },
       btn: {
          close: "close",
-         back_to_home: "Back to Home Page"
+         back_to_home: "Back to Home Page",
+         more_info: "more info",
+         about_trixo: "about Trixolutions",
+         learn_more: 'learn more',
+         read_more: 'read more',
+         go_to: 'go to',
       },
       error: {
          not_found: "Sorry! The page you were looking for was not found. <br/>Return to our home page by clicking the button, or just use the navigation bar."
@@ -79,6 +84,12 @@ const en: Translation = {
       slide: {
          prev: "Previous Slide",
          next: "Next Slide"
+      },
+      footer: {
+         social_media: "social media",
+         more_about_us: 'more about us',
+         open_workshops: 'open workshops',
+         creator: "Designed, Developed and Managed by Mist Media"
       }
    }
 }

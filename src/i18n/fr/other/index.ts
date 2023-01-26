@@ -2,15 +2,15 @@ import type { NamespaceOtherTranslation } from '../../i18n-types'
 
 const fr_other: NamespaceOtherTranslation = {
 	job_offers: {
-      title: "Vacatures",
+      title: "Postes Vacants",
       no_offers: {
-         title: "Geen vacatures beschikbaar!",
-         text: "Helaas zijn er op dit moment geen vacatures beschikbaar. <br/>Kom binnenkort zeker nog eens terug!"
+         title: "Aucun poste disponible !",
+         text: "Malheureusement, il n'y a pas de postes vacants pour le moment. <br/>Assurez-vous de revenir bientôt !"
       }
    },
    terms_conditions: [
       {
-         title: "Algemene voorwaarden met betrekking tot opdrachten",
+         title: "Conditions générales relatives aux commandes",
          content: `
             <p>NIET INBEGREPEN tenzij anders gestipuleerd in het voorstel:</p>
             <ul><li>21% BTW</li>
@@ -25,7 +25,7 @@ const fr_other: NamespaceOtherTranslation = {
          `
       },
       {
-         title: "Algemene voorwaarden met betrekking tot het annuleren of verplaatsen van opdrachten",
+         title: "Conditions générales d'annulation ou de transfert de commandes",
          content: `<p>Elke opdracht is schriftelijk of per e-mail te annuleren of te verplaatsen met volgende annulatievoorwaarden 
                   voor training-, coaching- en intervisieopdrachten:</p>
                   <ul><li>Meer dan 8 weken vooraf geen annulatiekosten</li>
@@ -41,7 +41,7 @@ const fr_other: NamespaceOtherTranslation = {
                   ervoor kiest om niet over te schakelen naar het online alternatief voor de opdracht, gelden ook bovenstaande voorwaarden.</p>`
       },
       {
-         title: "Algemene voorwaarden met betrekking tot het betalen van opdrachten",
+         title: "Conditions générales de paiement des commandes",
          content: `
             <p><b>ARTIKEL 1</b><br/>
             Bezwaren of betwistingen aangaande deze factuur worden niet meer aanvaard vanaf de 

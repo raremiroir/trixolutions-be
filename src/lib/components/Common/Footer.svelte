@@ -1,12 +1,12 @@
 <script>
    import { Logo } from "$src/lib/components";
-   import { locale } from "$i18n/i18n-svelte";
 
    import { Link, Title } from "$comp";
 	import Icon from "@iconify/svelte";
 
    // Import i18n
-   import LL from "$i18n/i18n-svelte";
+   import LL, { locale } from "$i18n/i18n-svelte";
+	import { titleCase } from "$src/lib/utils";
 
 
    $: socialMediaItems = [
@@ -23,7 +23,7 @@
    ]
    $: footerColItems = [
       {
-         title: 'Over Trixolutions',
+         title: titleCase($LL.base.btn.about_trixo()),
          items: [
             {
                title: $LL.nav.about.title(),
@@ -36,7 +36,7 @@
          ]
       },
       {
-         title: 'Open Workshops',
+         title: titleCase($LL.base.footer.open_workshops()),
          items: [
             {
                title: $LL.nav.open_sessions.items.info_sessions.title(),
@@ -53,7 +53,7 @@
          ]
       },
       {
-         title: 'Meer Over Ons',
+         title: titleCase($LL.base.footer.more_about_us()),
          items: [
             {
                title: $LL.nav.others.job_offers.title(),
@@ -88,7 +88,7 @@
 
 		<div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
          <div class="space-y-3">
-				<div class="uppercase dark:text-gray-50">Social media</div>
+				<div class="uppercase dark:text-gray-50">{$LL.base.footer.social_media()}</div>
 				<div class="flex justify-start space-x-3">
                {#each socialMediaItems as item}
                   <Link
@@ -121,5 +121,14 @@
          {/each}
 		</div>
 	</div>
-	<div class="py-6 text-sm text-center dark:text-gray-400">© Trixolutions.be 2023 - Ontworpen, Ontwikkeld en Beheerd door Mist Media </div>
+	<div class="py-6 text-sm text-center dark:text-gray-400">
+      <Link
+         href="https://mistmedia.be/{$locale}"
+         title="{$LL.base.btn.go_to()} Mist Media Website"
+         ariaLabel="{$LL.base.btn.go_to()} Mist Media Website" 
+         color="text-gray-300/80" 
+         target="_blank">
+         © Trixolutions.be 2023 - {$LL.base.footer.creator()}
+      </Link>
+   </div>
 </footer>

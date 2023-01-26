@@ -1,5 +1,5 @@
 <script>
-   import LL from "$i18n/i18n-svelte";
+   import LL, { locale } from "$i18n/i18n-svelte";
 	import { Hero, HeroSlide, Title, Text, Button, H1, Subheader } from "$comp";
 
    $: heroSlides = [
@@ -9,10 +9,10 @@
          content: $LL.pages.home.hero.slides[0].content(),
          extra: $LL.pages.home.hero.slides[0].extra(),
          src: 'home/kracht-gezonde-teams.webp',
-         link: '',
+         link: $LL.nav.open_sessions.items.hybrid_traject.slug(),
          extra_btn: {
-            title: 'Over Trixolutions',
-            link: '',
+            title: $LL.base.btn.about_trixo(),
+            link: $LL.nav.about.slug(),
          }
       },
       {
@@ -61,16 +61,16 @@
          </div>
          <div class="flex flex-row gap-4">
             <Button 
-               ariaLabel="Meer info" outlined
+               ariaLabel={$LL.base.btn.more_info()} outlined
                size="lg" color="secondary"
-               href={slide.link}>
-               Meer Info
+               href="/out:{$locale}/{slide.link}">
+               {$LL.base.btn.more_info()}
             </Button>
             {#if slide.extra_btn}
                <Button 
                   ariaLabel={slide.extra_btn.title} 
                   size="lg" color="primary"
-                  href={slide.extra_btn.link}>
+                  href="/{$locale}/{slide.extra_btn.link}">
                   {slide.extra_btn.title}
                </Button>
             {/if}

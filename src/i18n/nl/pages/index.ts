@@ -62,7 +62,6 @@ const nl_pages: BaseTranslation = {
 	main: {
 		coaching_leadership: {
 			title: 'We geven opleiding in Lencioni Leiderschap & Teamcoaching',
-			slug: 'opleiding-lencioni-leiderschap-teamcoaching',
 			ideal_teamplayer: {
 				title: 'de ideale teamplayer'
 			},

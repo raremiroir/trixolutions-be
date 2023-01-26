@@ -92,6 +92,26 @@ type RootTranslation = {
 			 * T​e​r​u​g​ ​n​a​a​r​ ​H​o​m​e​p​a​g​i​n​a
 			 */
 			back_to_home: string
+			/**
+			 * m​e​e​r​ ​i​n​f​o
+			 */
+			more_info: string
+			/**
+			 * o​v​e​r​ ​T​r​i​x​o​l​u​t​i​o​n​s
+			 */
+			about_trixo: string
+			/**
+			 * l​e​e​r​ ​m​e​e​r
+			 */
+			learn_more: string
+			/**
+			 * l​e​e​s​ ​m​e​e​r
+			 */
+			read_more: string
+			/**
+			 * g​a​ ​n​a​a​r
+			 */
+			go_to: string
 		}
 		error: {
 			/**
@@ -264,6 +284,24 @@ type RootTranslation = {
 			 * V​o​l​g​e​n​d​e​ ​S​l​i​d​e
 			 */
 			next: string
+		}
+		footer: {
+			/**
+			 * s​o​c​i​a​l​e​ ​m​e​d​i​a
+			 */
+			social_media: string
+			/**
+			 * m​e​e​r​ ​o​v​e​r​ ​o​n​s
+			 */
+			more_about_us: string
+			/**
+			 * o​p​e​n​ ​w​o​r​k​s​h​o​p​s
+			 */
+			open_workshops: string
+			/**
+			 * O​n​t​w​o​r​p​e​n​,​ ​O​n​t​w​i​k​k​e​l​d​ ​e​n​ ​B​e​h​e​e​r​d​ ​d​o​o​r​ ​M​i​s​t​ ​M​e​d​i​a
+			 */
+			creator: string
 		}
 	}
 }
@@ -733,10 +771,6 @@ export type NamespacePagesTranslation = {
 			 * W​e​ ​g​e​v​e​n​ ​o​p​l​e​i​d​i​n​g​ ​i​n​ ​L​e​n​c​i​o​n​i​ ​L​e​i​d​e​r​s​c​h​a​p​ ​&​ ​T​e​a​m​c​o​a​c​h​i​n​g
 			 */
 			title: string
-			/**
-			 * o​p​l​e​i​d​i​n​g​-​l​e​n​c​i​o​n​i​-​l​e​i​d​e​r​s​c​h​a​p​-​t​e​a​m​c​o​a​c​h​i​n​g
-			 */
-			slug: string
 			ideal_teamplayer: {
 				/**
 				 * d​e​ ​i​d​e​a​l​e​ ​t​e​a​m​p​l​a​y​e​r
@@ -1731,6 +1765,26 @@ export type TranslationFunctions = {
 			 * Terug naar Homepagina
 			 */
 			back_to_home: () => LocalizedString
+			/**
+			 * meer info
+			 */
+			more_info: () => LocalizedString
+			/**
+			 * over Trixolutions
+			 */
+			about_trixo: () => LocalizedString
+			/**
+			 * leer meer
+			 */
+			learn_more: () => LocalizedString
+			/**
+			 * lees meer
+			 */
+			read_more: () => LocalizedString
+			/**
+			 * ga naar
+			 */
+			go_to: () => LocalizedString
 		}
 		error: {
 			/**
@@ -1886,6 +1940,24 @@ export type TranslationFunctions = {
 			 * Volgende Slide
 			 */
 			next: () => LocalizedString
+		}
+		footer: {
+			/**
+			 * sociale media
+			 */
+			social_media: () => LocalizedString
+			/**
+			 * meer over ons
+			 */
+			more_about_us: () => LocalizedString
+			/**
+			 * open workshops
+			 */
+			open_workshops: () => LocalizedString
+			/**
+			 * Ontworpen, Ontwikkeld en Beheerd door Mist Media
+			 */
+			creator: () => LocalizedString
 		}
 	}
 	components: {
@@ -2350,10 +2422,6 @@ export type TranslationFunctions = {
 				 * We geven opleiding in Lencioni Leiderschap & Teamcoaching
 				 */
 				title: () => LocalizedString
-				/**
-				 * opleiding-lencioni-leiderschap-teamcoaching
-				 */
-				slug: () => LocalizedString
 				ideal_teamplayer: {
 					/**
 					 * de ideale teamplayer

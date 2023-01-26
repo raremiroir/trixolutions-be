@@ -31,7 +31,12 @@ const nl: BaseTranslation = {
       },
       btn: {
          close: "sluiten",
-         back_to_home: "Terug naar Homepagina"
+         back_to_home: "Terug naar Homepagina",
+         more_info: "meer info",
+         about_trixo: "over Trixolutions",
+         learn_more: 'leer meer',
+         read_more: 'lees meer',
+         go_to: 'ga naar',
       },
       error: {
          not_found: "Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk."
@@ -79,6 +84,12 @@ const nl: BaseTranslation = {
       slide: {
          prev: "Vorige Slide",
          next: "Volgende Slide"
+      },
+      footer: {
+         social_media: "sociale media",
+         more_about_us: 'meer over ons',
+         open_workshops: 'open workshops',
+         creator: "Ontworpen, Ontwikkeld en Beheerd door Mist Media"
       }
    }
 }
