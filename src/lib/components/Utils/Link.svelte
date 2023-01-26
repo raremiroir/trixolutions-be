@@ -15,6 +15,8 @@
    export let href:string;
    // Accessibility aria-label string:
    export let ariaLabel:string;
+   // Accessibility title string:
+   export let title:string = '';
 
    // Target of the link ( '' / '_blank' / ... )
    export let target = '';
@@ -26,9 +28,9 @@
    
 
    // Color of text in link
-   export let color = ` text-primary-l3 
-                        group-hover:text-primary-l1   hover:text-primary-l1 
-                        group-active:text-primary     active:text-primary`
+   export let color = `text-primary-l3`
+   export let hoverColor = `group-hover:text-primary-l1   hover:text-primary-l1 
+                            group-active:text-primary     active:text-primary`
 
    // Choose link style
    // == underline - underlineOnHover - specialUnderline - none
@@ -45,6 +47,7 @@
    {href} 
    {target} {rel} {role}
    aria-label={ariaLabel}
+   {title}
    
    class="
       { wrap 
@@ -58,7 +61,7 @@
                ? `group-hover:border-b-primary-l1 hover:border-t-primary-l1
                   active:bg-primary-l1 active:!text-gray-100 px-1`
             : 'border-transparent'}
-            ${color}`
+            ${color} ${hoverColor}`
       } {klass}">
    <slot/>
 </a>
