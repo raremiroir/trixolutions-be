@@ -14,18 +14,21 @@ const localeTranslationLoaders = {
 const localeNamespaceLoaders = {
 	en: {
 		components: () => import('./en/components/index.js'),
+		nav: () => import('./en/nav/index.js'),
 		other: () => import('./en/other/index.js'),
 		pages: () => import('./en/pages/index.js'),
 		sessions: () => import('./en/sessions/index.js')
 	},
 	fr: {
 		components: () => import('./fr/components/index.js'),
+		nav: () => import('./fr/nav/index.js'),
 		other: () => import('./fr/other/index.js'),
 		pages: () => import('./fr/pages/index.js'),
 		sessions: () => import('./fr/sessions/index.js')
 	},
 	nl: {
 		components: () => import('./nl/components/index.js'),
+		nav: () => import('./nl/nav/index.js'),
 		other: () => import('./nl/other/index.js'),
 		pages: () => import('./nl/pages/index.js'),
 		sessions: () => import('./nl/sessions/index.js')

@@ -10,14 +10,17 @@ import fr from './fr/index.js'
 import nl from './nl/index.js'
 
 import en_components from './en/components/index.js'
+import en_nav from './en/nav/index.js'
 import en_other from './en/other/index.js'
 import en_pages from './en/pages/index.js'
 import en_sessions from './en/sessions/index.js'
 import fr_components from './fr/components/index.js'
+import fr_nav from './fr/nav/index.js'
 import fr_other from './fr/other/index.js'
 import fr_pages from './fr/pages/index.js'
 import fr_sessions from './fr/sessions/index.js'
 import nl_components from './nl/components/index.js'
+import nl_nav from './nl/nav/index.js'
 import nl_other from './nl/other/index.js'
 import nl_pages from './nl/pages/index.js'
 import nl_sessions from './nl/sessions/index.js'
@@ -26,6 +29,7 @@ const localeTranslations = {
 	en: {
 		...en,
 		components: en_components,
+		nav: en_nav,
 		other: en_other,
 		pages: en_pages,
 		sessions: en_sessions
@@ -33,6 +37,7 @@ const localeTranslations = {
 	fr: {
 		...fr,
 		components: fr_components,
+		nav: fr_nav,
 		other: fr_other,
 		pages: fr_pages,
 		sessions: fr_sessions
@@ -40,6 +45,7 @@ const localeTranslations = {
 	nl: {
 		...nl,
 		components: nl_components,
+		nav: nl_nav,
 		other: nl_other,
 		pages: nl_pages,
 		sessions: nl_sessions

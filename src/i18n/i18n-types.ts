@@ -15,6 +15,7 @@ export type Translation = RootTranslation & DisallowNamespaces
 export type Translations = RootTranslation &
 {
 	components: NamespaceComponentsTranslation,
+	nav: NamespaceNavTranslation,
 	other: NamespaceOtherTranslation,
 	pages: NamespacePagesTranslation,
 	sessions: NamespaceSessionsTranslation
@@ -23,42 +24,6 @@ export type Translations = RootTranslation &
 type RootTranslation = {
 	base: {
 		nav: {
-			/**
-			 * h​o​m​e
-			 */
-			home: string
-			/**
-			 * o​v​e​r​ ​o​n​s
-			 */
-			about: string
-			/**
-			 * r​e​f​e​r​e​n​t​i​e​s
-			 */
-			references: string
-			/**
-			 * b​l​o​g
-			 */
-			blog: string
-			/**
-			 * o​p​e​n​ ​w​o​r​k​s​h​o​p​s
-			 */
-			open_sessions: string
-			/**
-			 * g​r​a​t​i​s​ ​o​p​e​n​ ​i​n​f​o​s​e​s​s​i​e​s
-			 */
-			info_sessions: string
-			/**
-			 * h​y​b​r​i​d​e​ ​l​e​n​c​i​o​n​i​ ​l​e​e​r​t​r​a​j​e​c​t
-			 */
-			hybrid_traject: string
-			/**
-			 * l​e​n​c​i​o​n​i​ ​d​e​e​p​d​i​v​e​ ​-​ ​l​e​v​e​l​ ​2
-			 */
-			deepdive: string
-			/**
-			 * c​o​n​t​a​c​t
-			 */
-			contact: string
 			hamburger: {
 				/**
 				 * b​e​k​i​j​k​ ​o​f​ ​v​e​r​b​e​r​g​ ​d​e​ ​n​a​v​i​g​a​t​i​e​b​a​l​k
@@ -401,6 +366,140 @@ export type NamespaceComponentsTranslation = {
 				 */
 				'12': string
 			}
+		}
+	}
+}
+
+export type NamespaceNavTranslation = {
+	home: {
+		/**
+		 * H​o​m​e
+		 */
+		title: string
+		slug: string
+	}
+	about: {
+		/**
+		 * O​v​e​r​ ​O​n​s
+		 */
+		title: string
+		/**
+		 * o​v​e​r​-​o​n​s
+		 */
+		slug: string
+	}
+	references: {
+		/**
+		 * R​e​f​e​r​e​n​t​i​e​s
+		 */
+		title: string
+		/**
+		 * r​e​f​e​r​e​n​t​i​e​s
+		 */
+		slug: string
+	}
+	blog: {
+		/**
+		 * B​l​o​g
+		 */
+		title: string
+		/**
+		 * b​l​o​g
+		 */
+		slug: string
+	}
+	open_sessions: {
+		/**
+		 * O​p​e​n​ ​S​e​s​s​i​e​s
+		 */
+		title: string
+		/**
+		 * o​p​e​n​-​s​e​s​s​i​e​s
+		 */
+		slug: string
+		items: {
+			info_sessions: {
+				/**
+				 * G​r​a​t​i​s​ ​O​p​e​n​ ​I​n​f​o​s​e​s​s​i​e​s
+				 */
+				title: string
+				/**
+				 * o​p​e​n​-​s​e​s​s​i​e​s​/​g​r​a​t​i​s​-​o​p​e​n​-​i​n​f​o​s​e​s​s​i​e​s
+				 */
+				slug: string
+			}
+			hybrid_traject: {
+				/**
+				 * H​y​b​r​i​d​e​ ​L​e​n​c​i​o​n​i​ ​L​e​e​r​t​r​a​j​e​c​t
+				 */
+				title: string
+				/**
+				 * o​p​e​n​-​s​e​s​s​i​e​s​/​h​y​b​r​i​d​e​-​l​e​n​c​i​o​n​i​-​l​e​e​r​t​r​a​j​e​c​t
+				 */
+				slug: string
+			}
+			deepdive: {
+				/**
+				 * L​e​n​c​i​o​n​i​ ​D​e​e​p​d​i​v​e​ ​-​ ​L​e​v​e​l​ ​2
+				 */
+				title: string
+				/**
+				 * o​p​e​n​-​s​e​s​s​i​e​s​/​l​e​n​c​i​o​n​i​-​d​e​e​p​d​i​v​e​-​l​e​v​e​l​-​2
+				 */
+				slug: string
+			}
+		}
+	}
+	contact: {
+		/**
+		 * C​o​n​t​a​c​t
+		 */
+		title: string
+		/**
+		 * c​o​n​t​a​c​t
+		 */
+		slug: string
+	}
+	others: {
+		job_offers: {
+			/**
+			 * V​a​c​a​t​u​r​e​s
+			 */
+			title: string
+			/**
+			 * v​a​c​a​t​u​r​e​s
+			 */
+			slug: string
+		}
+		terms_conditions: {
+			/**
+			 * A​l​g​e​m​e​n​e​ ​V​o​o​r​w​a​a​r​d​e​n
+			 */
+			title: string
+			/**
+			 * a​l​g​e​m​e​n​e​-​v​o​o​r​w​a​a​r​d​e​n
+			 */
+			slug: string
+		}
+		terms_kmo: {
+			/**
+			 * A​l​g​e​m​e​n​e​ ​V​o​o​r​w​a​a​r​d​e​n​ ​K​M​O​ ​P​o​r​t​e​f​e​u​i​l​l​e
+			 */
+			title: string
+			/**
+			 * a​l​g​e​m​e​n​e​-​v​o​o​r​w​a​a​r​d​e​n​-​k​m​o​-​p​o​r​t​e​f​e​u​i​l​l​e
+			 */
+			slug: string
+		}
+		privacy_policy: {
+			/**
+			 * P​r​i​v​a​c​y​b​e​l​e​i​d
+			 */
+			title: string
+			/**
+			 * p​r​i​v​a​c​y​b​e​l​e​i​d
+			 */
+			slug: string
 		}
 	}
 }
@@ -1524,6 +1623,7 @@ export type NamespaceSessionsTranslation = {
 
 export type Namespaces =
 	| 'components'
+	| 'nav'
 	| 'other'
 	| 'pages'
 	| 'sessions'
@@ -1534,6 +1634,12 @@ type DisallowNamespaces = {
 	 * you need to use the `./components/index.ts` file instead
 	 */
 	components?: "[typesafe-i18n] reserved for 'components'-namespace. You need to use the `./components/index.ts` file instead."
+
+	/**
+	 * reserved for 'nav'-namespace\
+	 * you need to use the `./nav/index.ts` file instead
+	 */
+	nav?: "[typesafe-i18n] reserved for 'nav'-namespace. You need to use the `./nav/index.ts` file instead."
 
 	/**
 	 * reserved for 'other'-namespace\
@@ -1557,42 +1663,6 @@ type DisallowNamespaces = {
 export type TranslationFunctions = {
 	base: {
 		nav: {
-			/**
-			 * home
-			 */
-			home: () => LocalizedString
-			/**
-			 * over ons
-			 */
-			about: () => LocalizedString
-			/**
-			 * referenties
-			 */
-			references: () => LocalizedString
-			/**
-			 * blog
-			 */
-			blog: () => LocalizedString
-			/**
-			 * open workshops
-			 */
-			open_sessions: () => LocalizedString
-			/**
-			 * gratis open infosessies
-			 */
-			info_sessions: () => LocalizedString
-			/**
-			 * hybride lencioni leertraject
-			 */
-			hybrid_traject: () => LocalizedString
-			/**
-			 * lencioni deepdive - level 2
-			 */
-			deepdive: () => LocalizedString
-			/**
-			 * contact
-			 */
-			contact: () => LocalizedString
 			hamburger: {
 				/**
 				 * bekijk of verberg de navigatiebalk
@@ -1916,6 +1986,139 @@ export type TranslationFunctions = {
 					 */
 					'12': () => LocalizedString
 				}
+			}
+		}
+	}
+	nav: {
+		home: {
+			/**
+			 * Home
+			 */
+			title: () => LocalizedString
+			slug: () => LocalizedString
+		}
+		about: {
+			/**
+			 * Over Ons
+			 */
+			title: () => LocalizedString
+			/**
+			 * over-ons
+			 */
+			slug: () => LocalizedString
+		}
+		references: {
+			/**
+			 * Referenties
+			 */
+			title: () => LocalizedString
+			/**
+			 * referenties
+			 */
+			slug: () => LocalizedString
+		}
+		blog: {
+			/**
+			 * Blog
+			 */
+			title: () => LocalizedString
+			/**
+			 * blog
+			 */
+			slug: () => LocalizedString
+		}
+		open_sessions: {
+			/**
+			 * Open Sessies
+			 */
+			title: () => LocalizedString
+			/**
+			 * open-sessies
+			 */
+			slug: () => LocalizedString
+			items: {
+				info_sessions: {
+					/**
+					 * Gratis Open Infosessies
+					 */
+					title: () => LocalizedString
+					/**
+					 * open-sessies/gratis-open-infosessies
+					 */
+					slug: () => LocalizedString
+				}
+				hybrid_traject: {
+					/**
+					 * Hybride Lencioni Leertraject
+					 */
+					title: () => LocalizedString
+					/**
+					 * open-sessies/hybride-lencioni-leertraject
+					 */
+					slug: () => LocalizedString
+				}
+				deepdive: {
+					/**
+					 * Lencioni Deepdive - Level 2
+					 */
+					title: () => LocalizedString
+					/**
+					 * open-sessies/lencioni-deepdive-level-2
+					 */
+					slug: () => LocalizedString
+				}
+			}
+		}
+		contact: {
+			/**
+			 * Contact
+			 */
+			title: () => LocalizedString
+			/**
+			 * contact
+			 */
+			slug: () => LocalizedString
+		}
+		others: {
+			job_offers: {
+				/**
+				 * Vacatures
+				 */
+				title: () => LocalizedString
+				/**
+				 * vacatures
+				 */
+				slug: () => LocalizedString
+			}
+			terms_conditions: {
+				/**
+				 * Algemene Voorwaarden
+				 */
+				title: () => LocalizedString
+				/**
+				 * algemene-voorwaarden
+				 */
+				slug: () => LocalizedString
+			}
+			terms_kmo: {
+				/**
+				 * Algemene Voorwaarden KMO Portefeuille
+				 */
+				title: () => LocalizedString
+				/**
+				 * algemene-voorwaarden-kmo-portefeuille
+				 */
+				slug: () => LocalizedString
+			}
+			privacy_policy: {
+				/**
+				 * Privacybeleid
+				 */
+				title: () => LocalizedString
+				/**
+				 * privacybeleid
+				 */
+				slug: () => LocalizedString
 			}
 		}
 	}
