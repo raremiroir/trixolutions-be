@@ -1,8 +1,10 @@
+// Import supabase
 import '$lib/db';
 
+// Import i18n
 import { detectLocale, i18n, isLocale } from '$i18n/i18n-util'
 import { loadAllLocales } from '$i18n/i18n-util.sync'
-import { error, type Handle, type RequestEvent } from '@sveltejs/kit'
+import type { Handle, RequestEvent } from '@sveltejs/kit'
 import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors'
 import type { Locales } from './i18n/i18n-types';
 
@@ -16,14 +18,16 @@ const mainSlugs = {
 	en: ['open-sessions', 'about-us']
 }
 
-
+// Load locales
 loadAllLocales()
 const L = i18n()
 
 export const handle: Handle = async ({ event, resolve }) => {
 
-	console.log(event.params)
+	// console.log(event.params)
+	// Define lang according to params
 	let lang = event.params.lang as Locales;
+	// Define rest of path
 	let subPath;
 	let rest;
 	if (lang) {
@@ -31,13 +35,9 @@ export const handle: Handle = async ({ event, resolve }) => {
 	} else {
 		[, subPath, ...rest] = event.url.pathname.split('/')
 	}
-	// read language slug, subpath and rest path
-	
-	// console.log('lang param:', lang)
-	// console.log('subPath:', subPath)
-	// console.log('restPath:', ...rest)
-
+	// Define locale as lang
 	let locale = lang as Locales;
+	// If lang is invalid, get preferred lang
 	if (!lang || !isLocale(lang) || lang === undefined) {
 
       const restString = [...rest].join('/')
@@ -60,6 +60,7 @@ export const handle: Handle = async ({ event, resolve }) => {
          } else if (mainSlugs.en.includes(subPath)) {
             locale = 'en';
 				lang = 'en'
+			// If no match, redirect to home page with preferred locale
          } else {
 				return new Response(null, {
 					status: 302,
@@ -74,18 +75,13 @@ export const handle: Handle = async ({ event, resolve }) => {
             new_path = `/${locale}/${subPath}`
          }
       }
-		// console.log('detected locale: ', locale);
-		// console.log('new path: ', new_path);
 		
       // Redirect to new path
 		return new Response(null, {
 					status: 301,
 					headers: { Location: `${new_path}` },
 				})
-   } else {
-		locale = lang as Locales;
-	}
-	locale = locale as Locales;
+   }
 
 	// if slug is not a locale, use base locale (e.g. api endpoints)
 	const LL = L[locale]
@@ -93,7 +89,6 @@ export const handle: Handle = async ({ event, resolve }) => {
 	// bind locale and translation functions to current request
 	event.locals.locale = locale
 	event.locals.LL = LL
-
 
 	// replace html lang attribute with correct language
 	return resolve(event, { transformPageChunk: ({ html }) => html.replace('%lang%', locale) })
