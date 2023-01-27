@@ -68,7 +68,6 @@
    export { default as Footer }        from './Common/Footer.svelte';
 
    // Extremely common items
-   // export { default as Button }        from './Base/ButtonOld.svelte';
    export { default as List }          from './Core/List/List.svelte'
    export { default as ListItem }      from './Core/List/ListItem.svelte'
 
