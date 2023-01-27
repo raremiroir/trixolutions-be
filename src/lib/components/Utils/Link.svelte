@@ -36,18 +36,15 @@
    // == underline - underlineOnHover - specialUnderline - none
    export let linkStyle = 'none';
 
-   // Export unused types
-   export let type = '';
-   export let tabindex = '-1';
    export let disabled = false;
 </script>
 
 <!-- Link Tag -->
 <a 
-   {href} 
+   {title} {href} 
    {target} {rel} {role}
    aria-label={ariaLabel}
-   {title}
+   aria-disabled={disabled}
    
    class="
       { wrap 
