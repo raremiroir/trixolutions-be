@@ -1,7 +1,7 @@
 <script>
    import { Logo } from "$src/lib/components";
 
-   import { Link, Title } from "$comp";
+   import { Link } from "$comp";
 	import Icon from "@iconify/svelte";
 
    // Import i18n
@@ -21,7 +21,7 @@
          icon: 'ri:facebook-box-fill'
       }
    ]
-   $: footerColItems = [
+   let footerColItems = [
       {
          title: titleCase($LL.base.btn.about_trixo()),
          items: [
@@ -74,6 +74,7 @@
          ]
       },
    ]
+   $: footerColItems;
 </script>
 
 <!-- Footer -->
