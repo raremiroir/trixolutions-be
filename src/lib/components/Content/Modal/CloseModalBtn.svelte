@@ -12,8 +12,9 @@
 <div class="h-8 w-8">
    <Tooltip
       color="error"
-      title={firstLetterCase($LL.base.btn.close())}
-      placement="bottom-9 left-1/2 -translate-x-1/2">
+      flyX={20} flyY={0}
+      placement='bottom-1 right-9 '
+      title={firstLetterCase($LL.base.btn.close())}>
       <div 
          class="w-full h-full"
          on:click|stopPropagation={onClick}
