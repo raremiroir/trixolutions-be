@@ -43,10 +43,12 @@ export const load: PageLoad = async ({ parent, params }) => {
       return pagesData;
    }
 
-   if (!isLocale(params.lang)) {
-      params.lang = 'nl'
-   }
+   // // Set param if no param set -- not needed 
+   // if (!isLocale(params.lang)) {
+   //    params.lang = 'nl'
+   // }
 
+   // Load data if lang param is a locale
    if (isLocale(params.lang)) {
       loadI18nLib()
       return {

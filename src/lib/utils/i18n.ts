@@ -8,7 +8,9 @@
 
 import { langSelection } from '$lib/stores'
 
-import { detectLocale } from 'typesafe-i18n/detectors'
+import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors'
+import { detectLocale } from '$i18n/i18n-util'
+import type { RequestEvent } from '@sveltejs/kit/types/internal'
 
 export const replaceLocaleInUrl = (url: URL, locale: string, full = true): string => {
 
@@ -32,19 +34,6 @@ export const changeUrlToLocale = (url: URL, locale: string, full = true): string
 	const newUrl = processPathname(url, new_pathname);
 	return newUrl.toString();
 }
-
-export const assignPreferredLocale = (url: URL, full = true): string => {
-	const [, ...rest] = url.pathname.split('/')
-	const fallbackLocale = 'nl'
-	const availableLocales = ['nl', 'en', 'fr']
-
-	const detectedLocale = detectLocale(fallbackLocale, availableLocales)
-	const new_pathname = `/${[detectedLocale, ...rest].join('/')}`
-
-	const newUrl = processPathname(url, new_pathname)
-	return newUrl.toString();
-}
-
 
 export const processPathname = (url:URL, new_pathname:string, full = true) => {
 	if (!full) {
