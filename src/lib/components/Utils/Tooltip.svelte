@@ -61,6 +61,7 @@
          class="
             absolute
             backdrop-blur-lg
+            cursor-default
             {placement}
             z-2 whitespace-nowrap
             { small ? 'text-xs border opacity-80' : 'text-sm border-2 opacity-100'} 
