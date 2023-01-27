@@ -899,6 +899,10 @@ export type NamespaceSessionsTranslation = {
 		 */
 		title_short: string
 		/**
+		 * i​n​s​c​h​r​i​j​v​e​n​ ​i​n​ ​i​n​f​o​s​e​s​s​i​e
+		 */
+		subscribe: string
+		/**
 		 * t​r​a​i​n​e​r
 		 */
 		trainer: string
@@ -1345,6 +1349,10 @@ export type NamespaceSessionsTranslation = {
 		 */
 		traject_shorter: string
 		/**
+		 * i​n​s​c​h​r​i​j​v​e​n​ ​i​n​ ​h​y​b​r​i​d​e​ ​l​e​e​r​t​r​a​j​e​c​t
+		 */
+		subscribe: string
+		/**
 		 * o​p​l​e​i​d​i​n​g​ ​i​n​ ​t​e​a​m​c​o​a​c​h​i​n​g
 		 */
 		tag: string
@@ -1463,6 +1471,10 @@ export type NamespaceSessionsTranslation = {
 		 * d​e​e​p​d​i​v​e
 		 */
 		deepdive: string
+		/**
+		 * i​n​s​c​h​r​i​j​v​e​n​ ​v​o​o​r​ ​d​e​e​p​d​i​v​e
+		 */
+		subscribe: string
 		/**
 		 * L​e​v​e​l​ ​2
 		 */
@@ -2549,6 +2561,10 @@ export type TranslationFunctions = {
 			 */
 			title_short: () => LocalizedString
 			/**
+			 * inschrijven in infosessie
+			 */
+			subscribe: () => LocalizedString
+			/**
 			 * trainer
 			 */
 			trainer: () => LocalizedString
@@ -2995,6 +3011,10 @@ export type TranslationFunctions = {
 			 */
 			traject_shorter: () => LocalizedString
 			/**
+			 * inschrijven in hybride leertraject
+			 */
+			subscribe: () => LocalizedString
+			/**
 			 * opleiding in teamcoaching
 			 */
 			tag: () => LocalizedString
@@ -3113,6 +3133,10 @@ export type TranslationFunctions = {
 			 * deepdive
 			 */
 			deepdive: () => LocalizedString
+			/**
+			 * inschrijven voor deepdive
+			 */
+			subscribe: () => LocalizedString
 			/**
 			 * Level 2
 			 */

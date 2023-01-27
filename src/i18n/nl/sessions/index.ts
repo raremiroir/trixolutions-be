@@ -30,6 +30,7 @@ const nl_sessions: BaseTranslation = {
       title_single: "gratis online open infosessie",
       title_alt: "gratis open infosessies",
       title_short: "online infosessie",
+      subscribe: 'inschrijven in infosessie',
       trainer: "trainer",
       time: "tijd",
       intro: {
@@ -238,6 +239,7 @@ const nl_sessions: BaseTranslation = {
       title_alt: "hybride lencioni teamcoaching leertraject",
       title_short: "hybride lencioni leertraject",
       traject_shorter: "hybride traject",
+      subscribe: 'inschrijven in hybride leertraject',
       tag: 'opleiding in teamcoaching',
       expand: {
          title: "Uitbreiding van Leertraject",
@@ -294,6 +296,7 @@ const nl_sessions: BaseTranslation = {
       title: 'Lencioni Deepdive',
       advanced_coaching: 'Advanced Opleiding',
       deepdive: 'deepdive',
+      subscribe: 'inschrijven voor deepdive',
       level2: 'Level 2',
       intro:   `In 1 dag gaan we dieper in op de 4 andere succesvolle modellen van 
                Patrick Lencioni en The Table Group.<br/><br/>

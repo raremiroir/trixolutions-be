@@ -27,6 +27,7 @@ const en_sessions: NamespaceSessionsTranslation = {
       title_single: "free online open info session",
       title_alt: "free open info sessions",
       title_short: "online info session",
+      subscribe: 'sign up for info session',
       trainer: "trainer",
       time: "time frame",
       intro: {
@@ -237,6 +238,7 @@ const en_sessions: NamespaceSessionsTranslation = {
       title_alt: "hybrid lencioni team coaching learning path",
       title_short: "hybrid lencioni learning path",
       traject_shorter: "hybrid track",
+      subscribe: 'sign up for hybrid learning track',
       tag: 'training in team coaching',
       expand: {
          title: "Expansion of Learning Path",
@@ -294,6 +296,7 @@ const en_sessions: NamespaceSessionsTranslation = {
       title: 'Lencioni Deepdive',
       advanced_coaching: 'Advanced Training',
       deepdive: 'deepdive',
+      subscribe: 'sign up for deepdive',
       level2: 'Level 2',
       intro:   `In 1 day we take a closer look at the 4 other successful models of 
                Patrick Lencioni and The Table Group.<br/><br/>
