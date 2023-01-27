@@ -4,14 +4,13 @@
    // Import yup
    import * as yup from 'yup';
 	import LL from '$i18n/i18n-svelte'
-   import { firstLetterCase, formatMonthShort, titleCase } from '$src/lib/utils';
+   import { firstLetterCase, titleCase } from '$src/lib/utils';
 
    // Import components
    import { Button, Tooltip } from '$comp'
-   import { RowWrap, ResetFormBtn, MessageSentAlert } from './FormUtils'
+   import { RowWrap, MessageSentAlert } from './FormUtils'
    import FormInput from './FormInput/index.svelte'
    import { Confetti } from 'svelte-confetti';
-	import Icon from '@iconify/svelte';
    
 	import supabase from '$src/lib/db';
 
@@ -21,20 +20,24 @@
    export let sessionDates:any = []
    export let session = "info"
 
+   // Define submit text for on button
+   export let submitText = $LL.sessions.info.subscribe()
+   $: submitText;
+
    let sessionType = '';
 
    // Define validation schema
    const initialValidationSchema = {
       first_name: yup
-         .string()
+      .string()
          .min( 2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.first_name()), min: 2 }) )
-         .matches( /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/u, { excludeEmptyString: true, message: $LL.base.validation.only_alpha({ item: titleCase($LL.base.form.first_name()) }) } )
+         .matches( /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{1,}$/u, { excludeEmptyString: true, message: $LL.base.validation.only_alpha({ item: titleCase($LL.base.form.first_name()) }) } )
          .required($LL.base.validation.required({ item: titleCase($LL.base.form.first_name()) })),
 
       last_name: yup
-         .string()
+      .string()
          .min( 3, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.last_name()), min: 3 }) )
-         .matches(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/u, { excludeEmptyString: true, message: $LL.base.validation.only_alpha({ item: titleCase($LL.base.form.last_name()) }) } )
+         .matches(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{1,}$/u, { excludeEmptyString: true, message: $LL.base.validation.only_alpha({ item: titleCase($LL.base.form.last_name()) }) } )
          .required($LL.base.validation.required({ item: titleCase($LL.base.form.last_name()) })),
 
       email: yup
@@ -55,15 +58,18 @@
          .required( firstLetterCase( $LL.base.form.pick_session({ session: (session === 'info' ? $LL.sessions.info.single() : $LL.sessions.level_2.workshop()) }) ) ),
 
       subject: yup
-         .string()
+      .string()
+         .min( 4, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.subject()), min: 4 }) )
+         .max( 40, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.subject()), max: 40 }) )
          .required($LL.base.validation.required({ item: titleCase($LL.base.form.subject()) })),
          
          message: yup
          .string()
-         .required($LL.base.validation.required({ item: titleCase($LL.base.form.message()) }))
+         .min( 5, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.message()), min: 5 }) )
+         .max( 500, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.message()), max: 500 }) )
+         .required( $LL.base.validation.required({ item: titleCase($LL.base.form.message()) }) )
    }
 
-   
    let valSchema = yup.object().shape({
          first_name: initialValidationSchema.first_name,
          last_name: initialValidationSchema.last_name,
@@ -174,12 +180,14 @@
       $form.session_picked = '';
       $form.company = '';
       $form.subject = '';
+      $form.message = '';
+      messageSent = false;
    }
 </script>
 
 
 <form on:submit={handleSubmit}
-      class="flex flex-col gap-2">
+      class="flex flex-col gap-2 overflow-y-hidden">
 
    <RowWrap>
       <FormInput 
@@ -266,7 +274,7 @@
          required/>
    </RowWrap>
 
-   <div class="flex flex-row w-full justify-between mt-4">
+   <div class="flex flex-row w-full justify-between items-center mt-4">
       <!-- Submit Button -->
       <div class="w-fit h-fit">
          <Tooltip 
@@ -277,19 +285,19 @@
             placement="{!$isValid || formEmpty ? 'left-0 bottom-12' : '-right-32 bottom-2'}"
             flyY={!$isValid || formEmpty ? 12 : 0} flyX={!$isValid || formEmpty ? 0 : -16}>
             <Button 
+               ariaLabel={submitText}
                disabled={!$isValid || anyEmpty} 
                type="submit">
                {#if $isValid && !anyEmpty}
-                  <Confetti amount=70 x={[-0.5, 0.5]} y={[-0.5, -0.5]} colorArray={["#0b3259", "#fb5607", "#195693", "#d1d1ce", "#3a86ff"]} />
+                  <Confetti amount={70} x={[-0.5, 0.5]} y={[-0.5, -0.5]} colorArray={["#0b3259", "#fb5607", "#195693", "#d1d1ce", "#3a86ff"]} />
                {/if}
-               {$LL.base.form.content.send_msg()}
+               {submitText}
             </Button>
          </Tooltip>
       </div>
       {#if messageSent}
          <MessageSentAlert resetForm={() => resetForm()} />
       {/if}
-      <ResetFormBtn {formEmpty} resetForm={() => resetForm()} />
    </div>
 
 </form>

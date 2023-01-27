@@ -8,7 +8,9 @@
    // Import components
    import { Tooltip, Text } from "$comp";
 	import { ValidationError } from "../FormUtils";
-   import { TextArea, Input, Select } from ".";
+   import TextArea from './TextArea.svelte'
+   import Input from './Input.svelte'
+   import Select from './Select.svelte'
 	import Icon from "@iconify/svelte";
 
 
@@ -29,6 +31,7 @@
 
    // If Textarea
    export let rows = 6;
+   export let noResize = false;
    
    let ariaLabel = `${label} input`;
 
@@ -100,8 +103,8 @@
          transition-all duration-200 ease-in-out
          { textarea ? 'h-40' : 'h-12'}
          { errors ? inputFocused ? 'border-error' : 'border-error/50'
-                  : inputFocused ? 'border-primary' : 'border-gray-50' }
-         { inputFocused ? 'bg-gray-50/30' : 'bg-gray-50 ' }
+                  : inputFocused ? 'border-primary' : 'border-gray-100' }
+         { inputFocused ? 'bg-gray-50' : 'bg-gray-100 ' }
          flex flex-row justify-between items-center
          ">
       <!-- Input -->
@@ -111,7 +114,7 @@
          on:blur={() => inputFocused = false}
          {type} {value} {required}
          {placeholder} {name} disabled={disabled || automatic}
-         {ariaLabel} {rows}
+         {ariaLabel} {rows} {noResize}
          on:input={handleInput}
          on:change
          class="
@@ -129,7 +132,7 @@
          </svelte:component>
          {#if value !== '' && !disabled}
             <div 
-               transition:fade={{duration:150}}
+               transition:fade={{duration:200}}
                class="
                   h-full w-fit p-0.5
                   flex items-center 

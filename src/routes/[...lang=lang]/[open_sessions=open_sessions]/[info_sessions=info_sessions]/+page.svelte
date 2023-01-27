@@ -18,12 +18,6 @@
    // Import utils
    import { formatDateMonthFull, formatTime, formatUrl, titleCase} from "$utils";
 	
-   // Import data
-	import type { PageData } from "../gratis-open-infosessies/$types";
-   export let data:PageData;
-   let sessions = Object(data.sessions);
-   let sessionDates = Object(data.sessionDates);
-
    // Define current page slug
    import { currentPageMap } from "$lib/stores";
    $currentPageMap = [
@@ -32,13 +26,21 @@
       {locale: 'nl', slug: 'open-sessies/gratis-open-infosessies'}
    ];
 
+   // Import data
+	import type { PageData } from "../../$types";
+   export let data:PageData;
+   // Get info sessions
+   let sessions = Object(data.sessions);
+   // Get info session dates
+   let sessionDates = Object(data.sessionDates);
+
+
    // SEO
 	let pageSlug = formatUrl($LL.sessions.info.title_alt());
    let { author, siteUrl } = website;
 	let breadcrumbs = [
       { name: titleCase($LL.sessions.info.title()), slug: `/${$locale}/${pageSlug}/` }
    ];
-	
    let entityMeta = {
 		url: `${siteUrl}/${$locale}/${pageSlug}`,
 		faviconWidth: 512, faviconHeight: 512,
@@ -126,7 +128,7 @@
                
                   <H3 slot="title" small>{titleCase($LL.pages.contact.btn.contact_us())}!</H3>   
    
-                  <SessionSubscribeForm session="info_session" {sessionDates}/>
+                  <SessionSubscribeForm session="info_session" submitText={$LL.sessions.info.subscribe()} {sessionDates}/>
                
                </Modal>
             </Reveal>

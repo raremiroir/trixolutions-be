@@ -12,6 +12,9 @@
 
    export let rows = 6;
 
+   // Disable resizing
+   export let noResize = false;
+
 
 </script>
 
@@ -22,5 +25,5 @@
    aria-label={ariaLabel}
    id={name} {name} {placeholder} {value} {required}
    on:input on:change
-   class={klass} 
+   class="{noResize ? 'resize-none' : ''} {klass}" 
 />

@@ -13,10 +13,10 @@
 	import { firstLetterCase, titleCase } from '$src/lib/utils';
    // Import components
    import { Button, Tooltip } from '$comp';
-   import { RowWrap, ResetFormBtn, MessageSentAlert } from './FormUtils'
+   import { RowWrap, MessageSentAlert } from './FormUtils'
    import FormInput from './FormInput/index.svelte'
-	import Icon from '@iconify/svelte';
    import { Confetti } from 'svelte-confetti';
+	import { fade } from 'svelte/transition';
    
    // Define validation schema
    const initialValidationSchema = {
@@ -121,12 +121,14 @@
       $form.email = '';
       $form.company = '';
       $form.subject = '';
+      $form.message = '';
+      messageSent = false;
    }
 </script>
 
 
 <form on:submit={handleSubmit}
-      class="flex flex-col gap-2">
+      class="flex flex-col gap-2 overflow-y-hidden">
 
    <RowWrap>
       <FormInput 
@@ -176,9 +178,8 @@
 
    <RowWrap>
       <FormInput 
-         textarea
-         name="message"
-         rows={6}
+         textarea name="message"
+         rows={6} noResize
          label="{titleCase($LL.base.form.message())}"
          on:change={handleChange}
          bind:value={$form.message}
@@ -186,9 +187,9 @@
          required/>
    </RowWrap>
 
-   <div class="flex flex-row w-full justify-between mt-4">
+   <div class="flex flex-row w-full justify-between items-center mt-4">
       <!-- Submit Button -->
-      <div class="w-fit h-fit">
+      <div class="w-1/2 h-fit">
          <Tooltip 
             title={!$isValid || anyEmpty
                      ? $LL.base.form.content.fill_out_all() 
@@ -197,19 +198,21 @@
             placement="{!$isValid || formEmpty ? 'left-0 bottom-12' : '-right-32 bottom-2'}"
             flyY={!$isValid || formEmpty ? 12 : 0} flyX={!$isValid || formEmpty ? 0 : -16}>
             <Button 
+               ariaLabel={$LL.base.form.content.send_msg()}
                disabled={!$isValid || anyEmpty} 
                type="submit">
                {#if $isValid && !anyEmpty}
-                  <Confetti amount=70 x={[-0.5, 0.5]} y={[-0.5, -0.5]} colorArray={["#0b3259", "#fb5607", "#195693", "#d1d1ce", "#3a86ff"]} />
+                  <Confetti amount={70} x={[-0.5, 0.5]} y={[-0.5, -0.5]} colorArray={["#0b3259", "#fb5607", "#195693", "#d1d1ce", "#3a86ff"]} />
                {/if}
                {$LL.base.form.content.send_msg()}
             </Button>
          </Tooltip>
       </div>
       {#if messageSent}
-         <MessageSentAlert resetForm={() => resetForm()} />
+         <div class="w-full" transition:fade={{duration: 200}}>
+            <MessageSentAlert resetForm={() => resetForm()} />
+         </div>
       {/if}
-      <ResetFormBtn {formEmpty} resetForm={() => resetForm()} />
    </div>
 
 </form>
