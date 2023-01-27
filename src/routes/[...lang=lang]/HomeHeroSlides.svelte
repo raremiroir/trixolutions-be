@@ -1,6 +1,6 @@
 <script>
    import LL, { locale } from "$i18n/i18n-svelte";
-	import { Hero, HeroSlide, Title, Text, Button, H1, Subheader } from "$comp";
+	import { Hero, HeroSlide, Text, Button, H1, Subheader } from "$comp";
 
    $: heroSlides = [
       {
