@@ -6,6 +6,8 @@
       img: 'placeholder/placeholder.png',
 
       imgPos: "top",
+      imgAlign: 'top',
+      imgContain: false,
       width: 'w-96',
 
       href: '',
@@ -24,10 +26,9 @@
 
       compact: false,
       compactResponsive: true,
+      equalHeight: false,
 
-      noHoverFx: false,
-      noActiveFx: false,
-      noFx: false,
+      hoverFx: 'full',
    }
 
 </script>
