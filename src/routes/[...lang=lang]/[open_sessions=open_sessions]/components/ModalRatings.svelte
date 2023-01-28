@@ -12,7 +12,7 @@
       {titleCase($LL.sessions.ratings())}
    </Button>
    <H3 slot="title" small>{titleCase($LL.sessions.ratings())}</H3>
-   <div class="columns-3">
+   <div class="columns-1 sm:columns-2 lg:columns-3 2xl:columns-4">
       {#each ratingData as rating}
          {#if rating.session_rated === 'level_1_full'}
             <RatingCard 
@@ -24,7 +24,7 @@
       {/each}
    </div>
    <hr class="border-2 border-primary/30 my-4"/>
-   <div class="columns-3">
+   <div class="columns-2 md:columns-3">
       {#each Array(ratingImages) as img}
          <div class="
                overflow-hidden group mb-[5%] rounded-xl 

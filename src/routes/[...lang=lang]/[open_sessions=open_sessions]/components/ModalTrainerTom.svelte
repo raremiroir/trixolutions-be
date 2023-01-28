@@ -14,20 +14,18 @@
    </Button>
    
    <H3 slot="title" small>{titleCase($LL.sessions.your_trainer.title())}</H3>
-   <div class="grid grid-cols-12 gap-4 w-full mx-auto">
-      <div class="col-span-4 items-center justify-center">
-         <div class="flex flex-col">
-            <Subheader italic>{titleCase($LL.sessions.your_trainer.tom())}</Subheader>
-            <hr/>
-            <Text>{@html $LL.sessions.your_trainer.content()}</Text>
-         </div>
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-fit mx-auto">
+      <div class="col-span-1 flex flex-col gap-2">
+         <Subheader italic>{titleCase($LL.sessions.your_trainer.tom())}</Subheader>
+         <hr/>
+         <Text>{@html $LL.sessions.your_trainer.content()}</Text>
       </div>
-      <div class="col-span-8">
+      <div class="col-span-1">
          <Image 
             alt="Tom van Dorst - Trixolutions CEO / Trainer / Coach"
             src="team/tom-bw.webp" 
             mode="cover" position="top" 
-            ratio="3:2" class="w-full h-auto"/>
+            ratio="auto" class="w-full max-w-lg h-auto"/>
          </div>
       </div>
 </Modal>
