@@ -7,6 +7,7 @@
       SessionSubscribeForm,
 	  SEO,
 	  Reveal,
+	  CardBase,
    } from "$comp";
    
    // Import website config
@@ -92,10 +93,11 @@
          <div class="grid grid-cols-2 gap-8">
             {#each sessions as session}
                <Reveal>
-                  <Card label="{formatDateMonthFull(session.starts_on)}" labelPrimary>
-                     <H3 slot="title" smallest>
-                        {titleCase($LL.sessions.info.title_single())}
-                     </H3>
+                  <CardBase
+                     width="full" hoverFx="minimal"
+                     ariaLabel="{$LL.sessions.info.title_single()} - {formatDateMonthFull(session.starts_on)}"
+                     title={titleCase($LL.sessions.info.title_single())}
+                     badge="{formatDateMonthFull(session.starts_on)}" badgesTop>
                      <div class="flex flex-row justify-between w-full">
                         <Tag outlined>
                            <span class="text-xs italic">{titleCase($LL.sessions.info.trainer())}:</span><br/>
@@ -106,7 +108,7 @@
                            {formatTime(session.starts_on)} - {formatTime(session.ends_on)}
                         </Tag>
                      </div>
-                  </Card>
+                  </CardBase>
                </Reveal>
             {/each}
          </div>

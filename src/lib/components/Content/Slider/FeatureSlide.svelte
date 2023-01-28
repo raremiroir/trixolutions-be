@@ -1,53 +1,52 @@
 <script lang="ts">
-   
    import { fade } from 'svelte/transition';
    import { breakpoints } from '$src/lib/constants/breakpoints';
    
    import { SplideSlide } from '@splidejs/svelte-splide';
-	import { Card, Modal, Image, Text, Title } from '$comp';
+	import { CardBase, Modal, Image, Text, Title } from '$comp';
+	import { currentModal } from '$src/lib/stores';
 
 
-   export let modalId:number;
+   export let title:string;
    export let imgSrc:string;
-   export let imgAlt:string;
-
-   let innerWidth:number;
-   let ratio = '5:3'
-   $: if (innerWidth < breakpoints.xs) { ratio = "3:1"; }  
-      else if (innerWidth < breakpoints.sm) { ratio = "3:1"; } 
-      else if (innerWidth < breakpoints.md) { ratio = "2:1"; } 
-      else if (innerWidth < breakpoints.lg) { ratio = "5:2"; } 
-      else if (innerWidth < breakpoints.xl) { ratio = "5:3"; } 
-      else if (innerWidth < breakpoints.xxl) { ratio = "5:3"; }
-      else { ratio = "2:1"}
+   export let modalId:number;
 
    let hovered = false;
 
    let klass = '';
    export { klass as class };
 
+   export let cardProps = {
+      title: title,
+      img: imgSrc,
+
+      imgPos: "top",
+      imgAlign: 'top',
+      imgContain: true,
+      width: 'full',
+      height: 'fit',
+
+      article: false,
+
+      ariaLabel: title,
+
+      author: {name: '', img:'', date: '' },
+
+      compact: true,
+      compactResponsive: false,
+      equalHeight: false,
+
+      hoverFx: 'onlyHover',
+   }
+
+
 </script>
 
-<svelte:window bind:innerWidth={innerWidth} />
-
 <SplideSlide 
-   class="
-      bg-transparent w-full
-      {klass}">
+   class="bg-transparent w-full h-fit {klass}">
 
       <Modal trigger id={modalId}>
-         <Card 
-            slot="trigger" equalHeight hoverFx compact fast
-            class="w-full">
-            <div class="h-fit w-full" slot="image">
-               <!-- <Image imgSrc="{blogPost.img}" height="h-40" /> -->
-               <Image 
-                  alt={imgAlt}
-                  src={imgSrc} 
-                  mode="cover" position="top" 
-                  ratio="{ratio}"
-                  intrinsic="600x400"/>
-            </div>
+         <CardBase {...cardProps} slot="trigger" class="!cursor-pointer">
             <li slot="title">
                <Title type="subtitle" smaller italic>
                   <slot name="subtitle">Subtitle</slot>
@@ -61,7 +60,7 @@
                   <Text small><slot/></Text>
                </div>
             {/if}
-         </Card>
+         </CardBase>
       </Modal>
       
 </SplideSlide>
