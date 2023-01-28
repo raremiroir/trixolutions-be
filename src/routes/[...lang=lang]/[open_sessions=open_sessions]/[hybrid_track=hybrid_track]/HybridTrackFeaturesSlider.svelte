@@ -32,7 +32,7 @@
       <FeatureSlide 
          modalId={Number(key)+1} 
          imgSrc="{featureImages[Number(key)]}" imgAlt="{feature.title.before()} {feature.title.main()}" 
-         class="">
+         class="!h-fit">
       <span slot="subtitle">{feature.title.before()}</span>
       <span slot="title">{feature.title.main()}</span>
       </FeatureSlide>
@@ -46,7 +46,7 @@
 </NavSlider>
 
 {#each Object.entries($LL.sessions.level_1.features_extended) as [key, feature]}
-<FeaturesModalContent id={Number(key)+1} imgSrc="" imgAlt="placeholder">
+<FeaturesModalContent id={Number(key)+1} imgSrc="{featureImages[Number(key)]}" imgAlt="{feature.title.before()} {feature.title.main()}">
    <span slot="title">
       {#each Object.entries(feature.title) as [titleKey, title]}
             {title()}&nbsp;
