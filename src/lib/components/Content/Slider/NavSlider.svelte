@@ -10,8 +10,8 @@
 
    const mainOptions = {
      type      : 'loop',
-     perPage   : 2,
-     perMove   : 1,
+     perPage   : 3,
+     perMove   : 2,
      gap       : '2rem',
      pagination: false,
      height    : '10rem',
