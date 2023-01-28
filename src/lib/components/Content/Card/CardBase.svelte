@@ -133,6 +133,7 @@
             justify-start
             rounded-2xl overflow-hidden shadow-lg
             { glass ? 'bg-white/70 backdrop-blur-xl' : 'bg-white' } 
+            { hoverFx === 'minimal' ? 'hover:bg-gray-100' : ''}
             {klass}
             ">
 
