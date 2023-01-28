@@ -8,9 +8,6 @@
    let klass = '';
    export { klass as class };
    export let ariaLabel = '';
-
-   // unused props
-   export const href= '';
 </script>
 
 <!--      -->

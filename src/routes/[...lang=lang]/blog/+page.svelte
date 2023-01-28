@@ -1,20 +1,4 @@
 <script lang="ts">
-   // Import supabase
-   import supabase from "$src/lib/db";
-   // Import i18n
-   import LL, { locale } from "$i18n/i18n-svelte";
-
-   // Import utils
-   import { titleCase } from "$lib/utils";
-   // Import website config
-   import { website } from "$lib/config/website";
-   
-   // Import components
-   import { 
-      Navbar, Main, Section, 
-      Breadcrumbs, SEO, PostScroll, H1, Alert
-   } from "$comp";
-
    // Define current page slug
    import { currentPageMap } from "$lib/stores";
    $currentPageMap = [
@@ -22,34 +6,47 @@
       {locale: 'fr', slug: 'blog'},
       {locale: 'nl', slug: 'blog'}
    ];
-   
+
+   // Import components
+   import { 
+      Navbar, Main, Section, Button,
+      Breadcrumbs, SEO, PostScroll, H1, Alert
+   } from "$comp";
+
+   // Import website config
+   import { website } from "$lib/config/website";
+   // Import utils
+   import { titleCase } from "$lib/utils";
+   // Import i18n
+   import LL, { locale } from "$i18n/i18n-svelte";
+
    //   Import data
 	import type { PageData } from "./$types";
-	import Button from "$src/lib/components/Base/Button.svelte";
    export let data:PageData;
    const blogData = data.blogData;
 
-   
    // SEO
-	let pageSlug = `blog`
+   $: pageSlug = `/${$locale}/${$LL.nav.blog.slug()}`
+   $: pageTitle = $LL.nav.blog.title()
+   $: pageDesc = $LL.nav.blog.description()
+
    let { author, siteUrl } = website;
-	let breadcrumbs = [{ name: titleCase($LL.pages.blog.title()), slug: `/${$locale}/${pageSlug}/` }];
+	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
 	
-   let entityMeta = {
-		url: `${siteUrl}/${$locale}/${pageSlug}`,
+   $: entityMeta = {
+		url: `${siteUrl}${pageSlug}`,
 		faviconWidth: 512, faviconHeight: 512,
 		caption: author,
 	};
-
 </script>
 
 
 <SEO 
-	slug="{$locale}/{pageSlug}"
+	slug="{pageSlug}"
 	datePublished = '2023-01-11T12:31:00.000+0100'
 	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{titleCase($LL.pages.blog.title())}"
-	metadescription="Trixolutions {titleCase($LL.pages.blog.title())}"
+	title="{pageTitle}"
+	metadescription="{pageDesc}"
 	{breadcrumbs} {entityMeta}
 />
 

@@ -445,6 +445,10 @@ export type NamespaceNavTranslation = {
 		 */
 		title: string
 		slug: string
+		/**
+		 * W​e​l​k​o​m​ ​o​p​ ​d​e​ ​s​t​a​r​t​p​a​g​i​n​a​ ​v​a​n​ ​T​r​i​x​o​l​u​t​i​o​n​s​!​ ​W​e​ ​b​i​e​d​e​n​ ​t​r​a​i​n​i​n​g​e​n​ ​e​n​ ​o​p​l​e​i​d​i​n​g​e​n​ ​a​a​n​ ​i​n​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​e​n​ ​o​m​t​r​e​n​t​ ​d​e​ ​L​e​n​c​i​o​n​i​ ​P​y​r​a​m​i​d​e​.
+		 */
+		description: string
 	}
 	about: {
 		/**
@@ -455,6 +459,10 @@ export type NamespaceNavTranslation = {
 		 * o​v​e​r​-​o​n​s
 		 */
 		slug: string
+		/**
+		 * M​a​a​k​ ​k​e​n​n​i​s​ ​m​e​t​ ​T​r​i​x​o​l​u​t​i​o​n​s​!
+		 */
+		description: string
 	}
 	references: {
 		/**
@@ -465,6 +473,10 @@ export type NamespaceNavTranslation = {
 		 * r​e​f​e​r​e​n​t​i​e​s
 		 */
 		slug: string
+		/**
+		 * P​a​r​t​n​e​r​s​ ​v​a​n​ ​e​n​ ​v​e​r​w​i​j​z​i​n​g​e​n​ ​n​a​a​r​ ​T​r​i​x​o​l​u​t​i​o​n​s​.
+		 */
+		description: string
 	}
 	blog: {
 		/**
@@ -475,6 +487,10 @@ export type NamespaceNavTranslation = {
 		 * b​l​o​g
 		 */
 		slug: string
+		/**
+		 * T​r​i​x​o​l​u​t​i​o​n​s​ ​B​l​o​g
+		 */
+		description: string
 	}
 	open_sessions: {
 		/**
@@ -485,6 +501,10 @@ export type NamespaceNavTranslation = {
 		 * o​p​e​n​-​s​e​s​s​i​e​s
 		 */
 		slug: string
+		/**
+		 * O​p​e​n​ ​S​e​s​s​i​e​s​,​ ​W​o​r​k​s​h​o​p​s​ ​e​n​ ​O​p​l​e​i​d​i​n​g​e​n​ ​o​v​e​r​ ​d​e​ ​L​e​n​c​i​o​n​i​ ​P​y​r​a​m​i​d​e​ ​b​i​j​ ​T​r​i​x​o​l​u​t​i​o​n​s
+		 */
+		description: string
 		items: {
 			info_sessions: {
 				/**
@@ -495,6 +515,10 @@ export type NamespaceNavTranslation = {
 				 * o​p​e​n​-​s​e​s​s​i​e​s​/​g​r​a​t​i​s​-​o​p​e​n​-​i​n​f​o​s​e​s​s​i​e​s
 				 */
 				slug: string
+				/**
+				 * G​r​a​t​i​s​ ​O​p​e​n​ ​I​n​f​o​s​e​s​s​i​e​s​ ​o​v​e​r​ ​O​p​l​e​i​d​i​n​g​e​n​ ​o​m​t​r​e​n​t​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g
+				 */
+				description: string
 			}
 			hybrid_traject: {
 				/**
@@ -505,6 +529,10 @@ export type NamespaceNavTranslation = {
 				 * o​p​e​n​-​s​e​s​s​i​e​s​/​h​y​b​r​i​d​e​-​l​e​n​c​i​o​n​i​-​l​e​e​r​t​r​a​j​e​c​t
 				 */
 				slug: string
+				/**
+				 * T​w​e​e​d​a​a​g​s​e​ ​O​p​l​e​i​d​i​n​g​ ​i​n​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​,​ ​O​n​l​i​n​e​ ​e​n​ ​O​f​f​l​i​n​e
+				 */
+				description: string
 			}
 			deepdive: {
 				/**
@@ -515,6 +543,10 @@ export type NamespaceNavTranslation = {
 				 * o​p​e​n​-​s​e​s​s​i​e​s​/​l​e​n​c​i​o​n​i​-​d​e​e​p​d​i​v​e​-​l​e​v​e​l​-​2
 				 */
 				slug: string
+				/**
+				 * G​e​v​o​r​d​e​r​d​e​ ​O​p​l​e​i​d​i​n​g​ ​i​n​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​-​ ​L​e​n​c​i​o​n​i​ ​D​e​e​p​D​i​v​e
+				 */
+				description: string
 			}
 		}
 	}
@@ -527,6 +559,10 @@ export type NamespaceNavTranslation = {
 		 * c​o​n​t​a​c​t
 		 */
 		slug: string
+		/**
+		 * C​o​n​t​a​c​t​e​e​r​ ​T​r​i​x​o​l​u​t​i​o​n​s​!
+		 */
+		description: string
 	}
 	others: {
 		job_offers: {
@@ -2160,6 +2196,10 @@ export type TranslationFunctions = {
 			 */
 			title: () => LocalizedString
 			slug: () => LocalizedString
+			/**
+			 * Welkom op de startpagina van Trixolutions! We bieden trainingen en opleidingen aan in Lencioni Teamcoaching en omtrent de Lencioni Pyramide.
+			 */
+			description: () => LocalizedString
 		}
 		about: {
 			/**
@@ -2170,6 +2210,10 @@ export type TranslationFunctions = {
 			 * over-ons
 			 */
 			slug: () => LocalizedString
+			/**
+			 * Maak kennis met Trixolutions!
+			 */
+			description: () => LocalizedString
 		}
 		references: {
 			/**
@@ -2180,6 +2224,10 @@ export type TranslationFunctions = {
 			 * referenties
 			 */
 			slug: () => LocalizedString
+			/**
+			 * Partners van en verwijzingen naar Trixolutions.
+			 */
+			description: () => LocalizedString
 		}
 		blog: {
 			/**
@@ -2190,6 +2238,10 @@ export type TranslationFunctions = {
 			 * blog
 			 */
 			slug: () => LocalizedString
+			/**
+			 * Trixolutions Blog
+			 */
+			description: () => LocalizedString
 		}
 		open_sessions: {
 			/**
@@ -2200,6 +2252,10 @@ export type TranslationFunctions = {
 			 * open-sessies
 			 */
 			slug: () => LocalizedString
+			/**
+			 * Open Sessies, Workshops en Opleidingen over de Lencioni Pyramide bij Trixolutions
+			 */
+			description: () => LocalizedString
 			items: {
 				info_sessions: {
 					/**
@@ -2210,6 +2266,10 @@ export type TranslationFunctions = {
 					 * open-sessies/gratis-open-infosessies
 					 */
 					slug: () => LocalizedString
+					/**
+					 * Gratis Open Infosessies over Opleidingen omtrent Lencioni Teamcoaching
+					 */
+					description: () => LocalizedString
 				}
 				hybrid_traject: {
 					/**
@@ -2220,6 +2280,10 @@ export type TranslationFunctions = {
 					 * open-sessies/hybride-lencioni-leertraject
 					 */
 					slug: () => LocalizedString
+					/**
+					 * Tweedaagse Opleiding in Lencioni Teamcoaching, Online en Offline
+					 */
+					description: () => LocalizedString
 				}
 				deepdive: {
 					/**
@@ -2230,6 +2294,10 @@ export type TranslationFunctions = {
 					 * open-sessies/lencioni-deepdive-level-2
 					 */
 					slug: () => LocalizedString
+					/**
+					 * Gevorderde Opleiding in Lencioni Teamcoaching - Lencioni DeepDive
+					 */
+					description: () => LocalizedString
 				}
 			}
 		}
@@ -2242,6 +2310,10 @@ export type TranslationFunctions = {
 			 * contact
 			 */
 			slug: () => LocalizedString
+			/**
+			 * Contacteer Trixolutions!
+			 */
+			description: () => LocalizedString
 		}
 		others: {
 			job_offers: {

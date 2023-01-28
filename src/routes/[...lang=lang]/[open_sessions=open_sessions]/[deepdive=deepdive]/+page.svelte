@@ -1,4 +1,11 @@
 <script lang="ts">
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'open-sessions/lencioni-deepdive-level-2'},
+      {locale: 'fr', slug: 'sessions-ouvertes/lencioni-deepdive-niveau-2'},
+      {locale: 'nl', slug: 'open-sessies/lencioni-deepdive-level-2'}
+   ];
    
    // Import components
    import 
@@ -21,13 +28,6 @@
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
 	
-   // Define current page slug
-   import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'open-sessions/lencioni-deepdive-level-2'},
-      {locale: 'fr', slug: 'sessions-ouvertes/lencioni-deepdive-niveau-2'},
-      {locale: 'nl', slug: 'open-sessies/lencioni-deepdive-level-2'}
-   ];
 
    // Import data
    export let data;
@@ -39,20 +39,22 @@
       if (element.type === 'level_2') sessionDates.push(formatDateFull(element.starts_on))
    });
    
+   // Set active store for modal
+   $currentModal = 0;
    $: $currentModal;
-
    // Set 'active' variable for accordeon component
 	let active:any = null;
 
    // SEO
-   let pageSlug = formatUrl(`${$LL.sessions.level_2.title()} ${$LL.sessions.level_2.level2()}`);
+   $: pageSlug = `/${$locale}/${$LL.nav.open_sessions.items.deepdive.slug()}`
+   $: pageTitle = $LL.nav.open_sessions.items.deepdive.title()
+   $: pageDesc = $LL.nav.open_sessions.items.deepdive.description()
+
    let { author, siteUrl } = website;
-	let breadcrumbs = [
-      { name: titleCase(`${$LL.sessions.level_2.title()} - ${$LL.sessions.level_2.level2()}`), slug: `/${$locale}/${pageSlug}/` }
-   ];
+	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
 	
-   let entityMeta = {
-		url: `${siteUrl}/${$locale}/${pageSlug}`,
+   $: entityMeta = {
+		url: `${siteUrl}${pageSlug}`,
 		faviconWidth: 512, faviconHeight: 512,
 		caption: author,
 	};
@@ -60,15 +62,14 @@
 </script>
 
 <SEO 
-	slug="{$locale}/{pageSlug}"
+	slug="{pageSlug}"
 	datePublished = '2023-01-11T12:31:00.000+0100'
 	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{titleCase(`${$LL.sessions.level_2.title()} - ${$LL.sessions.level_2.level2()}`)}"
-	metadescription="{titleCase($LL.sessions.level_2.title())} - {titleCase($LL.sessions.level_2.advanced_coaching())}"
-	
+	title="{pageTitle}"
+	metadescription="{pageDesc}"
 	{breadcrumbs} {entityMeta}
-
 />
+
 <header>
    <Hero titleSmall imgSrc="home/working-genius.webp" imgAlt="No alt">
       <span slot="title">{titleCase($LL.sessions.level_2.title())}</span>

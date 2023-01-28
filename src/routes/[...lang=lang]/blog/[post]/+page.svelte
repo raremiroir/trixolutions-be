@@ -1,21 +1,10 @@
 <script lang="ts">
-   
-   import { titleCase, formatDateMonthFull, formatTime, formatUrl } from "$utils";
-   import { 
-      Navbar, Main, Section, 
-      H1, H2, Subheader, Subtitle,
-      Breadcrumbs, Tag, Markdown,
-      Hero, PostSEO, Reveal 
-   } from "$comp";
-
-
+   // Import data (first priority)
    export let data;
-   
    const blogPost = Object(data.post);
    // console.log(blogPost);
-
-   const url = formatUrl(blogPost.title);
-// Define current page slug
+   
+   // Define current page slug
    import { currentPageMap } from "$lib/stores";
    $currentPageMap = [
       {locale: 'en', slug: `blog/${formatUrl(blogPost.title)}`},
@@ -23,6 +12,20 @@
       {locale: 'nl', slug: `blog/${formatUrl(blogPost.title)}`}
    ];
 
+   // Import components
+   import { 
+      Navbar, Main, Section, 
+      H1, H2, Subheader, Subtitle,
+      Breadcrumbs, Tag, Markdown,
+      Hero, PostSEO, Reveal 
+   } from "$comp";
+   // Import utils
+   import { titleCase, formatDateMonthFull, formatTime, formatUrl } from "$utils";
+
+   // Format URL
+   const url = formatUrl(blogPost.title);
+
+   // SEO
    const seoProps = {
       language: blogPost.language,
       title: blogPost.title,

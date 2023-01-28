@@ -1,16 +1,11 @@
 <script>  
-   // Import features image (SEO)
-   import ogSquareImageSrc from '$lib/assets/images/home/home-open-graph-square.jpg';
-	import ogImageSrc from '$lib/assets/images/home/home-open-graph.jpg';
-	import featuredImageSrc from '$lib/assets/images/home/home.jpg';
-   
-   // Import i18n
-   import LL from '$i18n/i18n-svelte'
-   import { locale } from "$i18n/i18n-svelte";
-   
-   // Import utils
-	import { firstLetterCase, titleCase } from "$utils";
-   
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'contact'},
+      {locale: 'fr', slug: 'contact'},
+      {locale: 'nl', slug: 'contact'}
+   ];
    // Import components
    import { 
       Main, Section, Breadcrumbs, 
@@ -19,17 +14,21 @@
 	   SEO, Form, CardBase
    } from "$comp";
 	import Icon from "@iconify/svelte";
-
+   
+   // Import features image (SEO)
+   import ogSquareImageSrc from '$lib/assets/images/home/home-open-graph-square.jpg';
+	import ogImageSrc from '$lib/assets/images/home/home-open-graph.jpg';
+	import featuredImageSrc from '$lib/assets/images/home/home.jpg';
+   
+   // Import i18n
+   import LL from '$i18n/i18n-svelte'
+   import { locale } from "$i18n/i18n-svelte";
+   // Import utils
+	import { firstLetterCase, titleCase } from "$utils";
    // Import website config
 	import { website } from '$src/lib/config/website';
    
-   // Define current page slug
-   import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'contact'},
-      {locale: 'fr', slug: 'contact'},
-      {locale: 'nl', slug: 'contact'}
-   ];
+
 
    const cardProps = {
       width: 'full',

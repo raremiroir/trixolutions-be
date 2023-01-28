@@ -1,4 +1,16 @@
 <script lang="ts">
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'about-us'},
+      {locale: 'fr', slug: 'a-propos'},
+      {locale: 'nl', slug: 'over-ons'}
+   ];
+   
+   // Import Components
+   import { Main, Section, Title, Text, Image, Alert, ErrorLoading, SEO, Breadcrumbs, H1, H2, Subtitle, Reveal } from "$comp";
+	import MemberCard from "./MemberCard.svelte";
+
    // Import constants & website config
    import { breakpoints } from "$lib/constants/breakpoints";
    import { website } from "$lib/config/website";
@@ -9,18 +21,8 @@
    // Import Utils
 	import { firstLetterCase, titleCase } from "$utils";
 
-   // Import Components
-   import { Main, Section, Title, Text, Image, Alert, ErrorLoading, SEO, Breadcrumbs, H1, H2, Subtitle, Reveal } from "$comp";
-	import MemberCard from "./MemberCard.svelte";
 
-   // Define current page slug
-   import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'about-us'},
-      {locale: 'fr', slug: 'a-propos'},
-      {locale: 'nl', slug: 'over-ons'}
-   ];
-
+   // Load data
    const getData = async () => {
       const {data, error} = await supabase
          .from('team_members')
@@ -43,12 +45,15 @@
    else { ratio = "5:4"; }
 
    // SEO
-	let pageSlug = `over-ons`
+   $: pageSlug = `/${$locale}/${$LL.nav.about.slug()}`
+   $: pageTitle = $LL.nav.about.title()
+   $: pageDesc = $LL.nav.about.description()
+
    let { author, siteUrl } = website;
-	let breadcrumbs = [{ name: titleCase($LL.pages.references.title()), slug: `/${$locale}/${pageSlug}/` }];
+	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
 	
-   let entityMeta = {
-		url: `${siteUrl}/${$locale}/${pageSlug}`,
+   $: entityMeta = {
+		url: `${siteUrl}${pageSlug}`,
 		faviconWidth: 512, faviconHeight: 512,
 		caption: author,
 	};
@@ -58,14 +63,12 @@
 <svelte:window bind:innerWidth={innerWidth} />
 
 <SEO 
-	slug="{$locale}/{pageSlug}"
+	slug="{pageSlug}"
 	datePublished = '2023-01-11T12:31:00.000+0100'
 	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{titleCase($LL.pages.about.title())}"
-	metadescription="{titleCase($LL.pages.about.title_alt())}"
-	
+	title="{pageTitle}"
+	metadescription="{pageDesc}"
 	{breadcrumbs} {entityMeta}
-
 />
 
 <Main cta>

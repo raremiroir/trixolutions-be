@@ -3,41 +3,50 @@ import type { BaseTranslation } from '../../i18n-types'
 const nl_nav: BaseTranslation = {
    home: {
       title: "Home",
-      slug: ''
+      slug: '',
+      description: 'Welkom op de startpagina van Trixolutions! We bieden trainingen en opleidingen aan in Lencioni Teamcoaching en omtrent de Lencioni Pyramide.'
    },
    about: {
       title: "Over Ons",
-      slug: 'over-ons'
+      slug: 'over-ons',
+      description: 'Maak kennis met Trixolutions!'
    },
    references: {
       title: "Referenties",
-      slug: 'referenties'
+      slug: 'referenties',
+      description: 'Partners van en verwijzingen naar Trixolutions.'
    },
    blog: {
       title: "Blog",
-      slug: 'blog'
+      slug: 'blog',
+      description: 'Trixolutions Blog'
    },
    open_sessions: {
       title: "Open Sessies",
-      slug: 'open-sessies',
+      slug: 'open-sessies',,
+      description: 'Open Sessies, Workshops en Opleidingen over de Lencioni Pyramide bij Trixolutions',
       items: {
          info_sessions: {
             title: "Gratis Open Infosessies",
-            slug: 'open-sessies/gratis-open-infosessies'
+            slug: 'open-sessies/gratis-open-infosessies',
+            description: 'Gratis Open Infosessies over Opleidingen omtrent Lencioni Teamcoaching'
          },
          hybrid_traject: {
             title: "Hybride Lencioni Leertraject",
-            slug: 'open-sessies/hybride-lencioni-leertraject'
+            slug: 'open-sessies/hybride-lencioni-leertraject',
+            description: 'Tweedaagse Opleiding in Lencioni Teamcoaching, Online en Offline'
          },
          deepdive: {
             title: "Lencioni Deepdive - Level 2",
-            slug: 'open-sessies/lencioni-deepdive-level-2'
+            slug: 'open-sessies/lencioni-deepdive-level-2',
+            description: 'Gevorderde Opleiding in Lencioni Teamcoaching - Lencioni DeepDive'
          },
       }
    },
    contact: {
       title: "Contact",
-      slug: 'contact'
+      slug: 'contact',
+      description: 'Contacteer Trixolutions!'
    },
    others: {
       job_offers: {

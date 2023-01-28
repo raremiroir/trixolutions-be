@@ -1,15 +1,17 @@
 <script>
-
-	// Import features image (SEO)
-   import ogSquareImageSrc from '$lib/assets/images/home/home-open-graph-square.jpg';
-	import ogImageSrc from '$lib/assets/images/home/home-open-graph.jpg';
-	import featuredImageSrc from '$lib/assets/images/home/home.jpg';
-	// Import website config
-	import { website } from '$src/lib/config/website';
+	// Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'references'},
+      {locale: 'fr', slug: 'references'},
+      {locale: 'nl', slug: 'referenties'}
+   ];
 	
 	// Import components
 	import { Main, Section, Breadcrumbs, Image, Video, SEO, Reveal, H1 } from '$comp';
-
+	
+	// Import website config
+	import { website } from '$src/lib/config/website';
 	// Import i18n
 	import LL, { locale } from '$i18n/i18n-svelte';
 	// Import utils
@@ -19,13 +21,6 @@
 	import cegeka_video from '$lib/assets/videos/referentiefilmpje-cegeka-min.mp4';
 	import cegeka_thumbnail from '$lib/assets/videos/referentiefilmpje-cegeka-thumbnail-720.webp';
 	
-	// Define current page slug
-   import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'references'},
-      {locale: 'fr', slug: 'references'},
-      {locale: 'nl', slug: 'referenties'}
-   ];
 	
 	// Define images
    let references = [
@@ -75,12 +70,14 @@
 	];
 
    // SEO
-	let pageSlug = `referenties`
+   $: pageSlug = `/${$locale}/${$LL.nav.references.slug()}`
+   $: pageTitle = $LL.nav.references.title()
+   $: pageDesc = $LL.nav.references.description()
    let { author, siteUrl } = website;
-	let breadcrumbs = [{ name: titleCase($LL.pages.references.title()), slug: `/${$locale}/${pageSlug}/` }];
+	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
 	
-   let entityMeta = {
-		url: `${siteUrl}/${$locale}/${pageSlug}`,
+   $: entityMeta = {
+		url: `${siteUrl}${pageSlug}`,
 		faviconWidth: 512, faviconHeight: 512,
 		caption: author,
 	};
@@ -89,14 +86,12 @@
 
 
 <SEO 
-	slug="{$locale}/{pageSlug}"
+	slug="{pageSlug}"
 	datePublished = '2023-01-11T12:31:00.000+0100'
 	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{titleCase($LL.pages.references.title())}"
-	metadescription="Trixolutions {titleCase($LL.pages.references.title())}"
-	
+	title="{pageTitle}"
+	metadescription="{pageDesc}"
 	{breadcrumbs} {entityMeta}
-
 />
 
 

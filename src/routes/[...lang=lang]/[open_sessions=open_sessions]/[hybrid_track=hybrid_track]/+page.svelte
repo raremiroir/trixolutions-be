@@ -1,4 +1,11 @@
 <script lang="ts">
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'open-sessions/hybrid-lencioni-learning-track'},
+      {locale: 'fr', slug: 'sessions-ouvertes/traject-hybride-lencioni'},
+      {locale: 'nl', slug: 'open-sessies/hybride-lencioni-leertraject'}
+   ];
 
    // Import components
    import { 
@@ -26,6 +33,8 @@
    import { titleCase, formatUrl, formatDateFull } from "$utils";
    import { currentModal } from "$src/lib/stores";
    
+   // Set active store for current modal
+   $currentModal = 0;
    $: $currentModal;
 
    // Import data
@@ -39,27 +48,20 @@
       if(item.type === 'level_1_full') sessionDates.push(formatDateFull(item.starts_on));
    });
 
-   // Define current page slug
-   import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'open-sessions/hybrid-lencioni-learning-track'},
-      {locale: 'fr', slug: 'sessions-ouvertes/traject-hybride-lencioni'},
-      {locale: 'nl', slug: 'open-sessies/hybride-lencioni-leertraject'}
-   ];
-
 
    // Set 'active' variable for accordeon component
 	let active:any = null;
 
-// SEO
-let pageSlug = formatUrl($LL.sessions.level_1.title_short());
+   // SEO
+   $: pageSlug = `/${$locale}/${$LL.nav.open_sessions.items.hybrid_traject.slug()}`
+   $: pageTitle = $LL.nav.open_sessions.items.hybrid_traject.title()
+   $: pageDesc = $LL.nav.open_sessions.items.hybrid_traject.description()
+
    let { author, siteUrl } = website;
-	let breadcrumbs = [
-      { name: titleCase($LL.sessions.level_1.title()), slug: `/${$locale}/${pageSlug}/` }
-   ];
+	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
 	
-   let entityMeta = {
-		url: `${siteUrl}/${$locale}/${pageSlug}`,
+   $: entityMeta = {
+		url: `${siteUrl}${pageSlug}`,
 		faviconWidth: 512, faviconHeight: 512,
 		caption: author,
 	};
@@ -67,14 +69,12 @@ let pageSlug = formatUrl($LL.sessions.level_1.title_short());
 </script>
 
 <SEO 
-	slug="{$locale}/{pageSlug}"
+	slug="{pageSlug}"
 	datePublished = '2023-01-11T12:31:00.000+0100'
 	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{titleCase($LL.sessions.level_1.title())}"
-	metadescription="{titleCase($LL.sessions.level_1.title_alt())} - {titleCase($LL.sessions.level_1.two_day())}"
-	
+	title="{pageTitle}"
+	metadescription="{pageDesc}"
 	{breadcrumbs} {entityMeta}
-
 />
 
 <header>

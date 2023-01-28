@@ -1,14 +1,4 @@
 <script lang="ts">
-   // Import components
-   import { Main, Section, Breadcrumbs, H1 } from "$comp";
-	import SessionTypeCard from "./SessionTypeCard.svelte";
-   
-   // Import i18n
-   import LL, { locale } from "$i18n/i18n-svelte";
-   
-   // Import utils
-	import { titleCase } from "$src/lib/utils";
-
    // Define current page slug
    import { currentPageMap } from "$lib/stores";
    $currentPageMap = [
@@ -16,6 +6,18 @@
       {locale: 'fr', slug: 'sessions-ouvertes'},
       {locale: 'nl', slug: 'open-sessies'}
    ];
+
+   // Import components
+   import { Main, Section, Breadcrumbs, H1, SEO } from "$comp";
+	import SessionTypeCard from "./SessionTypeCard.svelte";
+   
+   // Import website config
+   import { website } from "$lib/config/website";
+   // Import i18n
+   import LL, { locale } from "$i18n/i18n-svelte";
+   // Import utils
+	import { titleCase } from "$src/lib/utils";
+
    
    $: session_types = [
       {
@@ -43,9 +45,30 @@
       },
    ]
 
-   const cardProps = { fill: true, badgeOnTop: true, isLink: true }
+   // SEO
+   $: pageSlug = `/${$locale}/${$LL.nav.open_sessions.slug()}`
+   $: pageTitle = $LL.nav.open_sessions.title()
+   $: pageDesc = $LL.nav.open_sessions.description()
+
+   let { author, siteUrl } = website;
+	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
+	
+   $: entityMeta = {
+		url: `${siteUrl}${pageSlug}`,
+		faviconWidth: 512, faviconHeight: 512,
+		caption: author,
+	};
    
 </script>
+
+<SEO 
+	slug="{pageSlug}"
+	datePublished = '2023-01-11T12:31:00.000+0100'
+	lastUpdated = '2023-01-11T12:31:00.000+0100'
+	title="{pageTitle}"
+	metadescription="{pageDesc}"
+	{breadcrumbs} {entityMeta}
+/>
 
 <Main cta>
    <Breadcrumbs currentIcon="mdi:account-school-outline"/>

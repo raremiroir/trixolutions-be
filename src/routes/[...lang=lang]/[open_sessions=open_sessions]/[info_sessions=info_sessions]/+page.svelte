@@ -1,4 +1,12 @@
 <script lang="ts">
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'open-sessions/free-open-info-sessions'},
+      {locale: 'fr', slug: 'sessions-ouvertes/sessions-info-gratuites-ouvertes'},
+      {locale: 'nl', slug: 'open-sessies/gratis-open-infosessies'}
+   ];
+
    // Import components
    import { 
       Main, Section, Breadcrumbs, 
@@ -9,20 +17,11 @@
    
    // Import website config
 	import { website } from "$src/lib/config/website";
-   
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
-   
    // Import utils
    import { formatDateMonthFull, formatTime, formatUrl, titleCase} from "$utils";
 	
-   // Define current page slug
-   import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'open-sessions/free-open-info-sessions'},
-      {locale: 'fr', slug: 'sessions-ouvertes/sessions-info-gratuites-ouvertes'},
-      {locale: 'nl', slug: 'open-sessies/gratis-open-infosessies'}
-   ];
 
    // Import data
 	import type { PageData } from "../../$types";
@@ -34,13 +33,15 @@
 
 
    // SEO
-	let pageSlug = formatUrl($LL.sessions.info.title_alt());
+   $: pageSlug = `/${$locale}/${$LL.nav.open_sessions.items.info_sessions.slug()}`
+   $: pageTitle = $LL.nav.open_sessions.items.info_sessions.title()
+   $: pageDesc = $LL.nav.open_sessions.items.info_sessions.description()
+
    let { author, siteUrl } = website;
-	let breadcrumbs = [
-      { name: titleCase($LL.sessions.info.title()), slug: `/${$locale}/${pageSlug}/` }
-   ];
-   let entityMeta = {
-		url: `${siteUrl}/${$locale}/${pageSlug}`,
+	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
+	
+   $: entityMeta = {
+		url: `${siteUrl}${pageSlug}`,
 		faviconWidth: 512, faviconHeight: 512,
 		caption: author,
 	};
@@ -48,15 +49,14 @@
 </script>
 
 <SEO 
-	slug="{$locale}/{pageSlug}"
+	slug="{pageSlug}"
 	datePublished = '2023-01-11T12:31:00.000+0100'
 	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{titleCase($LL.sessions.info.title())}"
-	metadescription="{titleCase($LL.sessions.info.title())} - {titleCase($LL.sessions.info.intro.title())}"
-	
+	title="{pageTitle}"
+	metadescription="{pageDesc}"
 	{breadcrumbs} {entityMeta}
-
 />
+
 <header>
    <Hero imgSrc="home/kracht-gezonde-teams.webp" imgAlt="No Alt">
       <span slot="title">
