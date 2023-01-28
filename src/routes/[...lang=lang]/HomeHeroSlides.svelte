@@ -59,17 +59,17 @@
                </Text>
             {/if}
          </div>
-         <div class="flex flex-row gap-4">
+         <div class="flex flex-row gap-4 items-center lg:items-start mx-auto lg:mx-0">
             <Button 
                ariaLabel={$LL.base.btn.more_info()} outlined
-               size="lg" color="secondary"
+               size="xxl" color="secondary"
                href="/out:{$locale}/{slide.link}">
                {$LL.base.btn.more_info()}
             </Button>
             {#if slide.extra_btn}
                <Button 
                   ariaLabel={slide.extra_btn.title} 
-                  size="lg" color="primary"
+                  size="xxl" color="primary"
                   href="/{$locale}/{slide.extra_btn.link}">
                   {slide.extra_btn.title}
                </Button>
