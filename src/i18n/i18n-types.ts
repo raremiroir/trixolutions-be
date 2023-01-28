@@ -112,12 +112,20 @@ type RootTranslation = {
 			 * g​a​ ​n​a​a​r
 			 */
 			go_to: string
+			/**
+			 * g​a​ ​v​e​r​d​e​r​ ​i​n​ ​h​e​t
+			 */
+			proceed_in: string
 		}
 		error: {
 			/**
 			 * H​e​l​a​a​s​.​ ​D​e​ ​p​a​g​i​n​a​ ​w​a​a​r​ ​j​e​ ​n​a​a​r​ ​z​o​c​h​t​ ​w​e​r​d​ ​n​i​e​t​ ​g​e​v​o​n​d​e​n​.​ ​<​b​r​/​>​K​e​e​r​ ​t​e​r​u​g​ ​n​a​a​r​ ​d​e​ ​h​o​m​e​p​a​g​i​n​a​ ​v​i​a​ ​o​n​d​e​r​s​t​a​a​n​d​e​ ​k​n​o​p​,​ ​o​f​ ​g​e​b​r​u​i​k​ ​d​e​ ​n​a​v​i​g​a​t​i​e​b​a​l​k​.
 			 */
 			not_found: string
+			/**
+			 * H​e​l​a​a​s​!​ ​O​p​ ​d​i​t​ ​m​o​m​e​n​t​ ​i​s​ ​d​e​ ​b​l​o​g​ ​e​n​k​e​l​ ​t​o​e​g​a​n​k​e​l​i​j​k​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​.
+			 */
+			blog_unavailable: string
 		}
 		validation: {
 			/**
@@ -1038,6 +1046,22 @@ export type NamespaceSessionsTranslation = {
 			'1': {
 				title: {
 					/**
+					 * I​n​t​e​g​r​a​t​i​e​ ​i​n​ ​e​e​n
+					 */
+					before: string
+					/**
+					 * L​e​e​r​g​r​o​e​p​ ​m​e​t​ ​A​n​d​e​r​e​ ​D​e​e​l​n​e​m​e​r​s
+					 */
+					main: string
+				}
+				/**
+				 * I​n​ ​d​e​ ​A​l​l​-​i​n​ ​M​o​d​u​l​e​ ​w​o​r​d​t​ ​j​e​ ​o​p​g​e​n​o​m​e​n​ ​i​n​ ​e​e​n​ ​l​e​e​r​g​r​o​e​p​ ​m​e​t​ ​o​n​g​e​v​e​e​r​ ​8​ ​d​e​e​l​n​e​m​e​r​s​,​ ​w​a​a​r​m​e​e​ ​j​e​ ​o​o​k​ ​d​e​ ​t​w​e​e​d​a​a​g​s​e​ ​M​a​s​t​e​r​c​l​a​s​s​ ​z​a​l​ ​b​e​l​e​v​e​n​.​ ​E​e​n​ ​j​a​a​r​ ​l​a​n​g​ ​k​u​n​n​e​n​ ​j​u​l​l​i​e​ ​b​l​i​j​v​e​n​ ​c​o​n​t​a​c​t​ ​h​o​u​d​e​n​ ​o​m​ ​c​a​s​e​s​ ​t​e​ ​b​e​s​p​r​e​k​e​n​ ​e​n​ ​e​l​k​a​a​r​ ​t​e​ ​h​e​l​p​e​n​.
+				 */
+				content: string
+			}
+			'2': {
+				title: {
+					/**
 					 * T​w​e​e​d​a​a​g​s​e​ ​F​y​s​i​e​k​e
 					 */
 					before: string
@@ -1051,7 +1075,20 @@ export type NamespaceSessionsTranslation = {
 				 */
 				content: string
 			}
-			'2': {
+			'3': {
+				title: {
+					/**
+					 * O​f​f​i​c​i​e​e​l
+					 */
+					before: string
+					/**
+					 * T​r​i​x​o​l​u​t​i​o​n​s​ ​/​ ​L​e​n​c​i​o​n​i​ ​C​e​r​t​i​f​i​c​a​a​t
+					 */
+					main: string
+				}
+				content: string
+			}
+			'4': {
 				title: {
 					/**
 					 * 1​5​ ​K​a​r​t​o​n​n​e​n
@@ -1067,7 +1104,23 @@ export type NamespaceSessionsTranslation = {
 				 */
 				content: string
 			}
-			'3': {
+			'5': {
+				title: {
+					/**
+					 * T​o​e​g​a​n​g​ ​t​o​t​ ​h​e​t
+					 */
+					before: string
+					/**
+					 * V​o​l​w​a​a​r​d​i​g​ ​&​ ​U​p​-​t​o​-​D​a​t​e​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​ ​A​s​s​e​s​s​m​e​n​t
+					 */
+					main: string
+				}
+				/**
+				 * I​n​c​l​u​s​i​e​f​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​ ​e​n​ ​e​e​n​ ​v​o​o​r​b​e​e​l​d​r​a​p​p​o​r​t​.
+				 */
+				content: string
+			}
+			'6': {
 				title: {
 					/**
 					 * T​o​e​g​a​n​g​ ​t​o​t​ ​h​e​t
@@ -1083,7 +1136,23 @@ export type NamespaceSessionsTranslation = {
 				 */
 				content: string
 			}
-			'4': {
+			'7': {
+				title: {
+					/**
+					 * T​o​e​g​a​n​g​ ​t​o​t​ ​h​e​t
+					 */
+					before: string
+					/**
+					 * L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k
+					 */
+					main: string
+				}
+				/**
+				 * H​e​t​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​ ​k​a​n​ ​j​e​ ​d​o​w​n​l​o​a​d​e​n​ ​i​n​ ​W​o​r​d​ ​e​n​ ​a​l​s​ ​d​u​s​d​a​n​i​g​ ​m​a​k​k​e​l​i​j​k​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​j​e​ ​e​i​g​e​n​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​e​n​.
+				 */
+				content: string
+			}
+			'8': {
 				title: {
 					/**
 					 * O​n​l​i​n​e​ ​t​o​e​g​a​n​g​ ​t​o​t
@@ -1106,144 +1175,7 @@ export type NamespaceSessionsTranslation = {
 				 */
 				content: string
 			}
-			'5': {
-				title: {
-					/**
-					 * T​o​e​g​a​n​g​ ​t​o​t​ ​d​e
-					 */
-					before: string
-					/**
-					 * 5​ ​L​e​n​c​i​o​n​i​ ​D​e​e​p​D​i​v​e​s
-					 */
-					main: string
-				}
-				/**
-				 * <​s​t​r​o​n​g​>​P​e​r​ ​l​a​a​g​ ​i​n​ ​d​e​ ​P​i​r​a​m​i​d​e​ ​k​r​i​j​g​ ​j​e​:​<​/​s​t​r​o​n​g​>​<​b​r​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​u​l​>​<​l​i​>​5​ ​L​e​n​c​i​o​n​i​ ​P​o​d​c​a​s​t​s​,​ ​s​a​m​e​n​g​e​v​a​t​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​u​l​>​<​l​i​>​+​ ​o​r​i​g​i​n​e​l​e​ ​p​o​d​c​a​s​t​s​ ​i​n​ ​h​e​t​ ​E​n​g​e​l​s​ ​t​e​ ​b​e​l​u​i​s​t​e​r​e​n​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​5​ ​Q​u​o​t​e​s​<​/​l​i​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​3​ ​F​i​l​m​p​j​e​s​ ​w​a​a​r​i​n​ ​L​e​n​c​i​o​n​i​ ​z​e​l​f​ ​e​e​n​ ​a​a​n​t​a​l​ ​o​e​f​e​n​i​n​g​e​n​ ​e​n​ ​i​n​z​i​c​h​t​e​n​ ​t​o​e​l​i​c​h​t​<​/​l​i​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​3​ ​E​x​t​r​a​ ​O​e​f​e​n​i​n​g​e​n​<​u​l​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​b​o​v​e​n​o​p​ ​d​i​e​ ​v​a​n​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​<​/​l​i​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​+​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​5​ ​t​o​t​ ​1​0​ ​q​u​o​t​e​s​ ​d​i​e​ ​j​e​ ​k​a​n​ ​g​e​b​r​u​i​k​e​n​ ​t​e​r​ ​i​n​s​p​i​r​a​t​i​e​ ​i​n​ ​j​e​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​e​n​<​/​l​i​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​5​ ​t​o​t​ ​1​0​ ​p​o​d​c​a​s​t​s​<​u​l​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​s​a​m​e​n​g​e​v​a​t​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​+​ ​d​e​ ​l​i​n​k​ ​n​a​a​r​ ​d​e​ ​o​r​i​g​i​n​e​l​e​ ​p​o​d​c​a​s​t​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​M​e​e​r​d​e​r​e​ ​f​i​l​m​p​j​e​s​ ​v​a​n​ ​L​e​n​c​i​o​n​i​<​u​l​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​o​n​d​e​r​t​i​t​e​l​d​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​M​e​e​r​d​e​r​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​<​u​l​>​
-			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​i​n​c​l​u​s​i​e​f​ ​u​i​t​g​e​b​r​e​i​d​e​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​<​/​u​l​>
-				 */
-				content: string
-			}
-			'6': {
-				title: {
-					/**
-					 * T​o​e​g​a​n​g​ ​t​o​t​ ​d​e​ ​D​e​e​p​D​i​v​e
-					 */
-					before: string
-					/**
-					 * L​a​a​g​ ​R​e​s​p​e​c​t​v​o​l​l​e​ ​C​o​n​f​l​i​c​t​e​n
-					 */
-					main: string
-				}
-				/**
-				 * B​u​i​t​e​n​ ​d​e​ ​q​u​o​t​e​s​,​ ​p​o​d​c​a​s​t​s​,​ ​f​i​l​m​p​j​e​s​ ​m​e​t​ ​b​e​t​r​e​k​k​i​n​g​ ​t​o​t​ ​d​e​z​e​ ​l​a​a​g​,​ ​v​i​n​d​ ​j​e​ ​e​r​ ​e​e​n​ ​a​a​n​t​a​l​ ​l​e​u​k​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​ ​i​n​ ​o​m​ ​i​n​ ​e​e​n​ ​t​e​a​m​ ​o​p​ ​d​e​z​e​ ​l​a​a​g​ ​t​e​ ​w​e​r​k​e​n​ ​e​n​ ​v​e​r​b​e​t​e​r​e​n​.
-				 */
-				content: string
-			}
-			'7': {
-				title: {
-					/**
-					 * T​o​e​g​a​n​g​ ​t​o​t​ ​d​e​ ​D​e​e​p​D​i​v​e
-					 */
-					before: string
-					/**
-					 * L​a​a​g​ ​A​a​n​s​p​r​a​k​e​l​i​j​k​h​e​i​d
-					 */
-					main: string
-				}
-				/**
-				 * D​e​z​e​ ​l​a​a​g​ ​i​s​ ​v​o​o​r​ ​d​e​ ​m​e​e​s​t​e​ ​t​e​a​m​s​ ​d​e​ ​m​o​e​i​l​i​j​k​s​t​e​.​ ​V​a​n​d​a​a​r​ ​d​a​t​ ​d​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​,​ ​f​i​l​m​p​j​e​s​,​ ​p​o​d​c​a​s​t​s​ ​é​n​ ​q​u​o​t​e​s​ ​b​e​l​a​n​g​r​i​j​k​ ​z​i​j​n​.​.
-				 */
-				content: string
-			}
-			'8': {
-				title: {
-					before: string
-					/**
-					 * B​r​u​g​g​e​n​ ​m​e​t​ ​A​n​d​e​r​e​ ​M​o​d​e​l​l​e​n
-					 */
-					main: string
-				}
-				/**
-				 * I​n​ ​d​i​t​ ​l​a​a​t​s​t​e​ ​g​e​d​e​e​l​t​e​ ​g​a​a​n​ ​w​e​ ​d​i​e​p​e​r​ ​i​n​ ​o​p​ ​d​e​ ​b​r​u​g​g​e​n​ ​d​i​e​ ​j​e​ ​k​a​n​ ​b​o​u​w​e​n​ ​n​a​a​r​ ​a​n​d​e​r​e​ ​m​o​d​e​l​l​e​n​.​ ​D​e​z​e​ ​z​i​j​n​ ​e​n​o​r​m​,​ ​w​a​t​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​m​o​d​e​l​ ​z​o​ ​f​l​e​x​i​b​e​l​ ​m​a​a​k​t​ ​e​n​ ​m​a​k​k​e​l​i​j​k​ ​i​n​t​e​g​r​e​e​r​b​a​a​r​ ​i​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​!
-				 */
-				content: string
-			}
 			'9': {
-				title: {
-					/**
-					 * I​n​t​e​g​r​a​t​i​e​ ​i​n​ ​e​e​n
-					 */
-					before: string
-					/**
-					 * L​e​e​r​g​r​o​e​p​ ​m​e​t​ ​A​n​d​e​r​e​ ​D​e​e​l​n​e​m​e​r​s
-					 */
-					main: string
-				}
-				/**
-				 * I​n​ ​d​e​ ​A​l​l​-​i​n​ ​M​o​d​u​l​e​ ​w​o​r​d​t​ ​j​e​ ​o​p​g​e​n​o​m​e​n​ ​i​n​ ​e​e​n​ ​l​e​e​r​g​r​o​e​p​ ​m​e​t​ ​o​n​g​e​v​e​e​r​ ​8​ ​d​e​e​l​n​e​m​e​r​s​,​ ​w​a​a​r​m​e​e​ ​j​e​ ​o​o​k​ ​d​e​ ​t​w​e​e​d​a​a​g​s​e​ ​M​a​s​t​e​r​c​l​a​s​s​ ​z​a​l​ ​b​e​l​e​v​e​n​.​ ​E​e​n​ ​j​a​a​r​ ​l​a​n​g​ ​k​u​n​n​e​n​ ​j​u​l​l​i​e​ ​b​l​i​j​v​e​n​ ​c​o​n​t​a​c​t​ ​h​o​u​d​e​n​ ​o​m​ ​c​a​s​e​s​ ​t​e​ ​b​e​s​p​r​e​k​e​n​ ​e​n​ ​e​l​k​a​a​r​ ​t​e​ ​h​e​l​p​e​n​.
-				 */
-				content: string
-			}
-			'10': {
-				title: {
-					/**
-					 * O​f​f​i​c​i​e​e​l
-					 */
-					before: string
-					/**
-					 * T​r​i​x​o​l​u​t​i​o​n​s​ ​/​ ​L​e​n​c​i​o​n​i​ ​C​e​r​t​i​f​i​c​a​a​t
-					 */
-					main: string
-				}
-				content: string
-			}
-			'11': {
-				title: {
-					/**
-					 * T​o​e​g​a​n​g​ ​t​o​t​ ​h​e​t
-					 */
-					before: string
-					/**
-					 * V​o​l​w​a​a​r​d​i​g​ ​&​ ​U​p​-​t​o​-​D​a​t​e​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​ ​A​s​s​e​s​s​m​e​n​t
-					 */
-					main: string
-				}
-				/**
-				 * I​n​c​l​u​s​i​e​f​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​ ​e​n​ ​e​e​n​ ​v​o​o​r​b​e​e​l​d​r​a​p​p​o​r​t​.
-				 */
-				content: string
-			}
-			'12': {
-				title: {
-					/**
-					 * T​o​e​g​a​n​g​ ​t​o​t​ ​h​e​t
-					 */
-					before: string
-					/**
-					 * L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k
-					 */
-					main: string
-				}
-				/**
-				 * H​e​t​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​ ​k​a​n​ ​j​e​ ​d​o​w​n​l​o​a​d​e​n​ ​i​n​ ​W​o​r​d​ ​e​n​ ​a​l​s​ ​d​u​s​d​a​n​i​g​ ​m​a​k​k​e​l​i​j​k​ ​i​n​z​e​t​t​e​n​ ​i​n​ ​j​e​ ​e​i​g​e​n​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​e​n​.
-				 */
-				content: string
-			}
-			'13': {
 				title: {
 					/**
 					 * I​n​c​l​u​s​i​e​f
@@ -1259,7 +1191,38 @@ export type NamespaceSessionsTranslation = {
 				 */
 				content: string
 			}
-			'14': {
+			'10': {
+				title: {
+					/**
+					 * T​o​e​g​a​n​g​ ​t​o​t​ ​d​e
+					 */
+					before: string
+					/**
+					 * 5​ ​L​e​n​c​i​o​n​i​ ​D​e​e​p​D​i​v​e​s
+					 */
+					main: string
+				}
+				/**
+				 * <​s​t​r​o​n​g​>​P​e​r​ ​l​a​a​g​ ​i​n​ ​d​e​ ​P​i​r​a​m​i​d​e​ ​k​r​i​j​g​ ​j​e​:​<​/​s​t​r​o​n​g​>​<​b​r​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​u​l​>​<​l​i​>​5​ ​L​e​n​c​i​o​n​i​ ​P​o​d​c​a​s​t​s​,​ ​s​a​m​e​n​g​e​v​a​t​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​u​l​>​<​l​i​>​+​ ​o​r​i​g​i​n​e​l​e​ ​p​o​d​c​a​s​t​s​ ​i​n​ ​h​e​t​ ​E​n​g​e​l​s​ ​t​e​ ​b​e​l​u​i​s​t​e​r​e​n​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​5​ ​Q​u​o​t​e​s​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​3​ ​F​i​l​m​p​j​e​s​ ​w​a​a​r​i​n​ ​L​e​n​c​i​o​n​i​ ​z​e​l​f​ ​e​e​n​ ​a​a​n​t​a​l​ ​o​e​f​e​n​i​n​g​e​n​ ​e​n​ ​i​n​z​i​c​h​t​e​n​ ​t​o​e​l​i​c​h​t​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​3​ ​E​x​t​r​a​ ​O​e​f​e​n​i​n​g​e​n​<​u​l​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​b​o​v​e​n​o​p​ ​d​i​e​ ​v​a​n​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​W​e​r​k​b​o​e​k​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​+​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​5​ ​t​o​t​ ​1​0​ ​q​u​o​t​e​s​ ​d​i​e​ ​j​e​ ​k​a​n​ ​g​e​b​r​u​i​k​e​n​ ​t​e​r​ ​i​n​s​p​i​r​a​t​i​e​ ​i​n​ ​j​e​ ​L​e​n​c​i​o​n​i​ ​t​r​a​j​e​c​t​e​n​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​5​ ​t​o​t​ ​1​0​ ​p​o​d​c​a​s​t​s​<​u​l​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​s​a​m​e​n​g​e​v​a​t​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​+​ ​d​e​ ​l​i​n​k​ ​n​a​a​r​ ​d​e​ ​o​r​i​g​i​n​e​l​e​ ​p​o​d​c​a​s​t​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​M​e​e​r​d​e​r​e​ ​f​i​l​m​p​j​e​s​ ​v​a​n​ ​L​e​n​c​i​o​n​i​<​u​l​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​o​n​d​e​r​t​i​t​e​l​d​ ​i​n​ ​h​e​t​ ​N​e​d​e​r​l​a​n​d​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​M​e​e​r​d​e​r​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​<​u​l​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​l​i​>​i​n​c​l​u​s​i​e​f​ ​u​i​t​g​e​b​r​e​i​d​e​ ​f​a​c​i​l​i​t​a​t​o​r​ ​i​n​s​t​r​u​c​t​i​e​s​<​/​l​i​>​<​/​u​l​>​<​/​l​i​>​<​/​u​l​>
+				 */
+				content: string
+			}
+			'11': {
 				title: {
 					/**
 					 * T​o​e​g​a​n​g​ ​t​o​t​ ​d​e​ ​D​e​e​p​D​i​v​e
@@ -1275,7 +1238,23 @@ export type NamespaceSessionsTranslation = {
 				 */
 				content: string
 			}
-			'15': {
+			'12': {
+				title: {
+					/**
+					 * T​o​e​g​a​n​g​ ​t​o​t​ ​d​e​ ​D​e​e​p​D​i​v​e
+					 */
+					before: string
+					/**
+					 * L​a​a​g​ ​R​e​s​p​e​c​t​v​o​l​l​e​ ​C​o​n​f​l​i​c​t​e​n
+					 */
+					main: string
+				}
+				/**
+				 * B​u​i​t​e​n​ ​d​e​ ​q​u​o​t​e​s​,​ ​p​o​d​c​a​s​t​s​,​ ​f​i​l​m​p​j​e​s​ ​m​e​t​ ​b​e​t​r​e​k​k​i​n​g​ ​t​o​t​ ​d​e​z​e​ ​l​a​a​g​,​ ​v​i​n​d​ ​j​e​ ​e​r​ ​e​e​n​ ​a​a​n​t​a​l​ ​l​e​u​k​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​ ​i​n​ ​o​m​ ​i​n​ ​e​e​n​ ​t​e​a​m​ ​o​p​ ​d​e​z​e​ ​l​a​a​g​ ​t​e​ ​w​e​r​k​e​n​ ​e​n​ ​v​e​r​b​e​t​e​r​e​n​.
+				 */
+				content: string
+			}
+			'13': {
 				title: {
 					/**
 					 * T​o​e​g​a​n​g​ ​t​o​t​ ​d​e​ ​D​e​e​p​D​i​v​e
@@ -1291,7 +1270,23 @@ export type NamespaceSessionsTranslation = {
 				 */
 				content: string
 			}
-			'16': {
+			'14': {
+				title: {
+					/**
+					 * T​o​e​g​a​n​g​ ​t​o​t​ ​d​e​ ​D​e​e​p​D​i​v​e
+					 */
+					before: string
+					/**
+					 * L​a​a​g​ ​A​a​n​s​p​r​a​k​e​l​i​j​k​h​e​i​d
+					 */
+					main: string
+				}
+				/**
+				 * D​e​z​e​ ​l​a​a​g​ ​i​s​ ​v​o​o​r​ ​d​e​ ​m​e​e​s​t​e​ ​t​e​a​m​s​ ​d​e​ ​m​o​e​i​l​i​j​k​s​t​e​.​ ​V​a​n​d​a​a​r​ ​d​a​t​ ​d​e​ ​e​x​t​r​a​ ​o​e​f​e​n​i​n​g​e​n​,​ ​f​i​l​m​p​j​e​s​,​ ​p​o​d​c​a​s​t​s​ ​é​n​ ​q​u​o​t​e​s​ ​b​e​l​a​n​g​r​i​j​k​ ​z​i​j​n​.​.
+				 */
+				content: string
+			}
+			'15': {
 				title: {
 					/**
 					 * T​o​e​g​a​n​g​ ​t​o​t​ ​d​e​ ​D​e​e​p​D​i​v​e
@@ -1307,11 +1302,28 @@ export type NamespaceSessionsTranslation = {
 				 */
 				content: string
 			}
+			'16': {
+				title: {
+					before: string
+					/**
+					 * B​r​u​g​g​e​n​ ​m​e​t​ ​A​n​d​e​r​e​ ​M​o​d​e​l​l​e​n
+					 */
+					main: string
+				}
+				/**
+				 * I​n​ ​d​i​t​ ​l​a​a​t​s​t​e​ ​g​e​d​e​e​l​t​e​ ​g​a​a​n​ ​w​e​ ​d​i​e​p​e​r​ ​i​n​ ​o​p​ ​d​e​ ​b​r​u​g​g​e​n​ ​d​i​e​ ​j​e​ ​k​a​n​ ​b​o​u​w​e​n​ ​n​a​a​r​ ​a​n​d​e​r​e​ ​m​o​d​e​l​l​e​n​.​ ​D​e​z​e​ ​z​i​j​n​ ​e​n​o​r​m​,​ ​w​a​t​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​m​o​d​e​l​ ​z​o​ ​f​l​e​x​i​b​e​l​ ​m​a​a​k​t​ ​e​n​ ​m​a​k​k​e​l​i​j​k​ ​i​n​t​e​g​r​e​e​r​b​a​a​r​ ​i​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​!
+				 */
+				content: string
+			}
 		}
 		/**
 		 * l​e​e​r​t​r​a​j​e​c​t
 		 */
 		traject: string
+		/**
+		 * h​e​t​ ​l​e​e​r​t​r​a​j​e​c​t
+		 */
+		the_traject: string
 		/**
 		 * h​y​b​r​i​d​e
 		 */
@@ -1381,7 +1393,7 @@ export type NamespaceSessionsTranslation = {
 		}
 		basic: {
 			/**
-			 * Z​o​n​d​e​r
+			 * z​o​n​d​e​r
 			 */
 			title: string
 			/**
@@ -1397,7 +1409,7 @@ export type NamespaceSessionsTranslation = {
 		}
 		full: {
 			/**
-			 * M​e​t
+			 * m​e​t
 			 */
 			title: string
 			/**
@@ -1797,12 +1809,20 @@ export type TranslationFunctions = {
 			 * ga naar
 			 */
 			go_to: () => LocalizedString
+			/**
+			 * ga verder in het
+			 */
+			proceed_in: () => LocalizedString
 		}
 		error: {
 			/**
 			 * Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk.
 			 */
 			not_found: () => LocalizedString
+			/**
+			 * Helaas! Op dit moment is de blog enkel toegankelijk in het Nederlands.
+			 */
+			blog_unavailable: () => LocalizedString
 		}
 		validation: {
 			/**
@@ -2700,6 +2720,22 @@ export type TranslationFunctions = {
 				'1': {
 					title: {
 						/**
+						 * Integratie in een
+						 */
+						before: () => LocalizedString
+						/**
+						 * Leergroep met Andere Deelnemers
+						 */
+						main: () => LocalizedString
+					}
+					/**
+					 * In de All-in Module wordt je opgenomen in een leergroep met ongeveer 8 deelnemers, waarmee je ook de tweedaagse Masterclass zal beleven. Een jaar lang kunnen jullie blijven contact houden om cases te bespreken en elkaar te helpen.
+					 */
+					content: () => LocalizedString
+				}
+				'2': {
+					title: {
+						/**
 						 * Tweedaagse Fysieke
 						 */
 						before: () => LocalizedString
@@ -2713,7 +2749,20 @@ export type TranslationFunctions = {
 					 */
 					content: () => LocalizedString
 				}
-				'2': {
+				'3': {
+					title: {
+						/**
+						 * Officieel
+						 */
+						before: () => LocalizedString
+						/**
+						 * Trixolutions / Lencioni Certificaat
+						 */
+						main: () => LocalizedString
+					}
+					content: () => LocalizedString
+				}
+				'4': {
 					title: {
 						/**
 						 * 15 Kartonnen
@@ -2729,7 +2778,23 @@ export type TranslationFunctions = {
 					 */
 					content: () => LocalizedString
 				}
-				'3': {
+				'5': {
+					title: {
+						/**
+						 * Toegang tot het
+						 */
+						before: () => LocalizedString
+						/**
+						 * Volwaardig & Up-to-Date Lencioni Team Assessment
+						 */
+						main: () => LocalizedString
+					}
+					/**
+					 * Inclusief facilitator instructies en een voorbeeldrapport.
+					 */
+					content: () => LocalizedString
+				}
+				'6': {
 					title: {
 						/**
 						 * Toegang tot het
@@ -2745,7 +2810,23 @@ export type TranslationFunctions = {
 					 */
 					content: () => LocalizedString
 				}
-				'4': {
+				'7': {
+					title: {
+						/**
+						 * Toegang tot het
+						 */
+						before: () => LocalizedString
+						/**
+						 * Lencioni Werkboek
+						 */
+						main: () => LocalizedString
+					}
+					/**
+					 * Het Lencioni Werkboek kan je downloaden in Word en als dusdanig makkelijk inzetten in je eigen Lencioni trajecten.
+					 */
+					content: () => LocalizedString
+				}
+				'8': {
 					title: {
 						/**
 						 * Online toegang tot
@@ -2768,144 +2849,7 @@ export type TranslationFunctions = {
 					 */
 					content: () => LocalizedString
 				}
-				'5': {
-					title: {
-						/**
-						 * Toegang tot de
-						 */
-						before: () => LocalizedString
-						/**
-						 * 5 Lencioni DeepDives
-						 */
-						main: () => LocalizedString
-					}
-					/**
-					 * <strong>Per laag in de Piramide krijg je:</strong><br>
-				                     <ul><li>5 Lencioni Podcasts, samengevat in het Nederlands
-				                     <ul><li>+ originele podcasts in het Engels te beluisteren</li></ul></li>
-				                     <li>5 Quotes</li>
-				                     <li>3 Filmpjes waarin Lencioni zelf een aantal oefeningen en inzichten toelicht</li>
-				                     <li>3 Extra Oefeningen<ul>
-				                     <li>bovenop die van het Lencioni Werkboek</li>
-				                     <li>+ facilitator instructies</li></ul></li>
-				                     <li>5 tot 10 quotes die je kan gebruiken ter inspiratie in je Lencioni trajecten</li>
-				                     <li>5 tot 10 podcasts<ul>
-				                     <li>samengevat in het Nederlands</li>
-				                     <li>+ de link naar de originele podcast</li></ul></li>
-				                     <li>Meerdere filmpjes van Lencioni<ul>
-				                     <li>ondertiteld in het Nederlands</li></ul></li>
-				                     <li>Meerdere extra oefeningen<ul>
-				                     <li>inclusief uitgebreide facilitator instructies</li></ul></li></ul>
-					 */
-					content: () => LocalizedString
-				}
-				'6': {
-					title: {
-						/**
-						 * Toegang tot de DeepDive
-						 */
-						before: () => LocalizedString
-						/**
-						 * Laag Respectvolle Conflicten
-						 */
-						main: () => LocalizedString
-					}
-					/**
-					 * Buiten de quotes, podcasts, filmpjes met betrekking tot deze laag, vind je er een aantal leuke extra oefeningen in om in een team op deze laag te werken en verbeteren.
-					 */
-					content: () => LocalizedString
-				}
-				'7': {
-					title: {
-						/**
-						 * Toegang tot de DeepDive
-						 */
-						before: () => LocalizedString
-						/**
-						 * Laag Aansprakelijkheid
-						 */
-						main: () => LocalizedString
-					}
-					/**
-					 * Deze laag is voor de meeste teams de moeilijkste. Vandaar dat de extra oefeningen, filmpjes, podcasts én quotes belangrijk zijn..
-					 */
-					content: () => LocalizedString
-				}
-				'8': {
-					title: {
-						before: () => LocalizedString
-						/**
-						 * Bruggen met Andere Modellen
-						 */
-						main: () => LocalizedString
-					}
-					/**
-					 * In dit laatste gedeelte gaan we dieper in op de bruggen die je kan bouwen naar andere modellen. Deze zijn enorm, wat het Lencioni model zo flexibel maakt en makkelijk integreerbaar in organisaties en teams!
-					 */
-					content: () => LocalizedString
-				}
 				'9': {
-					title: {
-						/**
-						 * Integratie in een
-						 */
-						before: () => LocalizedString
-						/**
-						 * Leergroep met Andere Deelnemers
-						 */
-						main: () => LocalizedString
-					}
-					/**
-					 * In de All-in Module wordt je opgenomen in een leergroep met ongeveer 8 deelnemers, waarmee je ook de tweedaagse Masterclass zal beleven. Een jaar lang kunnen jullie blijven contact houden om cases te bespreken en elkaar te helpen.
-					 */
-					content: () => LocalizedString
-				}
-				'10': {
-					title: {
-						/**
-						 * Officieel
-						 */
-						before: () => LocalizedString
-						/**
-						 * Trixolutions / Lencioni Certificaat
-						 */
-						main: () => LocalizedString
-					}
-					content: () => LocalizedString
-				}
-				'11': {
-					title: {
-						/**
-						 * Toegang tot het
-						 */
-						before: () => LocalizedString
-						/**
-						 * Volwaardig & Up-to-Date Lencioni Team Assessment
-						 */
-						main: () => LocalizedString
-					}
-					/**
-					 * Inclusief facilitator instructies en een voorbeeldrapport.
-					 */
-					content: () => LocalizedString
-				}
-				'12': {
-					title: {
-						/**
-						 * Toegang tot het
-						 */
-						before: () => LocalizedString
-						/**
-						 * Lencioni Werkboek
-						 */
-						main: () => LocalizedString
-					}
-					/**
-					 * Het Lencioni Werkboek kan je downloaden in Word en als dusdanig makkelijk inzetten in je eigen Lencioni trajecten.
-					 */
-					content: () => LocalizedString
-				}
-				'13': {
 					title: {
 						/**
 						 * Inclusief
@@ -2921,7 +2865,38 @@ export type TranslationFunctions = {
 					 */
 					content: () => LocalizedString
 				}
-				'14': {
+				'10': {
+					title: {
+						/**
+						 * Toegang tot de
+						 */
+						before: () => LocalizedString
+						/**
+						 * 5 Lencioni DeepDives
+						 */
+						main: () => LocalizedString
+					}
+					/**
+					 * <strong>Per laag in de Piramide krijg je:</strong><br>
+				            <ul><li>5 Lencioni Podcasts, samengevat in het Nederlands
+				            <ul><li>+ originele podcasts in het Engels te beluisteren</li></ul></li>
+				            <li>5 Quotes</li>
+				            <li>3 Filmpjes waarin Lencioni zelf een aantal oefeningen en inzichten toelicht</li>
+				                     <li>3 Extra Oefeningen<ul>
+				                     <li>bovenop die van het Lencioni Werkboek</li>
+				                     <li>+ facilitator instructies</li></ul></li>
+				                     <li>5 tot 10 quotes die je kan gebruiken ter inspiratie in je Lencioni trajecten</li>
+				                     <li>5 tot 10 podcasts<ul>
+				                     <li>samengevat in het Nederlands</li>
+				                     <li>+ de link naar de originele podcast</li></ul></li>
+				                     <li>Meerdere filmpjes van Lencioni<ul>
+				                     <li>ondertiteld in het Nederlands</li></ul></li>
+				                     <li>Meerdere extra oefeningen<ul>
+				                     <li>inclusief uitgebreide facilitator instructies</li></ul></li></ul>
+					 */
+					content: () => LocalizedString
+				}
+				'11': {
 					title: {
 						/**
 						 * Toegang tot de DeepDive
@@ -2937,7 +2912,23 @@ export type TranslationFunctions = {
 					 */
 					content: () => LocalizedString
 				}
-				'15': {
+				'12': {
+					title: {
+						/**
+						 * Toegang tot de DeepDive
+						 */
+						before: () => LocalizedString
+						/**
+						 * Laag Respectvolle Conflicten
+						 */
+						main: () => LocalizedString
+					}
+					/**
+					 * Buiten de quotes, podcasts, filmpjes met betrekking tot deze laag, vind je er een aantal leuke extra oefeningen in om in een team op deze laag te werken en verbeteren.
+					 */
+					content: () => LocalizedString
+				}
+				'13': {
 					title: {
 						/**
 						 * Toegang tot de DeepDive
@@ -2953,7 +2944,23 @@ export type TranslationFunctions = {
 					 */
 					content: () => LocalizedString
 				}
-				'16': {
+				'14': {
+					title: {
+						/**
+						 * Toegang tot de DeepDive
+						 */
+						before: () => LocalizedString
+						/**
+						 * Laag Aansprakelijkheid
+						 */
+						main: () => LocalizedString
+					}
+					/**
+					 * Deze laag is voor de meeste teams de moeilijkste. Vandaar dat de extra oefeningen, filmpjes, podcasts én quotes belangrijk zijn..
+					 */
+					content: () => LocalizedString
+				}
+				'15': {
 					title: {
 						/**
 						 * Toegang tot de DeepDive
@@ -2969,11 +2976,28 @@ export type TranslationFunctions = {
 					 */
 					content: () => LocalizedString
 				}
+				'16': {
+					title: {
+						before: () => LocalizedString
+						/**
+						 * Bruggen met Andere Modellen
+						 */
+						main: () => LocalizedString
+					}
+					/**
+					 * In dit laatste gedeelte gaan we dieper in op de bruggen die je kan bouwen naar andere modellen. Deze zijn enorm, wat het Lencioni model zo flexibel maakt en makkelijk integreerbaar in organisaties en teams!
+					 */
+					content: () => LocalizedString
+				}
 			}
 			/**
 			 * leertraject
 			 */
 			traject: () => LocalizedString
+			/**
+			 * het leertraject
+			 */
+			the_traject: () => LocalizedString
 			/**
 			 * hybride
 			 */
@@ -3043,7 +3067,7 @@ export type TranslationFunctions = {
 			}
 			basic: {
 				/**
-				 * Zonder
+				 * zonder
 				 */
 				title: () => LocalizedString
 				/**
@@ -3059,7 +3083,7 @@ export type TranslationFunctions = {
 			}
 			full: {
 				/**
-				 * Met
+				 * met
 				 */
 				title: () => LocalizedString
 				/**
