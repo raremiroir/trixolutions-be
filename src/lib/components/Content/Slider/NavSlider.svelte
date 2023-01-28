@@ -12,9 +12,14 @@
      type      : 'loop',
      perPage   : 2,
      perMove   : 1,
-     gap       : '1rem',
+     gap       : '2rem',
      pagination: false,
      height    : '10rem',
+     breakpoints: {
+         1440: { perPage: 3, perMove: 2, gap: '2rem' },
+			768: { perPage: 2, gap: '1rem' },
+			520: { perPage: 1, perMove: 1, gap: '0.5rem' }
+     }
    };
    const thumbsOptions = {
      type        : 'slide',
@@ -87,7 +92,7 @@
             <button class="splide__arrow splide__arrow--prev" />
             <button class="splide__arrow splide__arrow--next" />
          </div>
-         <SplideTrack>
+         <SplideTrack class="h-fit">
             <!-- Slides -->
                <slot/>
          </SplideTrack>
