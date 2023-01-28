@@ -216,15 +216,17 @@
          bind:value={$form.email}
          bind:errors={$errors.email}
          required/>
+   </RowWrap>
 
+   <RowWrap>
       <FormInput 
          name="phone_number"
          label="{titleCase($LL.base.form.telephone())}"
          on:change={handleChange}
          bind:value={$form.phone_number}
          bind:errors={$errors.phone_number}/>
-
    </RowWrap>
+
       
       
    <RowWrap>
@@ -235,8 +237,10 @@
          bind:value={$form.company}
          bind:errors={$errors.company}
          required/>
+   </RowWrap>
 
-      {#if session !== 'level_1_basic'}
+   {#if session !== ('level_1_basic' || 'level_2')}
+      <RowWrap>
          <FormInput 
             select
             name="session_picked"
@@ -249,8 +253,8 @@
                <option value={session}>{session}</option>
             {/each}
          </FormInput>
-      {/if}
-   </RowWrap>
+      </RowWrap>
+   {/if}
    
    <RowWrap>
       <FormInput 
