@@ -7,6 +7,7 @@
 
    import { locale } from "$i18n/i18n-svelte";
 	import { Reveal } from "..";
+	import { formatDateFull, formatDateShort, formatTime } from "$src/lib/utils";
    
    export let blog = false;
 </script>
@@ -19,7 +20,7 @@
             compactResponsive
             authorImg={blog ? `team/${blogPost.author.img}.webp` : ''}
             author={blog ? `${blogPost.author.first_name} ${blogPost.author.last_name}` : ''} 
-            date={blog ? blogPost.created_at : ''}
+            date={blog ? `${formatDateFull(blogPost.created_at)}` : ''}
             imgSrc={`${blogPost.img.folder}/${blogPost.img.name}.${blogPost.img.type}`}
             slug={`${blog ? 'blog/' : ''}${formatUrl(blogPost.title)}`}
             title={blogPost.title}
