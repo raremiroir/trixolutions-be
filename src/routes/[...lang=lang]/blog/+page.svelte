@@ -12,7 +12,7 @@
    // Import components
    import { 
       Navbar, Main, Section, 
-      Breadcrumbs, SEO, PostScroll, H1
+      Breadcrumbs, SEO, PostScroll, H1, Alert
    } from "$comp";
 
    // Define current page slug
@@ -25,6 +25,7 @@
    
    //   Import data
 	import type { PageData } from "./$types";
+	import Button from "$src/lib/components/Base/Button.svelte";
    export let data:PageData;
    const blogData = data.blogData;
 
@@ -62,4 +63,29 @@
       <H1 slot="title">Trixolutions {titleCase($LL.pages.blog.title())}</H1>
          <PostScroll pageData={blogData} blog />
    </Section>
+
+   {#if $locale === 'en' || $locale === 'fr'}
+      <Alert color="error-glass" class="fixed z-50 inset-x-5 bottom-1/2 translate-y-1/2 h-1/4">
+         <div class="text-center mx-auto">
+            {$LL.base.error.blog_unavailable()}
+         </div>
+         <hr class="border border-error my-2"/>
+         <div class="flex flex-row gap-2">
+            <Button
+               size="md"
+               ariaLabel="{$LL.base.btn.proceed_in()} {$LL.base.geo.lang.dutch()}"
+               href="/nl/blog"
+               color="error">
+               {$LL.base.btn.proceed_in()} {$LL.base.geo.lang.dutch()}
+            </Button>
+            <Button
+               size="md"
+               ariaLabel={$LL.base.btn.back_to_home()}
+               href="/{$locale}"
+               color="secondary" outlined>
+               {$LL.base.btn.back_to_home()}
+            </Button>
+         </div>
+      </Alert>
+   {/if}
 </Main>
