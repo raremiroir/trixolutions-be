@@ -28,6 +28,9 @@
    export let type = "text"
    
    export let errors:any;
+   
+   // Remove button to clear the field
+   export let noClear = false;
 
    // If Textarea
    export let rows = 6;
@@ -129,36 +132,36 @@
          >
          {#if select}<option disabled selected class="hidden"></option>{/if}
          <slot/>
-         </svelte:component>
-         {#if value !== '' && !disabled}
-            <div 
-               transition:fade={{duration:200}}
-               class="
-                  h-full w-fit p-0.5
-                  flex items-center 
-                  border-l-2 px-2
-                  border-gray-100
-                  ">
-               <Tooltip 
-                  title={titleCase($LL.base.form.content.reset_value())} 
-                  color="error" small
-                  placement="-bottom-2 right-8" flyX={16} flyY={0}>
-                  <div
-                     on:click|preventDefault={() => value = ''}
-                     on:keydown|preventDefault={() => value = ''}
-                     class="
-                        h-full w-full p-0.5 
-                        shadow-sm hover:shadow-md
-                        shadow-error/20 hover:shadow-error/50
-                        transition-all duration-150 ease-linear
-                        bg-error/50 hover:bg-error text-gray-50 
-                        rounded-full cursor-pointer"
-                  >
-                     <Icon icon="material-symbols:close-rounded" class="h-4 w-4"/>
-                  </div>
-               </Tooltip>
-            </div>
-         {/if}
+      </svelte:component>
+      {#if value !== '' && !disabled && !noClear}
+         <div 
+            transition:fade={{duration:200}}
+            class="
+               h-full w-fit p-0.5
+               flex items-center 
+               border-l-2 px-2
+               border-gray-100
+               ">
+            <Tooltip 
+               title={titleCase($LL.base.form.content.reset_value())} 
+               color="error" small
+               placement="-bottom-2 right-8" flyX={16} flyY={0}>
+               <div
+                  on:click|preventDefault={() => value = ''}
+                  on:keydown|preventDefault={() => value = ''}
+                  class="
+                     h-full w-full p-0.5 
+                     shadow-sm hover:shadow-md
+                     shadow-error/20 hover:shadow-error/50
+                     transition-all duration-150 ease-linear
+                     bg-error/50 hover:bg-error text-gray-50 
+                     rounded-full cursor-pointer"
+               >
+                  <Icon icon="material-symbols:close-rounded" class="h-4 w-4"/>
+               </div>
+            </Tooltip>
+         </div>
+      {/if}
    </div>
    {#if description}
       <Text small>{description}</Text>
