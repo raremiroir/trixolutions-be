@@ -16,7 +16,7 @@
 	use:clickOutside
 	on:click_outside={closeModal}
 	class="
-   {width ? width : 'w-fit min-w-[60%] max-w-[90%]'}
+   {width ? width : 'w-fit min-w-[60%] xl:min-w-[40%] max-w-[90%] xl:max-w-[75%]'}
    {height ? height : 'h-fit max-h-[80%]'} 
    overflow-y-auto overflow-x-hidden
    mx-auto pb-4 px-4 pt-2
@@ -37,7 +37,7 @@
                </slot>
             </div>
          </div>
-   
+         
          <CloseModalBtn onClick={closeModal} />
       </div>
    
