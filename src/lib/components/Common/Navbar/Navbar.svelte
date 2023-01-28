@@ -105,33 +105,35 @@
       </div>
    
       <!-- Navigation -->
-      <nav class="
-         w-3/5 h-fit left-0
-         transition-all duration-200 ease-out
-         translate-y-0 relative
-         z-10 hidden lg:block
-      ">
-         <ul class="flex flex-row gap-1 2xl:gap-2 w-full justify-end items-center">
-            {#each navLinks as item}
-               {#if !item.items}
-                  <NavItem name={item.title} link="/{$locale}{item.slug}" class="{item.title === 'blog' && $locale !== 'nl' ? 'hidden' : ''}" />
-               {:else}
-                  <NavItem name="{item.title}" link="/{$locale}{item.slug}" dropdown>
-                     {#each item.items as menuItem}
-                        <NavItem dropdownItem name={menuItem.title} link="/{$locale}{menuItem.slug}"/>
-                     {/each}
-                  </NavItem>
-               {/if}
-            {/each}
-         </ul>
-      </nav>
-   
-      <!-- Extra Buttons -->
-      <div class="flex flex-row gap-2 w-fit justify-end ml-8 z-20">
-         <div class="lg:hidden"><Hamburger onClick={toggleMobile} onCheck={openMobile}/></div>
-         <LangSwitcher/>
+      <div class="flex flex-row justify-end">
+         <nav class="
+            w-3/5 h-fit left-0
+            transition-all duration-200 ease-out
+            translate-y-0 relative
+            z-10 hidden lg:block
+         ">
+            <ul class="flex flex-row gap-1 2xl:gap-2 w-full justify-end items-center">
+               {#each navLinks as item}
+                  {#if !item.items}
+                     <NavItem name={item.title} link="/{$locale}{item.slug}" class="{item.title === ('Blog' || 'blog') && $locale !== 'nl' ? '!hidden' : ''}" />
+                  {:else}
+                     <NavItem name="{item.title}" link="/{$locale}{item.slug}" dropdown>
+                        {#each item.items as menuItem}
+                           <NavItem dropdownItem name={menuItem.title} link="/{$locale}{menuItem.slug}"/>
+                        {/each}
+                     </NavItem>
+                  {/if}
+               {/each}
+            </ul>
+         </nav>
+      
+         <!-- Extra Buttons -->
+         <div class="flex flex-row gap-2 w-fit justify-end ml-8 z-20">
+            <div class="lg:hidden"><Hamburger onClick={toggleMobile} onCheck={openMobile}/></div>
+            <LangSwitcher/>
+         </div>
       </div>
-   </div>
+      </div>
 </div>
 
 {#if openMobile}
