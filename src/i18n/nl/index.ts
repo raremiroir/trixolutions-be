@@ -2,6 +2,13 @@ import type { BaseTranslation } from '../i18n-types'
 
 const nl: BaseTranslation = {
    base: {
+      word: {
+         the: 'de',
+         the_2: 'het',
+         an: 'een',
+         in: 'in',
+         to: 'op',
+      },
       nav: {
          hamburger: {
             toggle_nav: "bekijk of verberg de navigatiebalk"
@@ -72,8 +79,8 @@ const nl: BaseTranslation = {
          },
          sessions: {
             subscribe_message: {
-               subject: "{name} wenst zich in te schrijven in een {session}",
-               intro: "Beste, \n\nGraag zou ik me inschrijven op een {session}.\n",
+               subject: "{name} wenst zich in te schrijven in {session}",
+               intro: "Beste, \n\nGraag zou ik me inschrijven in {session}.\n",
                name: "Mijn naam is {name}",
                session_picked: "Ik zou me graag inschrijven op de {session} op {date_picked}.\n",
                email: "Mijn e-mailadres is {email}\n",

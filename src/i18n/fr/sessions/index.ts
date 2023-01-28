@@ -34,6 +34,7 @@ const fr_sessions: NamespaceSessionsTranslation = {
       subscribe: "s'inscrire en session d'info",
       trainer: "entraîneur",
       time: "plage de temps",
+      excerpt: "Une session d'information gratuite et ouverte sur notre formation polyvalente de coaching d'équipe Lencioni.<br/>N'hésitez pas et inscrivez-vous !",
       intro: {
          title: "Coaching d'équipe avec Lencioni",
          content: `Trixolutions est partenaire du Groupe Table de Patrick Lencioni. Nous sommes accrédités non seulement 
@@ -251,6 +252,7 @@ const fr_sessions: NamespaceSessionsTranslation = {
          title: "Extension du parcours d'apprentissage",
          text: "Souhaitez-vous commencer par le parcours d'apprentissage sans Masterclass de deux jours ?<br/>Vous pouvez! Si vous vous inscrivez également à la Masterclass physique de deux jours dans l'année, vous ne payez que la différence entre les deux cours !"
       },
+      excerpt: "Votre <strong>parcours d'apprentissage hybride Lencioni</strong> pour approfondir et devenir compétent en tant que <em>coach d'équipe Lencioni</em>, à travers des moments d'apprentissage en ligne et physiques, est prêt.",
       intro: {
          content: `Votre <strong>parcours d'apprentissage hybride Lencioni</strong> pour <strong>approfondir et devenir compétent 
                   en tant que coach d'équipe Lencioni</strong>, à travers des <strong>moments d'apprentissage en ligne et physiques</strong>, 
@@ -304,8 +306,10 @@ const fr_sessions: NamespaceSessionsTranslation = {
       title: 'Lencioni Deepdive',
       advanced_coaching: 'Entraînement Avancé',
       deepdive: 'deepdive',
+      a_deepdive: 'un deepdive',
       subscribe: "S'inscrire à Deepdive",
       level2: 'Niveau 2',
+      excerpt: "En 1 jour nous passons en revue les 4 autres modèles à succès de Patrick Lencioni et The Table Group.",
       intro:   `En 1 jour nous passons en revue les 4 autres modèles à succès de 
                Patrick Lencioni et The Table Group.<br/><br/>
                Après tout, en plus de sa pyramide des "5 frustrations du travail 

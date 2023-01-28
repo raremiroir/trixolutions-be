@@ -2,6 +2,13 @@ import type { Translation } from '../i18n-types'
 
 const fr: Translation = {
    base: {
+      word: {
+         the: 'le',
+         the_2: 'la',
+         an: 'un',
+         in: 'dans',
+         to: 'pour',
+      },
       nav: {
          hamburger: {
             toggle_nav: "afficher ou masquer la barre de navigation"

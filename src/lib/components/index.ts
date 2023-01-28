@@ -46,9 +46,10 @@
    export { default as Link }          from './Utils/Link.svelte'
    export { default as Alert }         from './Utils/Alert/index.svelte'
    export { default as ErrorLoading }  from './Utils/Alert/ErrorLoading.svelte'
+   export { default as Tooltip }       from './Utils/Tooltip.svelte'
+   export { default as Captcha }       from './Utils/Captcha.svelte'
    // TODO:
    export { default as Flipper }       from './Utils/Flipper.svelte'
-   export { default as Tooltip }       from './Utils/Tooltip.svelte'
 
 
 //  ██████  ██████  ███    ███ ███    ███  ██████  ███    ██ 
@@ -119,8 +120,8 @@
 // █████   ██    ██ ██████  ██ ████ ██ 
 // ██      ██    ██ ██   ██ ██  ██  ██ 
 // ██       ██████  ██   ██ ██      ██ 
-   export { default as ContactForm } from './Forms/ContactForm.svelte';
-   export { default as SessionSubscribeForm } from './Forms/SessionSubscribeForm.svelte';
+   export { default as Form } from './Forms/Form.svelte';
+   export { default as MailchimpForm } from './Forms/Mailchimp/MailchimpForm.svelte'
 
 
 // ██████   ██████  ███████ ████████ ███████ 

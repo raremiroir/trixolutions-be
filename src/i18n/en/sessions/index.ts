@@ -1,7 +1,7 @@
 import type { NamespaceSessionsTranslation } from '../../i18n-types'
 
 const en_sessions: NamespaceSessionsTranslation = {
-   open_sessions: "open sessies",
+   open_sessions: "open sessions",
 	is_full: "full",
    subscribe: "Sign up",
    subscribe_to: "Sign up for",
@@ -30,6 +30,7 @@ const en_sessions: NamespaceSessionsTranslation = {
       subscribe: 'sign up for info session',
       trainer: "trainer",
       time: "time frame",
+      excerpt: "A free, open info session about our versatile Lencioni Team Coaching Training.<br/>Don't hesitate and sign up!",
       intro: {
          title: "Teamcoaching with Lencioni",
          content: `Trixolutions is a partner of Patrick Lencioni's Table Group. We are accredited not only to use his ideas, different models and 
@@ -245,6 +246,7 @@ const en_sessions: NamespaceSessionsTranslation = {
          title: "Expansion of Learning Path",
          text: "Would you like to start with the Learning Path without a Two-Day Masterclass?<br/>You can! If you also register for the physical two-day Masterclass within the year, you only pay the difference between the two courses!"
       },
+      excerpt: "Your <strong>hybrid Lencioni Learning Track</strong> to deepen and become proficient as a <em>Lencioni Team Coach</em>, through online and physical learning moments, is ready.",
       intro: {
          content: `Your <strong>hybrid Lencioni Learning Trajectory</strong> to <strong>become proficient as a 
                   Lencioni Teamcoach</strong>, through <strong>online and physical learning moments</strong>, 
@@ -297,8 +299,10 @@ const en_sessions: NamespaceSessionsTranslation = {
       title: 'Lencioni Deepdive',
       advanced_coaching: 'Advanced Training',
       deepdive: 'deepdive',
+      a_deepdive: 'a deepdive',
       subscribe: 'sign up for deepdive',
       level2: 'Level 2',
+      excerpt: "In 1 day we take a closer look at the 4 other successful models of Patrick Lencioni and The Table Group.",
       intro:   `In 1 day we take a closer look at the 4 other successful models of 
                Patrick Lencioni and The Table Group.<br/><br/>
                In addition to his pyramid from the “The 5 Frustrations of Teamwork” 

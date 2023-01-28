@@ -33,6 +33,7 @@ const nl_sessions: BaseTranslation = {
       subscribe: 'inschrijven in infosessie',
       trainer: "trainer",
       time: "tijd",
+      excerpt: "Een gratis, open infosessie over onze veelzijdige Lencioni Teamcoaching Opleiding.<br/>Aarzel niet en schrijf je in!",
       intro: {
          title: "Teamcoaching met Lencioni",
          content: `Trixolutions is partner van de Table Group van Patrick Lencioni. We zijn geaccrediteerd om, niet enkel zijn gedachtegoed, 
@@ -246,6 +247,7 @@ const nl_sessions: BaseTranslation = {
          title: "Uitbreiding van Leertraject",
          text: "Wil je eerst starten met het Leertraject zonder Tweedaagse Masterclass?<br/>Dat kan! Indien je je binnen het jaar ook inschrijft voor de fysieke tweedaagse Masterclass, betaal je enkel het verschil tussen de twee trajecten bij!"
       },
+      excerpt: "Jouw <strong>hybride Lencioni Leertraject</strong> om je, via online en fysieke leermomenten, te verdiepen en bekwamen als <em>Lencioni Teamcoach</em>, is klaar.",
       intro: {
          content: `Jouw <strong>hybride Lencioni Leertraject</strong> om je, via <strong>online en fysieke leermomenten</strong>, 
                   te verdiepen en <strong>bekwamen als Lencioni Teamcoach</strong>, is klaar.<br/><br/>
@@ -297,8 +299,10 @@ const nl_sessions: BaseTranslation = {
       title: 'Lencioni Deepdive',
       advanced_coaching: 'Advanced Opleiding',
       deepdive: 'deepdive',
-      subscribe: 'inschrijven voor deepdive',
+      a_deepdive: 'een deepdive',
+      subscribe: 'inschrijven in deepdive',
       level2: 'Level 2',
+      excerpt: "In 1 dag gaan we dieper in op de 4 andere succesvolle modellen van Patrick Lencioni en The Table Group.",
       intro:   `In 1 dag gaan we dieper in op de 4 andere succesvolle modellen van 
                Patrick Lencioni en The Table Group.<br/><br/>
                Naast zijn piramide uit de “De 5 Frustraties van Teamwork” die we 

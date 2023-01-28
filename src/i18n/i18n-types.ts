@@ -23,6 +23,28 @@ export type Translations = RootTranslation &
 
 type RootTranslation = {
 	base: {
+		word: {
+			/**
+			 * d​e
+			 */
+			the: string
+			/**
+			 * h​e​t
+			 */
+			the_2: string
+			/**
+			 * e​e​n
+			 */
+			an: string
+			/**
+			 * i​n
+			 */
+			'in': string
+			/**
+			 * o​p
+			 */
+			to: string
+		}
 		nav: {
 			hamburger: {
 				/**
@@ -231,7 +253,7 @@ type RootTranslation = {
 			sessions: {
 				subscribe_message: {
 					/**
-					 * {​n​a​m​e​}​ ​w​e​n​s​t​ ​z​i​c​h​ ​i​n​ ​t​e​ ​s​c​h​r​i​j​v​e​n​ ​i​n​ ​e​e​n​ ​{​s​e​s​s​i​o​n​}
+					 * {​n​a​m​e​}​ ​w​e​n​s​t​ ​z​i​c​h​ ​i​n​ ​t​e​ ​s​c​h​r​i​j​v​e​n​ ​i​n​ ​{​s​e​s​s​i​o​n​}
 					 * @param {unknown} name
 					 * @param {unknown} session
 					 */
@@ -239,7 +261,7 @@ type RootTranslation = {
 					/**
 					 * B​e​s​t​e​,​ ​
 				​
-				​G​r​a​a​g​ ​z​o​u​ ​i​k​ ​m​e​ ​i​n​s​c​h​r​i​j​v​e​n​ ​o​p​ ​e​e​n​ ​{​s​e​s​s​i​o​n​}​.​
+				​G​r​a​a​g​ ​z​o​u​ ​i​k​ ​m​e​ ​i​n​s​c​h​r​i​j​v​e​n​ ​i​n​ ​{​s​e​s​s​i​o​n​}​.​
 			
 					 * @param {unknown} session
 					 */
@@ -918,6 +940,10 @@ export type NamespaceSessionsTranslation = {
 		 * t​i​j​d
 		 */
 		time: string
+		/**
+		 * E​e​n​ ​g​r​a​t​i​s​,​ ​o​p​e​n​ ​i​n​f​o​s​e​s​s​i​e​ ​o​v​e​r​ ​o​n​z​e​ ​v​e​e​l​z​i​j​d​i​g​e​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​O​p​l​e​i​d​i​n​g​.​<​b​r​/​>​A​a​r​z​e​l​ ​n​i​e​t​ ​e​n​ ​s​c​h​r​i​j​f​ ​j​e​ ​i​n​!
+		 */
+		excerpt: string
 		intro: {
 			/**
 			 * T​e​a​m​c​o​a​c​h​i​n​g​ ​m​e​t​ ​L​e​n​c​i​o​n​i
@@ -1378,6 +1404,10 @@ export type NamespaceSessionsTranslation = {
 			 */
 			text: string
 		}
+		/**
+		 * J​o​u​w​ ​<​s​t​r​o​n​g​>​h​y​b​r​i​d​e​ ​L​e​n​c​i​o​n​i​ ​L​e​e​r​t​r​a​j​e​c​t​<​/​s​t​r​o​n​g​>​ ​o​m​ ​j​e​,​ ​v​i​a​ ​o​n​l​i​n​e​ ​e​n​ ​f​y​s​i​e​k​e​ ​l​e​e​r​m​o​m​e​n​t​e​n​,​ ​t​e​ ​v​e​r​d​i​e​p​e​n​ ​e​n​ ​b​e​k​w​a​m​e​n​ ​a​l​s​ ​<​e​m​>​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​<​/​e​m​>​,​ ​i​s​ ​k​l​a​a​r​.
+		 */
+		excerpt: string
 		intro: {
 			/**
 			 * J​o​u​w​ ​<​s​t​r​o​n​g​>​h​y​b​r​i​d​e​ ​L​e​n​c​i​o​n​i​ ​L​e​e​r​t​r​a​j​e​c​t​<​/​s​t​r​o​n​g​>​ ​o​m​ ​j​e​,​ ​v​i​a​ ​<​s​t​r​o​n​g​>​o​n​l​i​n​e​ ​e​n​ ​f​y​s​i​e​k​e​ ​l​e​e​r​m​o​m​e​n​t​e​n​<​/​s​t​r​o​n​g​>​,​ ​
@@ -1484,13 +1514,21 @@ export type NamespaceSessionsTranslation = {
 		 */
 		deepdive: string
 		/**
-		 * i​n​s​c​h​r​i​j​v​e​n​ ​v​o​o​r​ ​d​e​e​p​d​i​v​e
+		 * e​e​n​ ​d​e​e​p​d​i​v​e
+		 */
+		a_deepdive: string
+		/**
+		 * i​n​s​c​h​r​i​j​v​e​n​ ​i​n​ ​d​e​e​p​d​i​v​e
 		 */
 		subscribe: string
 		/**
 		 * L​e​v​e​l​ ​2
 		 */
 		level2: string
+		/**
+		 * I​n​ ​1​ ​d​a​g​ ​g​a​a​n​ ​w​e​ ​d​i​e​p​e​r​ ​i​n​ ​o​p​ ​d​e​ ​4​ ​a​n​d​e​r​e​ ​s​u​c​c​e​s​v​o​l​l​e​ ​m​o​d​e​l​l​e​n​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​e​n​ ​T​h​e​ ​T​a​b​l​e​ ​G​r​o​u​p​.
+		 */
+		excerpt: string
 		/**
 		 * I​n​ ​1​ ​d​a​g​ ​g​a​a​n​ ​w​e​ ​d​i​e​p​e​r​ ​i​n​ ​o​p​ ​d​e​ ​4​ ​a​n​d​e​r​e​ ​s​u​c​c​e​s​v​o​l​l​e​ ​m​o​d​e​l​l​e​n​ ​v​a​n​ ​
 	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​e​n​ ​T​h​e​ ​T​a​b​l​e​ ​G​r​o​u​p​.​<​b​r​/​>​<​b​r​/​>​
@@ -1720,6 +1758,28 @@ type DisallowNamespaces = {
 
 export type TranslationFunctions = {
 	base: {
+		word: {
+			/**
+			 * de
+			 */
+			the: () => LocalizedString
+			/**
+			 * het
+			 */
+			the_2: () => LocalizedString
+			/**
+			 * een
+			 */
+			an: () => LocalizedString
+			/**
+			 * in
+			 */
+			'in': () => LocalizedString
+			/**
+			 * op
+			 */
+			to: () => LocalizedString
+		}
 		nav: {
 			hamburger: {
 				/**
@@ -1920,13 +1980,13 @@ export type TranslationFunctions = {
 			sessions: {
 				subscribe_message: {
 					/**
-					 * {name} wenst zich in te schrijven in een {session}
+					 * {name} wenst zich in te schrijven in {session}
 					 */
 					subject: (arg: { name: unknown, session: unknown }) => LocalizedString
 					/**
 					 * Beste, 
 			
-				Graag zou ik me inschrijven op een {session}.
+				Graag zou ik me inschrijven in {session}.
 			
 					 */
 					intro: (arg: { session: unknown }) => LocalizedString
@@ -2592,6 +2652,10 @@ export type TranslationFunctions = {
 			 * tijd
 			 */
 			time: () => LocalizedString
+			/**
+			 * Een gratis, open infosessie over onze veelzijdige Lencioni Teamcoaching Opleiding.<br/>Aarzel niet en schrijf je in!
+			 */
+			excerpt: () => LocalizedString
 			intro: {
 				/**
 				 * Teamcoaching met Lencioni
@@ -3052,6 +3116,10 @@ export type TranslationFunctions = {
 				 */
 				text: () => LocalizedString
 			}
+			/**
+			 * Jouw <strong>hybride Lencioni Leertraject</strong> om je, via online en fysieke leermomenten, te verdiepen en bekwamen als <em>Lencioni Teamcoach</em>, is klaar.
+			 */
+			excerpt: () => LocalizedString
 			intro: {
 				/**
 				 * Jouw <strong>hybride Lencioni Leertraject</strong> om je, via <strong>online en fysieke leermomenten</strong>, 
@@ -3158,13 +3226,21 @@ export type TranslationFunctions = {
 			 */
 			deepdive: () => LocalizedString
 			/**
-			 * inschrijven voor deepdive
+			 * een deepdive
+			 */
+			a_deepdive: () => LocalizedString
+			/**
+			 * inschrijven in deepdive
 			 */
 			subscribe: () => LocalizedString
 			/**
 			 * Level 2
 			 */
 			level2: () => LocalizedString
+			/**
+			 * In 1 dag gaan we dieper in op de 4 andere succesvolle modellen van Patrick Lencioni en The Table Group.
+			 */
+			excerpt: () => LocalizedString
 			/**
 			 * In 1 dag gaan we dieper in op de 4 andere succesvolle modellen van 
 		               Patrick Lencioni en The Table Group.<br/><br/>
