@@ -37,9 +37,11 @@ const en: Translation = {
          learn_more: 'learn more',
          read_more: 'read more',
          go_to: 'go to',
+         proceed_in: "proceed in"
       },
       error: {
-         not_found: "Sorry! The page you were looking for was not found. <br/>Return to our home page by clicking the button, or just use the navigation bar."
+         not_found: "Sorry! The page you were looking for was not found. <br/>Return to our home page by clicking the button, or just use the navigation bar.",
+         blog_unavailable: "Sorry! At this time, the blog is only available in Dutch."
       },
       validation: {
          required: "{item:string} is a required field.",

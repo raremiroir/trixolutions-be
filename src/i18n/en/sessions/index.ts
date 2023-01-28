@@ -75,6 +75,14 @@ const en_sessions: NamespaceSessionsTranslation = {
             content: 'Access for 12 months',
             extra: 'Monthly updates!' 
          },
+         // 2
+         {
+            title: {
+               before: 'Integration into a',
+               main: 'Learning Group with Other Participants',
+            },
+            content: 'In the All-in Module you will be included in a learning group with approximately 8 participants, with whom you will also experience the two-day Masterclass. You can stay in touch for a year to discuss cases and help each other.'
+         },
          // 3
          {
             title: {
@@ -82,6 +90,14 @@ const en_sessions: NamespaceSessionsTranslation = {
                main: 'Coach-the-Coach Masterclass',
             },
             content: 'Together with other participants.'
+         },
+         // 4
+         {
+            title: {
+               before: 'Official',
+               main: 'Trixolutions / Lencioni Certificate',
+            },
+            content: ''
          },
          // 5
          {
@@ -93,6 +109,14 @@ const en_sessions: NamespaceSessionsTranslation = {
                      them to the team members. This Pyramid is a nice visual trigger to 
                      keep working with Lencioni ideas in a team. If necessary, you can order extra pyramids.`
          },
+         // 6
+         {
+            title: {
+               before: 'Access to the',
+               main: 'Full & Up-to-Date Lencioni Team Assessment',
+            },
+            content: 'Including facilitator instructions and a sample report.'
+         },
          // 7
          {
             title: {
@@ -100,6 +124,14 @@ const en_sessions: NamespaceSessionsTranslation = {
                main: 'Full & Up-to-Date Lencioni Personal Assessment',
             },
             content: 'Includes facilitator instructions and a sample report.'
+         },
+         // 8
+         {
+            title: {
+               before: 'Access to the',
+               main: 'Lencioni Workbook',
+            },
+            content: 'You can download the Lencioni Workbook in Word and use it as such in your own Lencioni processes.'
          },
          // 9
          {
@@ -115,6 +147,14 @@ const en_sessions: NamespaceSessionsTranslation = {
                      <li>Lencioni Personal Assessment<ul>
                      <li>+ instructions</li>
                      </ul></li></ul>`,
+         },
+         // 10
+         {
+            title: {
+               before: 'Including',
+               main: 'Follow-up coaching',
+            },
+            content: 'Schedule whenever you want!'
          },
          // 11
          {
@@ -139,70 +179,6 @@ const en_sessions: NamespaceSessionsTranslation = {
                      <li>Multiple extra exercises<ul>
                      <li>including extensive facilitator instructions</li></ul></li></ul>`,
          },
-         // 13
-         {
-            title: {
-               before: 'Access to the DeepDive',
-               main: 'Layer Respectful Conflicts',
-            },
-            content: 'Besides the quotes, podcasts, videos related to this layer, you will find a number of nice extra exercises to work and improve in a team on this layer.'
-         },
-         // 15
-         {
-            title: {
-               before: 'Access to the DeepDive',
-               main: 'Layer Accountability',
-            },
-            content: 'This layer is the most difficult for most teams. That is why the extra exercises, videos, podcasts and quotes are important..'
-         },
-         // 17
-         {
-            title: {
-               before: '',
-               main: 'Bridges with Other Models',
-            },
-            content: 'In this last section, we will take a closer look at the bridges you can build to other models. These are huge, which makes the Lencioni model so flexible and easy to integrate into organizations and teams!'
-         },
-         // 2
-         {
-            title: {
-               before: 'Integration into a',
-               main: 'Learning Group with Other Participants',
-            },
-            content: 'In the All-in Module you will be included in a learning group with approximately 8 participants, with whom you will also experience the two-day Masterclass. You can stay in touch for a year to discuss cases and help each other.'
-         },
-         // 4
-         {
-            title: {
-               before: 'Official',
-               main: 'Trixolutions / Lencioni Certificate',
-            },
-            content: ''
-         },
-         // 6
-         {
-            title: {
-               before: 'Access to the',
-               main: 'Full & Up-to-Date Lencioni Team Assessment',
-            },
-            content: 'Including facilitator instructions and a sample report.'
-         },
-         // 8
-         {
-            title: {
-               before: 'Access to the',
-               main: 'Lencioni Workbook',
-            },
-            content: 'You can download the Lencioni Workbook in Word and use it as such in your own Lencioni processes.'
-         },
-         // 10
-         {
-            title: {
-               before: 'Including',
-               main: 'Follow-up coaching',
-            },
-            content: 'Schedule whenever you want!'
-         },
          // 12
          {
             title: {
@@ -210,6 +186,14 @@ const en_sessions: NamespaceSessionsTranslation = {
                main: 'Layer Trust',
             },
             content: 'Several quotes, podcasts, videos and exercises, including the video in which Patrick Lencioni himself explains the difference between "smart" and "healthy" teams.'
+         },
+         // 13
+         {
+            title: {
+               before: 'Access to the DeepDive',
+               main: 'Layer Respectful Conflicts',
+            },
+            content: 'Besides the quotes, podcasts, videos related to this layer, you will find a number of nice extra exercises to work and improve in a team on this layer.'
          },
          // 14
          {
@@ -219,6 +203,14 @@ const en_sessions: NamespaceSessionsTranslation = {
             },
             content: 'In addition to the videos, exercises and quotes, in this DeepDive you also have a number of super interesting podcasts by Patrick Lencioni, summarized in English plus the link in case you just want to listen to it yourself!'
          },
+         // 15
+         {
+            title: {
+               before: 'Access to the DeepDive',
+               main: 'Layer Accountability',
+            },
+            content: 'This layer is the most difficult for most teams. That is why the extra exercises, videos, podcasts and quotes are important..'
+         },
          // 16
          {
             title: {
@@ -227,8 +219,17 @@ const en_sessions: NamespaceSessionsTranslation = {
             },
             content: 'The peak of the Pyramid, focused on “team result”. This DeepDive is about how to work with a team in depth. One of the exercises is about the OKR method that you can use in this layer.'
          },
+         // 17
+         {
+            title: {
+               before: '',
+               main: 'Bridges with Other Models',
+            },
+            content: 'In this last section, we will take a closer look at the bridges you can build to other models. These are huge, which makes the Lencioni model so flexible and easy to integrate into organizations and teams!'
+         },
       ],
-      traject: "learning path",
+      traject: "learning track",
+      the_traject: "the learning track",
       hybrid: "hybrid",
       teamcoaching: "team coaching",
       two_day: "two-day masterclass",
@@ -257,7 +258,7 @@ const en_sessions: NamespaceSessionsTranslation = {
                   We have poured all our Lencioi wisdom and knowledge into <strong>2 possible learning paths</strong>:`
       },
       basic: {
-         title: "Without",
+         title: "without",
          intro:   `We recommend this learning path if you can already get started reasonably well with the Pyramid 
                   and are especially looking for more depth and extra inspiration in terms of its assessments, 
                   special exercises, bridges with other models, podcasts, Lencioni videos…<br/>This is the 
@@ -266,7 +267,7 @@ const en_sessions: NamespaceSessionsTranslation = {
                   You can! We only charge the difference in price`
       },
       full: {
-         title: "With",
+         title: "with",
          intro:   `We recommend this extensive learning path if you have no or limited knowledge 
                   of Lencioni's Pyramid.<br/>
                   After all, we go through the Lencioni Workbook in detail and teach you how to build 

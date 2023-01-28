@@ -37,9 +37,11 @@ const fr: Translation = {
          learn_more: 'apprendre encore plus',
          read_more: 'lire plus',
          go_to: 'aller à',
+         proceed_in: "continuer en"
       },
       error: {
-         not_found: "Malheureusement. La page que vous recherchiez n'a pas été trouvée. <br/>Retournez à la page d'accueil via le bouton ci-dessous, ou utilisez la barre de navigation."
+         not_found: "Malheureusement. La page que vous recherchiez n'a pas été trouvée. <br/>Retournez à la page d'accueil via le bouton ci-dessous, ou utilisez la barre de navigation.",
+         blog_unavailable: "Désolé! Pour le moment, le blog n'est disponible qu'en néerlandais.",
       },
       validation: {
          required: "{item:string} est un champ obligatoire.",

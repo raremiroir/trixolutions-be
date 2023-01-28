@@ -78,6 +78,14 @@ const nl_sessions: BaseTranslation = {
             content: 'Toegang voor 12 maanden',
             extra: 'Maandelijkse updates!' 
          },
+         // 2
+         {
+            title: {
+               before: 'Integratie in een',
+               main: 'Leergroep met Andere Deelnemers',
+            },
+            content: 'In de All-in Module wordt je opgenomen in een leergroep met ongeveer 8 deelnemers, waarmee je ook de tweedaagse Masterclass zal beleven. Een jaar lang kunnen jullie blijven contact houden om cases te bespreken en elkaar te helpen.'
+         },
          // 3
          {
             title: {
@@ -85,6 +93,14 @@ const nl_sessions: BaseTranslation = {
                main: 'Coach-the-Coach Masterclass',
             },
             content: 'Samen met de andere deelnemers.'
+         },
+         // 4
+         {
+            title: {
+               before: 'Officieel',
+               main: 'Trixolutions / Lencioni Certificaat',
+            },
+            content: ''
          },
          // 5
          {
@@ -94,6 +110,14 @@ const nl_sessions: BaseTranslation = {
             },
             content: 'Deze Piramides kan je gebruiken in je Lencioni trajecten en aan de teamleden geven. Deze Piramide is een leuke visuele trigger om met Lencioni gedachtengoed te blijven werken in een team. Indien nodig, kan je er bij bestellen.'
          },
+         // 6
+         {
+            title: {
+               before: 'Toegang tot het',
+               main: 'Volwaardig & Up-to-Date Lencioni Team Assessment',
+            },
+            content: 'Inclusief facilitator instructies en een voorbeeldrapport.'
+         },
          // 7
          {
             title: {
@@ -101,6 +125,14 @@ const nl_sessions: BaseTranslation = {
                main: 'Volwaardig & Up-to-Date Lencioni Personal Assessment',
             },
             content: 'Inclusief facilitator instructies en een voorbeeldrapport.'
+         },
+         // 8
+         {
+            title: {
+               before: 'Toegang tot het',
+               main: 'Lencioni Werkboek',
+            },
+            content: 'Het Lencioni Werkboek kan je downloaden in Word en als dusdanig makkelijk inzetten in je eigen Lencioni trajecten.'
          },
          // 9
          {
@@ -117,6 +149,14 @@ const nl_sessions: BaseTranslation = {
                       <li>+ instructies</li>
                       </ul></li></ul>`,
          },
+         // 10
+         {
+            title: {
+               before: 'Inclusief',
+               main: 'Opvolgcoaching',
+            },
+            content: 'In te plannen wanneer jij wil!'
+         },
          // 11
          {
             title: {
@@ -124,10 +164,10 @@ const nl_sessions: BaseTranslation = {
                main: '5 Lencioni DeepDives',
             },
             content: `<strong>Per laag in de Piramide krijg je:</strong><br>
-                     <ul><li>5 Lencioni Podcasts, samengevat in het Nederlands
-                     <ul><li>+ originele podcasts in het Engels te beluisteren</li></ul></li>
-                     <li>5 Quotes</li>
-                     <li>3 Filmpjes waarin Lencioni zelf een aantal oefeningen en inzichten toelicht</li>
+            <ul><li>5 Lencioni Podcasts, samengevat in het Nederlands
+            <ul><li>+ originele podcasts in het Engels te beluisteren</li></ul></li>
+            <li>5 Quotes</li>
+            <li>3 Filmpjes waarin Lencioni zelf een aantal oefeningen en inzichten toelicht</li>
                      <li>3 Extra Oefeningen<ul>
                      <li>bovenop die van het Lencioni Werkboek</li>
                      <li>+ facilitator instructies</li></ul></li>
@@ -140,70 +180,6 @@ const nl_sessions: BaseTranslation = {
                      <li>Meerdere extra oefeningen<ul>
                      <li>inclusief uitgebreide facilitator instructies</li></ul></li></ul>`,
          },
-         // 13
-         {
-            title: {
-               before: 'Toegang tot de DeepDive',
-               main: 'Laag Respectvolle Conflicten',
-            },
-            content: 'Buiten de quotes, podcasts, filmpjes met betrekking tot deze laag, vind je er een aantal leuke extra oefeningen in om in een team op deze laag te werken en verbeteren.'
-         },
-         // 15
-         {
-            title: {
-               before: 'Toegang tot de DeepDive',
-               main: 'Laag Aansprakelijkheid',
-            },
-            content: 'Deze laag is voor de meeste teams de moeilijkste. Vandaar dat de extra oefeningen, filmpjes, podcasts én quotes belangrijk zijn..'
-         },
-         // 17
-         {
-            title: {
-               before: '',
-               main: 'Bruggen met Andere Modellen',
-            },
-            content: 'In dit laatste gedeelte gaan we dieper in op de bruggen die je kan bouwen naar andere modellen. Deze zijn enorm, wat het Lencioni model zo flexibel maakt en makkelijk integreerbaar in organisaties en teams!'
-         },
-         // 2
-         {
-            title: {
-               before: 'Integratie in een',
-               main: 'Leergroep met Andere Deelnemers',
-            },
-            content: 'In de All-in Module wordt je opgenomen in een leergroep met ongeveer 8 deelnemers, waarmee je ook de tweedaagse Masterclass zal beleven. Een jaar lang kunnen jullie blijven contact houden om cases te bespreken en elkaar te helpen.'
-         },
-         // 4
-         {
-            title: {
-               before: 'Officieel',
-               main: 'Trixolutions / Lencioni Certificaat',
-            },
-            content: ''
-         },
-         // 6
-         {
-            title: {
-               before: 'Toegang tot het',
-               main: 'Volwaardig & Up-to-Date Lencioni Team Assessment',
-            },
-            content: 'Inclusief facilitator instructies en een voorbeeldrapport.'
-         },
-         // 8
-         {
-            title: {
-               before: 'Toegang tot het',
-               main: 'Lencioni Werkboek',
-            },
-            content: 'Het Lencioni Werkboek kan je downloaden in Word en als dusdanig makkelijk inzetten in je eigen Lencioni trajecten.'
-         },
-         // 10
-         {
-            title: {
-               before: 'Inclusief',
-               main: 'Opvolgcoaching',
-            },
-            content: 'In te plannen wanneer jij wil!'
-         },
          // 12
          {
             title: {
@@ -211,6 +187,14 @@ const nl_sessions: BaseTranslation = {
                main: 'Laag Vertrouwen',
             },
             content: 'Meerdere quotes, podcasts, filmpjes en oefeningen waaronder het filmpje waarin Patrick Lencioni zelf het verschil uitlegt tussen “slimme” en “gezonde” teams.'
+         },
+         // 13
+         {
+            title: {
+               before: 'Toegang tot de DeepDive',
+               main: 'Laag Respectvolle Conflicten',
+            },
+            content: 'Buiten de quotes, podcasts, filmpjes met betrekking tot deze laag, vind je er een aantal leuke extra oefeningen in om in een team op deze laag te werken en verbeteren.'
          },
          // 14
          {
@@ -220,6 +204,14 @@ const nl_sessions: BaseTranslation = {
             },
             content: 'In deze DeepDive heb je buiten de filmpjes , oefeningen en quotes ook een aantal super interessante podcasts van Patrick Lencioni, in het Nederlands samengevat plus de link voor het geval je hem gewoon zelf even wil beluisteren!'
          },
+         // 15
+         {
+            title: {
+               before: 'Toegang tot de DeepDive',
+               main: 'Laag Aansprakelijkheid',
+            },
+            content: 'Deze laag is voor de meeste teams de moeilijkste. Vandaar dat de extra oefeningen, filmpjes, podcasts én quotes belangrijk zijn..'
+         },
          // 16
          {
             title: {
@@ -228,8 +220,17 @@ const nl_sessions: BaseTranslation = {
             },
             content: 'De piek van de Piramide, focus op “teamresultaat”. In deze DeepDive gaat het over hoe je hiermee met een team, verdiepend aan de slag gaat. Eén van de oefeningen gaat over de OKR methode die je kan inzetten in deze laag.'
          },
+         // 17
+         {
+            title: {
+               before: '',
+               main: 'Bruggen met Andere Modellen',
+            },
+            content: 'In dit laatste gedeelte gaan we dieper in op de bruggen die je kan bouwen naar andere modellen. Deze zijn enorm, wat het Lencioni model zo flexibel maakt en makkelijk integreerbaar in organisaties en teams!'
+         },
       ],
       traject: "leertraject",
+      the_traject: "het leertraject",
       hybrid: "hybride",
       teamcoaching: "teamcoaching",
       two_day: "tweedaagse masterclass",
@@ -256,7 +257,7 @@ const nl_sessions: BaseTranslation = {
                   We hebben alle onze Lencioni wijsheid en kennis in <strong>2 mogelijke leertrajecten</strong> gegoten:`,
       },
       basic: {
-         title: "Zonder",
+         title: "zonder",
          intro:   `Dit leertraject raden we aan als je al redelijk goed met de Piramide aan de slag 
                   kan en vooral naar verdieping en extra inspiratie zoekt op vlak van zijn assessments, 
                   speciale oefeningen, bruggen met andere modellen, podcasts, Lencioni filmpjes….<br/>
@@ -266,7 +267,7 @@ const nl_sessions: BaseTranslation = {
                   in prijs rekenen we dan aan.`,
       },
       full: {
-         title: "Met",
+         title: "met",
          intro:   `Dit extensieve leertraject raden we aan als je geen of een beperkte kennis van de Piramide 
                   van Lencioni hebt.<br/>
                   We gaan immers in detail door het Lencioni Werkboek en leren je een Lencioni traject opbouwen 

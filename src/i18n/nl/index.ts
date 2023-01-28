@@ -37,9 +37,11 @@ const nl: BaseTranslation = {
          learn_more: 'leer meer',
          read_more: 'lees meer',
          go_to: 'ga naar',
+         proceed_in: "ga verder in het"
       },
       error: {
-         not_found: "Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk."
+         not_found: "Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk.",
+         blog_unavailable: "Helaas! Op dit moment is de blog enkel toegankelijk in het Nederlands."
       },
       validation: {
          required: "{item:string} is een verplicht veld.",
