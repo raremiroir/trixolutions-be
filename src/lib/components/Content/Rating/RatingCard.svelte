@@ -1,20 +1,7 @@
-<!-- 
-██████   █████  ████████ ██ ███    ██  ██████       ██████  █████  ██████  ██████  
-██   ██ ██   ██    ██    ██ ████   ██ ██           ██      ██   ██ ██   ██ ██   ██ 
-██████  ███████    ██    ██ ██ ██  ██ ██   ███     ██      ███████ ██████  ██   ██ 
-██   ██ ██   ██    ██    ██ ██  ██ ██ ██    ██     ██      ██   ██ ██   ██ ██   ██ 
-██   ██ ██   ██    ██    ██ ██   ████  ██████       ██████ ██   ██ ██   ██ ██████  
- -->
 
-<!--
-▄▄▄ ▄▄▄ 
- █  █▄
- █   ▀█
- ▀  ▀▀▀
--->
 <script lang="ts">
    // Import Components
-	import { Card, Rating, Text } from "$comp";
+	import { CardBase, Rating, Text } from "$comp";
    // Import entities
    import { HVY_DBL_QUOTATION_CLOSE, HVY_DBL_QUOTATION_OPEN } from "$lib/constants/entities";
 
@@ -25,19 +12,30 @@
    // Define extra class
    let klass = ''
    export { klass as class }
+
+   export let cardProps = {
+      title: '',
+
+      width: 'wfull',
+      ariaLabel: '',
+
+      author: {name: '', img:'', date: '' },
+
+      compact: false,
+      compactResponsive: true,
+      equalHeight: false,
+
+      hoverFx: 'minimal',
+   }
 </script>
 
-<!--
-▄  ▄ ▄▄▄ ▄▄   ▄▄ ▄
-█▄▄█  █  █ █ █ █ █
-█▀▀█  █  █ █ █ █ █
-▀  ▀  ▀  ▀  ▀  ▀ ▀▀▀
--->
-<Card class={klass}>
+
+<CardBase {...cardProps} class={klass}>
+   <slot slot="title" name="title"/>
    <Text italic>
       <span class="mr-1 text-2xl text-primary-d1">{HVY_DBL_QUOTATION_OPEN}</span>
       <slot/>
       <span class="ml-1 text-2xl text-primary-d1">{HVY_DBL_QUOTATION_CLOSE}</span>
    </Text>
-   <Rating {rating} {size} />
-</Card>
+   <Rating slot="append" {rating} {size} />
+</CardBase>

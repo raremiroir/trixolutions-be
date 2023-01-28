@@ -1,22 +1,41 @@
 <script lang="ts">
+   import { Text, CardBase, List, ListItem, Button, H2 } from "$comp";
+   import Icon from "@iconify/svelte";
    
    import LL from "$i18n/i18n-svelte";
    import { formatPrice } from "$utils";
    
-   import { Text, List, ListItem, Button, Card, H2 } from "$comp";
-	import Icon from "@iconify/svelte";
-
    export let introWidth = '';
    export let price = 100;
    let klass = '';
    export { klass as class };
 
+   export let cardProps = {
+      title: 'card title',
+
+      imgPos: "top",
+      width: 'fill',
+
+
+      href: '',
+      article: false,
+
+      ariaLabel: '',
+
+      compact: false,
+      compactResponsive: false,
+
+      hoverFx: 'minimal',
+   }
+
 </script>
 
-<Card link="/" equalHeight class={klass}>
+
+<CardBase {...cardProps} class={klass}>
+
    <H2 
       slot="title" smallest 
-      class="text-center flex flex-col gap-0 justify-center w-full m-0 p-0">
+      class="text-center flex flex-col gap-0 justify-center w-full m-0 p-0 self-center">
       <span class="text-[18px] uppercase font-normal m-0 p-0">
          <slot name="subtitle">Subtitle</slot><br/>
       </span>
@@ -24,7 +43,10 @@
          <slot name="title">Title</slot>
       </span>
    </H2>
-   <Text small class="{introWidth ? introWidth : 'sm:h-90 md:h-50 lg:h-48 xl:h-40 2xl:h-36'}">
+
+   <Text 
+      small 
+      class="h-fit">
       <slot name="intro">
          Intro
       </slot>
@@ -39,7 +61,7 @@
             flex items-center justify-center flex-col
             ">
          <span>€ {formatPrice(price)}</span>
-         <span class="text-sm font-thin"><slot name="sub">Sub</slot></span>
+         <span class="text-sm font-light"><slot name="sub">Sub</slot></span>
       </div>
 
       <slot name="features">
@@ -50,15 +72,8 @@
       </slot>
 
    </List>
-   <Button 
-      ariaLabel="inschrijven voor deze sessie"
-      size="xl" block 
-      class="flex flex-row w-full lg:w-4/5 mx-auto" 
-      icon="mdi:pen-plus"
-      iconClass="h-5 w-5 mr-2 text-gray-50 group-hover:text-white">
-      <slot name="btn">
-         <span class="font-light">Inschrijven Voor</span>
-         <span>Deze Sessie</span>
-      </slot>
-   </Button>
-</Card>
+   
+   <slot name="btn"/>
+   
+
+</CardBase>
