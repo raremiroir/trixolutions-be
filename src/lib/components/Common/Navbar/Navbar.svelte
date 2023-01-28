@@ -152,7 +152,7 @@
    <ul class="flex flex-col gap-2 w-full justify-center items-center">
       {#each navLinks as item}
          {#if !item.items}
-            <NavItem mobile name={item.title} link="/{$locale}{item.slug}" class="{item.title === 'blog' && $locale !== 'nl' ? 'hidden' : ''}"  />
+            <NavItem mobile name={item.title} link="/{$locale}{item.slug}" class="{item.title === ('Blog' || 'blog') && $locale !== 'nl' ? '!hidden' : ''}"  />
          {:else}
             <NavItem mobile name="{item.title}" link="/{$locale}{item.slug}" dropdown>
                {#each item.items as menuItem}
