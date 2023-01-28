@@ -1,4 +1,12 @@
 <script lang="ts">
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: ''},
+      {locale: 'fr', slug: ''},
+      {locale: 'nl', slug: ''}
+   ];
+
    // Import Components
    import { 
       Main, SEO, Section, Footer, Navbar, 
@@ -19,21 +27,17 @@
    const categoryData = data.categories;
    const pagesData = data.pages;
 
-   // Define current page slug
-   import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: ''},
-      {locale: 'fr', slug: ''},
-      {locale: 'nl', slug: ''}
-   ];
 
-// SEO
-let pageSlug = `home`
+   // SEO
+   $: pageSlug = `/${$locale}/${$LL.nav.home.slug()}`
+   $: pageTitle = $LL.nav.home.title()
+   $: pageDesc = $LL.nav.home.description()
+
    let { author, siteUrl } = website;
-	let breadcrumbs = [{ name: titleCase($LL.pages.references.title()), slug: `/${$locale}/${pageSlug}/` }];
+	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
 	
-   let entityMeta = {
-		url: `${siteUrl}/${$locale}/${pageSlug}`,
+   $: entityMeta = {
+		url: `${siteUrl}${pageSlug}`,
 		faviconWidth: 512, faviconHeight: 512,
 		caption: author,
 	};
@@ -41,11 +45,11 @@ let pageSlug = `home`
 
 
 <SEO 
-	slug="{$locale}/{pageSlug}"
+	slug="{pageSlug}"
 	datePublished = '2023-01-11T12:31:00.000+0100'
 	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{titleCase($LL.pages.references.title())}"
-	metadescription="Trixolutions {titleCase($LL.pages.references.title())}"
+	title="{pageTitle}"
+	metadescription="{pageDesc}"
 	{breadcrumbs} {entityMeta}
 />
 
