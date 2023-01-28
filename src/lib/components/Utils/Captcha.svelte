@@ -3,7 +3,7 @@
    import type { TurnstileSize } from 'svelte-turnstile'
 
    import {
-      VITE_TURNSTILE_SITEKEY
+      PUBLIC_TURNSTILE_SITEKEY
    } from '$env/static/public'
 
 
@@ -23,7 +23,8 @@
 </script>
 
 <Turnstile 
-   siteKey={VITE_TURNSTILE_SITEKEY}
+   siteKey={PUBLIC_TURNSTILE_SITEKEY}
    {size} {action}
    {forms} {formsField}
+   theme="light"
 />
