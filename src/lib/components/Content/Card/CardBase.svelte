@@ -164,15 +164,11 @@
                      ? `${ height === 'equal' ? 'h-3/5' : height === 'fit' ? 'h-fit' : height === 'auto' ? '' : height}
                         ${ hoverFx === 'onlyHover' || hoverFx === 'full'
                            ? hovered
-                              ? `${ compact ? 'gap-1' 
-                                 : compactResponsive ? 'gap-1 md:gap-4' 
-                                 : 'gap-4'}` 
-                              : `${ compact ? 'gap-7' 
-                                 : compactResponsive ? 'gap-7 md:gap-12' 
-                                 : 'gap-12'}`
-                              : 'gap-1'}` 
+                              ? 'gap-0' 
+                              : 'gap-7'
+                              : 'gap-0'}` 
                   : imgPos === 'resp-l' || imgPos === 'resp-r' 
-                     ? `h-fit sm:h-48 md:h-58 lg:h-60 xl:h-72 2xl:h-80
+                     ? `h-fit sm:h-50 md:h-60 lg:h-62 xl:h-74 2xl:h-82
                         ${ compact ? 'gap-2' : compactResponsive ? 'gap-2 sm:gap-4' : 'gap-4' }`
                      : 'h-48 md:h-58 lg:h-60 xl:h-72 2xl:h-80'} 
                   w-full
@@ -185,7 +181,7 @@
                      { imgPos === 'top' || imgPos === 'bottom' 
                         ? hovered && (hoverFx === 'onlyHover' || hoverFx === 'full')
                            ? `gap-0`
-                           : `${ compact || compactResponsive ? `gap-2 ${ compactResponsive ? 'md:gap-4' : '' }` : `gap-4` }`
+                           : `gap-2`
                      : imgPos === 'resp-l' || imgPos === 'resp-r'
                         ? `${ compact || compactResponsive ? `gap-2 ${ compactResponsive ? 'md:gap-4' : '' }` : `gap-4` }`
                      : imgPos === 'left' || imgPos === 'right'
