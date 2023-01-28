@@ -108,7 +108,7 @@
                      src="{member.img.folder}/{member.img.name}.{member.img.type}" 
                      alt="{member.first_name} {member.last_name} - {$locale === 'fr' ? member.job.fr : $locale === 'en' ? member.job.en : member.job.nl}"
                      name="{member.first_name} {member.last_name}"
-                     position={member.unique_name === 'christoph' || member.unique_name === 'frederik' ? 'top' : ''}>
+                     position={member.unique_name === 'christoph' || member.unique_name === 'frederik' ? 'top' : 'center'}>
                      <Subtitle smaller italic>{$locale === 'fr' ? member.job.fr : $locale === 'en' ? member.job.en : member.job.nl}</Subtitle>
                   </MemberCard>
                </Reveal>
