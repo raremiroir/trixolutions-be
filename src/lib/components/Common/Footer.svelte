@@ -21,7 +21,7 @@
          icon: 'ri:facebook-box-fill'
       }
    ]
-   let footerColItems = [
+   $: footerColItems = [
       {
          title: titleCase($LL.base.btn.about_trixo()),
          items: [
