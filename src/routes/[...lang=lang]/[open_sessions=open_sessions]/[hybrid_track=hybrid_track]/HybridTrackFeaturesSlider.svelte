@@ -30,7 +30,7 @@
 <NavSlider ariaLabel={$LL.sessions.level_1.features_title()}>
    {#each Object.entries($LL.sessions.level_1.features_extended) as [key, feature]}
       <FeatureSlide 
-         modalId={Number(key)+1} 
+         modalId={Number(key)+11} 
          imgSrc="{featureImages[Number(key)]}" imgAlt="{feature.title.before()} {feature.title.main()}" 
          class="!h-fit">
       <span slot="subtitle">{feature.title.before()}</span>
@@ -46,7 +46,7 @@
 </NavSlider>
 
 {#each Object.entries($LL.sessions.level_1.features_extended) as [key, feature]}
-<FeaturesModalContent id={Number(key)+1} imgSrc="{featureImages[Number(key)]}" imgAlt="{feature.title.before()} {feature.title.main()}">
+<FeaturesModalContent id={Number(key)+11} imgSrc="{featureImages[Number(key)]}" imgAlt="{feature.title.before()} {feature.title.main()}">
    <span slot="title">
       {#each Object.entries(feature.title) as [titleKey, title]}
             {title()}&nbsp;
