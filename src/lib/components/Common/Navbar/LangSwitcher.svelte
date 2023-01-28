@@ -67,7 +67,7 @@
 						: l === 'fr' ? 'Français' 
 						: l === 'nl' ? 'Nederlands' 
 						: 'Error'}
-						<span class="text-xs italic text-gray-600 capitalize drop-shadow-none font-light">
+						<span class="text-xs italic text-gray-600 capitalize drop-shadow-none font-medium">
 							{ l === 'en' ? `${$LL.base.geo.lang.english()}` 
 							: l === 'fr' ? `${$LL.base.geo.lang.french()}`
 							: l === 'nl' ? `${$LL.base.geo.lang.dutch()}`
