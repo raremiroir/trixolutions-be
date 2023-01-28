@@ -12,13 +12,22 @@
 
    // Define card title
    export let title:string;
-   // Define card width
+   // Define card width (fit | fill | custom)
    export let width = 'w-96';
+   // Set height (fit | equal | auto | custom)
+   export let height = 'auto';
+
+   // Define on click action
+   export let onClick:any = '';
 
    // Define img src of leave blank for no img
    export let img = '';
    // Define img position (top - bottom - left - right - resp-l - resp-r)
    export let imgPos = 'top'
+   // Align img position (top - bottom - left - right - center)
+   export let imgAlign = 'top'
+   // Contain img
+   export let imgContain = false
    
    // If the card is wrapped in a link, enter the link here
    export let href = '';
@@ -41,12 +50,11 @@
    // Put badges above title
    export let badgesTop = false;
 
-   // Remove card hover effects:
-   export let noHoverFx = false;
-   // Remove card active effects:
-   export let noActiveFx = false;
-   // Remove all card effects:
-   export let noFx = false;
+   // Define card hover effects (full - minimal - onlyHover - onlyActive - none)
+   export let hoverFx = 'full';
+
+   // Add glass effect on bg
+   export let glass = false;
    
    // Is the card compact ?
    export let compact = false;
@@ -54,6 +62,10 @@
    export let compactResponsive = false;
    // Card can't be compact and compactResponsive at the same time
    if (compactResponsive) compact = false;
+
+   // Add extra classes
+   let klass = '';
+   export { klass as class }
 
    // =====================================================
    // Handle card link, if link is entered
@@ -87,13 +99,17 @@
    on:mouseleave={() => hovered = false}
    on:focus={() => hovered = true}
    on:blur={() => hovered = false}
+   on:click={() => onClick}
+   on:keydown={() => onClick}
    class="
-      {width === 'fit' ? 'w-fit' : width === 'full' ? 'w-full' : width}">
+      {width === 'fit' ? 'w-fit' : width === 'full' ? 'w-full' : width}
+      { height === 'equal' ? 'h-full' : height === 'fit' ? 'h-fit' : height === 'auto' ? '' : height}">
 
    <!-- Link or Div -->
    <svelte:component
       this={linkComp}
-      wrap {href} {ariaLabel}>
+      wrap {href} {ariaLabel}
+      class="{ height === 'equal' ? 'h-full' : height === 'fit' ? 'h-fit' : height === 'auto' ? '' : height}">
       
       <!-- Card Wrap (= Article or Div) -->
       <svelte:component
@@ -101,8 +117,8 @@
          class="
             {transitionClass}
             { href !== '' ? 'cursor-pointer' : 'cursor-default' }
-            { noHoverFx || noFx ? ''  : `hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10` }
-            { noActiveFx || noFx ? ''  : `active:translate-y-1 active:shadow-xl active:shadow-black/20` }
+            { hoverFx === 'onlyHover'  || hoverFx === 'full' || hoverFx === 'minimal' ? `hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10` : '' }
+            { hoverFx === 'onlyActive' || hoverFx === 'full' ? `active:translate-y-1 active:shadow-xl active:shadow-black/20` : '' }
             flex 
             { imgPos === 'top' ? 'flex-col' 
             : imgPos === 'bottom' ? 'flex-col-reverse'
@@ -111,18 +127,21 @@
             : imgPos === 'resp-l' ? 'flex-col sm:flex-row'
             : imgPos === 'resp-r' ? 'flex-col sm:flex-row-reverse'
             : 'flex-col'}
+            { height === 'equal' ? 'h-full' : height === 'fit' ? 'h-fit' : height === 'auto' ? '' : height}
+            
             items-start 
             justify-start
             rounded-2xl overflow-hidden shadow-lg
-            bg-white 
+            { glass ? 'bg-white/70 backdrop-blur-xl' : 'bg-white' } 
+            {klass}
             ">
 
             <!-- Show image if image is defined -->
             {#if img !== ''}
                {#if imgPos === 'top' || imgPos === 'bottom'}
                   <Image 
-                     {...imgProps} mode="contain" position="top"
-                     class="z-2 w-full { hovered && !noHoverFx && !noFx ? `scale-110 -translate-y-1 ${compact ? 'h-50' : compactResponsive ? 'h-50 md:h-60' : 'h-60'}` : `${compact ? 'h-44' : compactResponsive ? 'h-44 md:h-50' : 'h-50'}` }"
+                     {...imgProps} mode="{imgContain ? 'contain' : 'cover'}" position={imgAlign}
+                     class="z-2 w-full { hovered && (hoverFx === 'full' || hoverFx === 'onlyHover') ? `scale-110 -translate-y-1 ${compact ? 'h-50' : compactResponsive ? 'h-50 md:h-60' : 'h-60'}` : `${compact ? 'h-44' : compactResponsive ? 'h-44 md:h-50' : 'h-50'}` }"
                   />
                {:else if imgPos === 'resp-l' || imgPos === 'resp-r'}
                   <Image 
@@ -141,26 +160,29 @@
                   z-3 { transitionClass }
                   flex flex-col justify-between 
                   { imgPos === 'top' || imgPos === 'bottom' 
-                     ? `h-fit 
-                        ${ hovered 
-                           ? `${ compact ? 'gap-1' 
-                              : compactResponsive ? 'gap-1 md:gap-4' 
-                              : 'gap-4'}` 
-                           : `${ compact ? 'gap-7' 
-                              : compactResponsive ? 'gap-7 md:gap-12' 
-                              : 'gap-12'}`}` 
+                     ? `${ height === 'equal' ? 'h-3/5' : height === 'fit' ? 'h-fit' : height === 'auto' ? '' : height}
+                        ${ hoverFx === 'onlyHover' || hoverFx === 'full'
+                           ? hovered
+                              ? `${ compact ? 'gap-1' 
+                                 : compactResponsive ? 'gap-1 md:gap-4' 
+                                 : 'gap-4'}` 
+                              : `${ compact ? 'gap-7' 
+                                 : compactResponsive ? 'gap-7 md:gap-12' 
+                                 : 'gap-12'}`
+                              : 'gap-1'}` 
                   : imgPos === 'resp-l' || imgPos === 'resp-r' 
                      ? `h-fit sm:h-48 md:h-58 lg:h-60 xl:h-72 2xl:h-80
                         ${ compact ? 'gap-2' : compactResponsive ? 'gap-2 sm:gap-4' : 'gap-4' }`
                      : 'h-48 md:h-58 lg:h-60 xl:h-72 2xl:h-80'} 
                   w-full
-                  { compact ? 'p-2' : compactResponsive ? 'p-2 md:p-4' : 'p-4' }">
+                  { compact ? 'p-2' : compactResponsive ? 'p-2 md:p-4' : 'p-4' }
+                  ">
 
                <!-- Main Wrap -->
                <div class="
                      flex flex-col { transitionClass }
                      { imgPos === 'top' || imgPos === 'bottom' 
-                        ? hovered && !noHoverFx && !noFx 
+                        ? hovered && (hoverFx === 'onlyHover' || hoverFx === 'full')
                            ? `gap-0`
                            : `${ compact || compactResponsive ? `gap-2 ${ compactResponsive ? 'md:gap-4' : '' }` : `gap-4` }`
                      : imgPos === 'resp-l' || imgPos === 'resp-r'
@@ -174,9 +196,7 @@
                         { compact ? 'gap-1' : compactResponsive ? 'gap-2 md:gap-2' : 'gap-2'}
                         { badgesTop ? 'flex-col-reverse items-start' : 'flex-row items-center'}">
                      <!-- Title -->
-                     <div class="">
-                        <slot name="title"><H3 smaller thin>{@html title}</H3></slot>
-                     </div>
+                     <slot name="title"><H3 smaller thin>{@html title}</H3></slot>
 
                      <!-- Badges -->
                      {#if badge}
@@ -193,9 +213,7 @@
                   </div>
 
                   <!-- Text Wrap -->
-                  <div class="">
-                     <slot>If a dog chews shoes whose shoes does he choose?</slot>
-                  </div>
+                  <slot>If a dog chews shoes whose shoes does he choose?</slot>
                </div>
 
                <!-- Append Wrap (actions) -->
