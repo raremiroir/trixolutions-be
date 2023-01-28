@@ -6,7 +6,7 @@
          Main, Section, Text, Breadcrumbs, SEO, Reveal,
          H2, H3, H4, H5, Subheader,
          Hero, List, ListItem, Link,
-         Accordeon, AccordeonItem, Subtitle
+         Accordeon, AccordeonItem, Subtitle, Modal, SessionSubscribeForm, Button
       } from "$comp";
    import { SessionDateCard, ModalLocation } from "../open-sessies";
    import ModalTrainerTom from "../components/ModalTrainerTom.svelte";
@@ -209,14 +209,30 @@
                         {/each}
                      </List>
                
-                     <span slot="btn">
-                        <span class="font-light">{$LL.sessions.subscribe_to()}</span><br class="sm:hidden"/>
-                        <span>{$LL.sessions.level_2.title()}</span>
-                     </span>
+                     <Modal width="min-w-fit w-3/4 max-w-[80%] xl:max-w-[40%]" slot="btn" trigger id={99}>
+                        <Button slot="trigger"
+                           ariaLabel="{titleCase($LL.sessions.subscribe_to())} {titleCase($LL.sessions.info.single())}"
+                           size="px-4 lg:px-6 h-16 lg:px-10 lg:h-15 rounded-xl text-lg xl:text-xl xl:gap-6 2xl:gap-8" 
+                           block 
+                           class="flex flex-row w-full lg:w-4/5 mx-auto" 
+                           icon="mdi:pen-plus"
+                           iconClass="h-5 w-5 mr-2 text-gray-50 group-hover:text-white">
+                           <div class="flex flex-col">
+                              <span class="font-normal text-sm md:text-base xl:text-lg">{$LL.sessions.subscribe_to()} {$LL.sessions.level_2.deepdive()}</span><br/>
+                              <span>{$LL.sessions.level_2.advanced_coaching()}</span>
+                           </div>
+                        </Button>
+                     </Modal>
                   </PricingCard>
                </Reveal>
             {/if}
          {/each}
       </div>
    </Section>
+
+   <Modal content id={99}>
+      <H3 slot="title" small>{titleCase($LL.sessions.subscribe_to())} {titleCase($LL.sessions.level_1.traject())}!</H3>   
+      <Subtitle small italic>{firstLetterCase($LL.sessions.sign_up_to())} {$LL.sessions.level_1.the_traject()} <strong>{sessionData.title} {$LL.sessions.level_1.two_day()}</strong></Subtitle>
+      <SessionSubscribeForm session="level_2" submitText={$LL.sessions.info.subscribe()}/>
+   </Modal>
 </Main>
