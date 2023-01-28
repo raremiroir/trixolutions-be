@@ -25,7 +25,7 @@
    export let fake = false;
 
    $: titleClasses = `
-      font-title
+      font-title py-0 my-0
       ${ color ? color : 'text-primary' } 
       ${ thin ? 'font-semibold' : 'font-bold' }
 
