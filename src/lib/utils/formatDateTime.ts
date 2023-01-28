@@ -50,7 +50,7 @@ export const formatMonthShort = (date:any) => {
 	return `${month}`;
 }
 
-
+// TODO: localize
 const getMonthShort = (month) => {
 	switch(month) {
 		case '1' || '01' 	:	return 'jan'; 	break;
