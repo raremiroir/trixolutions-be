@@ -1,6 +1,6 @@
 <script lang="ts">
    // Import components
-   import { Button, H3, List, ListItem, Modal, SessionSubscribeForm, Text } from "$comp";
+   import { Button, Form, H3, List, ListItem, Modal, Text } from "$comp";
 	import PricingCard from "./PricingCard.svelte";
 
    // Import i18n
@@ -66,5 +66,11 @@
 <Modal content id={session.id}>
    <H3 slot="title" small>{titleCase($LL.sessions.subscribe_to())} {titleCase($LL.sessions.level_1.traject())}!</H3>   
    <Subtitle small italic>{firstLetterCase($LL.sessions.sign_up_to())} {$LL.sessions.level_1.the_traject()} <strong>{sessionData.title} {$LL.sessions.level_1.two_day()}</strong></Subtitle>
-   <SessionSubscribeForm session="{session.type}" submitText={$LL.sessions.info.subscribe()} {sessionDates}/>
+   <!-- <SessionSubscribeForm session="{session.type}" submitText={$LL.sessions.info.subscribe()} {sessionDates}/> -->
+   <Form
+      formType="session_sub"
+      sessionType={session.type}
+      submitText={$LL.sessions.info.subscribe()}
+      {sessionDates}
+   />
 </Modal>

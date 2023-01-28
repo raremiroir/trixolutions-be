@@ -3,11 +3,8 @@
    import { 
       Main, Section, Breadcrumbs, 
       Text, Button, H2, H3, Tag,
-      Card, Hero, Modal, 
-      SessionSubscribeForm,
-	  SEO,
-	  Reveal,
-	  CardBase,
+      Hero, Modal, CardBase,
+	   SEO, Reveal, Form
    } from "$comp";
    
    // Import website config
@@ -130,7 +127,12 @@
                
                   <H3 slot="title" small>{titleCase($LL.pages.contact.btn.contact_us())}!</H3>   
    
-                  <SessionSubscribeForm session="info_session" submitText={$LL.sessions.info.subscribe()} {sessionDates}/>
+                  <Form 
+                     formType="session_sub"
+                     sessionType="info_session"
+                     submitText={$LL.sessions.info.subscribe()}
+                     {sessionDates}
+                  />
                
                </Modal>
             </Reveal>

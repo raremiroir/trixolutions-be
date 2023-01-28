@@ -16,8 +16,7 @@
       Main, Section, Breadcrumbs, 
       Link, Text, Title, Button, 
       Map, Card, Modal, 
-      ContactForm, 
-	  SEO
+	   SEO, Form, CardBase
    } from "$comp";
 	import Icon from "@iconify/svelte";
 
@@ -31,6 +30,16 @@
       {locale: 'fr', slug: 'contact'},
       {locale: 'nl', slug: 'contact'}
    ];
+
+   const cardProps = {
+      width: 'full',
+
+      compact: false,
+      compactResponsive: true,
+      equalHeight: true,
+
+      hoverFx: 'minimal',
+   }
    
    // Define Company establishments
    const places = [
@@ -102,26 +111,39 @@
             </Button>
    
             <Title slot="title" type="h3" small>{titleCase($LL.pages.contact.btn.contact_us())}!</Title>
-            <ContactForm />
+            <!-- <ContactForm /> -->
+            <Form 
+               formType="contact"
+               sessionType=""
+               submitText={$LL.base.form.content.send_msg()}
+            />
             
          </Modal>
       </div>
       <div class="grid grid-cols-2 w-full gap-8">
          {#each places as place}
-            <Card textCenter class="col-span-1">
-               <div slot="prepend-inner" class="w-full flex items-center justify-center">
-                  <div class="border-4 border-primary w-fit h-fit rounded-full m-0 p-0">
-                     <Icon icon="emojione:flag-for-{place.code === 'be' ? 'belgium' : place.code === 'nl' ? 'netherlands' : 'usa' }" width="140" />
+            <CardBase 
+               title="{firstLetterCase($LL.pages.contact.establishment())} {place.code === 'be' ? $LL.base.geo.country.belgium() : place.code === 'nl' ? $LL.base.geo.country.netherlands() : 'error' }"
+               ariaLabel="{firstLetterCase($LL.pages.contact.establishment())} {place.code === 'be' ? $LL.base.geo.country.belgium() : place.code === 'nl' ? $LL.base.geo.country.netherlands() : 'error' }"
+               class="col-span-1"
+               {...cardProps}
+            >
+               <div slot="title" class="w-full items-center flex flex-col gap-4">
+                  <div class="w-full flex items-center justify-center">
+                     <div class="border-4 border-primary w-fit h-fit rounded-full m-0 p-0">
+                        <Icon icon="emojione:flag-for-{place.code === 'be' ? 'belgium' : place.code === 'nl' ? 'netherlands' : 'usa' }" width="140" />
+                     </div>
                   </div>
+                  <Title type="h2" smallest class="text-center uppercase font-extrabold">
+                     {firstLetterCase($LL.pages.contact.establishment())} {place.code === 'be' ? $LL.base.geo.country.belgium() : place.code === 'nl' ? $LL.base.geo.country.netherlands() : 'error' }
+                  </Title>
                </div>
-               <Title slot="title" type="h2" smallest class="text-center uppercase font-extrabold">
-                  {firstLetterCase($LL.pages.contact.establishment())} {place.code === 'be' ? $LL.base.geo.country.belgium() : place.code === 'nl' ? $LL.base.geo.country.netherlands() : 'error' }
-               </Title>
                <Text semibold center>
                   {@html place.address}<br/>
                   {place.code === 'be' ? $LL.base.geo.city.antwerp() : place.code === 'nl' ? place.place : 'error' }
                </Text>
-               <div class="w-full flex items-center justify-center" slot="append-inner">
+               
+               <div class="w-full flex items-center justify-center" slot="append">
                   <Button ariaLabel="Mail {place.email}" size="xl" color="primary" lowercase href="mailto:{place.email}">
                      <div class="flex flex-row gap-2 items-center">
                         <Icon icon="material-symbols:mail-rounded" color="#f6ece7" width="24" />
@@ -129,7 +151,7 @@
                      </div>
                   </Button>
                </div>
-            </Card>
+            </CardBase>
          {/each}
       </div>
    </Section>

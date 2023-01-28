@@ -6,7 +6,7 @@
          Main, Section, Text, Breadcrumbs, SEO, Reveal,
          H2, H3, H4, H5, Subheader,
          Hero, List, ListItem, Link,
-         Accordeon, AccordeonItem, Subtitle, Modal, SessionSubscribeForm, Button
+         Accordeon, AccordeonItem, Subtitle, Modal, Button, Form
       } from "$comp";
    import { SessionDateCard, ModalLocation } from "../open-sessies";
    import ModalTrainerTom from "../components/ModalTrainerTom.svelte";
@@ -15,7 +15,7 @@
    import ModalApproach from "../components/ModalApproach.svelte";
    
    // Import constants
-   import { firstLetterCase, formatUrl, titleCase } from "$utils";
+   import { firstLetterCase, formatDateFull, formatUrl, titleCase } from "$utils";
    import { website } from "$lib/config/website";
    import { currentModal } from "$src/lib/stores";
    // Import i18n
@@ -33,6 +33,11 @@
    export let data;
    let pageData = Object(data.sessionTypes);
    let sessionData = Object(data.sessionData);
+
+   let sessionDates:any = [];
+   sessionData.forEach((element:any) => {
+      if (element.type === 'level_2') sessionDates.push(formatDateFull(element.starts_on))
+   });
    
    $: $currentModal;
 
@@ -231,8 +236,14 @@
    </Section>
 
    <Modal content id={99}>
-      <H3 slot="title" small>{titleCase($LL.sessions.subscribe_to())} {titleCase($LL.sessions.level_1.traject())}!</H3>   
-      <Subtitle small italic>{firstLetterCase($LL.sessions.sign_up_to())} {$LL.sessions.level_1.the_traject()} <strong>{sessionData.title} {$LL.sessions.level_1.two_day()}</strong></Subtitle>
-      <SessionSubscribeForm session="level_2" submitText={$LL.sessions.info.subscribe()}/>
+      <H3 slot="title" small>{titleCase($LL.sessions.subscribe_to())} {titleCase($LL.sessions.level_2.deepdive())}!</H3>   
+      <Subtitle small italic>{firstLetterCase($LL.sessions.sign_up_to())} {$LL.base.word.an()} <strong>{$LL.sessions.level_2.advanced_coaching()}<br/>({$LL.sessions.level_2.title()} - {$LL.sessions.level_2.level2()})</strong></Subtitle>
+      <!-- <SessionSubscribeForm session="level_2" submitText={$LL.sessions.info.subscribe()}/> -->
+      <Form 
+         formType="session_sub"
+         sessionType="level_2"
+         submitText={$LL.sessions.level_2.subscribe()}
+         {sessionDates}
+      />
    </Modal>
 </Main>
