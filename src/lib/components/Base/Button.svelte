@@ -98,7 +98,7 @@
 <svelte:component
    this={btnCompType}
 
-   {type}
+   {type} wrap
    {href} on:click
 
    role={type} {tabindex} 
@@ -138,61 +138,61 @@
       { active   ? 'dui-btn-active'   : '' }
       { loading  ? 'dui-loading'   : '' }
 
-      { color === 'primary'   && !outlined ? `       text-gray-50            bg-primary 
-                                               hover:text-white        hover:bg-primary-d2
-                                              active:text-white       active:bg-primary-d2`
-      : color === 'secondary' && !outlined ? `       text-gray-50            bg-secondary 
-                                               hover:text-white        hover:bg-secondary-d2
-                                              active:text-white       active:bg-secondary-d2`
-      : color === 'accent'    && !outlined ? `       text-gray-50            bg-accent 
-                                               hover:text-white        hover:bg-accent-d2
-                                              active:text-white       active:bg-accent-d2`
-      : color === 'ghost'     && !outlined ? `       text-primary              bg-transparent 
-                                               hover:text-primary-l2   hover:bg-gray-200/50 
-                                              active:text-primary-l3  active:bg-gray-300/50`
-      : color === 'link'      && !outlined ? `       text-info                 bg-transparent underline
-                                               hover:text-info-d       hover:bg-info/30 
-                                              active:text-info-d      active:bg-info/30`
-      : color === 'info'      && !outlined ? `       text-gray-50            bg-info
-                                               hover:text-white        hover:bg-info-d 
-                                              active:text-white       active:bg-info-d`
-      : color === 'success'   && !outlined ? `       text-gray-50            bg-success
-                                               hover:text-white        hover:bg-success-d 
-                                              active:text-white       active:bg-success-d`
-      : color === 'error'     && !outlined ? `       text-gray-50            bg-error
-                                               hover:text-white        hover:bg-error-d 
-                                              active:text-white       active:bg-error-d`
-      : color === 'warning'   && !outlined ? `       text-gray-50            bg-warning
-                                               hover:text-white        hover:bg-warning-d 
-                                              active:text-white       active:bg-warning-d`
+      { color === 'primary'   && !outlined ? `       !text-gray-50            bg-primary 
+                                               hover:!text-white        hover:bg-primary-d2
+                                              active:!text-white       active:bg-primary-d2`
+      : color === 'secondary' && !outlined ? `       !text-gray-50            bg-secondary 
+                                               hover:!text-white        hover:bg-secondary-d2
+                                              active:!text-white       active:bg-secondary-d2`
+      : color === 'accent'    && !outlined ? `       !text-gray-50            bg-accent 
+                                               hover:!text-white        hover:bg-accent-d2
+                                              active:!text-white       active:bg-accent-d2`
+      : color === 'ghost'     && !outlined ? `       !text-primary              bg-transparent 
+                                               hover:!text-primary-l2   hover:bg-gray-200/50 
+                                              active:!text-primary-l3  active:bg-gray-300/50`
+      : color === 'link'      && !outlined ? `       !text-info                 bg-transparent underline
+                                               hover:!text-info-d       hover:bg-info/30 
+                                              active:!text-info-d      active:bg-info/30`
+      : color === 'info'      && !outlined ? `       !text-gray-50            bg-info
+                                               hover:!text-white        hover:bg-info-d 
+                                              active:!text-white       active:bg-info-d`
+      : color === 'success'   && !outlined ? `       !text-gray-50            bg-success
+                                               hover:!text-white        hover:bg-success-d 
+                                              active:!text-white       active:bg-success-d`
+      : color === 'error'     && !outlined ? `       !text-gray-50            bg-error
+                                               hover:!text-white        hover:bg-error-d 
+                                              active:!text-white       active:bg-error-d`
+      : color === 'warning'   && !outlined ? `       !text-gray-50            bg-warning
+                                               hover:!text-white        hover:bg-warning-d 
+                                              active:!text-white       active:bg-warning-d`
 
-      : color === 'primary'   &&  outlined ? `bg-transparent border-2 border-primary             text-primary   
-                                      hover:bg-primary/20     hover:border-primary-d2    hover:text-primary-d2 
-                                     active:bg-primary/30    active:border-primary-d3   active:text-primary-d3`
-      : color === 'secondary' &&  outlined ? `bg-transparent border-2 border-secondary           text-secondary 
-                                      hover:bg-secondary/20   hover:border-secondary-d2  hover:text-secondary-d2 
-                                     active:bg-secondary/30  active:border-secondary-d3 active:text-secondary-d3`
-      : color === 'accent'    &&  outlined ? `bg-transparent border-2 border-accent              text-accent
-                                      hover:bg-accent/20      hover:border-accent-d2     hover:text-accent-d2 
-                                     active:bg-accent/30     active:border-accent-d3    active:text-accent-d3`
-      : color === 'ghost'    &&   outlined ? `bg-transparent border-2 border-gray-300/50         text-primary-l1
-                                      hover:bg-primary/20     hover:border-primary-l1/50 hover:text-primary-l2 
-                                     active:bg-primary/30    active:border-primary-l1   active:text-primary-l3`
-      : color === 'link'     &&   outlined ? `bg-transparent border-2 border-info                text-info underline
-                                      hover:bg-info/30        hover:border-info-d        hover:text-info-d 
-                                     active:bg-info/30       active:border-info-d       active:text-info-d`
-      : color === 'info'     &&   outlined ? `bg-transparent border-2 border-info-d              text-info-d
-                                      hover:bg-info/20        hover:border-info-d        hover:text-info-d 
-                                     active:bg-info/30       active:border-info-d       active:text-info-d`
-      : color === 'success'  &&   outlined ? `bg-transparent border-2 border-success-d           text-success-d
-                                      hover:bg-success/20     hover:border-success-d     hover:text-success-d 
-                                     active:bg-success/30    active:border-success-d    active:text-success-d`
-      : color === 'error'    &&   outlined ? `bg-transparent border-2 border-error-d             text-error-d
-                                      hover:bg-error/20       hover:border-error-d       hover:text-error-d 
-                                     active:bg-error/30      active:border-error-d      active:text-error-d`
-      : color === 'warning'  &&   outlined ? `bg-transparent border-2 border-warning-d           text-warning-d
-                                      hover:bg-warning/20     hover:border-warning-d     hover:text-warning-d 
-                                     active:bg-warning/30    active:border-warning-d    active:text-warning-d`
+      : color === 'primary'   &&  outlined ? `bg-transparent border-2 border-primary             !text-primary   
+                                      hover:bg-primary/20     hover:border-primary-d2    hover:!text-primary-d2 
+                                     active:bg-primary/30    active:border-primary-d3   active:!text-primary-d3`
+      : color === 'secondary' &&  outlined ? `bg-transparent border-2 border-secondary           !text-gray-100 
+                                      hover:bg-secondary/20   hover:border-gray-50       hover:!text-gray-50 
+                                     active:bg-secondary/30  active:border-gray-50      active:!text-white`
+      : color === 'accent'    &&  outlined ? `bg-transparent border-2 border-accent              !text-accent
+                                      hover:bg-accent/20      hover:border-accent-d2     hover:!text-accent-d2 
+                                     active:bg-accent/30     active:border-accent-d3    active:!text-accent-d3`
+      : color === 'ghost'    &&   outlined ? `bg-transparent border-2 border-gray-300/50         !text-primary-l1
+                                      hover:bg-primary/20     hover:border-primary-l1/50 hover:!text-primary-l2 
+                                     active:bg-primary/30    active:border-primary-l1   active:!text-primary-l3`
+      : color === 'link'     &&   outlined ? `bg-transparent border-2 border-info                !text-info underline
+                                      hover:bg-info/30        hover:border-info-d        hover:!text-info-d 
+                                     active:bg-info/30       active:border-info-d       active:!text-info-d`
+      : color === 'info'     &&   outlined ? `bg-transparent border-2 border-info-d              !text-info-d
+                                      hover:bg-info/20        hover:border-info-d        hover:!text-info-d 
+                                     active:bg-info/30       active:border-info-d       active:!text-info-d`
+      : color === 'success'  &&   outlined ? `bg-transparent border-2 border-success-d           !text-success-d
+                                      hover:bg-success/20     hover:border-success-d     hover:!text-success-d 
+                                     active:bg-success/30    active:border-success-d    active:!text-success-d`
+      : color === 'error'    &&   outlined ? `bg-transparent border-2 border-error-d             !text-error-d
+                                      hover:bg-error/20       hover:border-error-d       hover:!text-error-d 
+                                     active:bg-error/30      active:border-error-d      active:!text-error-d`
+      : color === 'warning'  &&   outlined ? `bg-transparent border-2 border-warning-d           !text-warning-d
+                                      hover:bg-warning/20     hover:border-warning-d     hover:!text-warning-d 
+                                     active:bg-warning/30    active:border-warning-d    active:!text-warning-d`
       : color}
       { klass }
       ">
