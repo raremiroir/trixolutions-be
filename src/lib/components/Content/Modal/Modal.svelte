@@ -18,7 +18,7 @@
 	import ModalContent from './ModalContent.svelte';
 	import { page } from '$app/stores';
 
-   export let id:number = 1;
+   export let id:number = 0;
    export let icon = '';
 
    export let width = '';
@@ -28,7 +28,7 @@
    export let content = false;
    let isOpen = false;
 
-   let normalModal = false;;
+   let normalModal = false;
    if (!trigger && !content) {
       normalModal = true;
    }
@@ -41,11 +41,8 @@
       }
    }
    const closeModal = () => { 
-      if (normalModal) {
-         isOpen = false;
-      } else if (!normalModal) {
-         $currentModal = 0;
-      }
+      isOpen = false;
+      $currentModal = 0;
    }
 
 </script>
@@ -53,7 +50,7 @@
 {#if trigger || normalModal}
    <!-- Trigger -->
    <div 
-      class="h-full"
+      class="h-fit"
       on:click|stopPropagation={openModal(id)}
       on:keydown={openModal(id)}>
       <slot name="trigger">Open Modal</slot>
@@ -70,7 +67,7 @@
             flex items-center justify-center"
          transition:fade={{duration:200}}>
 
-            <ModalContent closeModal={() => closeModal()} {icon} {width} {height}>
+            <ModalContent {closeModal} {icon} {width} {height}>
                <slot name="title-prepend" slot="title-prepend"/>
                <slot name="title" slot="title"/>
                <slot/>
