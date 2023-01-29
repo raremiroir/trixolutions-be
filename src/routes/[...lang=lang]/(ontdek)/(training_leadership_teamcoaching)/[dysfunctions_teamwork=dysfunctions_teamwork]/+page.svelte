@@ -26,7 +26,7 @@
     // Import stores
     import { currentHero, currentTitle } from "$lib/stores";
     // Set page props
-    $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items.decisive_lead.title()
+    $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].title()
     $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
 
     // Set 'active' variable for accordeon component

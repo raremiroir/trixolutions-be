@@ -24,7 +24,7 @@
     // Import stores
     import { currentHero, currentTitle } from "$lib/stores";
     // Set page props
-    $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items.decisive_lead.title()
+    $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].title()
     $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
 
     // Set 'active' variable for accordeon component
@@ -55,10 +55,7 @@
         <Title type="subheader">by Patrick Lencioni</Title>
     </div>
 
-    <Accordeon class="
-                { active == null 
-                    ? 'w-full lg:w-7/12' 
-                    : 'w-full lg:w-3/4' }" 
+    <Accordeon class="w-full" 
         bind:active>
         <AccordeonItem id={1} 
             title='1. Een Samenhangend Leiderschapsteam Opbouwen' titleSmallest>
