@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Anchor, Mode, Placeholder, State } from '@twicpics/components/sveltekit';
    import TwicImg from '@twicpics/components/sveltekit/TwicImg.svelte';
 
    export let src:string = '';
@@ -9,7 +10,7 @@
 
    // Positioning of image (border-based)
    //  -- top - bottom - left - right - top-left - top-right - bottom-left - bottom-right --
-   export let anchor = '';
+   export let anchor:Anchor = 'center';
 
    // Load image eagerly
    export let eager:boolean = false;
@@ -20,7 +21,7 @@
 
    // Specify placeholder until image is loaded
    // -- preview - meancolor - maincolor - none --
-   export let placeholder = 'maincolor'
+   export let placeholder:Placeholder = 'maincolor'
 
    // Define aspect ratio in
    // width/height or width:height
@@ -43,7 +44,7 @@
    ////// MODES //////
    // Cover: image fills area and is cropped
    // Contain: image will sit inside area with no cropping
-   export let mode = 'cover'
+   export let mode:Mode = 'cover'
 
    //// COVER MODE ////
       // Sets focus point in cover mode
@@ -56,7 +57,8 @@
       export let position:string = 'center';
    
 
-
+   let state:State;
+   $: state;
 
    // preTransform: slash-separated list of TwicPics API transformations
    // to be performed before resizing the image
@@ -70,17 +72,18 @@
 
    <TwicImg
       {src} {alt} {anchor}
-      {eager} {intrinsic}
-      {placeholder}
+      {eager} {focus} 
+      {intrinsic} {mode}
+      {position} {placeholder}
+      {preTransform}
+      
       {ratio}
       
-      {mode}
-      {position} {focus}
+      bind:state={state}
       
       {transition} {transitionDuration}
       {transitionTimingFunction} {transitionDelay}
       
-      {preTransform}
    
       class="transition-all { slow ? 'duration-500' : 'duration-300'} ease-in-out {klass}"
    />

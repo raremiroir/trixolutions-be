@@ -24,9 +24,8 @@
 	installTwicPics({
 		// domain is mandatory
 		domain: 'https://trixolutions.twic.pics',
-		anticipation: 0.2,
-		handleShadowDom: true,
-		step: 8
+		maxDPR: 3,
+		step: 10
 	})
 	
 	// Import data
