@@ -65,6 +65,43 @@ const fr_nav: NamespaceNavTranslation = {
          title: "Politique de Confidentialité",
          slug: "politique-de-confidentialite"
       }
+   },
+   explore: {
+      training_leadership_teamcoaching: {
+         title: "Nous proposons une Formation en Leadership Lencioni et en Coaching d'Équipe",
+         slug: '#',
+         items: {
+            dysfunctions_teamwork: {
+               title: "Les 5 Dysfonctions du Travail d'Équipe",
+               slug: "5-dysfonctions-travail-equipe",
+               description: "Des équipes saines, fortes et efficaces ont une culture de confiance, de conflit respectueux, d'engagement d'équipe, de responsabilité et de concentration sur les résultats."
+            },
+            working_genius: {
+               title: "The 6 Types of Working Genius",
+               slug: "6-types-working-genius",
+               description: "ASi vous voulez réussir et vous épanouir en tant que membre d'une équipe ou chef d'équipe, vous devez utiliser vos sources d'énergie et vos talents. Ce qui bien sûr ne fonctionnera pas si vous ne les connaissez pas."
+            },
+            ideal_teamplayer: {
+               title: "Le Coéquipier Idéal",
+               slug: "coequipier-ideal",
+               description: "La combinaison des trois propriétés rend cela difficile. Même en l'absence de l'un des trois, le travail d'équipe devient nettement plus difficile."
+            },
+            decisive_lead: {
+               title: "L'Avantage Décisif",
+               slug: "avantage-decisif",
+               description: "La plus grande longueur d'avance qu'une entreprise peut prendre est de créer une culture organisationnelle et d'équipe saine."
+            },
+            meetings_deadly: {
+               title: "Les Réunions Tuent",
+               slug: "reunions-tuent",
+               description: "Une bonne réunion intéressante et efficace est le cœur d'une bonne équipe soudée ! Alors pourquoi la plupart des réunions sont-elles si mauvaises ? ! Nous fournissons ici la solution."
+            },
+         }
+      },
+      lencioni_deepdive_modules: {
+         title: "Modules Deepdive Lencioni ",
+         slug: '#',
+      }
    }
 }
 

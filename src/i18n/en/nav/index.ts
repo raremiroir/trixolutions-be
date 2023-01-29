@@ -65,6 +65,43 @@ const en_nav: NamespaceNavTranslation = {
          title: "Privacy Policy",
          slug: "privacy-policy"
       }
+   },
+   explore: {
+      training_leadership_teamcoaching: {
+         title: "We provide Training in Lencioni Leadership and Team Coaching",
+         slug: '#',
+         items: {
+            dysfunctions_teamwork: {
+               title: "The 5 Dysfunctions of Teamwork",
+               slug: "5-dysfunctions-teamwork",
+               description: "Healthy, strong and effective teams have a culture of trust, respectful conflict, team commitment, accountability and a focus on results."
+            },
+            working_genius: {
+               title: "The 6 Types of Working Genius",
+               slug: "6-types-working-genius",
+               description: "If you want to be successful and fulfilled as a team member or team leader, you have to use your energy sources and talents. Which of course won't work if you don't know them."
+            },
+            ideal_teamplayer: {
+               title: "The Ideal Team Player",
+               slug: "ideal-team-player",
+               description: "The combination of the three properties together makes it difficult. Even in the absence of one of the three, teamwork becomes significantly more difficult."
+            },
+            decisive_lead: {
+               title: "The Decisive Lead",
+               slug: "decisive-lead",
+               description: "The biggest head start a company can take is to create a healthy organizational and team culture."
+            },
+            meetings_deadly: {
+               title: "Meetings are Deadly",
+               slug: "meetings-are-deadly",
+               description: "A good, interesting and effective meeting is the heart of a good and cohesive team! Then why are most meetings so bad?! We hereby provide the solution."
+            },
+         }
+      },
+      lencioni_deepdive_modules: {
+         title: "Lencioni Deepdive Modules",
+         slug: '#',
+      }
    }
 }
 

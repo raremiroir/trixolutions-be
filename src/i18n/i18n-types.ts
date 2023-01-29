@@ -606,6 +606,100 @@ export type NamespaceNavTranslation = {
 			slug: string
 		}
 	}
+	explore: {
+		training_leadership_teamcoaching: {
+			/**
+			 * W​e​ ​g​e​v​e​n​ ​O​p​l​e​i​d​i​n​g​ ​i​n​ ​L​e​n​c​i​o​n​i​ ​L​e​i​d​e​r​s​c​h​a​p​ ​e​n​ ​T​e​a​m​c​o​a​c​h​i​n​g
+			 */
+			title: string
+			/**
+			 * #
+			 */
+			slug: string
+			items: {
+				dysfunctions_teamwork: {
+					/**
+					 * D​e​ ​5​ ​D​y​s​f​u​n​c​t​i​e​s​ ​v​a​n​ ​T​e​a​m​w​e​r​k
+					 */
+					title: string
+					/**
+					 * 5​-​d​y​s​f​u​n​c​t​i​e​s​-​t​e​a​m​w​e​r​k
+					 */
+					slug: string
+					/**
+					 * G​e​z​o​n​d​e​,​ ​s​t​e​r​k​e​ ​e​n​ ​e​f​f​e​c​t​i​e​v​e​ ​t​e​a​m​s​ ​h​e​b​b​e​n​ ​e​e​n​ ​c​u​l​t​u​u​r​ ​v​a​n​ ​v​e​r​t​r​o​u​w​e​n​,​ ​r​e​s​p​e​c​t​v​o​l​l​e​ ​c​o​n​f​l​i​c​t​e​n​,​ ​t​e​a​m​b​e​t​r​o​k​k​e​n​h​e​i​d​,​ ​a​a​n​s​p​r​a​k​e​l​i​j​k​h​e​i​d​ ​e​n​ ​r​e​s​u​l​t​a​a​t​g​e​r​i​c​h​t​h​e​i​d​.
+					 */
+					description: string
+				}
+				working_genius: {
+					/**
+					 * T​h​e​ ​6​ ​T​y​p​e​s​ ​o​f​ ​W​o​r​k​i​n​g​ ​G​e​n​i​u​s
+					 */
+					title: string
+					/**
+					 * 6​-​t​y​p​e​s​-​w​o​r​k​i​n​g​-​g​e​n​i​u​s
+					 */
+					slug: string
+					/**
+					 * A​l​s​ ​j​e​ ​s​u​c​c​e​s​v​o​l​ ​e​n​ ​v​o​l​d​a​a​n​ ​w​i​l​ ​z​i​j​n​ ​a​l​s​ ​t​e​a​m​l​i​d​ ​o​f​ ​t​e​a​m​l​e​a​d​e​r​ ​m​o​e​t​ ​j​e​ ​j​o​u​w​ ​e​n​e​r​g​i​e​b​r​o​n​n​e​n​ ​e​n​ ​t​a​l​e​n​t​e​n​ ​g​e​b​r​u​i​k​e​n​.​ ​W​a​t​ ​n​a​t​u​u​r​l​i​j​k​ ​n​i​e​t​ ​l​u​k​t​ ​a​l​s​ ​j​e​ ​d​i​e​ ​n​i​e​t​ ​k​e​n​t​.
+					 */
+					description: string
+				}
+				ideal_teamplayer: {
+					/**
+					 * D​e​ ​I​d​e​a​l​e​ ​T​e​a​m​p​l​a​y​e​r
+					 */
+					title: string
+					/**
+					 * i​d​e​a​l​e​-​t​e​a​m​p​l​a​y​e​r
+					 */
+					slug: string
+					/**
+					 * D​e​ ​c​o​m​b​i​n​a​t​i​e​ ​v​a​n​ ​d​e​ ​d​r​i​e​ ​e​i​g​e​n​s​c​h​a​p​p​e​n​ ​s​a​m​e​n​ ​m​a​a​k​t​ ​h​e​t​ ​n​e​t​ ​m​o​e​i​l​i​j​k​.​ ​Z​e​l​f​s​ ​b​i​j​ ​g​e​b​r​e​k​ ​a​a​n​ ​é​é​n​ ​v​a​n​ ​d​e​ ​d​r​i​e​ ​w​o​r​d​t​ ​t​e​a​m​w​o​r​k​ ​b​e​d​u​i​d​e​n​d​ ​m​o​e​i​l​i​j​k​e​r​.
+					 */
+					description: string
+				}
+				decisive_lead: {
+					/**
+					 * D​e​ ​B​e​s​l​i​s​s​e​n​d​e​ ​V​o​o​r​s​p​r​o​n​g
+					 */
+					title: string
+					/**
+					 * b​e​s​l​i​s​s​e​n​d​e​-​v​o​o​r​s​p​r​o​n​g
+					 */
+					slug: string
+					/**
+					 * D​e​ ​g​r​o​o​t​s​t​e​ ​v​o​o​r​s​p​r​o​n​g​ ​d​i​e​ ​e​e​n​ ​b​e​d​r​i​j​f​ ​k​a​n​ ​n​e​m​e​n​,​ ​i​s​ ​h​e​t​ ​c​r​e​ë​r​e​n​ ​v​a​n​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​-​ ​e​n​ ​t​e​a​m​c​u​l​t​u​u​r​.
+					 */
+					description: string
+				}
+				meetings_deadly: {
+					/**
+					 * V​e​r​g​a​d​e​r​i​n​g​e​n​ ​z​i​j​n​ ​D​o​d​e​l​i​j​k
+					 */
+					title: string
+					/**
+					 * v​e​r​g​a​d​e​r​i​n​g​e​n​-​z​i​j​n​-​d​o​d​e​l​i​j​k
+					 */
+					slug: string
+					/**
+					 * E​e​n​ ​g​o​e​d​e​,​ ​i​n​t​e​r​e​s​s​a​n​t​e​ ​e​n​ ​e​f​f​e​c​t​i​e​v​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​h​e​t​ ​h​a​r​t​ ​v​a​n​ ​e​e​n​ ​g​o​e​d​ ​e​n​ ​c​o​h​e​s​i​e​f​ ​t​e​a​m​!​ ​W​a​a​r​o​m​ ​z​i​j​n​ ​d​e​ ​m​e​e​s​t​e​ ​m​e​e​t​i​n​g​s​ ​d​a​n​ ​z​o​ ​s​l​e​c​h​t​?​!​ ​W​e​ ​r​e​i​k​e​n​ ​h​i​e​r​b​i​j​ ​d​e​ ​o​p​l​o​s​s​i​n​g​ ​a​a​n​.
+					 */
+					description: string
+				}
+			}
+		}
+		lencioni_deepdive_modules: {
+			/**
+			 * L​e​n​c​i​o​n​i​ ​V​e​r​d​i​e​p​i​n​g​s​m​o​d​u​l​e​s
+			 */
+			title: string
+			/**
+			 * #
+			 */
+			slug: string
+		}
+	}
 }
 
 export type NamespaceOtherTranslation = {
@@ -2353,6 +2447,100 @@ export type TranslationFunctions = {
 				title: () => LocalizedString
 				/**
 				 * privacybeleid
+				 */
+				slug: () => LocalizedString
+			}
+		}
+		explore: {
+			training_leadership_teamcoaching: {
+				/**
+				 * We geven Opleiding in Lencioni Leiderschap en Teamcoaching
+				 */
+				title: () => LocalizedString
+				/**
+				 * #
+				 */
+				slug: () => LocalizedString
+				items: {
+					dysfunctions_teamwork: {
+						/**
+						 * De 5 Dysfuncties van Teamwerk
+						 */
+						title: () => LocalizedString
+						/**
+						 * 5-dysfuncties-teamwerk
+						 */
+						slug: () => LocalizedString
+						/**
+						 * Gezonde, sterke en effectieve teams hebben een cultuur van vertrouwen, respectvolle conflicten, teambetrokkenheid, aansprakelijkheid en resultaatgerichtheid.
+						 */
+						description: () => LocalizedString
+					}
+					working_genius: {
+						/**
+						 * The 6 Types of Working Genius
+						 */
+						title: () => LocalizedString
+						/**
+						 * 6-types-working-genius
+						 */
+						slug: () => LocalizedString
+						/**
+						 * Als je succesvol en voldaan wil zijn als teamlid of teamleader moet je jouw energiebronnen en talenten gebruiken. Wat natuurlijk niet lukt als je die niet kent.
+						 */
+						description: () => LocalizedString
+					}
+					ideal_teamplayer: {
+						/**
+						 * De Ideale Teamplayer
+						 */
+						title: () => LocalizedString
+						/**
+						 * ideale-teamplayer
+						 */
+						slug: () => LocalizedString
+						/**
+						 * De combinatie van de drie eigenschappen samen maakt het net moeilijk. Zelfs bij gebrek aan één van de drie wordt teamwork beduidend moeilijker.
+						 */
+						description: () => LocalizedString
+					}
+					decisive_lead: {
+						/**
+						 * De Beslissende Voorsprong
+						 */
+						title: () => LocalizedString
+						/**
+						 * beslissende-voorsprong
+						 */
+						slug: () => LocalizedString
+						/**
+						 * De grootste voorsprong die een bedrijf kan nemen, is het creëren van een gezonde organisatie- en teamcultuur.
+						 */
+						description: () => LocalizedString
+					}
+					meetings_deadly: {
+						/**
+						 * Vergaderingen zijn Dodelijk
+						 */
+						title: () => LocalizedString
+						/**
+						 * vergaderingen-zijn-dodelijk
+						 */
+						slug: () => LocalizedString
+						/**
+						 * Een goede, interessante en effectieve meeting is het hart van een goed en cohesief team! Waarom zijn de meeste meetings dan zo slecht?! We reiken hierbij de oplossing aan.
+						 */
+						description: () => LocalizedString
+					}
+				}
+			}
+			lencioni_deepdive_modules: {
+				/**
+				 * Lencioni Verdiepingsmodules
+				 */
+				title: () => LocalizedString
+				/**
+				 * #
 				 */
 				slug: () => LocalizedString
 			}
