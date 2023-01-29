@@ -72,8 +72,8 @@ const nl_nav: BaseTranslation = {
          slug: '#',
          items: {
             dysfunctions_teamwork: {
-               title: "De 5 Dysfuncties van Teamwerk",
-               slug: "5-dysfuncties-teamwerk",
+               title: "De 5 Frustraties van Teamwerk",
+               slug: "5-frustraties-teamwerk",
                description: "Gezonde, sterke en effectieve teams hebben een cultuur van vertrouwen, respectvolle conflicten, teambetrokkenheid, aansprakelijkheid en resultaatgerichtheid."
             },
             working_genius: {

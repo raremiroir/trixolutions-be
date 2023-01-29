@@ -1,4 +1,12 @@
 <script lang="ts">
+    // Define current page slug
+    import { currentPageMap } from "$lib/stores";
+    $currentPageMap = [
+        {locale: 'en', slug: 'meetings-are-deadly'},
+        {locale: 'fr', slug: 'reunions-tuent'},
+        {locale: 'nl', slug: 'vergaderingen-zijn-dodelijk'}
+    ];
+
     import { Title, P, Accordeon, AccordeonItem } from '$comp';
 
     import IntroSection from '../../IntroSection.svelte';

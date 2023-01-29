@@ -1,4 +1,12 @@
 <script lang="ts">
+    // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   $currentPageMap = [
+      {locale: 'en', slug: 'decisive-lead'},
+      {locale: 'fr', slug: 'avantage-decisif'},
+      {locale: 'nl', slug: 'beslissende-voorsprong'}
+   ];
+
     import { Title, P, Accordeon, AccordeonItem} from '$comp';
 
     import { locale } from '$i18n/i18n-svelte';
