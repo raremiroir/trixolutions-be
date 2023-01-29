@@ -5,7 +5,6 @@
    import LL from "$i18n/i18n-svelte";
    import { formatPrice } from "$utils";
    
-   export let introWidth = '';
    export let price = 100;
    let klass = '';
    export { klass as class };
