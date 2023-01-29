@@ -68,20 +68,20 @@
                </H2>
             </Reveal>
          </div>
-         <PostGrid>
-            {#each pagesData as item}
-               {#if item.category.name === section.name}
-                  <Reveal>
-                     <PostCard
-                        title={$LL.nav.explore[section.name].items[item.name].title()}
-                        imgSrc={`${item.hero_img.folder}/${item.hero_img.name}.${item.hero_img.type}`}
-                        slug={$LL.nav.explore[section.name].items[item.name].slug()}
-                        excerpt={$LL.nav.explore[section.name].items[item.name].description()}
-                     />
-                  </Reveal>
-               {/if}
-            {/each}
-         </PostGrid>
+         <Reveal slow>
+            <PostGrid>
+               {#each pagesData as item}
+                  {#if item.category.name === section.name}
+                  <PostCard
+                     title={$LL.nav.explore[section.name].items[item.name].title()}
+                     imgSrc={`${item.hero_img.folder}/${item.hero_img.name}.${item.hero_img.type}`}
+                     slug={$LL.nav.explore[section.name].items[item.name].slug()}
+                     excerpt={$LL.nav.explore[section.name].items[item.name].description()}
+                  />
+                  {/if}
+               {/each}
+            </PostGrid>
+         </Reveal>
       </Section>
    {/each}
 </Main>
