@@ -69,7 +69,8 @@ const fr_nav: NamespaceNavTranslation = {
    explore: {
       training_leadership_teamcoaching: {
          title: "Nous proposons une Formation en Leadership Lencioni et en Coaching d'Équipe",
-         slug: '#',
+         title_short: "Formation en Leadership Lencioni & Coaching d'Équipe",
+         slug: 'formation-leadership-coaching-equipe',
          items: {
             dysfunctions_teamwork: {
                title: "Les 5 Dysfonctions du Travail d'Équipe",

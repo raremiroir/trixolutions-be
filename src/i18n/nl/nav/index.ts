@@ -69,6 +69,7 @@ const nl_nav: BaseTranslation = {
    explore: {
       training_leadership_teamcoaching: {
          title: "We geven Opleiding in Lencioni Leiderschap en Teamcoaching",
+         title_short: "Opleiding in Lencioni Leiderschap & Teamcoaching",
          slug: 'opleiding-leiderschap-teamcoaching',
          items: {
             dysfunctions_teamwork: {

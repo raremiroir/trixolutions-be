@@ -69,7 +69,8 @@ const en_nav: NamespaceNavTranslation = {
    explore: {
       training_leadership_teamcoaching: {
          title: "We provide Training in Lencioni Leadership and Team Coaching",
-         slug: '#',
+         title_short: "Training in Lencioni Leadership & Team Coaching",
+         slug: 'training-leadership-teamcoaching',
          items: {
             dysfunctions_teamwork: {
                title: "The 5 Dysfunctions of Teamwork",
