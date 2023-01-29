@@ -613,6 +613,10 @@ export type NamespaceNavTranslation = {
 			 */
 			title: string
 			/**
+			 * O​p​l​e​i​d​i​n​g​ ​i​n​ ​L​e​n​c​i​o​n​i​ ​L​e​i​d​e​r​s​c​h​a​p​ ​&​ ​T​e​a​m​c​o​a​c​h​i​n​g
+			 */
+			title_short: string
+			/**
 			 * o​p​l​e​i​d​i​n​g​-​l​e​i​d​e​r​s​c​h​a​p​-​t​e​a​m​c​o​a​c​h​i​n​g
 			 */
 			slug: string
@@ -3328,6 +3332,10 @@ export type TranslationFunctions = {
 				 * We geven Opleiding in Lencioni Leiderschap en Teamcoaching
 				 */
 				title: () => LocalizedString
+				/**
+				 * Opleiding in Lencioni Leiderschap & Teamcoaching
+				 */
+				title_short: () => LocalizedString
 				/**
 				 * opleiding-leiderschap-teamcoaching
 				 */
