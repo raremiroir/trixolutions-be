@@ -1,4 +1,4 @@
-import website from '$lib/config/website';
+import { website } from '$lib/config/website';
 import { error } from '@sveltejs/kit';
 
 export const prerender = true;

@@ -1,4 +1,4 @@
-import website from '$lib/config/website';
+import { website } from '$lib/config/website';
 
 export const prerender = true;
 
