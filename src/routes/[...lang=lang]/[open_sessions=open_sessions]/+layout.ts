@@ -18,4 +18,5 @@ export const load: LayoutLoad<{ locale: Locales }> = async ({ data: { locale } }
 	// pass locale to the "rendering context"
 	return { locale }
 }
- export const prerender = true;
+ export const prerender = false;
+ export const ssr = true;
