@@ -20,7 +20,7 @@
     <Breadcrumbs />
     <Section name="algemene-voorwaarden">
        <H1 slot="title">
-            {$LL.other.job_offers.title()}
+            {$LL.nav.others.terms_conditions.title()}
         </H1>
         <Accordeon bind:active>
             {#each Object.entries($LL.other.terms_conditions) as [key, item]}

@@ -10,7 +10,7 @@
     import LL from "$i18n/i18n-svelte";
     
     // Import Components
-    import { Main, SectionWrapper, Title, P, Breadcrumbs, Accordeon, AccordeonItem } from "$comp";
+    import { Main, Section, Breadcrumbs, Accordeon, AccordeonItem, H1, Text } from "$comp";
 
     let active:any = null;
  </script>
@@ -18,18 +18,18 @@
  
  <Main cta>
     <Breadcrumbs />
-    <SectionWrapper name={$LL.other.job_offers.title().toLowerCase()}>
-       <Title slot="title" type='h1'>
+    <Section name={$LL.other.job_offers.title().toLowerCase()}>
+       <H1 slot="title">
             {$LL.other.job_offers.title()}
-        </Title>
+        </H1>
         
         <Accordeon bind:active>
             <AccordeonItem id={1} title={$LL.other.job_offers.no_offers.title()} titleSmaller>
-                <P large>
+                <Text>
                     {@html $LL.other.job_offers.no_offers.text()}
-                </P>
+                </Text>
             </AccordeonItem>
         </Accordeon>
        
-    </SectionWrapper>
+    </Section>
  </Main>

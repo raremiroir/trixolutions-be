@@ -7,6 +7,7 @@
       {locale: 'nl', slug: 'privacybeleid'}
    ];
 
+   // Import i18n
     import LL from "$i18n/i18n-svelte";
     
     // Import Components
@@ -20,7 +21,7 @@
     <Breadcrumbs />
     <Section name='privacy-policy'>
        <H1 slot="title">
-            Privacybeleid
+            {$LL.nav.others.privacy_policy.title()}
         </H1>
         
         Hier komt een privacybeleid.
