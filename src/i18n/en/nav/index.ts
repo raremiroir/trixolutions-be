@@ -51,7 +51,7 @@ const en_nav: NamespaceNavTranslation = {
    others: {
       job_offers: {
          title: "Job Offers",
-         slug: 'job-offers'
+         slug: 'vacancies'
       },
       terms_conditions: {
          title: "Terms & Conditions",
