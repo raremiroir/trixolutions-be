@@ -6,21 +6,16 @@
         {locale: 'fr', slug: 'coequipier-ideal'},
         {locale: 'nl', slug: 'ideale-teamplayer'}
     ];
-    import { Title, P, Accordeon, AccordeonItem, Tab, TabList, TabPanel, Tabs } from '$comp/content';
+    // Import components
+    import { Title, Text, Accordeon, AccordeonItem, Tab, TabList, TabPanel, Tabs } from '$comp';
 	import IntroSection from '../../IntroSection.svelte';
 	import IndepthSection from '../../IndepthSection.svelte';
-
-    // Import utils and stores
-    import { currentHero, currentTitle } from '$src/lib/stores';
     
-    export let data;
     //  Import data
+    export let data;
     const pageData = data.data[0];
 
     let heroImgSrc = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
-    $currentHero = heroImgSrc;
-    $currentTitle = pageData.title.nl;
-
     // Set 'active' variable for accordeon component
 	let active:any = null;
 
@@ -34,7 +29,7 @@
         <Title type="subheader">by Patrick Lencioni</Title>
     </div>
 
-    <P large>
+    <Text>
         Met voldoende tijd, geduld en aandacht van een goede manager kan 
         bijna iedereen leren een teamspeler te worden. Daar ben ik van 
         overtuigd.<br/>
@@ -47,9 +42,9 @@
         Er zijn dus twee logische vragen. Hoe zien deze mensen eruit? 
         En hoe vinden we ze? Het blijkt dat ze drie kenmerken gemeen hebben: 
         ze zijn bescheiden, hongerig en slim.
-    </P>
+    </Text>
 
-    <P large slot="append" class="w-full md:w-4/5 lg:w-2/3 mx-auto">
+    <Text slot="append" class="w-full md:w-4/5 lg:w-2/3 mx-auto">
         Alvorens ik elk van deze kenmerken uitleg, wil ik eerst uitleggen 
         hoe deze theorie tot stand is gekomen. <br/>
         Zoals zoveel van mijn ideeën, kwam dit naar boven als resultaat van 
@@ -69,7 +64,7 @@
         werden tot onze waarden omdat dat de bouwstenen waren van echte 
         teamspelers. Toen we dat eenmaal beseften, was het idee voor dit 
         boek geboren.
-    </P>
+    </Text>
 </IntroSection>
 
 <IndepthSection title={pageData.title.nl}>
@@ -130,7 +125,7 @@
                     om te gaan.
                 </TabPanel>
             </Tabs>
-            <P large>
+            <Text>
                 Hoe eenvoudig deze drie concepten ook zijn, de sleutel tot dit alles is 
                 <strong>de unieke combinatie van de drie kenmerken</strong> die iemand 
                 tot een ideale teamspeler maken.<br/>
@@ -158,10 +153,10 @@
                 <br/>
                 Dit eenvoudige model introduceren bij teams en hen toelaten zichzelf te 
                 beoordelen, is al een goede stap naar verbetering.
-            </P>
+            </Text>
         </AccordeonItem>
         <AccordeonItem id={2} title="Mooi Resultaat" titleSmaller>
-            <P large>
+            <Text>
                 De impact van teamleden die waarde hechten aan en blijk geven van nederigheid, 
                 honger en intelligentie, kan niet genoeg worden benadrukt. De meeste teams die 
                 het moeilijk hebben, hebben niet zozeer een gebrek aan kennis of competenties, 
@@ -171,7 +166,7 @@
                 krijgen in minder tijd en met veel minder afleiding. Ik hoop dat deze aanpak 
                 leiders zal helpen bij het aanwerven, herkennen en ontwikkelen van ideale 
                 teamspelers in hun organisaties.
-            </P>
+            </Text>
         </AccordeonItem>
     </Accordeon>
 </IndepthSection>

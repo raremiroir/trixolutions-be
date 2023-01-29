@@ -7,27 +7,24 @@
       {locale: 'nl', slug: 'beslissende-voorsprong'}
    ];
 
-    import { Title, P, Accordeon, AccordeonItem} from '$comp';
-
-    import { locale } from '$i18n/i18n-svelte';
-    
-    // Import utils and stores
-    import { breakpoints, currentHero, currentTitle } from '$src/lib/stores';
-    
-    //  Import data
-	import List from '$src/lib/components/Core/List/List.svelte';
-	import ListItem from '$src/lib/components/Core/List/ListItem.svelte';
+    // Import components
+    import { Title, Text, Accordeon, AccordeonItem, List, ListItem} from '$comp';
 	import IntroSection from '../../IntroSection.svelte';
+
+    // Import i18n
+    import LL, { locale } from '$i18n/i18n-svelte';
+    
+    // Import constants
+    import { breakpoints } from "$lib/constants/breakpoints";
+
+    //  Import data
     export let data;
     const pageData = data.data[0];
 
-    let heroImgSrc = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
-    $currentHero = heroImgSrc;
-
-    $:  if ($locale == 'fr')        { $currentTitle = pageData.title.fr } 
-        else if ($locale == 'en')   { $currentTitle = pageData.title.en } 
-        else                        { $currentTitle = pageData.title.nl }
-
+    // Set page props
+    $: title = $LL.nav.explore.training_leadership_teamcoaching.items.decisive_lead.title()
+    const heroImgSrc = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
+    
     // Set 'active' variable for accordeon component
 	let active:any = null;
 
@@ -36,22 +33,22 @@
     $: innerWidth
     // Image ratio depends on screen width
     let ratio = '7:5'
-    $: if (innerWidth < $breakpoints.xs) { ratio = "2:1"; }  
-        else if (innerWidth < $breakpoints.sm) { ratio = "7:3"; } 
-        else if (innerWidth < $breakpoints.md) { ratio = "2:1"; } 
-        else if (innerWidth < $breakpoints.lg) { ratio = "5:2"; } 
-        else if (innerWidth < $breakpoints.xl) { ratio = "12:11"; } 
-        else if (innerWidth < $breakpoints.xxl) { ratio = "8:6"; }
+    $: if (innerWidth < breakpoints.xs) { ratio = "2:1"; }  
+        else if (innerWidth < breakpoints.sm) { ratio = "7:3"; } 
+        else if (innerWidth < breakpoints.md) { ratio = "2:1"; } 
+        else if (innerWidth < breakpoints.lg) { ratio = "5:2"; } 
+        else if (innerWidth < breakpoints.xl) { ratio = "12:11"; } 
+        else if (innerWidth < breakpoints.xxl) { ratio = "8:6"; }
         else { ratio = "7:5"}
 </script>
 
 <svelte:window bind:innerWidth />
 
 
-<IntroSection title={$currentTitle} imgSrc={heroImgSrc}>
+<IntroSection title={title} imgSrc={heroImgSrc}>
     <div class="" slot="title">
         <Title type="h2" small>
-            Het Model - {$currentTitle}
+            Het Model - {title}
         </Title>
         <Title type="subheader">by Patrick Lencioni</Title>
     </div>
@@ -63,7 +60,7 @@
         bind:active>
         <AccordeonItem id={1} 
             title='1. Een Samenhangend Leiderschapsteam Opbouwen' titleSmallest>
-            <P large>
+            <Text>
                 De eerste stap is ervoor zorgen dat de leiders van de organisatie zich 
                 op een functionele, samenhangende manier gedragen.<br/>
                 Als de mensen die verantwoordelijk zijn voor het runnen van een 
@@ -74,22 +71,22 @@
                 gezonde organisatie.<br/>
                 En ja, er zijn concrete stappen die een leiderschapsteam kan nemen om dit 
                 te voorkomen.
-            </P><br/>
+            </Text><br/>
             <List>
-                <P large>
+                <Text>
                     Samenhangende teams elimineren politiek en vergroten hun 
                     effectiviteit door het volgende te doen:
-                </P>
-                <ListItem large>Open zijn en vertrouwen opbouwen</ListItem>
-                <ListItem large>Constructieve ideologische conflicten aangaan</ListItem>
-                <ListItem large>Zich inzetten voor duidelijke beslissingen</ListItem>
-                <ListItem large>Elkaar verantwoordelijk houden voor gedrag en prestaties</ListItem>
-                <ListItem large>Focussen op collectieve resultaten</ListItem>
+                </Text>
+                <ListItem>Open zijn en vertrouwen opbouwen</ListItem>
+                <ListItem>Constructieve ideologische conflicten aangaan</ListItem>
+                <ListItem>Zich inzetten voor duidelijke beslissingen</ListItem>
+                <ListItem>Elkaar verantwoordelijk houden voor gedrag en prestaties</ListItem>
+                <ListItem>Focussen op collectieve resultaten</ListItem>
             </List>
         </AccordeonItem>
         <AccordeonItem id={2} 
             title='2. Helderheid Scheppen' titleSmallest>
-            <P large>
+            <Text>
                 De tweede stap om een gezonde organisatie op te bouwen, 
                 is ervoor zorgen dat de leden van dat leiderschapsteam 
                 intellectueel op één lijn liggen rond zes eenvoudige 
@@ -100,23 +97,23 @@
                 Leiders moeten eventuele hiaten tussen hen wegwerken, zodat 
                 mensen een, twee of drie niveaus lager volledige duidelijkheid 
                 hebben over wat ze moeten doen om de organisatie succesvol te maken.
-            </P><br/>
+            </Text><br/>
             <List>
-                <P large>
+                <Text>
                     Gezonde organisaties verkleinen de kans op verwarring door 
                     het volgende te verduidelijken:
-                </P>
-                <ListItem large>Waarom bestaan we?</ListItem>
-                <ListItem large>Hoe gedragen we ons?</ListItem>
-                <ListItem large>Wat doen we?</ListItem>
-                <ListItem large>Hoe zullen we slagen?</ListItem>
-                <ListItem large>Wat is op dit moment het belangrijkste?</ListItem>
-                <ListItem large>Wie moet wat doen?</ListItem>
+                </Text>
+                <ListItem>Waarom bestaan we?</ListItem>
+                <ListItem>Hoe gedragen we ons?</ListItem>
+                <ListItem>Wat doen we?</ListItem>
+                <ListItem>Hoe zullen we slagen?</ListItem>
+                <ListItem>Wat is op dit moment het belangrijkste?</ListItem>
+                <ListItem>Wie moet wat doen?</ListItem>
             </List>
         </AccordeonItem>
         <AccordeonItem id={3} 
             title='3. De Helderheid Versterken' titleSmallest>
-            <P large>
+            <Text>
                 Tot slot moeten leiders, naast overcommunicatie, ervoor zorgen 
                 dat de antwoorden op de zes cruciale vragen herhaaldelijk worden 
                 benadrukt met behulp van eenvoudige menselijke systemen.<br/>
@@ -147,22 +144,22 @@
                 werknemers gelukkiger, is het resultaat sterker en zijn leidinggevenden 
                 gerust omdat ze weten dat ze hun belangrijkste verantwoordelijkheid 
                 hebben vervuld: het creëren van een succesvolle omgeving.
-            </P><br/>
+            </Text><br/>
             <List>
-                <P large>
+                <Text>
                     Organisaties verstevigen hun gezondheid door te zorgen voor 
                     consistentie in …
-                </P>
-                <ListItem large>Het aanwerven</ListItem>
-                <ListItem large>Beheren van de prestaties</ListItem>
-                <ListItem large>Beloningen en erkenning</ListItem>
-                <ListItem large>Ontslag van de werknemer</ListItem>
-                <ListItem large>Vergaderingen</ListItem>
+                </Text>
+                <ListItem>Het aanwerven</ListItem>
+                <ListItem>Beheren van de prestaties</ListItem>
+                <ListItem>Beloningen en erkenning</ListItem>
+                <ListItem>Ontslag van de werknemer</ListItem>
+                <ListItem>Vergaderingen</ListItem>
             </List>
         </AccordeonItem>
         <AccordeonItem id={4} 
             title='4. Helderheid over Communiceren' titleSmallest>
-            <P large>
+            <Text>
                 Pas nadat deze eerste twee stappen aan de gang zijn 
                 (gedrags- en intellectuele afstemming), kan een organisatie de 
                 derde stap ondernemen: de antwoorden op de zes vragen overcommuniceren. <br/>
@@ -171,16 +168,16 @@
                 altijd de fout om te veel te zeggen in plaats van te weinig.<br/>
                 Alleen al deze kwaliteit onderscheidt leiders van gezonde organisaties 
                 van anderen.
-            </P>
+            </Text>
             <List>
-                <P large>
+                <Text>
                     Gezonde organisaties brengen hun werknemers op één lijn rond 
                     organisatorische duidelijkheid door kernboodschappen te communiceren via…
-                </P>
-                <ListItem large>Herhaling</ListItem>
-                <ListItem large>Eenvoud</ListItem>
-                <ListItem large>Meerdere mediums</ListItem>
-                <ListItem large>Trapsgewijze berichten</ListItem>
+                </Text>
+                <ListItem>Herhaling</ListItem>
+                <ListItem>Eenvoud</ListItem>
+                <ListItem>Meerdere mediums</ListItem>
+                <ListItem>Trapsgewijze berichten</ListItem>
             </List>
         </AccordeonItem>
     </Accordeon>

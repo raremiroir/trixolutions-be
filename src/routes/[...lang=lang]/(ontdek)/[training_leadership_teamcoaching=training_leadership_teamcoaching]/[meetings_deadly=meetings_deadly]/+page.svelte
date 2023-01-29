@@ -7,22 +7,17 @@
         {locale: 'nl', slug: 'vergaderingen-zijn-dodelijk'}
     ];
 
-    import { Title, P, Accordeon, AccordeonItem } from '$comp';
-
+    // Import components
+    import { Title, Text, Accordeon, AccordeonItem } from '$comp';
     import IntroSection from '../../IntroSection.svelte';
 	import IndepthSection from '../../IndepthSection.svelte';
 	import MeetingContentCard from './MeetingContentCard.svelte';
-
-    // Import utils and stores
-    import { currentHero, currentTitle } from '$src/lib/stores';
     
     //  Import data
     export let data;
     const pageData = data.data[0];
 
     let heroImgSrc = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
-    $currentHero = heroImgSrc;
-    $currentTitle = pageData.title.nl;
 
     // Set 'active' variable for accordeon component
 	let active:any = null;
@@ -34,7 +29,7 @@
         {pageData.title.nl}
     </Title>
 
-    <P large>
+    <Text>
         Vergaderingen horen bij ons werk, maar ze lijken vaak niet 
         veel op te leveren.<br/>
         Sterker nog, ze gelden als regelrechte energievreters. Dat 
@@ -46,7 +41,7 @@
         Specifiek werken we op hoe je moeilijke meetings in effectieve 
         en productieve meetings kan omturnen aan de hand van de 4 types 
         van meetings.
-    </P>
+    </Text>
 </IntroSection>
 
 <IndepthSection title={pageData.title.nl}>
@@ -55,10 +50,10 @@
         <span class="italic font-semibold">Maar niet met deze 4 Types van Meetings</span>
     </span>
     <Accordeon bind:active>
-        <P large>
+        <Text>
             Met deze 4 types van meetings maak je je vergaderingen niet alleen 
             productiever, maar ook efficiënter en aangenamer:
-        </P>
+        </Text>
 
         <AccordeonItem id={1} title="1. Dagelijkse Check-In" titleSmaller>
             <MeetingContentCard>
