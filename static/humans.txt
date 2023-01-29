@@ -1,0 +1,7 @@
+/* TEAM */
+Thanks to Tom van Dorst (Trixolutions) for the role of CEO.
+Thanks to Tom van Dorst (Trixolutions) for the role of Manager.
+Thanks to Miro Storm (Mist Media) for the role of Designer.
+Thanks to Miro Storm (Mist Media) for the role of Back-End Developer.
+Thanks to Miro Storm (Mist Media) for the role of Front-End Developer.
+Thanks to Miro Storm (Mist Media) for the role of Maintainer.
