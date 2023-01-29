@@ -613,17 +613,17 @@ export type NamespaceNavTranslation = {
 			 */
 			title: string
 			/**
-			 * #
+			 * o​p​l​e​i​d​i​n​g​-​l​e​i​d​e​r​s​c​h​a​p​-​t​e​a​m​c​o​a​c​h​i​n​g
 			 */
 			slug: string
 			items: {
 				dysfunctions_teamwork: {
 					/**
-					 * D​e​ ​5​ ​D​y​s​f​u​n​c​t​i​e​s​ ​v​a​n​ ​T​e​a​m​w​e​r​k
+					 * D​e​ ​5​ ​F​r​u​s​t​r​a​t​i​e​s​ ​v​a​n​ ​T​e​a​m​w​e​r​k
 					 */
 					title: string
 					/**
-					 * 5​-​d​y​s​f​u​n​c​t​i​e​s​-​t​e​a​m​w​e​r​k
+					 * 5​-​f​r​u​s​t​r​a​t​i​e​s​-​t​e​a​m​w​e​r​k
 					 */
 					slug: string
 					/**
@@ -2458,17 +2458,17 @@ export type TranslationFunctions = {
 				 */
 				title: () => LocalizedString
 				/**
-				 * #
+				 * opleiding-leiderschap-teamcoaching
 				 */
 				slug: () => LocalizedString
 				items: {
 					dysfunctions_teamwork: {
 						/**
-						 * De 5 Dysfuncties van Teamwerk
+						 * De 5 Frustraties van Teamwerk
 						 */
 						title: () => LocalizedString
 						/**
-						 * 5-dysfuncties-teamwerk
+						 * 5-frustraties-teamwerk
 						 */
 						slug: () => LocalizedString
 						/**
