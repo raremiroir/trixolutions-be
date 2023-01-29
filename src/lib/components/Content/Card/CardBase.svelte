@@ -53,6 +53,8 @@
    // Define card hover effects (full - minimal - onlyHover - onlyActive - none)
    export let hoverFx = 'full';
 
+   // Get alternative bg if background is already white
+   export let altBg = false;
    // Add glass effect on bg
    export let glass = false;
    
@@ -116,7 +118,7 @@
          this={articleComp}
          class="
             {transitionClass}
-            { href !== '' ? 'cursor-pointer' : 'cursor-default' }
+            { href !== '' ? 'cursor-pointer' : '' }
             { hoverFx === 'onlyHover'  || hoverFx === 'full' || hoverFx === 'minimal' ? `hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10` : '' }
             { hoverFx === 'onlyActive' || hoverFx === 'full' ? `active:translate-y-1 active:shadow-xl active:shadow-black/20` : '' }
             flex 
@@ -132,8 +134,8 @@
             items-start 
             justify-start
             rounded-2xl overflow-hidden shadow-lg
-            { glass ? 'bg-white/70 backdrop-blur-xl' : 'bg-white' } 
-            { hoverFx === 'minimal' ? 'hover:bg-gray-100' : ''}
+            { glass ? 'bg-white/70 backdrop-blur-xl' : altBg ? 'bg-gray-100/50' : 'bg-white' } 
+            { hoverFx === 'minimal' ? altBg ? 'hover:bg-gray-200/70' : 'hover:bg-gray-100' : ''}
             {klass}
             ">
 
