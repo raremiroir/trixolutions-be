@@ -27,14 +27,14 @@
 
 	export let article = false;
 	export let breadcrumbs:any = [];
-	export let entityMeta = undefined;
-	export let lastUpdated;
-	export let datePublished;
+	export let entityMeta:any = undefined;
+	export let lastUpdated:string;
+	export let datePublished:string;
 	export let metadescription:string;
-	export let slug;
+	export let slug:string;
 	// export let timeToRead = 0;
 
-	export let title;
+	export let title:string;
 	const defaultAlt = 'Trixolutions - Training, Coaching, Consultancy';
 	
 	// imported props with fallback defaults
@@ -46,10 +46,10 @@
 	export let ogImage = { url: defaultOgImage, alt: defaultAlt };
 	export let ogSquareImage = { url: defaultOgSquareImage, alt: defaultAlt };
 
-	let pageTitle = `${siteTitle} ${VERTICAL_LINE_ENTITY} ${title}`;
-	let url = `${siteUrl}/${slug}`;
+	$: pageTitle = `${siteTitle} ${VERTICAL_LINE_ENTITY} ${title}`;
+	$: url = `${siteUrl}/${slug}`;
 
-	let openGraphProps = {
+	$: openGraphProps = {
 		article,
 		datePublished,
 		lastUpdated,
@@ -63,7 +63,7 @@
 		...(article ? { datePublished, lastUpdated, facebookPage, facebookAuthorPage } : {}),
 	};
 	
-	let schemaOrgProps = {
+	$: schemaOrgProps = {
 		article,
 		author,
 		breadcrumbs,
