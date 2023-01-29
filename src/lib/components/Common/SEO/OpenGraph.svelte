@@ -1,16 +1,29 @@
-<script>
+<script lang="ts">
 	export let article = false;
-	export let datePublished;
-	export let lastUpdated;
+	export let datePublished:string;
+	export let lastUpdated:string;
 	export let facebookAuthorPage = '';
 	export let facebookPage = '';
-	export let image;
-	export let squareImage;
-	export let metadescription;
-	export let ogLanguage;
-	export let pageTitle;
-	export let siteTitle;
-	export let url;
+	export let image = {url: '', alt: ''};
+	export let squareImage = {url: '', alt: ''};
+	export let metadescription:string;
+	export let ogLanguage:string;
+	export let pageTitle:string;
+	export let siteTitle:string;
+	export let url:string;
+
+	$: article;
+	$: datePublished;
+	$: lastUpdated;
+	$: facebookAuthorPage;
+	$: facebookPage;
+	$: image;
+	$: squareImage;
+	$: metadescription;
+	$: ogLanguage;
+	$: pageTitle;
+	$: siteTitle;
+	$: url;
 </script>
 
 <svelte:head>
