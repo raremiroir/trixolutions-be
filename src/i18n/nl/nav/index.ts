@@ -23,7 +23,7 @@ const nl_nav: BaseTranslation = {
    },
    open_sessions: {
       title: "Open Sessies",
-      slug: 'open-sessies',,
+      slug: 'open-sessies',
       description: 'Open Sessies, Workshops en Opleidingen over de Lencioni Pyramide bij Trixolutions',
       items: {
          info_sessions: {
@@ -69,7 +69,7 @@ const nl_nav: BaseTranslation = {
    explore: {
       training_leadership_teamcoaching: {
          title: "We geven Opleiding in Lencioni Leiderschap en Teamcoaching",
-         slug: '#',
+         slug: 'opleiding-leiderschap-teamcoaching',
          items: {
             dysfunctions_teamwork: {
                title: "De 5 Frustraties van Teamwerk",
