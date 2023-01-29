@@ -17,7 +17,7 @@
  
  
  <Main cta>
-    <Breadcrumbs />
+    <Breadcrumbs currentIcon="material-symbols:fact-check-outline" />
     <Section name="algemene-voorwaarden">
        <H1 slot="title">
             {$LL.nav.others.terms_conditions.title()}

@@ -18,7 +18,7 @@
  
  
  <Main cta>
-    <Breadcrumbs />
+    <Breadcrumbs currentIcon="material-symbols:lock-outline" />
     <Section name='privacy-policy'>
        <H1 slot="title">
             {$LL.nav.others.privacy_policy.title()}

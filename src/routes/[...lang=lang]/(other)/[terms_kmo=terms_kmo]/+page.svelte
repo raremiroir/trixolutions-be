@@ -20,8 +20,8 @@
 </script>
 
 <Main cta>
-    <Breadcrumbs />
-    <Section name="algemene-voorwaarden">
+    <Breadcrumbs currentIcon="mdi:paper-check-outline" />
+    <Section name="algemene-voorwaarden-kmo-portfolio">
        <H1 slot="title" smallest>
             {$LL.nav.others.terms_kmo.title()}
         </H1>

@@ -17,7 +17,7 @@
  
  
  <Main cta>
-    <Breadcrumbs />
+    <Breadcrumbs currentIcon="icon-park-outline:necktie" />
     <Section name={$LL.other.job_offers.title().toLowerCase()}>
        <H1 slot="title">
             {$LL.other.job_offers.title()}
