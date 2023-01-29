@@ -26,9 +26,7 @@
             {#each Object.entries($LL.other.terms_conditions) as [key, item]}
                 <AccordeonItem id={Number(key)+1} title={item.title()} titleSmaller>
                     <Text>
-                        {#each Object.entries(item.content) as [contentKey, content]}
-                            {@html content()}
-                        {/each}
+                        {@html item.content()}
                     </Text>
                 </AccordeonItem>
             {/each}
