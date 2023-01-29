@@ -59,7 +59,7 @@
 //  ██████  ██████  ██      ██ ██      ██  ██████  ██   ████ 
    // PWA & SEO
    export { default as SEO }           from './Common/SEO/index.svelte'
-   export { default as PWA }           from './Common/PWA.svelte'
+   export { default as PWA }           from './Common/PWA/PWA.svelte'
 
    // Items for every page
    export { default as Breadcrumbs }   from './Common/Breadcrumbs.svelte';
