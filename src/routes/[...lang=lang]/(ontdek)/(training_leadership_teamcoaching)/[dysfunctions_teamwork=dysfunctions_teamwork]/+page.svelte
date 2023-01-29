@@ -36,23 +36,23 @@
 
     // Get localized 'frustration cards' from i18n library
     let frustrationCards:any = []
-    $: for (let i = 0; i < Array.from($LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.cards).length; i++) {
+    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.cards).length; i++) {
         frustrationCards[i] = {
-            title: $LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.cards[i].title(),
-            content: $LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.cards[i].content(),
+            title: $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.cards[i].title(),
+            content: $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.cards[i].content(),
         }
     } 
     // Get localized 'first accordeon list items' from i18n library
     let firstAccListItems:any = [];
-    $: for (let i = 0; i < Array.from($LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.first.list.items).length; i++) {
-        firstAccListItems[i] = $LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.first.list.items[i]()
+    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.first.list.items).length; i++) {
+        firstAccListItems[i] = $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.first.list.items[i]()
     } 
     // Get localized 'second accordeon cards' from i18n library
     let secondAccCards:any = [];
-    $: for (let i = 0; i < Array.from($LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.second.cards).length; i++) {
+    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.second.cards).length; i++) {
         secondAccCards[i] = {
-            title: $LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.second.cards[i].title(),
-            front: $LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.second.cards[i].front(),
+            title: $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.second.cards[i].title(),
+            front: $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.second.cards[i].front(),
         }
     } 
 
@@ -61,19 +61,19 @@
 <IntroSection title={$currentTitle} imgSrc={$currentHero} imgMode='contain'>
     <div class="" slot="title">
         <H2 small>
-            {$LL.pages.main.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
+            {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
         </H2>
-        <Subheader>{$LL.pages.main.training_leadership_teamcoaching.base.by_lencioni()}</Subheader>
+        <Subheader>{$LL.pages_explore.training_leadership_teamcoaching.base.by_lencioni()}</Subheader>
     </div>
 
     <Text>
-        {@html $LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.intro.first()}
+        {@html $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.intro.first()}
     </Text><br/>
     <Text>
-        {@html $LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.intro.second()}
+        {@html $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.intro.second()}
     </Text>
     <Blockquote>
-        {@html $LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.intro.quote()}
+        {@html $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.intro.quote()}
     </Blockquote>
 
 
@@ -98,26 +98,26 @@
 
 
 <IndepthSection title={pageData.title.nl}>
-    <span slot="title">{$LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.title()}</span>
+    <span slot="title">{$LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.title()}</span>
     <Accordeon bind:active>
 
-        <AccordeonItem id={1} title="1. {$LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.first.title()}">
+        <AccordeonItem id={1} title="1. {$LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.first.title()}">
             <List>
                 <Text>
-                    {@html $LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.first.list.intro()}
+                    {@html $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.first.list.intro()}
                 </Text>
                 {#each firstAccListItems as item}
                     <ListItem>{item}</ListItem>
                 {/each}
             </List>
             <Text small>
-                {$LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.first.text()}
+                {$LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.first.text()}
             </Text>
         </AccordeonItem>
 
-        <AccordeonItem id={2} title="2. {$LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.second.title()}">
+        <AccordeonItem id={2} title="2. {$LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.second.title()}">
             <Text>
-                {@html $LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.second.intro()}
+                {@html $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.second.intro()}
             </Text>
             <div class="
                     grid 
@@ -144,9 +144,9 @@
             </div>
         </AccordeonItem>
 
-        <AccordeonItem id={3} title="3. {$LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.third.title()}" titleSmaller>
+        <AccordeonItem id={3} title="3. {$LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.third.title()}" titleSmaller>
             <Text>
-                {@html $LL.pages.main.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.third.text()}
+                {@html $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.third.text()}
             </Text>
         </AccordeonItem>
     </Accordeon>

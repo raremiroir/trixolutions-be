@@ -38,6 +38,7 @@
          await loadNamespaceAsync(locale, 'nav')
          await loadNamespaceAsync(locale, 'components')
          await loadNamespaceAsync(locale, 'pages')
+         await loadNamespaceAsync(locale, 'pages_explore')
          await loadNamespaceAsync(locale, 'other')
          await loadNamespaceAsync(locale, 'sessions')
          setLocale(locale)

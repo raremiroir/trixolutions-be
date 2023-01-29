@@ -34,18 +34,18 @@
 
     // Get localized 'accordion items' from i18n library
     let accItems:any = []
-    $: for (let i = 0; i < Array.from($LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items).length; i++) {
+    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items).length; i++) {
         let itemKeys:any = [];
-        for (let x = 0; x < Array.from($LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].keys).length; x++) {
-            itemKeys[x] = $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].keys[x]()
+        for (let x = 0; x < Array.from($LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].keys).length; x++) {
+            itemKeys[x] = $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].keys[x]()
         }
 
         accItems[i] = {
-            title: $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].title(),
-            text: $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].text(),
-            timespan: $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].timespan(),
-            target: $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].target(),
-            target_desc: $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].target_desc(),
+            title: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].title(),
+            text: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].text(),
+            timespan: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].timespan(),
+            target: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].target(),
+            target_desc: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].target_desc(),
             keys: itemKeys,
         }
     } 
@@ -58,18 +58,18 @@
     </H2>
 
     <Text>
-        {@html $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.intro()}
+        {@html $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.intro()}
     </Text>
 </IntroSection>
 
 <IndepthSection title={pageData.title.nl}>
     <span slot="title">
-        {@html $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.title()} - 
-        <span class="italic font-semibold">{@html $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.subtitle()}</span>
+        {@html $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.title()} - 
+        <span class="italic font-semibold">{@html $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.subtitle()}</span>
     </span>
     <Accordeon bind:active>
         <Text>
-            {@html $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_title()}
+            {@html $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_title()}
         </Text>
 
         {#each accItems as item, key}

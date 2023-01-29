@@ -26,7 +26,7 @@
             {$LL.nav.others.terms_kmo.title()}
         </H1>
         <Accordeon bind:active>
-            {#each Object.entries($LL.other.terms_conditions) as [key, item]}
+            {#each Object.entries($LL.pages.others.terms_kmo.items) as [key, item]}
                 <AccordeonItem id={Number(key)+1} title={item.title()} titleSmaller>
                     <Text>
                         {#each Object.entries(item.content) as [contentKey, content]}

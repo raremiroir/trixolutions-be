@@ -14,6 +14,7 @@ export const load: LayoutLoad<{ locale: Locales }> = async ({ data: { locale } }
 	await loadLocaleAsync(locale, 'components')
 	await loadLocaleAsync(locale, 'other')
 	await loadLocaleAsync(locale, 'pages')
+	await loadLocaleAsync(locale, 'pages_explore')
 	await loadLocaleAsync(locale, 'sessions')
 
 

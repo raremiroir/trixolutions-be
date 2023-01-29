@@ -31,12 +31,12 @@
 	let active:any = null;
 
     let firstAccTabItems:any = [];
-    $: for (let i = 0; i < Array.from($LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.items).length; i++) {
-        firstAccTabItems[i] = $LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.items[i]()
+    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.items).length; i++) {
+        firstAccTabItems[i] = $LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.items[i]()
     } 
     let firstAccTabPanels:any = [];
-    $: for (let i = 0; i < Array.from($LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.panels).length; i++) {
-        firstAccTabPanels[i] = $LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.panels[i]()
+    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.panels).length; i++) {
+        firstAccTabPanels[i] = $LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.panels[i]()
     } 
 
 </script>
@@ -44,26 +44,26 @@
 <IntroSection title={$currentTitle} imgSrc={$currentHero} imgMode='cover'>
     <div class="" slot="title">
         <H2 small>
-            {$LL.pages.main.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
+            {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
         </H2>
-        <Subheader>{$LL.pages.main.training_leadership_teamcoaching.base.by_lencioni()}</Subheader>
+        <Subheader>{$LL.pages_explore.training_leadership_teamcoaching.base.by_lencioni()}</Subheader>
     </div>
 
     <Text>
-        {@html $LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.intro.first()}
+        {@html $LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.intro.first()}
     </Text>
 
     <Text slot="append" class="w-full md:w-4/5 lg:w-2/3 mx-auto">
-        {@html $LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.intro.second()}
+        {@html $LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.intro.second()}
     </Text>
 </IntroSection>
 
 <IndepthSection title={pageData.title.nl}>
-    <span slot="title">{@html $LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.in_depth.title()}</span>
+    <span slot="title">{@html $LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.title()}</span>
     <Accordeon bind:active>
-        <AccordeonItem id={1} title={$LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.title()} titleSmaller>
+        <AccordeonItem id={1} title={$LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.title()} titleSmaller>
             <H4 smaller>
-                {$LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.subtitle()}
+                {$LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.subtitle()}
             </H4>
             <Tabs>
                 <TabList>
@@ -80,12 +80,12 @@
                 {/each}
             </Tabs>
             <Text>
-                {@html $LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.text()}
+                {@html $LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.text()}
             </Text>
         </AccordeonItem>
-        <AccordeonItem id={2} title={$LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.second.title()} titleSmaller>
+        <AccordeonItem id={2} title={$LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.second.title()} titleSmaller>
             <Text>
-                {@html $LL.pages.main.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.second.text()}
+                {@html $LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.second.text()}
             </Text>
         </AccordeonItem>
     </Accordeon>

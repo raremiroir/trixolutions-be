@@ -33,18 +33,18 @@
 
     // Get localized 'accordion items' from i18n library
     let accordeonItems:any = []
-    $: for (let i = 0; i < Array.from($LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon).length; i++) {
+    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon).length; i++) {
         
         let listItems:any = [];
-        for (let x = 0; x < Array.from($LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.items).length; x++) {
-            listItems[x] = $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.items[x]()
+        for (let x = 0; x < Array.from($LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.items).length; x++) {
+            listItems[x] = $LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.items[x]()
         }
 
         accordeonItems[i] = {
-            title: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].title(),
-            intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].intro(),
+            title: $LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].title(),
+            intro: $LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].intro(),
             list: {
-                intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.intro(),
+                intro: $LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.intro(),
                 items: listItems
             },
         }
@@ -54,9 +54,9 @@
 <IntroSection title={$currentTitle} imgSrc={$currentHero}>
     <div class="" slot="title">
         <Title type="h2" small>
-            {$LL.pages.main.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
+            {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
         </Title>
-        <Title type="subheader">{$LL.pages.main.training_leadership_teamcoaching.base.by_lencioni()}</Title>
+        <Title type="subheader">{$LL.pages_explore.training_leadership_teamcoaching.base.by_lencioni()}</Title>
     </div>
 
     <Accordeon class="w-full" 

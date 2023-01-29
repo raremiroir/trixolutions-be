@@ -28,20 +28,20 @@
 
     // Get localized 'intro list items' from i18n library
     let introListItems:any = []
-    $: for (let i = 0; i < Array.from($LL.pages.main.training_leadership_teamcoaching.working_genius.intro.list).length; i++) {
-        introListItems[i] =  $LL.pages.main.training_leadership_teamcoaching.working_genius.intro.list[i]()
+    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.working_genius.intro.list).length; i++) {
+        introListItems[i] =  $LL.pages_explore.training_leadership_teamcoaching.working_genius.intro.list[i]()
     } 
 
 </script>
 
 <IntroSection title={$currentTitle} imgSrc={$currentHero} imgMode='contain' imgClass="bg-primary">
     <H2 slot="title" small>
-        {$LL.pages.main.training_leadership_teamcoaching.working_genius.title_alt()}
+        {$LL.pages_explore.training_leadership_teamcoaching.working_genius.title_alt()}
     </H2>
 
     <List>
         <Text>
-            {@html $LL.pages.main.training_leadership_teamcoaching.working_genius.intro.intro()}
+            {@html $LL.pages_explore.training_leadership_teamcoaching.working_genius.intro.intro()}
         </Text><br/>
         {#each introListItems as item}
             <ListItem>
@@ -50,6 +50,6 @@
         {/each}
     </List><br/>
     <Text>
-        {@html $LL.pages.main.training_leadership_teamcoaching.working_genius.intro.text()}
+        {@html $LL.pages_explore.training_leadership_teamcoaching.working_genius.intro.text()}
     </Text>
 </IntroSection>
