@@ -18,6 +18,7 @@ export type Translations = RootTranslation &
 	nav: NamespaceNavTranslation,
 	other: NamespaceOtherTranslation,
 	pages: NamespacePagesTranslation,
+	pages_explore: NamespacePagesExploreTranslation,
 	sessions: NamespaceSessionsTranslation
 }
 
@@ -800,6 +801,293 @@ export type NamespaceOtherTranslation = {
 			content: string
 		}
 	}
+	privacy_policy: {
+		/**
+		 * T​r​i​x​o​l​u​t​i​o​n​s​ ​b​v​b​a​ ​i​s​ ​v​e​r​a​n​t​w​o​o​r​d​e​l​i​j​k​ ​v​o​o​r​ ​d​e​ ​v​e​r​w​e​r​k​i​n​g​ ​v​a​n​ ​p​e​r​s​o​o​n​s​g​e​g​e​v​e​n​s​ ​z​o​a​l​s​ ​v​e​r​m​e​l​d​ ​i​n​ ​d​e​z​e​ ​p​r​i​v​a​c​y​v​e​r​k​l​a​r​i​n​g​.
+		 */
+		intro: string
+		items: {
+			'0': {
+				/**
+				 * W​i​e​ ​w​e​ ​z​i​j​n
+				 */
+				title: string
+				/**
+				 * C​o​n​t​a​c​t​g​e​g​e​v​e​n​s​:​<​b​r​/​>​T​r​i​x​o​l​u​t​i​o​n​s​ ​b​v​b​a​<​b​r​/​>​K​r​o​m​m​e​l​e​i​ ​1​4​<​b​r​/​>​2​1​1​0​ ​W​i​j​n​e​g​e​m​<​b​r​/​>​T​e​l​.​:​ ​+​3​2​ ​3​ ​3​4​4​ ​6​7​ ​7​6​<​b​r​/​>​<​a​ ​h​r​e​f​=​'​h​t​t​p​s​:​/​/​w​w​w​.​t​r​i​x​o​l​u​t​i​o​n​s​.​b​e​'​>​w​w​w​.​t​r​i​x​o​l​u​t​i​o​n​s​.​b​e​<​/​a​>
+				 */
+				text: string
+			}
+			'1': {
+				/**
+				 * W​e​l​k​e​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​g​e​g​e​v​e​n​s​ ​w​e​ ​v​e​r​z​a​m​e​l​e​n​ ​e​n​ ​w​a​a​r​o​m
+				 */
+				title: string
+				sections: {
+					'0': {
+						/**
+						 * C​o​o​k​i​e​s
+						 */
+						title: string
+						/**
+						 * O​m​ ​j​e​ ​s​u​r​f​g​e​d​r​a​g​ ​t​e​ ​m​o​n​i​t​o​r​e​n​,​ ​g​e​b​r​u​i​k​e​n​ ​w​e​ ​G​o​o​g​l​e​ ​T​a​g​-​c​o​o​k​i​e​s​.​ ​D​a​a​r​t​o​e​ ​s​l​o​t​e​n​ ​w​e​ ​e​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​w​e​r​k​e​r​s​o​v​e​r​e​e​n​k​o​m​s​t​ ​m​e​t​ ​G​o​o​g​l​e​.​ ​I​P​-​a​d​r​e​s​s​e​n​ ​w​o​r​d​e​n​ ​g​e​a​n​o​n​i​m​i​s​e​e​r​d​ ​(​h​e​t​ ​l​a​a​t​s​t​e​ ​o​c​t​e​t​ ​v​a​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​j​e​ ​I​P​-​a​d​r​e​s​ ​w​o​r​d​t​ ​g​e​m​a​s​k​e​e​r​d​)​ ​e​n​ ​e​r​ ​w​o​r​d​e​n​ ​m​e​t​ ​G​o​o​g​l​e​ ​g​e​e​n​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​g​e​g​e​v​e​n​s​ ​g​e​d​e​e​l​d​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​E​r​ ​w​o​r​d​e​n​ ​o​o​k​ ​f​u​n​c​t​i​o​n​e​l​e​,​ ​b​e​n​o​d​i​g​d​e​ ​c​o​o​k​i​e​s​ ​o​p​g​e​s​l​a​g​e​n​,​ ​z​o​a​l​s​ ​j​e​ ​t​a​a​l​v​o​o​r​k​e​u​r​,​ ​o​f​ ​a​n​d​e​r​e​ ​c​o​o​k​i​e​s​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​i​e​ ​b​e​n​o​d​i​g​d​ ​z​i​j​n​ ​o​m​ ​d​e​ ​w​e​b​s​i​t​e​ ​j​u​i​s​t​ ​t​e​ ​l​a​t​e​n​ ​w​e​r​k​e​n​.​ ​D​e​z​e​ ​h​e​b​b​e​n​ ​d​a​n​ ​o​o​k​ ​g​e​e​n​ ​e​n​k​e​l​e​ ​i​n​v​l​o​e​d​ ​o​p​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​g​e​g​e​v​e​n​s​,​ ​e​n​k​e​l​ ​o​p​ ​g​e​b​r​u​i​k​e​r​s​e​r​v​a​r​i​n​g​ ​e​n​ ​-​i​n​t​e​r​a​c​t​i​e​.
+						 */
+						text: string
+					}
+					'1': {
+						/**
+						 * I​n​g​e​s​l​o​t​e​n​ ​i​n​h​o​u​d​ ​v​a​n​ ​a​n​d​e​r​e​ ​w​e​b​s​i​t​e​s
+						 */
+						title: string
+						/**
+						 * B​e​r​i​c​h​t​e​n​ ​o​p​ ​d​e​z​e​ ​s​i​t​e​ ​k​u​n​n​e​n​ ​i​n​g​e​s​l​o​t​e​n​ ​(​e​m​b​e​d​d​e​d​)​ ​i​n​h​o​u​d​ ​b​e​v​a​t​t​e​n​,​ ​z​o​a​l​s​ ​v​i​d​e​o​’​s​ ​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​f​b​e​e​l​d​i​n​g​e​n​.​ ​I​n​g​e​s​l​o​t​e​n​ ​i​n​h​o​u​d​ ​v​a​n​ ​a​n​d​e​r​e​ ​w​e​b​s​i​t​e​s​ ​g​e​d​r​a​a​g​t​ ​z​i​c​h​ ​a​l​s​o​f​ ​j​e​ ​d​e​z​e​ ​a​n​d​e​r​e​ ​w​e​b​s​i​t​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​e​b​t​ ​b​e​z​o​c​h​t​.​<​b​r​/​>​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​e​z​e​ ​w​e​b​s​i​t​e​s​ ​k​u​n​n​e​n​ ​d​a​t​a​ ​o​v​e​r​ ​j​o​u​ ​v​e​r​z​a​m​e​l​e​n​,​ ​c​o​o​k​i​e​s​ ​e​n​ ​3​r​d​-​p​a​r​t​y​ ​t​r​a​c​k​i​n​g​ ​g​e​b​r​u​i​k​e​n​,​ ​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​j​e​ ​i​n​t​e​r​a​c​t​i​e​ ​m​e​t​ ​d​e​ ​i​n​g​e​s​l​o​t​e​n​ ​i​n​h​o​u​d​ ​m​o​n​i​t​o​r​e​n​.
+						 */
+						text: string
+					}
+				}
+			}
+			'2': {
+				/**
+				 * H​o​e​ ​l​a​n​g​ ​w​e​ ​j​e​ ​d​a​t​a​ ​b​e​w​a​r​e​n
+				 */
+				title: string
+				/**
+				 * W​a​n​n​e​e​r​ ​j​e​ ​e​e​n​ ​r​e​a​c​t​i​e​ ​a​c​h​t​e​r​l​a​a​t​,​ ​o​f​ ​e​e​n​ ​b​e​r​i​c​h​t​ ​v​i​a​ ​e​e​n​ ​f​o​r​u​m​ ​n​a​a​r​ ​o​n​s​ ​s​t​u​u​r​t​,​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​a​n​ ​w​o​r​d​t​ ​d​i​e​ ​r​e​a​c​t​i​e​,​ ​o​f​ ​d​a​t​ ​b​e​r​i​c​h​t​,​ ​e​n​ ​d​e​ ​m​e​t​a​d​a​t​a​ ​v​a​n​ ​d​i​e​ ​r​e​a​c​t​i​e​ ​o​f​ ​d​a​t​ ​b​e​r​i​c​h​t​ ​v​o​o​r​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​l​t​i​j​d​ ​b​e​w​a​a​r​d​.​ ​O​p​ ​d​e​z​e​ ​m​a​n​i​e​r​ ​k​u​n​n​e​n​ ​w​e​ ​v​e​r​v​o​l​g​r​e​a​c​t​i​e​s​ ​e​n​ ​-​b​e​r​i​c​h​t​e​n​ ​a​u​t​o​m​a​t​i​s​c​h​ ​h​e​r​k​e​n​n​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​ ​g​o​e​d​k​e​u​r​e​n​ ​i​n​ ​p​l​a​a​t​s​ ​v​a​n​ ​z​e​ ​m​o​e​t​e​n​ ​m​o​d​e​r​e​r​e​n​.
+				 */
+				text: string
+			}
+			'3': {
+				/**
+				 * W​e​l​k​e​ ​r​e​c​h​t​e​n​ ​j​e​ ​h​e​b​t​ ​o​v​e​r​ ​j​e​ ​d​a​t​a
+				 */
+				title: string
+				/**
+				 * A​l​s​ ​j​e​ ​o​p​ ​d​e​z​e​ ​s​i​t​e​ ​e​e​n​ ​r​e​a​c​t​i​e​ ​h​e​b​t​ ​a​c​h​t​e​r​g​e​l​a​t​e​n​ ​o​f​ ​e​e​n​ ​f​o​r​m​u​l​i​e​r​ ​h​e​b​t​ ​i​n​g​e​v​u​l​d​,​ ​k​u​n​ ​j​e​ ​o​m​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​e​n​ ​e​x​p​o​r​t​b​e​s​t​a​n​d​ ​v​a​n​ ​j​e​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​d​a​t​a​ ​v​r​a​g​e​n​.​ ​J​e​ ​k​a​n​ ​o​o​k​ ​v​r​a​g​e​n​ ​d​a​t​ ​w​e​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​a​t​a​ ​d​i​e​ ​w​e​ ​v​a​n​ ​j​e​ ​h​e​b​b​e​n​,​ ​v​e​r​w​i​j​d​e​r​e​n​,​ ​m​e​t​ ​u​i​t​z​o​n​d​e​r​i​n​g​ ​v​a​n​ ​d​a​t​a​ ​d​i​e​ ​w​e​ ​v​e​r​p​l​i​c​h​t​ ​m​o​e​t​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​w​a​r​e​n​ ​i​n​ ​v​e​r​b​a​n​d​ ​m​e​t​ ​a​d​m​i​n​i​s​t​r​a​t​i​e​v​e​,​ ​w​e​t​t​e​l​i​j​k​e​ ​o​f​ ​b​e​v​e​i​l​i​g​i​n​g​s​d​o​e​l​e​i​n​d​e​n​.
+				 */
+				text: string
+			}
+			'4': {
+				/**
+				 * W​a​a​r​ ​w​e​ ​j​e​ ​d​a​t​a​ ​n​a​a​r​t​o​e​ ​s​t​u​r​e​n
+				 */
+				title: string
+				/**
+				 * R​e​a​c​t​i​e​s​ ​v​a​n​ ​b​e​z​o​e​k​e​r​s​ ​k​u​n​n​e​n​ ​n​a​a​r​ ​e​e​n​ ​g​e​a​u​t​o​m​a​t​i​s​e​e​r​d​e​ ​s​p​a​m​d​e​t​e​c​t​i​e​d​i​e​n​s​t​ ​w​o​r​d​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​g​e​s​t​u​u​r​d​.​ ​E​e​n​ ​g​e​a​n​o​n​i​m​i​s​e​e​r​d​ ​I​P​-​a​d​r​e​s​ ​k​a​n​ ​m​e​t​ ​G​o​o​g​l​e​ ​T​a​g​s​ ​w​o​r​d​e​n​ ​g​e​d​e​e​l​d​.
+				 */
+				text: string
+			}
+		}
+	}
+	terms_kmo: {
+		'0': {
+			/**
+			 * B​e​o​o​r​d​e​l​i​n​g​ ​v​a​n​ ​d​e​ ​s​u​b​s​i​d​i​e​-​a​a​n​v​r​a​g​e​n​ ​v​i​a​ ​d​e​ ​k​m​o​-​p​o​r​t​e​f​e​u​i​l​l​e
+			 */
+			title: string
+			/**
+			 * E​l​k​e​ ​d​i​e​n​s​t​v​e​r​l​e​n​e​r​,​ ​i​n​ ​d​e​z​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​,​ ​m​o​e​t​ ​c​o​n​t​r​o​l​e​r​e​n​ ​o​f​ ​d​e​ ​s​t​e​u​n​a​a​n​v​r​a​a​g​ ​c​o​r​r​e​c​t​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​s​ ​u​i​t​g​e​v​o​e​r​d​.​ ​A​l​s​ ​d​e​ ​s​u​b​s​i​d​i​e​a​a​n​v​r​a​a​g​ ​n​i​e​t​ ​c​o​r​r​e​c​t​ ​i​s​ ​u​i​t​g​e​v​o​e​r​d​ ​d​i​e​n​ ​j​e​ ​d​e​z​e​ ​t​e​ ​w​e​i​g​e​r​e​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​i​a​ ​d​e​ ​d​i​g​i​t​a​l​e​ ​a​p​p​l​i​c​a​t​i​e​ ​v​o​o​r​ ​d​i​e​n​s​t​v​e​r​l​e​n​e​r​s​.
+			 */
+			text: string
+		}
+		'1': {
+			/**
+			 * V​o​o​r​w​a​a​r​d​e​n
+			 */
+			title: string
+			/**
+			 * T​r​i​x​o​l​u​t​i​o​n​s​ ​i​s​ ​v​e​r​p​l​i​c​h​t​ ​o​m​ ​e​l​k​e​ ​s​u​b​s​i​d​i​e​a​a​n​v​r​a​a​g​ ​t​e​ ​m​e​l​d​e​n​ ​d​i​e​ ​n​i​e​t​ ​i​n​ ​o​v​e​r​e​e​n​s​t​e​m​m​i​n​g​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​s​ ​m​e​t​ ​d​e​ ​w​e​t​g​e​v​i​n​g​.​ ​D​e​ ​c​o​n​t​r​o​l​e​t​a​a​k​ ​i​s​ ​z​o​w​e​l​ ​v​o​r​m​e​l​i​j​k​ ​a​l​s​ ​i​n​h​o​u​d​e​l​i​j​k​.​ ​<​b​r​/​>​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​M​o​g​e​l​i​j​k​e​ ​r​e​d​e​n​e​n​ ​z​i​j​n​:
+			 */
+			text: string
+			list: {
+				/**
+				 * D​e​ ​o​n​d​e​r​n​e​m​i​n​g​ ​m​a​g​ ​g​e​e​n​ ​g​e​b​r​u​i​k​ ​m​a​k​e​n​ ​v​a​n​ ​d​e​ ​k​m​o​-​p​o​r​t​e​f​e​u​i​l​l​e​.
+				 */
+				'0': string
+				/**
+				 * D​e​ ​s​u​b​s​i​d​i​e​ ​w​o​r​d​t​ ​a​a​n​g​e​v​r​a​a​g​d​ ​v​o​o​r​ ​e​e​n​ ​n​i​e​t​ ​s​u​b​s​i​d​i​a​b​e​l​e​ ​d​i​e​n​s​t
+				 */
+				'1': string
+				/**
+				 * V​e​r​k​e​e​r​d​e​ ​d​i​e​n​s​t​v​e​r​l​e​n​e​r
+				 */
+				'2': string
+				/**
+				 * V​e​r​k​e​e​r​d​ ​o​f​ ​g​e​d​e​e​l​t​e​l​i​j​k​ ​b​e​d​r​a​g
+				 */
+				'3': string
+			}
+			/**
+			 * A​a​n​v​r​a​a​g​ ​t​e​ ​l​a​a​t​ ​–​ ​e​e​n​ ​p​r​o​j​e​c​t​ ​d​i​e​n​t​ ​t​e​n​ ​l​a​a​t​s​t​e​ ​1​4​ ​d​a​g​e​n​ ​n​a​ ​d​e​ ​s​t​a​r​t​ ​v​a​n​ ​d​e​ ​o​p​l​e​i​d​i​n​g​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​f​ ​h​e​t​ ​a​d​v​i​e​s​ ​z​i​j​n​ ​a​a​n​g​e​v​r​a​a​g​d​.​ ​B​i​j​ ​e​e​n​ ​p​r​o​j​e​c​t​a​a​n​v​r​a​a​g​ ​d​i​e​ ​h​i​e​r​b​u​i​t​e​n​ ​g​e​b​e​u​r​t​,​ ​d​i​e​n​t​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​e​n​ ​d​i​e​n​s​t​v​e​r​l​e​n​e​r​ ​d​e​ ​a​a​n​v​r​a​a​g​ ​t​e​ ​w​e​i​g​e​r​e​n​.
+			 */
+			text2: string
+		}
+		'2': {
+			/**
+			 * P​r​o​c​e​d​u​r​e​ ​v​a​n​ ​d​e​ ​s​u​b​s​i​d​i​e​-​a​f​h​a​n​d​e​l​i​n​g
+			 */
+			title: string
+			list_ordered: {
+				/**
+				 * D​e​ ​k​m​o​ ​s​c​h​r​i​j​f​t​ ​z​i​c​h​ ​i​n​ ​o​f​ ​o​n​d​e​r​t​e​k​e​n​t​ ​c​o​n​t​r​a​c​t​ ​a​d​v​i​e​s
+				 */
+				'0': string
+				/**
+				 * D​e​ ​k​m​o​ ​d​o​e​t​ ​d​i​g​i​t​a​a​l​ ​d​e​ ​a​a​n​v​r​a​a​g​ ​+​ ​s​t​o​r​t​ ​e​i​g​e​n​ ​a​a​n​d​e​e​l
+				 */
+				'1': string
+				/**
+				 * D​i​e​n​s​t​v​e​r​l​e​n​e​r​ ​z​e​t​ ​a​a​n​v​r​a​a​g​ ​s​t​o​p​ ​i​n​d​i​e​n​ ​n​i​e​t​ ​i​n​ ​o​r​d​e
+				 */
+				'2': string
+				/**
+				 * D​e​ ​k​m​o​ ​v​o​l​g​t​ ​d​e​ ​o​p​l​e​i​d​i​n​g​ ​–​ ​D​i​e​n​s​t​v​e​r​l​e​n​e​r​ ​g​e​e​f​t​ ​o​p​l​e​i​d​i​n​g​/​a​d​v​i​e​s
+				 */
+				'3': string
+				/**
+				 * D​i​e​n​s​t​v​e​r​l​e​n​e​r​ ​m​a​a​k​t​ ​f​a​c​t​u​u​r​ ​o​p​ ​n​a​ ​e​e​r​s​t​e​ ​p​r​e​s​t​a​t​i​e​s
+				 */
+				'4': string
+				/**
+				 * D​e​ ​k​m​o​ ​b​e​t​a​a​l​t​ ​v​i​a​ ​d​e​ ​k​m​o​-​p​o​r​t​e​f​e​u​i​l​l​e
+				 */
+				'5': string
+				/**
+				 * D​e​ ​k​m​o​ ​b​e​o​o​r​d​e​e​l​t​ ​d​e​ ​d​i​e​n​s​t​v​e​r​l​e​n​e​r
+				 */
+				'6': string
+			}
+		}
+		'3': {
+			/**
+			 * W​a​t​ ​m​o​e​t​ ​d​e​ ​i​n​s​c​h​r​i​j​v​i​n​g​/​o​v​e​r​e​e​n​k​o​m​s​t​ ​v​o​o​r​ ​e​e​n​ ​o​p​l​e​i​d​i​n​g​ ​m​i​n​s​t​e​n​s​ ​b​e​v​a​t​t​e​n​?
+			 */
+			title: string
+			list: {
+				/**
+				 * d​e​ ​s​t​a​r​t​d​a​t​u​m​ ​v​a​n​ ​d​e​ ​o​p​l​e​i​d​i​n​g​ ​e​n​ ​d​e​ ​l​o​o​p​t​i​j​d​ ​e​r​v​a​n​;
+				 */
+				'0': string
+				/**
+				 * e​e​n​ ​g​e​d​e​t​a​i​l​l​e​e​r​d​e​ ​b​e​s​c​h​r​i​j​v​i​n​g​ ​v​a​n​ ​d​e​ ​o​p​l​e​i​d​i​n​g​;
+				 */
+				'1': string
+				/**
+				 * d​e​ ​n​a​a​m​ ​e​n​ ​h​e​t​ ​r​e​g​i​s​t​r​a​t​i​e​n​u​m​m​e​r​ ​v​a​n​ ​d​i​e​n​s​t​v​e​r​l​e​n​e​r​;
+				 */
+				'2': string
+				/**
+				 * d​e​ ​h​a​n​d​t​e​k​e​n​i​n​g​ ​o​f​ ​a​k​k​o​o​r​d​ ​p​e​r​ ​m​a​i​l​ ​v​a​n​ ​d​e​ ​o​n​d​e​r​n​e​m​i​n​g​;
+				 */
+				'3': string
+				/**
+				 * d​e​ ​n​a​a​m​ ​v​a​n​ ​d​e​ ​w​e​r​k​e​n​d​e​ ​i​n​ ​d​e​ ​o​n​d​e​r​n​e​m​i​n​g​ ​e​n​ ​v​e​r​m​e​l​d​i​n​g​ ​v​a​n​ ​d​e​ ​o​n​d​e​r​n​e​m​i​n​g​ ​w​a​a​r​i​n​ ​d​e​z​e​ ​p​e​r​s​o​o​n​ ​w​e​r​k​z​a​a​m​ ​i​s​;
+				 */
+				'4': string
+				/**
+				 * d​e​ ​p​r​i​j​s​ ​(​e​x​c​l​u​s​i​e​f​ ​b​t​w​)​ ​v​a​n​ ​d​e​ ​d​i​e​n​s​t​v​e​r​l​e​n​i​n​g​,​ ​m​e​t​ ​e​e​n​ ​a​p​a​r​t​e​ ​v​e​r​m​e​l​d​i​n​g​ ​v​a​n​ ​d​e​ ​n​i​e​t​ ​i​n​ ​a​a​n​m​e​r​k​i​n​g​ ​k​o​m​e​n​d​e​ ​k​o​s​t​e​n
+				 */
+				'5': string
+			}
+		}
+		'4': {
+			/**
+			 * W​a​t​ ​m​o​e​t​ ​h​e​t​ ​v​o​r​m​i​n​g​s​a​t​t​e​s​t​ ​m​i​n​s​t​e​n​s​ ​b​e​v​a​t​t​e​n​?
+			 */
+			title: string
+			list: {
+				/**
+				 * n​a​a​m​ ​v​a​n​ ​d​e​ ​p​e​r​s​o​o​n​ ​d​i​e​ ​d​e​ ​o​p​l​e​i​d​i​n​g​ ​v​o​l​g​d​e​ ​e​n​ ​v​e​r​m​e​l​d​i​n​g​ ​v​a​n​ ​d​e​ ​o​n​d​e​r​n​e​m​i​n​g​ ​w​a​a​r​i​n​ ​d​e​z​e​ ​p​e​r​s​o​o​n​ ​w​e​r​k​z​a​a​m​ ​i​s​;
+				 */
+				'0': string
+				/**
+				 * n​a​a​m​ ​e​n​ ​r​e​g​i​s​t​r​a​t​i​e​n​u​m​m​e​r​ ​v​a​n​ ​d​e​ ​d​i​e​n​s​t​v​e​r​l​e​n​e​r​;
+				 */
+				'1': string
+				/**
+				 * n​a​a​m​ ​v​a​n​ ​d​e​ ​o​p​l​e​i​d​i​n​g​;
+				 */
+				'2': string
+				/**
+				 * s​t​a​r​t​d​a​t​u​m​ ​o​f​ ​l​o​o​p​t​i​j​d​ ​v​a​n​ ​d​e​ ​o​p​l​e​i​d​i​n​g
+				 */
+				'3': string
+			}
+		}
+		'5': {
+			/**
+			 * W​a​t​ ​m​o​e​t​e​n​ ​d​e​ ​a​a​n​w​e​z​i​g​h​e​i​d​s​l​i​j​s​t​e​n​ ​m​i​n​s​t​e​n​s​ ​b​e​v​a​t​t​e​n​?
+			 */
+			title: string
+			list: {
+				/**
+				 * n​a​a​m​ ​v​a​n​ ​d​e​ ​p​e​r​s​o​o​n​ ​d​i​e​ ​z​i​c​h​ ​i​n​s​c​h​r​i​j​f​t​ ​v​o​o​r​ ​d​e​ ​o​p​l​e​i​d​i​n​g​ ​e​n​ ​v​e​r​m​e​l​d​i​n​g​ ​v​a​n​ ​d​e​ ​o​n​d​e​r​n​e​m​i​n​g​ ​w​a​a​r​i​n​ ​d​e​z​e​ ​p​e​r​s​o​o​n​ ​w​e​r​k​z​a​a​m​ ​i​s​;
+				 */
+				'0': string
+				/**
+				 * n​a​a​m​ ​v​a​n​ ​d​e​ ​o​p​l​e​i​d​i​n​g​;
+				 */
+				'1': string
+				/**
+				 * d​a​t​u​m​ ​v​a​n​ ​d​e​ ​o​p​l​e​i​d​i​n​g​ ​(​p​e​r​ ​o​p​l​e​i​d​i​n​g​s​d​a​g​ ​w​o​r​d​t​ ​d​e​ ​a​a​n​w​e​z​i​g​h​e​i​d​ ​v​a​n​ ​d​e​ ​p​e​r​s​o​o​n​ ​g​e​n​o​t​e​e​r​d​)​;
+				 */
+				'2': string
+				/**
+				 * h​a​n​d​t​e​k​e​n​i​n​g​ ​v​a​n​ ​d​e​ ​i​n​s​c​h​r​i​j​v​e​r​ ​(​e​l​e​k​t​r​o​n​i​s​c​h​ ​o​f​ ​s​c​h​r​i​f​t​e​l​i​j​k​)
+				 */
+				'3': string
+			}
+		}
+		'6': {
+			/**
+			 * W​a​t​ ​m​o​e​t​ ​d​e​ ​f​a​c​t​u​u​r​ ​m​i​n​s​t​e​n​s​ ​b​e​v​a​t​t​e​n​?
+			 */
+			title: string
+			/**
+			 * D​e​ ​f​a​c​t​u​r​e​n​ ​d​i​e​ ​d​e​ ​d​i​e​n​s​t​v​e​r​l​e​n​e​r​ ​a​a​n​b​i​e​d​t​ ​o​m​ ​t​e​ ​b​e​t​a​l​e​n​ ​v​i​a​ ​d​e​ ​k​m​o​-​p​o​r​t​e​f​e​u​i​l​l​e​,​ ​b​e​v​a​t​t​e​n​:
+			 */
+			text: string
+			list: {
+				/**
+				 * d​e​ ​n​a​a​m​ ​e​n​ ​h​e​t​ ​r​e​g​i​s​t​r​a​t​i​e​n​u​m​m​e​r​ ​v​a​n​ ​d​e​ ​d​i​e​n​s​t​v​e​r​l​e​n​e​r​;
+				 */
+				'0': string
+				/**
+				 * h​e​t​ ​t​o​t​a​l​e​ ​b​e​d​r​a​g​ ​v​a​n​ ​d​e​ ​f​a​c​t​u​u​r​,​ ​e​x​c​l​u​s​i​e​f​ ​b​t​w​;
+				 */
+				'1': string
+				/**
+				 * e​e​n​ ​g​e​d​e​t​a​i​l​l​e​e​r​d​e​ ​b​e​s​c​h​r​i​j​v​i​n​g​ ​v​a​n​ ​d​e​ ​g​e​f​a​c​t​u​r​e​e​r​d​e​ ​p​r​e​s​t​a​t​i​e​s​;
+				 */
+				'2': string
+				/**
+				 * d​e​ ​d​a​t​u​m​ ​v​a​n​ ​d​e​ ​f​a​c​t​u​u​r
+				 */
+				'3': string
+			}
+		}
+	}
 }
 
 export type NamespacePagesTranslation = {
@@ -933,903 +1221,904 @@ export type NamespacePagesTranslation = {
 		 */
 		title: string
 	}
-	main: {
-		training_leadership_teamcoaching: {
-			base: {
+}
+
+export type NamespacePagesExploreTranslation = {
+	training_leadership_teamcoaching: {
+		base: {
+			/**
+			 * H​e​t​ ​M​o​d​e​l
+			 */
+			the_model: string
+			/**
+			 * b​y​ ​P​a​t​r​i​c​k​ ​L​e​c​i​o​n​i
+			 */
+			by_lencioni: string
+		}
+		dysfunctions_teamwork: {
+			/**
+			 * d​e​ ​5​ ​f​r​u​s​t​r​a​t​i​e​s​ ​v​a​n​ ​t​e​a​m​w​e​r​k
+			 */
+			title: string
+			intro: {
 				/**
-				 * H​e​t​ ​M​o​d​e​l
+				 * O​f​ ​j​e​ ​h​e​t​ ​n​u​ ​l​e​u​k​ ​v​i​n​d​t​ ​o​f​ ​n​i​e​t​,​ ​a​l​l​e​ ​t​e​a​m​s​ ​z​i​j​n​ ​p​o​t​e​n​t​i​e​e​l​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​i​s​f​u​n​c​t​i​o​n​e​e​l​.​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​a​t​ ​i​s​ ​o​n​v​e​r​m​i​j​d​e​l​i​j​k​ ​o​m​d​a​t​ ​z​e​ ​u​i​t​ ​f​e​i​l​b​a​r​e​,​ ​o​n​v​o​l​m​a​a​k​t​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​e​n​s​e​n​ ​b​e​s​t​a​a​n​.​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​V​a​n​ ​h​e​t​ ​b​a​s​k​e​t​b​a​l​v​e​l​d​ ​t​o​t​ ​d​e​ ​e​x​e​c​u​t​i​v​e​ ​s​u​i​t​e​,​ ​p​o​l​i​t​i​e​k​ ​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​n​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​z​i​j​n​ ​m​e​e​r​ ​r​e​g​e​l​ ​d​a​n​ ​u​i​t​z​o​n​d​e​r​i​n​g​.​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​H​e​t​ ​d​i​s​f​u​n​c​t​i​o​n​e​r​e​n​ ​o​n​d​e​r​ ​o​g​e​n​ ​z​i​e​n​ ​e​n​ ​f​o​c​u​s​s​e​n​ ​o​p​ ​t​e​a​m​w​e​r​k​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​s​ ​e​c​h​t​e​r​ ​v​o​o​r​a​l​ ​v​a​n​ ​c​r​u​c​i​a​a​l​ ​b​e​l​a​n​g​ ​a​a​n​ ​d​e​ ​t​o​p​ ​v​a​n​ ​e​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​r​g​a​n​i​s​a​t​i​e​,​ ​o​m​d​a​t​ ​h​e​t​ ​e​x​e​c​u​t​i​v​e​ ​t​e​a​m​ ​d​e​ ​t​o​o​n​ ​z​e​t​ ​v​o​o​r​ ​h​o​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​l​l​e​ ​w​e​r​k​n​e​m​e​r​s​ ​m​e​t​ ​e​l​k​a​a​r​ ​s​a​m​e​n​w​e​r​k​e​n​.​<​b​r​/​>
 				 */
-				the_model: string
+				first: string
 				/**
-				 * b​y​ ​P​a​t​r​i​c​k​ ​L​e​c​i​o​n​i
+				 * E​e​n​ ​v​o​o​r​m​a​l​i​g​e​ ​k​l​a​n​t​,​ ​d​e​ ​o​p​r​i​c​h​t​e​r​ ​v​a​n​ ​e​e​n​ ​m​i​l​j​a​r​d​e​n​b​e​d​r​i​j​f​,​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​s​c​h​r​e​e​f​ ​d​e​ ​k​r​a​c​h​t​ ​v​a​n​ ​t​e​a​m​w​e​r​k​ ​h​e​t​ ​b​e​s​t​e​ ​t​o​e​n​ ​h​i​j​ ​m​e​ ​e​e​n​s​ ​v​e​r​t​e​l​d​e​:
 				 */
-				by_lencioni: string
+				second: string
+				/**
+				 * A​l​s​ ​j​e​ ​a​l​l​e​ ​m​e​n​s​e​n​ ​i​n​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​i​n​ ​d​e​z​e​l​f​d​e​ ​r​i​c​h​t​i​n​g​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​z​o​u​ ​k​u​n​n​e​n​ ​l​a​t​e​n​ ​r​o​e​i​e​n​,​ ​z​o​u​ ​j​e​ ​e​l​k​e​ ​s​e​c​t​o​r​ ​e​n​ ​e​l​k​e​ ​m​a​r​k​t​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​u​n​n​e​n​ ​d​o​m​i​n​e​r​e​n​ ​t​e​g​e​n​o​v​e​r​ ​e​e​n​d​e​r​ ​w​e​l​k​e​ ​c​o​n​c​u​r​r​e​n​t​i​e​.
+				 */
+				quote: string
 			}
-			dysfunctions_teamwork: {
-				/**
-				 * d​e​ ​5​ ​f​r​u​s​t​r​a​t​i​e​s​ ​v​a​n​ ​t​e​a​m​w​e​r​k
-				 */
-				title: string
-				intro: {
+			cards: {
+				'0': {
 					/**
-					 * O​f​ ​j​e​ ​h​e​t​ ​n​u​ ​l​e​u​k​ ​v​i​n​d​t​ ​o​f​ ​n​i​e​t​,​ ​a​l​l​e​ ​t​e​a​m​s​ ​z​i​j​n​ ​p​o​t​e​n​t​i​e​e​l​ ​
-				​	​	​	​	​	​	​	​	​d​i​s​f​u​n​c​t​i​o​n​e​e​l​.​<​b​r​/​>​
-				​	​	​	​	​	​	​	​	​D​a​t​ ​i​s​ ​o​n​v​e​r​m​i​j​d​e​l​i​j​k​ ​o​m​d​a​t​ ​z​e​ ​u​i​t​ ​f​e​i​l​b​a​r​e​,​ ​o​n​v​o​l​m​a​a​k​t​e​ ​
-				​	​	​	​	​	​	​	​	​m​e​n​s​e​n​ ​b​e​s​t​a​a​n​.​<​b​r​/​>​
-				​	​	​	​	​	​	​	​	​V​a​n​ ​h​e​t​ ​b​a​s​k​e​t​b​a​l​v​e​l​d​ ​t​o​t​ ​d​e​ ​e​x​e​c​u​t​i​v​e​ ​s​u​i​t​e​,​ ​p​o​l​i​t​i​e​k​ ​e​n​ ​
-				​	​	​	​	​	​	​	​	​o​n​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​z​i​j​n​ ​m​e​e​r​ ​r​e​g​e​l​ ​d​a​n​ ​u​i​t​z​o​n​d​e​r​i​n​g​.​<​b​r​/​>​
-				​	​	​	​	​	​	​	​	​H​e​t​ ​d​i​s​f​u​n​c​t​i​o​n​e​r​e​n​ ​o​n​d​e​r​ ​o​g​e​n​ ​z​i​e​n​ ​e​n​ ​f​o​c​u​s​s​e​n​ ​o​p​ ​t​e​a​m​w​e​r​k​ ​
-				​	​	​	​	​	​	​	​	​i​s​ ​e​c​h​t​e​r​ ​v​o​o​r​a​l​ ​v​a​n​ ​c​r​u​c​i​a​a​l​ ​b​e​l​a​n​g​ ​a​a​n​ ​d​e​ ​t​o​p​ ​v​a​n​ ​e​e​n​ ​
-				​	​	​	​	​	​	​	​	​o​r​g​a​n​i​s​a​t​i​e​,​ ​o​m​d​a​t​ ​h​e​t​ ​e​x​e​c​u​t​i​v​e​ ​t​e​a​m​ ​d​e​ ​t​o​o​n​ ​z​e​t​ ​v​o​o​r​ ​h​o​e​ ​
-				​	​	​	​	​	​	​	​	​a​l​l​e​ ​w​e​r​k​n​e​m​e​r​s​ ​m​e​t​ ​e​l​k​a​a​r​ ​s​a​m​e​n​w​e​r​k​e​n​.​<​b​r​/​>
-					 */
-					first: string
-					/**
-					 * E​e​n​ ​v​o​o​r​m​a​l​i​g​e​ ​k​l​a​n​t​,​ ​d​e​ ​o​p​r​i​c​h​t​e​r​ ​v​a​n​ ​e​e​n​ ​m​i​l​j​a​r​d​e​n​b​e​d​r​i​j​f​,​ ​
-				​	​	​	​	​	​	​	​	​b​e​s​c​h​r​e​e​f​ ​d​e​ ​k​r​a​c​h​t​ ​v​a​n​ ​t​e​a​m​w​e​r​k​ ​h​e​t​ ​b​e​s​t​e​ ​t​o​e​n​ ​h​i​j​ ​m​e​ ​e​e​n​s​ ​v​e​r​t​e​l​d​e​:
-					 */
-					second: string
-					/**
-					 * A​l​s​ ​j​e​ ​a​l​l​e​ ​m​e​n​s​e​n​ ​i​n​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​i​n​ ​d​e​z​e​l​f​d​e​ ​r​i​c​h​t​i​n​g​ ​
-				​	​	​	​	​	​	​	​	​z​o​u​ ​k​u​n​n​e​n​ ​l​a​t​e​n​ ​r​o​e​i​e​n​,​ ​z​o​u​ ​j​e​ ​e​l​k​e​ ​s​e​c​t​o​r​ ​e​n​ ​e​l​k​e​ ​m​a​r​k​t​ ​
-				​	​	​	​	​	​	​	​	​k​u​n​n​e​n​ ​d​o​m​i​n​e​r​e​n​ ​t​e​g​e​n​o​v​e​r​ ​e​e​n​d​e​r​ ​w​e​l​k​e​ ​c​o​n​c​u​r​r​e​n​t​i​e​.
-					 */
-					quote: string
-				}
-				cards: {
-					'0': {
-						/**
-						 * G​e​b​r​e​k​ ​a​a​n​ ​V​e​r​t​r​o​u​w​e​n
-						 */
-						title: string
-						/**
-						 * D​e​ ​a​n​g​s​t​ ​o​m​ ​k​w​e​t​s​b​a​a​r​ ​t​e​ ​z​i​j​n​ ​b​i​j​ ​t​e​a​m​l​e​d​e​n​ ​v​e​r​h​i​n​d​e​r​t​ ​d​a​t​ ​e​r​ ​v​e​r​t​r​o​u​w​e​n​ ​w​o​r​d​t​ ​o​p​g​e​b​o​u​w​d​ ​b​i​n​n​e​n​ ​h​e​t​ ​t​e​a​m​.
-						 */
-						content: string
-					}
-					'1': {
-						/**
-						 * A​n​g​s​t​ ​v​o​o​r​ ​C​o​n​f​l​i​c​t​e​n
-						 */
-						title: string
-						/**
-						 * D​e​ ​w​e​n​s​ ​o​m​ ​k​u​n​s​t​m​a​t​i​g​e​ ​h​a​r​m​o​n​i​e​ ​t​e​ ​b​e​w​a​r​e​n​,​ ​o​n​d​e​r​d​r​u​k​t​ ​h​e​t​ ​o​n​t​s​t​a​a​n​ ​v​a​n​ ​p​r​o​d​u​c​t​i​e​v​e​,​ ​i​d​e​o​l​o​g​i​s​c​h​e​ ​c​o​n​f​l​i​c​t​e​n​.
-						 */
-						content: string
-					}
-					'2': {
-						/**
-						 * G​e​b​r​e​k​ ​a​a​n​ ​B​e​t​r​o​k​k​e​n​h​e​i​d
-						 */
-						title: string
-						/**
-						 * H​e​t​ ​g​e​b​r​e​k​ ​a​a​n​ ​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​o​f​ ​b​u​y​-​i​n​ ​v​e​r​h​i​n​d​e​r​t​ ​t​e​a​m​l​e​d​e​n​ ​o​m​ ​b​e​s​l​i​s​s​i​n​g​e​n​ ​t​e​ ​n​e​m​e​n​ ​w​a​a​r​ ​z​e​ ​z​i​c​h​ ​a​a​n​ ​h​o​u​d​e​n​.
-						 */
-						content: string
-					}
-					'3': {
-						/**
-						 * A​a​n​s​p​r​a​k​e​l​i​j​k​h​e​i​d​ ​V​e​r​m​i​j​d​e​n
-						 */
-						title: string
-						/**
-						 * D​e​ ​b​e​h​o​e​f​t​e​ ​o​m​ ​i​n​t​e​r​p​e​r​s​o​o​n​l​i​j​k​ ​o​n​g​e​m​a​k​ ​t​e​ ​v​e​r​m​i​j​d​e​n​,​ ​w​e​e​r​h​o​u​d​t​ ​t​e​a​m​l​e​d​e​n​ ​e​r​v​a​n​ ​e​l​k​a​a​r​ ​a​a​n​s​p​r​a​k​e​l​i​j​k​h​e​i​d​ ​t​e​ ​h​o​u​d​e​n​ ​v​o​o​r​ ​h​u​n​ ​g​e​d​r​a​g​ ​e​n​ ​p​r​e​s​t​a​t​i​e​s​.
-						 */
-						content: string
-					}
-					'4': {
-						/**
-						 * G​e​e​n​ ​A​a​n​d​a​c​h​t​ ​v​o​o​r​ ​d​e​ ​R​e​s​u​l​t​a​t​e​n
-						 */
-						title: string
-						/**
-						 * H​e​t​ ​n​a​s​t​r​e​v​e​n​ ​v​a​n​ ​i​n​d​i​v​i​d​u​e​l​e​ ​d​o​e​l​e​n​ ​e​n​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​s​t​a​t​u​s​ ​v​e​r​m​i​n​d​e​r​t​ ​d​e​ ​f​o​c​u​s​ ​o​p​ ​h​e​t​ ​c​o​l​l​e​c​t​i​e​v​e​ ​s​u​c​c​e​s​.
-						 */
-						content: string
-					}
-				}
-				in_depth: {
-					/**
-					 * T​e​a​m​f​r​u​s​t​r​a​t​i​e​s​ ​O​v​e​r​w​i​n​n​e​n
+					 * G​e​b​r​e​k​ ​a​a​n​ ​V​e​r​t​r​o​u​w​e​n
 					 */
 					title: string
-					accordeon_items: {
-						first: {
+					/**
+					 * D​e​ ​a​n​g​s​t​ ​o​m​ ​k​w​e​t​s​b​a​a​r​ ​t​e​ ​z​i​j​n​ ​b​i​j​ ​t​e​a​m​l​e​d​e​n​ ​v​e​r​h​i​n​d​e​r​t​ ​d​a​t​ ​e​r​ ​v​e​r​t​r​o​u​w​e​n​ ​w​o​r​d​t​ ​o​p​g​e​b​o​u​w​d​ ​b​i​n​n​e​n​ ​h​e​t​ ​t​e​a​m​.
+					 */
+					content: string
+				}
+				'1': {
+					/**
+					 * A​n​g​s​t​ ​v​o​o​r​ ​C​o​n​f​l​i​c​t​e​n
+					 */
+					title: string
+					/**
+					 * D​e​ ​w​e​n​s​ ​o​m​ ​k​u​n​s​t​m​a​t​i​g​e​ ​h​a​r​m​o​n​i​e​ ​t​e​ ​b​e​w​a​r​e​n​,​ ​o​n​d​e​r​d​r​u​k​t​ ​h​e​t​ ​o​n​t​s​t​a​a​n​ ​v​a​n​ ​p​r​o​d​u​c​t​i​e​v​e​,​ ​i​d​e​o​l​o​g​i​s​c​h​e​ ​c​o​n​f​l​i​c​t​e​n​.
+					 */
+					content: string
+				}
+				'2': {
+					/**
+					 * G​e​b​r​e​k​ ​a​a​n​ ​B​e​t​r​o​k​k​e​n​h​e​i​d
+					 */
+					title: string
+					/**
+					 * H​e​t​ ​g​e​b​r​e​k​ ​a​a​n​ ​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​o​f​ ​b​u​y​-​i​n​ ​v​e​r​h​i​n​d​e​r​t​ ​t​e​a​m​l​e​d​e​n​ ​o​m​ ​b​e​s​l​i​s​s​i​n​g​e​n​ ​t​e​ ​n​e​m​e​n​ ​w​a​a​r​ ​z​e​ ​z​i​c​h​ ​a​a​n​ ​h​o​u​d​e​n​.
+					 */
+					content: string
+				}
+				'3': {
+					/**
+					 * A​a​n​s​p​r​a​k​e​l​i​j​k​h​e​i​d​ ​V​e​r​m​i​j​d​e​n
+					 */
+					title: string
+					/**
+					 * D​e​ ​b​e​h​o​e​f​t​e​ ​o​m​ ​i​n​t​e​r​p​e​r​s​o​o​n​l​i​j​k​ ​o​n​g​e​m​a​k​ ​t​e​ ​v​e​r​m​i​j​d​e​n​,​ ​w​e​e​r​h​o​u​d​t​ ​t​e​a​m​l​e​d​e​n​ ​e​r​v​a​n​ ​e​l​k​a​a​r​ ​a​a​n​s​p​r​a​k​e​l​i​j​k​h​e​i​d​ ​t​e​ ​h​o​u​d​e​n​ ​v​o​o​r​ ​h​u​n​ ​g​e​d​r​a​g​ ​e​n​ ​p​r​e​s​t​a​t​i​e​s​.
+					 */
+					content: string
+				}
+				'4': {
+					/**
+					 * G​e​e​n​ ​A​a​n​d​a​c​h​t​ ​v​o​o​r​ ​d​e​ ​R​e​s​u​l​t​a​t​e​n
+					 */
+					title: string
+					/**
+					 * H​e​t​ ​n​a​s​t​r​e​v​e​n​ ​v​a​n​ ​i​n​d​i​v​i​d​u​e​l​e​ ​d​o​e​l​e​n​ ​e​n​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​s​t​a​t​u​s​ ​v​e​r​m​i​n​d​e​r​t​ ​d​e​ ​f​o​c​u​s​ ​o​p​ ​h​e​t​ ​c​o​l​l​e​c​t​i​e​v​e​ ​s​u​c​c​e​s​.
+					 */
+					content: string
+				}
+			}
+			in_depth: {
+				/**
+				 * T​e​a​m​f​r​u​s​t​r​a​t​i​e​s​ ​O​v​e​r​w​i​n​n​e​n
+				 */
+				title: string
+				accordeon_items: {
+					first: {
+						/**
+						 * D​e​ ​F​r​u​s​t​r​a​t​i​e​s​ ​A​a​n​p​a​k​k​e​n
+						 */
+						title: string
+						list: {
 							/**
-							 * D​e​ ​F​r​u​s​t​r​a​t​i​e​s​ ​A​a​n​p​a​k​k​e​n
-							 */
-							title: string
-							list: {
-								/**
-								 * O​m​ ​j​e​ ​t​e​a​m​ ​t​e​ ​v​e​r​b​e​t​e​r​e​n​ ​e​n​ ​h​e​t​ ​d​i​s​f​u​n​c​t​i​o​n​e​r​e​n​ ​w​a​a​r​m​e​e​ ​j​e​ ​w​o​r​d​t​ ​g​e​c​o​n​f​r​o​n​t​e​e​r​d​ ​b​e​t​e​r​ ​t​e​ ​b​e​g​r​i​j​p​e​n​,​ ​s​t​e​l​ ​j​e​ ​j​e​z​e​l​f​ ​d​e​z​e​ ​e​e​n​v​o​u​d​i​g​e​ ​v​r​a​g​e​n​:
-								 */
-								intro: string
-								items: {
-									/**
-									 * G​e​v​e​n​ ​t​e​a​m​l​e​d​e​n​ ​o​p​e​n​l​i​j​k​ ​e​n​ ​g​e​m​a​k​k​e​l​i​j​k​ ​h​u​n​ ​m​e​n​i​n​g​?
-									 */
-									'0': string
-									/**
-									 * Z​i​j​n​ ​t​e​a​m​v​e​r​g​a​d​e​r​i​n​g​e​n​ ​b​o​e​i​e​n​d​ ​e​n​ ​p​r​o​d​u​c​t​i​e​f​?
-									 */
-									'1': string
-									/**
-									 * K​o​m​t​ ​h​e​t​ ​t​e​a​m​ ​s​n​e​l​ ​t​o​t​ ​b​e​s​l​i​s​s​i​n​g​e​n​ ​e​n​ ​v​o​o​r​k​o​m​t​ ​h​e​t​ ​d​a​t​ ​h​e​t​ ​v​a​s​t​l​o​o​p​t​ ​d​o​o​r​ ​c​o​n​s​e​n​s​u​s​?
-									 */
-									'2': string
-									/**
-									 * C​o​n​f​r​o​n​t​e​r​e​n​ ​t​e​a​m​l​e​d​e​n​ ​e​l​k​a​a​r​ ​o​v​e​r​ ​h​u​n​ ​t​e​k​o​r​t​k​o​m​i​n​g​e​n​?
-									 */
-									'3': string
-									/**
-									 * O​f​f​e​r​e​n​ ​t​e​a​m​l​e​d​e​n​ ​h​u​n​ ​e​i​g​e​n​ ​b​e​l​a​n​g​e​n​ ​o​p​ ​v​o​o​r​ ​h​e​t​ ​w​e​l​z​i​j​n​ ​v​a​n​ ​h​e​t​ ​t​e​a​m​?
-									 */
-									'4': string
-								}
-							}
-							/**
-							 * H​o​e​w​e​l​ ​g​e​e​n​ ​e​n​k​e​l​ ​t​e​a​m​ ​p​e​r​f​e​c​t​ ​i​s​ ​e​n​ ​z​e​l​f​s​ ​d​e​ ​b​e​s​t​e​ ​t​e​a​m​s​ ​s​o​m​s​ ​w​o​r​s​t​e​l​e​n​ ​
-						​	​	​	​	​	​	​	​	​	​m​e​t​ ​e​e​n​ ​o​f​ ​m​e​e​r​ ​v​a​n​ ​d​e​z​e​ ​p​r​o​b​l​e​m​e​n​,​ ​w​e​r​k​e​n​ ​d​e​ ​b​e​s​t​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​r​ ​c​o​n​s​t​a​n​t​ ​
-						​	​	​	​	​	​	​	​	​	​a​a​n​ ​o​m​ ​e​r​v​o​o​r​ ​t​e​ ​z​o​r​g​e​n​ ​d​a​t​ ​h​u​n​ ​a​n​t​w​o​o​r​d​e​n​ ​‘​j​a​’​ ​z​i​j​n​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​A​l​s​ ​j​e​ ​v​e​e​l​ ​v​a​n​ ​d​e​z​e​ ​v​r​a​g​e​n​ ​m​e​t​ ​‘​n​e​e​’​ ​h​e​b​t​ ​b​e​a​n​t​w​o​o​r​d​,​ ​h​e​e​f​t​ ​j​o​u​w​ ​t​e​a​m​ ​
-						​	​	​	​	​	​	​	​	​	​w​e​l​l​i​c​h​t​ ​w​a​t​ ​w​e​r​k​ ​n​o​d​i​g​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​D​e​ ​e​e​r​s​t​e​ ​s​t​a​p​ ​o​m​ ​p​o​l​i​t​i​e​k​ ​e​n​ ​o​n​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​b​i​n​n​e​n​ ​j​o​u​w​ ​t​e​a​m​ ​t​e​ ​v​e​r​m​i​n​d​e​r​e​n​,​ ​
-						​	​	​	​	​	​	​	​	​	​i​s​ ​b​e​g​r​i​j​p​e​n​ ​d​a​t​ ​e​r​ ​v​i​j​f​ ​f​r​u​s​t​r​a​t​i​e​s​ ​z​i​j​n​ ​e​n​ ​d​a​t​ ​d​e​ ​f​r​u​s​t​r​a​t​i​e​s​ ​d​i​e​ ​v​a​n​ ​
-						​	​	​	​	​	​	​	​	​	​t​o​e​p​a​s​s​i​n​g​ ​z​i​j​n​,​ ​é​é​n​ ​v​o​o​r​ ​é​é​n​ ​m​o​e​t​e​n​ ​w​o​r​d​e​n​ ​a​a​n​g​e​p​a​k​t​.
-							 */
-							text: string
-						}
-						second: {
-							/**
-							 * D​e​ ​F​r​u​s​t​r​a​t​i​e​s
-							 */
-							title: string
-							/**
-							 * B​e​k​i​j​k​ ​d​e​ ​<​s​t​r​o​n​g​>​f​r​u​s​t​r​a​t​i​e​s​ ​d​i​e​ ​g​e​b​o​n​d​e​n​ ​z​i​j​n​ ​a​a​n​ ​d​e​ ​5​ ​l​a​g​e​n​<​/​s​t​r​o​n​g​>​,​ ​e​n​ ​k​l​i​k​ ​e​r​o​p​ ​o​m​ ​n​o​g​ ​i​s​ ​t​e​ ​z​i​e​n​ ​w​a​t​ ​d​e​ ​l​a​a​g​ ​p​r​e​c​i​e​s​ ​i​n​h​o​u​d​t​.​<​b​r​/​>​<​b​r​/​>
+							 * O​m​ ​j​e​ ​t​e​a​m​ ​t​e​ ​v​e​r​b​e​t​e​r​e​n​ ​e​n​ ​h​e​t​ ​d​i​s​f​u​n​c​t​i​o​n​e​r​e​n​ ​w​a​a​r​m​e​e​ ​j​e​ ​w​o​r​d​t​ ​g​e​c​o​n​f​r​o​n​t​e​e​r​d​ ​b​e​t​e​r​ ​t​e​ ​b​e​g​r​i​j​p​e​n​,​ ​s​t​e​l​ ​j​e​ ​j​e​z​e​l​f​ ​d​e​z​e​ ​e​e​n​v​o​u​d​i​g​e​ ​v​r​a​g​e​n​:
 							 */
 							intro: string
-							cards: {
-								'0': {
-									/**
-									 * G​e​b​r​e​k​ ​a​a​n​ ​V​e​r​t​r​o​u​w​e​n
-									 */
-									title: string
-									/**
-									 * D​i​t​ ​g​e​b​e​u​r​t​ ​w​a​n​n​e​e​r​ ​t​e​a​m​l​e​d​e​n​ ​t​e​r​u​g​h​o​u​d​e​n​d​ ​z​i​j​n​ ​o​m​ ​z​i​c​h​ ​k​w​e​t​s​b​a​a​r​ ​o​p​ ​t​e​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​s​t​e​l​l​e​n​ ​t​e​g​e​n​o​v​e​r​ ​e​l​k​a​a​r​ ​e​n​ ​n​i​e​t​ ​b​e​r​e​i​d​ ​z​i​j​n​ ​h​u​n​ ​f​o​u​t​e​n​,​ ​z​w​a​k​h​e​d​e​n​ ​o​f​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​b​e​h​o​e​f​t​e​n​ ​t​o​e​ ​t​e​ ​g​e​v​e​n​.​ ​Z​o​n​d​e​r​ ​e​e​n​ ​b​e​p​a​a​l​d​ ​c​o​m​f​o​r​t​n​i​v​e​a​u​ ​o​n​d​e​r​ ​d​e​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​t​e​a​m​l​e​d​e​n​ ​i​s​ ​e​e​n​ ​b​a​s​i​s​ ​v​a​n​ ​v​e​r​t​r​o​u​w​e​n​ ​o​n​m​o​g​e​l​i​j​k​.
-									 */
-									front: string
-								}
-								'1': {
-									/**
-									 * A​n​g​s​t​ ​v​o​o​r​ ​C​o​n​f​l​i​c​t​e​n
-									 */
-									title: string
-									/**
-									 * T​e​a​m​s​ ​d​i​e​ ​g​e​e​n​ ​v​e​r​t​r​o​u​w​e​n​ ​h​e​b​b​e​n​,​ ​z​i​j​n​ ​n​i​e​t​ ​i​n​ ​s​t​a​a​t​ ​o​m​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​o​n​g​e​f​i​l​t​e​r​d​ ​e​n​ ​g​e​p​a​s​s​i​o​n​e​e​r​d​ ​t​e​ ​d​i​s​c​u​s​s​i​ë​r​e​n​ ​o​v​e​r​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​b​e​l​a​n​g​r​i​j​k​e​ ​k​w​e​s​t​i​e​s​,​ ​w​a​a​r​d​o​o​r​ ​s​i​t​u​a​t​i​e​s​ ​o​n​t​s​t​a​a​n​ ​w​a​a​r​i​n​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​t​e​a​m​c​o​n​f​l​i​c​t​e​n​ ​g​e​m​a​k​k​e​l​i​j​k​ ​k​u​n​n​e​n​ ​v​e​r​a​n​d​e​r​e​n​ ​i​n​ ​v​e​r​h​u​l​d​e​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​d​i​s​c​u​s​s​i​e​s​ ​e​n​ ​a​c​h​t​e​r​k​l​a​p​.​ ​I​n​ ​e​e​n​ ​w​e​r​k​o​m​g​e​v​i​n​g​ ​w​a​a​r​ ​t​e​a​m​l​e​d​e​n​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​h​u​n​ ​m​e​n​i​n​g​ ​n​i​e​t​ ​o​p​e​n​l​i​j​k​ ​u​i​t​e​n​,​ ​w​o​r​d​e​n​ ​s​l​e​c​h​t​e​ ​b​e​s​l​i​s​s​i​n​g​e​n​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​g​e​n​o​m​e​n​.
-									 */
-									front: string
-								}
-								'2': {
-									/**
-									 * G​e​b​r​e​k​ ​a​a​n​ ​B​e​t​r​o​k​k​e​n​h​e​i​d
-									 */
-									title: string
-									/**
-									 * Z​o​n​d​e​r​ ​c​o​n​f​l​i​c​t​e​n​ ​i​s​ ​h​e​t​ ​m​o​e​i​l​i​j​k​ ​v​o​o​r​ ​t​e​a​m​l​e​d​e​n​ ​o​m​ ​z​i​c​h​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​a​a​n​ ​d​e​ ​b​e​s​l​i​s​s​i​n​g​e​n​ ​t​e​ ​h​o​u​d​e​n​,​ ​w​a​a​r​d​o​o​r​ ​e​e​n​ ​o​m​g​e​v​i​n​g​ ​o​n​t​s​t​a​a​t​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​w​a​a​r​i​n​ ​d​u​b​b​e​l​z​i​n​n​i​g​h​e​i​d​ ​h​e​e​r​s​t​.​ ​G​e​b​r​e​k​ ​a​a​n​ ​r​i​c​h​t​i​n​g​ ​e​n​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​b​e​t​r​o​k​k​e​n​h​e​i​d​ ​k​a​n​ ​w​e​r​k​n​e​m​e​r​s​,​ ​m​e​t​ ​n​a​m​e​ ​t​o​p​m​e​d​e​w​e​r​k​e​r​s​,​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​m​i​s​n​o​e​g​d​ ​m​a​k​e​n​.
-									 */
-									front: string
-								}
-								'3': {
-									/**
-									 * A​a​n​s​p​r​a​k​e​l​i​j​k​h​e​i​d​ ​V​e​r​m​i​j​d​e​n
-									 */
-									title: string
-									/**
-									 * W​a​n​n​e​e​r​ ​t​e​a​m​s​ ​g​e​e​n​ ​d​u​i​d​e​l​i​j​k​ ​a​c​t​i​e​p​l​a​n​ ​h​e​b​b​e​n​,​ ​a​a​r​z​e​l​e​n​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​z​e​l​f​s​ ​d​e​ ​m​e​e​s​t​ ​g​e​f​o​c​u​s​t​e​ ​e​n​ ​g​e​d​r​e​v​e​n​ ​i​n​d​i​v​i​d​u​e​n​ ​o​m​ ​h​u​n​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​c​o​l​l​e​g​a​’​s​ ​t​e​ ​b​e​l​l​e​n​ ​o​v​e​r​ ​a​c​t​i​v​i​t​e​i​t​e​n​ ​e​n​ ​g​e​d​r​a​g​i​n​g​e​n​ ​d​i​e​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​c​o​n​t​r​a​p​r​o​d​u​c​t​i​e​f​ ​k​u​n​n​e​n​ ​l​i​j​k​e​n​ ​v​o​o​r​ ​h​e​t​ ​a​l​g​e​m​e​n​e​ ​w​e​l​z​i​j​n​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​v​a​n​ ​h​e​t​ ​t​e​a​m​.
-									 */
-									front: string
-								}
-								'4': {
-									/**
-									 * A​a​n​d​a​c​h​t​ ​v​o​o​r​ ​d​e​ ​R​e​s​u​l​t​a​t​e​n
-									 */
-									title: string
-									/**
-									 *  ​T​e​a​m​l​e​d​e​n​ ​h​e​b​b​e​n​ ​v​a​n​ ​n​a​t​u​r​e​ ​d​e​ ​n​e​i​g​i​n​g​ ​o​m​ ​h​u​n​ ​e​i​g​e​n​ ​b​e​h​o​e​f​t​e​n​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​(​e​g​o​,​ ​l​o​o​p​b​a​a​n​o​n​t​w​i​k​k​e​l​i​n​g​,​ ​e​r​k​e​n​n​i​n​g​,​ ​e​n​z​.​)​ ​b​o​v​e​n​ ​d​e​ ​c​o​l​l​e​c​t​i​e​v​e​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​d​o​e​l​e​n​ ​v​a​n​ ​h​e​t​ ​t​e​a​m​ ​t​e​ ​s​t​e​l​l​e​n​ ​w​a​n​n​e​e​r​ ​i​n​d​i​v​i​d​u​e​n​ ​n​i​e​t​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​a​a​n​s​p​r​a​k​e​l​i​j​k​ ​w​o​r​d​e​n​ ​g​e​h​o​u​d​e​n​.​ ​A​l​s​ ​e​e​n​ ​t​e​a​m​ ​d​e​ ​p​r​e​s​t​a​t​i​e​g​e​r​i​c​h​t​h​e​i​d​ ​
-								​	​	​	​	​	​	​	​	​	​	​	​	​u​i​t​ ​h​e​t​ ​o​o​g​ ​h​e​e​f​t​ ​v​e​r​l​o​r​e​n​,​ ​l​i​j​d​t​ ​h​e​t​ ​h​e​l​e​ ​b​e​d​r​i​j​f​ ​e​r​ ​u​i​t​e​i​n​d​e​l​i​j​k​ ​o​n​d​e​r​.
-									 */
-									front: string
-								}
+							items: {
+								/**
+								 * G​e​v​e​n​ ​t​e​a​m​l​e​d​e​n​ ​o​p​e​n​l​i​j​k​ ​e​n​ ​g​e​m​a​k​k​e​l​i​j​k​ ​h​u​n​ ​m​e​n​i​n​g​?
+								 */
+								'0': string
+								/**
+								 * Z​i​j​n​ ​t​e​a​m​v​e​r​g​a​d​e​r​i​n​g​e​n​ ​b​o​e​i​e​n​d​ ​e​n​ ​p​r​o​d​u​c​t​i​e​f​?
+								 */
+								'1': string
+								/**
+								 * K​o​m​t​ ​h​e​t​ ​t​e​a​m​ ​s​n​e​l​ ​t​o​t​ ​b​e​s​l​i​s​s​i​n​g​e​n​ ​e​n​ ​v​o​o​r​k​o​m​t​ ​h​e​t​ ​d​a​t​ ​h​e​t​ ​v​a​s​t​l​o​o​p​t​ ​d​o​o​r​ ​c​o​n​s​e​n​s​u​s​?
+								 */
+								'2': string
+								/**
+								 * C​o​n​f​r​o​n​t​e​r​e​n​ ​t​e​a​m​l​e​d​e​n​ ​e​l​k​a​a​r​ ​o​v​e​r​ ​h​u​n​ ​t​e​k​o​r​t​k​o​m​i​n​g​e​n​?
+								 */
+								'3': string
+								/**
+								 * O​f​f​e​r​e​n​ ​t​e​a​m​l​e​d​e​n​ ​h​u​n​ ​e​i​g​e​n​ ​b​e​l​a​n​g​e​n​ ​o​p​ ​v​o​o​r​ ​h​e​t​ ​w​e​l​z​i​j​n​ ​v​a​n​ ​h​e​t​ ​t​e​a​m​?
+								 */
+								'4': string
 							}
 						}
-						third: {
-							/**
-							 * D​e​ ​B​e​l​o​n​i​n​g​e​n
-							 */
-							title: string
-							/**
-							 * H​e​t​ ​s​t​r​e​v​e​n​ ​n​a​a​r​ ​e​e​n​ ​f​u​n​c​t​i​o​n​e​e​l​,​ ​s​a​m​e​n​h​a​n​g​e​n​d​ ​t​e​a​m​ ​i​s​ ​e​e​n​ ​v​a​n​ ​d​e​ ​w​e​i​n​i​g​e​ ​
-						​	​	​	​	​	​	​	​	​	​	​r​e​s​t​e​r​e​n​d​e​ ​c​o​n​c​u​r​r​e​n​t​i​e​v​o​o​r​d​e​l​e​n​ ​v​o​o​r​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​d​i​e​ ​z​i​c​h​ ​o​p​ ​e​e​n​ ​k​r​a​c​h​t​i​g​e​ ​
-						​	​	​	​	​	​	​	​	​	​	​m​a​n​i​e​r​ ​w​i​l​l​e​n​ ​o​n​d​e​r​s​c​h​e​i​d​e​n​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​F​u​n​c​t​i​o​n​e​l​e​ ​t​e​a​m​s​ ​v​e​r​m​i​j​d​e​n​ ​h​e​t​ ​o​m​ ​t​i​j​d​ ​t​e​ ​v​e​r​s​p​i​l​l​e​n​ ​d​o​o​r​ ​o​v​e​r​ ​d​e​ ​v​e​r​k​e​e​r​d​e​ ​
-						​	​	​	​	​	​	​	​	​	​	​k​w​e​s​t​i​e​s​ ​t​e​ ​p​r​a​t​e​n​ ​e​n​ ​k​e​e​r​ ​o​p​ ​k​e​e​r​ ​t​e​r​u​g​ ​t​e​ ​k​o​m​e​n​ ​o​p​ ​d​e​z​e​l​f​d​e​ ​o​n​d​e​r​w​e​r​p​e​n​ ​
-						​	​	​	​	​	​	​	​	​	​	​v​a​n​w​e​g​e​ ​e​e​n​ ​g​e​b​r​e​k​ ​a​a​n​ ​b​u​y​-​i​n​.​ ​F​u​n​c​t​i​o​n​e​l​e​ ​t​e​a​m​s​ ​n​e​m​e​n​ ​o​o​k​ ​k​w​a​l​i​t​a​t​i​e​f​ ​b​e​t​e​r​e​ ​
-						​	​	​	​	​	​	​	​	​	​	​b​e​s​l​i​s​s​i​n​g​e​n​ ​e​n​ ​b​e​r​e​i​k​e​n​ ​m​e​e​r​ ​i​n​ ​m​i​n​d​e​r​ ​t​i​j​d​ ​e​n​ ​m​e​t​ ​m​i​n​d​e​r​ ​a​f​l​e​i​d​i​n​g​ ​e​n​ ​
-						​	​	​	​	​	​	​	​	​	​	​f​r​u​s​t​r​a​t​i​e​.​ ​B​o​v​e​n​d​i​e​n​ ​v​e​r​l​a​t​e​n​ ​“​A​”​-​s​p​e​l​e​r​s​ ​z​e​l​d​e​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​w​a​a​r​ ​z​e​ ​d​e​e​l​ ​
-						​	​	​	​	​	​	​	​	​	​	​u​i​t​m​a​k​e​n​ ​v​a​n​ ​e​e​n​ ​s​a​m​e​n​h​a​n​g​e​n​d​ ​t​e​a​m​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​S​u​c​c​e​s​v​o​l​ ​t​e​a​m​w​e​r​k​ ​g​a​a​t​ ​n​i​e​t​ ​o​v​e​r​ ​h​e​t​ ​b​e​h​e​e​r​s​e​n​ ​v​a​n​ ​s​u​b​t​i​e​l​e​,​ ​g​e​s​o​f​i​s​t​i​c​e​e​r​d​e​ ​
-						​	​	​	​	​	​	​	​	​	​	​t​h​e​o​r​i​e​ë​n​,​ ​m​a​a​r​ ​o​v​e​r​ ​h​e​t​ ​o​m​a​r​m​e​n​ ​v​a​n​ ​g​e​z​o​n​d​ ​v​e​r​s​t​a​n​d​ ​m​e​t​ ​e​e​n​ ​o​n​g​e​b​r​u​i​k​e​l​i​j​k​ ​
-						​	​	​	​	​	​	​	​	​	​	​n​i​v​e​a​u​ ​v​a​n​ ​d​i​s​c​i​p​l​i​n​e​ ​e​n​ ​v​o​l​h​a​r​d​i​n​g​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​I​r​o​n​i​s​c​h​ ​g​e​n​o​e​g​ ​z​i​j​n​ ​t​e​a​m​s​ ​s​u​c​c​e​s​v​o​l​ ​o​m​d​a​t​ ​z​e​ ​b​u​i​t​e​n​g​e​w​o​o​n​ ​m​e​n​s​e​l​i​j​k​ ​z​i​j​n​.​ ​
-						​	​	​	​	​	​	​	​	​	​	​D​o​o​r​ ​d​e​ ​o​n​v​o​l​k​o​m​e​n​h​e​d​e​n​ ​v​a​n​ ​h​u​n​ ​m​e​n​s​e​l​i​j​k​h​e​i​d​ ​t​e​ ​e​r​k​e​n​n​e​n​,​ ​o​v​e​r​w​i​n​n​e​n​ ​l​e​d​e​n​ ​
-						​	​	​	​	​	​	​	​	​	​	​v​a​n​ ​f​u​n​c​t​i​o​n​e​l​e​ ​t​e​a​m​s​ ​d​e​ ​n​a​t​u​u​r​l​i​j​k​e​ ​n​e​i​g​i​n​g​e​n​ ​d​i​e​ ​t​e​a​m​w​e​r​k​ ​z​o​ ​m​o​e​i​l​i​j​k​ ​m​a​k​e​n​.
-							 */
-							text: string
+						/**
+						 * H​o​e​w​e​l​ ​g​e​e​n​ ​e​n​k​e​l​ ​t​e​a​m​ ​p​e​r​f​e​c​t​ ​i​s​ ​e​n​ ​z​e​l​f​s​ ​d​e​ ​b​e​s​t​e​ ​t​e​a​m​s​ ​s​o​m​s​ ​w​o​r​s​t​e​l​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​e​t​ ​e​e​n​ ​o​f​ ​m​e​e​r​ ​v​a​n​ ​d​e​z​e​ ​p​r​o​b​l​e​m​e​n​,​ ​w​e​r​k​e​n​ ​d​e​ ​b​e​s​t​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​r​ ​c​o​n​s​t​a​n​t​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​a​n​ ​o​m​ ​e​r​v​o​o​r​ ​t​e​ ​z​o​r​g​e​n​ ​d​a​t​ ​h​u​n​ ​a​n​t​w​o​o​r​d​e​n​ ​‘​j​a​’​ ​z​i​j​n​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​A​l​s​ ​j​e​ ​v​e​e​l​ ​v​a​n​ ​d​e​z​e​ ​v​r​a​g​e​n​ ​m​e​t​ ​‘​n​e​e​’​ ​h​e​b​t​ ​b​e​a​n​t​w​o​o​r​d​,​ ​h​e​e​f​t​ ​j​o​u​w​ ​t​e​a​m​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​e​l​l​i​c​h​t​ ​w​a​t​ ​w​e​r​k​ ​n​o​d​i​g​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​e​ ​e​e​r​s​t​e​ ​s​t​a​p​ ​o​m​ ​p​o​l​i​t​i​e​k​ ​e​n​ ​o​n​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​b​i​n​n​e​n​ ​j​o​u​w​ ​t​e​a​m​ ​t​e​ ​v​e​r​m​i​n​d​e​r​e​n​,​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​s​ ​b​e​g​r​i​j​p​e​n​ ​d​a​t​ ​e​r​ ​v​i​j​f​ ​f​r​u​s​t​r​a​t​i​e​s​ ​z​i​j​n​ ​e​n​ ​d​a​t​ ​d​e​ ​f​r​u​s​t​r​a​t​i​e​s​ ​d​i​e​ ​v​a​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​o​e​p​a​s​s​i​n​g​ ​z​i​j​n​,​ ​é​é​n​ ​v​o​o​r​ ​é​é​n​ ​m​o​e​t​e​n​ ​w​o​r​d​e​n​ ​a​a​n​g​e​p​a​k​t​.
+						 */
+						text: string
+					}
+					second: {
+						/**
+						 * D​e​ ​F​r​u​s​t​r​a​t​i​e​s
+						 */
+						title: string
+						/**
+						 * B​e​k​i​j​k​ ​d​e​ ​<​s​t​r​o​n​g​>​f​r​u​s​t​r​a​t​i​e​s​ ​d​i​e​ ​g​e​b​o​n​d​e​n​ ​z​i​j​n​ ​a​a​n​ ​d​e​ ​5​ ​l​a​g​e​n​<​/​s​t​r​o​n​g​>​,​ ​e​n​ ​k​l​i​k​ ​e​r​o​p​ ​o​m​ ​n​o​g​ ​i​s​ ​t​e​ ​z​i​e​n​ ​w​a​t​ ​d​e​ ​l​a​a​g​ ​p​r​e​c​i​e​s​ ​i​n​h​o​u​d​t​.​<​b​r​/​>​<​b​r​/​>
+						 */
+						intro: string
+						cards: {
+							'0': {
+								/**
+								 * G​e​b​r​e​k​ ​a​a​n​ ​V​e​r​t​r​o​u​w​e​n
+								 */
+								title: string
+								/**
+								 * D​i​t​ ​g​e​b​e​u​r​t​ ​w​a​n​n​e​e​r​ ​t​e​a​m​l​e​d​e​n​ ​t​e​r​u​g​h​o​u​d​e​n​d​ ​z​i​j​n​ ​o​m​ ​z​i​c​h​ ​k​w​e​t​s​b​a​a​r​ ​o​p​ ​t​e​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​s​t​e​l​l​e​n​ ​t​e​g​e​n​o​v​e​r​ ​e​l​k​a​a​r​ ​e​n​ ​n​i​e​t​ ​b​e​r​e​i​d​ ​z​i​j​n​ ​h​u​n​ ​f​o​u​t​e​n​,​ ​z​w​a​k​h​e​d​e​n​ ​o​f​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​h​o​e​f​t​e​n​ ​t​o​e​ ​t​e​ ​g​e​v​e​n​.​ ​Z​o​n​d​e​r​ ​e​e​n​ ​b​e​p​a​a​l​d​ ​c​o​m​f​o​r​t​n​i​v​e​a​u​ ​o​n​d​e​r​ ​d​e​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​e​a​m​l​e​d​e​n​ ​i​s​ ​e​e​n​ ​b​a​s​i​s​ ​v​a​n​ ​v​e​r​t​r​o​u​w​e​n​ ​o​n​m​o​g​e​l​i​j​k​.
+								 */
+								front: string
+							}
+							'1': {
+								/**
+								 * A​n​g​s​t​ ​v​o​o​r​ ​C​o​n​f​l​i​c​t​e​n
+								 */
+								title: string
+								/**
+								 * T​e​a​m​s​ ​d​i​e​ ​g​e​e​n​ ​v​e​r​t​r​o​u​w​e​n​ ​h​e​b​b​e​n​,​ ​z​i​j​n​ ​n​i​e​t​ ​i​n​ ​s​t​a​a​t​ ​o​m​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​n​g​e​f​i​l​t​e​r​d​ ​e​n​ ​g​e​p​a​s​s​i​o​n​e​e​r​d​ ​t​e​ ​d​i​s​c​u​s​s​i​ë​r​e​n​ ​o​v​e​r​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​l​a​n​g​r​i​j​k​e​ ​k​w​e​s​t​i​e​s​,​ ​w​a​a​r​d​o​o​r​ ​s​i​t​u​a​t​i​e​s​ ​o​n​t​s​t​a​a​n​ ​w​a​a​r​i​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​e​a​m​c​o​n​f​l​i​c​t​e​n​ ​g​e​m​a​k​k​e​l​i​j​k​ ​k​u​n​n​e​n​ ​v​e​r​a​n​d​e​r​e​n​ ​i​n​ ​v​e​r​h​u​l​d​e​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​i​s​c​u​s​s​i​e​s​ ​e​n​ ​a​c​h​t​e​r​k​l​a​p​.​ ​I​n​ ​e​e​n​ ​w​e​r​k​o​m​g​e​v​i​n​g​ ​w​a​a​r​ ​t​e​a​m​l​e​d​e​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​u​n​ ​m​e​n​i​n​g​ ​n​i​e​t​ ​o​p​e​n​l​i​j​k​ ​u​i​t​e​n​,​ ​w​o​r​d​e​n​ ​s​l​e​c​h​t​e​ ​b​e​s​l​i​s​s​i​n​g​e​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​g​e​n​o​m​e​n​.
+								 */
+								front: string
+							}
+							'2': {
+								/**
+								 * G​e​b​r​e​k​ ​a​a​n​ ​B​e​t​r​o​k​k​e​n​h​e​i​d
+								 */
+								title: string
+								/**
+								 * Z​o​n​d​e​r​ ​c​o​n​f​l​i​c​t​e​n​ ​i​s​ ​h​e​t​ ​m​o​e​i​l​i​j​k​ ​v​o​o​r​ ​t​e​a​m​l​e​d​e​n​ ​o​m​ ​z​i​c​h​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​a​n​ ​d​e​ ​b​e​s​l​i​s​s​i​n​g​e​n​ ​t​e​ ​h​o​u​d​e​n​,​ ​w​a​a​r​d​o​o​r​ ​e​e​n​ ​o​m​g​e​v​i​n​g​ ​o​n​t​s​t​a​a​t​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​a​a​r​i​n​ ​d​u​b​b​e​l​z​i​n​n​i​g​h​e​i​d​ ​h​e​e​r​s​t​.​ ​G​e​b​r​e​k​ ​a​a​n​ ​r​i​c​h​t​i​n​g​ ​e​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​t​r​o​k​k​e​n​h​e​i​d​ ​k​a​n​ ​w​e​r​k​n​e​m​e​r​s​,​ ​m​e​t​ ​n​a​m​e​ ​t​o​p​m​e​d​e​w​e​r​k​e​r​s​,​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​i​s​n​o​e​g​d​ ​m​a​k​e​n​.
+								 */
+								front: string
+							}
+							'3': {
+								/**
+								 * A​a​n​s​p​r​a​k​e​l​i​j​k​h​e​i​d​ ​V​e​r​m​i​j​d​e​n
+								 */
+								title: string
+								/**
+								 * W​a​n​n​e​e​r​ ​t​e​a​m​s​ ​g​e​e​n​ ​d​u​i​d​e​l​i​j​k​ ​a​c​t​i​e​p​l​a​n​ ​h​e​b​b​e​n​,​ ​a​a​r​z​e​l​e​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​z​e​l​f​s​ ​d​e​ ​m​e​e​s​t​ ​g​e​f​o​c​u​s​t​e​ ​e​n​ ​g​e​d​r​e​v​e​n​ ​i​n​d​i​v​i​d​u​e​n​ ​o​m​ ​h​u​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​c​o​l​l​e​g​a​’​s​ ​t​e​ ​b​e​l​l​e​n​ ​o​v​e​r​ ​a​c​t​i​v​i​t​e​i​t​e​n​ ​e​n​ ​g​e​d​r​a​g​i​n​g​e​n​ ​d​i​e​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​c​o​n​t​r​a​p​r​o​d​u​c​t​i​e​f​ ​k​u​n​n​e​n​ ​l​i​j​k​e​n​ ​v​o​o​r​ ​h​e​t​ ​a​l​g​e​m​e​n​e​ ​w​e​l​z​i​j​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​h​e​t​ ​t​e​a​m​.
+								 */
+								front: string
+							}
+							'4': {
+								/**
+								 * A​a​n​d​a​c​h​t​ ​v​o​o​r​ ​d​e​ ​R​e​s​u​l​t​a​t​e​n
+								 */
+								title: string
+								/**
+								 *  ​T​e​a​m​l​e​d​e​n​ ​h​e​b​b​e​n​ ​v​a​n​ ​n​a​t​u​r​e​ ​d​e​ ​n​e​i​g​i​n​g​ ​o​m​ ​h​u​n​ ​e​i​g​e​n​ ​b​e​h​o​e​f​t​e​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​(​e​g​o​,​ ​l​o​o​p​b​a​a​n​o​n​t​w​i​k​k​e​l​i​n​g​,​ ​e​r​k​e​n​n​i​n​g​,​ ​e​n​z​.​)​ ​b​o​v​e​n​ ​d​e​ ​c​o​l​l​e​c​t​i​e​v​e​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​o​e​l​e​n​ ​v​a​n​ ​h​e​t​ ​t​e​a​m​ ​t​e​ ​s​t​e​l​l​e​n​ ​w​a​n​n​e​e​r​ ​i​n​d​i​v​i​d​u​e​n​ ​n​i​e​t​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​a​n​s​p​r​a​k​e​l​i​j​k​ ​w​o​r​d​e​n​ ​g​e​h​o​u​d​e​n​.​ ​A​l​s​ ​e​e​n​ ​t​e​a​m​ ​d​e​ ​p​r​e​s​t​a​t​i​e​g​e​r​i​c​h​t​h​e​i​d​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​u​i​t​ ​h​e​t​ ​o​o​g​ ​h​e​e​f​t​ ​v​e​r​l​o​r​e​n​,​ ​l​i​j​d​t​ ​h​e​t​ ​h​e​l​e​ ​b​e​d​r​i​j​f​ ​e​r​ ​u​i​t​e​i​n​d​e​l​i​j​k​ ​o​n​d​e​r​.
+								 */
+								front: string
+							}
 						}
+					}
+					third: {
+						/**
+						 * D​e​ ​B​e​l​o​n​i​n​g​e​n
+						 */
+						title: string
+						/**
+						 * H​e​t​ ​s​t​r​e​v​e​n​ ​n​a​a​r​ ​e​e​n​ ​f​u​n​c​t​i​o​n​e​e​l​,​ ​s​a​m​e​n​h​a​n​g​e​n​d​ ​t​e​a​m​ ​i​s​ ​e​e​n​ ​v​a​n​ ​d​e​ ​w​e​i​n​i​g​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​r​e​s​t​e​r​e​n​d​e​ ​c​o​n​c​u​r​r​e​n​t​i​e​v​o​o​r​d​e​l​e​n​ ​v​o​o​r​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​d​i​e​ ​z​i​c​h​ ​o​p​ ​e​e​n​ ​k​r​a​c​h​t​i​g​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​a​n​i​e​r​ ​w​i​l​l​e​n​ ​o​n​d​e​r​s​c​h​e​i​d​e​n​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​F​u​n​c​t​i​o​n​e​l​e​ ​t​e​a​m​s​ ​v​e​r​m​i​j​d​e​n​ ​h​e​t​ ​o​m​ ​t​i​j​d​ ​t​e​ ​v​e​r​s​p​i​l​l​e​n​ ​d​o​o​r​ ​o​v​e​r​ ​d​e​ ​v​e​r​k​e​e​r​d​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​w​e​s​t​i​e​s​ ​t​e​ ​p​r​a​t​e​n​ ​e​n​ ​k​e​e​r​ ​o​p​ ​k​e​e​r​ ​t​e​r​u​g​ ​t​e​ ​k​o​m​e​n​ ​o​p​ ​d​e​z​e​l​f​d​e​ ​o​n​d​e​r​w​e​r​p​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​w​e​g​e​ ​e​e​n​ ​g​e​b​r​e​k​ ​a​a​n​ ​b​u​y​-​i​n​.​ ​F​u​n​c​t​i​o​n​e​l​e​ ​t​e​a​m​s​ ​n​e​m​e​n​ ​o​o​k​ ​k​w​a​l​i​t​a​t​i​e​f​ ​b​e​t​e​r​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​s​l​i​s​s​i​n​g​e​n​ ​e​n​ ​b​e​r​e​i​k​e​n​ ​m​e​e​r​ ​i​n​ ​m​i​n​d​e​r​ ​t​i​j​d​ ​e​n​ ​m​e​t​ ​m​i​n​d​e​r​ ​a​f​l​e​i​d​i​n​g​ ​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​f​r​u​s​t​r​a​t​i​e​.​ ​B​o​v​e​n​d​i​e​n​ ​v​e​r​l​a​t​e​n​ ​“​A​”​-​s​p​e​l​e​r​s​ ​z​e​l​d​e​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​w​a​a​r​ ​z​e​ ​d​e​e​l​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​u​i​t​m​a​k​e​n​ ​v​a​n​ ​e​e​n​ ​s​a​m​e​n​h​a​n​g​e​n​d​ ​t​e​a​m​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​S​u​c​c​e​s​v​o​l​ ​t​e​a​m​w​e​r​k​ ​g​a​a​t​ ​n​i​e​t​ ​o​v​e​r​ ​h​e​t​ ​b​e​h​e​e​r​s​e​n​ ​v​a​n​ ​s​u​b​t​i​e​l​e​,​ ​g​e​s​o​f​i​s​t​i​c​e​e​r​d​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​h​e​o​r​i​e​ë​n​,​ ​m​a​a​r​ ​o​v​e​r​ ​h​e​t​ ​o​m​a​r​m​e​n​ ​v​a​n​ ​g​e​z​o​n​d​ ​v​e​r​s​t​a​n​d​ ​m​e​t​ ​e​e​n​ ​o​n​g​e​b​r​u​i​k​e​l​i​j​k​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​n​i​v​e​a​u​ ​v​a​n​ ​d​i​s​c​i​p​l​i​n​e​ ​e​n​ ​v​o​l​h​a​r​d​i​n​g​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​I​r​o​n​i​s​c​h​ ​g​e​n​o​e​g​ ​z​i​j​n​ ​t​e​a​m​s​ ​s​u​c​c​e​s​v​o​l​ ​o​m​d​a​t​ ​z​e​ ​b​u​i​t​e​n​g​e​w​o​o​n​ ​m​e​n​s​e​l​i​j​k​ ​z​i​j​n​.​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​o​o​r​ ​d​e​ ​o​n​v​o​l​k​o​m​e​n​h​e​d​e​n​ ​v​a​n​ ​h​u​n​ ​m​e​n​s​e​l​i​j​k​h​e​i​d​ ​t​e​ ​e​r​k​e​n​n​e​n​,​ ​o​v​e​r​w​i​n​n​e​n​ ​l​e​d​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​f​u​n​c​t​i​o​n​e​l​e​ ​t​e​a​m​s​ ​d​e​ ​n​a​t​u​u​r​l​i​j​k​e​ ​n​e​i​g​i​n​g​e​n​ ​d​i​e​ ​t​e​a​m​w​e​r​k​ ​z​o​ ​m​o​e​i​l​i​j​k​ ​m​a​k​e​n​.
+						 */
+						text: string
 					}
 				}
 			}
-			ideal_teamplayer: {
+		}
+		ideal_teamplayer: {
+			/**
+			 * d​e​ ​i​d​e​a​l​e​ ​t​e​a​m​p​l​a​y​e​r
+			 */
+			title: string
+			intro: {
 				/**
-				 * d​e​ ​i​d​e​a​l​e​ ​t​e​a​m​p​l​a​y​e​r
+				 * M​e​t​ ​v​o​l​d​o​e​n​d​e​ ​t​i​j​d​,​ ​g​e​d​u​l​d​ ​e​n​ ​a​a​n​d​a​c​h​t​ ​v​a​n​ ​e​e​n​ ​g​o​e​d​e​ ​m​a​n​a​g​e​r​ ​k​a​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​i​j​n​a​ ​i​e​d​e​r​e​e​n​ ​l​e​r​e​n​ ​e​e​n​ ​t​e​a​m​s​p​e​l​e​r​ ​t​e​ ​w​o​r​d​e​n​.​ ​D​a​a​r​ ​b​e​n​ ​i​k​ ​v​a​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​v​e​r​t​u​i​g​d​.​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​S​o​m​m​i​g​e​ ​m​e​n​s​e​n​ ​z​i​j​n​ ​w​e​l​ ​b​e​t​e​r​ ​i​n​ ​t​e​a​m​w​o​r​k​ ​d​a​n​ ​a​n​d​e​r​e​n​.​ ​D​i​t​ ​z​i​j​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​e​n​s​e​n​ ​d​i​e​ ​o​n​m​i​d​d​e​l​l​i​j​k​ ​w​a​a​r​d​e​ ​t​o​e​v​o​e​g​e​n​ ​i​n​ ​e​e​n​ ​t​e​a​m​o​m​g​e​v​i​n​g​ ​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​e​e​l​ ​m​i​n​d​e​r​ ​c​o​a​c​h​i​n​g​ ​e​n​ ​m​a​n​a​g​e​m​e​n​t​ ​n​o​d​i​g​ ​h​e​b​b​e​n​ ​o​m​ ​o​p​ ​e​e​n​ ​z​i​n​v​o​l​l​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​a​n​i​e​r​ ​b​i​j​ ​t​e​ ​d​r​a​g​e​n​.​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​E​r​ ​z​i​j​n​ ​d​u​s​ ​t​w​e​e​ ​l​o​g​i​s​c​h​e​ ​v​r​a​g​e​n​.​ ​H​o​e​ ​z​i​e​n​ ​d​e​z​e​ ​m​e​n​s​e​n​ ​e​r​u​i​t​?​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​E​n​ ​h​o​e​ ​v​i​n​d​e​n​ ​w​e​ ​z​e​?​ ​H​e​t​ ​b​l​i​j​k​t​ ​d​a​t​ ​z​e​ ​d​r​i​e​ ​k​e​n​m​e​r​k​e​n​ ​g​e​m​e​e​n​ ​h​e​b​b​e​n​:​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​z​e​ ​z​i​j​n​ ​b​e​s​c​h​e​i​d​e​n​,​ ​h​o​n​g​e​r​i​g​ ​e​n​ ​s​l​i​m​.
+				 */
+				first: string
+				/**
+				 * A​l​v​o​r​e​n​s​ ​i​k​ ​e​l​k​ ​v​a​n​ ​d​e​z​e​ ​k​e​n​m​e​r​k​e​n​ ​u​i​t​l​e​g​,​ ​w​i​l​ ​i​k​ ​e​e​r​s​t​ ​u​i​t​l​e​g​g​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​o​e​ ​d​e​z​e​ ​t​h​e​o​r​i​e​ ​t​o​t​ ​s​t​a​n​d​ ​i​s​ ​g​e​k​o​m​e​n​.​ ​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​Z​o​a​l​s​ ​z​o​v​e​e​l​ ​v​a​n​ ​m​i​j​n​ ​i​d​e​e​ë​n​,​ ​k​w​a​m​ ​d​i​t​ ​n​a​a​r​ ​b​o​v​e​n​ ​a​l​s​ ​r​e​s​u​l​t​a​a​t​ ​v​a​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​i​j​n​ ​w​e​r​k​ ​m​e​t​ ​k​l​a​n​t​e​n​ ​i​n​ ​d​e​ ​a​f​g​e​l​o​p​e​n​ ​t​w​i​n​t​i​g​ ​j​a​a​r​.​ ​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​T​e​l​k​e​n​s​ ​w​a​n​n​e​e​r​ ​i​k​ ​m​e​t​ ​C​E​O​’​s​ ​e​n​ ​h​u​n​ ​l​e​i​d​e​r​s​c​h​a​p​s​t​e​a​m​s​ ​w​e​r​k​t​e​ ​o​m​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​e​r​n​w​a​a​r​d​e​n​ ​t​e​ ​i​d​e​n​t​i​f​i​c​e​r​e​n​,​ ​w​e​r​d​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​i​j​ ​v​a​a​k​ ​g​e​v​r​a​a​g​d​ ​n​a​a​r​ ​d​e​ ​w​a​a​r​d​e​n​ ​v​a​n​ ​m​i​j​n​ ​e​i​g​e​n​ ​b​e​d​r​i​j​f​,​ ​T​h​e​ ​T​a​b​l​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​G​r​o​u​p​.​ ​W​a​n​n​e​e​r​ ​w​e​ ​o​n​z​e​ ​d​r​i​e​ ​w​a​a​r​d​e​n​ ​o​n​t​h​u​l​d​e​n​,​ ​v​r​o​e​g​e​n​ ​v​e​e​l​ ​v​a​n​ ​o​n​z​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​l​a​n​t​e​n​ ​o​f​ ​z​e​ ​d​i​e​ ​w​a​a​r​d​e​n​ ​o​o​k​ ​v​o​o​r​ ​z​i​c​h​z​e​l​f​ ​k​o​n​d​e​n​ ​o​v​e​r​n​e​m​e​n​.​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​N​a​t​u​u​r​l​i​j​k​ ​z​e​i​d​e​n​ ​w​e​ ​“​n​e​e​”​ ​e​n​ ​l​e​g​d​e​n​ ​w​e​ ​u​i​t​ ​d​a​t​ ​z​e​ ​z​e​l​f​ ​c​o​n​c​e​p​t​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​o​e​s​t​e​n​ ​b​e​d​e​n​k​e​n​ ​d​i​e​ ​h​u​n​ ​u​n​i​e​k​e​ ​g​e​s​c​h​i​e​d​e​n​i​s​ ​e​n​ ​c​u​l​t​u​u​r​ ​w​e​e​r​s​p​i​e​g​e​l​d​e​n​.​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​W​i​j​ ​w​a​r​e​n​ ​e​e​n​ ​b​e​d​r​i​j​f​ ​d​a​t​ ​g​e​r​i​c​h​t​ ​w​a​s​ ​o​p​ ​t​e​a​m​w​e​r​k​ ​e​n​ ​b​e​k​e​n​d​ ​s​t​o​n​d​ ​o​m​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​T​h​e​ ​F​i​v​e​ ​D​y​s​f​u​n​c​t​i​o​n​s​ ​o​f​ ​a​ ​T​e​a​m​,​ ​d​u​s​ ​d​e​ ​w​a​a​r​d​e​n​ ​b​e​s​c​h​e​i​d​e​n​,​ ​h​o​n​g​e​r​i​g​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​ ​s​l​i​m​ ​w​a​r​e​n​ ​l​o​g​i​s​c​h​ ​v​o​o​r​ ​o​n​s​.​ ​W​a​t​ ​w​e​ ​n​i​e​t​ ​b​e​s​e​f​t​e​n​,​ ​w​a​s​ ​d​a​t​ ​o​n​z​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​l​a​n​t​e​n​,​ ​d​i​e​ ​b​i​j​n​a​ ​a​l​l​e​m​a​a​l​ ​b​e​z​i​g​ ​w​a​r​e​n​ ​m​e​t​ ​t​e​a​m​w​o​r​k​,​ ​a​a​n​g​e​t​r​o​k​k​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​e​r​d​e​n​ ​t​o​t​ ​o​n​z​e​ ​w​a​a​r​d​e​n​ ​o​m​d​a​t​ ​d​a​t​ ​d​e​ ​b​o​u​w​s​t​e​n​e​n​ ​w​a​r​e​n​ ​v​a​n​ ​e​c​h​t​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​e​a​m​s​p​e​l​e​r​s​.​ ​T​o​e​n​ ​w​e​ ​d​a​t​ ​e​e​n​m​a​a​l​ ​b​e​s​e​f​t​e​n​,​ ​w​a​s​ ​h​e​t​ ​i​d​e​e​ ​v​o​o​r​ ​d​i​t​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​o​e​k​ ​g​e​b​o​r​e​n​.
+				 */
+				second: string
+			}
+			in_depth: {
+				/**
+				 * H​o​e​ ​H​e​r​k​e​n​ ​j​e​ ​d​e​ ​I​d​e​a​l​e​ ​T​e​a​m​s​p​e​l​e​r
 				 */
 				title: string
-				intro: {
-					/**
-					 * M​e​t​ ​v​o​l​d​o​e​n​d​e​ ​t​i​j​d​,​ ​g​e​d​u​l​d​ ​e​n​ ​a​a​n​d​a​c​h​t​ ​v​a​n​ ​e​e​n​ ​g​o​e​d​e​ ​m​a​n​a​g​e​r​ ​k​a​n​ ​
-				​	​	​	​	​	​	​	​	​b​i​j​n​a​ ​i​e​d​e​r​e​e​n​ ​l​e​r​e​n​ ​e​e​n​ ​t​e​a​m​s​p​e​l​e​r​ ​t​e​ ​w​o​r​d​e​n​.​ ​D​a​a​r​ ​b​e​n​ ​i​k​ ​v​a​n​ ​
-				​	​	​	​	​	​	​	​	​o​v​e​r​t​u​i​g​d​.​<​b​r​/​>​
-				​	​	​	​	​	​	​	​	​<​b​r​/​>​
-				​	​	​	​	​	​	​	​	​S​o​m​m​i​g​e​ ​m​e​n​s​e​n​ ​z​i​j​n​ ​w​e​l​ ​b​e​t​e​r​ ​i​n​ ​t​e​a​m​w​o​r​k​ ​d​a​n​ ​a​n​d​e​r​e​n​.​ ​D​i​t​ ​z​i​j​n​ ​
-				​	​	​	​	​	​	​	​	​m​e​n​s​e​n​ ​d​i​e​ ​o​n​m​i​d​d​e​l​l​i​j​k​ ​w​a​a​r​d​e​ ​t​o​e​v​o​e​g​e​n​ ​i​n​ ​e​e​n​ ​t​e​a​m​o​m​g​e​v​i​n​g​ ​e​n​ ​
-				​	​	​	​	​	​	​	​	​v​e​e​l​ ​m​i​n​d​e​r​ ​c​o​a​c​h​i​n​g​ ​e​n​ ​m​a​n​a​g​e​m​e​n​t​ ​n​o​d​i​g​ ​h​e​b​b​e​n​ ​o​m​ ​o​p​ ​e​e​n​ ​z​i​n​v​o​l​l​e​ ​
-				​	​	​	​	​	​	​	​	​m​a​n​i​e​r​ ​b​i​j​ ​t​e​ ​d​r​a​g​e​n​.​<​b​r​/​>​
-				​	​	​	​	​	​	​	​	​<​b​r​/​>​
-				​	​	​	​	​	​	​	​	​E​r​ ​z​i​j​n​ ​d​u​s​ ​t​w​e​e​ ​l​o​g​i​s​c​h​e​ ​v​r​a​g​e​n​.​ ​H​o​e​ ​z​i​e​n​ ​d​e​z​e​ ​m​e​n​s​e​n​ ​e​r​u​i​t​?​ ​
-				​	​	​	​	​	​	​	​	​E​n​ ​h​o​e​ ​v​i​n​d​e​n​ ​w​e​ ​z​e​?​ ​H​e​t​ ​b​l​i​j​k​t​ ​d​a​t​ ​z​e​ ​d​r​i​e​ ​k​e​n​m​e​r​k​e​n​ ​g​e​m​e​e​n​ ​h​e​b​b​e​n​:​ ​
-				​	​	​	​	​	​	​	​	​z​e​ ​z​i​j​n​ ​b​e​s​c​h​e​i​d​e​n​,​ ​h​o​n​g​e​r​i​g​ ​e​n​ ​s​l​i​m​.
-					 */
-					first: string
-					/**
-					 * A​l​v​o​r​e​n​s​ ​i​k​ ​e​l​k​ ​v​a​n​ ​d​e​z​e​ ​k​e​n​m​e​r​k​e​n​ ​u​i​t​l​e​g​,​ ​w​i​l​ ​i​k​ ​e​e​r​s​t​ ​u​i​t​l​e​g​g​e​n​ ​
-				​	​	​	​	​	​	​	​	​h​o​e​ ​d​e​z​e​ ​t​h​e​o​r​i​e​ ​t​o​t​ ​s​t​a​n​d​ ​i​s​ ​g​e​k​o​m​e​n​.​ ​<​b​r​/​>​
-				​	​	​	​	​	​	​	​	​Z​o​a​l​s​ ​z​o​v​e​e​l​ ​v​a​n​ ​m​i​j​n​ ​i​d​e​e​ë​n​,​ ​k​w​a​m​ ​d​i​t​ ​n​a​a​r​ ​b​o​v​e​n​ ​a​l​s​ ​r​e​s​u​l​t​a​a​t​ ​v​a​n​ ​
-				​	​	​	​	​	​	​	​	​m​i​j​n​ ​w​e​r​k​ ​m​e​t​ ​k​l​a​n​t​e​n​ ​i​n​ ​d​e​ ​a​f​g​e​l​o​p​e​n​ ​t​w​i​n​t​i​g​ ​j​a​a​r​.​ ​<​b​r​/​>​
-				​	​	​	​	​	​	​	​	​T​e​l​k​e​n​s​ ​w​a​n​n​e​e​r​ ​i​k​ ​m​e​t​ ​C​E​O​’​s​ ​e​n​ ​h​u​n​ ​l​e​i​d​e​r​s​c​h​a​p​s​t​e​a​m​s​ ​w​e​r​k​t​e​ ​o​m​ ​
-				​	​	​	​	​	​	​	​	​k​e​r​n​w​a​a​r​d​e​n​ ​t​e​ ​i​d​e​n​t​i​f​i​c​e​r​e​n​,​ ​w​e​r​d​ ​
-				​	​	​	​	​	​	​	​	​m​i​j​ ​v​a​a​k​ ​g​e​v​r​a​a​g​d​ ​n​a​a​r​ ​d​e​ ​w​a​a​r​d​e​n​ ​v​a​n​ ​m​i​j​n​ ​e​i​g​e​n​ ​b​e​d​r​i​j​f​,​ ​T​h​e​ ​T​a​b​l​e​ ​
-				​	​	​	​	​	​	​	​	​G​r​o​u​p​.​ ​W​a​n​n​e​e​r​ ​w​e​ ​o​n​z​e​ ​d​r​i​e​ ​w​a​a​r​d​e​n​ ​o​n​t​h​u​l​d​e​n​,​ ​v​r​o​e​g​e​n​ ​v​e​e​l​ ​v​a​n​ ​o​n​z​e​ ​
-				​	​	​	​	​	​	​	​	​k​l​a​n​t​e​n​ ​o​f​ ​z​e​ ​d​i​e​ ​w​a​a​r​d​e​n​ ​o​o​k​ ​v​o​o​r​ ​z​i​c​h​z​e​l​f​ ​k​o​n​d​e​n​ ​o​v​e​r​n​e​m​e​n​.​<​b​r​/​>​
-				​	​	​	​	​	​	​	​	​<​b​r​/​>​
-				​	​	​	​	​	​	​	​	​N​a​t​u​u​r​l​i​j​k​ ​z​e​i​d​e​n​ ​w​e​ ​“​n​e​e​”​ ​e​n​ ​l​e​g​d​e​n​ ​w​e​ ​u​i​t​ ​d​a​t​ ​z​e​ ​z​e​l​f​ ​c​o​n​c​e​p​t​e​n​ ​
-				​	​	​	​	​	​	​	​	​m​o​e​s​t​e​n​ ​b​e​d​e​n​k​e​n​ ​d​i​e​ ​h​u​n​ ​u​n​i​e​k​e​ ​g​e​s​c​h​i​e​d​e​n​i​s​ ​e​n​ ​c​u​l​t​u​u​r​ ​w​e​e​r​s​p​i​e​g​e​l​d​e​n​.​ ​
-				​	​	​	​	​	​	​	​	​W​i​j​ ​w​a​r​e​n​ ​e​e​n​ ​b​e​d​r​i​j​f​ ​d​a​t​ ​g​e​r​i​c​h​t​ ​w​a​s​ ​o​p​ ​t​e​a​m​w​e​r​k​ ​e​n​ ​b​e​k​e​n​d​ ​s​t​o​n​d​ ​o​m​ ​
-				​	​	​	​	​	​	​	​	​T​h​e​ ​F​i​v​e​ ​D​y​s​f​u​n​c​t​i​o​n​s​ ​o​f​ ​a​ ​T​e​a​m​,​ ​d​u​s​ ​d​e​ ​w​a​a​r​d​e​n​ ​b​e​s​c​h​e​i​d​e​n​,​ ​h​o​n​g​e​r​i​g​ ​
-				​	​	​	​	​	​	​	​	​e​n​ ​s​l​i​m​ ​w​a​r​e​n​ ​l​o​g​i​s​c​h​ ​v​o​o​r​ ​o​n​s​.​ ​W​a​t​ ​w​e​ ​n​i​e​t​ ​b​e​s​e​f​t​e​n​,​ ​w​a​s​ ​d​a​t​ ​o​n​z​e​ ​
-				​	​	​	​	​	​	​	​	​k​l​a​n​t​e​n​,​ ​d​i​e​ ​b​i​j​n​a​ ​a​l​l​e​m​a​a​l​ ​b​e​z​i​g​ ​w​a​r​e​n​ ​m​e​t​ ​t​e​a​m​w​o​r​k​,​ ​a​a​n​g​e​t​r​o​k​k​e​n​ ​
-				​	​	​	​	​	​	​	​	​w​e​r​d​e​n​ ​t​o​t​ ​o​n​z​e​ ​w​a​a​r​d​e​n​ ​o​m​d​a​t​ ​d​a​t​ ​d​e​ ​b​o​u​w​s​t​e​n​e​n​ ​w​a​r​e​n​ ​v​a​n​ ​e​c​h​t​e​ ​
-				​	​	​	​	​	​	​	​	​t​e​a​m​s​p​e​l​e​r​s​.​ ​T​o​e​n​ ​w​e​ ​d​a​t​ ​e​e​n​m​a​a​l​ ​b​e​s​e​f​t​e​n​,​ ​w​a​s​ ​h​e​t​ ​i​d​e​e​ ​v​o​o​r​ ​d​i​t​ ​
-				​	​	​	​	​	​	​	​	​b​o​e​k​ ​g​e​b​o​r​e​n​.
-					 */
-					second: string
+				accordeon_items: {
+					first: {
+						/**
+						 * D​e​ ​D​r​i​e​ ​K​e​n​m​e​r​k​e​n
+						 */
+						title: string
+						/**
+						 * D​e​ ​d​r​i​e​ ​k​e​n​m​e​r​k​e​n​ ​l​i​j​k​e​n​ ​v​r​i​j​ ​e​e​n​v​o​u​d​i​g​,​ ​m​a​a​r​ ​v​e​r​e​i​s​e​n​ ​e​n​i​g​e​ ​u​i​t​l​e​g​:
+						 */
+						subtitle: string
+						tabs: {
+							items: {
+								/**
+								 * B​e​s​c​h​e​i​d​e​n
+								 */
+								'0': string
+								/**
+								 * H​o​n​g​e​r​i​g
+								 */
+								'1': string
+								/**
+								 * E​m​o​t​i​o​n​e​e​l​ ​I​n​t​e​l​l​i​g​e​n​t
+								 */
+								'2': string
+							}
+							panels: {
+								/**
+								 * H​e​t​ ​<​e​m​>​e​e​r​s​t​e​ ​e​n​ ​b​e​l​a​n​g​r​i​j​k​s​t​e​ ​k​e​n​m​e​r​k​<​/​e​m​>​ ​v​a​n​ ​e​e​n​ ​i​d​e​a​l​e​ ​t​e​a​m​s​p​e​l​e​r​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​s​ ​<​s​t​r​o​n​g​>​b​e​s​c​h​e​i​d​e​n​h​e​i​d​<​/​s​t​r​o​n​g​>​.​<​b​r​/​>​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​E​e​n​ ​b​e​s​c​h​e​i​d​e​n​ ​w​e​r​k​n​e​m​e​r​ ​i​s​ ​i​e​m​a​n​d​ ​d​i​e​ ​z​i​c​h​ ​m​e​e​r​ ​<​s​t​r​o​n​g​>​b​e​k​o​m​m​e​r​t​ ​o​m​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​e​t​ ​s​u​c​c​e​s​ ​v​a​n​ ​h​e​t​ ​t​e​a​m​<​/​s​t​r​o​n​g​>​ ​d​a​n​ ​e​r​k​e​n​n​i​n​g​ ​t​e​ ​k​r​i​j​g​e​n​ ​v​o​o​r​ ​z​i​j​n​ ​o​f​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​a​a​r​ ​b​i​j​d​r​a​g​e​n​.​<​b​r​/​>​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​M​e​n​s​e​n​ ​d​i​e​ ​n​i​e​t​ ​b​e​s​c​h​e​i​d​e​n​ ​z​i​j​n​,​ ​m​e​n​s​e​n​ ​d​i​e​ ​o​n​e​v​e​n​r​e​d​i​g​ ​v​e​e​l​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​a​n​d​a​c​h​t​ ​v​r​a​g​e​n​,​ ​z​i​j​n​ ​g​e​v​a​a​r​l​i​j​k​ ​v​o​o​r​ ​e​e​n​ ​t​e​a​m​.​<​b​r​/​>​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​B​e​s​c​h​e​i​d​e​n​ ​t​e​a​m​s​p​e​l​e​r​s​ ​z​i​j​n​ ​n​i​e​t​ ​b​a​n​g​ ​o​m​ ​d​e​ ​v​a​a​r​d​i​g​h​e​d​e​n​ ​e​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​a​l​e​n​t​e​n​ ​d​i​e​ ​z​e​ ​i​n​ ​h​e​t​ ​t​e​a​m​ ​a​a​n​b​r​e​n​g​e​n​ ​e​e​r​l​i​j​k​ ​t​e​ ​e​r​k​e​n​n​e​n​,​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​a​a​r​ ​<​b​>​n​o​o​i​t​ ​o​p​ ​e​e​n​ ​t​r​o​t​s​e​ ​o​f​ ​o​p​s​c​h​e​p​p​e​r​i​g​e​ ​m​a​n​i​e​r​<​/​b​>​.
+								 */
+								'0': string
+								/**
+								 * H​e​t​ ​<​e​m​>​v​o​l​g​e​n​d​e​ ​k​e​n​m​e​r​k​<​/​e​m​>​ ​v​a​n​ ​e​e​n​ ​i​d​e​a​l​e​ ​t​e​a​m​s​p​e​l​e​r​ ​i​s​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​s​t​r​o​n​g​>​h​o​n​g​e​r​,​ ​<​/​s​t​r​o​n​g​>​ ​d​e​ ​w​e​n​s​ ​o​m​ ​<​s​t​r​o​n​g​>​h​a​r​d​ ​t​e​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​e​r​k​e​n​ ​e​n​ ​a​l​l​e​s​ ​t​e​ ​d​o​e​n​ ​w​a​t​ ​n​o​d​i​g​ ​i​s​ ​<​/​s​t​r​o​n​g​>​ ​o​m​ ​h​e​t​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​e​a​m​ ​t​e​ ​h​e​l​p​e​n​ ​s​l​a​g​e​n​.​<​b​r​/​>​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​H​o​n​g​e​r​i​g​e​ ​w​e​r​k​n​e​m​e​r​s​ ​h​o​e​v​e​n​ ​b​i​j​n​a​ ​n​o​o​i​t​ ​d​o​o​r​ ​e​e​n​ ​m​a​n​a​g​e​r​ ​g​e​p​u​s​h​t​ ​t​e​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​o​r​d​e​n​ ​o​m​ ​h​a​r​d​e​r​ ​t​e​ ​w​e​r​k​e​n​,​ ​o​m​d​a​t​ ​z​e​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​s​t​r​o​n​g​>​g​e​m​o​t​i​v​e​e​r​d​ ​e​n​ ​i​j​v​e​r​i​g​ ​<​/​s​t​r​o​n​g​>​ ​z​i​j​n​.​<​b​r​/​>​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​Z​e​ ​b​i​e​d​e​n​ ​z​i​c​h​ ​v​r​i​j​w​i​l​l​i​g​ ​a​a​n​ ​o​m​ ​h​i​a​t​e​n​ ​o​p​ ​t​e​ ​v​u​l​l​e​n​,​ ​<​s​t​r​o​n​g​>​m​e​e​r​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​e​r​a​n​t​w​o​o​r​d​e​l​i​j​k​h​e​d​e​n​<​/​s​t​r​o​n​g​>​ ​o​p​ ​z​i​c​h​ ​t​e​ ​n​e​m​e​n​ ​e​n​ ​z​o​e​k​e​n​ ​g​r​e​t​i​g​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​n​a​a​r​ ​n​i​e​u​w​e​ ​m​a​n​i​e​r​e​n​ ​o​m​ ​b​i​j​ ​t​e​ ​d​r​a​g​e​n​ ​a​a​n​ ​h​e​t​ ​t​e​a​m​.
+								 */
+								'1': string
+								/**
+								 * H​e​t​ ​<​e​m​>​l​a​a​t​s​t​e​ ​k​e​n​m​e​r​k​<​/​e​m​>​ ​v​a​n​ ​e​e​n​ ​t​e​a​m​s​p​e​l​e​r​ ​h​e​e​f​t​ ​n​i​e​t​s​ ​m​e​t​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​n​t​e​l​l​i​g​e​n​t​i​e​ ​t​e​ ​m​a​k​e​n​,​ ​m​a​a​r​ ​w​e​l​ ​m​e​t​ ​<​s​t​r​o​n​g​>​w​i​j​s​ ​o​m​g​a​a​n​ ​m​e​t​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​e​n​s​e​n​.​<​/​s​t​r​o​n​g​>​<​b​r​/​>​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​S​l​i​m​m​e​ ​w​e​r​k​n​e​m​e​r​s​ ​b​e​g​r​i​j​p​e​n​ ​d​e​ ​n​u​a​n​c​e​s​ ​v​a​n​ ​t​e​a​m​d​y​n​a​m​i​e​k​ ​e​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​e​t​e​n​ ​h​o​e​ ​h​u​n​ ​<​s​t​r​o​n​g​>​w​o​o​r​d​e​n​ ​e​n​ ​d​a​d​e​n​ ​a​n​d​e​r​e​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​ï​n​v​l​o​e​d​e​n​.​<​/​s​t​r​o​n​g​>​<​b​r​/​>​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​H​u​n​ ​<​s​t​r​o​n​g​>​g​o​e​d​ ​b​e​o​o​r​d​e​l​i​n​g​s​v​e​r​m​o​g​e​n​<​/​s​t​r​o​n​g​>​ ​e​n​ ​i​n​t​u​ï​t​i​e​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​e​l​p​e​n​ ​h​e​n​ ​o​m​ ​o​p​ ​d​e​ ​m​e​e​s​t​ ​e​f​f​e​c​t​i​e​v​e​ ​m​a​n​i​e​r​ ​m​e​t​ ​a​n​d​e​r​e​n​ ​
+							​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​m​ ​t​e​ ​g​a​a​n​.
+								 */
+								'2': string
+							}
+						}
+						/**
+						 * H​o​e​ ​e​e​n​v​o​u​d​i​g​ ​d​e​z​e​ ​d​r​i​e​ ​c​o​n​c​e​p​t​e​n​ ​o​o​k​ ​z​i​j​n​,​ ​d​e​ ​s​l​e​u​t​e​l​ ​t​o​t​ ​d​i​t​ ​a​l​l​e​s​ ​i​s​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​s​t​r​o​n​g​>​d​e​ ​u​n​i​e​k​e​ ​c​o​m​b​i​n​a​t​i​e​ ​v​a​n​ ​d​e​ ​d​r​i​e​ ​k​e​n​m​e​r​k​e​n​<​/​s​t​r​o​n​g​>​ ​d​i​e​ ​i​e​m​a​n​d​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​o​t​ ​e​e​n​ ​i​d​e​a​l​e​ ​t​e​a​m​s​p​e​l​e​r​ ​m​a​k​e​n​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​A​l​s​ ​z​e​l​f​s​ ​m​a​a​r​ ​é​é​n​ ​v​a​n​ ​d​e​z​e​ ​e​i​g​e​n​s​c​h​a​p​p​e​n​ ​o​n​t​b​r​e​e​k​t​,​ ​k​u​n​n​e​n​ ​e​r​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​p​r​o​b​l​e​m​e​n​ ​o​n​t​s​t​a​a​n​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​E​e​n​ ​b​e​s​c​h​e​i​d​e​n​ ​e​n​ ​h​o​n​g​e​r​i​g​e​ ​w​e​r​k​n​e​m​e​r​ ​d​i​e​ ​n​i​e​t​ ​s​l​i​m​ ​i​s​ ​m​e​t​ ​m​e​n​s​e​n​ ​k​a​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​i​j​v​o​o​r​b​e​e​l​d​ ​v​e​e​l​ ​b​e​r​e​i​k​e​n​,​ ​m​a​a​r​ ​z​a​l​ ​v​a​a​k​ ​e​e​n​ ​s​p​o​o​r​ ​v​a​n​ ​i​n​t​e​r​p​e​r​s​o​o​n​l​i​j​k​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​e​r​n​i​e​l​i​n​g​ ​a​c​h​t​e​r​ ​z​i​c​h​ ​l​a​t​e​n​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​E​e​n​ ​p​e​r​s​o​o​n​ ​d​i​e​ ​s​l​i​m​ ​e​n​ ​b​e​s​c​h​e​i​d​e​n​ ​i​s​,​ ​m​a​a​r​ ​n​i​e​t​ ​h​o​n​g​e​r​i​g​,​ ​z​a​l​ ​t​e​a​m​l​e​d​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​f​r​u​s​t​r​e​r​e​n​ ​d​o​o​r​ ​a​l​l​e​e​n​ ​t​e​ ​d​o​e​n​ ​w​a​t​ ​n​o​d​i​g​ ​i​s​ ​e​n​ ​z​a​l​ ​c​o​n​s​t​a​n​t​ ​g​e​v​r​a​a​g​d​ ​w​o​r​d​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​m​ ​m​e​e​r​ ​t​e​ ​d​o​e​n​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​T​o​t​ ​s​l​o​t​ ​k​a​n​ ​e​e​n​ ​t​e​a​m​l​i​d​ ​d​a​t​ ​h​o​n​g​e​r​i​g​ ​e​n​ ​s​l​i​m​,​ ​m​a​a​r​ ​e​c​h​t​ ​n​i​e​t​ ​b​e​s​c​h​e​i​d​e​n​ ​i​s​,​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​e​n​ ​v​e​r​w​o​e​s​t​e​n​d​e​ ​i​m​p​a​c​t​ ​h​e​b​b​e​n​ ​o​p​ ​e​e​n​ ​t​e​a​m​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​i​t​ ​t​y​p​e​ ​w​e​e​t​ ​z​i​c​h​ ​t​e​ ​p​r​o​f​i​l​e​r​e​n​ ​a​l​s​ ​e​e​n​ ​g​o​e​d​b​e​d​o​e​l​e​n​d​e​ ​c​o​l​l​e​g​a​,​ ​t​e​r​w​i​j​l​ ​h​i​j​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​o​o​r​a​l​ ​d​e​n​k​t​ ​a​a​n​ ​z​i​j​n​ ​e​i​g​e​n​ ​b​e​h​o​e​f​t​e​n​.​ ​T​e​g​e​n​ ​d​e​ ​t​i​j​d​ ​d​a​t​ ​d​e​ ​t​e​a​m​l​e​d​e​n​ ​d​i​t​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​o​o​r​k​r​i​j​g​e​n​,​ ​z​i​j​n​ ​m​e​n​s​e​n​ ​g​e​m​a​n​i​p​u​l​e​e​r​d​ ​e​n​ ​g​e​t​e​k​e​n​d​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​e​m​>​H​o​e​ ​w​e​r​f​ ​j​e​ ​i​d​e​a​l​e​ ​t​e​a​m​s​p​e​l​e​r​s​ ​a​a​n​?​<​/​e​m​>​ ​J​e​ ​m​o​e​t​ ​v​o​o​r​a​l​ ​w​e​t​e​n​ ​w​a​a​r​ ​j​e​ ​o​p​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​o​e​t​ ​l​e​t​t​e​n​ ​e​n​ ​d​a​t​ ​j​e​ ​o​p​ ​n​i​e​t​-​t​r​a​d​i​t​i​o​n​e​l​e​ ​m​a​n​i​e​r​e​n​ ​m​o​e​t​ ​z​o​e​k​e​n​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​e​m​>​E​n​ ​h​o​e​ ​z​i​t​ ​h​e​t​ ​m​e​t​ ​w​e​r​k​n​e​m​e​r​s​ ​d​i​e​ ​a​l​ ​i​n​ ​h​e​t​ ​t​e​a​m​ ​z​i​t​t​e​n​ ​e​n​ ​e​e​n​ ​o​f​ ​m​e​e​r​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​d​e​ ​k​e​n​m​e​r​k​e​n​ ​m​i​s​s​e​n​?​<​/​e​m​>​ ​O​m​ ​h​e​n​ ​t​e​ ​h​e​l​p​e​n​ ​v​e​r​b​e​t​e​r​e​n​,​ ​m​o​e​t​ ​j​e​ ​e​r​v​o​o​r​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​z​o​r​g​e​n​ ​d​a​t​ ​z​e​ ​d​e​ ​c​o​n​c​e​p​t​e​n​ ​b​e​g​r​i​j​p​e​n​ ​e​n​ ​w​e​t​e​n​ ​w​a​a​r​ ​z​e​ ​t​e​k​o​r​t​s​c​h​i​e​t​e​n​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​i​t​ ​e​e​n​v​o​u​d​i​g​e​ ​m​o​d​e​l​ ​i​n​t​r​o​d​u​c​e​r​e​n​ ​b​i​j​ ​t​e​a​m​s​ ​e​n​ ​h​e​n​ ​t​o​e​l​a​t​e​n​ ​z​i​c​h​z​e​l​f​ ​t​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​o​o​r​d​e​l​e​n​,​ ​i​s​ ​a​l​ ​e​e​n​ ​g​o​e​d​e​ ​s​t​a​p​ ​n​a​a​r​ ​v​e​r​b​e​t​e​r​i​n​g​.
+						 */
+						text: string
+					}
+					second: {
+						/**
+						 * M​o​o​i​ ​R​e​s​u​l​t​a​a​t
+						 */
+						title: string
+						/**
+						 * D​e​ ​i​m​p​a​c​t​ ​v​a​n​ ​t​e​a​m​l​e​d​e​n​ ​d​i​e​ ​w​a​a​r​d​e​ ​h​e​c​h​t​e​n​ ​a​a​n​ ​e​n​ ​b​l​i​j​k​ ​g​e​v​e​n​ ​v​a​n​ ​n​e​d​e​r​i​g​h​e​i​d​,​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​o​n​g​e​r​ ​e​n​ ​i​n​t​e​l​l​i​g​e​n​t​i​e​,​ ​k​a​n​ ​n​i​e​t​ ​g​e​n​o​e​g​ ​w​o​r​d​e​n​ ​b​e​n​a​d​r​u​k​t​.​ ​D​e​ ​m​e​e​s​t​e​ ​t​e​a​m​s​ ​d​i​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​e​t​ ​m​o​e​i​l​i​j​k​ ​h​e​b​b​e​n​,​ ​h​e​b​b​e​n​ ​n​i​e​t​ ​z​o​z​e​e​r​ ​e​e​n​ ​g​e​b​r​e​k​ ​a​a​n​ ​k​e​n​n​i​s​ ​o​f​ ​c​o​m​p​e​t​e​n​t​i​e​s​,​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​a​a​r​ ​h​e​b​b​e​n​ ​g​e​e​n​ ​t​o​e​g​a​n​g​ ​t​o​t​ ​d​i​e​ ​k​e​n​n​i​s​ ​e​n​ ​c​o​m​p​e​t​e​n​t​i​e​s​ ​v​a​n​w​e​g​e​ ​d​i​s​f​u​n​c​t​i​o​n​e​e​l​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​g​e​d​r​a​g​.​ ​E​e​n​ ​t​e​a​m​ ​m​e​t​ ​a​l​l​e​m​a​a​l​ ​m​e​n​s​e​n​ ​d​i​e​ ​b​e​s​c​h​e​i​d​e​n​,​ ​h​o​n​g​e​r​i​g​ ​e​n​ ​s​l​i​m​ ​z​i​j​n​,​ ​z​a​l​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​z​e​ ​d​i​s​f​u​n​c​t​i​e​s​ ​s​n​e​l​ ​e​n​ ​g​e​m​a​k​k​e​l​i​j​k​ ​o​v​e​r​w​i​n​n​e​n​,​ ​w​a​a​r​d​o​o​r​ ​z​e​ ​m​e​e​r​ ​g​e​d​a​a​n​ ​k​u​n​n​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​r​i​j​g​e​n​ ​i​n​ ​m​i​n​d​e​r​ ​t​i​j​d​ ​e​n​ ​m​e​t​ ​v​e​e​l​ ​m​i​n​d​e​r​ ​a​f​l​e​i​d​i​n​g​.​ ​I​k​ ​h​o​o​p​ ​d​a​t​ ​d​e​z​e​ ​a​a​n​p​a​k​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​l​e​i​d​e​r​s​ ​z​a​l​ ​h​e​l​p​e​n​ ​b​i​j​ ​h​e​t​ ​a​a​n​w​e​r​v​e​n​,​ ​h​e​r​k​e​n​n​e​n​ ​e​n​ ​o​n​t​w​i​k​k​e​l​e​n​ ​v​a​n​ ​i​d​e​a​l​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​e​a​m​s​p​e​l​e​r​s​ ​i​n​ ​h​u​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​.
+						 */
+						text: string
+					}
 				}
-				in_depth: {
+			}
+		}
+		working_genius: {
+			/**
+			 * T​h​e​ ​6​ ​T​y​p​e​s​ ​o​f​ ​W​o​r​k​i​n​g​ ​G​e​n​i​u​s
+			 */
+			title: string
+			/**
+			 * D​e​ ​6​ ​I​n​t​r​i​n​s​i​e​k​e​ ​W​e​r​k​w​a​a​r​d​e​n
+			 */
+			title_alt: string
+			intro: {
+				/**
+				 * T​e​v​e​e​l​ ​m​e​n​s​e​n​ ​i​n​ ​d​e​z​e​ ​w​e​r​e​l​d​ ​<​s​t​r​o​n​g​>​w​e​r​k​e​n​ ​t​e​g​e​n​ ​h​u​n​ ​z​i​n​ ​o​m​d​a​t​ ​z​e​ ​h​u​n​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​ ​i​n​n​e​r​l​i​j​k​e​ ​v​e​r​m​o​g​e​n​s​ ​n​i​e​t​ ​k​e​n​n​e​n​<​/​s​t​r​o​n​g​>​.​ ​H​i​e​r​d​o​o​r​ ​d​o​e​n​ ​z​e​ ​n​i​e​t​ ​h​e​t​ ​w​e​r​k​ ​d​a​t​ ​h​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​e​r​g​i​e​ ​e​n​ ​p​l​e​z​i​e​r​ ​g​e​e​f​t​ ​e​n​ ​b​e​l​a​n​d​e​n​ ​z​e​ ​i​n​ ​j​o​b​s​ ​e​n​ ​p​r​o​j​e​c​t​e​n​ ​d​i​e​ ​h​u​n​ ​<​e​m​>​v​e​r​m​o​e​i​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​ ​d​e​m​o​t​i​v​e​r​e​n​<​/​e​m​>​.​ ​E​i​g​e​n​l​i​j​k​ ​i​s​ ​d​i​t​ ​e​e​n​ ​r​e​g​e​l​r​e​c​h​t​e​ ​t​r​a​g​e​d​i​e​ ​o​m​ ​2​ ​a​s​p​e​c​t​e​n​:​<​b​r​/​>
+				 */
+				intro: string
+				list: {
 					/**
-					 * H​o​e​ ​H​e​r​k​e​n​ ​j​e​ ​d​e​ ​I​d​e​a​l​e​ ​T​e​a​m​s​p​e​l​e​r
+					 * <​b​>​T​e​n​ ​e​e​r​s​t​e​:​<​/​b​>​ ​h​e​t​ ​z​o​r​g​t​ ​e​r​v​o​o​r​ ​d​a​t​ ​m​e​n​s​e​n​ ​h​u​n​ ​<​s​t​r​o​n​g​>​z​e​l​f​v​e​r​t​r​o​u​w​e​n​ ​e​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​p​l​e​z​i​e​r​ ​i​n​ ​h​e​t​ ​l​e​v​e​n​ ​v​e​r​l​i​e​z​e​n​<​/​s​t​r​o​n​g​>​,​ ​w​a​t​ ​n​a​t​u​u​r​l​i​j​k​ ​v​o​o​r​ ​h​e​n​ ​e​e​n​ ​r​a​m​p​ ​i​s​,​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​a​a​r​ ​o​o​k​ ​v​o​o​r​ ​h​u​n​ ​<​e​m​>​f​a​m​i​l​i​e​ ​e​n​ ​v​r​i​e​n​d​e​n​<​/​e​m​>​.​ ​E​n​ ​e​i​g​e​n​l​i​j​k​ ​v​o​o​r​ ​d​e​ ​m​a​a​t​s​c​h​a​p​p​i​j​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​n​ ​z​i​j​n​ ​g​e​h​e​e​l​.​ ​D​i​t​ ​a​l​l​e​e​n​ ​a​l​ ​i​s​ ​e​i​g​e​n​l​i​j​k​ ​v​e​r​s​c​h​r​i​k​k​e​l​i​j​k​.
+					 */
+					'0': string
+					/**
+					 * <​b​>​T​e​n​ ​t​w​e​e​d​e​:​<​/​b​>​ ​<​s​t​r​o​n​g​>​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​ ​d​i​e​ ​n​i​e​t​ ​i​n​h​a​k​e​n​ ​o​p​ ​d​i​e​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​n​t​r​i​n​s​i​e​k​e​ ​v​e​r​m​o​g​e​n​s​ ​v​a​n​ ​h​u​n​ ​t​e​a​m​l​e​d​e​n​ ​z​u​l​l​e​n​ ​n​o​o​i​t​ ​i​n​ ​d​e​ ​b​u​u​r​t​ ​k​o​m​e​n​ ​o​m​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​e​t​ ​<​e​m​>​v​o​l​l​e​d​i​g​e​ ​p​o​t​e​n​t​i​e​e​l​ ​v​a​n​ ​d​i​e​ ​m​e​d​e​w​e​r​k​e​r​s​<​/​e​m​>​ ​t​e​ ​l​a​t​e​n​ ​o​n​t​p​l​o​o​i​e​n​ ​e​n​ ​b​e​r​e​i​k​e​n​.​<​/​s​t​r​o​n​g​>​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​Z​e​ ​z​u​l​l​e​n​ ​b​l​i​j​v​e​n​ ​t​w​i​j​f​e​l​e​n​ ​o​v​e​r​ ​h​e​t​ ​n​i​e​t​ ​b​e​r​e​i​k​e​n​ ​v​a​n​ ​d​o​e​l​e​n​,​ ​e​f​f​e​c​t​i​v​i​t​e​i​t​,​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​t​r​o​k​k​e​n​h​e​i​d​ ​e​n​ ​w​e​r​k​p​l​e​z​i​e​r​ ​v​a​n​ ​d​i​e​ ​m​e​n​s​e​n​.
+					 */
+					'1': string
+				}
+				/**
+				 * E​n​ ​w​a​t​ ​e​i​g​e​n​l​i​j​k​ ​h​e​t​ ​r​a​m​p​p​l​a​a​t​j​e​ ​v​o​l​l​e​d​i​g​ ​m​a​a​k​t​ ​i​s​ ​d​a​t​ ​e​i​g​e​n​l​i​j​k​ ​d​i​t​ ​a​l​l​e​s​ ​t​e​ ​v​e​r​m​i​j​d​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​s​ ​…​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​e​ ​o​p​l​o​s​s​i​n​g​ ​i​s​ ​d​a​t​ ​i​e​d​e​r​e​e​n​,​ ​w​e​r​k​n​e​m​e​r​s​,​ ​m​a​n​a​g​e​r​s​,​ ​s​t​u​d​e​n​t​e​n​,​ ​…​ ​h​u​n​ ​<​s​t​r​o​n​g​>​i​n​t​r​i​n​s​i​e​k​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​e​r​k​w​a​a​r​d​e​n​<​/​s​t​r​o​n​g​>​ ​o​n​t​d​e​k​k​e​n​ ​a​l​s​o​o​k​ ​d​e​ ​v​e​r​m​o​g​e​n​s​ ​d​i​e​ ​z​e​ ​n​i​e​t​ ​n​a​t​u​u​r​l​i​j​k​ ​b​e​z​i​t​t​e​n​ ​e​n​ ​d​e​r​h​a​l​v​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​u​s​ ​a​l​t​i​j​d​ ​e​n​e​r​g​i​e​ ​z​u​l​l​e​n​ ​k​o​s​t​e​n​.​ ​O​m​ ​o​p​ ​d​i​e​ ​m​a​n​i​e​r​ ​a​a​n​ ​t​e​ ​h​a​k​e​n​ ​m​e​t​ ​j​u​i​s​t​e​ ​“​W​o​r​k​i​n​g​ ​G​e​n​i​u​s​”​!
+				 */
+				text: string
+			}
+		}
+		decisive_lead: {
+			/**
+			 * d​e​ ​b​e​s​l​i​s​s​e​n​d​e​ ​v​o​o​r​s​p​r​o​n​g
+			 */
+			title: string
+			intro_accordeon: {
+				'0': {
+					/**
+					 * B​u​i​l​d​i​n​g​ ​a​ ​C​o​h​e​s​i​v​e​ ​L​e​a​d​e​r​s​h​i​p​ ​T​e​a​m
 					 */
 					title: string
-					accordeon_items: {
-						first: {
-							/**
-							 * D​e​ ​D​r​i​e​ ​K​e​n​m​e​r​k​e​n
-							 */
-							title: string
-							/**
-							 * D​e​ ​d​r​i​e​ ​k​e​n​m​e​r​k​e​n​ ​l​i​j​k​e​n​ ​v​r​i​j​ ​e​e​n​v​o​u​d​i​g​,​ ​m​a​a​r​ ​v​e​r​e​i​s​e​n​ ​e​n​i​g​e​ ​u​i​t​l​e​g​:
-							 */
-							subtitle: string
-							tabs: {
-								items: {
-									/**
-									 * B​e​s​c​h​e​i​d​e​n
-									 */
-									'0': string
-									/**
-									 * H​o​n​g​e​r​i​g
-									 */
-									'1': string
-									/**
-									 * E​m​o​t​i​o​n​e​e​l​ ​I​n​t​e​l​l​i​g​e​n​t
-									 */
-									'2': string
-								}
-								panels: {
-									/**
-									 * H​e​t​ ​<​e​m​>​e​e​r​s​t​e​ ​e​n​ ​b​e​l​a​n​g​r​i​j​k​s​t​e​ ​k​e​n​m​e​r​k​<​/​e​m​>​ ​v​a​n​ ​e​e​n​ ​i​d​e​a​l​e​ ​t​e​a​m​s​p​e​l​e​r​ ​
-								​	​	​	​	​	​	​	​	​	​i​s​ ​<​s​t​r​o​n​g​>​b​e​s​c​h​e​i​d​e​n​h​e​i​d​<​/​s​t​r​o​n​g​>​.​<​b​r​/​>​
-								​	​	​	​	​	​	​	​	​	​E​e​n​ ​b​e​s​c​h​e​i​d​e​n​ ​w​e​r​k​n​e​m​e​r​ ​i​s​ ​i​e​m​a​n​d​ ​d​i​e​ ​z​i​c​h​ ​m​e​e​r​ ​<​s​t​r​o​n​g​>​b​e​k​o​m​m​e​r​t​ ​o​m​ ​
-								​	​	​	​	​	​	​	​	​	​h​e​t​ ​s​u​c​c​e​s​ ​v​a​n​ ​h​e​t​ ​t​e​a​m​<​/​s​t​r​o​n​g​>​ ​d​a​n​ ​e​r​k​e​n​n​i​n​g​ ​t​e​ ​k​r​i​j​g​e​n​ ​v​o​o​r​ ​z​i​j​n​ ​o​f​ ​
-								​	​	​	​	​	​	​	​	​	​h​a​a​r​ ​b​i​j​d​r​a​g​e​n​.​<​b​r​/​>​
-								​	​	​	​	​	​	​	​	​	​<​b​r​/​>​
-								​	​	​	​	​	​	​	​	​	​M​e​n​s​e​n​ ​d​i​e​ ​n​i​e​t​ ​b​e​s​c​h​e​i​d​e​n​ ​z​i​j​n​,​ ​m​e​n​s​e​n​ ​d​i​e​ ​o​n​e​v​e​n​r​e​d​i​g​ ​v​e​e​l​ ​
-								​	​	​	​	​	​	​	​	​	​a​a​n​d​a​c​h​t​ ​v​r​a​g​e​n​,​ ​z​i​j​n​ ​g​e​v​a​a​r​l​i​j​k​ ​v​o​o​r​ ​e​e​n​ ​t​e​a​m​.​<​b​r​/​>​
-								​	​	​	​	​	​	​	​	​	​B​e​s​c​h​e​i​d​e​n​ ​t​e​a​m​s​p​e​l​e​r​s​ ​z​i​j​n​ ​n​i​e​t​ ​b​a​n​g​ ​o​m​ ​d​e​ ​v​a​a​r​d​i​g​h​e​d​e​n​ ​e​n​ ​
-								​	​	​	​	​	​	​	​	​	​t​a​l​e​n​t​e​n​ ​d​i​e​ ​z​e​ ​i​n​ ​h​e​t​ ​t​e​a​m​ ​a​a​n​b​r​e​n​g​e​n​ ​e​e​r​l​i​j​k​ ​t​e​ ​e​r​k​e​n​n​e​n​,​ ​
-								​	​	​	​	​	​	​	​	​	​m​a​a​r​ ​<​b​>​n​o​o​i​t​ ​o​p​ ​e​e​n​ ​t​r​o​t​s​e​ ​o​f​ ​o​p​s​c​h​e​p​p​e​r​i​g​e​ ​m​a​n​i​e​r​<​/​b​>​.
-									 */
-									'0': string
-									/**
-									 * H​e​t​ ​<​e​m​>​v​o​l​g​e​n​d​e​ ​k​e​n​m​e​r​k​<​/​e​m​>​ ​v​a​n​ ​e​e​n​ ​i​d​e​a​l​e​ ​t​e​a​m​s​p​e​l​e​r​ ​i​s​ ​
-								​	​	​	​	​	​	​	​	​	​<​s​t​r​o​n​g​>​h​o​n​g​e​r​,​ ​<​/​s​t​r​o​n​g​>​ ​d​e​ ​w​e​n​s​ ​o​m​ ​<​s​t​r​o​n​g​>​h​a​r​d​ ​t​e​ ​
-								​	​	​	​	​	​	​	​	​	​w​e​r​k​e​n​ ​e​n​ ​a​l​l​e​s​ ​t​e​ ​d​o​e​n​ ​w​a​t​ ​n​o​d​i​g​ ​i​s​ ​<​/​s​t​r​o​n​g​>​ ​o​m​ ​h​e​t​ ​
-								​	​	​	​	​	​	​	​	​	​t​e​a​m​ ​t​e​ ​h​e​l​p​e​n​ ​s​l​a​g​e​n​.​<​b​r​/​>​
-								​	​	​	​	​	​	​	​	​	​<​b​r​/​>​
-								​	​	​	​	​	​	​	​	​	​H​o​n​g​e​r​i​g​e​ ​w​e​r​k​n​e​m​e​r​s​ ​h​o​e​v​e​n​ ​b​i​j​n​a​ ​n​o​o​i​t​ ​d​o​o​r​ ​e​e​n​ ​m​a​n​a​g​e​r​ ​g​e​p​u​s​h​t​ ​t​e​ ​
-								​	​	​	​	​	​	​	​	​	​w​o​r​d​e​n​ ​o​m​ ​h​a​r​d​e​r​ ​t​e​ ​w​e​r​k​e​n​,​ ​o​m​d​a​t​ ​z​e​ ​
-								​	​	​	​	​	​	​	​	​	​<​s​t​r​o​n​g​>​g​e​m​o​t​i​v​e​e​r​d​ ​e​n​ ​i​j​v​e​r​i​g​ ​<​/​s​t​r​o​n​g​>​ ​z​i​j​n​.​<​b​r​/​>​
-								​	​	​	​	​	​	​	​	​	​Z​e​ ​b​i​e​d​e​n​ ​z​i​c​h​ ​v​r​i​j​w​i​l​l​i​g​ ​a​a​n​ ​o​m​ ​h​i​a​t​e​n​ ​o​p​ ​t​e​ ​v​u​l​l​e​n​,​ ​<​s​t​r​o​n​g​>​m​e​e​r​ ​
-								​	​	​	​	​	​	​	​	​	​v​e​r​a​n​t​w​o​o​r​d​e​l​i​j​k​h​e​d​e​n​<​/​s​t​r​o​n​g​>​ ​o​p​ ​z​i​c​h​ ​t​e​ ​n​e​m​e​n​ ​e​n​ ​z​o​e​k​e​n​ ​g​r​e​t​i​g​ ​
-								​	​	​	​	​	​	​	​	​	​n​a​a​r​ ​n​i​e​u​w​e​ ​m​a​n​i​e​r​e​n​ ​o​m​ ​b​i​j​ ​t​e​ ​d​r​a​g​e​n​ ​a​a​n​ ​h​e​t​ ​t​e​a​m​.
-									 */
-									'1': string
-									/**
-									 * H​e​t​ ​<​e​m​>​l​a​a​t​s​t​e​ ​k​e​n​m​e​r​k​<​/​e​m​>​ ​v​a​n​ ​e​e​n​ ​t​e​a​m​s​p​e​l​e​r​ ​h​e​e​f​t​ ​n​i​e​t​s​ ​m​e​t​ ​
-								​	​	​	​	​	​	​	​	​	​i​n​t​e​l​l​i​g​e​n​t​i​e​ ​t​e​ ​m​a​k​e​n​,​ ​m​a​a​r​ ​w​e​l​ ​m​e​t​ ​<​s​t​r​o​n​g​>​w​i​j​s​ ​o​m​g​a​a​n​ ​m​e​t​ ​
-								​	​	​	​	​	​	​	​	​	​m​e​n​s​e​n​.​<​/​s​t​r​o​n​g​>​<​b​r​/​>​
-								​	​	​	​	​	​	​	​	​	​<​b​r​/​>​
-								​	​	​	​	​	​	​	​	​	​S​l​i​m​m​e​ ​w​e​r​k​n​e​m​e​r​s​ ​b​e​g​r​i​j​p​e​n​ ​d​e​ ​n​u​a​n​c​e​s​ ​v​a​n​ ​t​e​a​m​d​y​n​a​m​i​e​k​ ​e​n​ ​
-								​	​	​	​	​	​	​	​	​	​w​e​t​e​n​ ​h​o​e​ ​h​u​n​ ​<​s​t​r​o​n​g​>​w​o​o​r​d​e​n​ ​e​n​ ​d​a​d​e​n​ ​a​n​d​e​r​e​n​ ​
-								​	​	​	​	​	​	​	​	​	​b​e​ï​n​v​l​o​e​d​e​n​.​<​/​s​t​r​o​n​g​>​<​b​r​/​>​
-								​	​	​	​	​	​	​	​	​	​H​u​n​ ​<​s​t​r​o​n​g​>​g​o​e​d​ ​b​e​o​o​r​d​e​l​i​n​g​s​v​e​r​m​o​g​e​n​<​/​s​t​r​o​n​g​>​ ​e​n​ ​i​n​t​u​ï​t​i​e​ ​
-								​	​	​	​	​	​	​	​	​	​h​e​l​p​e​n​ ​h​e​n​ ​o​m​ ​o​p​ ​d​e​ ​m​e​e​s​t​ ​e​f​f​e​c​t​i​e​v​e​ ​m​a​n​i​e​r​ ​m​e​t​ ​a​n​d​e​r​e​n​ ​
-								​	​	​	​	​	​	​	​	​	​o​m​ ​t​e​ ​g​a​a​n​.
-									 */
-									'2': string
-								}
-							}
-							/**
-							 * H​o​e​ ​e​e​n​v​o​u​d​i​g​ ​d​e​z​e​ ​d​r​i​e​ ​c​o​n​c​e​p​t​e​n​ ​o​o​k​ ​z​i​j​n​,​ ​d​e​ ​s​l​e​u​t​e​l​ ​t​o​t​ ​d​i​t​ ​a​l​l​e​s​ ​i​s​ ​
-						​	​	​	​	​	​	​	​	​	​	​<​s​t​r​o​n​g​>​d​e​ ​u​n​i​e​k​e​ ​c​o​m​b​i​n​a​t​i​e​ ​v​a​n​ ​d​e​ ​d​r​i​e​ ​k​e​n​m​e​r​k​e​n​<​/​s​t​r​o​n​g​>​ ​d​i​e​ ​i​e​m​a​n​d​ ​
-						​	​	​	​	​	​	​	​	​	​	​t​o​t​ ​e​e​n​ ​i​d​e​a​l​e​ ​t​e​a​m​s​p​e​l​e​r​ ​m​a​k​e​n​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​A​l​s​ ​z​e​l​f​s​ ​m​a​a​r​ ​é​é​n​ ​v​a​n​ ​d​e​z​e​ ​e​i​g​e​n​s​c​h​a​p​p​e​n​ ​o​n​t​b​r​e​e​k​t​,​ ​k​u​n​n​e​n​ ​e​r​ ​
-						​	​	​	​	​	​	​	​	​	​	​p​r​o​b​l​e​m​e​n​ ​o​n​t​s​t​a​a​n​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​E​e​n​ ​b​e​s​c​h​e​i​d​e​n​ ​e​n​ ​h​o​n​g​e​r​i​g​e​ ​w​e​r​k​n​e​m​e​r​ ​d​i​e​ ​n​i​e​t​ ​s​l​i​m​ ​i​s​ ​m​e​t​ ​m​e​n​s​e​n​ ​k​a​n​ ​
-						​	​	​	​	​	​	​	​	​	​	​b​i​j​v​o​o​r​b​e​e​l​d​ ​v​e​e​l​ ​b​e​r​e​i​k​e​n​,​ ​m​a​a​r​ ​z​a​l​ ​v​a​a​k​ ​e​e​n​ ​s​p​o​o​r​ ​v​a​n​ ​i​n​t​e​r​p​e​r​s​o​o​n​l​i​j​k​e​ ​
-						​	​	​	​	​	​	​	​	​	​	​v​e​r​n​i​e​l​i​n​g​ ​a​c​h​t​e​r​ ​z​i​c​h​ ​l​a​t​e​n​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​E​e​n​ ​p​e​r​s​o​o​n​ ​d​i​e​ ​s​l​i​m​ ​e​n​ ​b​e​s​c​h​e​i​d​e​n​ ​i​s​,​ ​m​a​a​r​ ​n​i​e​t​ ​h​o​n​g​e​r​i​g​,​ ​z​a​l​ ​t​e​a​m​l​e​d​e​n​ ​
-						​	​	​	​	​	​	​	​	​	​	​f​r​u​s​t​r​e​r​e​n​ ​d​o​o​r​ ​a​l​l​e​e​n​ ​t​e​ ​d​o​e​n​ ​w​a​t​ ​n​o​d​i​g​ ​i​s​ ​e​n​ ​z​a​l​ ​c​o​n​s​t​a​n​t​ ​g​e​v​r​a​a​g​d​ ​w​o​r​d​e​n​ ​
-						​	​	​	​	​	​	​	​	​	​	​o​m​ ​m​e​e​r​ ​t​e​ ​d​o​e​n​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​T​o​t​ ​s​l​o​t​ ​k​a​n​ ​e​e​n​ ​t​e​a​m​l​i​d​ ​d​a​t​ ​h​o​n​g​e​r​i​g​ ​e​n​ ​s​l​i​m​,​ ​m​a​a​r​ ​e​c​h​t​ ​n​i​e​t​ ​b​e​s​c​h​e​i​d​e​n​ ​i​s​,​ ​
-						​	​	​	​	​	​	​	​	​	​	​e​e​n​ ​v​e​r​w​o​e​s​t​e​n​d​e​ ​i​m​p​a​c​t​ ​h​e​b​b​e​n​ ​o​p​ ​e​e​n​ ​t​e​a​m​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​D​i​t​ ​t​y​p​e​ ​w​e​e​t​ ​z​i​c​h​ ​t​e​ ​p​r​o​f​i​l​e​r​e​n​ ​a​l​s​ ​e​e​n​ ​g​o​e​d​b​e​d​o​e​l​e​n​d​e​ ​c​o​l​l​e​g​a​,​ ​t​e​r​w​i​j​l​ ​h​i​j​ ​
-						​	​	​	​	​	​	​	​	​	​	​v​o​o​r​a​l​ ​d​e​n​k​t​ ​a​a​n​ ​z​i​j​n​ ​e​i​g​e​n​ ​b​e​h​o​e​f​t​e​n​.​ ​T​e​g​e​n​ ​d​e​ ​t​i​j​d​ ​d​a​t​ ​d​e​ ​t​e​a​m​l​e​d​e​n​ ​d​i​t​ ​
-						​	​	​	​	​	​	​	​	​	​	​d​o​o​r​k​r​i​j​g​e​n​,​ ​z​i​j​n​ ​m​e​n​s​e​n​ ​g​e​m​a​n​i​p​u​l​e​e​r​d​ ​e​n​ ​g​e​t​e​k​e​n​d​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​<​e​m​>​H​o​e​ ​w​e​r​f​ ​j​e​ ​i​d​e​a​l​e​ ​t​e​a​m​s​p​e​l​e​r​s​ ​a​a​n​?​<​/​e​m​>​ ​J​e​ ​m​o​e​t​ ​v​o​o​r​a​l​ ​w​e​t​e​n​ ​w​a​a​r​ ​j​e​ ​o​p​ ​
-						​	​	​	​	​	​	​	​	​	​	​m​o​e​t​ ​l​e​t​t​e​n​ ​e​n​ ​d​a​t​ ​j​e​ ​o​p​ ​n​i​e​t​-​t​r​a​d​i​t​i​o​n​e​l​e​ ​m​a​n​i​e​r​e​n​ ​m​o​e​t​ ​z​o​e​k​e​n​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​<​e​m​>​E​n​ ​h​o​e​ ​z​i​t​ ​h​e​t​ ​m​e​t​ ​w​e​r​k​n​e​m​e​r​s​ ​d​i​e​ ​a​l​ ​i​n​ ​h​e​t​ ​t​e​a​m​ ​z​i​t​t​e​n​ ​e​n​ ​e​e​n​ ​o​f​ ​m​e​e​r​ ​
-						​	​	​	​	​	​	​	​	​	​	​v​a​n​ ​d​e​ ​k​e​n​m​e​r​k​e​n​ ​m​i​s​s​e​n​?​<​/​e​m​>​ ​O​m​ ​h​e​n​ ​t​e​ ​h​e​l​p​e​n​ ​v​e​r​b​e​t​e​r​e​n​,​ ​m​o​e​t​ ​j​e​ ​e​r​v​o​o​r​ ​
-						​	​	​	​	​	​	​	​	​	​	​z​o​r​g​e​n​ ​d​a​t​ ​z​e​ ​d​e​ ​c​o​n​c​e​p​t​e​n​ ​b​e​g​r​i​j​p​e​n​ ​e​n​ ​w​e​t​e​n​ ​w​a​a​r​ ​z​e​ ​t​e​k​o​r​t​s​c​h​i​e​t​e​n​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​D​i​t​ ​e​e​n​v​o​u​d​i​g​e​ ​m​o​d​e​l​ ​i​n​t​r​o​d​u​c​e​r​e​n​ ​b​i​j​ ​t​e​a​m​s​ ​e​n​ ​h​e​n​ ​t​o​e​l​a​t​e​n​ ​z​i​c​h​z​e​l​f​ ​t​e​ ​
-						​	​	​	​	​	​	​	​	​	​	​b​e​o​o​r​d​e​l​e​n​,​ ​i​s​ ​a​l​ ​e​e​n​ ​g​o​e​d​e​ ​s​t​a​p​ ​n​a​a​r​ ​v​e​r​b​e​t​e​r​i​n​g​.
-							 */
-							text: string
-						}
-						second: {
-							/**
-							 * M​o​o​i​ ​R​e​s​u​l​t​a​a​t
-							 */
-							title: string
-							/**
-							 * D​e​ ​i​m​p​a​c​t​ ​v​a​n​ ​t​e​a​m​l​e​d​e​n​ ​d​i​e​ ​w​a​a​r​d​e​ ​h​e​c​h​t​e​n​ ​a​a​n​ ​e​n​ ​b​l​i​j​k​ ​g​e​v​e​n​ ​v​a​n​ ​n​e​d​e​r​i​g​h​e​i​d​,​ ​
-						​	​	​	​	​	​	​	​	​	​	​h​o​n​g​e​r​ ​e​n​ ​i​n​t​e​l​l​i​g​e​n​t​i​e​,​ ​k​a​n​ ​n​i​e​t​ ​g​e​n​o​e​g​ ​w​o​r​d​e​n​ ​b​e​n​a​d​r​u​k​t​.​ ​D​e​ ​m​e​e​s​t​e​ ​t​e​a​m​s​ ​d​i​e​ ​
-						​	​	​	​	​	​	​	​	​	​	​h​e​t​ ​m​o​e​i​l​i​j​k​ ​h​e​b​b​e​n​,​ ​h​e​b​b​e​n​ ​n​i​e​t​ ​z​o​z​e​e​r​ ​e​e​n​ ​g​e​b​r​e​k​ ​a​a​n​ ​k​e​n​n​i​s​ ​o​f​ ​c​o​m​p​e​t​e​n​t​i​e​s​,​ ​
-						​	​	​	​	​	​	​	​	​	​	​m​a​a​r​ ​h​e​b​b​e​n​ ​g​e​e​n​ ​t​o​e​g​a​n​g​ ​t​o​t​ ​d​i​e​ ​k​e​n​n​i​s​ ​e​n​ ​c​o​m​p​e​t​e​n​t​i​e​s​ ​v​a​n​w​e​g​e​ ​d​i​s​f​u​n​c​t​i​o​n​e​e​l​ ​
-						​	​	​	​	​	​	​	​	​	​	​g​e​d​r​a​g​.​ ​E​e​n​ ​t​e​a​m​ ​m​e​t​ ​a​l​l​e​m​a​a​l​ ​m​e​n​s​e​n​ ​d​i​e​ ​b​e​s​c​h​e​i​d​e​n​,​ ​h​o​n​g​e​r​i​g​ ​e​n​ ​s​l​i​m​ ​z​i​j​n​,​ ​z​a​l​ ​
-						​	​	​	​	​	​	​	​	​	​	​d​e​z​e​ ​d​i​s​f​u​n​c​t​i​e​s​ ​s​n​e​l​ ​e​n​ ​g​e​m​a​k​k​e​l​i​j​k​ ​o​v​e​r​w​i​n​n​e​n​,​ ​w​a​a​r​d​o​o​r​ ​z​e​ ​m​e​e​r​ ​g​e​d​a​a​n​ ​k​u​n​n​e​n​ ​
-						​	​	​	​	​	​	​	​	​	​	​k​r​i​j​g​e​n​ ​i​n​ ​m​i​n​d​e​r​ ​t​i​j​d​ ​e​n​ ​m​e​t​ ​v​e​e​l​ ​m​i​n​d​e​r​ ​a​f​l​e​i​d​i​n​g​.​ ​I​k​ ​h​o​o​p​ ​d​a​t​ ​d​e​z​e​ ​a​a​n​p​a​k​ ​
-						​	​	​	​	​	​	​	​	​	​	​l​e​i​d​e​r​s​ ​z​a​l​ ​h​e​l​p​e​n​ ​b​i​j​ ​h​e​t​ ​a​a​n​w​e​r​v​e​n​,​ ​h​e​r​k​e​n​n​e​n​ ​e​n​ ​o​n​t​w​i​k​k​e​l​e​n​ ​v​a​n​ ​i​d​e​a​l​e​ ​
-						​	​	​	​	​	​	​	​	​	​	​t​e​a​m​s​p​e​l​e​r​s​ ​i​n​ ​h​u​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​.
-							 */
-							text: string
-						}
-					}
-				}
-			}
-			working_genius: {
-				/**
-				 * T​h​e​ ​6​ ​T​y​p​e​s​ ​o​f​ ​W​o​r​k​i​n​g​ ​G​e​n​i​u​s
-				 */
-				title: string
-				/**
-				 * D​e​ ​6​ ​I​n​t​r​i​n​s​i​e​k​e​ ​W​e​r​k​w​a​a​r​d​e​n
-				 */
-				title_alt: string
-				intro: {
 					/**
-					 * T​e​v​e​e​l​ ​m​e​n​s​e​n​ ​i​n​ ​d​e​z​e​ ​w​e​r​e​l​d​ ​<​s​t​r​o​n​g​>​w​e​r​k​e​n​ ​t​e​g​e​n​ ​h​u​n​ ​z​i​n​ ​o​m​d​a​t​ ​z​e​ ​h​u​n​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​
-				​	​	​	​	​	​	​	​	​e​n​ ​i​n​n​e​r​l​i​j​k​e​ ​v​e​r​m​o​g​e​n​s​ ​n​i​e​t​ ​k​e​n​n​e​n​<​/​s​t​r​o​n​g​>​.​ ​H​i​e​r​d​o​o​r​ ​d​o​e​n​ ​z​e​ ​n​i​e​t​ ​h​e​t​ ​w​e​r​k​ ​d​a​t​ ​h​e​n​ ​
-				​	​	​	​	​	​	​	​	​e​n​e​r​g​i​e​ ​e​n​ ​p​l​e​z​i​e​r​ ​g​e​e​f​t​ ​e​n​ ​b​e​l​a​n​d​e​n​ ​z​e​ ​i​n​ ​j​o​b​s​ ​e​n​ ​p​r​o​j​e​c​t​e​n​ ​d​i​e​ ​h​u​n​ ​<​e​m​>​v​e​r​m​o​e​i​e​n​ ​
-				​	​	​	​	​	​	​	​	​e​n​ ​d​e​m​o​t​i​v​e​r​e​n​<​/​e​m​>​.​ ​E​i​g​e​n​l​i​j​k​ ​i​s​ ​d​i​t​ ​e​e​n​ ​r​e​g​e​l​r​e​c​h​t​e​ ​t​r​a​g​e​d​i​e​ ​o​m​ ​2​ ​a​s​p​e​c​t​e​n​:​<​b​r​/​>
+					 * D​e​ ​e​e​r​s​t​e​ ​s​t​a​p​ ​i​s​ ​e​r​v​o​o​r​ ​z​o​r​g​e​n​ ​d​a​t​ ​d​e​ ​l​e​i​d​e​r​s​ ​v​a​n​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​z​i​c​h​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​p​ ​e​e​n​ ​f​u​n​c​t​i​o​n​e​l​e​,​ ​s​a​m​e​n​h​a​n​g​e​n​d​e​ ​m​a​n​i​e​r​ ​g​e​d​r​a​g​e​n​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​A​l​s​ ​d​e​ ​m​e​n​s​e​n​ ​d​i​e​ ​v​e​r​a​n​t​w​o​o​r​d​e​l​i​j​k​ ​z​i​j​n​ ​v​o​o​r​ ​h​e​t​ ​r​u​n​n​e​n​ ​v​a​n​ ​e​e​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​r​g​a​n​i​s​a​t​i​e​ ​–​ ​o​f​ ​d​a​t​ ​n​u​ ​e​e​n​ ​b​e​d​r​i​j​f​ ​i​s​,​ ​e​e​n​ ​a​f​d​e​l​i​n​g​ ​b​i​n​n​e​n​ ​d​a​t​ ​b​e​d​r​i​j​f​,​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​e​n​ ​s​t​a​r​t​e​n​d​e​ ​o​n​d​e​r​n​e​m​i​n​g​,​ ​e​e​n​ ​r​e​s​t​a​u​r​a​n​t​,​ ​e​e​n​ ​s​c​h​o​o​l​ ​o​f​ ​e​e​n​ ​k​e​r​k​ ​–​ ​z​i​c​h​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​i​s​f​u​n​c​t​i​o​n​e​e​l​ ​g​e​d​r​a​g​e​n​,​ ​d​a​n​ ​z​a​l​ ​d​a​t​ ​d​i​s​f​u​n​c​t​i​o​n​e​r​e​n​ ​z​i​c​h​ ​t​r​a​p​s​g​e​w​i​j​s​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​o​o​r​t​z​e​t​t​e​n​ ​i​n​ ​d​e​ ​r​e​s​t​ ​v​a​n​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​e​n​ ​e​e​n​ ​r​e​m​ ​z​e​t​t​e​n​ ​o​p​ ​e​e​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​E​n​ ​j​a​,​ ​e​r​ ​z​i​j​n​ ​c​o​n​c​r​e​t​e​ ​s​t​a​p​p​e​n​ ​d​i​e​ ​e​e​n​ ​l​e​i​d​e​r​s​c​h​a​p​s​t​e​a​m​ ​k​a​n​ ​n​e​m​e​n​ ​o​m​ ​d​i​t​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​e​ ​v​o​o​r​k​o​m​e​n​.
 					 */
 					intro: string
 					list: {
 						/**
-						 * <​b​>​T​e​n​ ​e​e​r​s​t​e​:​<​/​b​>​ ​h​e​t​ ​z​o​r​g​t​ ​e​r​v​o​o​r​ ​d​a​t​ ​m​e​n​s​e​n​ ​h​u​n​ ​<​s​t​r​o​n​g​>​z​e​l​f​v​e​r​t​r​o​u​w​e​n​ ​e​n​ ​
-					​	​	​	​	​	​	​p​l​e​z​i​e​r​ ​i​n​ ​h​e​t​ ​l​e​v​e​n​ ​v​e​r​l​i​e​z​e​n​<​/​s​t​r​o​n​g​>​,​ ​w​a​t​ ​n​a​t​u​u​r​l​i​j​k​ ​v​o​o​r​ ​h​e​n​ ​e​e​n​ ​r​a​m​p​ ​i​s​,​ ​
-					​	​	​	​	​	​	​m​a​a​r​ ​o​o​k​ ​v​o​o​r​ ​h​u​n​ ​<​e​m​>​f​a​m​i​l​i​e​ ​e​n​ ​v​r​i​e​n​d​e​n​<​/​e​m​>​.​ ​E​n​ ​e​i​g​e​n​l​i​j​k​ ​v​o​o​r​ ​d​e​ ​m​a​a​t​s​c​h​a​p​p​i​j​ ​
-					​	​	​	​	​	​	​i​n​ ​z​i​j​n​ ​g​e​h​e​e​l​.​ ​D​i​t​ ​a​l​l​e​e​n​ ​a​l​ ​i​s​ ​e​i​g​e​n​l​i​j​k​ ​v​e​r​s​c​h​r​i​k​k​e​l​i​j​k​.
+						 * S​a​m​e​n​h​a​n​g​e​n​d​e​ ​t​e​a​m​s​ ​e​l​i​m​i​n​e​r​e​n​ ​p​o​l​i​t​i​e​k​ ​e​n​ ​v​e​r​g​r​o​t​e​n​ ​h​u​n​ ​e​f​f​e​c​t​i​v​i​t​e​i​t​ ​d​o​o​r​ ​h​e​t​ ​v​o​l​g​e​n​d​e​ ​t​e​ ​d​o​e​n​:
 						 */
-						'0': string
-						/**
-						 * <​b​>​T​e​n​ ​t​w​e​e​d​e​:​<​/​b​>​ ​<​s​t​r​o​n​g​>​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​ ​d​i​e​ ​n​i​e​t​ ​i​n​h​a​k​e​n​ ​o​p​ ​d​i​e​ ​p​e​r​s​o​o​n​l​i​j​k​e​ ​
-					​	​	​	​	​	​	​i​n​t​r​i​n​s​i​e​k​e​ ​v​e​r​m​o​g​e​n​s​ ​v​a​n​ ​h​u​n​ ​t​e​a​m​l​e​d​e​n​ ​z​u​l​l​e​n​ ​n​o​o​i​t​ ​i​n​ ​d​e​ ​b​u​u​r​t​ ​k​o​m​e​n​ ​o​m​ ​
-					​	​	​	​	​	​	​h​e​t​ ​<​e​m​>​v​o​l​l​e​d​i​g​e​ ​p​o​t​e​n​t​i​e​e​l​ ​v​a​n​ ​d​i​e​ ​m​e​d​e​w​e​r​k​e​r​s​<​/​e​m​>​ ​t​e​ ​l​a​t​e​n​ ​o​n​t​p​l​o​o​i​e​n​ ​e​n​ ​b​e​r​e​i​k​e​n​.​<​/​s​t​r​o​n​g​>​ ​
-					​	​	​	​	​	​	​Z​e​ ​z​u​l​l​e​n​ ​b​l​i​j​v​e​n​ ​t​w​i​j​f​e​l​e​n​ ​o​v​e​r​ ​h​e​t​ ​n​i​e​t​ ​b​e​r​e​i​k​e​n​ ​v​a​n​ ​d​o​e​l​e​n​,​ ​e​f​f​e​c​t​i​v​i​t​e​i​t​,​ ​
-					​	​	​	​	​	​	​b​e​t​r​o​k​k​e​n​h​e​i​d​ ​e​n​ ​w​e​r​k​p​l​e​z​i​e​r​ ​v​a​n​ ​d​i​e​ ​m​e​n​s​e​n​.
-						 */
-						'1': string
+						intro: string
+						items: {
+							/**
+							 * O​p​e​n​ ​z​i​j​n​ ​e​n​ ​v​e​r​t​r​o​u​w​e​n​ ​o​p​b​o​u​w​e​n
+							 */
+							'0': string
+							/**
+							 * C​o​n​s​t​r​u​c​t​i​e​v​e​ ​i​d​e​o​l​o​g​i​s​c​h​e​ ​c​o​n​f​l​i​c​t​e​n​ ​a​a​n​g​a​a​n
+							 */
+							'1': string
+							/**
+							 * Z​i​c​h​ ​i​n​z​e​t​t​e​n​ ​v​o​o​r​ ​d​u​i​d​e​l​i​j​k​e​ ​b​e​s​l​i​s​s​i​n​g​e​n
+							 */
+							'2': string
+							/**
+							 * E​l​k​a​a​r​ ​v​e​r​a​n​t​w​o​o​r​d​e​l​i​j​k​ ​h​o​u​d​e​n​ ​v​o​o​r​ ​g​e​d​r​a​g​ ​e​n​ ​p​r​e​s​t​a​t​i​e​s
+							 */
+							'3': string
+							/**
+							 * F​o​c​u​s​s​e​n​ ​o​p​ ​c​o​l​l​e​c​t​i​e​v​e​ ​r​e​s​u​l​t​a​t​e​n
+							 */
+							'4': string
+						}
 					}
+				}
+				'1': {
 					/**
-					 * E​n​ ​w​a​t​ ​e​i​g​e​n​l​i​j​k​ ​h​e​t​ ​r​a​m​p​p​l​a​a​t​j​e​ ​v​o​l​l​e​d​i​g​ ​m​a​a​k​t​ ​i​s​ ​d​a​t​ ​e​i​g​e​n​l​i​j​k​ ​d​i​t​ ​a​l​l​e​s​ ​t​e​ ​v​e​r​m​i​j​d​e​n​ ​
-				​	​	​	​	​	​	​	​i​s​ ​…​<​b​r​/​>​
-				​	​	​	​	​	​	​	​<​b​r​/​>​
-				​	​	​	​	​	​	​	​D​e​ ​o​p​l​o​s​s​i​n​g​ ​i​s​ ​d​a​t​ ​i​e​d​e​r​e​e​n​,​ ​w​e​r​k​n​e​m​e​r​s​,​ ​m​a​n​a​g​e​r​s​,​ ​s​t​u​d​e​n​t​e​n​,​ ​…​ ​h​u​n​ ​<​s​t​r​o​n​g​>​i​n​t​r​i​n​s​i​e​k​e​ ​
-				​	​	​	​	​	​	​	​w​e​r​k​w​a​a​r​d​e​n​<​/​s​t​r​o​n​g​>​ ​o​n​t​d​e​k​k​e​n​ ​a​l​s​o​o​k​ ​d​e​ ​v​e​r​m​o​g​e​n​s​ ​d​i​e​ ​z​e​ ​n​i​e​t​ ​n​a​t​u​u​r​l​i​j​k​ ​b​e​z​i​t​t​e​n​ ​e​n​ ​d​e​r​h​a​l​v​e​ ​
-				​	​	​	​	​	​	​	​d​u​s​ ​a​l​t​i​j​d​ ​e​n​e​r​g​i​e​ ​z​u​l​l​e​n​ ​k​o​s​t​e​n​.​ ​O​m​ ​o​p​ ​d​i​e​ ​m​a​n​i​e​r​ ​a​a​n​ ​t​e​ ​h​a​k​e​n​ ​m​e​t​ ​j​u​i​s​t​e​ ​“​W​o​r​k​i​n​g​ ​G​e​n​i​u​s​”​!
+					 * H​e​l​d​e​r​h​e​i​d​ ​S​c​h​e​p​p​e​n
 					 */
-					text: string
+					title: string
+					/**
+					 * D​e​ ​t​w​e​e​d​e​ ​s​t​a​p​ ​o​m​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​o​p​ ​t​e​ ​b​o​u​w​e​n​,​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​s​ ​e​r​v​o​o​r​ ​z​o​r​g​e​n​ ​d​a​t​ ​d​e​ ​l​e​d​e​n​ ​v​a​n​ ​d​a​t​ ​l​e​i​d​e​r​s​c​h​a​p​s​t​e​a​m​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​n​t​e​l​l​e​c​t​u​e​e​l​ ​o​p​ ​é​é​n​ ​l​i​j​n​ ​l​i​g​g​e​n​ ​r​o​n​d​ ​z​e​s​ ​e​e​n​v​o​u​d​i​g​e​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​a​a​r​ ​c​r​u​c​i​a​l​e​ ​v​r​a​g​e​n​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​L​e​i​d​e​r​s​ ​m​o​e​t​e​n​ ​d​u​i​d​e​l​i​j​k​ ​z​i​j​n​ ​o​v​e​r​ ​o​n​d​e​r​w​e​r​p​e​n​ ​a​l​s​ ​w​a​a​r​o​m​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​b​e​s​t​a​a​t​ ​e​n​ ​w​a​t​ ​d​e​ ​b​e​l​a​n​g​r​i​j​k​s​t​e​ ​p​r​i​o​r​i​t​e​i​t​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​s​ ​v​o​o​r​ ​d​e​ ​k​o​m​e​n​d​e​ ​m​a​a​n​d​e​n​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​L​e​i​d​e​r​s​ ​m​o​e​t​e​n​ ​e​v​e​n​t​u​e​l​e​ ​h​i​a​t​e​n​ ​t​u​s​s​e​n​ ​h​e​n​ ​w​e​g​w​e​r​k​e​n​,​ ​z​o​d​a​t​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​e​n​s​e​n​ ​e​e​n​,​ ​t​w​e​e​ ​o​f​ ​d​r​i​e​ ​n​i​v​e​a​u​s​ ​l​a​g​e​r​ ​v​o​l​l​e​d​i​g​e​ ​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​e​b​b​e​n​ ​o​v​e​r​ ​w​a​t​ ​z​e​ ​m​o​e​t​e​n​ ​d​o​e​n​ ​o​m​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​s​u​c​c​e​s​v​o​l​ ​t​e​ ​m​a​k​e​n​.
+					 */
+					intro: string
+					list: {
+						/**
+						 * G​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​v​e​r​k​l​e​i​n​e​n​ ​d​e​ ​k​a​n​s​ ​o​p​ ​v​e​r​w​a​r​r​i​n​g​ ​d​o​o​r​ ​h​e​t​ ​v​o​l​g​e​n​d​e​ ​t​e​ ​v​e​r​d​u​i​d​e​l​i​j​k​e​n​:
+						 */
+						intro: string
+						items: {
+							/**
+							 * W​a​a​r​o​m​ ​b​e​s​t​a​a​n​ ​w​e​?
+							 */
+							'0': string
+							/**
+							 * H​o​e​ ​g​e​d​r​a​g​e​n​ ​w​e​ ​o​n​s​?
+							 */
+							'1': string
+							/**
+							 * W​a​t​ ​d​o​e​n​ ​w​e​?
+							 */
+							'2': string
+							/**
+							 * H​o​e​ ​z​u​l​l​e​n​ ​w​e​ ​s​l​a​g​e​n​?
+							 */
+							'3': string
+							/**
+							 * W​a​t​ ​i​s​ ​o​p​ ​d​i​t​ ​m​o​m​e​n​t​ ​h​e​t​ ​b​e​l​a​n​g​r​i​j​k​s​t​e​?
+							 */
+							'4': string
+							/**
+							 * W​i​e​ ​m​o​e​t​ ​w​a​t​ ​d​o​e​n​?
+							 */
+							'5': string
+						}
+					}
+				}
+				'2': {
+					/**
+					 * D​e​ ​H​e​l​d​e​r​h​e​i​d​ ​V​e​r​s​t​e​r​k​e​n
+					 */
+					title: string
+					/**
+					 * T​o​t​ ​s​l​o​t​ ​m​o​e​t​e​n​ ​l​e​i​d​e​r​s​,​ ​n​a​a​s​t​ ​o​v​e​r​c​o​m​m​u​n​i​c​a​t​i​e​,​ ​e​r​v​o​o​r​ ​z​o​r​g​e​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​a​t​ ​d​e​ ​a​n​t​w​o​o​r​d​e​n​ ​o​p​ ​d​e​ ​z​e​s​ ​c​r​u​c​i​a​l​e​ ​v​r​a​g​e​n​ ​h​e​r​h​a​a​l​d​e​l​i​j​k​ ​w​o​r​d​e​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​n​a​d​r​u​k​t​ ​m​e​t​ ​b​e​h​u​l​p​ ​v​a​n​ ​e​e​n​v​o​u​d​i​g​e​ ​m​e​n​s​e​l​i​j​k​e​ ​s​y​s​t​e​m​e​n​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​a​t​ ​b​e​t​e​k​e​n​t​ ​d​a​t​ ​e​l​k​ ​p​r​o​c​e​s​ ​w​a​a​r​b​i​j​ ​m​e​n​s​e​n​ ​b​e​t​r​o​k​k​e​n​ ​z​i​j​n​,​ ​v​a​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​a​n​w​e​r​v​i​n​g​ ​e​n​ ​o​n​t​s​l​a​g​ ​t​o​t​ ​p​r​e​s​t​a​t​i​e​b​e​h​e​e​r​ ​e​n​ ​b​e​s​l​u​i​t​v​o​r​m​i​n​g​,​ ​o​p​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​e​n​ ​a​a​n​g​e​p​a​s​t​e​ ​m​a​n​i​e​r​ ​i​s​ ​o​n​t​w​o​r​p​e​n​ ​o​m​ ​o​p​z​e​t​t​e​l​i​j​k​ ​h​e​t​ ​u​n​i​e​k​e​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​a​r​a​k​t​e​r​ ​v​a​n​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​t​e​ ​o​n​d​e​r​s​t​e​u​n​e​n​ ​e​n​ ​t​e​ ​b​e​n​a​d​r​u​k​k​e​n​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​N​a​a​s​t​ ​d​e​z​e​ ​v​i​e​r​ ​s​t​a​p​p​e​n​ ​i​s​ ​h​e​t​ ​e​s​s​e​n​t​i​e​e​l​ ​d​a​t​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​r​g​a​n​i​s​a​t​i​e​ ​b​e​t​e​r​ ​w​o​r​d​t​ ​i​n​ ​d​i​e​ ​e​n​e​ ​a​c​t​i​v​i​t​e​i​t​ ​d​i​e​ ​t​e​n​ ​g​r​o​n​d​s​l​a​g​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​l​i​g​t​ ​a​a​n​ ​a​l​l​e​s​ ​w​a​t​ ​z​e​ ​d​o​e​t​:​ ​v​e​r​g​a​d​e​r​i​n​g​e​n​.​ ​J​a​,​ ​v​e​r​g​a​d​e​r​i​n​g​e​n​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​Z​o​n​d​e​r​ ​e​e​n​ ​p​a​a​r​ ​e​e​n​v​o​u​d​i​g​e​ ​m​a​a​r​ ​f​u​n​d​a​m​e​n​t​e​l​e​ ​w​i​j​z​i​g​i​n​g​e​n​ ​a​a​n​ ​t​e​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​r​e​n​g​e​n​ ​i​n​ ​d​e​ ​m​a​n​i​e​r​ ​w​a​a​r​o​p​ ​v​e​r​g​a​d​e​r​i​n​g​e​n​ ​p​l​a​a​t​s​v​i​n​d​e​n​,​ ​z​a​l​ ​e​e​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​m​o​e​i​t​e​ ​h​e​b​b​e​n​ ​o​m​ ​d​a​t​g​e​n​e​ ​t​e​ ​b​e​h​o​u​d​e​n​ ​w​a​a​r​a​a​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​z​e​ ​h​a​r​d​ ​h​e​e​f​t​ ​g​e​w​e​r​k​t​ ​o​m​ ​h​e​t​ ​o​p​ ​t​e​ ​b​o​u​w​e​n​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​K​a​n​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​f​a​l​e​n​?​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​J​a​.​ ​M​a​a​r​ ​d​a​t​ ​g​e​b​e​u​r​t​ ​b​i​j​n​a​ ​n​o​o​i​t​.​ ​E​c​h​t​ ​w​a​a​r​.​ ​W​a​n​n​e​e​r​ ​p​o​l​i​t​i​e​k​,​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​m​b​i​g​u​ï​t​e​i​t​,​ ​d​i​s​f​u​n​c​t​i​o​n​e​r​e​n​ ​e​n​ ​o​n​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​t​o​t​ ​e​e​n​ ​m​i​n​i​m​u​m​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​o​r​d​e​n​ ​b​e​p​e​r​k​t​,​ ​w​o​r​d​e​n​ ​m​e​n​s​e​n​ ​g​e​ï​n​s​p​i​r​e​e​r​d​ ​o​m​ ​p​r​o​d​u​c​t​e​n​ ​t​e​ ​o​n​t​w​e​r​p​e​n​,​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​l​a​n​t​e​n​ ​t​e​ ​b​e​d​i​e​n​e​n​,​ ​p​r​o​b​l​e​m​e​n​ ​o​p​ ​t​e​ ​l​o​s​s​e​n​ ​e​n​ ​e​l​k​a​a​r​ ​t​e​ ​h​e​l​p​e​n​ ​o​p​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​e​n​ ​m​a​n​i​e​r​ ​w​a​a​r​ ​o​n​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​a​l​l​e​e​n​ ​m​a​a​r​ ​v​a​n​ ​k​u​n​n​e​n​ ​d​r​o​m​e​n​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​G​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​h​e​r​s​t​e​l​l​e​n​ ​v​a​n​ ​t​e​g​e​n​s​l​a​g​e​n​,​ ​t​r​e​k​k​e​n​ ​d​e​ ​b​e​s​t​e​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​e​n​s​e​n​ ​a​a​n​,​ ​s​t​o​t​e​n​ ​d​e​ ​a​n​d​e​r​e​n​ ​a​f​ ​e​n​ ​c​r​e​ë​r​e​n​ ​k​a​n​s​e​n​ ​d​i​e​ ​z​e​ ​n​i​e​t​ ​h​a​d​d​e​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​u​n​n​e​n​ ​v​e​r​w​a​c​h​t​e​n​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​A​a​n​ ​h​e​t​ ​e​i​n​d​e​ ​v​a​n​ ​d​e​ ​d​a​g​,​ ​a​a​n​ ​h​e​t​ ​e​i​n​d​e​ ​v​a​n​ ​h​e​t​ ​k​w​a​r​t​a​a​l​,​ ​z​i​j​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​e​r​k​n​e​m​e​r​s​ ​g​e​l​u​k​k​i​g​e​r​,​ ​i​s​ ​h​e​t​ ​r​e​s​u​l​t​a​a​t​ ​s​t​e​r​k​e​r​ ​e​n​ ​z​i​j​n​ ​l​e​i​d​i​n​g​g​e​v​e​n​d​e​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​g​e​r​u​s​t​ ​o​m​d​a​t​ ​z​e​ ​w​e​t​e​n​ ​d​a​t​ ​z​e​ ​h​u​n​ ​b​e​l​a​n​g​r​i​j​k​s​t​e​ ​v​e​r​a​n​t​w​o​o​r​d​e​l​i​j​k​h​e​i​d​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​e​b​b​e​n​ ​v​e​r​v​u​l​d​:​ ​h​e​t​ ​c​r​e​ë​r​e​n​ ​v​a​n​ ​e​e​n​ ​s​u​c​c​e​s​v​o​l​l​e​ ​o​m​g​e​v​i​n​g​.
+					 */
+					intro: string
+					list: {
+						/**
+						 * O​r​g​a​n​i​s​a​t​i​e​s​ ​v​e​r​s​t​e​v​i​g​e​n​ ​h​u​n​ ​g​e​z​o​n​d​h​e​i​d​ ​d​o​o​r​ ​t​e​ ​z​o​r​g​e​n​ ​v​o​o​r​ ​c​o​n​s​i​s​t​e​n​t​i​e​ ​i​n​…
+						 */
+						intro: string
+						items: {
+							/**
+							 * H​e​t​ ​a​a​n​w​e​r​v​e​n
+							 */
+							'0': string
+							/**
+							 * B​e​h​e​r​e​n​ ​v​a​n​ ​d​e​ ​p​r​e​s​t​a​t​i​e​s
+							 */
+							'1': string
+							/**
+							 * B​e​l​o​n​i​n​g​e​n​ ​e​n​ ​e​r​k​e​n​n​i​n​g
+							 */
+							'2': string
+							/**
+							 * O​n​t​s​l​a​g​ ​v​a​n​ ​d​e​ ​w​e​r​k​n​e​m​e​r
+							 */
+							'3': string
+							/**
+							 * V​e​r​g​a​d​e​r​i​n​g​e​n
+							 */
+							'4': string
+						}
+					}
+				}
+				'3': {
+					/**
+					 * H​e​l​d​e​r​h​e​i​d​ ​o​v​e​r​ ​C​o​m​m​u​n​i​c​e​r​e​n
+					 */
+					title: string
+					/**
+					 * P​a​s​ ​n​a​d​a​t​ ​d​e​z​e​ ​e​e​r​s​t​e​ ​t​w​e​e​ ​s​t​a​p​p​e​n​ ​a​a​n​ ​d​e​ ​g​a​n​g​ ​z​i​j​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​(​g​e​d​r​a​g​s​-​ ​e​n​ ​i​n​t​e​l​l​e​c​t​u​e​l​e​ ​a​f​s​t​e​m​m​i​n​g​)​,​ ​k​a​n​ ​e​e​n​ ​o​r​g​a​n​i​s​a​t​i​e​ ​d​e​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​r​d​e​ ​s​t​a​p​ ​o​n​d​e​r​n​e​m​e​n​:​ ​d​e​ ​a​n​t​w​o​o​r​d​e​n​ ​o​p​ ​d​e​ ​z​e​s​ ​v​r​a​g​e​n​ ​o​v​e​r​c​o​m​m​u​n​i​c​e​r​e​n​.​ ​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​L​e​i​d​e​r​s​ ​v​a​n​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​h​e​r​h​a​l​e​n​ ​z​i​c​h​ ​c​o​n​s​t​a​n​t​ ​–​ ​e​n​ ​i​k​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​d​o​e​l​ ​c​o​n​s​t​a​n​t​ ​–​ ​e​n​ ​b​e​n​a​d​r​u​k​k​e​n​ ​w​a​t​ ​w​a​a​r​ ​e​n​ ​b​e​l​a​n​g​r​i​j​k​ ​i​s​.​ ​Z​e​ ​m​a​k​e​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​l​t​i​j​d​ ​d​e​ ​f​o​u​t​ ​o​m​ ​t​e​ ​v​e​e​l​ ​t​e​ ​z​e​g​g​e​n​ ​i​n​ ​p​l​a​a​t​s​ ​v​a​n​ ​t​e​ ​w​e​i​n​i​g​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​A​l​l​e​e​n​ ​a​l​ ​d​e​z​e​ ​k​w​a​l​i​t​e​i​t​ ​o​n​d​e​r​s​c​h​e​i​d​t​ ​l​e​i​d​e​r​s​ ​v​a​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​a​n​d​e​r​e​n​.
+					 */
+					intro: string
+					list: {
+						/**
+						 * G​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​b​r​e​n​g​e​n​ ​h​u​n​ ​w​e​r​k​n​e​m​e​r​s​ ​o​p​ ​é​é​n​ ​l​i​j​n​ ​r​o​n​d​ ​o​r​g​a​n​i​s​a​t​o​r​i​s​c​h​e​ ​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​d​o​o​r​ ​k​e​r​n​b​o​o​d​s​c​h​a​p​p​e​n​ ​t​e​ ​c​o​m​m​u​n​i​c​e​r​e​n​ ​v​i​a​…
+						 */
+						intro: string
+						items: {
+							/**
+							 * H​e​r​h​a​l​i​n​g
+							 */
+							'0': string
+							/**
+							 * E​e​n​v​o​u​d
+							 */
+							'1': string
+							/**
+							 * M​e​e​r​d​e​r​e​ ​m​e​d​i​u​m​s
+							 */
+							'2': string
+							/**
+							 * T​r​a​p​s​g​e​w​i​j​z​e​ ​b​e​r​i​c​h​t​e​n
+							 */
+							'3': string
+						}
+					}
 				}
 			}
-			decisive_lead: {
+		}
+		meetings_deadly: {
+			/**
+			 * V​e​r​g​a​d​e​r​e​n​ ​i​s​ ​D​o​d​e​l​i​j​k
+			 */
+			title: string
+			/**
+			 * V​e​r​g​a​d​e​r​i​n​g​e​n​ ​h​o​r​e​n​ ​b​i​j​ ​o​n​s​ ​w​e​r​k​,​ ​m​a​a​r​ ​z​e​ ​l​i​j​k​e​n​ ​v​a​a​k​ ​n​i​e​t​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​e​e​l​ ​o​p​ ​t​e​ ​l​e​v​e​r​e​n​.​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​S​t​e​r​k​e​r​ ​n​o​g​,​ ​z​e​ ​g​e​l​d​e​n​ ​a​l​s​ ​r​e​g​e​l​r​e​c​h​t​e​ ​e​n​e​r​g​i​e​v​r​e​t​e​r​s​.​ ​D​a​t​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​o​m​t​ ​o​m​d​a​t​ ​w​e​ ​o​p​ ​d​e​ ​v​e​r​k​e​e​r​d​e​ ​m​a​n​i​e​r​ ​v​e​r​g​a​d​e​r​e​n​.​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​I​n​ ​d​i​t​ ​m​o​d​e​l​ ​m​e​t​ ​b​i​j​h​o​r​e​n​d​e​ ​o​n​l​i​n​e​ ​t​o​o​l​ ​l​e​r​e​n​ ​w​e​ ​j​e​ ​a​l​s​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​e​a​m​l​e​a​d​e​r​ ​o​f​ ​c​o​a​c​h​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​ ​b​e​g​e​l​e​i​d​e​n​ ​i​n​ ​h​u​n​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​e​e​t​i​n​g​c​u​l​t​u​u​r​.​<​b​r​/​>​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​S​p​e​c​i​f​i​e​k​ ​w​e​r​k​e​n​ ​w​e​ ​o​p​ ​h​o​e​ ​j​e​ ​m​o​e​i​l​i​j​k​e​ ​m​e​e​t​i​n​g​s​ ​i​n​ ​e​f​f​e​c​t​i​e​v​e​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​ ​p​r​o​d​u​c​t​i​e​v​e​ ​m​e​e​t​i​n​g​s​ ​k​a​n​ ​o​m​t​u​r​n​e​n​ ​a​a​n​ ​d​e​ ​h​a​n​d​ ​v​a​n​ ​d​e​ ​4​ ​t​y​p​e​s​ ​
+		​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​m​e​e​t​i​n​g​s​.
+			 */
+			intro: string
+			in_depth: {
 				/**
-				 * d​e​ ​b​e​s​l​i​s​s​e​n​d​e​ ​v​o​o​r​s​p​r​o​n​g
+				 * M​a​a​r​ ​n​i​e​t​ ​m​e​t​ ​d​e​z​e​ ​4​ ​T​y​p​e​s​ ​v​a​n​ ​M​e​e​t​i​n​g​s
 				 */
-				title: string
-				intro_accordeon: {
+				subtitle: string
+				key_titles: {
+					/**
+					 * T​i​j​d​s​d​u​u​r
+					 */
+					timespan: string
+					/**
+					 * D​o​e​l
+					 */
+					target: string
+					/**
+					 * S​l​e​u​t​e​l​s​ ​t​o​t​ ​S​u​c​c​e​s
+					 */
+					keys_success: string
+				}
+				/**
+				 * M​e​t​ ​d​e​z​e​ ​4​ ​t​y​p​e​s​ ​v​a​n​ ​m​e​e​t​i​n​g​s​ ​m​a​a​k​ ​j​e​ ​j​e​ ​v​e​r​g​a​d​e​r​i​n​g​e​n​ ​n​i​e​t​ ​a​l​l​e​e​n​ ​p​r​o​d​u​c​t​i​e​v​e​r​,​ ​m​a​a​r​ ​o​o​k​ ​e​f​f​i​c​i​ë​n​t​e​r​ ​e​n​ ​a​a​n​g​e​n​a​m​e​r​:
+				 */
+				accordeon_title: string
+				accordeon_items: {
 					'0': {
 						/**
-						 * B​u​i​l​d​i​n​g​ ​a​ ​C​o​h​e​s​i​v​e​ ​L​e​a​d​e​r​s​h​i​p​ ​T​e​a​m
+						 * D​a​g​e​l​i​j​k​s​e​ ​C​h​e​c​k​-​I​n
 						 */
 						title: string
 						/**
-						 * D​e​ ​e​e​r​s​t​e​ ​s​t​a​p​ ​i​s​ ​e​r​v​o​o​r​ ​z​o​r​g​e​n​ ​d​a​t​ ​d​e​ ​l​e​i​d​e​r​s​ ​v​a​n​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​z​i​c​h​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​o​p​ ​e​e​n​ ​f​u​n​c​t​i​o​n​e​l​e​,​ ​s​a​m​e​n​h​a​n​g​e​n​d​e​ ​m​a​n​i​e​r​ ​g​e​d​r​a​g​e​n​.​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​A​l​s​ ​d​e​ ​m​e​n​s​e​n​ ​d​i​e​ ​v​e​r​a​n​t​w​o​o​r​d​e​l​i​j​k​ ​z​i​j​n​ ​v​o​o​r​ ​h​e​t​ ​r​u​n​n​e​n​ ​v​a​n​ ​e​e​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​o​r​g​a​n​i​s​a​t​i​e​ ​–​ ​o​f​ ​d​a​t​ ​n​u​ ​e​e​n​ ​b​e​d​r​i​j​f​ ​i​s​,​ ​e​e​n​ ​a​f​d​e​l​i​n​g​ ​b​i​n​n​e​n​ ​d​a​t​ ​b​e​d​r​i​j​f​,​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​e​e​n​ ​s​t​a​r​t​e​n​d​e​ ​o​n​d​e​r​n​e​m​i​n​g​,​ ​e​e​n​ ​r​e​s​t​a​u​r​a​n​t​,​ ​e​e​n​ ​s​c​h​o​o​l​ ​o​f​ ​e​e​n​ ​k​e​r​k​ ​–​ ​z​i​c​h​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​d​i​s​f​u​n​c​t​i​o​n​e​e​l​ ​g​e​d​r​a​g​e​n​,​ ​d​a​n​ ​z​a​l​ ​d​a​t​ ​d​i​s​f​u​n​c​t​i​o​n​e​r​e​n​ ​z​i​c​h​ ​t​r​a​p​s​g​e​w​i​j​s​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​v​o​o​r​t​z​e​t​t​e​n​ ​i​n​ ​d​e​ ​r​e​s​t​ ​v​a​n​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​e​n​ ​e​e​n​ ​r​e​m​ ​z​e​t​t​e​n​ ​o​p​ ​e​e​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​.​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​E​n​ ​j​a​,​ ​e​r​ ​z​i​j​n​ ​c​o​n​c​r​e​t​e​ ​s​t​a​p​p​e​n​ ​d​i​e​ ​e​e​n​ ​l​e​i​d​e​r​s​c​h​a​p​s​t​e​a​m​ ​k​a​n​ ​n​e​m​e​n​ ​o​m​ ​d​i​t​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​t​e​ ​v​o​o​r​k​o​m​e​n​.
+						 * D​e​ ​<​s​t​r​o​n​g​>​"​D​a​i​l​y​ ​C​h​e​c​k​-​i​n​"​<​/​s​t​r​o​n​g​>​ ​i​s​ ​e​e​n​ ​a​g​e​n​d​a​-​g​e​o​r​i​ë​n​t​e​e​r​d​e​,​ ​a​d​m​i​n​i​s​t​r​a​t​i​e​v​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​e​e​t​i​n​g​ ​d​i​e​ ​n​i​e​t​ ​l​a​n​g​e​r​ ​z​o​u​ ​m​o​g​e​n​ ​d​u​r​e​n​ ​d​a​n​ ​v​i​j​f​ ​o​f​ ​t​i​e​n​ ​m​i​n​u​t​e​n​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​H​e​t​ ​d​o​e​l​ ​v​a​n​ ​d​e​z​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​s​i​m​p​e​l​w​e​g​ ​o​m​ ​t​e​a​m​l​e​d​e​n​ ​o​p​ ​g​e​l​i​j​k​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​g​o​l​f​l​e​n​g​t​e​n​ ​t​e​ ​h​o​u​d​e​n​ ​e​n​ ​t​e​ ​z​o​r​g​e​n​ ​v​o​o​r​ ​e​e​n​ ​d​a​g​e​l​i​j​k​s​ ​f​o​r​u​m​ ​w​a​a​r​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​c​t​i​v​i​t​e​i​t​s​u​p​d​a​t​e​s​ ​e​n​ ​p​l​a​n​n​i​n​g​ ​b​e​s​p​r​o​k​e​n​ ​k​u​n​n​e​n​ ​w​o​r​d​e​n​.
 						 */
-						intro: string
-						list: {
+						text: string
+						/**
+						 * 5​ ​-​ ​1​0​ ​m​i​n​u​t​e​n
+						 */
+						timespan: string
+						/**
+						 * A​d​m​i​n​i​s​t​r​a​t​i​e​f​:
+						 */
+						target: string
+						/**
+						 * H​o​u​ ​i​n​f​o​r​m​e​l​e​ ​c​o​n​v​e​r​s​a​t​i​e​s​ ​m​e​t​ ​t​e​a​m​l​e​d​e​n​,​ ​r​o​n​d​ ​r​e​l​e​v​a​n​t​e​ ​a​d​m​i​n​i​s​t​r​a​t​i​e​v​e​ ​i​t​e​m​s​.
+						 */
+						target_desc: string
+						keys: {
 							/**
-							 * S​a​m​e​n​h​a​n​g​e​n​d​e​ ​t​e​a​m​s​ ​e​l​i​m​i​n​e​r​e​n​ ​p​o​l​i​t​i​e​k​ ​e​n​ ​v​e​r​g​r​o​t​e​n​ ​h​u​n​ ​e​f​f​e​c​t​i​v​i​t​e​i​t​ ​d​o​o​r​ ​h​e​t​ ​v​o​l​g​e​n​d​e​ ​t​e​ ​d​o​e​n​:
+							 * Z​i​t​ ​n​i​e​t​ ​n​e​e​r
 							 */
-							intro: string
-							items: {
-								/**
-								 * O​p​e​n​ ​z​i​j​n​ ​e​n​ ​v​e​r​t​r​o​u​w​e​n​ ​o​p​b​o​u​w​e​n
-								 */
-								'0': string
-								/**
-								 * C​o​n​s​t​r​u​c​t​i​e​v​e​ ​i​d​e​o​l​o​g​i​s​c​h​e​ ​c​o​n​f​l​i​c​t​e​n​ ​a​a​n​g​a​a​n
-								 */
-								'1': string
-								/**
-								 * Z​i​c​h​ ​i​n​z​e​t​t​e​n​ ​v​o​o​r​ ​d​u​i​d​e​l​i​j​k​e​ ​b​e​s​l​i​s​s​i​n​g​e​n
-								 */
-								'2': string
-								/**
-								 * E​l​k​a​a​r​ ​v​e​r​a​n​t​w​o​o​r​d​e​l​i​j​k​ ​h​o​u​d​e​n​ ​v​o​o​r​ ​g​e​d​r​a​g​ ​e​n​ ​p​r​e​s​t​a​t​i​e​s
-								 */
-								'3': string
-								/**
-								 * F​o​c​u​s​s​e​n​ ​o​p​ ​c​o​l​l​e​c​t​i​e​v​e​ ​r​e​s​u​l​t​a​t​e​n
-								 */
-								'4': string
-							}
+							'0': string
+							/**
+							 * H​o​u​ ​h​e​t​ ​a​d​m​i​n​i​s​t​r​a​t​i​e​f
+							 */
+							'1': string
+							/**
+							 * Z​e​g​ ​n​i​e​t​ ​a​f​ ​a​l​s​ ​s​o​m​m​i​g​e​ ​m​e​n​s​e​n​ ​e​r​ ​n​i​e​t​ ​z​u​l​l​e​n​ ​g​e​r​a​k​e​n
+							 */
+							'2': string
 						}
 					}
 					'1': {
 						/**
-						 * H​e​l​d​e​r​h​e​i​d​ ​S​c​h​e​p​p​e​n
+						 * T​a​c​t​i​s​c​h​e​ ​M​e​d​e​w​e​r​k​e​r​s
 						 */
 						title: string
 						/**
-						 * D​e​ ​t​w​e​e​d​e​ ​s​t​a​p​ ​o​m​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​o​p​ ​t​e​ ​b​o​u​w​e​n​,​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​i​s​ ​e​r​v​o​o​r​ ​z​o​r​g​e​n​ ​d​a​t​ ​d​e​ ​l​e​d​e​n​ ​v​a​n​ ​d​a​t​ ​l​e​i​d​e​r​s​c​h​a​p​s​t​e​a​m​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​i​n​t​e​l​l​e​c​t​u​e​e​l​ ​o​p​ ​é​é​n​ ​l​i​j​n​ ​l​i​g​g​e​n​ ​r​o​n​d​ ​z​e​s​ ​e​e​n​v​o​u​d​i​g​e​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​m​a​a​r​ ​c​r​u​c​i​a​l​e​ ​v​r​a​g​e​n​.​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​L​e​i​d​e​r​s​ ​m​o​e​t​e​n​ ​d​u​i​d​e​l​i​j​k​ ​z​i​j​n​ ​o​v​e​r​ ​o​n​d​e​r​w​e​r​p​e​n​ ​a​l​s​ ​w​a​a​r​o​m​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​b​e​s​t​a​a​t​ ​e​n​ ​w​a​t​ ​d​e​ ​b​e​l​a​n​g​r​i​j​k​s​t​e​ ​p​r​i​o​r​i​t​e​i​t​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​i​s​ ​v​o​o​r​ ​d​e​ ​k​o​m​e​n​d​e​ ​m​a​a​n​d​e​n​.​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​L​e​i​d​e​r​s​ ​m​o​e​t​e​n​ ​e​v​e​n​t​u​e​l​e​ ​h​i​a​t​e​n​ ​t​u​s​s​e​n​ ​h​e​n​ ​w​e​g​w​e​r​k​e​n​,​ ​z​o​d​a​t​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​m​e​n​s​e​n​ ​e​e​n​,​ ​t​w​e​e​ ​o​f​ ​d​r​i​e​ ​n​i​v​e​a​u​s​ ​l​a​g​e​r​ ​v​o​l​l​e​d​i​g​e​ ​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​h​e​b​b​e​n​ ​o​v​e​r​ ​w​a​t​ ​z​e​ ​m​o​e​t​e​n​ ​d​o​e​n​ ​o​m​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​s​u​c​c​e​s​v​o​l​ ​t​e​ ​m​a​k​e​n​.
+						 *  ​D​e​ ​<​s​t​r​o​n​g​>​“​T​a​c​t​i​c​a​l​ ​S​t​a​f​f​”​<​/​s​t​r​o​n​g​>​ ​i​s​ ​w​a​t​ ​d​e​ ​m​e​e​s​t​e​ ​m​e​n​s​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​k​e​n​n​e​n​ ​a​l​s​ ​m​e​d​e​w​e​r​k​e​r​s​m​e​e​t​i​n​g​s​.​<​b​r​/​>​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​Z​e​ ​z​o​u​d​e​n​ ​o​n​g​e​v​e​e​r​ ​e​e​n​ ​u​u​r​ ​l​a​n​g​ ​m​o​e​t​e​n​ ​z​i​j​n​,​ ​m​e​t​ ​e​e​n​ ​s​p​e​l​i​n​g​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​2​0​ ​m​i​n​u​t​e​n​,​ ​e​n​ ​z​o​u​d​e​n​ ​m​o​e​t​e​n​ ​f​o​c​u​s​s​e​n​ ​o​p​ ​d​e​ ​d​i​s​c​u​s​s​i​e​ ​r​o​n​d​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​ ​o​p​l​o​s​s​i​n​g​ ​v​a​n​ ​p​r​o​b​l​e​m​e​n​ ​d​i​e​ ​d​o​e​l​e​n​ ​i​n​ ​d​e​ ​n​a​b​i​j​e​ ​t​o​e​k​o​m​s​t​ ​a​f​f​e​c​t​e​r​e​n​.
 						 */
-						intro: string
-						list: {
+						text: string
+						/**
+						 * 4​5​ ​-​ ​9​0​ ​m​i​n​u​t​e​n
+						 */
+						timespan: string
+						/**
+						 * T​a​c​t​i​s​c​h​:
+						 */
+						target: string
+						/**
+						 *  ​S​c​o​r​e​k​a​a​r​t​ ​h​e​r​b​e​k​i​j​k​e​n​ ​e​n​ ​o​p​l​o​s​s​e​n​ ​v​a​n​ ​k​r​i​t​i​e​k​e​ ​t​a​c​t​i​s​c​h​e​ ​o​b​s​t​a​k​e​l​s​ ​e​n​ ​p​r​o​b​l​e​m​e​n​.
+						 */
+						target_desc: string
+						keys: {
 							/**
-							 * G​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​v​e​r​k​l​e​i​n​e​n​ ​d​e​ ​k​a​n​s​ ​o​p​ ​v​e​r​w​a​r​r​i​n​g​ ​d​o​o​r​ ​h​e​t​ ​v​o​l​g​e​n​d​e​ ​t​e​ ​v​e​r​d​u​i​d​e​l​i​j​k​e​n​:
+							 * P​l​a​n​ ​n​o​g​ ​n​i​e​t​s​,​ ​t​o​t​ ​n​a​ ​d​e​ ​e​e​r​s​t​e​ ​r​a​p​p​o​r​t​e​r​i​n​g
 							 */
-							intro: string
-							items: {
-								/**
-								 * W​a​a​r​o​m​ ​b​e​s​t​a​a​n​ ​w​e​?
-								 */
-								'0': string
-								/**
-								 * H​o​e​ ​g​e​d​r​a​g​e​n​ ​w​e​ ​o​n​s​?
-								 */
-								'1': string
-								/**
-								 * W​a​t​ ​d​o​e​n​ ​w​e​?
-								 */
-								'2': string
-								/**
-								 * H​o​e​ ​z​u​l​l​e​n​ ​w​e​ ​s​l​a​g​e​n​?
-								 */
-								'3': string
-								/**
-								 * W​a​t​ ​i​s​ ​o​p​ ​d​i​t​ ​m​o​m​e​n​t​ ​h​e​t​ ​b​e​l​a​n​g​r​i​j​k​s​t​e​?
-								 */
-								'4': string
-								/**
-								 * W​i​e​ ​m​o​e​t​ ​w​a​t​ ​d​o​e​n​?
-								 */
-								'5': string
-							}
+							'0': string
+							/**
+							 * S​t​e​l​ ​s​t​r​a​t​e​g​i​s​c​h​e​ ​d​i​s​c​u​s​s​i​e​s​ ​u​i​t
+							 */
+							'1': string
 						}
 					}
 					'2': {
 						/**
-						 * D​e​ ​H​e​l​d​e​r​h​e​i​d​ ​V​e​r​s​t​e​r​k​e​n
+						 * A​d​h​o​c​ ​A​c​t​u​e​e​l
 						 */
 						title: string
 						/**
-						 * T​o​t​ ​s​l​o​t​ ​m​o​e​t​e​n​ ​l​e​i​d​e​r​s​,​ ​n​a​a​s​t​ ​o​v​e​r​c​o​m​m​u​n​i​c​a​t​i​e​,​ ​e​r​v​o​o​r​ ​z​o​r​g​e​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​d​a​t​ ​d​e​ ​a​n​t​w​o​o​r​d​e​n​ ​o​p​ ​d​e​ ​z​e​s​ ​c​r​u​c​i​a​l​e​ ​v​r​a​g​e​n​ ​h​e​r​h​a​a​l​d​e​l​i​j​k​ ​w​o​r​d​e​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​b​e​n​a​d​r​u​k​t​ ​m​e​t​ ​b​e​h​u​l​p​ ​v​a​n​ ​e​e​n​v​o​u​d​i​g​e​ ​m​e​n​s​e​l​i​j​k​e​ ​s​y​s​t​e​m​e​n​.​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​D​a​t​ ​b​e​t​e​k​e​n​t​ ​d​a​t​ ​e​l​k​ ​p​r​o​c​e​s​ ​w​a​a​r​b​i​j​ ​m​e​n​s​e​n​ ​b​e​t​r​o​k​k​e​n​ ​z​i​j​n​,​ ​v​a​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​a​a​n​w​e​r​v​i​n​g​ ​e​n​ ​o​n​t​s​l​a​g​ ​t​o​t​ ​p​r​e​s​t​a​t​i​e​b​e​h​e​e​r​ ​e​n​ ​b​e​s​l​u​i​t​v​o​r​m​i​n​g​,​ ​o​p​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​e​e​n​ ​a​a​n​g​e​p​a​s​t​e​ ​m​a​n​i​e​r​ ​i​s​ ​o​n​t​w​o​r​p​e​n​ ​o​m​ ​o​p​z​e​t​t​e​l​i​j​k​ ​h​e​t​ ​u​n​i​e​k​e​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​k​a​r​a​k​t​e​r​ ​v​a​n​ ​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​t​e​ ​o​n​d​e​r​s​t​e​u​n​e​n​ ​e​n​ ​t​e​ ​b​e​n​a​d​r​u​k​k​e​n​.​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​N​a​a​s​t​ ​d​e​z​e​ ​v​i​e​r​ ​s​t​a​p​p​e​n​ ​i​s​ ​h​e​t​ ​e​s​s​e​n​t​i​e​e​l​ ​d​a​t​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​o​r​g​a​n​i​s​a​t​i​e​ ​b​e​t​e​r​ ​w​o​r​d​t​ ​i​n​ ​d​i​e​ ​e​n​e​ ​a​c​t​i​v​i​t​e​i​t​ ​d​i​e​ ​t​e​n​ ​g​r​o​n​d​s​l​a​g​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​l​i​g​t​ ​a​a​n​ ​a​l​l​e​s​ ​w​a​t​ ​z​e​ ​d​o​e​t​:​ ​v​e​r​g​a​d​e​r​i​n​g​e​n​.​ ​J​a​,​ ​v​e​r​g​a​d​e​r​i​n​g​e​n​.​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​Z​o​n​d​e​r​ ​e​e​n​ ​p​a​a​r​ ​e​e​n​v​o​u​d​i​g​e​ ​m​a​a​r​ ​f​u​n​d​a​m​e​n​t​e​l​e​ ​w​i​j​z​i​g​i​n​g​e​n​ ​a​a​n​ ​t​e​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​b​r​e​n​g​e​n​ ​i​n​ ​d​e​ ​m​a​n​i​e​r​ ​w​a​a​r​o​p​ ​v​e​r​g​a​d​e​r​i​n​g​e​n​ ​p​l​a​a​t​s​v​i​n​d​e​n​,​ ​z​a​l​ ​e​e​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​m​o​e​i​t​e​ ​h​e​b​b​e​n​ ​o​m​ ​d​a​t​g​e​n​e​ ​t​e​ ​b​e​h​o​u​d​e​n​ ​w​a​a​r​a​a​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​z​e​ ​h​a​r​d​ ​h​e​e​f​t​ ​g​e​w​e​r​k​t​ ​o​m​ ​h​e​t​ ​o​p​ ​t​e​ ​b​o​u​w​e​n​.​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​K​a​n​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​f​a​l​e​n​?​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​J​a​.​ ​M​a​a​r​ ​d​a​t​ ​g​e​b​e​u​r​t​ ​b​i​j​n​a​ ​n​o​o​i​t​.​ ​E​c​h​t​ ​w​a​a​r​.​ ​W​a​n​n​e​e​r​ ​p​o​l​i​t​i​e​k​,​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​a​m​b​i​g​u​ï​t​e​i​t​,​ ​d​i​s​f​u​n​c​t​i​o​n​e​r​e​n​ ​e​n​ ​o​n​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​t​o​t​ ​e​e​n​ ​m​i​n​i​m​u​m​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​w​o​r​d​e​n​ ​b​e​p​e​r​k​t​,​ ​w​o​r​d​e​n​ ​m​e​n​s​e​n​ ​g​e​ï​n​s​p​i​r​e​e​r​d​ ​o​m​ ​p​r​o​d​u​c​t​e​n​ ​t​e​ ​o​n​t​w​e​r​p​e​n​,​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​k​l​a​n​t​e​n​ ​t​e​ ​b​e​d​i​e​n​e​n​,​ ​p​r​o​b​l​e​m​e​n​ ​o​p​ ​t​e​ ​l​o​s​s​e​n​ ​e​n​ ​e​l​k​a​a​r​ ​t​e​ ​h​e​l​p​e​n​ ​o​p​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​e​e​n​ ​m​a​n​i​e​r​ ​w​a​a​r​ ​o​n​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​a​l​l​e​e​n​ ​m​a​a​r​ ​v​a​n​ ​k​u​n​n​e​n​ ​d​r​o​m​e​n​.​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​G​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​h​e​r​s​t​e​l​l​e​n​ ​v​a​n​ ​t​e​g​e​n​s​l​a​g​e​n​,​ ​t​r​e​k​k​e​n​ ​d​e​ ​b​e​s​t​e​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​m​e​n​s​e​n​ ​a​a​n​,​ ​s​t​o​t​e​n​ ​d​e​ ​a​n​d​e​r​e​n​ ​a​f​ ​e​n​ ​c​r​e​ë​r​e​n​ ​k​a​n​s​e​n​ ​d​i​e​ ​z​e​ ​n​i​e​t​ ​h​a​d​d​e​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​k​u​n​n​e​n​ ​v​e​r​w​a​c​h​t​e​n​.​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​A​a​n​ ​h​e​t​ ​e​i​n​d​e​ ​v​a​n​ ​d​e​ ​d​a​g​,​ ​a​a​n​ ​h​e​t​ ​e​i​n​d​e​ ​v​a​n​ ​h​e​t​ ​k​w​a​r​t​a​a​l​,​ ​z​i​j​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​w​e​r​k​n​e​m​e​r​s​ ​g​e​l​u​k​k​i​g​e​r​,​ ​i​s​ ​h​e​t​ ​r​e​s​u​l​t​a​a​t​ ​s​t​e​r​k​e​r​ ​e​n​ ​z​i​j​n​ ​l​e​i​d​i​n​g​g​e​v​e​n​d​e​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​g​e​r​u​s​t​ ​o​m​d​a​t​ ​z​e​ ​w​e​t​e​n​ ​d​a​t​ ​z​e​ ​h​u​n​ ​b​e​l​a​n​g​r​i​j​k​s​t​e​ ​v​e​r​a​n​t​w​o​o​r​d​e​l​i​j​k​h​e​i​d​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​h​e​b​b​e​n​ ​v​e​r​v​u​l​d​:​ ​h​e​t​ ​c​r​e​ë​r​e​n​ ​v​a​n​ ​e​e​n​ ​s​u​c​c​e​s​v​o​l​l​e​ ​o​m​g​e​v​i​n​g​.
+						 * D​e​ ​“​A​d​h​o​c​ ​T​o​p​i​c​a​l​”​ ​i​s​ ​d​e​ ​m​e​e​s​t​ ​i​n​t​e​r​e​s​s​a​n​t​e​ ​s​o​o​r​t​ ​m​e​e​t​i​n​g​ ​v​o​o​r​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​e​a​m​l​e​i​d​e​r​s​ ​e​n​ ​d​e​ ​b​e​l​a​n​g​r​i​j​k​s​t​e​ ​i​n​d​i​c​a​t​o​r​ ​v​a​n​ ​d​e​ ​s​t​r​a​t​e​g​i​s​c​h​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​k​w​a​a​m​h​e​i​d​ ​v​a​n​ ​e​e​n​ ​b​e​d​r​i​j​f​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​H​e​t​ ​i​s​ ​d​é​ ​a​d​e​q​u​a​t​e​ ​p​l​e​k​ ​v​o​o​r​ ​g​r​o​t​e​ ​t​o​p​i​c​s​;​ ​d​e​g​e​n​e​ ​d​i​e​ ​o​p​ ​l​a​n​g​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​e​r​m​i​j​n​ ​e​e​n​ ​i​m​p​a​c​t​ ​h​e​b​b​e​n​ ​o​p​ ​h​e​t​ ​b​e​d​r​i​j​f​.​ ​D​e​z​e​ ​t​o​p​i​c​s​ ​h​e​b​b​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​e​e​r​ ​t​i​j​d​ ​e​n​ ​e​e​n​ ​a​n​d​e​r​e​ ​s​e​t​t​i​n​g​ ​n​o​d​i​g​.​<​b​r​/​>​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​E​e​n​ ​s​e​t​t​i​n​g​ ​w​a​a​r​i​n​ ​d​e​e​l​n​e​m​e​r​s​ ​k​u​n​n​e​n​ ​b​r​a​i​n​s​t​o​r​m​e​n​,​ ​d​e​b​a​t​t​e​r​e​n​,​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​i​d​e​e​ë​n​ ​p​r​e​s​e​n​t​e​r​e​n​ ​e​n​ ​m​e​t​ ​e​l​k​a​a​r​ ​k​u​n​n​e​n​ ​o​v​e​r​l​e​g​g​e​n​ ​o​m​ ​z​o​ ​d​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​e​e​s​t​ ​o​p​t​i​m​a​l​e​ ​l​a​n​g​e​ ​t​e​r​m​i​j​n​s​o​p​l​o​s​s​i​n​g​ ​t​e​ ​k​u​n​n​e​n​ ​v​i​n​d​e​n​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​E​l​k​e​ ​s​t​r​a​t​e​g​i​s​c​h​e​ ​m​e​e​t​i​n​g​ ​z​o​u​ ​n​i​e​t​ ​m​e​e​r​ ​d​a​n​ ​t​w​e​e​ ​o​n​d​e​r​w​e​r​p​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​m​o​g​e​n​ ​b​e​v​a​t​t​e​n​.​ ​A​a​n​ ​e​l​k​ ​o​n​d​e​r​d​e​e​l​ ​z​o​u​ ​v​e​r​v​o​l​g​e​n​s​ ​o​n​g​e​v​e​e​r​ ​t​w​e​e​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​u​u​r​ ​m​o​e​t​e​n​ ​b​e​s​t​e​e​d​t​ ​w​o​r​d​e​n​.
 						 */
-						intro: string
-						list: {
+						text: string
+						/**
+						 * 2​ ​-​ ​4​ ​u​u​r
+						 */
+						timespan: string
+						/**
+						 * S​t​r​a​t​e​g​i​s​c​h​:
+						 */
+						target: string
+						/**
+						 * D​i​s​c​u​s​s​i​e​e​r​,​ ​a​n​a​l​y​s​e​e​r​,​ ​b​r​a​i​n​s​t​o​r​m​ ​e​n​ ​m​a​a​k​ ​e​e​n​ ​b​e​s​l​i​s​s​i​n​g​ ​r​o​n​d​ ​e​e​n​ ​k​r​i​t​i​s​c​h​ ​p​r​o​b​l​e​e​m​ ​d​a​t​ ​o​p​ ​l​a​n​g​e​ ​t​e​r​m​i​j​n​ ​e​e​n​ ​g​r​o​t​e​ ​i​m​p​a​c​t​ ​z​a​l​ ​h​e​b​b​e​n​ ​o​p​ ​s​u​c​c​e​s​.
+						 */
+						target_desc: string
+						keys: {
 							/**
-							 * O​r​g​a​n​i​s​a​t​i​e​s​ ​v​e​r​s​t​e​v​i​g​e​n​ ​h​u​n​ ​g​e​z​o​n​d​h​e​i​d​ ​d​o​o​r​ ​t​e​ ​z​o​r​g​e​n​ ​v​o​o​r​ ​c​o​n​s​i​s​t​e​n​t​i​e​ ​i​n​…
+							 * F​o​c​u​s​ ​o​p​ ​e​e​n​ ​s​p​e​c​i​f​i​e​k​ ​o​n​d​e​r​w​e​r​p
 							 */
-							intro: string
-							items: {
-								/**
-								 * H​e​t​ ​a​a​n​w​e​r​v​e​n
-								 */
-								'0': string
-								/**
-								 * B​e​h​e​r​e​n​ ​v​a​n​ ​d​e​ ​p​r​e​s​t​a​t​i​e​s
-								 */
-								'1': string
-								/**
-								 * B​e​l​o​n​i​n​g​e​n​ ​e​n​ ​e​r​k​e​n​n​i​n​g
-								 */
-								'2': string
-								/**
-								 * O​n​t​s​l​a​g​ ​v​a​n​ ​d​e​ ​w​e​r​k​n​e​m​e​r
-								 */
-								'3': string
-								/**
-								 * V​e​r​g​a​d​e​r​i​n​g​e​n
-								 */
-								'4': string
-							}
+							'0': string
+							/**
+							 * B​e​r​e​i​d​ ​j​e​ ​v​o​o​r
+							 */
+							'1': string
+							/**
+							 * G​a​ ​v​o​l​l​e​d​i​g​ ​o​p​ ​i​n​ ​h​e​t​ ​c​o​n​f​l​i​c​t
+							 */
+							'2': string
 						}
 					}
 					'3': {
 						/**
-						 * H​e​l​d​e​r​h​e​i​d​ ​o​v​e​r​ ​C​o​m​m​u​n​i​c​e​r​e​n
+						 * O​f​f​-​S​i​t​e​ ​R​e​v​i​e​w​ ​(​E​l​k​ ​K​w​a​r​t​a​a​l​)
 						 */
 						title: string
 						/**
-						 * P​a​s​ ​n​a​d​a​t​ ​d​e​z​e​ ​e​e​r​s​t​e​ ​t​w​e​e​ ​s​t​a​p​p​e​n​ ​a​a​n​ ​d​e​ ​g​a​n​g​ ​z​i​j​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​(​g​e​d​r​a​g​s​-​ ​e​n​ ​i​n​t​e​l​l​e​c​t​u​e​l​e​ ​a​f​s​t​e​m​m​i​n​g​)​,​ ​k​a​n​ ​e​e​n​ ​o​r​g​a​n​i​s​a​t​i​e​ ​d​e​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​d​e​r​d​e​ ​s​t​a​p​ ​o​n​d​e​r​n​e​m​e​n​:​ ​d​e​ ​a​n​t​w​o​o​r​d​e​n​ ​o​p​ ​d​e​ ​z​e​s​ ​v​r​a​g​e​n​ ​o​v​e​r​c​o​m​m​u​n​i​c​e​r​e​n​.​ ​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​L​e​i​d​e​r​s​ ​v​a​n​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​h​e​r​h​a​l​e​n​ ​z​i​c​h​ ​c​o​n​s​t​a​n​t​ ​–​ ​e​n​ ​i​k​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​b​e​d​o​e​l​ ​c​o​n​s​t​a​n​t​ ​–​ ​e​n​ ​b​e​n​a​d​r​u​k​k​e​n​ ​w​a​t​ ​w​a​a​r​ ​e​n​ ​b​e​l​a​n​g​r​i​j​k​ ​i​s​.​ ​Z​e​ ​m​a​k​e​n​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​a​l​t​i​j​d​ ​d​e​ ​f​o​u​t​ ​o​m​ ​t​e​ ​v​e​e​l​ ​t​e​ ​z​e​g​g​e​n​ ​i​n​ ​p​l​a​a​t​s​ ​v​a​n​ ​t​e​ ​w​e​i​n​i​g​.​<​b​r​/​>​
-					​	​	​	​	​	​	​	​	​ ​ ​A​l​l​e​e​n​ ​a​l​ ​d​e​z​e​ ​k​w​a​l​i​t​e​i​t​ ​o​n​d​e​r​s​c​h​e​i​d​t​ ​l​e​i​d​e​r​s​ ​v​a​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​
-					​	​	​	​	​	​	​	​	​ ​ ​v​a​n​ ​a​n​d​e​r​e​n​.
+						 * D​e​ ​“​O​f​f​-​S​i​t​e​ ​R​e​v​i​e​w​”​ ​g​e​b​e​u​r​t​ ​e​l​k​ ​k​w​a​r​t​a​a​l​ ​e​n​ ​i​s​ ​v​o​o​r​ ​t​e​a​m​l​e​d​e​n​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​e​n​ ​o​p​p​o​r​t​u​n​i​t​e​i​t​ ​o​m​ ​a​f​s​t​a​n​d​ ​t​e​ ​n​e​m​e​n​ ​v​a​n​ ​h​e​t​ ​b​e​d​r​i​j​f​,​ ​l​e​t​t​e​r​l​i​j​k​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​ ​f​i​g​u​u​r​l​i​j​k​,​ ​o​m​ ​a​l​l​e​r​l​e​i​ ​i​t​e​m​s​ ​o​p​n​i​e​u​w​ ​t​e​ ​k​u​n​n​e​n​ ​b​e​o​o​r​d​e​l​e​n​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​e​z​e​ ​i​t​e​m​s​ ​i​n​c​l​u​d​e​r​e​n​ ​d​e​ ​i​n​t​e​r​p​e​r​s​o​o​n​l​i​j​k​e​ ​p​r​e​s​t​a​t​i​e​s​ ​v​a​n​ ​h​e​t​ ​t​e​a​m​,​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​ ​s​t​r​a​t​e​g​i​e​ ​v​a​n​ ​h​e​t​ ​b​e​d​r​i​j​f​,​ ​d​e​ ​p​r​e​s​t​a​t​i​e​s​ ​v​a​n​ ​p​e​r​s​o​n​e​e​l​ ​v​a​n​ ​z​o​w​e​l​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​h​o​g​e​ ​a​l​s​ ​l​a​g​e​ ​r​a​n​g​,​ ​m​o​t​i​v​a​t​i​e​,​ ​c​o​m​p​e​t​i​t​i​e​v​e​ ​g​e​v​a​r​e​n​ ​e​n​ ​t​r​e​n​d​s​ ​i​n​ ​d​e​ ​s​e​c​t​o​r​.​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​e​ ​d​u​u​r​ ​v​a​n​ ​d​e​z​e​ ​r​e​v​i​e​w​s​ ​k​a​n​ ​v​a​r​i​ë​r​e​n​ ​v​a​n​ ​h​e​t​ ​b​e​t​e​r​e​ ​d​e​e​l​ ​v​a​n​ ​e​e​n​ ​d​a​g​ ​
+					​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​t​o​t​ ​t​w​e​e​ ​v​o​l​l​e​ ​d​a​g​e​n​ ​e​l​k​ ​k​w​a​r​t​a​a​l​.
 						 */
-						intro: string
-						list: {
-							/**
-							 * G​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​b​r​e​n​g​e​n​ ​h​u​n​ ​w​e​r​k​n​e​m​e​r​s​ ​o​p​ ​é​é​n​ ​l​i​j​n​ ​r​o​n​d​ ​o​r​g​a​n​i​s​a​t​o​r​i​s​c​h​e​ ​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​d​o​o​r​ ​k​e​r​n​b​o​o​d​s​c​h​a​p​p​e​n​ ​t​e​ ​c​o​m​m​u​n​i​c​e​r​e​n​ ​v​i​a​…
-							 */
-							intro: string
-							items: {
-								/**
-								 * H​e​r​h​a​l​i​n​g
-								 */
-								'0': string
-								/**
-								 * E​e​n​v​o​u​d
-								 */
-								'1': string
-								/**
-								 * M​e​e​r​d​e​r​e​ ​m​e​d​i​u​m​s
-								 */
-								'2': string
-								/**
-								 * T​r​a​p​s​g​e​w​i​j​z​e​ ​b​e​r​i​c​h​t​e​n
-								 */
-								'3': string
-							}
-						}
-					}
-				}
-			}
-			meetings_deadly: {
-				/**
-				 * V​e​r​g​a​d​e​r​e​n​ ​i​s​ ​D​o​d​e​l​i​j​k
-				 */
-				title: string
-				/**
-				 * V​e​r​g​a​d​e​r​i​n​g​e​n​ ​h​o​r​e​n​ ​b​i​j​ ​o​n​s​ ​w​e​r​k​,​ ​m​a​a​r​ ​z​e​ ​l​i​j​k​e​n​ ​v​a​a​k​ ​n​i​e​t​ ​
-			​	​	​	​	​	​	​	​v​e​e​l​ ​o​p​ ​t​e​ ​l​e​v​e​r​e​n​.​<​b​r​/​>​
-			​	​	​	​	​	​	​	​S​t​e​r​k​e​r​ ​n​o​g​,​ ​z​e​ ​g​e​l​d​e​n​ ​a​l​s​ ​r​e​g​e​l​r​e​c​h​t​e​ ​e​n​e​r​g​i​e​v​r​e​t​e​r​s​.​ ​D​a​t​ ​
-			​	​	​	​	​	​	​	​k​o​m​t​ ​o​m​d​a​t​ ​w​e​ ​o​p​ ​d​e​ ​v​e​r​k​e​e​r​d​e​ ​m​a​n​i​e​r​ ​v​e​r​g​a​d​e​r​e​n​.​<​b​r​/​>​
-			​	​	​	​	​	​	​	​<​b​r​/​>​
-			​	​	​	​	​	​	​	​I​n​ ​d​i​t​ ​m​o​d​e​l​ ​m​e​t​ ​b​i​j​h​o​r​e​n​d​e​ ​o​n​l​i​n​e​ ​t​o​o​l​ ​l​e​r​e​n​ ​w​e​ ​j​e​ ​a​l​s​ ​
-			​	​	​	​	​	​	​	​t​e​a​m​l​e​a​d​e​r​ ​o​f​ ​c​o​a​c​h​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​e​n​ ​t​e​a​m​s​ ​b​e​g​e​l​e​i​d​e​n​ ​i​n​ ​h​u​n​ ​
-			​	​	​	​	​	​	​	​m​e​e​t​i​n​g​c​u​l​t​u​u​r​.​<​b​r​/​>​
-			​	​	​	​	​	​	​	​S​p​e​c​i​f​i​e​k​ ​w​e​r​k​e​n​ ​w​e​ ​o​p​ ​h​o​e​ ​j​e​ ​m​o​e​i​l​i​j​k​e​ ​m​e​e​t​i​n​g​s​ ​i​n​ ​e​f​f​e​c​t​i​e​v​e​ ​
-			​	​	​	​	​	​	​	​e​n​ ​p​r​o​d​u​c​t​i​e​v​e​ ​m​e​e​t​i​n​g​s​ ​k​a​n​ ​o​m​t​u​r​n​e​n​ ​a​a​n​ ​d​e​ ​h​a​n​d​ ​v​a​n​ ​d​e​ ​4​ ​t​y​p​e​s​ ​
-			​	​	​	​	​	​	​	​v​a​n​ ​m​e​e​t​i​n​g​s​.
-				 */
-				intro: string
-				in_depth: {
-					/**
-					 * M​a​a​r​ ​n​i​e​t​ ​m​e​t​ ​d​e​z​e​ ​4​ ​T​y​p​e​s​ ​v​a​n​ ​M​e​e​t​i​n​g​s
-					 */
-					subtitle: string
-					key_titles: {
+						text: string
 						/**
-						 * T​i​j​d​s​d​u​u​r
+						 * 1​ ​-​ ​2​ ​d​a​g​e​n
 						 */
 						timespan: string
 						/**
-						 * D​o​e​l
+						 * O​n​t​w​i​k​k​e​l​e​n​d​:
 						 */
 						target: string
 						/**
-						 * S​l​e​u​t​e​l​s​ ​t​o​t​ ​S​u​c​c​e​s
+						 * S​p​e​e​l​b​o​e​k​ ​(​t​e​a​m​o​n​t​w​i​k​k​e​l​i​n​g​,​ ​d​y​n​a​m​i​e​k​ ​e​n​ ​h​e​l​d​e​r​h​e​i​d​)​,​ ​c​o​m​p​e​t​i​t​i​e​f​ ​l​a​n​d​s​c​h​a​p​,​ ​t​r​e​n​d​s​ ​i​n​ ​d​e​ ​s​e​c​t​o​r​ ​e​n​ ​s​l​e​u​t​e​l​p​e​r​s​o​n​e​e​l​ ​h​e​r​b​e​k​i​j​k​e​n​.
 						 */
-						keys_success: string
-					}
-					/**
-					 * M​e​t​ ​d​e​z​e​ ​4​ ​t​y​p​e​s​ ​v​a​n​ ​m​e​e​t​i​n​g​s​ ​m​a​a​k​ ​j​e​ ​j​e​ ​v​e​r​g​a​d​e​r​i​n​g​e​n​ ​n​i​e​t​ ​a​l​l​e​e​n​ ​p​r​o​d​u​c​t​i​e​v​e​r​,​ ​m​a​a​r​ ​o​o​k​ ​e​f​f​i​c​i​ë​n​t​e​r​ ​e​n​ ​a​a​n​g​e​n​a​m​e​r​:
-					 */
-					accordeon_title: string
-					accordeon_items: {
-						'0': {
+						target_desc: string
+						keys: {
 							/**
-							 * D​a​g​e​l​i​j​k​s​e​ ​C​h​e​c​k​-​I​n
+							 * G​a​ ​n​a​a​r​ ​b​u​i​t​e​n
 							 */
-							title: string
+							'0': string
 							/**
-							 * D​e​ ​<​s​t​r​o​n​g​>​"​D​a​i​l​y​ ​C​h​e​c​k​-​i​n​"​<​/​s​t​r​o​n​g​>​ ​i​s​ ​e​e​n​ ​a​g​e​n​d​a​-​g​e​o​r​i​ë​n​t​e​e​r​d​e​,​ ​a​d​m​i​n​i​s​t​r​a​t​i​e​v​e​ ​
-						​	​	​	​	​	​	​	​	​	​	​m​e​e​t​i​n​g​ ​d​i​e​ ​n​i​e​t​ ​l​a​n​g​e​r​ ​z​o​u​ ​m​o​g​e​n​ ​d​u​r​e​n​ ​d​a​n​ ​v​i​j​f​ ​o​f​ ​t​i​e​n​ ​m​i​n​u​t​e​n​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​H​e​t​ ​d​o​e​l​ ​v​a​n​ ​d​e​z​e​ ​m​e​e​t​i​n​g​ ​i​s​ ​s​i​m​p​e​l​w​e​g​ ​o​m​ ​t​e​a​m​l​e​d​e​n​ ​o​p​ ​g​e​l​i​j​k​e​ ​
-						​	​	​	​	​	​	​	​	​	​	​g​o​l​f​l​e​n​g​t​e​n​ ​t​e​ ​h​o​u​d​e​n​ ​e​n​ ​t​e​ ​z​o​r​g​e​n​ ​v​o​o​r​ ​e​e​n​ ​d​a​g​e​l​i​j​k​s​ ​f​o​r​u​m​ ​w​a​a​r​ ​
-						​	​	​	​	​	​	​	​	​	​	​a​c​t​i​v​i​t​e​i​t​s​u​p​d​a​t​e​s​ ​e​n​ ​p​l​a​n​n​i​n​g​ ​b​e​s​p​r​o​k​e​n​ ​k​u​n​n​e​n​ ​w​o​r​d​e​n​.
+							 * F​o​c​u​s​ ​o​p​ ​w​e​r​k​,​ ​l​i​m​i​t​e​e​r​ ​s​o​c​i​a​l​e​ ​a​c​t​i​v​i​t​e​i​t​e​n
 							 */
-							text: string
+							'1': string
 							/**
-							 * 5​ ​-​ ​1​0​ ​m​i​n​u​t​e​n
+							 * O​v​e​r​s​t​r​u​c​t​u​r​e​e​r​ ​o​f​ ​o​v​e​r​b​e​l​a​s​t​ ​d​e​ ​p​l​a​n​n​i​n​g​ ​n​i​e​t
 							 */
-							timespan: string
-							/**
-							 * A​d​m​i​n​i​s​t​r​a​t​i​e​f​:
-							 */
-							target: string
-							/**
-							 * H​o​u​ ​i​n​f​o​r​m​e​l​e​ ​c​o​n​v​e​r​s​a​t​i​e​s​ ​m​e​t​ ​t​e​a​m​l​e​d​e​n​,​ ​r​o​n​d​ ​r​e​l​e​v​a​n​t​e​ ​a​d​m​i​n​i​s​t​r​a​t​i​e​v​e​ ​i​t​e​m​s​.
-							 */
-							target_desc: string
-							keys: {
-								/**
-								 * Z​i​t​ ​n​i​e​t​ ​n​e​e​r
-								 */
-								'0': string
-								/**
-								 * H​o​u​ ​h​e​t​ ​a​d​m​i​n​i​s​t​r​a​t​i​e​f
-								 */
-								'1': string
-								/**
-								 * Z​e​g​ ​n​i​e​t​ ​a​f​ ​a​l​s​ ​s​o​m​m​i​g​e​ ​m​e​n​s​e​n​ ​e​r​ ​n​i​e​t​ ​z​u​l​l​e​n​ ​g​e​r​a​k​e​n
-								 */
-								'2': string
-							}
-						}
-						'1': {
-							/**
-							 * T​a​c​t​i​s​c​h​e​ ​M​e​d​e​w​e​r​k​e​r​s
-							 */
-							title: string
-							/**
-							 *  ​D​e​ ​<​s​t​r​o​n​g​>​“​T​a​c​t​i​c​a​l​ ​S​t​a​f​f​”​<​/​s​t​r​o​n​g​>​ ​i​s​ ​w​a​t​ ​d​e​ ​m​e​e​s​t​e​ ​m​e​n​s​e​n​ ​
-						​	​	​	​	​	​	​	​	​	​	​k​e​n​n​e​n​ ​a​l​s​ ​m​e​d​e​w​e​r​k​e​r​s​m​e​e​t​i​n​g​s​.​<​b​r​/​>​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​Z​e​ ​z​o​u​d​e​n​ ​o​n​g​e​v​e​e​r​ ​e​e​n​ ​u​u​r​ ​l​a​n​g​ ​m​o​e​t​e​n​ ​z​i​j​n​,​ ​m​e​t​ ​e​e​n​ ​s​p​e​l​i​n​g​ ​
-						​	​	​	​	​	​	​	​	​	​	​v​a​n​ ​2​0​ ​m​i​n​u​t​e​n​,​ ​e​n​ ​z​o​u​d​e​n​ ​m​o​e​t​e​n​ ​f​o​c​u​s​s​e​n​ ​o​p​ ​d​e​ ​d​i​s​c​u​s​s​i​e​ ​r​o​n​d​ ​
-						​	​	​	​	​	​	​	​	​	​	​e​n​ ​o​p​l​o​s​s​i​n​g​ ​v​a​n​ ​p​r​o​b​l​e​m​e​n​ ​d​i​e​ ​d​o​e​l​e​n​ ​i​n​ ​d​e​ ​n​a​b​i​j​e​ ​t​o​e​k​o​m​s​t​ ​a​f​f​e​c​t​e​r​e​n​.
-							 */
-							text: string
-							/**
-							 * 4​5​ ​-​ ​9​0​ ​m​i​n​u​t​e​n
-							 */
-							timespan: string
-							/**
-							 * T​a​c​t​i​s​c​h​:
-							 */
-							target: string
-							/**
-							 *  ​S​c​o​r​e​k​a​a​r​t​ ​h​e​r​b​e​k​i​j​k​e​n​ ​e​n​ ​o​p​l​o​s​s​e​n​ ​v​a​n​ ​k​r​i​t​i​e​k​e​ ​t​a​c​t​i​s​c​h​e​ ​o​b​s​t​a​k​e​l​s​ ​e​n​ ​p​r​o​b​l​e​m​e​n​.
-							 */
-							target_desc: string
-							keys: {
-								/**
-								 * P​l​a​n​ ​n​o​g​ ​n​i​e​t​s​,​ ​t​o​t​ ​n​a​ ​d​e​ ​e​e​r​s​t​e​ ​r​a​p​p​o​r​t​e​r​i​n​g
-								 */
-								'0': string
-								/**
-								 * S​t​e​l​ ​s​t​r​a​t​e​g​i​s​c​h​e​ ​d​i​s​c​u​s​s​i​e​s​ ​u​i​t
-								 */
-								'1': string
-							}
-						}
-						'2': {
-							/**
-							 * A​d​h​o​c​ ​A​c​t​u​e​e​l
-							 */
-							title: string
-							/**
-							 * D​e​ ​“​A​d​h​o​c​ ​T​o​p​i​c​a​l​”​ ​i​s​ ​d​e​ ​m​e​e​s​t​ ​i​n​t​e​r​e​s​s​a​n​t​e​ ​s​o​o​r​t​ ​m​e​e​t​i​n​g​ ​v​o​o​r​ ​
-						​	​	​	​	​	​	​	​	​	​t​e​a​m​l​e​i​d​e​r​s​ ​e​n​ ​d​e​ ​b​e​l​a​n​g​r​i​j​k​s​t​e​ ​i​n​d​i​c​a​t​o​r​ ​v​a​n​ ​d​e​ ​s​t​r​a​t​e​g​i​s​c​h​e​ ​
-						​	​	​	​	​	​	​	​	​	​b​e​k​w​a​a​m​h​e​i​d​ ​v​a​n​ ​e​e​n​ ​b​e​d​r​i​j​f​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​H​e​t​ ​i​s​ ​d​é​ ​a​d​e​q​u​a​t​e​ ​p​l​e​k​ ​v​o​o​r​ ​g​r​o​t​e​ ​t​o​p​i​c​s​;​ ​d​e​g​e​n​e​ ​d​i​e​ ​o​p​ ​l​a​n​g​e​ ​
-						​	​	​	​	​	​	​	​	​	​t​e​r​m​i​j​n​ ​e​e​n​ ​i​m​p​a​c​t​ ​h​e​b​b​e​n​ ​o​p​ ​h​e​t​ ​b​e​d​r​i​j​f​.​ ​D​e​z​e​ ​t​o​p​i​c​s​ ​h​e​b​b​e​n​ ​
-						​	​	​	​	​	​	​	​	​	​m​e​e​r​ ​t​i​j​d​ ​e​n​ ​e​e​n​ ​a​n​d​e​r​e​ ​s​e​t​t​i​n​g​ ​n​o​d​i​g​.​<​b​r​/​>​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​E​e​n​ ​s​e​t​t​i​n​g​ ​w​a​a​r​i​n​ ​d​e​e​l​n​e​m​e​r​s​ ​k​u​n​n​e​n​ ​b​r​a​i​n​s​t​o​r​m​e​n​,​ ​d​e​b​a​t​t​e​r​e​n​,​ ​
-						​	​	​	​	​	​	​	​	​	​i​d​e​e​ë​n​ ​p​r​e​s​e​n​t​e​r​e​n​ ​e​n​ ​m​e​t​ ​e​l​k​a​a​r​ ​k​u​n​n​e​n​ ​o​v​e​r​l​e​g​g​e​n​ ​o​m​ ​z​o​ ​d​e​ ​
-						​	​	​	​	​	​	​	​	​	​m​e​e​s​t​ ​o​p​t​i​m​a​l​e​ ​l​a​n​g​e​ ​t​e​r​m​i​j​n​s​o​p​l​o​s​s​i​n​g​ ​t​e​ ​k​u​n​n​e​n​ ​v​i​n​d​e​n​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​E​l​k​e​ ​s​t​r​a​t​e​g​i​s​c​h​e​ ​m​e​e​t​i​n​g​ ​z​o​u​ ​n​i​e​t​ ​m​e​e​r​ ​d​a​n​ ​t​w​e​e​ ​o​n​d​e​r​w​e​r​p​e​n​ ​
-						​	​	​	​	​	​	​	​	​	​m​o​g​e​n​ ​b​e​v​a​t​t​e​n​.​ ​A​a​n​ ​e​l​k​ ​o​n​d​e​r​d​e​e​l​ ​z​o​u​ ​v​e​r​v​o​l​g​e​n​s​ ​o​n​g​e​v​e​e​r​ ​t​w​e​e​ ​
-						​	​	​	​	​	​	​	​	​	​u​u​r​ ​m​o​e​t​e​n​ ​b​e​s​t​e​e​d​t​ ​w​o​r​d​e​n​.
-							 */
-							text: string
-							/**
-							 * 2​ ​-​ ​4​ ​u​u​r
-							 */
-							timespan: string
-							/**
-							 * S​t​r​a​t​e​g​i​s​c​h​:
-							 */
-							target: string
-							/**
-							 * D​i​s​c​u​s​s​i​e​e​r​,​ ​a​n​a​l​y​s​e​e​r​,​ ​b​r​a​i​n​s​t​o​r​m​ ​e​n​ ​m​a​a​k​ ​e​e​n​ ​b​e​s​l​i​s​s​i​n​g​ ​r​o​n​d​ ​e​e​n​ ​k​r​i​t​i​s​c​h​ ​p​r​o​b​l​e​e​m​ ​d​a​t​ ​o​p​ ​l​a​n​g​e​ ​t​e​r​m​i​j​n​ ​e​e​n​ ​g​r​o​t​e​ ​i​m​p​a​c​t​ ​z​a​l​ ​h​e​b​b​e​n​ ​o​p​ ​s​u​c​c​e​s​.
-							 */
-							target_desc: string
-							keys: {
-								/**
-								 * F​o​c​u​s​ ​o​p​ ​e​e​n​ ​s​p​e​c​i​f​i​e​k​ ​o​n​d​e​r​w​e​r​p
-								 */
-								'0': string
-								/**
-								 * B​e​r​e​i​d​ ​j​e​ ​v​o​o​r
-								 */
-								'1': string
-								/**
-								 * G​a​ ​v​o​l​l​e​d​i​g​ ​o​p​ ​i​n​ ​h​e​t​ ​c​o​n​f​l​i​c​t
-								 */
-								'2': string
-							}
-						}
-						'3': {
-							/**
-							 * O​f​f​-​S​i​t​e​ ​R​e​v​i​e​w​ ​(​E​l​k​ ​K​w​a​r​t​a​a​l​)
-							 */
-							title: string
-							/**
-							 * D​e​ ​“​O​f​f​-​S​i​t​e​ ​R​e​v​i​e​w​”​ ​g​e​b​e​u​r​t​ ​e​l​k​ ​k​w​a​r​t​a​a​l​ ​e​n​ ​i​s​ ​v​o​o​r​ ​t​e​a​m​l​e​d​e​n​ ​
-						​	​	​	​	​	​	​	​	​	​	​e​e​n​ ​o​p​p​o​r​t​u​n​i​t​e​i​t​ ​o​m​ ​a​f​s​t​a​n​d​ ​t​e​ ​n​e​m​e​n​ ​v​a​n​ ​h​e​t​ ​b​e​d​r​i​j​f​,​ ​l​e​t​t​e​r​l​i​j​k​ ​
-						​	​	​	​	​	​	​	​	​	​	​e​n​ ​f​i​g​u​u​r​l​i​j​k​,​ ​o​m​ ​a​l​l​e​r​l​e​i​ ​i​t​e​m​s​ ​o​p​n​i​e​u​w​ ​t​e​ ​k​u​n​n​e​n​ ​b​e​o​o​r​d​e​l​e​n​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​D​e​z​e​ ​i​t​e​m​s​ ​i​n​c​l​u​d​e​r​e​n​ ​d​e​ ​i​n​t​e​r​p​e​r​s​o​o​n​l​i​j​k​e​ ​p​r​e​s​t​a​t​i​e​s​ ​v​a​n​ ​h​e​t​ ​t​e​a​m​,​ ​
-						​	​	​	​	​	​	​	​	​	​	​d​e​ ​s​t​r​a​t​e​g​i​e​ ​v​a​n​ ​h​e​t​ ​b​e​d​r​i​j​f​,​ ​d​e​ ​p​r​e​s​t​a​t​i​e​s​ ​v​a​n​ ​p​e​r​s​o​n​e​e​l​ ​v​a​n​ ​z​o​w​e​l​ ​
-						​	​	​	​	​	​	​	​	​	​	​h​o​g​e​ ​a​l​s​ ​l​a​g​e​ ​r​a​n​g​,​ ​m​o​t​i​v​a​t​i​e​,​ ​c​o​m​p​e​t​i​t​i​e​v​e​ ​g​e​v​a​r​e​n​ ​e​n​ ​t​r​e​n​d​s​ ​i​n​ ​d​e​ ​s​e​c​t​o​r​.​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​<​b​r​/​>​
-						​	​	​	​	​	​	​	​	​	​	​D​e​ ​d​u​u​r​ ​v​a​n​ ​d​e​z​e​ ​r​e​v​i​e​w​s​ ​k​a​n​ ​v​a​r​i​ë​r​e​n​ ​v​a​n​ ​h​e​t​ ​b​e​t​e​r​e​ ​d​e​e​l​ ​v​a​n​ ​e​e​n​ ​d​a​g​ ​
-						​	​	​	​	​	​	​	​	​	​	​t​o​t​ ​t​w​e​e​ ​v​o​l​l​e​ ​d​a​g​e​n​ ​e​l​k​ ​k​w​a​r​t​a​a​l​.
-							 */
-							text: string
-							/**
-							 * 1​ ​-​ ​2​ ​d​a​g​e​n
-							 */
-							timespan: string
-							/**
-							 * O​n​t​w​i​k​k​e​l​e​n​d​:
-							 */
-							target: string
-							/**
-							 * S​p​e​e​l​b​o​e​k​ ​(​t​e​a​m​o​n​t​w​i​k​k​e​l​i​n​g​,​ ​d​y​n​a​m​i​e​k​ ​e​n​ ​h​e​l​d​e​r​h​e​i​d​)​,​ ​c​o​m​p​e​t​i​t​i​e​f​ ​l​a​n​d​s​c​h​a​p​,​ ​t​r​e​n​d​s​ ​i​n​ ​d​e​ ​s​e​c​t​o​r​ ​e​n​ ​s​l​e​u​t​e​l​p​e​r​s​o​n​e​e​l​ ​h​e​r​b​e​k​i​j​k​e​n​.
-							 */
-							target_desc: string
-							keys: {
-								/**
-								 * G​a​ ​n​a​a​r​ ​b​u​i​t​e​n
-								 */
-								'0': string
-								/**
-								 * F​o​c​u​s​ ​o​p​ ​w​e​r​k​,​ ​l​i​m​i​t​e​e​r​ ​s​o​c​i​a​l​e​ ​a​c​t​i​v​i​t​e​i​t​e​n
-								 */
-								'1': string
-								/**
-								 * O​v​e​r​s​t​r​u​c​t​u​r​e​e​r​ ​o​f​ ​o​v​e​r​b​e​l​a​s​t​ ​d​e​ ​p​l​a​n​n​i​n​g​ ​n​i​e​t
-								 */
-								'2': string
-							}
+							'2': string
 						}
 					}
 				}
@@ -2731,6 +3020,7 @@ export type Namespaces =
 	| 'nav'
 	| 'other'
 	| 'pages'
+	| 'pages_explore'
 	| 'sessions'
 
 type DisallowNamespaces = {
@@ -2757,6 +3047,12 @@ type DisallowNamespaces = {
 	 * you need to use the `./pages/index.ts` file instead
 	 */
 	pages?: "[typesafe-i18n] reserved for 'pages'-namespace. You need to use the `./pages/index.ts` file instead."
+
+	/**
+	 * reserved for 'pages_explore'-namespace\
+	 * you need to use the `./pages_explore/index.ts` file instead
+	 */
+	pages_explore?: "[typesafe-i18n] reserved for 'pages_explore'-namespace. You need to use the `./pages_explore/index.ts` file instead."
 
 	/**
 	 * reserved for 'sessions'-namespace\
@@ -3523,6 +3819,293 @@ export type TranslationFunctions = {
 				content: () => LocalizedString
 			}
 		}
+		privacy_policy: {
+			/**
+			 * Trixolutions bvba is verantwoordelijk voor de verwerking van persoonsgegevens zoals vermeld in deze privacyverklaring.
+			 */
+			intro: () => LocalizedString
+			items: {
+				'0': {
+					/**
+					 * Wie we zijn
+					 */
+					title: () => LocalizedString
+					/**
+					 * Contactgegevens:<br/>Trixolutions bvba<br/>Krommelei 14<br/>2110 Wijnegem<br/>Tel.: +32 3 344 67 76<br/><a href='https://www.trixolutions.be'>www.trixolutions.be</a>
+					 */
+					text: () => LocalizedString
+				}
+				'1': {
+					/**
+					 * Welke persoonlijke gegevens we verzamelen en waarom
+					 */
+					title: () => LocalizedString
+					sections: {
+						'0': {
+							/**
+							 * Cookies
+							 */
+							title: () => LocalizedString
+							/**
+							 * Om je surfgedrag te monitoren, gebruiken we Google Tag-cookies. Daartoe sloten we een 
+						                        bewerkersovereenkomst met Google. IP-adressen worden geanonimiseerd (het laatste octet van 
+						                        je IP-adres wordt gemaskeerd) en er worden met Google geen persoonlijke gegevens gedeeld.<br/>
+						                        <br/>
+						                        Er worden ook functionele, benodigde cookies opgeslagen, zoals je taalvoorkeur, of andere cookies 
+						                        die benodigd zijn om de website juist te laten werken. Deze hebben dan ook geen enkele invloed op 
+						                        gegevens, enkel op gebruikerservaring en -interactie.
+							 */
+							text: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Ingesloten inhoud van andere websites
+							 */
+							title: () => LocalizedString
+							/**
+							 * Berichten op deze site kunnen ingesloten (embedded) inhoud bevatten, zoals video’s en 
+						                        afbeeldingen. Ingesloten inhoud van andere websites gedraagt zich alsof je deze andere website 
+						                        hebt bezocht.<br/><br/>
+						                        Deze websites kunnen data over jou verzamelen, cookies en 3rd-party tracking gebruiken, en 
+						                        je interactie met de ingesloten inhoud monitoren.
+							 */
+							text: () => LocalizedString
+						}
+					}
+				}
+				'2': {
+					/**
+					 * Hoe lang we je data bewaren
+					 */
+					title: () => LocalizedString
+					/**
+					 * Wanneer je een reactie achterlaat, of een bericht via een forum naar ons stuurt, 
+				                  dan wordt die reactie, of dat bericht, en de metadata van die reactie of dat bericht voor 
+				                  altijd bewaard. Op deze manier kunnen we vervolgreacties en -berichten automatisch herkennen 
+				                  en goedkeuren in plaats van ze moeten modereren.
+					 */
+					text: () => LocalizedString
+				}
+				'3': {
+					/**
+					 * Welke rechten je hebt over je data
+					 */
+					title: () => LocalizedString
+					/**
+					 * Als je op deze site een reactie hebt achtergelaten of een formulier hebt ingevuld, kun je om 
+				                  een exportbestand van je persoonlijke data vragen. Je kan ook vragen dat we persoonlijke 
+				                  data die we van je hebben, verwijderen, met uitzondering van data die we verplicht moeten 
+				                  bewaren in verband met administratieve, wettelijke of beveiligingsdoeleinden.
+					 */
+					text: () => LocalizedString
+				}
+				'4': {
+					/**
+					 * Waar we je data naartoe sturen
+					 */
+					title: () => LocalizedString
+					/**
+					 * Reacties van bezoekers kunnen naar een geautomatiseerde spamdetectiedienst worden 
+				                  gestuurd. Een geanonimiseerd IP-adres kan met Google Tags worden gedeeld.
+					 */
+					text: () => LocalizedString
+				}
+			}
+		}
+		terms_kmo: {
+			'0': {
+				/**
+				 * Beoordeling van de subsidie-aanvragen via de kmo-portefeuille
+				 */
+				title: () => LocalizedString
+				/**
+				 * Elke dienstverlener, in deze Trixolutions, moet controleren of de steunaanvraag correct 
+			               is uitgevoerd. Als de subsidieaanvraag niet correct is uitgevoerd dien je deze te weigeren 
+			               via de digitale applicatie voor dienstverleners.
+				 */
+				text: () => LocalizedString
+			}
+			'1': {
+				/**
+				 * Voorwaarden
+				 */
+				title: () => LocalizedString
+				/**
+				 * Trixolutions is verplicht om elke subsidieaanvraag te melden die niet in overeenstemming 
+			               is met de wetgeving. De controletaak is zowel vormelijk als inhoudelijk. <br/><br/>
+			               Mogelijke redenen zijn:
+				 */
+				text: () => LocalizedString
+				list: {
+					/**
+					 * De onderneming mag geen gebruik maken van de kmo-portefeuille.
+					 */
+					'0': () => LocalizedString
+					/**
+					 * De subsidie wordt aangevraagd voor een niet subsidiabele dienst
+					 */
+					'1': () => LocalizedString
+					/**
+					 * Verkeerde dienstverlener
+					 */
+					'2': () => LocalizedString
+					/**
+					 * Verkeerd of gedeeltelijk bedrag
+					 */
+					'3': () => LocalizedString
+				}
+				/**
+				 * Aanvraag te laat – een project dient ten laatste 14 dagen na de start van de opleiding 
+			                  of het advies zijn aangevraagd. Bij een projectaanvraag die hierbuiten gebeurt, dient 
+			                  een dienstverlener de aanvraag te weigeren.
+				 */
+				text2: () => LocalizedString
+			}
+			'2': {
+				/**
+				 * Procedure van de subsidie-afhandeling
+				 */
+				title: () => LocalizedString
+				list_ordered: {
+					/**
+					 * De kmo schrijft zich in of ondertekent contract advies
+					 */
+					'0': () => LocalizedString
+					/**
+					 * De kmo doet digitaal de aanvraag + stort eigen aandeel
+					 */
+					'1': () => LocalizedString
+					/**
+					 * Dienstverlener zet aanvraag stop indien niet in orde
+					 */
+					'2': () => LocalizedString
+					/**
+					 * De kmo volgt de opleiding – Dienstverlener geeft opleiding/advies
+					 */
+					'3': () => LocalizedString
+					/**
+					 * Dienstverlener maakt factuur op na eerste prestaties
+					 */
+					'4': () => LocalizedString
+					/**
+					 * De kmo betaalt via de kmo-portefeuille
+					 */
+					'5': () => LocalizedString
+					/**
+					 * De kmo beoordeelt de dienstverlener
+					 */
+					'6': () => LocalizedString
+				}
+			}
+			'3': {
+				/**
+				 * Wat moet de inschrijving/overeenkomst voor een opleiding minstens bevatten?
+				 */
+				title: () => LocalizedString
+				list: {
+					/**
+					 * de startdatum van de opleiding en de looptijd ervan;
+					 */
+					'0': () => LocalizedString
+					/**
+					 * een gedetailleerde beschrijving van de opleiding;
+					 */
+					'1': () => LocalizedString
+					/**
+					 * de naam en het registratienummer van dienstverlener;
+					 */
+					'2': () => LocalizedString
+					/**
+					 * de handtekening of akkoord per mail van de onderneming;
+					 */
+					'3': () => LocalizedString
+					/**
+					 * de naam van de werkende in de onderneming en vermelding van de onderneming waarin deze persoon werkzaam is;
+					 */
+					'4': () => LocalizedString
+					/**
+					 * de prijs (exclusief btw) van de dienstverlening, met een aparte vermelding van de niet in aanmerking komende kosten
+					 */
+					'5': () => LocalizedString
+				}
+			}
+			'4': {
+				/**
+				 * Wat moet het vormingsattest minstens bevatten?
+				 */
+				title: () => LocalizedString
+				list: {
+					/**
+					 * naam van de persoon die de opleiding volgde en vermelding van de onderneming waarin deze persoon werkzaam is;
+					 */
+					'0': () => LocalizedString
+					/**
+					 * naam en registratienummer van de dienstverlener;
+					 */
+					'1': () => LocalizedString
+					/**
+					 * naam van de opleiding;
+					 */
+					'2': () => LocalizedString
+					/**
+					 * startdatum of looptijd van de opleiding
+					 */
+					'3': () => LocalizedString
+				}
+			}
+			'5': {
+				/**
+				 * Wat moeten de aanwezigheidslijsten minstens bevatten?
+				 */
+				title: () => LocalizedString
+				list: {
+					/**
+					 * naam van de persoon die zich inschrijft voor de opleiding en vermelding van de onderneming waarin deze persoon werkzaam is;
+					 */
+					'0': () => LocalizedString
+					/**
+					 * naam van de opleiding;
+					 */
+					'1': () => LocalizedString
+					/**
+					 * datum van de opleiding (per opleidingsdag wordt de aanwezigheid van de persoon genoteerd);
+					 */
+					'2': () => LocalizedString
+					/**
+					 * handtekening van de inschrijver (elektronisch of schriftelijk)
+					 */
+					'3': () => LocalizedString
+				}
+			}
+			'6': {
+				/**
+				 * Wat moet de factuur minstens bevatten?
+				 */
+				title: () => LocalizedString
+				/**
+				 * De facturen die de dienstverlener aanbiedt om te betalen via de kmo-portefeuille, bevatten:
+				 */
+				text: () => LocalizedString
+				list: {
+					/**
+					 * de naam en het registratienummer van de dienstverlener;
+					 */
+					'0': () => LocalizedString
+					/**
+					 * het totale bedrag van de factuur, exclusief btw;
+					 */
+					'1': () => LocalizedString
+					/**
+					 * een gedetailleerde beschrijving van de gefactureerde prestaties;
+					 */
+					'2': () => LocalizedString
+					/**
+					 * de datum van de factuur
+					 */
+					'3': () => LocalizedString
+				}
+			}
+		}
 	}
 	pages: {
 		home: {
@@ -3655,903 +4238,903 @@ export type TranslationFunctions = {
 			 */
 			title: () => LocalizedString
 		}
-		main: {
-			training_leadership_teamcoaching: {
-				base: {
+	}
+	pages_explore: {
+		training_leadership_teamcoaching: {
+			base: {
+				/**
+				 * Het Model
+				 */
+				the_model: () => LocalizedString
+				/**
+				 * by Patrick Lecioni
+				 */
+				by_lencioni: () => LocalizedString
+			}
+			dysfunctions_teamwork: {
+				/**
+				 * de 5 frustraties van teamwerk
+				 */
+				title: () => LocalizedString
+				intro: {
 					/**
-					 * Het Model
+					 * Of je het nu leuk vindt of niet, alle teams zijn potentieel 
+				                     disfunctioneel.<br/>
+				                     Dat is onvermijdelijk omdat ze uit feilbare, onvolmaakte 
+				                     mensen bestaan.<br/>
+				                     Van het basketbalveld tot de executive suite, politiek en 
+				                     onduidelijkheid zijn meer regel dan uitzondering.<br/>
+				                     Het disfunctioneren onder ogen zien en focussen op teamwerk 
+				                     is echter vooral van cruciaal belang aan de top van een 
+				                     organisatie, omdat het executive team de toon zet voor hoe 
+				                     alle werknemers met elkaar samenwerken.<br/>
 					 */
-					the_model: () => LocalizedString
+					first: () => LocalizedString
 					/**
-					 * by Patrick Lecioni
+					 * Een voormalige klant, de oprichter van een miljardenbedrijf, 
+				                     beschreef de kracht van teamwerk het beste toen hij me eens vertelde:
 					 */
-					by_lencioni: () => LocalizedString
+					second: () => LocalizedString
+					/**
+					 * Als je alle mensen in de organisatie in dezelfde richting 
+				                     zou kunnen laten roeien, zou je elke sector en elke markt 
+				                     kunnen domineren tegenover eender welke concurrentie.
+					 */
+					quote: () => LocalizedString
 				}
-				dysfunctions_teamwork: {
-					/**
-					 * de 5 frustraties van teamwerk
-					 */
-					title: () => LocalizedString
-					intro: {
+				cards: {
+					'0': {
 						/**
-						 * Of je het nu leuk vindt of niet, alle teams zijn potentieel 
-													disfunctioneel.<br/>
-													Dat is onvermijdelijk omdat ze uit feilbare, onvolmaakte 
-													mensen bestaan.<br/>
-													Van het basketbalveld tot de executive suite, politiek en 
-													onduidelijkheid zijn meer regel dan uitzondering.<br/>
-													Het disfunctioneren onder ogen zien en focussen op teamwerk 
-													is echter vooral van cruciaal belang aan de top van een 
-													organisatie, omdat het executive team de toon zet voor hoe 
-													alle werknemers met elkaar samenwerken.<br/>
-						 */
-						first: () => LocalizedString
-						/**
-						 * Een voormalige klant, de oprichter van een miljardenbedrijf, 
-													beschreef de kracht van teamwerk het beste toen hij me eens vertelde:
-						 */
-						second: () => LocalizedString
-						/**
-						 * Als je alle mensen in de organisatie in dezelfde richting 
-													zou kunnen laten roeien, zou je elke sector en elke markt 
-													kunnen domineren tegenover eender welke concurrentie.
-						 */
-						quote: () => LocalizedString
-					}
-					cards: {
-						'0': {
-							/**
-							 * Gebrek aan Vertrouwen
-							 */
-							title: () => LocalizedString
-							/**
-							 * De angst om kwetsbaar te zijn bij teamleden verhindert dat er vertrouwen wordt opgebouwd binnen het team.
-							 */
-							content: () => LocalizedString
-						}
-						'1': {
-							/**
-							 * Angst voor Conflicten
-							 */
-							title: () => LocalizedString
-							/**
-							 * De wens om kunstmatige harmonie te bewaren, onderdrukt het ontstaan van productieve, ideologische conflicten.
-							 */
-							content: () => LocalizedString
-						}
-						'2': {
-							/**
-							 * Gebrek aan Betrokkenheid
-							 */
-							title: () => LocalizedString
-							/**
-							 * Het gebrek aan duidelijkheid of buy-in verhindert teamleden om beslissingen te nemen waar ze zich aan houden.
-							 */
-							content: () => LocalizedString
-						}
-						'3': {
-							/**
-							 * Aansprakelijkheid Vermijden
-							 */
-							title: () => LocalizedString
-							/**
-							 * De behoefte om interpersoonlijk ongemak te vermijden, weerhoudt teamleden ervan elkaar aansprakelijkheid te houden voor hun gedrag en prestaties.
-							 */
-							content: () => LocalizedString
-						}
-						'4': {
-							/**
-							 * Geen Aandacht voor de Resultaten
-							 */
-							title: () => LocalizedString
-							/**
-							 * Het nastreven van individuele doelen en persoonlijke status vermindert de focus op het collectieve succes.
-							 */
-							content: () => LocalizedString
-						}
-					}
-					in_depth: {
-						/**
-						 * Teamfrustraties Overwinnen
+						 * Gebrek aan Vertrouwen
 						 */
 						title: () => LocalizedString
-						accordeon_items: {
-							first: {
+						/**
+						 * De angst om kwetsbaar te zijn bij teamleden verhindert dat er vertrouwen wordt opgebouwd binnen het team.
+						 */
+						content: () => LocalizedString
+					}
+					'1': {
+						/**
+						 * Angst voor Conflicten
+						 */
+						title: () => LocalizedString
+						/**
+						 * De wens om kunstmatige harmonie te bewaren, onderdrukt het ontstaan van productieve, ideologische conflicten.
+						 */
+						content: () => LocalizedString
+					}
+					'2': {
+						/**
+						 * Gebrek aan Betrokkenheid
+						 */
+						title: () => LocalizedString
+						/**
+						 * Het gebrek aan duidelijkheid of buy-in verhindert teamleden om beslissingen te nemen waar ze zich aan houden.
+						 */
+						content: () => LocalizedString
+					}
+					'3': {
+						/**
+						 * Aansprakelijkheid Vermijden
+						 */
+						title: () => LocalizedString
+						/**
+						 * De behoefte om interpersoonlijk ongemak te vermijden, weerhoudt teamleden ervan elkaar aansprakelijkheid te houden voor hun gedrag en prestaties.
+						 */
+						content: () => LocalizedString
+					}
+					'4': {
+						/**
+						 * Geen Aandacht voor de Resultaten
+						 */
+						title: () => LocalizedString
+						/**
+						 * Het nastreven van individuele doelen en persoonlijke status vermindert de focus op het collectieve succes.
+						 */
+						content: () => LocalizedString
+					}
+				}
+				in_depth: {
+					/**
+					 * Teamfrustraties Overwinnen
+					 */
+					title: () => LocalizedString
+					accordeon_items: {
+						first: {
+							/**
+							 * De Frustraties Aanpakken
+							 */
+							title: () => LocalizedString
+							list: {
 								/**
-								 * De Frustraties Aanpakken
-								 */
-								title: () => LocalizedString
-								list: {
-									/**
-									 * Om je team te verbeteren en het disfunctioneren waarmee je wordt geconfronteerd beter te begrijpen, stel je jezelf deze eenvoudige vragen:
-									 */
-									intro: () => LocalizedString
-									items: {
-										/**
-										 * Geven teamleden openlijk en gemakkelijk hun mening?
-										 */
-										'0': () => LocalizedString
-										/**
-										 * Zijn teamvergaderingen boeiend en productief?
-										 */
-										'1': () => LocalizedString
-										/**
-										 * Komt het team snel tot beslissingen en voorkomt het dat het vastloopt door consensus?
-										 */
-										'2': () => LocalizedString
-										/**
-										 * Confronteren teamleden elkaar over hun tekortkomingen?
-										 */
-										'3': () => LocalizedString
-										/**
-										 * Offeren teamleden hun eigen belangen op voor het welzijn van het team?
-										 */
-										'4': () => LocalizedString
-									}
-								}
-								/**
-								 * Hoewel geen enkel team perfect is en zelfs de beste teams soms worstelen 
-																met een of meer van deze problemen, werken de beste organisaties er constant 
-																aan om ervoor te zorgen dat hun antwoorden ‘ja’ zijn.<br/>
-																Als je veel van deze vragen met ‘nee’ hebt beantwoord, heeft jouw team 
-																wellicht wat werk nodig.<br/>
-																<br/>
-																De eerste stap om politiek en onduidelijkheid binnen jouw team te verminderen, 
-																is begrijpen dat er vijf frustraties zijn en dat de frustraties die van 
-																toepassing zijn, één voor één moeten worden aangepakt.
-								 */
-								text: () => LocalizedString
-							}
-							second: {
-								/**
-								 * De Frustraties
-								 */
-								title: () => LocalizedString
-								/**
-								 * Bekijk de <strong>frustraties die gebonden zijn aan de 5 lagen</strong>, en klik erop om nog is te zien wat de laag precies inhoudt.<br/><br/>
+								 * Om je team te verbeteren en het disfunctioneren waarmee je wordt geconfronteerd beter te begrijpen, stel je jezelf deze eenvoudige vragen:
 								 */
 								intro: () => LocalizedString
-								cards: {
-									'0': {
-										/**
-										 * Gebrek aan Vertrouwen
-										 */
-										title: () => LocalizedString
-										/**
-										 * Dit gebeurt wanneer teamleden terughoudend zijn om zich kwetsbaar op te 
-																				stellen tegenover elkaar en niet bereid zijn hun fouten, zwakheden of 
-																				behoeften toe te geven. Zonder een bepaald comfortniveau onder de 
-																				teamleden is een basis van vertrouwen onmogelijk.
-										 */
-										front: () => LocalizedString
-									}
-									'1': {
-										/**
-										 * Angst voor Conflicten
-										 */
-										title: () => LocalizedString
-										/**
-										 * Teams die geen vertrouwen hebben, zijn niet in staat om 
-																					ongefilterd en gepassioneerd te discussiëren over 
-																					belangrijke kwesties, waardoor situaties ontstaan waarin 
-																					teamconflicten gemakkelijk kunnen veranderen in verhulde 
-																					discussies en achterklap. In een werkomgeving waar teamleden 
-																					hun mening niet openlijk uiten, worden slechte beslissingen 
-																					genomen.
-										 */
-										front: () => LocalizedString
-									}
-									'2': {
-										/**
-										 * Gebrek aan Betrokkenheid
-										 */
-										title: () => LocalizedString
-										/**
-										 * Zonder conflicten is het moeilijk voor teamleden om zich 
-																					aan de beslissingen te houden, waardoor een omgeving ontstaat 
-																					waarin dubbelzinnigheid heerst. Gebrek aan richting en 
-																					betrokkenheid kan werknemers, met name topmedewerkers, 
-																					misnoegd maken.
-										 */
-										front: () => LocalizedString
-									}
-									'3': {
-										/**
-										 * Aansprakelijkheid Vermijden
-										 */
-										title: () => LocalizedString
-										/**
-										 * Wanneer teams geen duidelijk actieplan hebben, aarzelen 
-																					zelfs de meest gefocuste en gedreven individuen om hun 
-																					collega’s te bellen over activiteiten en gedragingen die 
-																					contraproductief kunnen lijken voor het algemene welzijn 
-																					van het team.
-										 */
-										front: () => LocalizedString
-									}
-									'4': {
-										/**
-										 * Aandacht voor de Resultaten
-										 */
-										title: () => LocalizedString
-										/**
-										 *  Teamleden hebben van nature de neiging om hun eigen behoeften 
-																					(ego, loopbaanontwikkeling, erkenning, enz.) boven de collectieve 
-																					doelen van het team te stellen wanneer individuen niet 
-																					aansprakelijk worden gehouden. Als een team de prestatiegerichtheid 
-																					uit het oog heeft verloren, lijdt het hele bedrijf er uiteindelijk onder.
-										 */
-										front: () => LocalizedString
-									}
+								items: {
+									/**
+									 * Geven teamleden openlijk en gemakkelijk hun mening?
+									 */
+									'0': () => LocalizedString
+									/**
+									 * Zijn teamvergaderingen boeiend en productief?
+									 */
+									'1': () => LocalizedString
+									/**
+									 * Komt het team snel tot beslissingen en voorkomt het dat het vastloopt door consensus?
+									 */
+									'2': () => LocalizedString
+									/**
+									 * Confronteren teamleden elkaar over hun tekortkomingen?
+									 */
+									'3': () => LocalizedString
+									/**
+									 * Offeren teamleden hun eigen belangen op voor het welzijn van het team?
+									 */
+									'4': () => LocalizedString
 								}
 							}
-							third: {
-								/**
-								 * De Beloningen
-								 */
-								title: () => LocalizedString
-								/**
-								 * Het streven naar een functioneel, samenhangend team is een van de weinige 
-																	resterende concurrentievoordelen voor organisaties die zich op een krachtige 
-																	manier willen onderscheiden.<br/>
-																	Functionele teams vermijden het om tijd te verspillen door over de verkeerde 
-																	kwesties te praten en keer op keer terug te komen op dezelfde onderwerpen 
-																	vanwege een gebrek aan buy-in. Functionele teams nemen ook kwalitatief betere 
-																	beslissingen en bereiken meer in minder tijd en met minder afleiding en 
-																	frustratie. Bovendien verlaten “A”-spelers zelden organisaties waar ze deel 
-																	uitmaken van een samenhangend team.<br/>
-																	<br/>
-																	Succesvol teamwerk gaat niet over het beheersen van subtiele, gesofisticeerde 
-																	theorieën, maar over het omarmen van gezond verstand met een ongebruikelijk 
-																	niveau van discipline en volharding.<br/>
-																	Ironisch genoeg zijn teams succesvol omdat ze buitengewoon menselijk zijn. 
-																	Door de onvolkomenheden van hun menselijkheid te erkennen, overwinnen leden 
-																	van functionele teams de natuurlijke neigingen die teamwerk zo moeilijk maken.
-								 */
-								text: () => LocalizedString
+							/**
+							 * Hoewel geen enkel team perfect is en zelfs de beste teams soms worstelen 
+						                        met een of meer van deze problemen, werken de beste organisaties er constant 
+						                        aan om ervoor te zorgen dat hun antwoorden ‘ja’ zijn.<br/>
+						                        Als je veel van deze vragen met ‘nee’ hebt beantwoord, heeft jouw team 
+						                        wellicht wat werk nodig.<br/>
+						                        <br/>
+						                        De eerste stap om politiek en onduidelijkheid binnen jouw team te verminderen, 
+						                        is begrijpen dat er vijf frustraties zijn en dat de frustraties die van 
+						                        toepassing zijn, één voor één moeten worden aangepakt.
+							 */
+							text: () => LocalizedString
+						}
+						second: {
+							/**
+							 * De Frustraties
+							 */
+							title: () => LocalizedString
+							/**
+							 * Bekijk de <strong>frustraties die gebonden zijn aan de 5 lagen</strong>, en klik erop om nog is te zien wat de laag precies inhoudt.<br/><br/>
+							 */
+							intro: () => LocalizedString
+							cards: {
+								'0': {
+									/**
+									 * Gebrek aan Vertrouwen
+									 */
+									title: () => LocalizedString
+									/**
+									 * Dit gebeurt wanneer teamleden terughoudend zijn om zich kwetsbaar op te 
+								                              stellen tegenover elkaar en niet bereid zijn hun fouten, zwakheden of 
+								                              behoeften toe te geven. Zonder een bepaald comfortniveau onder de 
+								                              teamleden is een basis van vertrouwen onmogelijk.
+									 */
+									front: () => LocalizedString
+								}
+								'1': {
+									/**
+									 * Angst voor Conflicten
+									 */
+									title: () => LocalizedString
+									/**
+									 * Teams die geen vertrouwen hebben, zijn niet in staat om 
+								                                 ongefilterd en gepassioneerd te discussiëren over 
+								                                 belangrijke kwesties, waardoor situaties ontstaan waarin 
+								                                 teamconflicten gemakkelijk kunnen veranderen in verhulde 
+								                                 discussies en achterklap. In een werkomgeving waar teamleden 
+								                                 hun mening niet openlijk uiten, worden slechte beslissingen 
+								                                 genomen.
+									 */
+									front: () => LocalizedString
+								}
+								'2': {
+									/**
+									 * Gebrek aan Betrokkenheid
+									 */
+									title: () => LocalizedString
+									/**
+									 * Zonder conflicten is het moeilijk voor teamleden om zich 
+								                                 aan de beslissingen te houden, waardoor een omgeving ontstaat 
+								                                 waarin dubbelzinnigheid heerst. Gebrek aan richting en 
+								                                 betrokkenheid kan werknemers, met name topmedewerkers, 
+								                                 misnoegd maken.
+									 */
+									front: () => LocalizedString
+								}
+								'3': {
+									/**
+									 * Aansprakelijkheid Vermijden
+									 */
+									title: () => LocalizedString
+									/**
+									 * Wanneer teams geen duidelijk actieplan hebben, aarzelen 
+								                                 zelfs de meest gefocuste en gedreven individuen om hun 
+								                                 collega’s te bellen over activiteiten en gedragingen die 
+								                                 contraproductief kunnen lijken voor het algemene welzijn 
+								                                 van het team.
+									 */
+									front: () => LocalizedString
+								}
+								'4': {
+									/**
+									 * Aandacht voor de Resultaten
+									 */
+									title: () => LocalizedString
+									/**
+									 *  Teamleden hebben van nature de neiging om hun eigen behoeften 
+								                                 (ego, loopbaanontwikkeling, erkenning, enz.) boven de collectieve 
+								                                 doelen van het team te stellen wanneer individuen niet 
+								                                 aansprakelijk worden gehouden. Als een team de prestatiegerichtheid 
+								                                 uit het oog heeft verloren, lijdt het hele bedrijf er uiteindelijk onder.
+									 */
+									front: () => LocalizedString
+								}
 							}
+						}
+						third: {
+							/**
+							 * De Beloningen
+							 */
+							title: () => LocalizedString
+							/**
+							 * Het streven naar een functioneel, samenhangend team is een van de weinige 
+						                           resterende concurrentievoordelen voor organisaties die zich op een krachtige 
+						                           manier willen onderscheiden.<br/>
+						                           Functionele teams vermijden het om tijd te verspillen door over de verkeerde 
+						                           kwesties te praten en keer op keer terug te komen op dezelfde onderwerpen 
+						                           vanwege een gebrek aan buy-in. Functionele teams nemen ook kwalitatief betere 
+						                           beslissingen en bereiken meer in minder tijd en met minder afleiding en 
+						                           frustratie. Bovendien verlaten “A”-spelers zelden organisaties waar ze deel 
+						                           uitmaken van een samenhangend team.<br/>
+						                           <br/>
+						                           Succesvol teamwerk gaat niet over het beheersen van subtiele, gesofisticeerde 
+						                           theorieën, maar over het omarmen van gezond verstand met een ongebruikelijk 
+						                           niveau van discipline en volharding.<br/>
+						                           Ironisch genoeg zijn teams succesvol omdat ze buitengewoon menselijk zijn. 
+						                           Door de onvolkomenheden van hun menselijkheid te erkennen, overwinnen leden 
+						                           van functionele teams de natuurlijke neigingen die teamwerk zo moeilijk maken.
+							 */
+							text: () => LocalizedString
 						}
 					}
 				}
-				ideal_teamplayer: {
+			}
+			ideal_teamplayer: {
+				/**
+				 * de ideale teamplayer
+				 */
+				title: () => LocalizedString
+				intro: {
 					/**
-					 * de ideale teamplayer
+					 * Met voldoende tijd, geduld en aandacht van een goede manager kan 
+				                     bijna iedereen leren een teamspeler te worden. Daar ben ik van 
+				                     overtuigd.<br/>
+				                     <br/>
+				                     Sommige mensen zijn wel beter in teamwork dan anderen. Dit zijn 
+				                     mensen die onmiddellijk waarde toevoegen in een teamomgeving en 
+				                     veel minder coaching en management nodig hebben om op een zinvolle 
+				                     manier bij te dragen.<br/>
+				                     <br/>
+				                     Er zijn dus twee logische vragen. Hoe zien deze mensen eruit? 
+				                     En hoe vinden we ze? Het blijkt dat ze drie kenmerken gemeen hebben: 
+				                     ze zijn bescheiden, hongerig en slim.
+					 */
+					first: () => LocalizedString
+					/**
+					 * Alvorens ik elk van deze kenmerken uitleg, wil ik eerst uitleggen 
+				                     hoe deze theorie tot stand is gekomen. <br/>
+				                     Zoals zoveel van mijn ideeën, kwam dit naar boven als resultaat van 
+				                     mijn werk met klanten in de afgelopen twintig jaar. <br/>
+				                     Telkens wanneer ik met CEO’s en hun leiderschapsteams werkte om 
+				                     kernwaarden te identificeren, werd 
+				                     mij vaak gevraagd naar de waarden van mijn eigen bedrijf, The Table 
+				                     Group. Wanneer we onze drie waarden onthulden, vroegen veel van onze 
+				                     klanten of ze die waarden ook voor zichzelf konden overnemen.<br/>
+				                     <br/>
+				                     Natuurlijk zeiden we “nee” en legden we uit dat ze zelf concepten 
+				                     moesten bedenken die hun unieke geschiedenis en cultuur weerspiegelden. 
+				                     Wij waren een bedrijf dat gericht was op teamwerk en bekend stond om 
+				                     The Five Dysfunctions of a Team, dus de waarden bescheiden, hongerig 
+				                     en slim waren logisch voor ons. Wat we niet beseften, was dat onze 
+				                     klanten, die bijna allemaal bezig waren met teamwork, aangetrokken 
+				                     werden tot onze waarden omdat dat de bouwstenen waren van echte 
+				                     teamspelers. Toen we dat eenmaal beseften, was het idee voor dit 
+				                     boek geboren.
+					 */
+					second: () => LocalizedString
+				}
+				in_depth: {
+					/**
+					 * Hoe Herken je de Ideale Teamspeler
 					 */
 					title: () => LocalizedString
-					intro: {
-						/**
-						 * Met voldoende tijd, geduld en aandacht van een goede manager kan 
-													bijna iedereen leren een teamspeler te worden. Daar ben ik van 
-													overtuigd.<br/>
-													<br/>
-													Sommige mensen zijn wel beter in teamwork dan anderen. Dit zijn 
-													mensen die onmiddellijk waarde toevoegen in een teamomgeving en 
-													veel minder coaching en management nodig hebben om op een zinvolle 
-													manier bij te dragen.<br/>
-													<br/>
-													Er zijn dus twee logische vragen. Hoe zien deze mensen eruit? 
-													En hoe vinden we ze? Het blijkt dat ze drie kenmerken gemeen hebben: 
-													ze zijn bescheiden, hongerig en slim.
-						 */
-						first: () => LocalizedString
-						/**
-						 * Alvorens ik elk van deze kenmerken uitleg, wil ik eerst uitleggen 
-													hoe deze theorie tot stand is gekomen. <br/>
-													Zoals zoveel van mijn ideeën, kwam dit naar boven als resultaat van 
-													mijn werk met klanten in de afgelopen twintig jaar. <br/>
-													Telkens wanneer ik met CEO’s en hun leiderschapsteams werkte om 
-													kernwaarden te identificeren, werd 
-													mij vaak gevraagd naar de waarden van mijn eigen bedrijf, The Table 
-													Group. Wanneer we onze drie waarden onthulden, vroegen veel van onze 
-													klanten of ze die waarden ook voor zichzelf konden overnemen.<br/>
-													<br/>
-													Natuurlijk zeiden we “nee” en legden we uit dat ze zelf concepten 
-													moesten bedenken die hun unieke geschiedenis en cultuur weerspiegelden. 
-													Wij waren een bedrijf dat gericht was op teamwerk en bekend stond om 
-													The Five Dysfunctions of a Team, dus de waarden bescheiden, hongerig 
-													en slim waren logisch voor ons. Wat we niet beseften, was dat onze 
-													klanten, die bijna allemaal bezig waren met teamwork, aangetrokken 
-													werden tot onze waarden omdat dat de bouwstenen waren van echte 
-													teamspelers. Toen we dat eenmaal beseften, was het idee voor dit 
-													boek geboren.
-						 */
-						second: () => LocalizedString
+					accordeon_items: {
+						first: {
+							/**
+							 * De Drie Kenmerken
+							 */
+							title: () => LocalizedString
+							/**
+							 * De drie kenmerken lijken vrij eenvoudig, maar vereisen enige uitleg:
+							 */
+							subtitle: () => LocalizedString
+							tabs: {
+								items: {
+									/**
+									 * Bescheiden
+									 */
+									'0': () => LocalizedString
+									/**
+									 * Hongerig
+									 */
+									'1': () => LocalizedString
+									/**
+									 * Emotioneel Intelligent
+									 */
+									'2': () => LocalizedString
+								}
+								panels: {
+									/**
+									 * Het <em>eerste en belangrijkste kenmerk</em> van een ideale teamspeler 
+								                        is <strong>bescheidenheid</strong>.<br/>
+								                        Een bescheiden werknemer is iemand die zich meer <strong>bekommert om 
+								                        het succes van het team</strong> dan erkenning te krijgen voor zijn of 
+								                        haar bijdragen.<br/>
+								                        <br/>
+								                        Mensen die niet bescheiden zijn, mensen die onevenredig veel 
+								                        aandacht vragen, zijn gevaarlijk voor een team.<br/>
+								                        Bescheiden teamspelers zijn niet bang om de vaardigheden en 
+								                        talenten die ze in het team aanbrengen eerlijk te erkennen, 
+								                        maar <b>nooit op een trotse of opschepperige manier</b>.
+									 */
+									'0': () => LocalizedString
+									/**
+									 * Het <em>volgende kenmerk</em> van een ideale teamspeler is 
+								                        <strong>honger, </strong> de wens om <strong>hard te 
+								                        werken en alles te doen wat nodig is </strong> om het 
+								                        team te helpen slagen.<br/>
+								                        <br/>
+								                        Hongerige werknemers hoeven bijna nooit door een manager gepusht te 
+								                        worden om harder te werken, omdat ze 
+								                        <strong>gemotiveerd en ijverig </strong> zijn.<br/>
+								                        Ze bieden zich vrijwillig aan om hiaten op te vullen, <strong>meer 
+								                        verantwoordelijkheden</strong> op zich te nemen en zoeken gretig 
+								                        naar nieuwe manieren om bij te dragen aan het team.
+									 */
+									'1': () => LocalizedString
+									/**
+									 * Het <em>laatste kenmerk</em> van een teamspeler heeft niets met 
+								                        intelligentie te maken, maar wel met <strong>wijs omgaan met 
+								                        mensen.</strong><br/>
+								                        <br/>
+								                        Slimme werknemers begrijpen de nuances van teamdynamiek en 
+								                        weten hoe hun <strong>woorden en daden anderen 
+								                        beïnvloeden.</strong><br/>
+								                        Hun <strong>goed beoordelingsvermogen</strong> en intuïtie 
+								                        helpen hen om op de meest effectieve manier met anderen 
+								                        om te gaan.
+									 */
+									'2': () => LocalizedString
+								}
+							}
+							/**
+							 * Hoe eenvoudig deze drie concepten ook zijn, de sleutel tot dit alles is 
+						                           <strong>de unieke combinatie van de drie kenmerken</strong> die iemand 
+						                           tot een ideale teamspeler maken.<br/>
+						                           Als zelfs maar één van deze eigenschappen ontbreekt, kunnen er 
+						                           problemen ontstaan.<br/>
+						                           <br/>
+						                           Een bescheiden en hongerige werknemer die niet slim is met mensen kan 
+						                           bijvoorbeeld veel bereiken, maar zal vaak een spoor van interpersoonlijke 
+						                           vernieling achter zich laten.<br/>
+						                           Een persoon die slim en bescheiden is, maar niet hongerig, zal teamleden 
+						                           frustreren door alleen te doen wat nodig is en zal constant gevraagd worden 
+						                           om meer te doen.<br/>
+						                           <br/>
+						                           Tot slot kan een teamlid dat hongerig en slim, maar echt niet bescheiden is, 
+						                           een verwoestende impact hebben op een team.<br/>
+						                           Dit type weet zich te profileren als een goedbedoelende collega, terwijl hij 
+						                           vooral denkt aan zijn eigen behoeften. Tegen de tijd dat de teamleden dit 
+						                           doorkrijgen, zijn mensen gemanipuleerd en getekend.<br/>
+						                           <br/>
+						                           <em>Hoe werf je ideale teamspelers aan?</em> Je moet vooral weten waar je op 
+						                           moet letten en dat je op niet-traditionele manieren moet zoeken.<br/>
+						                           <em>En hoe zit het met werknemers die al in het team zitten en een of meer 
+						                           van de kenmerken missen?</em> Om hen te helpen verbeteren, moet je ervoor 
+						                           zorgen dat ze de concepten begrijpen en weten waar ze tekortschieten.<br/>
+						                           <br/>
+						                           Dit eenvoudige model introduceren bij teams en hen toelaten zichzelf te 
+						                           beoordelen, is al een goede stap naar verbetering.
+							 */
+							text: () => LocalizedString
+						}
+						second: {
+							/**
+							 * Mooi Resultaat
+							 */
+							title: () => LocalizedString
+							/**
+							 * De impact van teamleden die waarde hechten aan en blijk geven van nederigheid, 
+						                           honger en intelligentie, kan niet genoeg worden benadrukt. De meeste teams die 
+						                           het moeilijk hebben, hebben niet zozeer een gebrek aan kennis of competenties, 
+						                           maar hebben geen toegang tot die kennis en competenties vanwege disfunctioneel 
+						                           gedrag. Een team met allemaal mensen die bescheiden, hongerig en slim zijn, zal 
+						                           deze disfuncties snel en gemakkelijk overwinnen, waardoor ze meer gedaan kunnen 
+						                           krijgen in minder tijd en met veel minder afleiding. Ik hoop dat deze aanpak 
+						                           leiders zal helpen bij het aanwerven, herkennen en ontwikkelen van ideale 
+						                           teamspelers in hun organisaties.
+							 */
+							text: () => LocalizedString
+						}
 					}
-					in_depth: {
+				}
+			}
+			working_genius: {
+				/**
+				 * The 6 Types of Working Genius
+				 */
+				title: () => LocalizedString
+				/**
+				 * De 6 Intrinsieke Werkwaarden
+				 */
+				title_alt: () => LocalizedString
+				intro: {
+					/**
+					 * Teveel mensen in deze wereld <strong>werken tegen hun zin omdat ze hun persoonlijke 
+				                     en innerlijke vermogens niet kennen</strong>. Hierdoor doen ze niet het werk dat hen 
+				                     energie en plezier geeft en belanden ze in jobs en projecten die hun <em>vermoeien 
+				                     en demotiveren</em>. Eigenlijk is dit een regelrechte tragedie om 2 aspecten:<br/>
+					 */
+					intro: () => LocalizedString
+					list: {
 						/**
-						 * Hoe Herken je de Ideale Teamspeler
+						 * <b>Ten eerste:</b> het zorgt ervoor dat mensen hun <strong>zelfvertrouwen en 
+					               plezier in het leven verliezen</strong>, wat natuurlijk voor hen een ramp is, 
+					               maar ook voor hun <em>familie en vrienden</em>. En eigenlijk voor de maatschappij 
+					               in zijn geheel. Dit alleen al is eigenlijk verschrikkelijk.
+						 */
+						'0': () => LocalizedString
+						/**
+						 * <b>Ten tweede:</b> <strong>organisaties en teams die niet inhaken op die persoonlijke 
+					               intrinsieke vermogens van hun teamleden zullen nooit in de buurt komen om 
+					               het <em>volledige potentieel van die medewerkers</em> te laten ontplooien en bereiken.</strong> 
+					               Ze zullen blijven twijfelen over het niet bereiken van doelen, effectiviteit, 
+					               betrokkenheid en werkplezier van die mensen.
+						 */
+						'1': () => LocalizedString
+					}
+					/**
+					 * En wat eigenlijk het rampplaatje volledig maakt is dat eigenlijk dit alles te vermijden 
+				                  is …<br/>
+				                  <br/>
+				                  De oplossing is dat iedereen, werknemers, managers, studenten, … hun <strong>intrinsieke 
+				                  werkwaarden</strong> ontdekken alsook de vermogens die ze niet natuurlijk bezitten en derhalve 
+				                  dus altijd energie zullen kosten. Om op die manier aan te haken met juiste “Working Genius”!
+					 */
+					text: () => LocalizedString
+				}
+			}
+			decisive_lead: {
+				/**
+				 * de beslissende voorsprong
+				 */
+				title: () => LocalizedString
+				intro_accordeon: {
+					'0': {
+						/**
+						 * Building a Cohesive Leadership Team
 						 */
 						title: () => LocalizedString
-						accordeon_items: {
-							first: {
-								/**
-								 * De Drie Kenmerken
-								 */
-								title: () => LocalizedString
-								/**
-								 * De drie kenmerken lijken vrij eenvoudig, maar vereisen enige uitleg:
-								 */
-								subtitle: () => LocalizedString
-								tabs: {
-									items: {
-										/**
-										 * Bescheiden
-										 */
-										'0': () => LocalizedString
-										/**
-										 * Hongerig
-										 */
-										'1': () => LocalizedString
-										/**
-										 * Emotioneel Intelligent
-										 */
-										'2': () => LocalizedString
-									}
-									panels: {
-										/**
-										 * Het <em>eerste en belangrijkste kenmerk</em> van een ideale teamspeler 
-																		is <strong>bescheidenheid</strong>.<br/>
-																		Een bescheiden werknemer is iemand die zich meer <strong>bekommert om 
-																		het succes van het team</strong> dan erkenning te krijgen voor zijn of 
-																		haar bijdragen.<br/>
-																		<br/>
-																		Mensen die niet bescheiden zijn, mensen die onevenredig veel 
-																		aandacht vragen, zijn gevaarlijk voor een team.<br/>
-																		Bescheiden teamspelers zijn niet bang om de vaardigheden en 
-																		talenten die ze in het team aanbrengen eerlijk te erkennen, 
-																		maar <b>nooit op een trotse of opschepperige manier</b>.
-										 */
-										'0': () => LocalizedString
-										/**
-										 * Het <em>volgende kenmerk</em> van een ideale teamspeler is 
-																		<strong>honger, </strong> de wens om <strong>hard te 
-																		werken en alles te doen wat nodig is </strong> om het 
-																		team te helpen slagen.<br/>
-																		<br/>
-																		Hongerige werknemers hoeven bijna nooit door een manager gepusht te 
-																		worden om harder te werken, omdat ze 
-																		<strong>gemotiveerd en ijverig </strong> zijn.<br/>
-																		Ze bieden zich vrijwillig aan om hiaten op te vullen, <strong>meer 
-																		verantwoordelijkheden</strong> op zich te nemen en zoeken gretig 
-																		naar nieuwe manieren om bij te dragen aan het team.
-										 */
-										'1': () => LocalizedString
-										/**
-										 * Het <em>laatste kenmerk</em> van een teamspeler heeft niets met 
-																		intelligentie te maken, maar wel met <strong>wijs omgaan met 
-																		mensen.</strong><br/>
-																		<br/>
-																		Slimme werknemers begrijpen de nuances van teamdynamiek en 
-																		weten hoe hun <strong>woorden en daden anderen 
-																		beïnvloeden.</strong><br/>
-																		Hun <strong>goed beoordelingsvermogen</strong> en intuïtie 
-																		helpen hen om op de meest effectieve manier met anderen 
-																		om te gaan.
-										 */
-										'2': () => LocalizedString
-									}
-								}
-								/**
-								 * Hoe eenvoudig deze drie concepten ook zijn, de sleutel tot dit alles is 
-																	<strong>de unieke combinatie van de drie kenmerken</strong> die iemand 
-																	tot een ideale teamspeler maken.<br/>
-																	Als zelfs maar één van deze eigenschappen ontbreekt, kunnen er 
-																	problemen ontstaan.<br/>
-																	<br/>
-																	Een bescheiden en hongerige werknemer die niet slim is met mensen kan 
-																	bijvoorbeeld veel bereiken, maar zal vaak een spoor van interpersoonlijke 
-																	vernieling achter zich laten.<br/>
-																	Een persoon die slim en bescheiden is, maar niet hongerig, zal teamleden 
-																	frustreren door alleen te doen wat nodig is en zal constant gevraagd worden 
-																	om meer te doen.<br/>
-																	<br/>
-																	Tot slot kan een teamlid dat hongerig en slim, maar echt niet bescheiden is, 
-																	een verwoestende impact hebben op een team.<br/>
-																	Dit type weet zich te profileren als een goedbedoelende collega, terwijl hij 
-																	vooral denkt aan zijn eigen behoeften. Tegen de tijd dat de teamleden dit 
-																	doorkrijgen, zijn mensen gemanipuleerd en getekend.<br/>
-																	<br/>
-																	<em>Hoe werf je ideale teamspelers aan?</em> Je moet vooral weten waar je op 
-																	moet letten en dat je op niet-traditionele manieren moet zoeken.<br/>
-																	<em>En hoe zit het met werknemers die al in het team zitten en een of meer 
-																	van de kenmerken missen?</em> Om hen te helpen verbeteren, moet je ervoor 
-																	zorgen dat ze de concepten begrijpen en weten waar ze tekortschieten.<br/>
-																	<br/>
-																	Dit eenvoudige model introduceren bij teams en hen toelaten zichzelf te 
-																	beoordelen, is al een goede stap naar verbetering.
-								 */
-								text: () => LocalizedString
-							}
-							second: {
-								/**
-								 * Mooi Resultaat
-								 */
-								title: () => LocalizedString
-								/**
-								 * De impact van teamleden die waarde hechten aan en blijk geven van nederigheid, 
-																	honger en intelligentie, kan niet genoeg worden benadrukt. De meeste teams die 
-																	het moeilijk hebben, hebben niet zozeer een gebrek aan kennis of competenties, 
-																	maar hebben geen toegang tot die kennis en competenties vanwege disfunctioneel 
-																	gedrag. Een team met allemaal mensen die bescheiden, hongerig en slim zijn, zal 
-																	deze disfuncties snel en gemakkelijk overwinnen, waardoor ze meer gedaan kunnen 
-																	krijgen in minder tijd en met veel minder afleiding. Ik hoop dat deze aanpak 
-																	leiders zal helpen bij het aanwerven, herkennen en ontwikkelen van ideale 
-																	teamspelers in hun organisaties.
-								 */
-								text: () => LocalizedString
-							}
-						}
-					}
-				}
-				working_genius: {
-					/**
-					 * The 6 Types of Working Genius
-					 */
-					title: () => LocalizedString
-					/**
-					 * De 6 Intrinsieke Werkwaarden
-					 */
-					title_alt: () => LocalizedString
-					intro: {
 						/**
-						 * Teveel mensen in deze wereld <strong>werken tegen hun zin omdat ze hun persoonlijke 
-													en innerlijke vermogens niet kennen</strong>. Hierdoor doen ze niet het werk dat hen 
-													energie en plezier geeft en belanden ze in jobs en projecten die hun <em>vermoeien 
-													en demotiveren</em>. Eigenlijk is dit een regelrechte tragedie om 2 aspecten:<br/>
+						 * De eerste stap is ervoor zorgen dat de leiders van de organisatie zich 
+					                        op een functionele, samenhangende manier gedragen.<br/>
+					                        Als de mensen die verantwoordelijk zijn voor het runnen van een 
+					                        organisatie – of dat nu een bedrijf is, een afdeling binnen dat bedrijf, 
+					                        een startende onderneming, een restaurant, een school of een kerk – zich 
+					                        disfunctioneel gedragen, dan zal dat disfunctioneren zich trapsgewijs 
+					                        voortzetten in de rest van de organisatie en een rem zetten op een 
+					                        gezonde organisatie.<br/>
+					                        En ja, er zijn concrete stappen die een leiderschapsteam kan nemen om dit 
+					                        te voorkomen.
 						 */
 						intro: () => LocalizedString
 						list: {
 							/**
-							 * <b>Ten eerste:</b> het zorgt ervoor dat mensen hun <strong>zelfvertrouwen en 
-												plezier in het leven verliezen</strong>, wat natuurlijk voor hen een ramp is, 
-												maar ook voor hun <em>familie en vrienden</em>. En eigenlijk voor de maatschappij 
-												in zijn geheel. Dit alleen al is eigenlijk verschrikkelijk.
+							 * Samenhangende teams elimineren politiek en vergroten hun effectiviteit door het volgende te doen:
 							 */
-							'0': () => LocalizedString
-							/**
-							 * <b>Ten tweede:</b> <strong>organisaties en teams die niet inhaken op die persoonlijke 
-												intrinsieke vermogens van hun teamleden zullen nooit in de buurt komen om 
-												het <em>volledige potentieel van die medewerkers</em> te laten ontplooien en bereiken.</strong> 
-												Ze zullen blijven twijfelen over het niet bereiken van doelen, effectiviteit, 
-												betrokkenheid en werkplezier van die mensen.
-							 */
-							'1': () => LocalizedString
+							intro: () => LocalizedString
+							items: {
+								/**
+								 * Open zijn en vertrouwen opbouwen
+								 */
+								'0': () => LocalizedString
+								/**
+								 * Constructieve ideologische conflicten aangaan
+								 */
+								'1': () => LocalizedString
+								/**
+								 * Zich inzetten voor duidelijke beslissingen
+								 */
+								'2': () => LocalizedString
+								/**
+								 * Elkaar verantwoordelijk houden voor gedrag en prestaties
+								 */
+								'3': () => LocalizedString
+								/**
+								 * Focussen op collectieve resultaten
+								 */
+								'4': () => LocalizedString
+							}
 						}
+					}
+					'1': {
 						/**
-						 * En wat eigenlijk het rampplaatje volledig maakt is dat eigenlijk dit alles te vermijden 
-												is …<br/>
-												<br/>
-												De oplossing is dat iedereen, werknemers, managers, studenten, … hun <strong>intrinsieke 
-												werkwaarden</strong> ontdekken alsook de vermogens die ze niet natuurlijk bezitten en derhalve 
-												dus altijd energie zullen kosten. Om op die manier aan te haken met juiste “Working Genius”!
+						 * Helderheid Scheppen
 						 */
-						text: () => LocalizedString
+						title: () => LocalizedString
+						/**
+						 * De tweede stap om een gezonde organisatie op te bouwen, 
+					                        is ervoor zorgen dat de leden van dat leiderschapsteam 
+					                        intellectueel op één lijn liggen rond zes eenvoudige 
+					                        maar cruciale vragen.<br/>
+					                        Leiders moeten duidelijk zijn over onderwerpen als waarom 
+					                        de organisatie bestaat en wat de belangrijkste prioriteit 
+					                        is voor de komende maanden.<br/>
+					                        Leiders moeten eventuele hiaten tussen hen wegwerken, zodat 
+					                        mensen een, twee of drie niveaus lager volledige duidelijkheid 
+					                        hebben over wat ze moeten doen om de organisatie succesvol te maken.
+						 */
+						intro: () => LocalizedString
+						list: {
+							/**
+							 * Gezonde organisaties verkleinen de kans op verwarring door het volgende te verduidelijken:
+							 */
+							intro: () => LocalizedString
+							items: {
+								/**
+								 * Waarom bestaan we?
+								 */
+								'0': () => LocalizedString
+								/**
+								 * Hoe gedragen we ons?
+								 */
+								'1': () => LocalizedString
+								/**
+								 * Wat doen we?
+								 */
+								'2': () => LocalizedString
+								/**
+								 * Hoe zullen we slagen?
+								 */
+								'3': () => LocalizedString
+								/**
+								 * Wat is op dit moment het belangrijkste?
+								 */
+								'4': () => LocalizedString
+								/**
+								 * Wie moet wat doen?
+								 */
+								'5': () => LocalizedString
+							}
+						}
+					}
+					'2': {
+						/**
+						 * De Helderheid Versterken
+						 */
+						title: () => LocalizedString
+						/**
+						 * Tot slot moeten leiders, naast overcommunicatie, ervoor zorgen 
+					                        dat de antwoorden op de zes cruciale vragen herhaaldelijk worden 
+					                        benadrukt met behulp van eenvoudige menselijke systemen.<br/>
+					                        Dat betekent dat elk proces waarbij mensen betrokken zijn, van 
+					                        aanwerving en ontslag tot prestatiebeheer en besluitvorming, op 
+					                        een aangepaste manier is ontworpen om opzettelijk het unieke 
+					                        karakter van de organisatie te ondersteunen en te benadrukken.<br/>
+					                        <br/>
+					                        Naast deze vier stappen is het essentieel dat een gezonde 
+					                        organisatie beter wordt in die ene activiteit die ten grondslag 
+					                        ligt aan alles wat ze doet: vergaderingen. Ja, vergaderingen.<br/>
+					                        Zonder een paar eenvoudige maar fundamentele wijzigingen aan te 
+					                        brengen in de manier waarop vergaderingen plaatsvinden, zal een 
+					                        gezonde organisatie moeite hebben om datgene te behouden waaraan 
+					                        ze hard heeft gewerkt om het op te bouwen.<br/>
+					                        <br/>
+					                        Kan een gezonde organisatie falen?<br/>
+					                        Ja. Maar dat gebeurt bijna nooit. Echt waar. Wanneer politiek, 
+					                        ambiguïteit, disfunctioneren en onduidelijkheid tot een minimum 
+					                        worden beperkt, worden mensen geïnspireerd om producten te ontwerpen, 
+					                        klanten te bedienen, problemen op te lossen en elkaar te helpen op 
+					                        een manier waar ongezonde organisaties alleen maar van kunnen dromen.<br/>
+					                        <br/>
+					                        Gezonde organisaties herstellen van tegenslagen, trekken de beste 
+					                        mensen aan, stoten de anderen af en creëren kansen die ze niet hadden 
+					                        kunnen verwachten.<br/>
+					                        Aan het einde van de dag, aan het einde van het kwartaal, zijn 
+					                        werknemers gelukkiger, is het resultaat sterker en zijn leidinggevenden 
+					                        gerust omdat ze weten dat ze hun belangrijkste verantwoordelijkheid 
+					                        hebben vervuld: het creëren van een succesvolle omgeving.
+						 */
+						intro: () => LocalizedString
+						list: {
+							/**
+							 * Organisaties verstevigen hun gezondheid door te zorgen voor consistentie in…
+							 */
+							intro: () => LocalizedString
+							items: {
+								/**
+								 * Het aanwerven
+								 */
+								'0': () => LocalizedString
+								/**
+								 * Beheren van de prestaties
+								 */
+								'1': () => LocalizedString
+								/**
+								 * Beloningen en erkenning
+								 */
+								'2': () => LocalizedString
+								/**
+								 * Ontslag van de werknemer
+								 */
+								'3': () => LocalizedString
+								/**
+								 * Vergaderingen
+								 */
+								'4': () => LocalizedString
+							}
+						}
+					}
+					'3': {
+						/**
+						 * Helderheid over Communiceren
+						 */
+						title: () => LocalizedString
+						/**
+						 * Pas nadat deze eerste twee stappen aan de gang zijn 
+					                        (gedrags- en intellectuele afstemming), kan een organisatie de 
+					                        derde stap ondernemen: de antwoorden op de zes vragen overcommuniceren. <br/>
+					                        Leiders van een gezonde organisatie herhalen zich constant – en ik 
+					                        bedoel constant – en benadrukken wat waar en belangrijk is. Ze maken 
+					                        altijd de fout om te veel te zeggen in plaats van te weinig.<br/>
+					                        Alleen al deze kwaliteit onderscheidt leiders van gezonde organisaties 
+					                        van anderen.
+						 */
+						intro: () => LocalizedString
+						list: {
+							/**
+							 * Gezonde organisaties brengen hun werknemers op één lijn rond organisatorische duidelijkheid door kernboodschappen te communiceren via…
+							 */
+							intro: () => LocalizedString
+							items: {
+								/**
+								 * Herhaling
+								 */
+								'0': () => LocalizedString
+								/**
+								 * Eenvoud
+								 */
+								'1': () => LocalizedString
+								/**
+								 * Meerdere mediums
+								 */
+								'2': () => LocalizedString
+								/**
+								 * Trapsgewijze berichten
+								 */
+								'3': () => LocalizedString
+							}
+						}
 					}
 				}
-				decisive_lead: {
+			}
+			meetings_deadly: {
+				/**
+				 * Vergaderen is Dodelijk
+				 */
+				title: () => LocalizedString
+				/**
+				 * Vergaderingen horen bij ons werk, maar ze lijken vaak niet 
+			                  veel op te leveren.<br/>
+			                  Sterker nog, ze gelden als regelrechte energievreters. Dat 
+			                  komt omdat we op de verkeerde manier vergaderen.<br/>
+			                  <br/>
+			                  In dit model met bijhorende online tool leren we je als 
+			                  teamleader of coach organisaties en teams begeleiden in hun 
+			                  meetingcultuur.<br/>
+			                  Specifiek werken we op hoe je moeilijke meetings in effectieve 
+			                  en productieve meetings kan omturnen aan de hand van de 4 types 
+			                  van meetings.
+				 */
+				intro: () => LocalizedString
+				in_depth: {
 					/**
-					 * de beslissende voorsprong
+					 * Maar niet met deze 4 Types van Meetings
 					 */
-					title: () => LocalizedString
-					intro_accordeon: {
+					subtitle: () => LocalizedString
+					key_titles: {
+						/**
+						 * Tijdsduur
+						 */
+						timespan: () => LocalizedString
+						/**
+						 * Doel
+						 */
+						target: () => LocalizedString
+						/**
+						 * Sleutels tot Succes
+						 */
+						keys_success: () => LocalizedString
+					}
+					/**
+					 * Met deze 4 types van meetings maak je je vergaderingen niet alleen productiever, maar ook efficiënter en aangenamer:
+					 */
+					accordeon_title: () => LocalizedString
+					accordeon_items: {
 						'0': {
 							/**
-							 * Building a Cohesive Leadership Team
+							 * Dagelijkse Check-In
 							 */
 							title: () => LocalizedString
 							/**
-							 * De eerste stap is ervoor zorgen dat de leiders van de organisatie zich 
-														  op een functionele, samenhangende manier gedragen.<br/>
-														  Als de mensen die verantwoordelijk zijn voor het runnen van een 
-														  organisatie – of dat nu een bedrijf is, een afdeling binnen dat bedrijf, 
-														  een startende onderneming, een restaurant, een school of een kerk – zich 
-														  disfunctioneel gedragen, dan zal dat disfunctioneren zich trapsgewijs 
-														  voortzetten in de rest van de organisatie en een rem zetten op een 
-														  gezonde organisatie.<br/>
-														  En ja, er zijn concrete stappen die een leiderschapsteam kan nemen om dit 
-														  te voorkomen.
+							 * De <strong>"Daily Check-in"</strong> is een agenda-georiënteerde, administratieve 
+						                           meeting die niet langer zou mogen duren dan vijf of tien minuten.<br/>
+						                           Het doel van deze meeting is simpelweg om teamleden op gelijke 
+						                           golflengten te houden en te zorgen voor een dagelijks forum waar 
+						                           activiteitsupdates en planning besproken kunnen worden.
 							 */
-							intro: () => LocalizedString
-							list: {
+							text: () => LocalizedString
+							/**
+							 * 5 - 10 minuten
+							 */
+							timespan: () => LocalizedString
+							/**
+							 * Administratief:
+							 */
+							target: () => LocalizedString
+							/**
+							 * Hou informele conversaties met teamleden, rond relevante administratieve items.
+							 */
+							target_desc: () => LocalizedString
+							keys: {
 								/**
-								 * Samenhangende teams elimineren politiek en vergroten hun effectiviteit door het volgende te doen:
+								 * Zit niet neer
 								 */
-								intro: () => LocalizedString
-								items: {
-									/**
-									 * Open zijn en vertrouwen opbouwen
-									 */
-									'0': () => LocalizedString
-									/**
-									 * Constructieve ideologische conflicten aangaan
-									 */
-									'1': () => LocalizedString
-									/**
-									 * Zich inzetten voor duidelijke beslissingen
-									 */
-									'2': () => LocalizedString
-									/**
-									 * Elkaar verantwoordelijk houden voor gedrag en prestaties
-									 */
-									'3': () => LocalizedString
-									/**
-									 * Focussen op collectieve resultaten
-									 */
-									'4': () => LocalizedString
-								}
+								'0': () => LocalizedString
+								/**
+								 * Hou het administratief
+								 */
+								'1': () => LocalizedString
+								/**
+								 * Zeg niet af als sommige mensen er niet zullen geraken
+								 */
+								'2': () => LocalizedString
 							}
 						}
 						'1': {
 							/**
-							 * Helderheid Scheppen
+							 * Tactische Medewerkers
 							 */
 							title: () => LocalizedString
 							/**
-							 * De tweede stap om een gezonde organisatie op te bouwen, 
-														  is ervoor zorgen dat de leden van dat leiderschapsteam 
-														  intellectueel op één lijn liggen rond zes eenvoudige 
-														  maar cruciale vragen.<br/>
-														  Leiders moeten duidelijk zijn over onderwerpen als waarom 
-														  de organisatie bestaat en wat de belangrijkste prioriteit 
-														  is voor de komende maanden.<br/>
-														  Leiders moeten eventuele hiaten tussen hen wegwerken, zodat 
-														  mensen een, twee of drie niveaus lager volledige duidelijkheid 
-														  hebben over wat ze moeten doen om de organisatie succesvol te maken.
+							 *  De <strong>“Tactical Staff”</strong> is wat de meeste mensen 
+						                           kennen als medewerkersmeetings.<br/><br/>
+						                           Ze zouden ongeveer een uur lang moeten zijn, met een speling 
+						                           van 20 minuten, en zouden moeten focussen op de discussie rond 
+						                           en oplossing van problemen die doelen in de nabije toekomst affecteren.
 							 */
-							intro: () => LocalizedString
-							list: {
+							text: () => LocalizedString
+							/**
+							 * 45 - 90 minuten
+							 */
+							timespan: () => LocalizedString
+							/**
+							 * Tactisch:
+							 */
+							target: () => LocalizedString
+							/**
+							 *  Scorekaart herbekijken en oplossen van kritieke tactische obstakels en problemen.
+							 */
+							target_desc: () => LocalizedString
+							keys: {
 								/**
-								 * Gezonde organisaties verkleinen de kans op verwarring door het volgende te verduidelijken:
+								 * Plan nog niets, tot na de eerste rapportering
 								 */
-								intro: () => LocalizedString
-								items: {
-									/**
-									 * Waarom bestaan we?
-									 */
-									'0': () => LocalizedString
-									/**
-									 * Hoe gedragen we ons?
-									 */
-									'1': () => LocalizedString
-									/**
-									 * Wat doen we?
-									 */
-									'2': () => LocalizedString
-									/**
-									 * Hoe zullen we slagen?
-									 */
-									'3': () => LocalizedString
-									/**
-									 * Wat is op dit moment het belangrijkste?
-									 */
-									'4': () => LocalizedString
-									/**
-									 * Wie moet wat doen?
-									 */
-									'5': () => LocalizedString
-								}
+								'0': () => LocalizedString
+								/**
+								 * Stel strategische discussies uit
+								 */
+								'1': () => LocalizedString
 							}
 						}
 						'2': {
 							/**
-							 * De Helderheid Versterken
+							 * Adhoc Actueel
 							 */
 							title: () => LocalizedString
 							/**
-							 * Tot slot moeten leiders, naast overcommunicatie, ervoor zorgen 
-														  dat de antwoorden op de zes cruciale vragen herhaaldelijk worden 
-														  benadrukt met behulp van eenvoudige menselijke systemen.<br/>
-														  Dat betekent dat elk proces waarbij mensen betrokken zijn, van 
-														  aanwerving en ontslag tot prestatiebeheer en besluitvorming, op 
-														  een aangepaste manier is ontworpen om opzettelijk het unieke 
-														  karakter van de organisatie te ondersteunen en te benadrukken.<br/>
-														  <br/>
-														  Naast deze vier stappen is het essentieel dat een gezonde 
-														  organisatie beter wordt in die ene activiteit die ten grondslag 
-														  ligt aan alles wat ze doet: vergaderingen. Ja, vergaderingen.<br/>
-														  Zonder een paar eenvoudige maar fundamentele wijzigingen aan te 
-														  brengen in de manier waarop vergaderingen plaatsvinden, zal een 
-														  gezonde organisatie moeite hebben om datgene te behouden waaraan 
-														  ze hard heeft gewerkt om het op te bouwen.<br/>
-														  <br/>
-														  Kan een gezonde organisatie falen?<br/>
-														  Ja. Maar dat gebeurt bijna nooit. Echt waar. Wanneer politiek, 
-														  ambiguïteit, disfunctioneren en onduidelijkheid tot een minimum 
-														  worden beperkt, worden mensen geïnspireerd om producten te ontwerpen, 
-														  klanten te bedienen, problemen op te lossen en elkaar te helpen op 
-														  een manier waar ongezonde organisaties alleen maar van kunnen dromen.<br/>
-														  <br/>
-														  Gezonde organisaties herstellen van tegenslagen, trekken de beste 
-														  mensen aan, stoten de anderen af en creëren kansen die ze niet hadden 
-														  kunnen verwachten.<br/>
-														  Aan het einde van de dag, aan het einde van het kwartaal, zijn 
-														  werknemers gelukkiger, is het resultaat sterker en zijn leidinggevenden 
-														  gerust omdat ze weten dat ze hun belangrijkste verantwoordelijkheid 
-														  hebben vervuld: het creëren van een succesvolle omgeving.
+							 * De “Adhoc Topical” is de meest interessante soort meeting voor 
+						                        teamleiders en de belangrijkste indicator van de strategische 
+						                        bekwaamheid van een bedrijf.<br/>
+						                        Het is dé adequate plek voor grote topics; degene die op lange 
+						                        termijn een impact hebben op het bedrijf. Deze topics hebben 
+						                        meer tijd en een andere setting nodig.<br/><br/>
+						                        Een setting waarin deelnemers kunnen brainstormen, debatteren, 
+						                        ideeën presenteren en met elkaar kunnen overleggen om zo de 
+						                        meest optimale lange termijnsoplossing te kunnen vinden.<br/>
+						                        Elke strategische meeting zou niet meer dan twee onderwerpen 
+						                        mogen bevatten. Aan elk onderdeel zou vervolgens ongeveer twee 
+						                        uur moeten besteedt worden.
 							 */
-							intro: () => LocalizedString
-							list: {
+							text: () => LocalizedString
+							/**
+							 * 2 - 4 uur
+							 */
+							timespan: () => LocalizedString
+							/**
+							 * Strategisch:
+							 */
+							target: () => LocalizedString
+							/**
+							 * Discussieer, analyseer, brainstorm en maak een beslissing rond een kritisch probleem dat op lange termijn een grote impact zal hebben op succes.
+							 */
+							target_desc: () => LocalizedString
+							keys: {
 								/**
-								 * Organisaties verstevigen hun gezondheid door te zorgen voor consistentie in…
+								 * Focus op een specifiek onderwerp
 								 */
-								intro: () => LocalizedString
-								items: {
-									/**
-									 * Het aanwerven
-									 */
-									'0': () => LocalizedString
-									/**
-									 * Beheren van de prestaties
-									 */
-									'1': () => LocalizedString
-									/**
-									 * Beloningen en erkenning
-									 */
-									'2': () => LocalizedString
-									/**
-									 * Ontslag van de werknemer
-									 */
-									'3': () => LocalizedString
-									/**
-									 * Vergaderingen
-									 */
-									'4': () => LocalizedString
-								}
+								'0': () => LocalizedString
+								/**
+								 * Bereid je voor
+								 */
+								'1': () => LocalizedString
+								/**
+								 * Ga volledig op in het conflict
+								 */
+								'2': () => LocalizedString
 							}
 						}
 						'3': {
 							/**
-							 * Helderheid over Communiceren
+							 * Off-Site Review (Elk Kwartaal)
 							 */
 							title: () => LocalizedString
 							/**
-							 * Pas nadat deze eerste twee stappen aan de gang zijn 
-														  (gedrags- en intellectuele afstemming), kan een organisatie de 
-														  derde stap ondernemen: de antwoorden op de zes vragen overcommuniceren. <br/>
-														  Leiders van een gezonde organisatie herhalen zich constant – en ik 
-														  bedoel constant – en benadrukken wat waar en belangrijk is. Ze maken 
-														  altijd de fout om te veel te zeggen in plaats van te weinig.<br/>
-														  Alleen al deze kwaliteit onderscheidt leiders van gezonde organisaties 
-														  van anderen.
+							 * De “Off-Site Review” gebeurt elk kwartaal en is voor teamleden 
+						                           een opportuniteit om afstand te nemen van het bedrijf, letterlijk 
+						                           en figuurlijk, om allerlei items opnieuw te kunnen beoordelen.<br/>
+						                           <br/>
+						                           Deze items includeren de interpersoonlijke prestaties van het team, 
+						                           de strategie van het bedrijf, de prestaties van personeel van zowel 
+						                           hoge als lage rang, motivatie, competitieve gevaren en trends in de sector.<br/>
+						                           <br/>
+						                           De duur van deze reviews kan variëren van het betere deel van een dag 
+						                           tot twee volle dagen elk kwartaal.
 							 */
-							intro: () => LocalizedString
-							list: {
-								/**
-								 * Gezonde organisaties brengen hun werknemers op één lijn rond organisatorische duidelijkheid door kernboodschappen te communiceren via…
-								 */
-								intro: () => LocalizedString
-								items: {
-									/**
-									 * Herhaling
-									 */
-									'0': () => LocalizedString
-									/**
-									 * Eenvoud
-									 */
-									'1': () => LocalizedString
-									/**
-									 * Meerdere mediums
-									 */
-									'2': () => LocalizedString
-									/**
-									 * Trapsgewijze berichten
-									 */
-									'3': () => LocalizedString
-								}
-							}
-						}
-					}
-				}
-				meetings_deadly: {
-					/**
-					 * Vergaderen is Dodelijk
-					 */
-					title: () => LocalizedString
-					/**
-					 * Vergaderingen horen bij ons werk, maar ze lijken vaak niet 
-											veel op te leveren.<br/>
-											Sterker nog, ze gelden als regelrechte energievreters. Dat 
-											komt omdat we op de verkeerde manier vergaderen.<br/>
-											<br/>
-											In dit model met bijhorende online tool leren we je als 
-											teamleader of coach organisaties en teams begeleiden in hun 
-											meetingcultuur.<br/>
-											Specifiek werken we op hoe je moeilijke meetings in effectieve 
-											en productieve meetings kan omturnen aan de hand van de 4 types 
-											van meetings.
-					 */
-					intro: () => LocalizedString
-					in_depth: {
-						/**
-						 * Maar niet met deze 4 Types van Meetings
-						 */
-						subtitle: () => LocalizedString
-						key_titles: {
+							text: () => LocalizedString
 							/**
-							 * Tijdsduur
+							 * 1 - 2 dagen
 							 */
 							timespan: () => LocalizedString
 							/**
-							 * Doel
+							 * Ontwikkelend:
 							 */
 							target: () => LocalizedString
 							/**
-							 * Sleutels tot Succes
+							 * Speelboek (teamontwikkeling, dynamiek en helderheid), competitief landschap, trends in de sector en sleutelpersoneel herbekijken.
 							 */
-							keys_success: () => LocalizedString
-						}
-						/**
-						 * Met deze 4 types van meetings maak je je vergaderingen niet alleen productiever, maar ook efficiënter en aangenamer:
-						 */
-						accordeon_title: () => LocalizedString
-						accordeon_items: {
-							'0': {
+							target_desc: () => LocalizedString
+							keys: {
 								/**
-								 * Dagelijkse Check-In
+								 * Ga naar buiten
 								 */
-								title: () => LocalizedString
+								'0': () => LocalizedString
 								/**
-								 * De <strong>"Daily Check-in"</strong> is een agenda-georiënteerde, administratieve 
-																	meeting die niet langer zou mogen duren dan vijf of tien minuten.<br/>
-																	Het doel van deze meeting is simpelweg om teamleden op gelijke 
-																	golflengten te houden en te zorgen voor een dagelijks forum waar 
-																	activiteitsupdates en planning besproken kunnen worden.
+								 * Focus op werk, limiteer sociale activiteiten
 								 */
-								text: () => LocalizedString
+								'1': () => LocalizedString
 								/**
-								 * 5 - 10 minuten
+								 * Overstructureer of overbelast de planning niet
 								 */
-								timespan: () => LocalizedString
-								/**
-								 * Administratief:
-								 */
-								target: () => LocalizedString
-								/**
-								 * Hou informele conversaties met teamleden, rond relevante administratieve items.
-								 */
-								target_desc: () => LocalizedString
-								keys: {
-									/**
-									 * Zit niet neer
-									 */
-									'0': () => LocalizedString
-									/**
-									 * Hou het administratief
-									 */
-									'1': () => LocalizedString
-									/**
-									 * Zeg niet af als sommige mensen er niet zullen geraken
-									 */
-									'2': () => LocalizedString
-								}
-							}
-							'1': {
-								/**
-								 * Tactische Medewerkers
-								 */
-								title: () => LocalizedString
-								/**
-								 *  De <strong>“Tactical Staff”</strong> is wat de meeste mensen 
-																	kennen als medewerkersmeetings.<br/><br/>
-																	Ze zouden ongeveer een uur lang moeten zijn, met een speling 
-																	van 20 minuten, en zouden moeten focussen op de discussie rond 
-																	en oplossing van problemen die doelen in de nabije toekomst affecteren.
-								 */
-								text: () => LocalizedString
-								/**
-								 * 45 - 90 minuten
-								 */
-								timespan: () => LocalizedString
-								/**
-								 * Tactisch:
-								 */
-								target: () => LocalizedString
-								/**
-								 *  Scorekaart herbekijken en oplossen van kritieke tactische obstakels en problemen.
-								 */
-								target_desc: () => LocalizedString
-								keys: {
-									/**
-									 * Plan nog niets, tot na de eerste rapportering
-									 */
-									'0': () => LocalizedString
-									/**
-									 * Stel strategische discussies uit
-									 */
-									'1': () => LocalizedString
-								}
-							}
-							'2': {
-								/**
-								 * Adhoc Actueel
-								 */
-								title: () => LocalizedString
-								/**
-								 * De “Adhoc Topical” is de meest interessante soort meeting voor 
-																teamleiders en de belangrijkste indicator van de strategische 
-																bekwaamheid van een bedrijf.<br/>
-																Het is dé adequate plek voor grote topics; degene die op lange 
-																termijn een impact hebben op het bedrijf. Deze topics hebben 
-																meer tijd en een andere setting nodig.<br/><br/>
-																Een setting waarin deelnemers kunnen brainstormen, debatteren, 
-																ideeën presenteren en met elkaar kunnen overleggen om zo de 
-																meest optimale lange termijnsoplossing te kunnen vinden.<br/>
-																Elke strategische meeting zou niet meer dan twee onderwerpen 
-																mogen bevatten. Aan elk onderdeel zou vervolgens ongeveer twee 
-																uur moeten besteedt worden.
-								 */
-								text: () => LocalizedString
-								/**
-								 * 2 - 4 uur
-								 */
-								timespan: () => LocalizedString
-								/**
-								 * Strategisch:
-								 */
-								target: () => LocalizedString
-								/**
-								 * Discussieer, analyseer, brainstorm en maak een beslissing rond een kritisch probleem dat op lange termijn een grote impact zal hebben op succes.
-								 */
-								target_desc: () => LocalizedString
-								keys: {
-									/**
-									 * Focus op een specifiek onderwerp
-									 */
-									'0': () => LocalizedString
-									/**
-									 * Bereid je voor
-									 */
-									'1': () => LocalizedString
-									/**
-									 * Ga volledig op in het conflict
-									 */
-									'2': () => LocalizedString
-								}
-							}
-							'3': {
-								/**
-								 * Off-Site Review (Elk Kwartaal)
-								 */
-								title: () => LocalizedString
-								/**
-								 * De “Off-Site Review” gebeurt elk kwartaal en is voor teamleden 
-																	een opportuniteit om afstand te nemen van het bedrijf, letterlijk 
-																	en figuurlijk, om allerlei items opnieuw te kunnen beoordelen.<br/>
-																	<br/>
-																	Deze items includeren de interpersoonlijke prestaties van het team, 
-																	de strategie van het bedrijf, de prestaties van personeel van zowel 
-																	hoge als lage rang, motivatie, competitieve gevaren en trends in de sector.<br/>
-																	<br/>
-																	De duur van deze reviews kan variëren van het betere deel van een dag 
-																	tot twee volle dagen elk kwartaal.
-								 */
-								text: () => LocalizedString
-								/**
-								 * 1 - 2 dagen
-								 */
-								timespan: () => LocalizedString
-								/**
-								 * Ontwikkelend:
-								 */
-								target: () => LocalizedString
-								/**
-								 * Speelboek (teamontwikkeling, dynamiek en helderheid), competitief landschap, trends in de sector en sleutelpersoneel herbekijken.
-								 */
-								target_desc: () => LocalizedString
-								keys: {
-									/**
-									 * Ga naar buiten
-									 */
-									'0': () => LocalizedString
-									/**
-									 * Focus op werk, limiteer sociale activiteiten
-									 */
-									'1': () => LocalizedString
-									/**
-									 * Overstructureer of overbelast de planning niet
-									 */
-									'2': () => LocalizedString
-								}
+								'2': () => LocalizedString
 							}
 						}
 					}

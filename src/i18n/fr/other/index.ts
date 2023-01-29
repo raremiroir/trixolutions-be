@@ -62,6 +62,131 @@ const fr_other: NamespaceOtherTranslation = {
             van oproeping in vrijwaring of tussenkomst.</p>
          `
       }
+   ],
+   privacy_policy: {
+      intro: `Trixolutions bvba is verantwoordelijk voor de verwerking van persoonsgegevens zoals vermeld in deze privacyverklaring.`,
+      items: [
+         {
+            title: "Wie we zijn",
+            text: "Contactgegevens:<br/>Trixolutions bvba<br/>Krommelei 14<br/>2110 Wijnegem<br/>Tel.: +32 3 344 67 76<br/><a href='https://www.trixolutions.be'>www.trixolutions.be</a>"
+         },
+         {
+            title: "Welke persoonlijke gegevens we verzamelen en waarom",
+            sections: [
+               {
+                  title: "Cookies",
+                  text: `Om je surfgedrag te monitoren, gebruiken we Google Tag-cookies. Daartoe sloten we een 
+                        bewerkersovereenkomst met Google. IP-adressen worden geanonimiseerd (het laatste octet van 
+                        je IP-adres wordt gemaskeerd) en er worden met Google geen persoonlijke gegevens gedeeld.<br/>
+                        <br/>
+                        Er worden ook functionele, benodigde cookies opgeslagen, zoals je taalvoorkeur, of andere cookies 
+                        die benodigd zijn om de website juist te laten werken. Deze hebben dan ook geen enkele invloed op 
+                        gegevens, enkel op gebruikerservaring en -interactie.`
+               },
+               {
+                  title: "Ingesloten inhoud van andere websites",
+                  text: `Berichten op deze site kunnen ingesloten (embedded) inhoud bevatten, zoals video’s en 
+                        afbeeldingen. Ingesloten inhoud van andere websites gedraagt zich alsof je deze andere website 
+                        hebt bezocht.<br/><br/>
+                        Deze websites kunnen data over jou verzamelen, cookies en 3rd-party tracking gebruiken, en 
+                        je interactie met de ingesloten inhoud monitoren.`
+               }
+            ]
+         },
+         {
+            title: "Hoe lang we je data bewaren",
+            text: `Wanneer je een reactie achterlaat, of een bericht via een forum naar ons stuurt, 
+                  dan wordt die reactie, of dat bericht, en de metadata van die reactie of dat bericht voor 
+                  altijd bewaard. Op deze manier kunnen we vervolgreacties en -berichten automatisch herkennen 
+                  en goedkeuren in plaats van ze moeten modereren.`
+         },
+         {
+            title: "Welke rechten je hebt over je data",
+            text: `Als je op deze site een reactie hebt achtergelaten of een formulier hebt ingevuld, kun je om 
+                  een exportbestand van je persoonlijke data vragen. Je kan ook vragen dat we persoonlijke 
+                  data die we van je hebben, verwijderen, met uitzondering van data die we verplicht moeten 
+                  bewaren in verband met administratieve, wettelijke of beveiligingsdoeleinden.`
+         },
+         {
+            title: "Waar we je data naartoe sturen",
+            text: `Reacties van bezoekers kunnen naar een geautomatiseerde spamdetectiedienst worden 
+                  gestuurd. Een geanonimiseerd IP-adres kan met Google Tags worden gedeeld.`
+         },
+      ]
+   },
+   terms_kmo: [
+      {
+         title: "Beoordeling van de subsidie-aanvragen via de kmo-portefeuille",
+         text: `Elke dienstverlener, in deze Trixolutions, moet controleren of de steunaanvraag correct 
+               is uitgevoerd. Als de subsidieaanvraag niet correct is uitgevoerd dien je deze te weigeren 
+               via de digitale applicatie voor dienstverleners.`
+      },
+      {
+         title: `Voorwaarden`,
+         text: `Trixolutions is verplicht om elke subsidieaanvraag te melden die niet in overeenstemming 
+               is met de wetgeving. De controletaak is zowel vormelijk als inhoudelijk. <br/><br/>
+               Mogelijke redenen zijn:`,
+         list: [
+            `De onderneming mag geen gebruik maken van de kmo-portefeuille.`,
+            `De subsidie wordt aangevraagd voor een niet subsidiabele dienst`,
+            `Verkeerde dienstverlener`,
+            `Verkeerd of gedeeltelijk bedrag`,
+         ],
+         text2: `Aanvraag te laat – een project dient ten laatste 14 dagen na de start van de opleiding 
+                  of het advies zijn aangevraagd. Bij een projectaanvraag die hierbuiten gebeurt, dient 
+                  een dienstverlener de aanvraag te weigeren.`
+      },
+      {
+         title: `Procedure van de subsidie-afhandeling`,
+         list_ordered: [
+            `De kmo schrijft zich in of ondertekent contract advies`,
+            `De kmo doet digitaal de aanvraag + stort eigen aandeel`,
+            `Dienstverlener zet aanvraag stop indien niet in orde`,
+            `De kmo volgt de opleiding – Dienstverlener geeft opleiding/advies`,
+            `Dienstverlener maakt factuur op na eerste prestaties`,
+            `De kmo betaalt via de kmo-portefeuille`,
+            `De kmo beoordeelt de dienstverlener`,
+         ]
+      },
+      {
+         title: `Wat moet de inschrijving/overeenkomst voor een opleiding minstens bevatten?`,
+         list: [
+            `de startdatum van de opleiding en de looptijd ervan;`,
+            `een gedetailleerde beschrijving van de opleiding;`,
+            `de naam en het registratienummer van dienstverlener;`,
+            `de handtekening of akkoord per mail van de onderneming;`,
+            `de naam van de werkende in de onderneming en vermelding van de onderneming waarin deze persoon werkzaam is;`,
+            `de prijs (exclusief btw) van de dienstverlening, met een aparte vermelding van de niet in aanmerking komende kosten`,
+         ]
+      },
+      {
+         title: `Wat moet het vormingsattest minstens bevatten?`,
+         list: [
+            `naam van de persoon die de opleiding volgde en vermelding van de onderneming waarin deze persoon werkzaam is;`,
+            `naam en registratienummer van de dienstverlener;`, 
+            `naam van de opleiding;`,
+            `startdatum of looptijd van de opleiding`,
+         ]
+      },
+      {
+         title: `Wat moeten de aanwezigheidslijsten minstens bevatten?`,
+         list: [
+            `naam van de persoon die zich inschrijft voor de opleiding en vermelding van de onderneming waarin deze persoon werkzaam is;`,
+            `naam van de opleiding;`,
+            `datum van de opleiding (per opleidingsdag wordt de aanwezigheid van de persoon genoteerd);`,
+            `handtekening van de inschrijver (elektronisch of schriftelijk)`,
+         ]
+      },
+      {
+         title: `Wat moet de factuur minstens bevatten?`,
+         text: `De facturen die de dienstverlener aanbiedt om te betalen via de kmo-portefeuille, bevatten:`,
+         list: [
+            `de naam en het registratienummer van de dienstverlener;`,
+            `het totale bedrag van de factuur, exclusief btw;`,
+            `een gedetailleerde beschrijving van de gefactureerde prestaties;`,
+            `de datum van de factuur`,
+         ]
+      },
    ]
 }
 

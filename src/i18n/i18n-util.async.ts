@@ -17,6 +17,7 @@ const localeNamespaceLoaders = {
 		nav: () => import('./en/nav/index.js'),
 		other: () => import('./en/other/index.js'),
 		pages: () => import('./en/pages/index.js'),
+		pages_explore: () => import('./en/pages_explore/index.js'),
 		sessions: () => import('./en/sessions/index.js')
 	},
 	fr: {
@@ -24,6 +25,7 @@ const localeNamespaceLoaders = {
 		nav: () => import('./fr/nav/index.js'),
 		other: () => import('./fr/other/index.js'),
 		pages: () => import('./fr/pages/index.js'),
+		pages_explore: () => import('./fr/pages_explore/index.js'),
 		sessions: () => import('./fr/sessions/index.js')
 	},
 	nl: {
@@ -31,6 +33,7 @@ const localeNamespaceLoaders = {
 		nav: () => import('./nl/nav/index.js'),
 		other: () => import('./nl/other/index.js'),
 		pages: () => import('./nl/pages/index.js'),
+		pages_explore: () => import('./nl/pages_explore/index.js'),
 		sessions: () => import('./nl/sessions/index.js')
 	}
 }

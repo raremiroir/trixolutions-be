@@ -20,6 +20,7 @@ export const namespaces: Namespaces[] = [
 	'nav',
 	'other',
 	'pages',
+	'pages_explore',
 	'sessions'
 ]
 
