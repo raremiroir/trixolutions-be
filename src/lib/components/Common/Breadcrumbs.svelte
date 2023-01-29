@@ -4,6 +4,7 @@
 
 	import Icon from "@iconify/svelte";
 
+   export let beforeDefined = false;
    export let before = ""
    export let beforeUrl = ""
 
@@ -17,14 +18,19 @@
    
    let currentName = ''
 
+   $: if (secondSlashIndex <= 0 && !beforeDefined) {
+      before = ""; 
+   }
+   else if (secondSlashIndex > 0 && !beforeDefined) { 
+      before = titleCase(currentUrl.substring(slashIndex, (secondSlashIndex - 1)).replaceAll('-', ' '));
+      beforeUrl = currentUrl.substring(0, secondSlashIndex);
+   }
+
    $: if (secondSlashIndex <= 0) {
       currentName = titleCase(currentUrl.substring(slashIndex).replaceAll('-', ' '));
-      before = ""; 
    }
    else if (secondSlashIndex > 0) { 
       currentName = titleCase(currentUrl.substring(secondSlashIndex).replaceAll('-', ' '));
-      before = titleCase(currentUrl.substring(slashIndex, (secondSlashIndex - 1)).replaceAll('-', ' '));
-      beforeUrl = currentUrl.substring(0, secondSlashIndex);
    }
 
 </script>
