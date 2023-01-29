@@ -25,3 +25,8 @@ export const langSelection = (() => {
       ..._pageLangMap
    }
 })()
+
+// Store current hero for explore-pages
+export let currentHero = writable('');
+// Store current title for explore-pages
+export let currentTitle = writable('');
