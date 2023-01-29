@@ -8,16 +8,16 @@
    export let id:string;
    export let title:string;
 
-   export let height = "min-h-[300px]"
 </script>
-<Flipper class="{klass}" {height}>
-   <ContentCard 
+<Flipper class="{klass}">
+   <ContentCard altBg
        slot="front" {id} {title} 
-       class="border-4 border-gray-50/0 !bg-gray-50/50 cursor-pointer">
+       class="border-4 border-transparent cursor-pointer">
        <slot name="front"/>
    </ContentCard>
-   <ContentCard 
+   <ContentCard altBg
        slot="back" {id} {title} 
+       hoverFx="none"
        class="border-4 border-primary/70 cursor-pointer">
        <slot name="back"/>
    </ContentCard>
