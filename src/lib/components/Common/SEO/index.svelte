@@ -10,6 +10,8 @@
 	// Import SEO components
 	import OpenGraph from './OpenGraph.svelte';
 	import SchemaOrg from './SchemaOrg.svelte';
+
+	import LL from '$i18n/i18n-svelte';
 	
 	// Define website object
 	let {
@@ -17,7 +19,6 @@
 		entity,
 		facebookAuthorPage,
 		facebookPage,
-		ogLanguage,
 		siteLanguage,
 		siteShortTitle,
 		siteTitle,
@@ -25,6 +26,7 @@
 		linkedinProfile,
 	} = website;
 
+	export let ogLanguage = 'nl-BE';
 	export let article = false;
 	export let breadcrumbs:any = [];
 	export let entityMeta:any = undefined;
@@ -46,8 +48,9 @@
 	export let ogImage = { url: defaultOgImage, alt: defaultAlt };
 	export let ogSquareImage = { url: defaultOgSquareImage, alt: defaultAlt };
 
+	$: ogLanguage = $LL.code()
 	$: pageTitle = `${siteTitle} ${VERTICAL_LINE_ENTITY} ${title}`;
-	$: url = `${siteUrl}/${slug}`;
+	$: url = `${siteUrl}${slug}`;
 
 	$: openGraphProps = {
 		article,
