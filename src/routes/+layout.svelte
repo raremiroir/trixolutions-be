@@ -1,8 +1,7 @@
 <script lang="ts">
-	// Import Loader Component
+	// Import Components
 	import Loader from './Loader.svelte';
-	// Import PWA Component
-	import { PWA } from '$comp';
+	import { HeadHrefLangs, PWA } from '$comp';
 
 	// Import Styles
 	import "$src/style/normalize.css"
@@ -16,12 +15,8 @@
 	import LL, { locale, setLocale } from '$i18n/i18n-svelte'
 	import type { LayoutData } from './$types'
 	import { loadNamespaceAsync } from '$i18n/i18n-util.async';
-	import { HeadHrefLangs } from '$comp';
-	
-	// Import supabase
-	import supabase from '$src/lib/db';
 
-	// import TwicPics svelte3 components
+	// Initialize TwicPics
 	import { installTwicPics } from '@twicpics/components/sveltekit'
 	// import TwicPics components css
 	import '@twicpics/components/style.css'
@@ -50,29 +45,20 @@
    $: displayPagesText($locale);
 
 	
-	// 	// Supabase Auth
-	// 	onMount(() => {
-	// 	const {
-	// 		data: { subscription },
-	// 	} = supabase.auth.onAuthStateChange(() => {
-	// 		invalidate('supabase:auth')
-	// 	})
-
-	// 	return () => {
-	// 		subscription.unsubscribe()
-	// 	}
-	// })
-
 	// Page Loading Spinner
 	let hasPageLoaded = false;
 	onMount(() => {
 		hasPageLoaded = true;
 		console.log('page loaded');
 	})
-
 </script>
 
-<PWA />
+<svelte:head>
+	<title>{$page.data.title || 'Trixolutions'}</title>
+	<HeadHrefLangs />
+</svelte:head>
+<PWA/>
+
 <div class="
 		flex flex-col min-h-screen bg-gray-50
 		relative ">
@@ -84,10 +70,6 @@
 	</div>
 </div>
 
-<svelte:head>
-	<title>{$page.data.title || 'Trixolutions'}</title>
-	<HeadHrefLangs />
-</svelte:head>
 
 <style global>
 	.app {
