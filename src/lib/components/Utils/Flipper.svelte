@@ -1,5 +1,6 @@
 <script>
    let flipped = false;
+   import { fade } from "svelte/transition";
    
    const flip = (node, {
       delay = 0, duration = 400
@@ -14,42 +15,41 @@
       };
    }
 
-   export let height = "min-h-[300px]"
    let klass = '';
    export { klass as class };
 </script>
 
    <div 
       class="
-         relative {height} max-w-full 
-         {klass}"
+         h-fit cursor-pointer
+         max-w-full {klass}"
       on:click={() => flipped = !flipped}
       on:keydown={() => flipped = !flipped}>
       
    
-      <div class="absolute h-full w-full card">
          {#if !flipped}
-            <div 
-               transition:flip 
-               class="
-                  transition-all duration-200 ease-in-out
-                  absolute h-full w-fit overflow-hidden 
-                  flex items-center justify-center rounded-lg
-                  shadow-lg hover:shadow-black/30">
-               <slot name="front">Front</slot>
+            <div transition:fade={{delay: 0, duration:100}}>
+               <div 
+                  in:flip={{delay: 150, duration:150}} out:flip={{delay: 0, duration: 150}}
+                  class="
+                     transition-all duration-200 ease-in-out
+                     h-fit w-full overflow-hidden 
+                     flex items-center justify-center">
+                  <slot name="front">Front</slot>
+               </div>
             </div>
          {:else}
-            <div 
-               transition:flip 
-               class="
-                  transition-all duration-200 ease-in-out
-                  absolute h-full w-fit overflow-hidden 
-                  flex items-center justify-center rounded-lg
-                  shadow-lg hover:shadow-black/30">
-               <slot name="back">Back</slot>
+            <div transition:fade={{delay: 0, duration:100}}>
+               <div 
+                  in:flip={{delay: 150, duration: 150}} out:flip={{delay: 0, duration:150}}
+                  class="
+                     transition-all duration-200 ease-in-out
+                     h-fit w-full overflow-hidden 
+                     flex items-center justify-center">
+                  <slot name="back">Back</slot>
+               </div>
             </div>
          {/if}
-      </div>
    
    </div>
 
