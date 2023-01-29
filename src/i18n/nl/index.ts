@@ -1,6 +1,7 @@
 import type { BaseTranslation } from '../i18n-types'
 
 const nl: BaseTranslation = {
+   code: "nl-BE",
    base: {
       word: {
          the: 'de',

@@ -1,6 +1,7 @@
 import type { Translation } from '../i18n-types'
 
 const fr: Translation = {
+   code: "fr-BE",
    base: {
       word: {
          the: 'le',
