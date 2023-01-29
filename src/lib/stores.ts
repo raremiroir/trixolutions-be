@@ -27,6 +27,12 @@ export const langSelection = (() => {
 })()
 
 // Store current hero for explore-pages
-export let currentHero = writable('');
+export let currentHero = writable(``);
 // Store current title for explore-pages
-export let currentTitle = writable('');
+export let currentTitle = writable(``);
+// Store current slug for explore-pages
+export let currentSlug = writable(``);
+// Store current desc for explore-pages
+export let currentDesc = writable(``);
+// Store current icon for explore-pages
+export let currentIcon = writable(``);
