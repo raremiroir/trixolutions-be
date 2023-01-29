@@ -1,4 +1,12 @@
 <script lang="ts">
+    // Define current page slug
+    import { currentPageMap } from "$lib/stores";
+    $currentPageMap = [
+       {locale: 'en', slug: 'vacancies'},
+       {locale: 'fr', slug: 'postes-vacants'},
+       {locale: 'nl', slug: 'vacatures'}
+    ];
+
     import LL from "$i18n/i18n-svelte";
     
     // Import Components
