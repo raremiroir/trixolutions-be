@@ -11,20 +11,28 @@
 	import IntroSection from '../../IntroSection.svelte';
 	import IndepthSection from '../../IndepthSection.svelte';
     
-    //  Import data
+    // Import i18n
+    import LL from "$i18n/i18n-svelte";
+    
+    // Import data
     export let data;
     const pageData = data.data[0];
 
-    let heroImgSrc = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
+    // Import stores
+    import { currentHero, currentTitle } from "$lib/stores";
+    // Set page props
+    $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items.decisive_lead.title()
+    $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
+
     // Set 'active' variable for accordeon component
 	let active:any = null;
 
 </script>
 
-<IntroSection title={pageData.title.nl} imgSrc={heroImgSrc} imgMode='cover'>
+<IntroSection title={$currentTitle} imgSrc={$currentHero} imgMode='cover'>
     <div class="" slot="title">
         <Title type="h2" small>
-            Het Model - {pageData.title.nl}
+            Het Model - {$currentTitle}
         </Title>
         <Title type="subheader">by Patrick Lencioni</Title>
     </div>

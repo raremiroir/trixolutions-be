@@ -3,7 +3,10 @@
 	import { Footer, Navbar, Main, Title, Breadcrumbs, Hero } from "$comp";
 	import "$src/app.postcss";
 
-	import { currentHero, currentTitle } from "$src/lib/stores";
+	// Import stores
+	import { currentHero, currentTitle } from "$lib/stores";
+	$: $currentHero;
+	$: $currentTitle;
 
 </script>
 

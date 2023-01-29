@@ -16,15 +16,17 @@
     
     // Import constants
     import { breakpoints } from "$lib/constants/breakpoints";
-
+    
     //  Import data
     export let data;
     const pageData = data.data[0];
-
-    // Set page props
-    $: title = $LL.nav.explore.training_leadership_teamcoaching.items.decisive_lead.title()
-    const heroImgSrc = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
     
+    // Import stores
+    import { currentHero, currentTitle } from "$lib/stores";
+    // Set page props
+    $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items.decisive_lead.title()
+    $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
+
     // Set 'active' variable for accordeon component
 	let active:any = null;
 
@@ -45,10 +47,10 @@
 <svelte:window bind:innerWidth />
 
 
-<IntroSection title={title} imgSrc={heroImgSrc}>
+<IntroSection title={$currentTitle} imgSrc={$currentHero}>
     <div class="" slot="title">
         <Title type="h2" small>
-            Het Model - {title}
+            Het Model - {$currentTitle}
         </Title>
         <Title type="subheader">by Patrick Lencioni</Title>
     </div>

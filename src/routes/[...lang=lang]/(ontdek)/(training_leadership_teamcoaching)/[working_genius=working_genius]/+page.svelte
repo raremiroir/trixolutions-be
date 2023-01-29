@@ -9,16 +9,23 @@
     // Import components
     import { Text, Title, List, ListItem } from '$comp';
 	import IntroSection from '../../IntroSection.svelte';
+
+    // Import i18n
+    import LL from "$i18n/i18n-svelte";
     
-    //  Import data
+    // Import data
     export let data;
     const pageData = data.data[0];
 
-    $: heroImgSrc = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
+    // Import stores
+    import { currentHero, currentTitle } from "$lib/stores";
+    // Set page props
+    $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items.decisive_lead.title()
+    $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
 
 </script>
 
-<IntroSection title={pageData.title.nl} imgSrc={heroImgSrc} imgMode='contain' imgClass="bg-primary">
+<IntroSection title={$currentTitle} imgSrc={$currentHero} imgMode='contain' imgClass="bg-primary">
     <Title slot="title" type="h2" small>
         De 6 Intrinsieke Werkwaarden
     </Title>
