@@ -60,24 +60,23 @@
 
 <Main noMargin cta>
    {#each categoryData as section}
-      <Section name={formatUrl(section.name[$locale])}>
+      <Section name={$LL.nav.explore[section.name].slug()}>
          <div slot="title">
             <Reveal>
                <H2>
-                  {section.name[$locale]}
+                  {$LL.nav.explore[section.name].title()}
                </H2>
             </Reveal>
          </div>
          <PostGrid>
             {#each pagesData as item}
-               {#if item.category.name.nl === section.name[$locale]}
+               {#if item.category.name === section.name}
                   <Reveal>
-                     {@const slug = item.slug ? item.slug : `${formatUrl(section.slug.nl)}/${formatUrl(item.title[$locale])}`}
                      <PostCard
-                        title={item.title[$locale]}
+                        title={$LL.nav.explore[section.name].items[item.name].title()}
                         imgSrc={`${item.hero_img.folder}/${item.hero_img.name}.${item.hero_img.type}`}
-                        slug={slug}
-                        excerpt={item.excerpt[$locale]}
+                        slug={$LL.nav.explore[section.name].items[item.name].slug()}
+                        excerpt={$LL.nav.explore[section.name].items[item.name].description()}
                      />
                   </Reveal>
                {/if}
