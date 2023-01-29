@@ -16,4 +16,5 @@ export const load: LayoutLoad = async (event) => {
 	return { session }
  }
 
-//  export const prerender = true;
+ export const prerender = false;
+ export const ssr = true;
