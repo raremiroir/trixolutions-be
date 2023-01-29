@@ -7,7 +7,7 @@
         {locale: 'nl', slug: '6-types-working-genius'}
     ];
     // Import components
-    import { Text, Title, List, ListItem } from '$comp';
+    import { Text, List, ListItem, H2 } from '$comp';
 	import IntroSection from '../../IntroSection.svelte';
 
     // Import i18n
@@ -23,40 +23,30 @@
     $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].title()
     $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
 
+    // Get localized 'intro list items' from i18n library
+    let introListItems:any = []
+    $: for (let i = 0; i < Array.from($LL.pages.main.training_leadership_teamcoaching.working_genius.intro.list).length; i++) {
+        introListItems[i] =  $LL.pages.main.training_leadership_teamcoaching.working_genius.intro.list[i]()
+    } 
+
 </script>
 
 <IntroSection title={$currentTitle} imgSrc={$currentHero} imgMode='contain' imgClass="bg-primary">
-    <Title slot="title" type="h2" small>
-        De 6 Intrinsieke Werkwaarden
-    </Title>
+    <H2 slot="title" small>
+        {$LL.pages.main.training_leadership_teamcoaching.working_genius.title_alt()}
+    </H2>
 
     <List>
         <Text>
-            Teveel mensen in deze wereld werken tegen hun zin omdat ze hun persoonlijke 
-            en innerlijke vermogens niet kennen. Hierdoor doen ze niet het werk dat hen 
-            energie en plezier geeft en belanden ze in jobs en projecten die hun vermoeien 
-            en demotiveren. Eigenlijk is dit een regelrechte tragedie om 2 aspecten:<br/>
+            {@html $LL.pages.main.training_leadership_teamcoaching.working_genius.intro.intro()}
         </Text><br/>
-        <ListItem>
-            <b>Ten eerste:</b> het zorgt ervoor dat mensen hun zelfvertrouwen en 
-            plezier in het leven verliezen, wat natuurlijk voor hen een ramp is, 
-            maar ook voor hun familie en vrienden. En eigenlijk voor de maatschappij 
-            in zijn geheel. Dit alleen al is eigenlijk verschrikkelijk.
-        </ListItem>
-        <ListItem>
-            <b>Ten tweede:</b> organisaties en teams die niet inhaken op die persoonlijke 
-            intrinsieke vermogens van hun teamleden zullen nooit in de buurt komen om 
-            het volledige potentieel van die medewerkers te laten ontplooien en bereiken. 
-            Ze zullen blijven twijfelen over het niet bereiken van doelen, effectiviteit, 
-            betrokkenheid en werkplezier van die mensen.
-        </ListItem>
+        {#each introListItems as item}
+            <ListItem>
+                {@html item}
+            </ListItem>
+        {/each}
     </List><br/>
     <Text>
-        En wat eigenlijk het rampplaatje volledig maakt is dat eigenlijk dit alles te vermijden 
-        is …<br/>
-        <br/>
-        De oplossing is dat iedereen, werknemers, managers, studenten, … hun <strong>intrinsieke 
-        werkwaarden</strong> ontdekken alsook de vermogens die ze niet natuurlijk bezitten en derhalve 
-        dus altijd energie zullen kosten. Om op die manier aan te haken met juiste “Working Genius”!
+        {@html $LL.pages.main.training_leadership_teamcoaching.working_genius.intro.text()}
     </Text>
 </IntroSection>
