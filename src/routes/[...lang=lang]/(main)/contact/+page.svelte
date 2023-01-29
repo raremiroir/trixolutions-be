@@ -57,39 +57,29 @@
    ]
 
    // SEO
-   const { author, siteUrl } = website;
-	let title = 'Contact';
-	const breadcrumbs = [{ name: 'Contact', slug: `/${$locale}/contact` }];
-	let metadescription = 'Contact Trixolutions';
-   
-	const featuredImageAlt = 'Contact Trixolutions';
-	const featuredImage = {
-		url: featuredImageSrc, alt: featuredImageAlt,
-		width: 672, height: 448,
-		caption: 'Contact Trixolutions',
-	};
-	const ogImage = { url: ogImageSrc, alt: featuredImageAlt, };
-	const ogSquareImage = { url: ogSquareImageSrc, alt: featuredImageAlt, };
+   $: pageSlug = `/${$locale}/${$LL.nav.contact.slug()}`
+   $: pageTitle = $LL.nav.contact.title()
+   $: pageDesc = $LL.nav.contact.description()
+   let { author, siteUrl } = website;
+	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
 	
-   const entityMeta = {
-		url: `${siteUrl}/${$locale}/contact`,
+   $: entityMeta = {
+		url: `${siteUrl}${pageSlug}`,
 		faviconWidth: 512, faviconHeight: 512,
 		caption: author,
-	};
-	
-   const seoProps = {
-      slug: `${$locale}/contact`,
-		datePublished: '2023-01-11T12:31:00.000+0100',
-		lastUpdated: '2023-01-11T12:31:00.000+0100',
-		title, entityMeta,
-		breadcrumbs, metadescription,
-		featuredImage, ogImage, ogSquareImage,
 	};
 
 </script>
 
 
-<SEO {...seoProps}/>
+<SEO 
+	slug="{pageSlug}"
+	datePublished = '2023-01-11T12:31:00.000+0100'
+	lastUpdated = '2023-01-11T12:31:00.000+0100'
+	title="{pageTitle}"
+	metadescription="{pageDesc}"
+	{breadcrumbs} {entityMeta}
+/>
 
 <Main cta>
    <Breadcrumbs currentIcon="mdi:email-outline"/>

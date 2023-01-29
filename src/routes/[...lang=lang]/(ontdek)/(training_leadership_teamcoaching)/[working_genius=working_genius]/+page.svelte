@@ -11,17 +11,20 @@
 	import IntroSection from '../../IntroSection.svelte';
 
     // Import i18n
-    import LL from "$i18n/i18n-svelte";
+    import LL, { locale } from "$i18n/i18n-svelte";
     
     // Import data
     export let data;
     const pageData = data.data[0];
 
     // Import stores
-    import { currentHero, currentTitle } from "$lib/stores";
+    import { currentHero, currentTitle, currentDesc, currentSlug, currentIcon } from "$lib/stores";
     // Set page props
     $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].title()
     $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
+    $: $currentDesc = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].description();
+    $: $currentSlug = `/${$locale}/${$LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].slug()}`;
+    $: $currentIcon = `mdi:head-cog-outline`
 
     // Get localized 'intro list items' from i18n library
     let introListItems:any = []
