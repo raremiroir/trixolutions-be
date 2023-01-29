@@ -22,6 +22,10 @@ export type Translations = RootTranslation &
 }
 
 type RootTranslation = {
+	/**
+	 * n​l​-​B​E
+	 */
+	code: string
 	base: {
 		word: {
 			/**
@@ -2762,6 +2766,10 @@ type DisallowNamespaces = {
 }
 
 export type TranslationFunctions = {
+	/**
+	 * nl-BE
+	 */
+	code: () => LocalizedString
 	base: {
 		word: {
 			/**
