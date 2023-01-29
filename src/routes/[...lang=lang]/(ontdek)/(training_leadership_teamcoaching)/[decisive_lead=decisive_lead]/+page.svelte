@@ -12,81 +12,44 @@
 	import IntroSection from '../../IntroSection.svelte';
 
     // Import i18n
-    import LL from '$i18n/i18n-svelte';
+    import LL, { locale } from '$i18n/i18n-svelte';
     
     //  Import data
     export let data;
     const pageData = data.data[0];
-    
+
     // Import stores
-    import { currentHero, currentTitle } from "$lib/stores";
+    import { currentHero, currentTitle, currentDesc, currentSlug, currentIcon } from "$lib/stores";
+
     // Set page props
     $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].title()
     $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
+    $: $currentDesc = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].description()
+    $: $currentSlug = `/${$locale}/${$LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].slug()}`
+    $: $currentIcon = `iconoir:leaderboard-star`;
 
     // Set 'active' variable for accordeon component
 	let active:any = null;
 
-    $: accordeonItems = [
-        {
-            title: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[0].title(),
-            intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[0].intro(),
-            list: {
-                intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[0].list.intro(),
-                items: [
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[0].list.items[0](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[0].list.items[1](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[0].list.items[2](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[0].list.items[3](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[0].list.items[4](),
-                ],
-            }
-        },
-        {
-            title: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[1].title(),
-            intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[1].intro(),
-            list: {
-                intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[1].list.intro(),
-                items: [
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[1].list.items[0](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[1].list.items[1](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[1].list.items[2](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[1].list.items[3](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[1].list.items[4](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[1].list.items[5](),
-                ],
-            }
-        },
-        {
-            title: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[2].title(),
-            intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[2].intro(),
-            list: {
-                intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[2].list.intro(),
-                items: [
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[2].list.items[0](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[2].list.items[1](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[2].list.items[2](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[2].list.items[3](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[2].list.items[4](),
-                ],
-            }
-        },
-        {
-            title: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[3].title(),
-            intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[3].intro(),
-            list: {
-                intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[3].list.intro(),
-                items: [
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[3].list.items[0](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[3].list.items[1](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[3].list.items[2](),
-                    $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[3].list.items[3](),
-                ],
-            }
-        },
-    ];
-</script>
+    // Get localized 'accordion items' from i18n library
+    let accordeonItems:any = []
+    $: for (let i = 0; i < Array.from($LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon).length; i++) {
+        
+        let listItems:any = [];
+        for (let x = 0; x < Array.from($LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.items).length; x++) {
+            listItems[x] = $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.items[x]()
+        }
 
+        accordeonItems[i] = {
+            title: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].title(),
+            intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].intro(),
+            list: {
+                intro: $LL.pages.main.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.intro(),
+                items: listItems
+            },
+        }
+    } 
+</script>
 
 <IntroSection title={$currentTitle} imgSrc={$currentHero}>
     <div class="" slot="title">
@@ -106,7 +69,7 @@
                     {@html item.intro}
                 </Text><br/>
                 <List>
-                    {item.list.intro}
+                    <Text color="text-primary-d1">{item.list.intro}</Text>
                     {#each Array.from(item.list.items) as listItem}
                         <ListItem>{listItem}</ListItem>
                     {/each}
