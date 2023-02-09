@@ -15,18 +15,6 @@
 	import LL, { locale, setLocale } from '$i18n/i18n-svelte'
 	import type { LayoutData } from './$types'
 	import { loadNamespaceAsync } from '$i18n/i18n-util.async';
-
-	// Initialize TwicPics
-	import { installTwicPics } from '@twicpics/components/sveltekit'
-	// import TwicPics components css
-	import '@twicpics/components/style.css'
-
-	installTwicPics({
-		// domain is mandatory
-		domain: 'https://trixolutions.twic.pics',
-		maxDPR: 3,
-		step: 10
-	})
 	
 	// Import data
 	export let data: LayoutData
