@@ -43,7 +43,7 @@
 	};
 </script>
 
-
+<!-- SEO -->
 <SEO 
 	slug="{pageSlug}"
 	datePublished = '2023-01-11T12:31:00.000+0100'
@@ -53,31 +53,39 @@
 	{breadcrumbs} {entityMeta}
 />
 
+<!-- Header -->
 <header>
    <Navbar/>
    <HomeHeroSlides />
 </header>
 
+<!-- Main -->
 <Main noMargin cta>
+   <!-- Loop through each home page category from db -->
    {#each categoryData as section}
+      <!-- Section -->
       <Section name={$LL.nav.explore[section.name].slug()}>
          <div slot="title">
+            <!-- Reveal Title -->
             <Reveal>
                <H2>
                   {$LL.nav.explore[section.name].title()}
                </H2>
             </Reveal>
          </div>
+         <!-- Reveal Posts -->
          <Reveal slow>
             <PostGrid>
+               <!-- Loop through each page features on home page -->
                {#each pagesData as item}
+                  <!-- If the page section name equals the current section name, show the item -->
                   {#if item.category.name === section.name}
-                  <PostCard
-                     title={$LL.nav.explore[section.name].items[item.name].title()}
-                     imgSrc={`${item.hero_img.folder}/${item.hero_img.name}.${item.hero_img.type}`}
-                     slug={$LL.nav.explore[section.name].items[item.name].slug()}
-                     excerpt={$LL.nav.explore[section.name].items[item.name].description()}
-                  />
+                     <PostCard
+                        title={$LL.nav.explore[section.name].items[item.name].title()}
+                        imgSrc={`${item.hero_img.folder}/${item.hero_img.name}.${item.hero_img.type}`}
+                        slug={$LL.nav.explore[section.name].items[item.name].slug()}
+                        excerpt={$LL.nav.explore[section.name].items[item.name].description()}
+                     />
                   {/if}
                {/each}
             </PostGrid>
