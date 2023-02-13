@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Import Components
 	import Loader from './Loader.svelte';
-	import { HeadHrefLangs, PWA } from '$comp';
+	import { HeadHrefLangs, PWA, PageTitle } from '$comp';
 
 	// Import Styles
 	import "$src/style/normalize.css"
@@ -9,7 +9,6 @@
 
 	// Load svelte items
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores'
 	
 	// Import i18n
 	import LL, { locale, setLocale } from '$i18n/i18n-svelte'
@@ -42,7 +41,7 @@
 </script>
 
 <svelte:head>
-	<title>{$page.data.title || 'Trixolutions'}</title>
+	<PageTitle />
 	<HeadHrefLangs />
 </svelte:head>
 <PWA/>

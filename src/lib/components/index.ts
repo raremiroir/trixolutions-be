@@ -40,6 +40,7 @@
 // ██    ██    ██    ██ ██      ███████ 
 // ██    ██    ██    ██ ██           ██ 
 //  ██████     ██    ██ ███████ ███████ 
+   export { default as PageTitle }     from './Utils/PageTitle.svelte'
    export { default as HeadHrefLangs } from './Utils/HeadHrefLangs.svelte'
    export { default as Loading }       from './Utils/Loading.svelte'
    export { default as Reveal }        from './Utils/Reveal.svelte'
