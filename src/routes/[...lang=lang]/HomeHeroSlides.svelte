@@ -2,13 +2,17 @@
    import LL, { locale } from "$i18n/i18n-svelte";
 	import { Hero, HeroSlide, Text, Button, H1, Subheader } from "$comp";
 
+   import HeroKrGezTms from '$lib/assets/images/hero/kracht-gezonde-teams.webp';
+   import HeroBeslVrsp from '$lib/assets/images/hero/beslissende-voorsprong-2.webp';
+   import HeroWorkGeni from '$lib/assets/images/hero/working-genius.webp';
+
    $: heroSlides = [
       {
          title: $LL.pages.home.hero.slides[0].title(),
          subheader: $LL.pages.home.hero.slides[0].subheader(),
          content: $LL.pages.home.hero.slides[0].content(),
          extra: $LL.pages.home.hero.slides[0].extra(),
-         src: 'home/kracht-gezonde-teams.webp',
+         src: HeroKrGezTms,
          link: $LL.nav.open_sessions.items.hybrid_traject.slug(),
          extra_btn: {
             title: $LL.base.btn.about_trixo(),
@@ -19,14 +23,14 @@
          title: $LL.pages.home.hero.slides[1].title(), title_type: 'fake',
          subheader: $LL.pages.home.hero.slides[1].subheader(),
          content: $LL.pages.home.hero.slides[1].content(),
-         src: 'home/beslissende-voorsprong-2.webp',
+         src: HeroBeslVrsp,
          link: '',
       },
       {
          title: $LL.pages.home.hero.slides[2].title(), title_type: 'fake',
          subheader: $LL.pages.home.hero.slides[2].subheader(),
          content: $LL.pages.home.hero.slides[2].content(),
-         src: 'home/working-genius.webp',
+         src: HeroWorkGeni,
          link: '',
       },
    ];
@@ -37,6 +41,7 @@
       <HeroSlide
          imgAlt="Trixolutions Lencioni - {slide.title}"
          imgSrc='{slide.src}'
+         imgSrcset=""
          >
          <H1 
             slot="title" 

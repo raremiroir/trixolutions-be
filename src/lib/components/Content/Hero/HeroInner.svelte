@@ -7,6 +7,9 @@
    // Set image alt
    export let imgAlt = 'No alt';
 
+   // Set custom image without component
+   export let customImg = false;
+
 
    // Small title case
    export let titleSmall = false;
@@ -25,14 +28,15 @@
 </script>
 
 <div class="w-full h-full bg-gray-900 ">
-      <Image 
-         alt={imgAlt}
-         src="{imgSrc}" eager
-         mode="cover" position="center"
-         placeholder="preview"
-         class="!opacity-50 !blur-sm w-full { large ? 'h-148' : 'h-100'}"
-         ratio="none"
-      />
+      {#if customImg}
+         <slot name="img"/>
+      {:else}
+         <Image 
+            alt={imgAlt} eager
+            src={imgSrc}
+            class="!opacity-50 !blur-sm w-full { large ? 'h-148' : 'h-100'}"
+         />
+      {/if}
       <!-- Image Overlay -->
       <div class="
             w-full h-full 
