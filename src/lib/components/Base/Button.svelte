@@ -71,6 +71,8 @@
    export let alignStart = false;
    // Is text lowercase?
    export let lowercase = false;
+   // Is text capitalized?
+   export let capitalize = false;
    // Is text bold?
    export let bold = false;
 
@@ -126,7 +128,7 @@
       : '' }
    
       { bold ? 'font-bold' : 'font-semibold'} 
-      { lowercase ? 'capitalize' : 'uppercase' }
+      { lowercase ? 'lowercase' : capitalize ? 'capitalize' : 'uppercase' }
 
       { flat ? 'shadow-none': 'shadow-md shadow-black/30 hover:shadow-black/50 active:shadow-black/50'}
 
