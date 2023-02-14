@@ -9,9 +9,9 @@
    // Import components
    import { 
       Main, Section, Breadcrumbs, 
-      Link, Text, Title, Button, 
-      Map, Card, Modal, 
-	   SEO, Form, CardBase
+      Text, Title, Button, 
+      Map, Modal, 
+	   SEO, Form, CardNew
    } from "$comp";
 	import Icon from "@iconify/svelte";
    
@@ -91,8 +91,7 @@
             <Button
                ariaLabel="{$LL.pages.contact.btn.contact_us()}"
                slot="trigger" 
-               size="xxl" color="primary" 
-               lowercase>
+               size="xxl" color="primary">
                <div class="flex flex-row gap-2 items-center">
                   <Icon icon="material-symbols:mark-email-read-rounded" color="#f6ece7" width="40" />
                   {titleCase($LL.pages.contact.btn.contact_us())}!
@@ -109,11 +108,11 @@
             
          </Modal>
       </div>
-      <div class="grid grid-cols-2 w-full gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 w-full gap-8">
          {#each places as place}
-            <CardBase 
+            <CardNew 
                title="{firstLetterCase($LL.pages.contact.establishment())} {place.code === 'be' ? $LL.base.geo.country.belgium() : place.code === 'nl' ? $LL.base.geo.country.netherlands() : 'error' }"
-               ariaLabel="{firstLetterCase($LL.pages.contact.establishment())} {place.code === 'be' ? $LL.base.geo.country.belgium() : place.code === 'nl' ? $LL.base.geo.country.netherlands() : 'error' }"
+               height='h-88 h-96 sm:h-96 md:h-92 lg:h-96'
                class="col-span-1"
                {...cardProps}
             >
@@ -140,7 +139,7 @@
                      </div>
                   </Button>
                </div>
-            </CardBase>
+            </CardNew>
          {/each}
       </div>
    </Section>
