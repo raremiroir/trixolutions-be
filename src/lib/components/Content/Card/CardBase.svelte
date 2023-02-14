@@ -4,8 +4,6 @@
          H3, Image, Button, Tag
       } from "$comp";
    
-   import { breakpoints } from "$lib/constants/breakpoints";
-
    // =====================================================
    // CARD ACCESSIBILITY PROPS
    export let ariaLabel:string;
@@ -24,10 +22,6 @@
    export let img = '';
    // Define img position (top - bottom - left - right - resp-l - resp-r)
    export let imgPos = 'top'
-   // Align img position (top - bottom - left - right - center)
-   export let imgAlign = 'top'
-   // Contain img
-   export let imgContain = false
    
    // If the card is wrapped in a link, enter the link here
    export let href = '';
@@ -143,18 +137,21 @@
             {#if img !== ''}
                {#if imgPos === 'top' || imgPos === 'bottom'}
                   <Image 
-                     {...imgProps} mode="{imgContain ? 'contain' : 'cover'}" position={imgAlign}
-                     class="z-2 w-full { hovered && (hoverFx === 'full' || hoverFx === 'onlyHover') ? `scale-110 -translate-y-1 ${compact ? 'h-50' : compactResponsive ? 'h-50 md:h-60' : 'h-60'}` : `${compact ? 'h-44' : compactResponsive ? 'h-44 md:h-50' : 'h-50'}` }"
+                     {...imgProps}
+                     class="z-2 w-full 
+                        { hovered && (hoverFx === 'full' || hoverFx === 'onlyHover') 
+                           ? `scale-110 -translate-y-1 
+                              ${compact ? 'h-50' : compactResponsive ? 'h-50 md:h-60' : 'h-60'}` 
+                           : `${compact ? 'h-44' : compactResponsive ? 'h-44 md:h-50' : 'h-50'}` 
+                        }"
                   />
                {:else if imgPos === 'resp-l' || imgPos === 'resp-r'}
                   <Image 
                      {...imgProps}
-                     mode="{ innerWidth < breakpoints.md ? 'cover' : 'contain' }" 
-                     position="{ innerWidth < breakpoints.md ? 'top' : 'top' }"
                      class="z-2 w-full h-48 sm:h-56 md:h-58 lg:h-60 xl:h-72 2xl:h-80"
                   />
                {:else if imgPos === 'left' || imgPos === 'right'}
-                  <Image {...imgProps} mode="cover" position="" class="h-full" />
+                  <Image {...imgProps} class="h-full" />
                {/if}
             {/if}
 
@@ -229,9 +226,7 @@
                            <Image 
                               alt={author.name}
                               src={author.img} 
-                              mode="cover" position="top" 
-                              ratio="1" class="h-8 w-8 2xl:h-10 2xl:w-10 rounded-full"
-                              intrinsic="600x400"/>
+                              class="h-8 w-8 2xl:h-10 2xl:w-10 rounded-full"/>
                            <div class="flex flex-col gap-0">
                               <div class="text-xs 2xl:text-sm font-semibold text-gray-800">{author.name}</div>
                               <span class="text-xs 2xl:text-sm text-gray-500 italic">{author.date}</span>

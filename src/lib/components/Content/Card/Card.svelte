@@ -6,8 +6,6 @@
       img: 'placeholder/placeholder.png',
 
       imgPos: "top",
-      imgAlign: 'top',
-      imgContain: false,
       width: 'w-96',
 
       href: '',
