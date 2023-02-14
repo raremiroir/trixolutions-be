@@ -19,7 +19,7 @@
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
    // Import Utils
-	import { firstLetterCase, titleCase } from "$utils";
+	import { firstLetterCase } from "$utils";
 
 
    // Load data
@@ -31,18 +31,6 @@
       if (error) throw new Error(error.message);
       return data;
    }
-      
-   let innerWidth:number;
-   $: innerWidth;
-   // Change image ratio according to breakpoint
-   let ratio = '3:1'
-   $: if (innerWidth < breakpoints.xs) { ratio = "3:2"; } 
-   else if (innerWidth < breakpoints.sm) { ratio = "5:3"; } 
-   else if (innerWidth < breakpoints.md) { ratio = "16:9"; } 
-   else if (innerWidth < breakpoints.lg) { ratio = "2:3"; } 
-   else if (innerWidth < breakpoints.xl) { ratio = "5:6"; } 
-   else if (innerWidth < breakpoints.xxl) { ratio = "1"; } 
-   else { ratio = "5:4"; }
 
    // SEO
    $: pageSlug = `/${$locale}/${$LL.nav.about.slug()}`
@@ -59,8 +47,6 @@
 	};
 
 </script>
-
-<svelte:window bind:innerWidth={innerWidth} />
 
 <SEO 
 	slug="{pageSlug}"
@@ -83,8 +69,6 @@
                   class="rounded-xl shadow-md"
                   src="team/tom-color.webp" 
                   alt="Over Trixolutions"
-                  anchor=""
-                  ratio={ratio}
                />
             </div>
          </Reveal>
@@ -111,7 +95,7 @@
                      src="{member.img.folder}/{member.img.name}.{member.img.type}" 
                      alt="{member.first_name} {member.last_name} - {$locale === 'fr' ? member.job.fr : $locale === 'en' ? member.job.en : member.job.nl}"
                      name="{member.first_name} {member.last_name}"
-                     position={member.unique_name === 'christoph' || member.unique_name === 'frederik' ? 'top' : 'center'}>
+                     position={member.unique_name === 'christoph' || member.unique_name === 'frederik' ? 'bottom-0' : 'bottom-2 top-0'}>
                      <Subtitle smaller italic>{$locale === 'fr' ? member.job.fr : $locale === 'en' ? member.job.en : member.job.nl}</Subtitle>
                   </MemberCard>
                </Reveal>
