@@ -10,7 +10,7 @@
    // Define Card Title
    export let title:string;
    // Define card img if needed
-   export let img = 'home/beslissende-voorsprong-2.webp';
+   export let img = '';
    export let alt = title;
    export let imgFit = 'object-cover'
    // Setting imgPos WILL make img positioning absolute!!
@@ -45,6 +45,9 @@
    // Define wrap component
    const wrapComp = href !== '' ? Link : Div;
 
+   let klass = '';
+   export { klass as class };
+
 </script>
 
 
@@ -52,7 +55,8 @@
 <svelte:component
    {href} fill
    this={wrapComp}
-   wrap ariaLabel={title}>
+   wrap ariaLabel={title}
+   class={klass}>
    <!-- Card Wrap -->
    <div
       class="
@@ -99,9 +103,9 @@
             z-2
             bg-white
             w-full
-            { bodyHeight ? bodyHeight
-            : `h-1/2 sm:h-[60%] 3xl:h-1/2 ${hoverFull ? 'group-hover:h-2/5 sm:group-hover:h-[50%] 3xl:group-hover:h-[40%]' : ''}`
-            }
+            {img ? `${ bodyHeight ? bodyHeight
+                     : `h-1/2 sm:h-[60%] 3xl:h-1/2 ${hoverFull ? 'group-hover:h-2/5 sm:group-hover:h-[50%] 3xl:group-hover:h-[40%]' : ''}`}`
+            : 'h-full'}
             flex flex-col justify-between
             p-6 {hoverFull ? 'group-hover:py-2 lg:group-hover:py-4' : ''}
             backdrop-blur-lg">
