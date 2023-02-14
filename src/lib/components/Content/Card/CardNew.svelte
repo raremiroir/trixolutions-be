@@ -12,6 +12,7 @@
    // Define card img if needed
    export let img = 'home/beslissende-voorsprong-2.webp';
    export let alt = title;
+   export let imgFit = 'object-cover'
    // Setting imgPos WILL make img positioning absolute!!
    export let imgPos = ''
 
@@ -60,29 +61,30 @@
          shadow-lg {hoverFull || hoverMinimal ? 'hover:shadow-black/30' : ''}
          { hoverFull || hoverMinimal ? 'sm:hover:-translate-y-1 lg:hover:-translate-y-2' : '' }
          { href !== '' ? 'cursor-pointer' : 'cursor-default' }
-         rounded-2xl !overflow-clip">
+         !rounded-2xl !overflow-hidden">
       <!-- Image Wrap -->
       {#if img}
          <div
             class="
                top-0 {transition}
                w-full flex
+               bg-white
                { imgHeight ? imgHeight
                : `h-1/2 sm:h-[40%] 3xl:h-1/2 ${hoverFull ? 'group-hover:h-3/5 sm:group-hover:h-[50%] 3xl:group-hover:h-[60%]' : ''}`
                }
                z-0">
    
             <img
-               srcset=" https://trixolutions.imgix.net/{img}?auto=enhance&q=80&fm=webp&w=1024&h=680&fit=clip 1024w,
-                        https://trixolutions.imgix.net/{img}?auto=enhance&q=80&fm=webp&w=640&h=420&fit=clip 640w,
-                        https://trixolutions.imgix.net/{img}?auto=enhance&q=80&fm=webp&w=480&h=320&fit=clip 480w,"
+               srcset=" https://trixolutions.imgix.net/{img}?auto=enhance&q=80&fm=webp&w=1024&h=1&fit=clip 1024w,
+                        https://trixolutions.imgix.net/{img}?auto=enhance&q=80&fm=webp&w=640&h=1&fit=clip 640w,
+                        https://trixolutions.imgix.net/{img}?auto=enhance&q=80&fm=webp&w=480&h=1&fit=clip 480w,"
                src="https://trixolutions.imgix.net/{img}?fit=clip&auto=enhance&q=80&fm=webp&w=1&h=.3"
                sizes="(min-width: 36em) 33.3vw, 100vw"
                title={alt}
                loading="eager"
                alt={alt}
                class="
-                  {transition} object-cover rounded-t-2xl
+                  {transition} {imgFit} rounded-t-2xl
                   h-full w-full {imgPos ? 'absolute rounded-2xl' : ''} {imgPos}
                   {hoverFull || hoverMinimal ? 'opacity-60 group-hover:opacity-90' : 'opacity-70'}">
          </div>
