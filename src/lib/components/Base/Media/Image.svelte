@@ -32,11 +32,10 @@
          <img 
             {alt}
             class={imgClass}
-            srcset=" https://trixolutions.imgix.net/{src}?auto=enhance&q=80&fm=webp&w=1024&h=680&fit=crop 1024w,
-                     https://trixolutions.imgix.net/{src}?auto=enhance&q=80&fm=webp&w=640&h=420&fit=crop 640w,
-                     https://trixolutions.imgix.net/{src}?auto=enhance&q=80&fm=webp&w=480&h=320&fit=crop 480w,"
-            src="https://trixolutions.imgix.net/{src}?fit=clip&auto=enhance&q=80&fm=webp&w=1&h=.3"
-            sizes="(min-width: 36em) 33.3vw, 100vw"
+            srcset=" https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=1 x1,
+                     https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=2 x2,
+                     https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=3 x3,"
+            src="https://trixolutions.imgix.net/{src}?fit=clip&auto=enhance&auto=format&q=80&fm=webp&w=1"
             loading="{eager ? 'eager' : 'lazy'}"
             aria-labelledby="img-caption">
       {/if}
