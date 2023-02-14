@@ -113,11 +113,12 @@
 			{#each references as img}
 					<Image 
 						alt={img.alt}
-						src="references/{img.src}" 
-						mode="contain"
-						placeholder="preview"
-						class="h-auto w-24 sm:w-28 md:w-32 hover:scale-110"
-						ratio="auto"/>
+						src="references/{img.src}"
+						imgFit="object-contain"
+						imgClass="
+							transition-all duration-300 ease-in-out
+							h-auto w-24 sm:w-28 md:w-32 
+							hover:scale-110"/>
 			{/each}
 		</div>
 	</Section>
