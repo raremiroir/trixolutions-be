@@ -1,62 +1,48 @@
 <script lang="ts">
-	import { CardBase, Text } from '$comp';
+	import { CardNew, Text } from '$comp';
 
 	import LL, { locale } from '$i18n/i18n-svelte';
 
-   export let slug:string;
+	export let slug: string;
 	export let title: string;
 	export let imgSrc: string;
-   export let excerpt: any;
+	export let excerpt: any;
 
 	export let date = '';
 	export let author = '';
 	export let authorImg = '';
 
-   // Create correct slug
-   $: link = `/${$locale}/${slug}`
+	// Create correct slug
+	$: link = `/${$locale}/${slug}`;
 
-	// Make post card compact
-	export let compactResponsive = false;
-
-   $: cardProps = {
-      title: title,
-      img: imgSrc,
-
-      imgPos: "top",
-      imgAlign: 'top',
-      imgContain: false,
-      width: 'fill',
-      height: 'equal',
-
-      href: link,
-      article: false,
-
-      ariaLabel: title,
-
-      author: {name: author, img: authorImg, date: date },
-
-      btn: {title: $LL.base.btn.more_info(), href: link, ariaLabel: $LL.base.btn.more_info()},
+	$: cardProps = {
+		title: title,
+		img: imgSrc,
       
-      badgesTop: false,
+      height: 'h-96 sm:h-108 md:h-132 lg:h-140 xl:h-132 2xl:h-132 3xl:h-140',
+      
+		href: link,
+		article: false,
+		ariaLabel: title,
+
+      hoverFx: 'full',
+
       badge: '',
+      second_badge: '',
 
-      compactResponsive: compactResponsive,
+		author: { name: author, img: authorImg, date: date },
 
-      noHoverFx: false,
-      noActiveFx: false,
-      noFx: false,
-   }
+
+		btn: { title: $LL.base.btn.more_info(), href: link, ariaLabel: $LL.base.btn.more_info() },
+		second_btn: { title: '', href: '', ariaLabel: '' },
+		
+	};
 </script>
 
-
-<CardBase {...cardProps}>
-	<Text small class="prose-ol:list-decimal prose-ul:list-disc prose-li:ml-6">
-		{#if Array.isArray(excerpt)}
-			{#each excerpt as item}
-				{item}<br/>
-			{/each}
-		{:else}
-			{excerpt}<br/>	
-		{/if}
+<CardNew
+   {...cardProps}
+>
+	<Text>
+		{@html excerpt}
 	</Text>
-</CardBase>
+</CardNew>
