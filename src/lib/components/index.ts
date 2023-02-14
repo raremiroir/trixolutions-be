@@ -85,6 +85,7 @@
 
    export { default as CardBase }         from './Content/Card/CardBase.svelte';
    export { default as Card }             from './Content/Card/Card.svelte';
+   export { default as CardNew }             from './Content/Card/CardNew.svelte';
    
    // Hero
    export { default as Hero }             from './Content/Hero/Hero.svelte';
