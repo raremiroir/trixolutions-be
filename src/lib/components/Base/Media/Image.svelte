@@ -3,6 +3,8 @@
    export let src:string = '';
    export let alt:string;
 
+   $: src;
+
    export let customSrc = false;
 
    if (customSrc) src = '';
@@ -15,6 +17,7 @@
 
    let klass = '';
    export { klass as class };
+   export let imgClass = '';
 </script>
 
 <figure>
@@ -26,17 +29,16 @@
       {#if customSrc}
          <slot/>
       {:else}
-         <source srcset="https://trixolutions.imgix.net/{src}?w=300&q=90" media="(max-width: 320px)">
-         <source srcset="https://trixolutions.imgix.net/{src}?w=700&q=90" media="(max-width: 768px)">
-         <source srcset="https://trixolutions.imgix.net/{src}?w=1000&q=90" media="(max-width: 1024px)">
-         <source srcset="https://trixolutions.imgix.net/{src}?w=1200&q=90" media="(min-width: 1025px; max-width: 1535px)">
-         <source srcset="https://trixolutions.imgix.net/{src}?w=2000&q=90" media="(min-width: 1536px)">
-
-         <img src="https://trixolutions.imgix.net/{src}?q=70" {alt}
-               loading="{eager ? 'eager' : 'lazy'}" decoding="async"
-               sizes="(max-width: 600px) 100vw, 50vw"
-               srcset="medium.jpg 500w, large.jpg 1000w"
-               aria-labelledby="img-caption">
+         <img 
+            {alt}
+            class={imgClass}
+            srcset=" https://trixolutions.imgix.net/{src}?auto=enhance&q=80&fm=webp&w=1024&h=680&fit=crop 1024w,
+                     https://trixolutions.imgix.net/{src}?auto=enhance&q=80&fm=webp&w=640&h=420&fit=crop 640w,
+                     https://trixolutions.imgix.net/{src}?auto=enhance&q=80&fm=webp&w=480&h=320&fit=crop 480w,"
+            src="https://trixolutions.imgix.net/{src}?fit=clip&auto=enhance&q=80&fm=webp&w=1&h=.3"
+            sizes="(min-width: 36em) 33.3vw, 100vw"
+            loading="{eager ? 'eager' : 'lazy'}"
+            aria-labelledby="img-caption">
       {/if}
    
    </picture>
