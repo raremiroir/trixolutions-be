@@ -17,7 +17,8 @@
 
    let klass = '';
    export { klass as class };
-   export let imgClass = '';
+   export let imgClass = 'transition-all duration-300 ease-in-out';
+   export let imgFit = 'object-cover'
 </script>
 
 <figure>
@@ -31,13 +32,15 @@
       {:else}
          <img 
             {alt}
-            class={imgClass}
             srcset=" https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=1 x1,
                      https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=2 x2,
                      https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=3 x3,"
             src="https://trixolutions.imgix.net/{src}?fit=clip&auto=enhance&auto=format&q=80&fm=webp&w=1"
             loading="{eager ? 'eager' : 'lazy'}"
-            aria-labelledby="img-caption">
+            aria-labelledby="img-caption"
+            class="
+               {imgFit}
+               {imgClass}">
       {/if}
    
    </picture>
