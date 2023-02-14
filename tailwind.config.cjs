@@ -10,6 +10,15 @@ const config = {
 
 //   Tailwind Theme Customization
   theme: {
+      // Define breakpoints (min-width)
+      screens: {
+         'sm':  '640px',
+         'md':  '768px',
+         'lg':  '1024px',
+         'xl':  '1280px',
+         '2xl': '1536px',
+         '3xl': '2100px',
+       },
       // Change Font Sizes
       fontSize: {
          xs: ['10px', '14px'],
