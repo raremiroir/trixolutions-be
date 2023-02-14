@@ -85,6 +85,7 @@
                         imgSrc={`${item.hero_img.folder}/${item.hero_img.name}.${item.hero_img.type}`}
                         slug={$LL.nav.explore[section.name].items[item.name].slug()}
                         excerpt={$LL.nav.explore[section.name].items[item.name].description()}
+                        imgFit={item.name === 'dysfunctions_teamwork' ? 'object-contain' : 'object-cover'}
                      />
                   {/if}
                {/each}

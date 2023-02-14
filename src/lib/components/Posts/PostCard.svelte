@@ -11,6 +11,8 @@
 	export let date = '';
 	export let author = '';
 	export let authorImg = '';
+	
+	export let imgFit = 'object-cover'
 
 	// Create correct slug
 	$: link = `/${$locale}/${slug}`;
@@ -18,6 +20,7 @@
 	$: cardProps = {
 		title: title,
 		img: imgSrc,
+		imgFit: imgFit,
       
       height: 'h-96 sm:h-108 md:h-132 lg:h-140 xl:h-132 2xl:h-132 3xl:h-140',
       
