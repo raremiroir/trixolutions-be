@@ -66,38 +66,43 @@
    <div
       class="
          group {transition}
-         w-full min-w-min {height}
-         { direction === 'row' ? 'flex' : 'relative'} 
-         shadow-lg {hoverFull || hoverMinimal ? 'hover:shadow-black/30' : ''}
+         w-full min-w-min
+         flex
+         { direction === 'row' ? 'md:relative flex-col sm:flex-row' : `flex-col relative` } 
+         { !img ? '' : `${ height }`}
+         shadow-lg {hoverFull || hoverMinimal ? 'hover:shadow-black/30' : '' }
          { hoverFull || hoverMinimal ? 'sm:hover:-translate-y-1 lg:hover:-translate-y-2 active:-translate-y-1' : '' }
          !rounded-2xl !overflow-hidden">
       <!-- Image Wrap -->
       {#if img}
          <div
             class="
-               {transition}
+               { transition }
                flex bg-white 
+               w-full h-1/2
                { imgHeight ? imgHeight
-               : direction === 'row' ? 'h-full w-1/3'
-               : `w-full h-1/2 sm:h-[40%] 3xl:h-1/2 ${hoverFull ? 'group-hover:h-3/5 sm:group-hover:h-[50%] 3xl:group-hover:h-[60%]' : ''}`
+               : direction === 'row' ? 'sm:h-full sm:w-1/3'
+               : `sm:h-[40%] 3xl:h-1/2 ${ hoverFull ? 'group-hover:h-3/5 sm:group-hover:h-[50%] 3xl:group-hover:h-[60%]' : '' }`
                }
+               { hoverFull ? 'group-hover:h-3/5' : '' }
                overflow-hidden z-0">
    
             <img
-               srcset=" https://trixolutions.imgix.net/{img}?auto=enhance&q=80&fm=webp&w=1024&h=1&fit=clip 1024w,
-                        https://trixolutions.imgix.net/{img}?auto=enhance&q=80&fm=webp&w=640&h=1&fit=clip 640w,
-                        https://trixolutions.imgix.net/{img}?auto=enhance&q=80&fm=webp&w=480&h=1&fit=clip 480w,"
-               src="https://trixolutions.imgix.net/{img}?fit=clip&auto=enhance&q=80&fm=webp&w=1&h=.3"
+               srcset=" https://trixolutions.imgix.net/{ img }?auto=enhance&q=80&fm=webp&w=1024&h=1&fit=clip 1024w,
+                        https://trixolutions.imgix.net/{ img }?auto=enhance&q=80&fm=webp&w=640&h=1&fit=clip 640w,
+                        https://trixolutions.imgix.net/{ img }?auto=enhance&q=80&fm=webp&w=480&h=1&fit=clip 480w,"
+               src="https://trixolutions.imgix.net/{ img }?fit=clip&auto=enhance&q=80&fm=webp&w=1&h=.3"
                sizes="(min-width: 36em) 33.3vw, 100vw"
                title={alt}
                loading="eager"
                alt={alt}
                class="
-                  {transition} {imgFit}
+                  { transition } { imgFit }
                   h-full w-full 
-                  { direction === 'row' ? 'rounded-l-2xl' : 'rounded-t-2xl'}
-                  {imgPos && direction !== 'row' ? 'absolute rounded-2xl' : ''} {imgPos}
-                  {hoverFull || hoverMinimal ? 'opacity-60 group-hover:opacity-90' : 'opacity-70'}">
+                  rounded-t-2xl
+                  { direction === 'row' ? 'sm:rounded-l-2xl sm:rounded-tr-none' : '' }
+                  { imgPos && direction !== 'row' ? 'absolute rounded-2xl' : '' } { imgPos }
+                  { hoverFull || hoverMinimal ? 'opacity-60 group-hover:opacity-90' : 'opacity-70' }">
          </div>
       {/if}
    
@@ -105,16 +110,18 @@
       <!-- Body Wrap -->
       <div
          class="
-            {transition}
-            { direction === 'row' ? '' : 'bottom-0 absolute'}
+            { transition }
+            { direction === 'row' || !img ? '' : 'bottom-0 absolute' }
             z-2
             bg-white
-            {img ? bodyHeight ? bodyHeight
-                  : direction === 'row' ? 'h-full w-2/3'
-                  : `w-full h-1/2 sm:h-[60%] 3xl:h-1/2 ${hoverFull ? 'group-hover:h-2/5 sm:group-hover:h-[50%] 3xl:group-hover:h-[40%]' : ''}`
-            : 'h-full w-full'}
+            w-full h-1/2 
+            { img ? bodyHeight ? bodyHeight
+                  : direction === 'row' ? 'sm:h-full sm:w-2/3'
+                  : `sm:h-[60%] 3xl:h-1/2 ${ hoverFull ? 'sm:group-hover:h-[50%] 3xl:group-hover:h-[40%]' : '' }`
+            : 'h-full w-full' }
+            { hoverFull ? 'group-hover:h-2/5 group-hover:py-2 lg:group-hover:py-4' : '' }
             flex flex-col justify-between
-            p-6 {hoverFull ? 'group-hover:py-2 lg:group-hover:py-4' : ''}
+            p-2 xs:p-4 sm:p-4 md:p-6 
             backdrop-blur-lg">
    
          <!-- Content Wrap -->
@@ -127,7 +134,7 @@
                   justify-between
                   ">
                <!-- Title -->
-               <div class="{ badgesTop ? 'order-last' : 'order-first' }">
+               <div class="{ badgesTop ? 'order-last' : 'order-first' } w-full">
                   <slot name="title"><H3 smaller thin>{@html title}</H3></slot>
                </div>
                <!-- End Title -->
@@ -135,7 +142,7 @@
                <!-- Badges -->
                {#if badge}
                   <div class="
-                        flex flex-row gap-1
+                        flex flex-col xs:flex-row gap-1
                         { badgesTop ? 'order-first' : 'order-last' }">
                      <Tag secondary lowercase rounded small>{@html badge}</Tag>
                      {#if second_badge}
@@ -147,7 +154,7 @@
             </div>
             <!-- End Header Wrap -->
    
-            <div class="my-1 {hoverFull ? 'group-hover:m-0' : ''} {transition}">
+            <div class="my-1 { hoverFull ? 'group-hover:m-0' : '' } { transition }">
                <slot><Text>If a dog chews shoes whose shoes does he choose?</Text></slot>
             </div>
             <!-- End Text Wrap -->
