@@ -11,8 +11,11 @@
 	export let date = '';
 	export let author = '';
 	export let authorImg = '';
+
+	export let height = 'h-96 sm:h-108 md:h-132 lg:h-140 xl:h-132 2xl:h-132 3xl:h-140'
 	
 	export let imgFit = 'object-cover'
+	export let compact = false;
 
 	// Create correct slug
 	$: link = `/${$locale}/${slug}`;
@@ -22,11 +25,12 @@
 		img: imgSrc,
 		imgFit: imgFit,
       
-      height: 'h-96 sm:h-108 md:h-132 lg:h-140 xl:h-132 2xl:h-132 3xl:h-140',
+      height: height,
       
 		href: link,
 		article: false,
 		ariaLabel: title,
+		compact: compact,
 
       hoverFx: 'full',
 

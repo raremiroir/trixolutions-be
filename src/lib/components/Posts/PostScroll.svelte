@@ -17,7 +17,7 @@
    {#each pageData as blogPost}
       <Reveal>
          <PostCard
-            compactResponsive
+            height="h-136 xs:h-128 sm:h-88 md:h-132 lg:h-180 xl:h-160 2xl:h-160 3xl:h-180"
             authorImg={blog ? `team/${blogPost.author.img}.webp` : ''}
             author={blog ? `${blogPost.author.first_name} ${blogPost.author.last_name}` : ''} 
             date={blog ? `${formatDateFull(blogPost.created_at)}` : ''}
