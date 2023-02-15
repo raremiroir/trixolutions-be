@@ -21,12 +21,14 @@
    export let imgFit = 'object-cover'
 </script>
 
-<figure>
-   <picture
-      class="
-         transition-all duration-300 ease-in-out
-         {klass}
-      ">
+<figure
+   on:click
+   on:keydown
+   class="
+   transition-all duration-300 ease-in-out
+   {klass}
+   ">
+   <picture>
       {#if customSrc}
          <slot/>
       {:else}
@@ -47,4 +49,3 @@
 
    <figcaption id="img-caption" class="{caption ? '' : 'hidden'}">{alt}</figcaption>
  </figure>
- 
