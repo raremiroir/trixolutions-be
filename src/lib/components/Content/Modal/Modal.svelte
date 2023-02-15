@@ -61,6 +61,7 @@
    {#if (($currentModal === id && $currentModal !== 0) && !normalModal) || (isOpen && normalModal)}
       <!-- Background -->
       <div class="
+            cursor-zoom-out
             w-full h-full z-99
             fixed top-0 bottom-0 left-0 right-0
          bg-black/70 bg-blend-darken
