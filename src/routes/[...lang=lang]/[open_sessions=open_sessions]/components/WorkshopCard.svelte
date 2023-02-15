@@ -35,13 +35,16 @@
 
       <Text slot="intro">{@html sessionData.intro}</Text>
 
-      <List slot="features" class="pr-4">
+      <List slot="features" class="">
          {#each Object.entries($LL.sessions.level_1.features) as [key, feature]}
-            {#if sessionData.features[Number(key)] === true}
-               <ListItem small icon="check">{feature()}</ListItem>
-            {:else if sessionData.features[Number(key)] === false}
-               <ListItem small icon="cancel" disabled>{feature()}</ListItem>
-            {/if}
+            <ListItem 
+               small 
+               icon={ sessionData.features[Number(key)] ? 'check' : 'cancel' }
+               disabled={ !sessionData.features[Number(key)] }
+               class="even:bg-gray-200/30 pr-2"
+               >
+               {feature()}
+            </ListItem>
          {/each}
       </List>
 
@@ -54,7 +57,7 @@
             icon="mdi:pen-plus"
             iconClass="h-5 w-5 mr-2 text-gray-50 group-hover:text-white">
             <div class="flex flex-col">
-               <span class="font-normal text-sm md:text-base xl:text-lg">{$LL.sessions.subscribe_to()} {$LL.sessions.level_1.traject()}</span><br/>
+               <span class="font-normal text-sm md:text-base xl:text-lg">{$LL.sessions.subscribe_to()} {$LL.sessions.level_1.traject()}</span>
                <span>{sessionData.title} {$LL.sessions.level_1.two_day()}</span>
             </div>
          </Button>

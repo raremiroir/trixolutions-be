@@ -1,5 +1,5 @@
 <script lang="ts">
-   import { Text, CardBase, List, ListItem, Button, H2 } from "$comp";
+   import { Text, CardNew, List, ListItem, Button, H2 } from "$comp";
    import Icon from "@iconify/svelte";
    
    import LL from "$i18n/i18n-svelte";
@@ -9,20 +9,13 @@
    let klass = '';
    export { klass as class };
 
+   export let introHeight = 'h-76 xs:h-64 sm:h-48 md:h-64 lg:h-60 xl:h-56 2xl:h-56 3xl:h-44'
+
    export let cardProps = {
       title: 'card title',
 
-      imgPos: "top",
-      width: 'fill',
-
-
       href: '',
       article: false,
-
-      ariaLabel: '',
-
-      compact: false,
-      compactResponsive: false,
 
       hoverFx: 'minimal',
    }
@@ -30,11 +23,15 @@
 </script>
 
 
-<CardBase {...cardProps} class={klass}>
+<CardNew {...cardProps} class={klass}>
 
    <H2 
       slot="title" smallest 
-      class="text-center flex flex-col gap-0 justify-center w-full m-0 p-0 self-center">
+      class="
+         text-center flex flex-col 
+         gap-0 justify-center 
+         w-full 
+         my-0 p-0 mx-auto">
       <span class="text-[18px] uppercase font-normal m-0 p-0">
          <slot name="subtitle">Subtitle</slot><br/>
       </span>
@@ -45,17 +42,23 @@
 
    <Text 
       small 
-      class="h-fit">
+      class="{introHeight}">
       <slot name="intro">
          Intro
       </slot>
    </Text>
-   <List title class="rounded-lg overflow-hidden border-2 border-primary">
+   <List 
+      title 
+      class="
+         rounded-lg border-2 border-primary
+         overflow-hidden
+         mb-4">
       <div 
          slot="title" 
          class="
             text-gray-50 bg-primary 
             py-2 font-body font-normal
+            relative top-0 border-2 border-primary
             w-full text-center
             flex items-center justify-center flex-col
             ">
@@ -75,4 +78,4 @@
    <slot name="btn"/>
    
 
-</CardBase>
+</CardNew>

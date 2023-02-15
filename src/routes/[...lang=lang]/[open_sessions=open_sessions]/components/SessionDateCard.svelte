@@ -2,7 +2,7 @@
 	import LL from "$i18n/i18n-svelte";
 	import { formatDateShort, formatTime, formatYear, titleCase } from "$utils";
 
-	import { CardBase, H4, Tag, Text } from "$comp";
+	import { CardNew, H4, Tag } from "$comp";
 	import Icon from "@iconify/svelte";
 
    export let session:any;
@@ -11,23 +11,14 @@
 	export { klass as class };
 
 	export let cardProps = {
-
-      width: 'full',
-
       href: '',
       article: false,
-
-      ariaLabel: '',
-
-      compact: false,
-      compactResponsive: true,
-      equalHeight: true,
 
       hoverFx: 'minimal',
    }
 
 </script>
-<CardBase
+<CardNew
 	title="{formatDateShort(session.starts_on)} - {formatDateShort(session.ends_on)}"
 	{...cardProps}
 	class="{klass} group"
@@ -54,11 +45,11 @@
 		<Tag 
 			outlined 
 			class="
-				w-full text-lg italic 
+				w-full text-lg italic text-center
 				opacity-60 group-hover:opacity-100 
 				transition-all duration-200 ease-in-out
 				border-gray-700 !text-gray-700">
 			{formatTime(session.starts_on)} - {formatTime(session.ends_on)}
 		</Tag>
 	</div>
-</CardBase>
+</CardNew>
