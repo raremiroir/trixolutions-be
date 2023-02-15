@@ -128,7 +128,10 @@
       </div>
       <!-- Dates -->
       <Reveal lazy>
-         <div class="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 xl:gap-8 w-full">
+         <div class="
+               w-full grid 
+               grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
+               gap-2 md:gap-4 xl:gap-8">
             {#each sessionData as session}
                {#if session.type == "level_1_full"}
                   <SessionDateCard {session} />
