@@ -50,7 +50,7 @@
             <Subtitle color="text-gray-100/50">
                {seoProps.author}
             </Subtitle>
-            <Tag outlined class="float-right text-gray-50/70 border-gray-50/70">
+            <Tag outlined secondary class="float-right !text-gray-50/70 !border-gray-50/70">
                {formatDateMonthFull(blogPost.created_at)} ({formatTime(blogPost.created_at)})
             </Tag>
          </div>
