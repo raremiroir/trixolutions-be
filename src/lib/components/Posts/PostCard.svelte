@@ -15,7 +15,6 @@
 	export let height = 'h-96 sm:h-108 md:h-132 lg:h-140 xl:h-132 2xl:h-132 3xl:h-140'
 	
 	export let imgFit = 'object-cover'
-	export let compact = false;
 
 	// Create correct slug
 	$: link = `/${$locale}/${slug}`;
@@ -30,7 +29,6 @@
 		href: link,
 		article: false,
 		ariaLabel: title,
-		compact: compact,
 
       hoverFx: 'full',
 
