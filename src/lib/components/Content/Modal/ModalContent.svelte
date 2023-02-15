@@ -18,6 +18,7 @@
 	class="
    {width ? width : 'w-fit min-w-[60%] xl:min-w-[40%] max-w-[90%] xl:max-w-[75%]'}
    {height ? height : 'h-fit max-h-[80%]'} 
+   cursor-default
    overflow-y-auto overflow-x-hidden
    mx-auto pb-4 px-4 pt-2
    rounded-2xl shadow-2xl shadow-black/70
