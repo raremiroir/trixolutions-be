@@ -14,7 +14,8 @@
    class="
       w-full md:w-[95%] lg:w-[90%] xl:w-4/5 2xl:w-2/3 mx-auto
       flex flex-col gap-8 
-      pb-16 pt-8 px-4 md:px-0
+      pb-16 pt-8 
+      px-1 xs:px-2 sm:px-4 md:px-0
       {klass}
    ">    
       <!-- Section Title -->
