@@ -74,7 +74,7 @@
    <Breadcrumbs currentIcon="mdi:account-school-outline"/>
    <Section name="open-workshops">
       <H1 slot="title">{titleCase($LL.sessions.open_sessions())}</H1>
-      <ul class="m-0 flex flex-col gap-8">
+      <ul class="m-0 flex flex-col gap-4 xs:gap-5 sm:gap-6 lg:gap-8">
          {#each session_types as session, key}
             <SessionTypeCard
                title={session.title}
