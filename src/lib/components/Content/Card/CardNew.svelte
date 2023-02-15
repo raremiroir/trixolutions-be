@@ -18,10 +18,15 @@
 
    // Add link to card if needed
    export let href = '';
+   // Define aria label
+   export let ariaLabel = '';
+   ariaLabel = ariaLabel === '' ? title : ariaLabel;
 
    // Define badges if needed
    export let badge = ''
    export let second_badge = ''
+   // Put badges on top of title
+   export let badgesTop = false;
 
    // Add author (leave blank for no author)
    export let author = {name: '', img: '', date: ''}
@@ -36,8 +41,8 @@
    const hoverMinimal = hoverFx === 'minimal' ? true : false;
    const hoverFull = hoverFx === 'full' ? true : false;
 
-   // Reverse image/body order
-   export let reverse = false;
+   // Set direction of card
+   export let direction = 'col';
 
    // Predefined classes
    const transition = 'transition-all duration-300 ease-in-out'
@@ -55,28 +60,28 @@
 <svelte:component
    {href} fill
    this={wrapComp}
-   wrap ariaLabel={title}
+   wrap {ariaLabel}
    class={klass}>
    <!-- Card Wrap -->
    <div
       class="
-         group relative {transition}
+         group {transition}
          w-full min-w-min {height}
+         { direction === 'row' ? 'flex' : 'relative'} 
          shadow-lg {hoverFull || hoverMinimal ? 'hover:shadow-black/30' : ''}
-         { hoverFull || hoverMinimal ? 'sm:hover:-translate-y-1 lg:hover:-translate-y-2' : '' }
-         { href !== '' ? 'cursor-pointer' : 'cursor-default' }
+         { hoverFull || hoverMinimal ? 'sm:hover:-translate-y-1 lg:hover:-translate-y-2 active:-translate-y-1' : '' }
          !rounded-2xl !overflow-hidden">
       <!-- Image Wrap -->
       {#if img}
          <div
             class="
-               top-0 {transition}
-               w-full flex
-               bg-white
+               {transition}
+               flex bg-white 
                { imgHeight ? imgHeight
-               : `h-1/2 sm:h-[40%] 3xl:h-1/2 ${hoverFull ? 'group-hover:h-3/5 sm:group-hover:h-[50%] 3xl:group-hover:h-[60%]' : ''}`
+               : direction === 'row' ? 'h-full w-1/3'
+               : `w-full h-1/2 sm:h-[40%] 3xl:h-1/2 ${hoverFull ? 'group-hover:h-3/5 sm:group-hover:h-[50%] 3xl:group-hover:h-[60%]' : ''}`
                }
-               z-0">
+               overflow-hidden z-0">
    
             <img
                srcset=" https://trixolutions.imgix.net/{img}?auto=enhance&q=80&fm=webp&w=1024&h=1&fit=clip 1024w,
@@ -88,8 +93,10 @@
                loading="eager"
                alt={alt}
                class="
-                  {transition} {imgFit} rounded-t-2xl
-                  h-full w-full {imgPos ? 'absolute rounded-2xl' : ''} {imgPos}
+                  {transition} {imgFit}
+                  h-full w-full 
+                  { direction === 'row' ? 'rounded-l-2xl' : 'rounded-t-2xl'}
+                  {imgPos && direction !== 'row' ? 'absolute rounded-2xl' : ''} {imgPos}
                   {hoverFull || hoverMinimal ? 'opacity-60 group-hover:opacity-90' : 'opacity-70'}">
          </div>
       {/if}
@@ -98,14 +105,14 @@
       <!-- Body Wrap -->
       <div
          class="
-            absolute {transition}
-            bottom-0
+            {transition}
+            { direction === 'row' ? '' : 'bottom-0 absolute'}
             z-2
             bg-white
-            w-full
-            {img ? `${ bodyHeight ? bodyHeight
-                     : `h-1/2 sm:h-[60%] 3xl:h-1/2 ${hoverFull ? 'group-hover:h-2/5 sm:group-hover:h-[50%] 3xl:group-hover:h-[40%]' : ''}`}`
-            : 'h-full'}
+            {img ? bodyHeight ? bodyHeight
+                  : direction === 'row' ? 'h-full w-2/3'
+                  : `w-full h-1/2 sm:h-[60%] 3xl:h-1/2 ${hoverFull ? 'group-hover:h-2/5 sm:group-hover:h-[50%] 3xl:group-hover:h-[40%]' : ''}`
+            : 'h-full w-full'}
             flex flex-col justify-between
             p-6 {hoverFull ? 'group-hover:py-2 lg:group-hover:py-4' : ''}
             backdrop-blur-lg">
@@ -114,14 +121,22 @@
          <div class="">
    
             <!-- Header Wrap -->
-            <div class="flex flex-row justify-between items-center">
+            <div class="
+                  flex 
+                  { badgesTop ? 'flex-col items-start gap-1 lg:gap-2' : 'flex-row items-center' }
+                  justify-between
+                  ">
                <!-- Title -->
-               <slot name="title"><H3 smaller thin>{@html title}</H3></slot>
+               <div class="{ badgesTop ? 'order-last' : 'order-first' }">
+                  <slot name="title"><H3 smaller thin>{@html title}</H3></slot>
+               </div>
                <!-- End Title -->
    
                <!-- Badges -->
                {#if badge}
-                  <div class="">
+                  <div class="
+                        flex flex-row gap-1
+                        { badgesTop ? 'order-first' : 'order-last' }">
                      <Tag secondary lowercase rounded small>{@html badge}</Tag>
                      {#if second_badge}
                         <Tag outlined lowercase rounded small>{@html second_badge}</Tag>

@@ -11,7 +11,7 @@
    export { klass as class };
 
    // Is the button a link ?
-   export let href:string = '';
+   export let href = '';
    // Define button type
    export let type = 'button'
    // Define tabindex

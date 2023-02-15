@@ -34,7 +34,7 @@
          <Image 
             alt={imgAlt} eager
             src={imgSrc}
-            class="!opacity-50 !blur-sm w-full { large ? 'h-148' : 'h-100'}"
+            imgClass="!opacity-50 !blur-sm w-full { large ? 'h-148' : 'h-100'}"
          />
       {/if}
       <!-- Image Overlay -->

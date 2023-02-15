@@ -27,7 +27,7 @@
       size: "text-base py-3 px-6 rounded-lg",
       class: 'whitespace-nowrap', 
       flat: true,
-      lowercase: true,
+      capitalize: true,
       block: true,
       alignStart: true
    }
@@ -37,7 +37,7 @@
       color: 'ghost',
       size: `text-lg py-3 rounded-xl ${ mobile ? 'px-6' : 'px-3 xl:px-6' }`,
       flat: true, 
-      lowercase: true,
+      capitalize: true,
       square: mobile,
       block: mobile,
    }
