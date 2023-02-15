@@ -1,14 +1,13 @@
 <script lang="ts">
    import { fade } from 'svelte/transition';
-   import { breakpoints } from '$src/lib/constants/breakpoints';
    
    import { SplideSlide } from '@splidejs/svelte-splide';
-	import { CardBase, Modal, Image, Text, Title } from '$comp';
-	import { currentModal } from '$src/lib/stores';
+	import { CardNew, Modal, Text, Title } from '$comp';
 
 
    export let title:string;
    export let imgSrc:string;
+   export let imgAlt:string;
    export let modalId:number;
 
    let hovered = false;
@@ -20,33 +19,24 @@
       title: title,
       img: imgSrc,
 
-      imgPos: "top",
-      imgAlign: 'top',
-      imgContain: true,
-      width: 'full',
-      height: 'fit',
+      alt: imgAlt,
+
+      imgFit: 'object-contain',
+      height: 'h-64',
 
       article: false,
 
-      ariaLabel: title,
-
-      author: {name: '', img:'', date: '' },
-
-      compact: true,
-      compactResponsive: false,
-      equalHeight: false,
-
-      hoverFx: 'onlyHover',
+      hoverFx: 'minimal',
    }
 
 
 </script>
 
 <SplideSlide 
-   class="bg-transparent w-full h-fit {klass}">
+   class="bg-transparent w-full h-fit {klass} pt-2 pb-6">
 
       <Modal trigger id={modalId}>
-         <CardBase {...cardProps} slot="trigger" class="!cursor-pointer">
+         <CardNew {...cardProps} slot="trigger" class="!cursor-pointer">
             <li slot="title">
                <Title type="subtitle" smaller italic>
                   <slot name="subtitle">Subtitle</slot>
@@ -60,7 +50,7 @@
                   <Text small><slot/></Text>
                </div>
             {/if}
-         </CardBase>
+         </CardNew>
       </Modal>
       
 </SplideSlide>
