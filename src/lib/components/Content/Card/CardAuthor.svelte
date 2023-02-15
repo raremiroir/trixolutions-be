@@ -6,11 +6,11 @@
 
 </script>
 
-<div class="flex flex-col gap-0">
+<div class="flex flex-row items-center gap-1 sm:gap-2">
    <Image 
       alt={author.name}
       src={author.img} 
-      class="h-8 w-8 2xl:h-10 2xl:w-10 rounded-full"/>
+      imgClass="h-8 w-8 2xl:h-10 2xl:w-10 rounded-full"/>
    <div class="flex flex-col gap-0">
       <div class="text-xs 2xl:text-sm font-semibold text-gray-800">{author.name}</div>
       <span class="text-xs 2xl:text-sm text-gray-500 italic">{author.date}</span>
