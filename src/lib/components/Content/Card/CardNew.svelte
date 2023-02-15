@@ -121,7 +121,7 @@
             : 'h-full w-full' }
             { hoverFull ? 'group-hover:h-2/5 group-hover:py-2 lg:group-hover:py-4' : '' }
             flex flex-col justify-between
-            p-2 xs:p-4 sm:p-4 md:p-6 
+            py-2 px-1 xs:p-2 sm:p-4 md:p-6 
             backdrop-blur-lg">
    
          <!-- Content Wrap -->
