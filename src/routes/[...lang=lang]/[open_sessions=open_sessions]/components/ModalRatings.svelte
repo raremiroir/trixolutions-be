@@ -1,10 +1,12 @@
 <script lang="ts">
-   import { Modal, Button, RatingCard, Image, H3 } from "$comp";
+   import { Modal, Button, RatingCard, Lightbox, H3 } from "$comp";
    import { titleCase } from "$utils";
    import LL from "$i18n/i18n-svelte";
 
    export let ratingData:any;
-   export let ratingImages:any = 8;
+   export let ratingImages:any;
+
+   console.log(ratingImages);
 </script>
 
 <Modal icon="mdi:star">
@@ -24,24 +26,18 @@
       {/each}
    </div>
    <hr class="border-2 border-primary/30 my-4"/>
-   <div class="columns-2 md:columns-3">
-      {#each Array(ratingImages) as img}
-         <div class="
-               overflow-hidden group mb-[5%] rounded-xl 
-               transition-all duration-300 ease-out
-               shadow-lg shadow-black/30 
-               hover:shadow-black/50
-               h-auto w-full
-               hover:-translate-y-0.5
-               cursor-zoom-in
-               ">
-            <Image 
-               alt="No alt"
-               src="" 
-               mode="cover" position="top" 
-               ratio="3:2"
-               intrinsic="600x400"/>
-         </div>
+   <div class="flex flex-wrap gap-4 justify-center">
+      {#each ratingImages as img}
+         <Lightbox
+            alt="{img.name}"
+            src="{img.folder}/{img.name}.{img.type}"
+            imgWrapClass="
+               rounded-xl
+               shadow-lg hover:shadow-black/30
+               hover:-translate-y-0.5"
+            imgClass="
+               w-auto h-48"
+            />
       {/each}
    </div>
 </Modal>
