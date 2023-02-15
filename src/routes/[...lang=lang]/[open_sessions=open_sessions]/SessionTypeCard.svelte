@@ -33,7 +33,7 @@
       direction: 'row',
 
       hoverFx: 'minimal',
-      height: 'h-64 sm:h-60 md:h-64 lg:h-72 xl:h-72 2xl:h-80 3xl:h-96'
+      height: 'h-104 xs:h-116 sm:h-60 md:h-64 lg:h-72 xl:h-72 2xl:h-80 3xl:h-96'
    }
 </script>
 
