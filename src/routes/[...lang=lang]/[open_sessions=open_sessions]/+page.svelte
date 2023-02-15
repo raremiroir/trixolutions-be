@@ -82,7 +82,6 @@
                second_badge={session.second_badge}
                href={session.link}
                img={session.img}
-               imgPos={key === 1 ? 'resp-r' : 'resp-l'}
                btn={{title: 'Meer Info', href: session.link, ariaLabel: $LL.base.btn.more_info()}}
             >
                {@html session.text}

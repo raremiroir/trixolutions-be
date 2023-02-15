@@ -11,7 +11,7 @@
    import { 
       Main, Section, Breadcrumbs, 
       Text, Button, H2, H3, Tag,
-      Hero, Modal, CardBase,
+      Hero, Modal, CardNew,
 	   SEO, Reveal, Form
    } from "$comp";
    
@@ -20,7 +20,7 @@
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
    // Import utils
-   import { formatDateMonthFull, formatTime, formatUrl, titleCase} from "$utils";
+   import { formatDateMonthFull, formatTime, titleCase} from "$utils";
 	
 
    // Import data
@@ -87,14 +87,16 @@
       <H2 slot="title">
          <Reveal>{titleCase($LL.sessions.practical())}</Reveal>
       </H2>
-         <div class="grid grid-cols-2 gap-8">
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             {#each sessions as session}
                <Reveal>
-                  <CardBase
-                     width="full" hoverFx="minimal"
+                  <CardNew
+                     hoverFx="minimal"
                      ariaLabel="{$LL.sessions.info.title_single()} - {formatDateMonthFull(session.starts_on)}"
                      title={titleCase($LL.sessions.info.title_single())}
-                     badge="{formatDateMonthFull(session.starts_on)}" badgesTop>
+                     badge="{formatDateMonthFull(session.starts_on)}" badgesTop
+                     height="h-[148px] sm:h-40  md:h-[164px]">
+                     <H3 smaller thin slot="title" class="sm:whitespace-nowrap">{titleCase($LL.sessions.info.title_single())}</H3>
                      <div class="flex flex-row justify-between w-full">
                         <Tag outlined>
                            <span class="text-xs italic">{titleCase($LL.sessions.info.trainer())}:</span><br/>
@@ -105,7 +107,7 @@
                            {formatTime(session.starts_on)} - {formatTime(session.ends_on)}
                         </Tag>
                      </div>
-                  </CardBase>
+                  </CardNew>
                </Reveal>
             {/each}
          </div>
