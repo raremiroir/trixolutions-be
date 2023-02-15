@@ -14,17 +14,20 @@
    export let indent = false;
    // Disable?
    export let disabled = false;
+
+   // Alt bg?
+   export let alt = false;
 </script>
 
 <li class="
       w-full
-      {icon ? 'flex flex-row items-center justify-start' : ''}
-      gap-2
+      flex flex-row items-center justify-start gap-4 sm:gap-6
       {icon ? 'list-none' : 'list-disc' }
-      {indent ? 'ml-8 pl-1' : 'px-1 ml-4 py-1'}
+      {indent ? 'pl-8' : 'pl-1 xs:pl-2 sm:pl-4 py-1'}
       font-body leading-relaxed font-normal tracking-tight
       { small ? 'text-base' : 'text-lg' }
       text-gray-700 
+      { alt ? 'bg-gray-50' : 'bg-white'}
       {klass}">
 
    {#if icon}
