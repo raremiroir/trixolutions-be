@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Modal, Image, Text, Title, Lightbox } from "$comp";
+	import { Modal, Text, Title, Lightbox } from "$comp";
 
    export let id:number;
    export let imgSrc:string;
