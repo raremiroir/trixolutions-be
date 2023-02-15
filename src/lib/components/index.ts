@@ -29,6 +29,7 @@
    export { default as Subtitle }      from './Core/Title/Subtitle.svelte'
 
    export { default as Image }         from './Base/Media/Image.svelte'
+   export { default as Lightbox }      from './Base/Media/Lightbox.svelte'
    export { default as Video }         from './Base/Media/Video.svelte'
    export { default as Logo }          from './Base/Media/Logo.svelte'
    export { default as Map }           from './Base/Media/Map.svelte'
