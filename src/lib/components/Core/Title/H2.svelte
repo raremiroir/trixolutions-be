@@ -1,17 +1,3 @@
-<!-- 
-██   ██ ██████  
-██   ██      ██ 
-███████  █████  
-██   ██ ██      
-██   ██ ███████ 
--->
-
-<!--
-▄▄▄ ▄▄▄ 
- █  █▄
- █   ▀█
- ▀  ▀▀▀
--->
 <script lang="ts">
    // Define extra classes 
    let klass = '';
@@ -37,12 +23,6 @@
    export let thin = false;
 </script>
 
-<!--
-▄  ▄ ▄▄▄ ▄▄   ▄▄ ▄
-█▄▄█  █  █ █ █ █ █
-█▀▀█  █  █ █ █ █ █
-▀  ▀  ▀  ▀  ▀  ▀ ▀▀▀
--->
 <h2 class="
       font-title
       { color ? color : 'text-primary' } 
