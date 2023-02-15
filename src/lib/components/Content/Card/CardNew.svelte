@@ -19,8 +19,7 @@
    // Add link to card if needed
    export let href = '';
    // Define aria label
-   export let ariaLabel = '';
-   ariaLabel = ariaLabel === '' ? title : ariaLabel;
+   export let ariaLabel = title;
 
    // Define badges if needed
    export let badge = ''
