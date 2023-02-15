@@ -23,9 +23,8 @@
       <div class="col-span-1">
          <Image 
             alt="Tom van Dorst - Trixolutions CEO / Trainer / Coach"
-            src="team/tom-bw.webp" 
-            mode="cover" position="top" 
-            ratio="auto" class="w-full max-w-lg h-auto"/>
+            src="team/tom-bw.webp"  
+            class="w-full max-w-lg h-auto"/>
          </div>
       </div>
 </Modal>
