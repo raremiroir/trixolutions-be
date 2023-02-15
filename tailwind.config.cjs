@@ -12,12 +12,13 @@ const config = {
   theme: {
       // Define breakpoints (min-width)
       screens: {
-         'sm':  '640px',
+         'xs':  '320px',
+         'sm':  '480px',
          'md':  '768px',
-         'lg':  '1024px',
-         'xl':  '1280px',
-         '2xl': '1536px',
-         '3xl': '2100px',
+         'lg':  '992px',
+         'xl':  '1200px',
+         '2xl': '1440px',
+         '3xl': '1920px',
        },
       // Change Font Sizes
       fontSize: {
