@@ -38,6 +38,19 @@ export const load: PageLoad = async ({ params }) => {
       };
    }
 
+   const getRatingImages = async () => {
+      const {data, error} = await supabase
+         .from('images')
+         .select(`*`)
+         .eq('folder', 'recensies');
+
+      if (error) {
+         throw new Error(error.message)
+      } else if (data) {
+         return data;
+      };
+   }
+
    if (  params.hybrid_track === 'hybride-lencioni-leertraject'   && params.open_sessions === 'open-sessies'      && params.lang === 'nl'
       || params.hybrid_track === 'hybrid-lencioni-learning-track' && params.open_sessions === 'open-sessions'     && params.lang === 'en'
       || params.hybrid_track === 'traject-hybride-lencioni'       && params.open_sessions === 'sessions-ouvertes' && params.lang === 'fr') {
@@ -46,6 +59,7 @@ export const load: PageLoad = async ({ params }) => {
             sessionTypes: getSessionTypes(),
             sessionData: getSessionData(),
             ratingData: getRatingData(),
+            ratingImgData: getRatingImages(),
          }
    }
 

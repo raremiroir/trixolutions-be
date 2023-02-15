@@ -42,6 +42,7 @@
    let pageData = Object(data.sessionTypes);
    let sessionData = Object(data.sessionData);
    let ratingData = Object(data.ratingData);
+   let ratingImages = Object(data.ratingImgData);
 
    let sessionDates:any = [];
    sessionData.forEach((item:any) => {
@@ -167,7 +168,7 @@
                </List>
             </ModalApproach>
             <!-- Ratings -->
-            <ModalRatings {ratingData}/>
+            <ModalRatings {ratingData} {ratingImages}/>
          </div>
       </Reveal>
    </Section>
