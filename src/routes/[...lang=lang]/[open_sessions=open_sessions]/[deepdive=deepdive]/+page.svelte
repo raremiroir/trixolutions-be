@@ -88,37 +88,37 @@
       </Reveal>
       <!-- Links -->
       <Reveal left>
-         <List>
+         <List class="prose-li:bg-transparent">
             <ListItem>
                <Link 
-                  linkStyle='underlineOnHover' ariaLabel={$LL.pages.main.coaching_leadership.ideal_teamplayer.title()}
-                  href="/{$locale}/{$LL.pages.main.coaching_leadership.slug()}/{formatUrl($LL.pages.main.coaching_leadership.ideal_teamplayer.title())}"
+                  linkStyle='underlineOnHover' ariaLabel={$LL.nav.explore.training_leadership_teamcoaching.items.ideal_teamplayer.title()}
+                  href="/{$locale}/{$LL.nav.explore.training_leadership_teamcoaching.items.ideal_teamplayer.slug()}"
                >
-                  {titleCase($LL.pages.main.coaching_leadership.ideal_teamplayer.title())}
+                  {titleCase($LL.nav.explore.training_leadership_teamcoaching.items.ideal_teamplayer.title())}
                </Link>
             </ListItem>
             <ListItem>
                <Link 
-                  linkStyle='underlineOnHover' ariaLabel={$LL.pages.main.coaching_leadership.working_genius.title()}
-                  href="/{$locale}/{$LL.pages.main.coaching_leadership.slug()}/{formatUrl($LL.pages.main.coaching_leadership.working_genius.title())}"
+                  linkStyle='underlineOnHover' ariaLabel={$LL.nav.explore.training_leadership_teamcoaching.items.working_genius.title()}
+                  href="/{$locale}/{$LL.nav.explore.training_leadership_teamcoaching.items.working_genius.slug()}"
                >
-                  {titleCase($LL.pages.main.coaching_leadership.working_genius.title())}
+                  {titleCase($LL.nav.explore.training_leadership_teamcoaching.items.working_genius.title())}
                </Link>
             </ListItem>
             <ListItem>
                <Link 
-                  linkStyle='underlineOnHover' ariaLabel={$LL.pages.main.coaching_leadership.decisive_lead.title()}
-                  href="/{$locale}/{$LL.pages.main.coaching_leadership.slug()}/{formatUrl($LL.pages.main.coaching_leadership.decisive_lead.title())}"
+                  linkStyle='underlineOnHover' ariaLabel={$LL.nav.explore.training_leadership_teamcoaching.items.decisive_lead.title()}
+                  href="/{$locale}/{$LL.nav.explore.training_leadership_teamcoaching.items.decisive_lead.slug()}"
                >
-                  {titleCase($LL.pages.main.coaching_leadership.decisive_lead.title())}
+                  {titleCase($LL.nav.explore.training_leadership_teamcoaching.items.decisive_lead.title())}
                </Link>
             </ListItem>
             <ListItem>
                <Link 
-                  linkStyle='underlineOnHover' ariaLabel={$LL.pages.main.coaching_leadership.meetings_deadly.title()}
-                  href="/{$locale}/{$LL.pages.main.coaching_leadership.slug()}/{formatUrl($LL.pages.main.coaching_leadership.meetings_deadly.title())}"
+                  linkStyle='underlineOnHover' ariaLabel={$LL.nav.explore.training_leadership_teamcoaching.items.meetings_deadly.title()}
+                  href="/{$locale}/{$LL.nav.explore.training_leadership_teamcoaching.items.meetings_deadly.slug()}"
                >
-                  {titleCase($LL.pages.main.coaching_leadership.meetings_deadly.title())}
+                  {titleCase($LL.nav.explore.training_leadership_teamcoaching.items.meetings_deadly.title())}
                </Link>
             </ListItem>
          </List>
@@ -195,8 +195,8 @@
          {#each pageData as session}
             {#if session.type === 'level_2'}
                <Reveal>
-                  <PricingCard
-                     introWidth="h-fit" 
+                  <PricingCard 
+                     introHeight='h-40 xs:h-36 sm:h-28 md:h-18 2xl:h-16' 
                      price={session.price}>
                      <span slot="subtitle">{$LL.sessions.level_2.advanced_coaching()}</span>
                      <span slot="title">
@@ -211,7 +211,7 @@
                      <span slot="sub">{$LL.sessions.vat_not_included()}</span>
                      <List slot="features" class="w-4/5">
                         {#each Object.entries($LL.sessions.level_2.features) as [key, feature]}
-                           <ListItem icon="check" small>{feature()}</ListItem>
+                           <ListItem icon="check" class="even:bg-gray-200/40" small>{feature()}</ListItem>
                         {/each}
                      </List>
                
@@ -224,7 +224,7 @@
                            icon="mdi:pen-plus"
                            iconClass="h-5 w-5 mr-2 text-gray-50 group-hover:text-white">
                            <div class="flex flex-col">
-                              <span class="font-normal text-sm md:text-base xl:text-lg">{$LL.sessions.subscribe_to()} {$LL.sessions.level_2.deepdive()}</span><br/>
+                              <span class="font-normal text-sm md:text-base xl:text-lg">{$LL.sessions.subscribe_to()} {$LL.sessions.level_2.deepdive()}</span>
                               <span>{$LL.sessions.level_2.advanced_coaching()}</span>
                            </div>
                         </Button>
