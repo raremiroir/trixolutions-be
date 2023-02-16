@@ -112,7 +112,7 @@
       
       active:brightness-75
 
-      flex flex-row items-center 
+      flex flex-row items-center relative
       { alignStart ? 'justify-start text-start' : 'justify-center text-center' } 
       { icon ? 'gap-1' : '' }
 
@@ -135,7 +135,7 @@
       { glass    ? 'dui-btn-glass'    : '' }
       { wide     ? 'dui-btn-wide'   : '' }
       { block    ? '!w-full'   : 'w-fit' }
-      { square   ? 'dui-btn-square'   : '' }
+      { square   ? 'aspect-square'   : '' }
       { circle   ? 'dui-btn-circle'   : '' }
       { active   ? 'dui-btn-active'   : '' }
       { loading  ? 'dui-loading'   : '' }
@@ -201,7 +201,7 @@
    {#if !noText}
    
       {#if icon !== '' && !iconEnd}
-         <Icon {icon} class="h-auto {iconClass}" />
+         <Icon {icon} class="h-auto { square || circle ? 'absolute' : '' } {iconClass}" />
       {/if}
 
       <slot/>
