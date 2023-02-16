@@ -1,7 +1,3 @@
-import fetch from 'node-fetch'
-import { fail } from '@sveltejs/kit'
-
-
 import { SECRET_MAILGUN_API_KEY } from '$env/static/private'
 import { SECRET_MAILGUN_DOMAIN } from '$env/static/private'
 import { SECRET_MAILGUN_BASE_URL } from '$env/static/private'
