@@ -10,7 +10,7 @@
 <Reveal>
    <div class="w-full flex flex-row items-center justify-center h-fit pt-2 pb-16 divide-x-4 divide-primary/30 divide-dashed">
       <div class="w-1/2 flex items-center justify-center">
-         <Modal width="min-w-fit max-w-[80%] xl:max-w-[40%]">
+         <Modal width="min-w-[40%] max-w-[80%] xl:max-w-[40%]">
             <Button ariaLabel="{titleCase($LL.pages.contact.btn.contact_us())}" slot="trigger" size="xl" block>
                <div class="flex items-center justify-center gap-2">
                   <Icon icon="mdi:email-fast-outline" class="text-gray-50 h-6 w-6" />
