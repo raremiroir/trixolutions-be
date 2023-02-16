@@ -16,8 +16,6 @@
    export let imgClass = '';
    export let imgWrapClass = '';
 
-   export let id = '';
-
    // let klass = '';
    // export { klass as class };
 
