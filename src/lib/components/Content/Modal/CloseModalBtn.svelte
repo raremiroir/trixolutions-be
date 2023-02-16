@@ -12,16 +12,10 @@
    on:click={onClick}
    on:keydown={onClick}   
    class="h-8 w-8">
-   <Tooltip
-      color="error"
-      flyX={20} flyY={0}
-      placement='bottom-1 right-9 '
-      title={firstLetterCase($LL.base.btn.close())}>
-
       <Button
+         title={firstLetterCase($LL.base.btn.close())}
          ariaLabel="Close"
          color="error"
          size="sm" square
          icon="material-symbols:close-rounded" />
-   </Tooltip>
 </div>
