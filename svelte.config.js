@@ -21,6 +21,7 @@ const config = {
          $i18n: 'src/i18n',
          $utils: 'src/lib/utils',
          $stores: 'src/lib/stores',
+         $route: 'src/routes',
       },
       // csp: { mode: 'auto' }
 	}
