@@ -43,20 +43,17 @@ export const load: PageLoad = async ({ parent, params }) => {
       return pagesData;
    }
 
-   // // Set param if no param set -- not needed 
-   // if (!isLocale(params.lang)) {
-   //    params.lang = 'nl'
-   // }
-
    // Load data if lang param is a locale
-   if (isLocale(params.lang)) {
+   console.log('page param: ', params.lang);
+   if (params.lang === 'nl' || params.lang === 'fr' || params.lang === 'en') {
       loadI18nLib()
       return {
          categories: getCategoryData(),
          pages: getPagesData()
       }
-   } 
+   } else {
+      throw error (404, 'Not found');
+   }
 
-   throw error (404, 'Not found');
 
 }
