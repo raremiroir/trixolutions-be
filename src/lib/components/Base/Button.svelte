@@ -18,6 +18,8 @@
    export let tabindex = -1;
    // Define aria-label
    export let ariaLabel:string;
+
+   export let title = '';
    
    // Define size:
    export let size = 'md'
@@ -98,6 +100,7 @@
 
 
 <svelte:component
+   {title}
    this={btnCompType}
 
    {type} wrap
