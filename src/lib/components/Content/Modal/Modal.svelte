@@ -10,13 +10,10 @@
  -->
 
 <script lang="ts">
-	import LL from '$i18n/i18n-svelte'
    import { fade } from "svelte/transition";
-   import { clickOutside } from "$lib/actions";
    
    import { currentModal } from '$src/lib/stores';
 	import ModalContent from './ModalContent.svelte';
-	import { page } from '$app/stores';
 
    export let id:number = 0;
    export let icon = '';
