@@ -20,8 +20,6 @@
    let klass = '';
    export { klass as class }
 
-   let dropDownWrapComp = mobile ? Div : Link;
-
    $: dropdownBtnProps = {
       color: 'ghost',
       size: "text-base py-3 px-6 rounded-lg",
@@ -39,7 +37,7 @@
       flat: true, 
       capitalize: true,
       square: mobile,
-      block: mobile,
+      block: true,
    }
 </script>
 
@@ -49,19 +47,16 @@
       {klass}">
    {#if dropdown}
       <Menu hoverState={!mobile} position="{mobile ? 'center' : 'left'}">
-         <svelte:component 
-            this={dropDownWrapComp}
-            href={link} ariaLabel="{name}" 
-            slot="trigger" class="{mobile ? 'w-full' : 'w-fit'}">
-
-            <Button ariaLabel={name} {...btnProps}>
-               <div class="flex flex-row items-center justify-center {mobile ? 'gap-2 w-full' : 'gap-1 w-fit'}">
-                  {titleCase(name)}
-                  <Icon icon="mdi:chevron-down" class="{mobile ? 'w-4 h-4' : 'w-5 h-5'}" />
-               </div>
-            </Button>
-
-         </svelte:component>
+         <Button 
+            slot="trigger"
+            href={mobile ? '' : link}
+            ariaLabel={name} 
+            {...btnProps}>
+            <div class="flex flex-row items-center justify-center {mobile ? 'gap-2 w-full' : 'gap-1 w-fit'}">
+               {titleCase(name)}
+               <Icon icon="mdi:chevron-down" class="{mobile ? 'w-4 h-4' : 'w-5 h-5'}" />
+            </div>
+         </Button>
          <ul class="flex flex-col gap-1 py-2">
             <slot/> 
          </ul>      
