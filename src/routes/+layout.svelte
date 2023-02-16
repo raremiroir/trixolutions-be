@@ -6,9 +6,6 @@
 	// Import Styles
 	import "$src/style/normalize.css"
 	import "$src/app.postcss";
-
-	// Load svelte items
-	import { onMount } from 'svelte';
 	
 	// Import i18n
 	import LL, { locale, setLocale } from '$i18n/i18n-svelte'
@@ -30,14 +27,6 @@
          setLocale(locale)
       }
    $: displayPagesText($locale);
-
-	
-	// Page Loading Spinner
-	let hasPageLoaded = false;
-	onMount(() => {
-		hasPageLoaded = true;
-		console.log('page loaded');
-	})
 </script>
 
 <svelte:head>
@@ -49,10 +38,8 @@
 <div class="
 		flex flex-col min-h-screen bg-gray-50
 		relative ">
-	<div class="content overflow-y-auto box-border w-full">
-		{#if !hasPageLoaded}
-			<Loader />
-		{/if}
+	<div class="content overflow-y-auto box-border w-full">	
+		<Loader />
 		<slot />
 	</div>
 </div>
