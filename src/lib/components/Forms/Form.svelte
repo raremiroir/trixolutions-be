@@ -9,13 +9,12 @@
    import { createForm } from "svelte-forms-lib";
    import * as yup from 'yup';
    // Import i18n
-   import LL from "$i18n/i18n-svelte";
+   import LL, { locale } from "$i18n/i18n-svelte";
    // Import db
    import supabase from "$lib/db";
    // Import utils
 	import { firstLetterCase, titleCase } from "$lib/utils";
 	import { fade } from "svelte/transition";
-
 
    // Define form type (contact | session_sub)
    export let formType = 'session_sub'
@@ -89,6 +88,7 @@
       }
 
    let validationSchema:any;
+
    // Create initial validation schema
    $: if (formType === 'session_sub' && sessionType !== 'level_1_basic') {
       validationSchema = yup.object().shape({ 
@@ -125,10 +125,34 @@
    // Add variable which stores whether a msg has been sent or not
    let messageSent = false
 
+
+   // Function to send message
+   const sendMessage = async({ subject = '', message = '' }) => {
+      // console.log(subject, message);
+
+      const bodyData = JSON.stringify({ subject, message });
+
+      await fetch (`/${$locale}/api/sendEmail`, {
+         method: 'POST',
+         body: bodyData,
+         headers: {
+            'Content-Type': 'application/json',
+         }
+      }).then((res) => {
+         console.log(res);
+         messageSent = true;
+      })
+      .catch((err) => {
+         console.error(err);
+         messageSent = false;
+      })
+   }
+
    // Function to insert values to db (depending on formType)
    const insertValues = async() => {
       if (formType === 'session_sub') {
-         const { data, error } = await supabase
+
+         let { data, error } = await supabase
             .from('session_subscriptions')
             .insert([{
                session: pickedSession,
@@ -140,10 +164,13 @@
                subject: $form.subject,
                message: $form.message,
             }])
-         if (error) throw new Error(error.message);
+         if (error) throw new Error (error.message);
+
          messageSent = true;
          return data;
+
       } else if (formType === 'contact') {
+
          const { data, error } = await supabase
             .from('contact_form_messages')
             .insert([{
@@ -155,6 +182,7 @@
                message: $form.message,
             }])
          if (error) throw new Error(error.message);
+
          messageSent = true;
          return data;
       }
@@ -175,7 +203,12 @@
          else if (sessionType === 'level_2') { pickedSession = `lvl2_${$form.session_picked}` }
          else { pickedSession = '' }
          // alert(JSON.stringify(values));
+         // sendMessage(`${$form.first_name} ${$form.last_name}`, $form.email, $form.subject, $form.message);
+
+         const data = { subject: $form.subject, message: $form.message };
          insertValues()
+         sendMessage(data);
+
       }
    })
 
@@ -275,110 +308,114 @@
 </script>
 
 
+{#if messageSent}
+   <div class="w-full" transition:fade={{duration: 200}}>
+      <MessageSentAlert resetForm={() => resetForm()} />
+   </div>
+{:else}
+   <form 
+      transition:fade={{duration: 200}}
+      on:submit|preventDefault={handleSubmit}
+      class="flex flex-col gap-2 overflow-y-hidden">
 
-<form 
-   on:submit={handleSubmit}
-   class="flex flex-col gap-2 overflow-y-hidden">
+         <RowWrap>
+            <FormInput 
+               name="first_name"
+               label="{titleCase($LL.base.form.first_name())}"
+               on:change={handleChange}
+               bind:value={$form.first_name}
+               bind:errors={$errors.first_name}
+               required/>
+         
+            <FormInput 
+               name="last_name"
+               label="{titleCase($LL.base.form.last_name())}"
+               on:change={handleChange}
+               bind:value={$form.last_name}
+               bind:errors={$errors.last_name}
+               required/>
+         </RowWrap>
 
-      <RowWrap>
-         <FormInput 
-            name="first_name"
-            label="{titleCase($LL.base.form.first_name())}"
-            on:change={handleChange}
-            bind:value={$form.first_name}
-            bind:errors={$errors.first_name}
-            required/>
+         <RowWrap>
+            <FormInput 
+               name="email"
+               label="{titleCase($LL.base.form.email())}"
+               type="email"
+               on:change={handleChange}
+               bind:value={$form.email}
+               bind:errors={$errors.email}
+               required/>
+         </RowWrap>
+
+         {#if formType === 'session_sub'}
+            <RowWrap>
+               <FormInput 
+                  name="phone_number"
+                  label="{titleCase($LL.base.form.telephone())}"
+                  on:change={handleChange}
+                  bind:value={$form.phone_number}
+                  bind:errors={$errors.phone_number}/>
+            </RowWrap>
+         {/if}
+
+         <RowWrap>
+            <FormInput 
+               name="company"
+               label="{titleCase($LL.base.form.company())}"
+               on:change={handleChange}
+               bind:value={$form.company}
+               bind:errors={$errors.company}
+               required={ formType === 'session_sub' }/>
+         </RowWrap>
+
+         {#if formType === 'session_sub' && sessionType !== 'level_1_basic' }
+            <RowWrap>
+               <FormInput 
+                  select
+                  name="session_picked"
+                  label="{titleCase($LL.base.form.pick_session({ session: sessionType === 'info_session' ? $LL.sessions.info.single() : $LL.sessions.workshop()}))}"
+                  on:change={handleChange}
+                  bind:value={$form.session_picked}
+                  bind:errors={$errors.session_picked}
+                  required>
+                  {#each sessionDates as session}
+                     <option value={session}>{session}</option>
+                  {/each}
+               </FormInput>
+            </RowWrap>
+         {/if}
+
+         <RowWrap>
+            <FormInput 
+               name="subject" 
+               automatic={ formType === 'session_sub' } 
+               noClear={ formType === 'session_sub' }
+               label="{titleCase($LL.base.form.subject())}"
+               on:change={handleChange}
+               value={$form.subject}
+               bind:errors={$errors.subject}
+               required/>
+         </RowWrap>
       
-         <FormInput 
-            name="last_name"
-            label="{titleCase($LL.base.form.last_name())}"
-            on:change={handleChange}
-            bind:value={$form.last_name}
-            bind:errors={$errors.last_name}
-            required/>
-      </RowWrap>
-
-      <RowWrap>
-         <FormInput 
-            name="email"
-            label="{titleCase($LL.base.form.email())}"
-            type="email"
-            on:change={handleChange}
-            bind:value={$form.email}
-            bind:errors={$errors.email}
-            required/>
-      </RowWrap>
-
-      {#if formType === 'session_sub'}
          <RowWrap>
             <FormInput 
-               name="phone_number"
-               label="{titleCase($LL.base.form.telephone())}"
+               textarea 
+               automatic={ formType === 'session_sub' } 
+               noClear={ formType === 'session_sub' }
+               noResize
+               name="message"
+               rows={6}
+               label="{titleCase($LL.base.form.message())}"
                on:change={handleChange}
-               bind:value={$form.phone_number}
-               bind:errors={$errors.phone_number}/>
+               value={$form.message}
+               bind:errors={$errors.message}
+               required/>
          </RowWrap>
-      {/if}
 
-      <RowWrap>
-         <FormInput 
-            name="company"
-            label="{titleCase($LL.base.form.company())}"
-            on:change={handleChange}
-            bind:value={$form.company}
-            bind:errors={$errors.company}
-            required={ formType === 'session_sub' }/>
-      </RowWrap>
+         <!-- <Captcha/> -->
 
-      {#if formType === 'session_sub' && sessionType !== 'level_1_basic' }
-         <RowWrap>
-            <FormInput 
-               select
-               name="session_picked"
-               label="{titleCase($LL.base.form.pick_session({ session: sessionType === 'info_session' ? $LL.sessions.info.single() : $LL.sessions.workshop()}))}"
-               on:change={handleChange}
-               bind:value={$form.session_picked}
-               bind:errors={$errors.session_picked}
-               required>
-               {#each sessionDates as session}
-                  <option value={session}>{session}</option>
-               {/each}
-            </FormInput>
-         </RowWrap>
-      {/if}
-
-      <RowWrap>
-         <FormInput 
-            name="subject" 
-            automatic={ formType === 'session_sub' } 
-            noClear={ formType === 'session_sub' }
-            label="{titleCase($LL.base.form.subject())}"
-            on:change={handleChange}
-            value={$form.subject}
-            bind:errors={$errors.subject}
-            required/>
-      </RowWrap>
-   
-      <RowWrap>
-         <FormInput 
-            textarea 
-            automatic={ formType === 'session_sub' } 
-            noClear={ formType === 'session_sub' }
-            noResize
-            name="message"
-            rows={6}
-            label="{titleCase($LL.base.form.message())}"
-            on:change={handleChange}
-            value={$form.message}
-            bind:errors={$errors.message}
-            required/>
-      </RowWrap>
-
-      <!-- <Captcha/> -->
-
-   <div class="flex flex-row w-full justify-between items-center mt-4">
-      <!-- Submit Button -->
-      <div class="w-1/2 h-fit">
+      <div class="flex flex-row w-full justify-between items-center mt-4">
+         <!-- Submit Button -->
          <Tooltip 
             title={!$isValid || anyEmpty
                      ? $LL.base.form.content.fill_out_all() 
@@ -397,10 +434,5 @@
             </Button>
          </Tooltip>
       </div>
-      {#if messageSent}
-         <div class="w-full" transition:fade={{duration: 200}}>
-            <MessageSentAlert resetForm={() => resetForm()} />
-         </div>
-      {/if}
-   </div>
-</form>
+   </form>
+{/if}
