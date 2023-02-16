@@ -7,14 +7,12 @@
    export let role = 'button';
    export let tabindex = -1;
    export let ariaLabel:string;
-
-   // unused props
-   export const href = '';
+   export let title = '';
 </script>
 
 <button 
    class={klass} 
-   {type} {disabled} {role} {tabindex} 
+   {type} {disabled} {role} {tabindex} {title}
    aria-disabled={disabled} aria-label={ariaLabel}>
    <slot/>
 </button>
