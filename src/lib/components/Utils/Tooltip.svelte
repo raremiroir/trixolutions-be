@@ -70,6 +70,7 @@
             rounded-lg shadow-lg
             { color === 'primary' ? 'bg-primary-l2/10 text-primary-l3 border-primary-l3 '
             : color === 'error'   ? 'bg-error-l/10    text-error-d    border-error-d'
+            : color === 'error-alt'   ? 'bg-error-d   text-gray-50    border-error-d'
             : color === 'success' ? 'bg-success-l/10  text-success-d  border-success-d'
             : color === 'warning' ? 'bg-warning-l/10  text-warning-d  border-warning-d'
             : color === 'info'    ? 'bg-info-l/10     text-info-d     border-info-d'
