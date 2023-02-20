@@ -10,5 +10,6 @@ export const GET = async () => {
       return dateB.getTime() - dateA.getTime();
    });
 
+   console.log(json(sortedPosts));
    return json(sortedPosts);
 }

@@ -3,7 +3,8 @@ import LL, { setLocale } from '$i18n/i18n-svelte'
 import { get } from 'svelte/store'
 import supabase from '$src/lib/db'
 import { isLocale } from '$src/i18n/i18n-util'
-import { error } from '@sveltejs/kit'
+import { error, redirect } from '@sveltejs/kit'
+import type { Redirect } from '@sveltejs/kit'
 
 export const load: PageLoad = async ({ parent, params }) => {
    
