@@ -7,11 +7,10 @@
    import { formatUrl } from '$src/lib/utils';
    // Import page variables
    import { page } from '$app/stores';
-   const {
-      status,
-      error: { message },
-   } = $page;
-   
+
+   const status = $page.status ?? '';
+   const message = $page.error ? $page.error.message : '';
+
    const title = `${status}: ${message}`
 </script>
 
