@@ -1,9 +1,15 @@
 import supabase from '$lib/db'
 import type { PageLoad } from '../$types';
 
+import { fetchMarkdownPosts } from '$utils';
+import { json } from '@sveltejs/kit';
 
-export const load: PageLoad = () => {
-   // console.log(params);
+export const load: PageLoad = async ({ fetch }) => {
+
+   const res = await fetch('/nl/api/posts');
+   let posts = await res.json();
+
+   const allPosts = await fetchMarkdownPosts();
 
     const getBlogData = async () => {
       const {data, error} = await supabase
@@ -14,11 +20,40 @@ export const load: PageLoad = () => {
             author ( first_name, last_name, img )`)
          .order('created_at', { ascending: false });
 
-      if (error) throw new Error(error.message);
-      return data;
-   }
+      if (error) { throw new Error(error.message) }
+      else if (data) {
+         let blogPosts:any = [];
+         data.forEach(el => {
+            posts.forEach((post:any) => {
+               if (post.meta.id === el.id) {
+                  blogPosts.push({
+                     id: post.meta.id,
+                     title: post.meta.title,
+                     excerpt: post.meta.excerpt,
+                     img: el.img,
+                     meta: {
+                        lang: el.language,
+                        updated_at: el.updated_at,
+                        created_at: el.created_at,
+                        author: el.author
+                     },
+                  })
+               }
+            });
+         })   
 
+         const sortedPosts = blogPosts.sort((a, b) => {
+            const dateA = new Date(a.created_at ?? 0);
+            const dateB = new Date(b.created_at ?? 0);
+
+            return dateB.getTime() - dateA.getTime();
+         });
+
+         return sortedPosts;
+      }
+   }
+   
    return {
-      blogData: getBlogData()
+      posts: getBlogData()
    }
 }
