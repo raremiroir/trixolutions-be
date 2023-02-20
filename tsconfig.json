@@ -12,16 +12,11 @@
 		"types": ["vite/client"]
 	},
 	"include": [
-		"src/**/*.d.ts",
-		"src/**/*.js",
-		"src/**/*.ts",
-		"src/**/*.svelte"
+		"src"
 	],
 	"exclude": [
 		"node_modules", 
-		"build/**/*", 
-		"src/lib/template/**/*", 
-		"src/generated/**/*"
+		"build/**/*"
 	]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
