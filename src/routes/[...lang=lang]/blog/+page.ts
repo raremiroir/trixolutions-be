@@ -3,6 +3,7 @@ import type { PageLoad } from '../$types';
 
 import { fetchMarkdownPosts } from '$utils';
 import { json } from '@sveltejs/kit';
+import type { BlogPost } from '$src/types';
 
 export const load: PageLoad = async ({ fetch }) => {
 
@@ -31,18 +32,16 @@ export const load: PageLoad = async ({ fetch }) => {
                      title: post.meta.title,
                      excerpt: post.meta.excerpt,
                      img: el.img,
-                     meta: {
-                        lang: el.language,
-                        updated_at: el.updated_at,
-                        created_at: el.created_at,
-                        author: el.author
-                     },
+                     language: el.language,
+                     updated_at: el.updated_at,
+                     created_at: el.created_at,
+                     author: el.author
                   })
                }
             });
          })   
 
-         const sortedPosts = blogPosts.sort((a, b) => {
+         const sortedPosts = blogPosts.sort((a:BlogPost, b:BlogPost) => {
             const dateA = new Date(a.created_at ?? 0);
             const dateB = new Date(b.created_at ?? 0);
 
