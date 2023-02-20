@@ -23,7 +23,7 @@
    //   Import data
 	import type { PageData } from "./$types";
    export let data:PageData;
-   const blogData = data.blogData;
+   const posts = data.posts;
 
    // SEO
    $: pageSlug = `/${$locale}/${$LL.nav.blog.slug()}`
@@ -58,7 +58,7 @@
    <Breadcrumbs currentIcon="mdi:newspaper-variant-outline"/>
    <Section name="blog">
       <H1 slot="title">Trixolutions {titleCase($LL.pages.blog.title())}</H1>
-         <PostScroll pageData={blogData} blog />
+         <PostScroll pageData={posts} blog />
    </Section>
 
    {#if $locale === 'en' || $locale === 'fr'}
