@@ -1,15 +1,25 @@
 .DS_Store
+# Node
 node_modules
+# Svelte
 /build
 /.svelte-kit
 /package
+# Env
 .env
 .env.*
 !.env.example
+# Vercel
 .vercel
 .vercel_build_ouput
+# Vite
 __unconfig_vite.config.js
-/src/generated
+# Husky
 .husky
-.tool-versions
+# i18n
 /src/i18n/i18n-*
+# Playwright
+/playwright-artifacts/
+/playwright-logs/
+# Various
+.tool-versions
