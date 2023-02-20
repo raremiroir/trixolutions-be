@@ -115,7 +115,8 @@
       
       active:brightness-75
 
-      flex flex-row items-center relative
+      flex flex-row items-center
+      { square || circle ? 'relative' : '' }
       { alignStart ? 'justify-start text-start' : 'justify-center text-center' } 
       { icon ? 'gap-1' : '' }
 
