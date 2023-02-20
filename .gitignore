@@ -21,5 +21,7 @@ __unconfig_vite.config.js
 # Playwright
 /playwright-artifacts/
 /playwright-logs/
+# VS Code
+/.vs-code
 # Various
 .tool-versions
