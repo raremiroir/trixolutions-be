@@ -16,7 +16,7 @@
    export { default as Text }          from './Core/Text/Text.svelte'
    export { default as Blockquote }    from './Core/Text/Blockquote.svelte'
    export { default as Tag }           from './Core/Text/Tag.svelte'
-   export { default as Markdown }      from './Core/Text/Markdown.svelte'
+   export { default as MarkProse }     from './Core/Text/MarkProse.svelte'
    
    export { default as Title }         from './Core/Title/Title.svelte'
    export { default as H1 }            from './Core/Title/H1.svelte'

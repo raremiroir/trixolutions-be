@@ -1,6 +1,4 @@
 <script lang="ts">
-   import { marked } from 'marked';
-
    export let content = '';
 
    let klass = '';
@@ -40,5 +38,5 @@
       
       
       { klass }">
-   {@html marked.parse(content)}
+   <slot/>
 </div>
