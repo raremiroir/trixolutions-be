@@ -1,6 +1,4 @@
 <script lang="ts">
-   export let content = '';
-
    let klass = '';
    export { klass as class };
 </script>
