@@ -16,7 +16,7 @@ const facebookPageName = PUBLIC_FACEBOOK_PAGE;
 const facebookAuthorPageName = PUBLIC_FACEBOOK_AUTHOR_PAGE;
 
 export const siteConfig: Site.Config = {
-	url: 'https://trixolutions.be',
+	url: 'http://localhost:3000', // Production: https://trixolutions.be
 	title: 'Trixolutions',
 	subtitle: 'Trixolutions - Training, Coaching & Consultancy',
 	description: 'Trixolutions - Opleidingen en Training in Lencioni Teamcoaching en Consultancy',
