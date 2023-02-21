@@ -79,6 +79,10 @@
    export let bold = false;
 
 
+   // Define onClick
+   export let onClick:any = '';
+
+
    // Active state if button needs it
    export let active = false;
 
@@ -90,6 +94,7 @@
    else if (size === 'lg')  size = 'btn-size-lg'
    else if (size === 'xl')  size = 'btn-size-xl'
    else if (size === 'xxl') size = 'btn-size-xxl'
+   else if (size === 'xxxl') size = 'btn-size-xxxl'
    else  size = size;
 
    // Handle component type
