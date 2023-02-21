@@ -78,11 +78,6 @@
    // Is text bold?
    export let bold = false;
 
-
-   // Define onClick
-   export let onClick:any = '';
-
-
    // Active state if button needs it
    export let active = false;
 
