@@ -2,7 +2,7 @@
    import LL from "$i18n/i18n-svelte";
 	import { titleCase } from "$utils";
 
-   import { Title, Button, Reveal, Modal, Subtitle, H3, H4, Form, MailchimpForm } from "$comp";
+   import { Title, Button, Reveal, Modal, Subtitle, H3, H4, Form, MailchimpForm, ContactForm } from "$comp";
 	import Icon from "@iconify/svelte";
 
 </script>
@@ -20,13 +20,7 @@
    
             <H3 slot="title" small>{titleCase($LL.pages.contact.btn.contact_us())}!</H3>
             
-            <!-- <ContactForm /> -->
-
-            <Form 
-               formType="contact"
-               sessionType=''
-               submitText={$LL.base.form.content.send_msg()}
-            />
+            <ContactForm />
             
    
          </Modal>
