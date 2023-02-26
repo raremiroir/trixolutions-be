@@ -11,7 +11,7 @@
    import { 
       Main, Section, Breadcrumbs, 
       Text, Button, H2, H3, Tag,
-      Hero, Modal, CardNew,
+      Hero, Modal, CardBase,
 	   SEO, Reveal, Form
    } from "$comp";
    
@@ -90,7 +90,7 @@
          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             {#each sessions as session}
                <Reveal>
-                  <CardNew
+                  <CardBase
                      hoverFx="minimal"
                      ariaLabel="{$LL.sessions.info.title_single()} - {formatDateMonthFull(session.starts_on)}"
                      title={titleCase($LL.sessions.info.title_single())}
@@ -107,7 +107,7 @@
                            {formatTime(session.starts_on)} - {formatTime(session.ends_on)}
                         </Tag>
                      </div>
-                  </CardNew>
+                  </CardBase>
                </Reveal>
             {/each}
          </div>

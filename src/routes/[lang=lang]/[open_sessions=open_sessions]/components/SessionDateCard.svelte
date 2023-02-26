@@ -2,7 +2,7 @@
 	import LL from "$i18n/i18n-svelte";
 	import { formatDateShort, formatTime, formatYear, titleCase } from "$utils";
 
-	import { CardNew, H4, Tag } from "$comp";
+	import { CardBase, H4, Tag } from "$comp";
 	import Icon from "@iconify/svelte";
 
    export let session:any;
@@ -18,7 +18,7 @@
    }
 
 </script>
-<CardNew
+<CardBase
 	title="{formatDateShort(session.starts_on)} - {formatDateShort(session.ends_on)}"
 	{...cardProps}
 	class="{klass} group"
@@ -52,4 +52,4 @@
 			{formatTime(session.starts_on)} - {formatTime(session.ends_on)}
 		</Tag>
 	</div>
-</CardNew>
+</CardBase>

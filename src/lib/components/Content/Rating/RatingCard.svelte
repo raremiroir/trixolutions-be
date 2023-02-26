@@ -15,22 +15,12 @@
 
    export let cardProps = {
       title: '',
-
-      width: 'wfull',
-      ariaLabel: '',
-
-      author: {name: '', img:'', date: '' },
-
-      compact: false,
-      compactResponsive: true,
-      equalHeight: false,
-
       hoverFx: 'minimal',
    }
 </script>
 
 
-<CardBase {...cardProps} class={klass}>
+<CardBase {...cardProps} class="text-primary-d1 {klass}">
    <slot slot="title" name="title"/>
    <Text italic>
       <span class="mr-1 text-2xl text-primary-d1">{HVY_DBL_QUOTATION_OPEN}</span>

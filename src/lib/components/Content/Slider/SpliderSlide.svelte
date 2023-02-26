@@ -4,21 +4,26 @@
    import { breakpoints } from '$src/lib/constants/breakpoints';
    
    import { SplideSlide } from '@splidejs/svelte-splide';
-	import { Card, Modal, Image, Text, Title } from '$comp';
+	import { CardBase, Modal, Image, Text, Title } from '$comp';
 
 
    export let modalId:number;
-   export let imgSrc:string;
-   export let imgAlt:string;
+   export let img:string;
+   export let title:string;
 
    let hovered = false;
 
    let klass = '';
    export { klass as class };
 
-</script>
+   const cardProps = {
+      title: title,
+      img: img,
 
-<svelte:window bind:innerWidth={innerWidth} />
+      hoverFx: 'full'
+   }
+
+</script>
 
 <SplideSlide 
    class="
@@ -26,16 +31,7 @@
       {klass}">
 
       <Modal trigger id={modalId}>
-         <Card 
-            slot="trigger" equalHeight hoverFx compact fast
-            class="w-full">
-            <div class="h-fit w-full" slot="image">
-               <!-- <Image imgSrc="{blogPost.img}" height="h-40" /> -->
-               <Image 
-                  alt={imgAlt}
-                  src={imgSrc}
-               />
-            </div>
+         <CardBase slot="trigger" {...cardProps} class="w-full">
             <li slot="title">
                <Title type="subtitle" smaller italic>
                   <slot name="subtitle">Subtitle</slot>
@@ -49,7 +45,7 @@
                   <Text small><slot/></Text>
                </div>
             {/if}
-         </Card>
+         </CardBase>
       </Modal>
       
 </SplideSlide>

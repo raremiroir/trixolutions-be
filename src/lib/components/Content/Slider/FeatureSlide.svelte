@@ -2,7 +2,7 @@
    import { fade } from 'svelte/transition';
    
    import { SplideSlide } from '@splidejs/svelte-splide';
-	import { CardNew, Modal, Text, Title } from '$comp';
+	import { CardBase, Modal, Text, Title } from '$comp';
 
 
    export let title:string;
@@ -24,8 +24,6 @@
       imgFit: 'object-contain',
       height: 'h-64',
 
-      article: false,
-
       hoverFx: 'minimal',
    }
 
@@ -36,7 +34,7 @@
    class="bg-transparent w-full h-fit {klass} pt-2 pb-6">
 
       <Modal trigger id={modalId}>
-         <CardNew {...cardProps} slot="trigger" class="!cursor-pointer">
+         <CardBase {...cardProps} slot="trigger" class="!cursor-pointer">
             <li slot="title">
                <Title type="subtitle" smaller italic>
                   <slot name="subtitle">Subtitle</slot>
@@ -50,7 +48,7 @@
                   <Text small><slot/></Text>
                </div>
             {/if}
-         </CardNew>
+         </CardBase>
       </Modal>
       
 </SplideSlide>

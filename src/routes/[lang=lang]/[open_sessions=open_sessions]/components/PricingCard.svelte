@@ -1,5 +1,5 @@
 <script lang="ts">
-   import { Text, CardNew, List, ListItem, Button, H2 } from "$comp";
+   import { Text, CardBase, List, ListItem, Button, H2 } from "$comp";
    
    import LL from "$i18n/i18n-svelte";
    import { formatPrice } from "$utils";
@@ -22,7 +22,7 @@
 </script>
 
 
-<CardNew {...cardProps} class={klass}>
+<CardBase {...cardProps} class={klass}>
 
    <H2 
       slot="title" smallest 
@@ -77,4 +77,4 @@
    <slot name="btn"/>
    
 
-</CardNew>
+</CardBase>

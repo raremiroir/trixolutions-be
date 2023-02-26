@@ -1,5 +1,5 @@
 <script lang="ts">
-   import { CardNew } from "$comp";
+   import { CardBase } from "$comp";
 
    export let src:string;
    // export let alt = '';
@@ -38,6 +38,6 @@
 </script>
 
 
-<CardNew {...cardProps}>
+<CardBase {...cardProps}>
    <slot/>
-</CardNew>
+</CardBase>

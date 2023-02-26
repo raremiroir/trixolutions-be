@@ -9,9 +9,10 @@
    // Import components
    import { 
       Main, Section, Breadcrumbs, 
-      Text, Title, Button, 
+      Text, Button, 
       Map, Modal, 
-	   SEO, Form, CardNew, ContactForm
+	   SEO, CardBase, ContactForm, 
+      H2, H1, H3
    } from "$comp";
 	import Icon from "@iconify/svelte";
    
@@ -34,12 +35,6 @@
 
 
    const cardProps = {
-      width: 'full',
-
-      compact: false,
-      compactResponsive: true,
-      equalHeight: true,
-
       hoverFx: 'minimal',
    }
    
@@ -87,7 +82,7 @@
 <Main cta>
    <Breadcrumbs currentIcon="mdi:email-outline"/>
    <Section name="contact-us">
-      <Title slot="title" type="h1">{titleCase($LL.pages.contact.title())}</Title>
+      <H1 slot="title">{titleCase($LL.pages.contact.title())}</H1>
       <div class="flex flex-row gap-8 items-center justify-center">
          
          <Modal width="min-w-[60%] max-w-[95%] xl:min-w-[40%] xl:max-w-[50%]">
@@ -101,14 +96,14 @@
                </div>
             </Button>
    
-            <Title slot="title" type="h3" small>{titleCase($LL.pages.contact.btn.contact_us())}!</Title>
+            <H3 slot="title" small>{titleCase($LL.pages.contact.btn.contact_us())}!</H3>
             <ContactForm />
             
          </Modal>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 w-full gap-8">
          {#each places as place}
-            <CardNew 
+            <CardBase 
                title="{firstLetterCase($LL.pages.contact.establishment())} {place.code === 'be' ? $LL.base.geo.country.belgium() : place.code === 'nl' ? $LL.base.geo.country.netherlands() : 'error' }"
                height='h-88 sm:h-96 md:h-92 lg:h-96'
                class="col-span-1"
@@ -120,9 +115,9 @@
                         <Icon icon="emojione:flag-for-{place.code === 'be' ? 'belgium' : place.code === 'nl' ? 'netherlands' : 'usa' }" width="140" />
                      </div>
                   </div>
-                  <Title type="h2" smallest class="text-center uppercase font-extrabold">
+                  <H2 smallest class="text-center uppercase font-extrabold">
                      {firstLetterCase($LL.pages.contact.establishment())} {place.code === 'be' ? $LL.base.geo.country.belgium() : place.code === 'nl' ? $LL.base.geo.country.netherlands() : 'error' }
-                  </Title>
+                  </H2>
                </div>
                <Text semibold center>
                   {@html place.address}<br/>
@@ -137,13 +132,13 @@
                      </div>
                   </Button>
                </div>
-            </CardNew>
+            </CardBase>
          {/each}
       </div>
    </Section>
    
    <Section name="trixolutions-map">
-      <Title type="h2" small slot="title">{firstLetterCase($LL.pages.contact.find_on_map())}!</Title>
+      <H2 small slot="title">{firstLetterCase($LL.pages.contact.find_on_map())}!</H2>
       <Map/>
    </Section>
 

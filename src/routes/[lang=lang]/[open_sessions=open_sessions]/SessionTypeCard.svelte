@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Text, CardNew } from "$comp";
+	import { Text, CardBase } from "$comp";
 
    
    export let title = 'card title'
@@ -38,7 +38,7 @@
 </script>
 
 
-<CardNew {...cardProps} class={klass}>
+<CardBase {...cardProps} class={klass}>
 
    <Text>
       <slot>
@@ -47,4 +47,4 @@
    </Text>
    
 
-</CardNew>
+</CardBase>

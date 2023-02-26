@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CardNew, Text } from '$comp';
+	import { CardBase, Text } from '$comp';
 
 	import LL, { locale } from '$i18n/i18n-svelte';
 
@@ -44,10 +44,10 @@
 	};
 </script>
 
-<CardNew
+<CardBase
    {...cardProps}
 >
 	<Text>
 		{@html excerpt}
 	</Text>
-</CardNew>
+</CardBase>
