@@ -9,16 +9,12 @@ export type InputItem = {
    required?: boolean = true,
    automatic?: boolean = false,
 }
-export type SelectOption = {
-   label: string,
-   value: string,
-}
 
 export type TextAreaItem = InputItem & {
    rows?: number;
 }
 export type SelectItem = InputItem & {
-   options: SelectOption[];
+   options: string[];
 }
 
 export type InputItems = InputItem[];
