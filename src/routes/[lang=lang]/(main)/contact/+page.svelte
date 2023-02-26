@@ -11,7 +11,7 @@
       Main, Section, Breadcrumbs, 
       Text, Title, Button, 
       Map, Modal, 
-	   SEO, Form, CardNew
+	   SEO, Form, CardNew, ContactForm
    } from "$comp";
 	import Icon from "@iconify/svelte";
    
@@ -102,12 +102,7 @@
             </Button>
    
             <Title slot="title" type="h3" small>{titleCase($LL.pages.contact.btn.contact_us())}!</Title>
-            <!-- <ContactForm /> -->
-            <Form 
-               formType="contact"
-               sessionType=""
-               submitText={$LL.base.form.content.send_msg()}
-            />
+            <ContactForm />
             
          </Modal>
       </div>
@@ -150,7 +145,6 @@
    <Section name="trixolutions-map">
       <Title type="h2" small slot="title">{firstLetterCase($LL.pages.contact.find_on_map())}!</Title>
       <Map/>
-      <FormBase/>
    </Section>
 
    
