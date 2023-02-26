@@ -1,6 +1,5 @@
 <script lang="ts">
    import { Text, CardNew, List, ListItem, Button, H2 } from "$comp";
-   import Icon from "@iconify/svelte";
    
    import LL from "$i18n/i18n-svelte";
    import { formatPrice } from "$utils";
