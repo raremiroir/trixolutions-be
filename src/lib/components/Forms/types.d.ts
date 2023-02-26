@@ -2,48 +2,36 @@ import LL from "%i18n/i18n-svelte";
 import { get } from "svelte/store";
 const $LL = get(LL);
 
-export type ValidationOptions = {
-   required?: boolean;
-   min?: number;
-   max?: number;
-   email?: boolean;
-}
-
-export type TextAreaOptions = {
-   noResize?: boolean;
-   noClear?: boolean;
-   rows?: number;
-}
-
-
 export type InputItem = {
-   label: string,
-   key: string,
-   value: string,
+   enabled: boolean = false,
    disabled?: boolean,
    placeholder?: string,
-   options: ValidationOptions,
-   automatic?: boolean
+   required?: boolean = true,
+   automatic?: boolean = false,
 }
+export type SelectOption = {
+   label: string,
+   value: string,
+}
+
 export type TextAreaItem = InputItem & {
-   textAreaOptions: TextAreaOptions
+   rows?: number;
 }
+export type SelectItem = InputItem & {
+   options: SelectOption[];
+}
+
 export type InputItems = InputItem[];
 
-
 export type ChosenInputs = {
-   name?: {
-      first_name: InputItem,
-      last_name: InputItem
-   };
+   name?: InputItem,
    email?: InputItem,
    phone?: InputItem,
-   
-   org?: {
-      company?: InputItem,
-      job?: InputItem,
-   },
 
+   company?: InputItem,
+   job?: InputItem,
+
+   session_picked?: SelectItem,
    subject?: InputItem,
    message?: TextAreaItem,
    file?: InputItem,
