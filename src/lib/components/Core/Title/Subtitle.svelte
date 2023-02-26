@@ -1,17 +1,4 @@
-<!-- 
-██   ██  ▄██ 
-██   ██ ████ 
-███████   ██ 
-██   ██   ██ 
-██   ██   ██ 
--->
 
-<!--
-▄▄▄ ▄▄▄ 
- █  █▄
- █   ▀█
- ▀  ▀▀▀
--->
 <script lang="ts">
    // Define extra classes 
    let klass = '';
@@ -35,12 +22,6 @@
       export let thin = false;
 </script>
 
-<!--
-▄  ▄ ▄▄▄ ▄▄   ▄▄ ▄
-█▄▄█  █  █ █ █ █ █
-█▀▀█  █  █ █ █ █ █
-▀  ▀  ▀  ▀  ▀  ▀ ▀▀▀
--->
 <span class="
       font-title
       { color ? color : 'text-gray-600' } 
