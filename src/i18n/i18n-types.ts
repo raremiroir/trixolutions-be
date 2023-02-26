@@ -161,6 +161,10 @@ type RootTranslation = {
 			 */
 			required: RequiredParams<'item'>
 			/**
+			 * D​i​t​ ​i​s​ ​e​e​n​ ​v​e​r​p​l​i​c​h​t​ ​v​e​l​d​.
+			 */
+			required_def: string
+			/**
 			 * {​i​t​e​m​}​ ​i​s​ ​o​n​g​e​l​d​i​g​.
 			 * @param {string} item
 			 */
@@ -186,6 +190,10 @@ type RootTranslation = {
 			 * @param {string} item
 			 */
 			only_alpha: RequiredParams<'item'>
+			/**
+			 * K​i​e​s​ ​e​e​n​ ​o​p​t​i​e​.
+			 */
+			pick_one: string
 		}
 		form: {
 			/**
@@ -204,6 +212,10 @@ type RootTranslation = {
 			 * o​r​g​a​n​i​s​a​t​i​e
 			 */
 			company: string
+			/**
+			 * j​o​b​t​i​t​e​l
+			 */
+			job: string
 			/**
 			 * o​n​d​e​r​w​e​r​p
 			 */
@@ -3199,6 +3211,10 @@ export type TranslationFunctions = {
 			 */
 			required: (arg: { item: string }) => LocalizedString
 			/**
+			 * Dit is een verplicht veld.
+			 */
+			required_def: () => LocalizedString
+			/**
 			 * {item} is ongeldig.
 			 */
 			default_fixed: (arg: { item: string }) => LocalizedString
@@ -3218,6 +3234,10 @@ export type TranslationFunctions = {
 			 * {item} zou geen speciale karakters of nummers mogen bevatten.
 			 */
 			only_alpha: (arg: { item: string }) => LocalizedString
+			/**
+			 * Kies een optie.
+			 */
+			pick_one: () => LocalizedString
 		}
 		form: {
 			/**
@@ -3236,6 +3256,10 @@ export type TranslationFunctions = {
 			 * organisatie
 			 */
 			company: () => LocalizedString
+			/**
+			 * jobtitel
+			 */
+			job: () => LocalizedString
 			/**
 			 * onderwerp
 			 */

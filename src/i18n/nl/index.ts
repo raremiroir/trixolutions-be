@@ -53,17 +53,20 @@ const nl: BaseTranslation = {
       },
       validation: {
          required: "{item:string} is een verplicht veld.",
+         required_def: "Dit is een verplicht veld.",
          default_fixed: "{item:string} is ongeldig.",
          field_too_short: "{item:string} moet minstens {min:number} letters lang zijn.",
          field_too_long: "{item:string} mag maximaal {max:number} letters lang zijn.",
          email_error: "Dit e-mailadres is ongeldig.",
-         only_alpha: "{item:string} zou geen speciale karakters of nummers mogen bevatten."
+         only_alpha: "{item:string} zou geen speciale karakters of nummers mogen bevatten.",
+         pick_one: "Kies een optie.",
       },
       form: {
          first_name: "voornaam",
          last_name: "achternaam",
          email: "e-mail",
          company: "organisatie",
+         job: "jobtitel",
          subject: "onderwerp",
          message: "bericht",
          telephone: "telefoonnummer",

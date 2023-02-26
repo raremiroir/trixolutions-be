@@ -53,17 +53,20 @@ const fr: Translation = {
       },
       validation: {
          required: "{item:string} est un champ obligatoire.",
+         required_def: "Ceci est un champ obligatoire.",
          default_fixed: "{item:string} est invalide.",
          field_too_short: "{item:string} doit comporter au moins {min:number} lettres.",
          field_too_long: "{item:string} peut contenir jusqu'à 5 {max:number} lettres.",
          email_error: "Cette adresse e-mail est invalide.",
-         only_alpha: "{item:string} ne doit pas contenir de caractères spéciaux ni de chiffres."
+         only_alpha: "{item:string} ne doit pas contenir de caractères spéciaux ni de chiffres.",
+         pick_one: "Chosis une option.",
       },
       form: {
          first_name: "prénom",
          last_name: "nom de famille",
          email: "adresse e-mail",
          company: "entreprise",
+         job: "jobtitel",
          subject: "sujet",
          message: "message",
          telephone: "numéro de téléphone",
