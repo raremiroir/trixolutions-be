@@ -10,15 +10,12 @@
 <SplideSlide
 	class="
       transition-all duration-300 ease-out
-      group hover:bg-gray-900 active:scale-95"
+		flex justify-center items-center
+      group hover:bg-gray-900 active:scale-95 mx-4"
 >
 	<Image
-		alt={title}
-		src={src}
-		eager
-		mode="cover"
-		placeholder="preview"
-		ratio="3:2"
+		alt={title} src={src} eager
 		class="group-hover:opacity-90 cursor-pointer "
+		imgClass="h-24 w-auto"
 	/>
 </SplideSlide>

@@ -11,16 +11,6 @@
    export let imgSrc:string;
    export let imgAlt:string;
 
-   let innerWidth:number;
-   let ratio = '5:3'
-   $: if (innerWidth < breakpoints.xs) { ratio = "3:1"; }  
-      else if (innerWidth < breakpoints.sm) { ratio = "3:1"; } 
-      else if (innerWidth < breakpoints.md) { ratio = "2:1"; } 
-      else if (innerWidth < breakpoints.lg) { ratio = "5:2"; } 
-      else if (innerWidth < breakpoints.xl) { ratio = "5:3"; } 
-      else if (innerWidth < breakpoints.xxl) { ratio = "5:3"; }
-      else { ratio = "2:1"}
-
    let hovered = false;
 
    let klass = '';
@@ -43,10 +33,8 @@
                <!-- <Image imgSrc="{blogPost.img}" height="h-40" /> -->
                <Image 
                   alt={imgAlt}
-                  src={imgSrc} 
-                  mode="cover" position="top" 
-                  ratio="{ratio}"
-                  intrinsic="600x400"/>
+                  src={imgSrc}
+               />
             </div>
             <li slot="title">
                <Title type="subtitle" smaller italic>
