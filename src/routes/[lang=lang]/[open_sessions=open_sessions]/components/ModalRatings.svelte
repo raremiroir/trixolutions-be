@@ -5,8 +5,6 @@
 
    export let ratingData:any;
    export let ratingImages:any;
-
-   console.log(ratingImages);
 </script>
 
 <Modal icon="mdi:star">
