@@ -1,0 +1,294 @@
+<script lang='ts'>
+   // IMPORT TYPES
+   import type { ChosenInputs } from './types'
+
+   // IMPORT COMPONENTS
+   import { Button, Captcha, FormInput, Tooltip } from '$comp';
+	import { fade } from 'svelte/transition';
+	import { MessageSentAlert, RowWrap } from './FormUtils';
+   import { Confetti } from 'svelte-confetti';
+
+   // IMPORT UTILS
+   import * as yup from 'yup'
+   import { createForm } from 'svelte-forms-lib';
+   import { firstLetterCase, isObjEmpty, isObjEmptyAny, titleCase, tooltip } from '$utils'
+   
+   // IMPORT I18N
+   import LL, { locale } from '$i18n/i18n-svelte';
+
+   let success = false;
+
+   export let submitText = 'Submit';
+
+   export let submitAction = (values:any) => {
+      console.log(values);
+   }
+
+   export let inputItems: ChosenInputs = { 
+      name: { enabled: true },
+      email: { enabled: true },
+      company: {
+         enabled: true,
+         required: false,
+      },
+      subject: { enabled: true },
+      message: {
+         enabled: true,
+         automatic: true,
+         rows: 6
+      }
+   };
+
+   $: inputItems;
+
+   // Define formValues & initial values
+   let formValues:any = {};
+   let initValues:any = {};
+
+   // Name validation schema
+   if (inputItems.name?.enabled) {
+      formValues.first_name = yup.string()
+         .required($LL.base.validation.required({ item: titleCase($LL.base.form.first_name()) }))
+         .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.first_name()), min: 2 }))
+         .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.first_name()), max: 50 }));
+      formValues.last_name = yup.string()
+         .required($LL.base.validation.required({ item: titleCase($LL.base.form.first_name()) }))
+         .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.first_name()), min: 2 }))
+         .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.first_name()), max: 50 }));
+      
+      initValues.first_name = '';
+      initValues.last_name = '';
+   }
+   // Email validation schema
+   if (inputItems.email?.enabled) {
+      formValues.email = yup.string()
+        .required($LL.base.validation.required({ item: titleCase($LL.base.form.email()) }))
+        .email($LL.base.validation.email_error());
+      
+      initValues.email = '';
+   }
+   // Phone validation schema
+   if (inputItems.phone?.enabled) {
+      formValues.phone = yup.string();
+      if (inputItems.phone?.required) {
+         formValues.phone = formValues.phone.required($LL.base.validation.required({ item: titleCase($LL.base.form.telephone()) }));
+      }
+      initValues.email = '';
+   }
+   // Company validation schema
+   if (inputItems.company?.enabled) {
+      formValues.company = yup.string();
+      if (inputItems.company.required) {
+         formValues.company = formValues.company
+            .required($LL.base.validation.required({ item: titleCase($LL.base.form.company()) }))
+            .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.company()), min: 2 }))
+            .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.company()), max: 50 }));
+      }
+      initValues.company = '';
+   }
+   // Job Title validation schema
+   if (inputItems.job?.enabled) {
+      formValues.job = yup.string();
+      if (inputItems.job.required) {
+         formValues.job = formValues.job
+           .required($LL.base.validation.required({ item: titleCase($LL.base.form.job()) }))
+           .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.job()), min: 2 }))
+           .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.job()), max: 50 }));
+      }
+      initValues.job = '';
+   }
+   // Session picked validation schema
+   if (inputItems.session_picked?.enabled) {
+
+      let pickedSessions:any = [];
+      inputItems.session_picked.options.forEach(option => {
+         pickedSessions.push(option.value);
+      })
+      formValues.session_picked = yup.string()
+         .oneOf(pickedSessions, $LL.base.validation.pick_one())
+         .required($LL.base.validation.required_def());
+      
+      initValues.session_picked = '';
+   }
+   // Subject validation schema
+   if (inputItems.subject?.enabled) {
+      formValues.subject = yup.string();
+      if (inputItems.subject?.required) {
+         formValues.subject = formValues.subject
+           .required($LL.base.validation.required({ item: titleCase($LL.base.form.subject()) }))
+           .min(4, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.subject()), min: 4 }))
+           .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.subject()), max: 50 }));
+      }
+      
+      initValues.subject = '';
+   }
+   // Message validation schema
+   if (inputItems.message?.enabled) {
+      formValues.message = yup.string();
+      if (inputItems.message?.required) {
+         formValues.message = formValues.message
+           .required($LL.base.validation.required({ item: titleCase($LL.base.form.message()) }))
+           .min(5, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.message()), min: 5}))
+           .max(1000, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.message()), max: 1000 }));
+      }
+      
+      initValues.message = '';
+   }
+
+   // Define validation schema
+   let validationSchema = yup.object().shape({});
+   Object.keys(formValues).forEach(key => {
+      validationSchema = validationSchema.shape({
+         [key]: formValues[key]
+      })
+   })
+   console.log(validationSchema);
+
+   // Create form
+   let {
+      form, errors, state, isValid,
+      isSubmitting, isValidating,
+      handleChange, handleSubmit
+   } = createForm({
+      initialValues: initValues,
+      validationSchema: validationSchema,
+      onSubmit: values => {
+
+         submitAction(values);
+
+         success = true;
+      }
+   })
+
+
+   $: formEmpty = isObjEmpty($form);
+   $: anyEmpty = isObjEmptyAny($form);
+
+   const resetForm = () => {
+      Object.keys($form).forEach(key =>{
+         $form[key] = '';
+      })
+      success = false;
+   }
+
+</script>
+
+{#if success}
+
+   <div class="w-full" transition:fade={{duration: 200}}>
+      <MessageSentAlert resetForm={() => resetForm()}/>
+   </div>
+
+{:else}
+   <form
+      transition:fade={{duration: 200}}
+      on:submit={handleSubmit}
+      class="flex flex-col gap-2 overflow-y-hidden">
+      
+      {#if inputItems.name}
+         <RowWrap>
+            <FormInput 
+               name="first_name"
+               label="{titleCase($LL.base.form.first_name())}"
+               on:change={handleChange}
+               bind:value={$form.first_name} 
+               bind:errors={$errors.first_name} 
+               required={inputItems.name.required}
+            />
+            <FormInput 
+               name="last_name"
+               label="{titleCase($LL.base.form.last_name())}"
+               on:change={handleChange}
+               bind:value={$form.last_name} 
+               bind:errors={$errors.last_name} 
+               required={inputItems.name.required}
+            />
+         </RowWrap>
+      {/if}
+      {#if inputItems.email}
+         <RowWrap>  
+            <FormInput 
+               name="email"
+               label="{titleCase($LL.base.form.email())}"
+               on:change={handleChange}
+               bind:value={$form.email} 
+               bind:errors={$errors.email} 
+               required={inputItems.email.required}
+            />
+         </RowWrap>
+      {/if}
+      {#if inputItems.company || inputItems.job || (inputItems.company && inputItems.job)}
+         <RowWrap>  
+            {#if inputItems.company}
+               <FormInput 
+                  name="company"
+                  label="{titleCase($LL.base.form.company())}"
+                  on:change={handleChange}
+                  bind:value={$form.company} 
+                  bind:errors={$errors.company} 
+                  required={inputItems.company.required}
+               />
+            {/if}
+            {#if inputItems.job}
+               <FormInput 
+                  name="job"
+                  label="{titleCase($LL.base.form.company())}"
+                  on:change={handleChange}
+                  bind:value={$form.company} 
+                  bind:errors={$errors.company} 
+                  required={inputItems.job.required}
+               />
+            {/if}
+         </RowWrap>
+      {/if}
+      {#if inputItems.subject}
+         <RowWrap>
+            <FormInput 
+               name="subject"
+               label="{titleCase($LL.base.form.subject())}"
+               on:change={handleChange}
+               bind:value={$form.subject} 
+               bind:errors={$errors.subject} 
+               required={inputItems.subject.required}
+            />
+         </RowWrap>
+      {/if}
+      {#if inputItems.message}
+         <RowWrap>
+            <FormInput 
+               textarea 
+               noResize
+               automatic={inputItems.message.automatic}
+               noClear={inputItems.message.automatic}
+               rows={inputItems.message.rows}
+               name="message"
+               label="{titleCase($LL.base.form.message())}"
+               on:change={handleChange} 
+               bind:value={$form.message}
+               bind:errors={$errors.message}
+               required={inputItems.message.required}
+            />
+         </RowWrap>
+      {/if}
+
+      <!-- <Captcha /> -->
+
+      <div class="flex flex-row w-full justify-between items-center mt-4">
+         <!-- Submit Btn -->
+         <div use:tooltip title="{!$isValid || anyEmpty
+            ? $LL.base.form.content.fill_out_all() 
+            :  firstLetterCase($LL.base.form.content.send_msg())}">
+            <Button
+               ariaLabel={submitText}
+               disabled={!$isValid || anyEmpty} 
+               type="submit">
+               {#if $isSubmitting}
+                  <Confetti amount={70} x={[-0.5, 0.5]} y={[-0.5, -0.5]} colorArray={["#0b3259", "#fb5607", "#195693", "#d1d1ce", "#3a86ff"]} />
+               {/if}
+               {submitText}
+            </Button>
+         </div>
+      </div>
+
+   </form>
+{/if}
