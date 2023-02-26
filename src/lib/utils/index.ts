@@ -19,10 +19,6 @@ export { processPathname as processPathname } from './i18n'
 // Blog
 export { fetchMarkdownPosts as fetchMarkdownPosts } from './blog';
 
-// Form
-export { createYupSchema as createYupSchema } from './form'
-export { declareFormValues as declareFormValues } from './form'
-
 // Mailgun
 export { mailToAdmin as mailToAdmin } from './mailgun'
 
@@ -33,3 +29,6 @@ export { dbInsert as dbInsert } from './query'
 export { isObjEmpty as isObjEmpty } from './base/checkers'
 export { isObjEmptyAny as isObjEmptyAny } from './base/checkers'
 
+
+// Actions
+export { tooltip as tooltip } from './actions/tooltip'
