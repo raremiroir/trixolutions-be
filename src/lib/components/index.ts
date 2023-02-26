@@ -123,7 +123,9 @@
 // ██       ██████  ██   ██ ██      ██ 
    export { default as Form } from './Forms/Form.svelte';
    export { default as FormBase } from './Forms/FormBase.svelte';
+
    export { default as ContactForm } from './Forms/ContactForm.svelte'
+   export { default as SessionSubForm } from './Forms/SessionSubForm.svelte'
    export { default as MailchimpForm } from './Forms/Mailchimp/MailchimpForm.svelte'
    
    export { default as FormInput } from './Forms/FormInput/index.svelte';
