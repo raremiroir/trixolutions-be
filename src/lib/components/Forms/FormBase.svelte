@@ -19,6 +19,7 @@
    let success = false;
 
    export let submitText = 'Submit';
+   export let sessionTitle = 'Session';
 
    export let submitAction = (values:any) => {
       console.log(values);
@@ -69,41 +70,46 @@
    }
    // Phone validation schema
    if (inputItems.phone?.enabled) {
-      formValues.phone = yup.string();
+      formValues.phone = yup.string()
+         .matches(/^((\+|00)\d{1,3})?[\s.-]?\d{1,4}[\s.-]?\d{1,4}[\s.-]?\d{1,4}[\s.-]?\d{1,4}|^$/, $LL.base.validation.phone_error())
       if (inputItems.phone?.required) {
          formValues.phone = formValues.phone.required($LL.base.validation.required({ item: titleCase($LL.base.form.telephone()) }));
+      } else {
+         formValues.phone = formValues.phone.optional();
       }
       initValues.email = '';
    }
    // Company validation schema
    if (inputItems.company?.enabled) {
-      formValues.company = yup.string();
+      formValues.company = yup.string()
+         .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.company()), min: 2 }))
+         .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.company()), max: 50 }));
       if (inputItems.company.required) {
-         formValues.company = formValues.company
-            .required($LL.base.validation.required({ item: titleCase($LL.base.form.company()) }))
-            .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.company()), min: 2 }))
-            .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.company()), max: 50 }));
+         formValues.company = formValues.company.required($LL.base.validation.required({ item: titleCase($LL.base.form.company()) }));
+      } else {
+         formValues.company = formValues.company.optional();
       }
       initValues.company = '';
    }
    // Job Title validation schema
    if (inputItems.job?.enabled) {
-      formValues.job = yup.string();
+      formValues.job = yup.string()
+         .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.job()), min: 2 }))
+         .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.job()), max: 50 }));
       if (inputItems.job.required) {
-         formValues.job = formValues.job
-           .required($LL.base.validation.required({ item: titleCase($LL.base.form.job()) }))
-           .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.job()), min: 2 }))
-           .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.job()), max: 50 }));
+         formValues.job = formValues.job.required($LL.base.validation.required({ item: titleCase($LL.base.form.job()) }));
+      } else {
+         formValues.job = formValues.job.optional();
       }
       initValues.job = '';
    }
    // Session picked validation schema
    if (inputItems.session_picked?.enabled) {
-
       let pickedSessions:any = [];
       inputItems.session_picked.options.forEach(option => {
-         pickedSessions.push(option.value);
+         pickedSessions.push(option);
       })
+
       formValues.session_picked = yup.string()
          .oneOf(pickedSessions, $LL.base.validation.pick_one())
          .required($LL.base.validation.required_def());
@@ -112,24 +118,26 @@
    }
    // Subject validation schema
    if (inputItems.subject?.enabled) {
-      formValues.subject = yup.string();
+      formValues.subject = yup.string()
+         .min(4, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.subject()), min: 4 }))
+         .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.subject()), max: 50 }));
       if (inputItems.subject?.required) {
-         formValues.subject = formValues.subject
-           .required($LL.base.validation.required({ item: titleCase($LL.base.form.subject()) }))
-           .min(4, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.subject()), min: 4 }))
-           .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.subject()), max: 50 }));
+         formValues.subject = formValues.subject.required($LL.base.validation.required({ item: titleCase($LL.base.form.subject()) }));
+      } else {
+         formValues.subject = formValues.subject.optional();
       }
       
       initValues.subject = '';
    }
    // Message validation schema
    if (inputItems.message?.enabled) {
-      formValues.message = yup.string();
+      formValues.message = yup.string()
+         .min(5, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.message()), min: 5}))
+         .max(1000, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.message()), max: 1000 }));
       if (inputItems.message?.required) {
-         formValues.message = formValues.message
-           .required($LL.base.validation.required({ item: titleCase($LL.base.form.message()) }))
-           .min(5, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.message()), min: 5}))
-           .max(1000, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.message()), max: 1000 }));
+         formValues.message = formValues.message.required($LL.base.validation.required({ item: titleCase($LL.base.form.message()) }));
+      } else {
+         formValues.message = formValues.message.optional();
       }
       
       initValues.message = '';
@@ -185,6 +193,7 @@
       on:submit={handleSubmit}
       class="flex flex-col gap-2 overflow-y-hidden">
       
+      <!-- Name input -->
       {#if inputItems.name}
          <RowWrap>
             <FormInput 
@@ -205,18 +214,32 @@
             />
          </RowWrap>
       {/if}
-      {#if inputItems.email}
+      <!-- Email / Phone input -->
+      {#if inputItems.email || inputItems.phone || (inputItems.email && inputItems.phone)}
          <RowWrap>  
-            <FormInput 
-               name="email"
-               label="{titleCase($LL.base.form.email())}"
-               on:change={handleChange}
-               bind:value={$form.email} 
-               bind:errors={$errors.email} 
-               required={inputItems.email.required}
-            />
+            {#if inputItems.email}
+               <FormInput 
+                  name="email"
+                  label="{titleCase($LL.base.form.email())}"
+                  on:change={handleChange}
+                  bind:value={$form.email} 
+                  bind:errors={$errors.email} 
+                  required={inputItems.email.required}
+               />
+            {/if}
+            {#if inputItems.phone}
+               <FormInput 
+                  name="phone"
+                  label="{titleCase($LL.base.form.telephone())}"
+                  on:change={handleChange}
+                  bind:value={$form.phone} 
+                  bind:errors={$errors.phone} 
+                  required={inputItems.phone.required}
+               />
+            {/if}
          </RowWrap>
       {/if}
+      <!-- Company / Job input -->
       {#if inputItems.company || inputItems.job || (inputItems.company && inputItems.job)}
          <RowWrap>  
             {#if inputItems.company}
@@ -241,6 +264,25 @@
             {/if}
          </RowWrap>
       {/if}
+      <!-- Pick sessions input -->
+      {#if inputItems.session_picked}
+         <RowWrap>
+            <FormInput 
+               select
+               name="session_picked"
+               label="{titleCase($LL.base.form.pick_session({session: sessionTitle}))}"
+               on:change={handleChange}
+               bind:value={$form.session_picked}
+               bind:errors={$errors.session_picked}
+               required={inputItems.session_picked.required}
+            >
+               {#each inputItems.session_picked.options as session}
+                  <option value={session}>{session}</option>
+               {/each}
+            </FormInput>
+         </RowWrap>
+      {/if}
+      <!-- Subject input -->
       {#if inputItems.subject}
          <RowWrap>
             <FormInput 
@@ -253,6 +295,7 @@
             />
          </RowWrap>
       {/if}
+      <!-- Message input -->
       {#if inputItems.message}
          <RowWrap>
             <FormInput 
