@@ -11,6 +11,8 @@
       export let small = false;
    // Use smaller case
       export let smaller = false;
+   // Use smaller case
+      export let smallest = false;
    // Use larger case
       export let large = false;
    // Need custom leading?
@@ -20,6 +22,10 @@
       export let italic = false;
    // Make title thinner
       export let thin = false;
+
+   // Unused props
+   export let fake = false;
+   $: fake;
 </script>
 
 <span class="
@@ -28,7 +34,7 @@
       { leading ? leading : 'leading-none'}
       { thin ? 'font-light' : 'font-normal' }
       { small ? 'subtitle-size-sm' : smaller ? 'subtitle-size-xs'
-      : large   ? 'h5-size'
+      : smallest ? 'subtitle-sise-xxs' : large   ? 'h5-size'
       : 'subtitle-size'}
       { klass }"
     class:italic>

@@ -22,6 +22,10 @@
       export let italic = false;
    // Make title thinner
       export let thin = false;
+
+   // Unused props
+   export let fake = '';
+   $: fake;
 </script>
 
 

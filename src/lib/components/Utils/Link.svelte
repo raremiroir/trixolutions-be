@@ -37,10 +37,17 @@
    export let linkStyle = 'none';
 
    export let disabled = false;
+
+
+   // Unused props
+   export let type = '';
+   export let tabindex = -1;
+   $: {type, tabindex};
 </script>
 
 <!-- Link Tag -->
 <a 
+   {type} {tabindex}
    {title} {href} 
    {target} {rel} {role}
    aria-label={ariaLabel}
