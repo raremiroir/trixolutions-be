@@ -6,7 +6,7 @@ import type { BlogPost } from '$src/types';
 
 export const load: PageLoad = async ({ fetch }) => {
 
-   const res = await fetch('/nl/api/posts');
+   const res = await fetch('/api/posts');
    let posts = await res.json();
 
    const allPosts = await fetchMarkdownPosts();
