@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
    // Import svelte transitions
    import { fly } from "svelte/transition";
 
@@ -28,13 +28,13 @@
    let y = 0;
    // If user is hovering over trigger, set isHovered to true and
    // add 5 to position of mouse
-   const mouseOver = (e) => {
+   const mouseOver = (e:any) => {
       isHovered = true;
       x = e.pageX + 5;
       y = e.pageY + 5;
    }
    // when user is hovering over trigger and mouse moves, add 5 to position
-   const mouseMove = (e) => {
+   const mouseMove = (e:any) => {
       x = e.pageX + 5;
       y = e.pageY + 5;
    }
@@ -46,37 +46,36 @@
 
 </script>
 
-<div class="relative">
-   <div  on:mouseover={mouseOver}
-         on:mouseleave={mouseLeave}
-         on:mousemove={mouseMove} on:focus
-         class="{klass}">
-      <slot/>
-   </div>
-   {#if isHovered}
-      <div 
-         transition:fly={{duration:300, y:flyY, x:flyX}}
-         on:mouseenter={mouseOver}
-         on:mouseleave={mouseLeave}
-         class="
-            absolute
-            backdrop-blur-lg
-            cursor-default
-            {placement}
-            z-2 whitespace-nowrap
-            { small ? 'text-xs border opacity-80' : 'text-sm border-2 opacity-100'} 
-            font-semibold 
-            { small ? 'px-1 py-0.5' : 'px-2 py-1'} 
-            rounded-lg shadow-lg
-            { color === 'primary' ? 'bg-primary-l2/10 text-primary-l3 border-primary-l3 '
-            : color === 'error'   ? 'bg-error-l/10    text-error-d    border-error-d'
-            : color === 'error-alt'   ? 'bg-error-d   text-gray-50    border-error-d'
-            : color === 'success' ? 'bg-success-l/10  text-success-d  border-success-d'
-            : color === 'warning' ? 'bg-warning-l/10  text-warning-d  border-warning-d'
-            : color === 'info'    ? 'bg-info-l/10     text-info-d     border-info-d'
-            : color }
-         "> 
-         {title}
-      </div>   
-   {/if}
+<div  on:mouseover={mouseOver}
+      on:mouseleave={mouseLeave}
+      on:mousemove={mouseMove}
+      class="{klass}">
+   <slot/>
 </div>
+{#if isHovered}
+   <div 
+      transition:fly={{duration:300, y:flyY, x:flyX}}
+      on:mouseenter={mouseOver}
+      on:mouseleave={mouseLeave}
+      style="top: {y}px; left: {x}px;"
+      class="
+         absolute
+         backdrop-blur-lg
+         cursor-default
+         {placement}
+         z-2 whitespace-nowrap
+         { small ? 'text-xs border opacity-80' : 'text-sm border-2 opacity-100'} 
+         font-semibold 
+         { small ? 'px-1 py-0.5' : 'px-2 py-1'} 
+         rounded-lg shadow-lg
+         { color === 'primary' ? 'bg-primary-l2/10 text-primary-l3 border-primary-l3 '
+         : color === 'error'   ? 'bg-error-l/10    text-error-d    border-error-d'
+         : color === 'error-alt'   ? 'bg-error-d   text-gray-50    border-error-d'
+         : color === 'success' ? 'bg-success-l/10  text-success-d  border-success-d'
+         : color === 'warning' ? 'bg-warning-l/10  text-warning-d  border-warning-d'
+         : color === 'info'    ? 'bg-info-l/10     text-info-d     border-info-d'
+         : color }
+      "> 
+      {title}
+   </div>   
+{/if}
