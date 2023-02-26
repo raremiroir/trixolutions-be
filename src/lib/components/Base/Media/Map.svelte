@@ -53,7 +53,6 @@ function eventHandler (e: { detail: any; }) {
 		customStylesheetUrl="mapbox://styles/mirostorm/cle4woprs000b01o36tzm4bhv"
 		accessToken="pk.eyJ1IjoibWlyb3N0b3JtIiwiYSI6ImNsZTR3bWYzZTA0MnAzdXM0MmEyamFnbHgifQ.a2gKlKKn8MwX-J9faUwmVA"
 		bind:this={mapComponent}
-		on:recentre={(e) => console.log(e.detail.center.lat, e.detail.center.lng)}
     	on:ready={onReady}
 		options={{	
 			scrollZoom: false
