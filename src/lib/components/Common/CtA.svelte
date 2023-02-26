@@ -1,6 +1,6 @@
 <script>
    import LL from "$i18n/i18n-svelte";
-	import { titleCase } from "$src/lib/utils";
+	import { titleCase } from "$utils";
 
    import { Title, Button, Reveal, Modal, Subtitle, H3, H4, Form, MailchimpForm } from "$comp";
 	import Icon from "@iconify/svelte";

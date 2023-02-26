@@ -27,6 +27,9 @@
 	import { firstLetterCase, titleCase } from "$utils";
    // Import website config
 	import { website } from '$src/lib/config/website';
+
+
+	import FormBase from "$comp/Forms/FormBase.svelte";
    
 
 
@@ -112,7 +115,7 @@
          {#each places as place}
             <CardNew 
                title="{firstLetterCase($LL.pages.contact.establishment())} {place.code === 'be' ? $LL.base.geo.country.belgium() : place.code === 'nl' ? $LL.base.geo.country.netherlands() : 'error' }"
-               height='h-88 h-96 sm:h-96 md:h-92 lg:h-96'
+               height='h-88 sm:h-96 md:h-92 lg:h-96'
                class="col-span-1"
                {...cardProps}
             >
@@ -146,9 +149,8 @@
    
    <Section name="trixolutions-map">
       <Title type="h2" small slot="title">{firstLetterCase($LL.pages.contact.find_on_map())}!</Title>
-      <div class="w-full h-140">
-         <Map/>
-      </div>
+      <Map/>
+      <FormBase/>
    </Section>
 
    

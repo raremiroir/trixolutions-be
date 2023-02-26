@@ -24,7 +24,7 @@
 	
 
    // Import data
-	import type { PageData } from "../../$types";
+	import type { PageData } from "./$types";
    export let data:PageData;
    // Get info sessions
    let sessions = Object(data.sessions);

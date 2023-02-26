@@ -2,7 +2,7 @@
 
 	import { Modal, Button, Text, H3 } from "$comp";
    import LL from "$i18n/i18n-svelte";
-   import { titleCase } from "$lib/utils";
+   import { titleCase } from "$utils";
 
 </script>
 <Modal icon="mdi:tools">

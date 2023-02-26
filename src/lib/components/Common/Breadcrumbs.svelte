@@ -1,6 +1,6 @@
 <script>
    import { page } from '$app/stores';
-   import { titleCase } from '$utils/formatText';
+   import { titleCase } from '$utils';
 
 	import Icon from "@iconify/svelte";
 

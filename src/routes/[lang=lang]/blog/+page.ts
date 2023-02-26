@@ -2,7 +2,6 @@ import supabase from '$lib/db'
 import type { PageLoad } from '../$types';
 
 import { fetchMarkdownPosts } from '$utils';
-import { json } from '@sveltejs/kit';
 import type { BlogPost } from '$src/types';
 
 export const load: PageLoad = async ({ fetch }) => {

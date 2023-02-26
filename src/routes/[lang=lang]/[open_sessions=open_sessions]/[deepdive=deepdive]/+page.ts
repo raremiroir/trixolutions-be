@@ -1,6 +1,6 @@
 import supabase from '$lib/db'
 import { error } from '@sveltejs/kit';
-import type { PageLoad } from '../../$types';
+import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {
 

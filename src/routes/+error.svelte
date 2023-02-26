@@ -4,7 +4,7 @@
    // Import i18n
    import LL, { locale } from '$i18n/i18n-svelte';
 	// Import constants
-   import { formatUrl } from '$src/lib/utils';
+   import { formatUrl } from '$utils';
    // Import page variables
    import { page } from '$app/stores';
 

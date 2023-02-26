@@ -2,12 +2,11 @@
 	import PostCard from "./PostCard.svelte";
 	import PostGrid from "./PostGrid.svelte";
 
-   import { formatUrl } from "$utils/formatText";
    export let pageData:any;
 
    import { locale } from "$i18n/i18n-svelte";
 	import { Reveal } from "..";
-	import { formatDateFull, formatDateShort, formatTime } from "$src/lib/utils";
+	import { formatDateFull, formatDateShort, formatTime, formatUrl } from "$utils";
    
    export let blog = false;
 </script>

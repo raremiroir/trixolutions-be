@@ -1,7 +1,7 @@
 <script>
 
 	import { Modal, Button, Text, Link, H3 } from "$comp";
-   import { titleCase } from "$lib/utils";
+   import { titleCase } from "$utils";
    import LL, { locale } from "$i18n/i18n-svelte";
 
 </script>

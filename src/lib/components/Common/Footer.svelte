@@ -6,7 +6,7 @@
 
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
-	import { titleCase } from "$src/lib/utils";
+	import { titleCase } from "$utils";
 
 
    $: socialMediaItems = [

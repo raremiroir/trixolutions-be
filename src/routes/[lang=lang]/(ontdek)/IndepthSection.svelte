@@ -1,6 +1,6 @@
 <script>
    import { H2, Section } from "$comp";
-   import { formatUrl } from "$utils/formatText";
+   import { formatUrl } from "$utils";
 
    export let title = '';
 

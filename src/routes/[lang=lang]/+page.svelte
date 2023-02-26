@@ -15,7 +15,7 @@
 	import HomeHeroSlides from './HomeHeroSlides.svelte';
    
    // Import globals
-   import { formatUrl, titleCase } from "$utils/formatText";
+   import { formatUrl, titleCase } from "$utils";
    import { website } from '$lib/config/website';
 
    // Import i18n

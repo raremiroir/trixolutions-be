@@ -3,7 +3,7 @@
 <!--      -->
 <script>
    import { HeroInner } from './hero';
-	import { HeroSlider } from '../..';
+	import { HeroSlider } from '$comp';
    
    // Set image sources
    export let imgSrc = '';

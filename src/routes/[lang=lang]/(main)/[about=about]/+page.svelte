@@ -11,8 +11,7 @@
    import { Main, Section, Title, Text, Image, Alert, ErrorLoading, SEO, Breadcrumbs, H1, H2, Subtitle, Reveal } from "$comp";
 	import MemberCard from "./MemberCard.svelte";
 
-   // Import constants & website config
-   import { breakpoints } from "$lib/constants/breakpoints";
+   // Import website config
    import { website } from "$lib/config/website";
    // Import supabase
 	import supabase from "$lib/db";
