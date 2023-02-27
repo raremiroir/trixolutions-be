@@ -125,7 +125,7 @@
    export { default as FormBase } from './Forms/FormBase.svelte';
 
    export { default as ContactForm } from './Forms/ContactForm.svelte'
-   export { default as SessionSubForm } from './Forms/SessionSubForm.svelte'
+   export { default as SessionSubForm } from '../../routes/[lang=lang]/[open_sessions=open_sessions]/components/Forms/SessionSubForm.svelte'
    export { default as MailchimpForm } from './Forms/Mailchimp/MailchimpForm.svelte'
    
    export { default as FormInput } from './Forms/FormInput/index.svelte';
