@@ -74,7 +74,7 @@
             </Reveal>
          </div>
          <!-- Reveal Posts -->
-         <Reveal slow>
+         <Reveal>
             <PostGrid>
                <!-- Loop through each page features on home page -->
                {#each pagesData as item}
