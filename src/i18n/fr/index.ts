@@ -58,6 +58,7 @@ const fr: Translation = {
          field_too_short: "{item:string} doit comporter au moins {min:number} lettres.",
          field_too_long: "{item:string} peut contenir jusqu'à 5 {max:number} lettres.",
          email_error: "Cette adresse e-mail est invalide.",
+         phone_error: "Ce numéro de téléphone est invalide.",
          only_alpha: "{item:string} ne doit pas contenir de caractères spéciaux ni de chiffres.",
          pick_one: "Chosis une option.",
       },

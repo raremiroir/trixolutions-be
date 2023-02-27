@@ -186,6 +186,10 @@ type RootTranslation = {
 			 */
 			email_error: string
 			/**
+			 * D​i​t​ ​t​e​l​e​f​o​o​n​n​u​m​m​e​r​ ​i​s​ ​o​n​g​e​l​d​i​g​.
+			 */
+			phone_error: string
+			/**
 			 * {​i​t​e​m​}​ ​z​o​u​ ​g​e​e​n​ ​s​p​e​c​i​a​l​e​ ​k​a​r​a​k​t​e​r​s​ ​o​f​ ​n​u​m​m​e​r​s​ ​m​o​g​e​n​ ​b​e​v​a​t​t​e​n​.
 			 * @param {string} item
 			 */
@@ -3230,6 +3234,10 @@ export type TranslationFunctions = {
 			 * Dit e-mailadres is ongeldig.
 			 */
 			email_error: () => LocalizedString
+			/**
+			 * Dit telefoonnummer is ongeldig.
+			 */
+			phone_error: () => LocalizedString
 			/**
 			 * {item} zou geen speciale karakters of nummers mogen bevatten.
 			 */

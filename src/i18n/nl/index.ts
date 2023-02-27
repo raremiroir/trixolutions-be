@@ -58,6 +58,7 @@ const nl: BaseTranslation = {
          field_too_short: "{item:string} moet minstens {min:number} letters lang zijn.",
          field_too_long: "{item:string} mag maximaal {max:number} letters lang zijn.",
          email_error: "Dit e-mailadres is ongeldig.",
+         phone_error: "Dit telefoonnummer is ongeldig.",
          only_alpha: "{item:string} zou geen speciale karakters of nummers mogen bevatten.",
          pick_one: "Kies een optie.",
       },
