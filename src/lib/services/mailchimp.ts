@@ -23,8 +23,8 @@ async function registerEmail(email:string) {
             method: 'POST',
             headers: headers,
             body: JSON.stringify(data)
-        }).catch(err => console.log(err));
-        const mailchimpResponse = await response?.json().catch((err:any) => console.log(err));;
+        });
+        const mailchimpResponse = await response.json();
         if (mailchimpResponse) {
             return mailchimpResponse;
         }
