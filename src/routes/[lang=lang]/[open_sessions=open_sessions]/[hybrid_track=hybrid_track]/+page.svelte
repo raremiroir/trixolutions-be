@@ -16,15 +16,10 @@
    } from "$comp";
    import { 
       PartnershipAccordeon, WorkshopCard, 
-      SessionDateCard, ModalLocation, ModalTrainerTom
-   } from "../open-sessies";
-	import ModalRatings from "../components/ModalRatings.svelte";
-	import ModalTargetAudience from "../components/ModalTargetAudience.svelte";
-	import ModalApproach from "../components/ModalApproach.svelte";
-	import HybridTrackFeaturesSlider from "./HybridTrackFeaturesSlider.svelte";
-   
-   // TODO: Replace these
-	import ModalProgramPlacehold from "../components/ModalProgramPlacehold.svelte";
+      SessionDateCard, ModalLocation, ModalTrainerTom,
+      ModalRatings, ModalTargetAudience, ModalApproach,
+      HybridTrackFeaturesSlider, ModalProgramPlacehold
+   } from "../components/open-sessies";
 
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
@@ -103,7 +98,9 @@
       <Reveal bottom>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 lg:gap-4">
          {#each pageData as session}
-            <WorkshopCard {session} {sessionDates} class="col-span-1" />
+            {#if session.type !== 'level_2' && session.type!== 'info_session'}
+               <WorkshopCard {session} {sessionDates} class="col-span-1" />
+            {/if}
          {/each}
       </div>
       </Reveal>

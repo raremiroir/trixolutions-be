@@ -12,7 +12,7 @@
       Main, Section, Breadcrumbs, 
       Text, Button, H2, H3, Tag,
       Hero, Modal, CardBase,
-	   SEO, Reveal, Form, SessionSubForm
+	   SEO, Reveal, SessionSubForm
    } from "$comp";
    
    // Import website config
@@ -20,7 +20,7 @@
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
    // Import utils
-   import { formatDateMonthFull, formatTime, titleCase} from "$utils";
+   import { formatDateMonthFull, formatTime, titleCase } from "$utils";
 	
 
    // Import data

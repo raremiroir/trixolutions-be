@@ -15,11 +15,11 @@
          Hero, List, ListItem, Link,
          Accordeon, AccordeonItem, Subtitle, Modal, Button, Form
       } from "$comp";
-   import { SessionDateCard, ModalLocation } from "../open-sessies";
-   import ModalTrainerTom from "../components/ModalTrainerTom.svelte";
-   import PricingCard from "../components/PricingCard.svelte";
-   import ModalTargetAudience from "../components/ModalTargetAudience.svelte";
-   import ModalApproach from "../components/ModalApproach.svelte";
+
+   import { 
+      SessionDateCard, ModalLocation, ModalTrainerTom, 
+      PricingCard, ModalTargetAudience, ModalApproach 
+   } from "../components/open-sessies";
    
    // Import constants
    import { firstLetterCase, formatDateFull, formatUrl, titleCase } from "$utils";

@@ -9,7 +9,7 @@
 
    // Import components
    import { Main, Section, Breadcrumbs, H1, SEO } from "$comp";
-	import SessionTypeCard from "./SessionTypeCard.svelte";
+   import { SessionTypeCard } from './components/open-sessies';
    
    // Import website config
    import { website } from "$lib/config/website";
