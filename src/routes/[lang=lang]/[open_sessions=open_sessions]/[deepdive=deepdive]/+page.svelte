@@ -13,7 +13,7 @@
          Main, Section, Text, Breadcrumbs, SEO, Reveal,
          H2, H3, H4, H5, Subheader,
          Hero, List, ListItem, Link,
-         Accordeon, AccordeonItem, Subtitle, Modal, Button, Form
+         Accordeon, AccordeonItem, Subtitle, Modal, Button, SessionSubForm
       } from "$comp";
 
    import { 
@@ -239,12 +239,10 @@
    <Modal content id={99}>
       <H3 slot="title" small>{titleCase($LL.sessions.subscribe_to())} {titleCase($LL.sessions.level_2.deepdive())}!</H3>   
       <Subtitle small italic>{firstLetterCase($LL.sessions.sign_up_to())} {$LL.base.word.an()} <strong>{$LL.sessions.level_2.advanced_coaching()}<br/>({$LL.sessions.level_2.title()} - {$LL.sessions.level_2.level2()})</strong></Subtitle>
-      <!-- <SessionSubscribeForm session="level_2" submitText={$LL.sessions.info.subscribe()}/> -->
-      <Form 
-         formType="session_sub"
-         sessionType="level_2"
-         submitText={$LL.sessions.level_2.subscribe()}
-         {sessionDates}
+      <SessionSubForm 
+         sessions={sessionDates}
+         submitText={titleCase($LL.sessions.level_2.subscribe())}
+         sessionTitle="{titleCase($LL.sessions.level_2.title())}"
       />
    </Modal>
 </Main>

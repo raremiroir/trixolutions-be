@@ -118,11 +118,5 @@
          submitText={titleCase($LL.sessions.level_1.subscribe())}
          sessionTitle={titleCase($LL.sessions.level_1.title())}
       />
-   {:else if sessionType === 'l2'}
-      <SessionSubForm 
-         sessions={sessionDates}
-         submitText={titleCase($LL.sessions.level_2.subscribe())}
-         sessionTitle="{titleCase($LL.sessions.level_2.title())} - {titleCase($LL.sessions.level_2.level2())}"
-      />
    {/if}
 </Modal>
