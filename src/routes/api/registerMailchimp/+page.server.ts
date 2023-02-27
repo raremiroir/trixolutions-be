@@ -2,14 +2,8 @@ import mailchimp from '$lib/services/mailchimp';
 
 export async function _post({ body }:any) {
     try {
-        let data = await JSON.parse(body).catch((err:any) => {
-            console.log(err);
-            throw err;
-        })
-        let result = await mailchimp.registerEmail(data.email).catch((err:any) => {
-            console.log(err);
-            throw err;
-        });
+        let data = await JSON.parse(body);
+        let result = await mailchimp.registerEmail(data.email);
         return {
             status: result.status,
             body: result
