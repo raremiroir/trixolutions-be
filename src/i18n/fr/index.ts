@@ -9,6 +9,8 @@ const fr: Translation = {
          an: 'un',
          in: 'dans',
          to: 'pour',
+         with: 'avec',
+         without: 'sans'
       },
       nav: {
          hamburger: {
@@ -45,7 +47,8 @@ const fr: Translation = {
          learn_more: 'apprendre encore plus',
          read_more: 'lire plus',
          go_to: 'aller à',
-         proceed_in: "continuer en"
+         proceed_in: "continuer en",
+         sign_up: "abonnez-vous"
       },
       error: {
          not_found: "Malheureusement. La page que vous recherchiez n'a pas été trouvée. <br/>Retournez à la page d'accueil via le bouton ci-dessous, ou utilisez la barre de navigation.",

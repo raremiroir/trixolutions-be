@@ -49,6 +49,14 @@ type RootTranslation = {
 			 * o​p
 			 */
 			to: string
+			/**
+			 * m​e​t
+			 */
+			'with': string
+			/**
+			 * z​o​n​d​e​r
+			 */
+			without: string
 		}
 		nav: {
 			hamburger: {
@@ -143,6 +151,10 @@ type RootTranslation = {
 			 * g​a​ ​v​e​r​d​e​r​ ​i​n​ ​h​e​t
 			 */
 			proceed_in: string
+			/**
+			 * s​c​h​r​i​j​f​ ​j​e​ ​i​n
+			 */
+			sign_up: string
 		}
 		error: {
 			/**
@@ -3104,6 +3116,14 @@ export type TranslationFunctions = {
 			 * op
 			 */
 			to: () => LocalizedString
+			/**
+			 * met
+			 */
+			'with': () => LocalizedString
+			/**
+			 * zonder
+			 */
+			without: () => LocalizedString
 		}
 		nav: {
 			hamburger: {
@@ -3198,6 +3218,10 @@ export type TranslationFunctions = {
 			 * ga verder in het
 			 */
 			proceed_in: () => LocalizedString
+			/**
+			 * schrijf je in
+			 */
+			sign_up: () => LocalizedString
 		}
 		error: {
 			/**

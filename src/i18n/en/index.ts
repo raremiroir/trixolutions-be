@@ -9,6 +9,8 @@ const en: Translation = {
          an: 'an',
          in: 'in',
          to: 'to',
+         with: 'with',
+         without: 'without'
       },
       nav: {
          hamburger: {
@@ -45,7 +47,8 @@ const en: Translation = {
          learn_more: 'learn more',
          read_more: 'read more',
          go_to: 'go to',
-         proceed_in: "proceed in"
+         proceed_in: "proceed in",
+         sign_up: "sign up now"
       },
       error: {
          not_found: "Sorry! The page you were looking for was not found. <br/>Return to our home page by clicking the button, or just use the navigation bar.",

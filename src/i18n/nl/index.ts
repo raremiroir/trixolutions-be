@@ -9,6 +9,8 @@ const nl: BaseTranslation = {
          an: 'een',
          in: 'in',
          to: 'op',
+         with: 'met',
+         without: 'zonder'
       },
       nav: {
          hamburger: {
@@ -45,7 +47,8 @@ const nl: BaseTranslation = {
          learn_more: 'leer meer',
          read_more: 'lees meer',
          go_to: 'ga naar',
-         proceed_in: "ga verder in het"
+         proceed_in: "ga verder in het",
+         sign_up: "schrijf je in"
       },
       error: {
          not_found: "Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk.",
