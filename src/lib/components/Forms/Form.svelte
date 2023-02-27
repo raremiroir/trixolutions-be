@@ -13,7 +13,11 @@
    // Import db
    import supabase from "$lib/db";
    // Import utils
-	import { firstLetterCase, titleCase } from "$lib/utils";
+	import { 
+      firstLetterCase, titleCase, 
+      mailToAdmin,
+      dbInsert 
+   } from "$utils";
 	import { fade } from "svelte/transition";
 
    // Define form type (contact | session_sub)
@@ -30,50 +34,21 @@
    let pickedSession = '';
 
    // Define variables
-      let first_name = yup
-         .string()
-         .min( 2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.first_name()), min: 2 }) )
-         .matches( /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{1,}$/u, { excludeEmptyString: true, message: $LL.base.validation.only_alpha({ item: titleCase($LL.base.form.first_name()) }) } )
-         .required($LL.base.validation.required({ item: titleCase($LL.base.form.first_name()) }));
-
-      let last_name = yup
-         .string()
-         .min( 3, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.last_name()), min: 3 }) )
-         .matches(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{1,}$/u, { excludeEmptyString: true, message: $LL.base.validation.only_alpha({ item: titleCase($LL.base.form.last_name()) }) } )
-         .required($LL.base.validation.required({ item: titleCase($LL.base.form.last_name()) }));
-
-      let email = yup
-         .string()
-         .email($LL.base.validation.email_error())
-         .required($LL.base.validation.required({ item: titleCase($LL.base.form.email()) }));
-
-      let phone_number = yup
-         .string()
-         // .matches( /\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$/, $LL.base.validation.default_fixed({ item: $LL.base.form.telephone()}))
-         // .required($LL.base.validation.required({ item: titleCase($LL.base.form.telephone()) }));
-
-      let company = yup.string();
-      if (formType === 'session_sub') {
-         company = yup
-            .string()
-            .required($LL.base.validation.required({ item: titleCase($LL.base.form.company()) }));
-      }
-
+      // let first_name: yup.StringSchema = createYupSchema('First Name', {required: true, min: 2, max: 40 });
+      let first_name = yup.string().required().min(2).max(40);
+      let last_name: yup.StringSchema = createYupSchema('Last Name', { required: true, min: 3, max: 60 });
+      let email: yup.StringSchema = createYupSchema('Email', { required: true, email: true });
+      let phone_number: yup.StringSchema = createYupSchema('Phone Number', { required: true });
+      let company: yup.StringSchema = createYupSchema('Company', {required: true, min: 2, max: 80});
+      
       let session_picked = yup
-         .string()
-         .required( firstLetterCase( $LL.base.form.pick_session({ session: (sessionType === 'info_session' ? $LL.sessions.info.single() : $LL.sessions.level_2.workshop()) }) ) );
+      .string()
+      .required( firstLetterCase( $LL.base.form.pick_session({ session: (sessionType === 'info_session' ? $LL.sessions.info.single() : $LL.sessions.level_2.workshop()) }) ) );
+      
+      let subject: yup.StringSchema = createYupSchema('Subject', { required: true, min: 4, max: 50});
+      let message: yup.StringSchema = createYupSchema('Message', { required: true, min: 10, max: 1000});
 
-      let subject = yup
-         .string()
-         .min( 4, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.subject()), min: 4 }) )
-         .max( 80, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.subject()), max: 80 }) )
-         .required($LL.base.validation.required({ item: titleCase($LL.base.form.subject()) }));
-
-      let message = yup
-         .string()
-         .min( 5, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.message()), min: 5 }) )
-         .max( 500, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.message()), max: 500 }) )
-         .required( $LL.base.validation.required({ item: titleCase($LL.base.form.message()) }) );
+      console.log(session_picked, subject)
 
    // Create object with initial values for each field
    let initValues = {
@@ -125,36 +100,13 @@
    // Add variable which stores whether a msg has been sent or not
    let messageSent = false
 
-
-   // Function to send message
-   const sendMessage = async({ subject = '', message = '' }) => {
-      // console.log(subject, message);
-
-      const bodyData = JSON.stringify({ subject, message });
-
-      await fetch (`/${$locale}/api/sendEmail`, {
-         method: 'POST',
-         body: bodyData,
-         headers: {
-            'Content-Type': 'application/json',
-         }
-      }).then((res) => {
-         console.log(res);
-         messageSent = true;
-      })
-      .catch((err) => {
-         console.error(err);
-         messageSent = false;
-      })
-   }
-
    // Function to insert values to db (depending on formType)
    const insertValues = async() => {
       if (formType === 'session_sub') {
 
-         let { data, error } = await supabase
-            .from('session_subscriptions')
-            .insert([{
+         const data = dbInsert(
+            'session_subscriptions',
+            {
                session: pickedSession,
                email: $form.email,
                first_name: $form.first_name,
@@ -163,25 +115,24 @@
                phone: $form.phone_number,
                subject: $form.subject,
                message: $form.message,
-            }])
-         if (error) throw new Error (error.message);
-
+            }
+         )
          messageSent = true;
          return data;
 
       } else if (formType === 'contact') {
 
-         const { data, error } = await supabase
-            .from('contact_form_messages')
-            .insert([{
+         const data = dbInsert(
+            'contact_form_messages',
+            {
                first_name: $form.first_name,
                last_name: $form.last_name,
                email: $form.email,
                company: $form.company,
                subject: $form.subject,
                message: $form.message,
-            }])
-         if (error) throw new Error(error.message);
+            }
+         )
 
          messageSent = true;
          return data;
@@ -207,7 +158,8 @@
 
          const data = { subject: $form.subject, message: $form.message };
          insertValues()
-         sendMessage(data);
+         // sendMessage(data);
+         mailToAdmin(data);
 
       }
    })
@@ -373,7 +325,7 @@
                <FormInput 
                   select
                   name="session_picked"
-                  label="{titleCase($LL.base.form.pick_session({ session: sessionType === 'info_session' ? $LL.sessions.info.single() : $LL.sessions.workshop()}))}"
+                  label="{titleCase($LL.base.form.pick_session())}"
                   on:change={handleChange}
                   bind:value={$form.session_picked}
                   bind:errors={$errors.session_picked}
