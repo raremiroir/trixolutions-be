@@ -2,7 +2,7 @@
    import LL from "$i18n/i18n-svelte";
 	import { titleCase } from "$utils";
 
-   import { Button, Reveal, Modal, Subtitle, H3, H4, MailchimpForm, ContactForm } from "$comp";
+   import { Button, Reveal, Modal, Subtitle, H3, H4, MailchimpForm, ContactForm, Text } from "$comp";
 	import Icon from "@iconify/svelte";
 
 </script>
@@ -38,7 +38,8 @@
             </Button>
    
             <H3 slot="title" small>{$LL.pages.contact.newsletter.subtitle()}!</H3>
-            <MailchimpForm />
+            <!-- <MailchimpForm /> -->
+            <Text>Form here</Text>
 
          </Modal>
       </div>
