@@ -12,7 +12,7 @@
       Main, Section, Breadcrumbs, 
       Text, Button, H2, H3, Tag,
       Hero, Modal, CardBase,
-	   SEO, Reveal, Form
+	   SEO, Reveal, Form, SessionSubForm
    } from "$comp";
    
    // Import website config
@@ -129,11 +129,10 @@
                
                   <H3 slot="title" small>{titleCase($LL.pages.contact.btn.contact_us())}!</H3>   
    
-                  <Form 
-                     formType="session_sub"
-                     sessionType="info_session"
-                     submitText={$LL.sessions.info.subscribe()}
-                     {sessionDates}
+                  <SessionSubForm 
+                     sessions={sessionDates}
+                     submitText="{$LL.sessions.info.subscribe()}"
+                     sessionTitle="{$LL.sessions.info.single()}"
                   />
                
                </Modal>
