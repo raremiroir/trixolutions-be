@@ -3,7 +3,7 @@ import base64 from 'base-64';
 dotenv.config();
 let MAILCHIMP_API_KEY = process.env['MAILCHIMP_API_KEY'];
 
-async function registerEmail(email) {
+async function registerEmail(email:string) {
     try {
         // substitute your Mailchimp settings here
         let dc = '';
@@ -23,8 +23,8 @@ async function registerEmail(email) {
             method: 'POST',
             headers: headers,
             body: JSON.stringify(data)
-        });
-        const mailchimpResponse = await response.json();
+        }).catch(err => console.log(err));
+        const mailchimpResponse = await response?.json().catch((err:any) => console.log(err));;
         if (mailchimpResponse) {
             return mailchimpResponse;
         }
