@@ -65,6 +65,17 @@ const fr: Translation = {
          only_alpha: "{item:string} ne doit pas contenir de caractères spéciaux ni de chiffres.",
          pick_one: "Chosis une option.",
       },
+      newsletter: {
+         btn: "S'inscrire à la Newsletter",
+         validation: {
+            already_member: "{email:string} est déjà enregistré dans la Newsletter.",
+            looks_invalid: "{email:string} semble invalide ou faux.",
+            failed: "Il y a eu un problème lors de l'inscription. Réessayez plus tard.",
+         },
+         success: {
+            subscribed: "Vous avez bien été enregistré. Bienvenue dans la famille Trixolutions, {name:string}!"
+         }
+      },
       form: {
          first_name: "prénom",
          last_name: "nom de famille",

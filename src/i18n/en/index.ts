@@ -65,6 +65,17 @@ const en: Translation = {
          only_alpha: "{item:string} should not contain any numbers or special characters.",
          pick_one: "Pick an option.",
       },
+      newsletter: {
+         btn: "Subscribe to Trixolutions Newsletter",
+         validation: {
+            already_member: "{email:string} has already been signed up for our newsletter.",
+            looks_invalid: "{email:string} looks invalid or fake.",
+            failed: "An error occured whilst trying to subscribe you to the newsletter. Try again later.",
+         },
+         success: {
+            subscribed: "You have been successfully subscribed. Welcome to the Trixolutions family, {name:string}!"
+         }
+      },
       form: {
          first_name: "first name",
          last_name: "last name",

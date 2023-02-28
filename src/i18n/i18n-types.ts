@@ -211,6 +211,35 @@ type RootTranslation = {
 			 */
 			pick_one: string
 		}
+		newsletter: {
+			/**
+			 * I​n​s​c​h​r​i​j​v​e​n​ ​v​o​o​r​ ​N​i​e​u​w​s​b​r​i​e​f
+			 */
+			btn: string
+			validation: {
+				/**
+				 * {​e​m​a​i​l​}​ ​i​s​ ​r​e​e​d​s​ ​i​n​g​e​s​c​h​r​e​v​e​n​ ​i​n​ ​d​e​ ​N​i​e​u​w​s​b​r​i​e​f​.
+				 * @param {string} email
+				 */
+				already_member: RequiredParams<'email'>
+				/**
+				 * {​e​m​a​i​l​}​ ​z​i​e​t​ ​e​r​ ​o​n​g​e​l​d​i​g​ ​o​f​ ​f​a​k​e​ ​u​i​t​.
+				 * @param {string} email
+				 */
+				looks_invalid: RequiredParams<'email'>
+				/**
+				 * E​r​ ​i​s​ ​e​e​n​ ​p​r​o​b​l​e​e​m​ ​o​p​g​e​t​r​e​d​e​n​ ​t​i​j​d​e​n​s​ ​h​e​t​ ​i​n​s​c​h​r​i​j​v​e​n​.​ ​P​r​o​b​e​e​r​ ​h​e​t​ ​l​a​t​e​r​ ​o​p​n​i​e​u​w​.
+				 */
+				failed: string
+			}
+			success: {
+				/**
+				 * J​e​ ​b​e​n​t​ ​s​u​c​c​e​s​v​o​l​ ​i​n​g​e​s​c​h​r​e​v​e​n​.​ ​W​e​l​k​o​m​ ​b​i​j​ ​d​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​f​a​m​i​l​i​e​,​ ​{​n​a​m​e​}​!
+				 * @param {string} name
+				 */
+				subscribed: RequiredParams<'name'>
+			}
+		}
 		form: {
 			/**
 			 * v​o​o​r​n​a​a​m
@@ -3270,6 +3299,32 @@ export type TranslationFunctions = {
 			 * Kies een optie.
 			 */
 			pick_one: () => LocalizedString
+		}
+		newsletter: {
+			/**
+			 * Inschrijven voor Nieuwsbrief
+			 */
+			btn: () => LocalizedString
+			validation: {
+				/**
+				 * {email} is reeds ingeschreven in de Nieuwsbrief.
+				 */
+				already_member: (arg: { email: string }) => LocalizedString
+				/**
+				 * {email} ziet er ongeldig of fake uit.
+				 */
+				looks_invalid: (arg: { email: string }) => LocalizedString
+				/**
+				 * Er is een probleem opgetreden tijdens het inschrijven. Probeer het later opnieuw.
+				 */
+				failed: () => LocalizedString
+			}
+			success: {
+				/**
+				 * Je bent succesvol ingeschreven. Welkom bij de Trixolutions familie, {name}!
+				 */
+				subscribed: (arg: { name: string }) => LocalizedString
+			}
 		}
 		form: {
 			/**

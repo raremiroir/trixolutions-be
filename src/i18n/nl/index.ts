@@ -65,6 +65,17 @@ const nl: BaseTranslation = {
          only_alpha: "{item:string} zou geen speciale karakters of nummers mogen bevatten.",
          pick_one: "Kies een optie.",
       },
+      newsletter: {
+         btn: "Inschrijven voor Nieuwsbrief",
+         validation: {
+            already_member: "{email:string} is reeds ingeschreven in de Nieuwsbrief.",
+            looks_invalid: "{email:string} ziet er ongeldig of fake uit.",
+            failed: "Er is een probleem opgetreden tijdens het inschrijven. Probeer het later opnieuw.",
+         },
+         success: {
+            subscribed: "Je bent succesvol ingeschreven. Welkom bij de Trixolutions familie, {name:string}!"
+         }
+      },
       form: {
          first_name: "voornaam",
          last_name: "achternaam",
