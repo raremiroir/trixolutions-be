@@ -20,7 +20,8 @@ export { processPathname as processPathname } from './i18n'
 export { fetchMarkdownPosts as fetchMarkdownPosts } from './blog';
 
 // Mailgun
-export { mailToAdmin as mailToAdmin } from './mailgun'
+export { mailToAdmin as mailToAdmin } from './mail'
+export { registerMailchimp as registerMailchimp } from './mail'
 
 // Supabase Queries
 export { dbInsert as dbInsert } from './query'
