@@ -38,8 +38,7 @@
             </Button>
    
             <H3 slot="title" small>{$LL.pages.contact.newsletter.subtitle()}!</H3>
-            <!-- <MailchimpForm /> -->
-            <Text>Form here</Text>
+            <MailchimpForm />
 
          </Modal>
       </div>
