@@ -13,8 +13,6 @@ const mg = mailgun.client({
 })
 
 export const sendEmail = async(subject:string, message:string) => {
-   // console.log(subject, message);
-
    try {
       const data = {
          from: `Trixolutions Admin <noreply@${SECRET_MAILGUN_DOMAIN}>`,
@@ -26,7 +24,7 @@ export const sendEmail = async(subject:string, message:string) => {
       }
 
       const res = mg.messages.create(SECRET_MAILGUN_DOMAIN, data)
-            console.log(res);
+      // console.log(res);
    } catch(err) {
       console.error(err);
    };

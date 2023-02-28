@@ -1,4 +1,4 @@
-import { sendEmail } from "$lib/mailgun";
+import { sendEmail } from "$lib/services/mailgun";
 
 export async function POST ({ request }: { request: Request }) {
    const { subject, message } = await request.json();
