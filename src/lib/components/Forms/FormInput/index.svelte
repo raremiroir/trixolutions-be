@@ -63,7 +63,7 @@
 </script>
 
 <!-- Input Wrap -->
-<div class="flex flex-col w-full my-1">
+<div class="flex flex-col w-full my-1 { type === 'hidden' ? 'hidden' : '' }">
 
    <!-- Label -->
    <label 

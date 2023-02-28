@@ -7,6 +7,8 @@
    export let placeholder = '';
    export let type = "text"
 
+   const hidden = type === 'hidden';
+
    export let required = false;
    export let disabled = false;
    
@@ -27,5 +29,5 @@
       id={name} {type} {value} {placeholder} {required}
       on:input={handleInput}
       on:change
-      class="{klass}"
+      class="{klass} {hidden ? 'hidden' : ''}"
       />
