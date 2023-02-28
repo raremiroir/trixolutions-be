@@ -1,40 +1,45 @@
 import dotenv from 'dotenv';
-import base64 from 'base-64';
 dotenv.config();
 let MAILCHIMP_API_KEY = process.env['MAILCHIMP_API_KEY'];
 
-async function registerEmail(email:string) {
-    try {
-        // substitute your Mailchimp settings here
-        let dc = '';
-        let list_id = '';
-        let url = `https://${dc}.api.mailchimp.com/3.0/lists/${list_id}/members`;
-        let password = MAILCHIMP_API_KEY;
+import client from '@mailchimp/mailchimp_marketing'
 
-        let data = {
+client.setConfig({
+    apiKey: MAILCHIMP_API_KEY,
+    server: 'us4'
+})
+
+export const registerEmail = async (first_name:string, last_name:string, email:string, lang:string = 'nl' ) => {
+    const list_id = '4d890cd5e1';
+    try {
+        console.log(`email: ${email}, first_name: ${first_name}, last_name: ${last_name}, lang: ${lang}`);
+        const res = await client.lists.addListMember(list_id, {
             email_address: email,
-            status: 'unsubscribed'
+            language: lang,
+            status:'subscribed',
+            merge_fields: {
+                FNAME: first_name,
+                LNAME: last_name
+            },
+            tags: [
+                lang === 'nl' ? 'BE-2023-nl'
+                : lang === 'en'? 'BE-2023-en'
+                : lang === 'fr'? 'BE-2023-fr'
+                : 'BE-2023'
+            ]
+        })
+
+        return {
+            success: true,
+            message: 'Success',
+            data: res
         };
 
-        let headers = new Headers();
-        headers.append('Authorization', 'Basic ' + base64.encode('anystring:' + password));
-
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: headers,
-            body: JSON.stringify(data)
-        });
-        const mailchimpResponse = await response.json();
-        if (mailchimpResponse) {
-            return mailchimpResponse;
+    } catch (err:any) {
+        return {
+            success: false,
+            message: err.message,
+            data: err
         }
-    } catch (error) {
-        console.error(error);
     }
 }
-
-const mailchimp = {
-    registerEmail
-};
-
-export default mailchimp;
