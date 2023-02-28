@@ -129,6 +129,7 @@
    export { default as MailchimpForm } from './Forms/Mailchimp/MailchimpForm.svelte'
    
    export { default as FormInput } from './Forms/FormInput/index.svelte';
+   export { default as MessageSentAlert } from './Forms/FormUtils/MessageSentAlert.svelte';
 
 
 // ██████   ██████  ███████ ████████ ███████ 
