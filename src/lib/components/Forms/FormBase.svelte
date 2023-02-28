@@ -3,10 +3,9 @@
    import type { ChosenInputs } from './types'
 
    // IMPORT COMPONENTS
-   import { Button, Captcha, FormInput, Tooltip } from '$comp';
+   import { Alert, Button, Captcha, FormInput, Tooltip } from '$comp';
 	import { fade } from 'svelte/transition';
 	import { MessageSentAlert, RowWrap } from './FormUtils';
-   import { Confetti } from 'svelte-confetti';
 
    // IMPORT UTILS
    import * as yup from 'yup'
@@ -16,6 +15,8 @@
    // IMPORT I18N
    import LL, { locale } from '$i18n/i18n-svelte';
 
+   export let extraSuccess = true;
+   $: extraSuccess;
    let success = false;
 
    export let submitText = 'Submit';
@@ -143,14 +144,24 @@
       initValues.message = '';
    }
 
+   // Language validation schema
+   formValues.language = yup.string()
+    .oneOf(['nl', 'fr', 'en'])
+    .default(() => $locale)
+    .required();
+   initValues.language = $locale;
+
    // Define validation schema
-   let validationSchema = yup.object().shape({});
+   let validationSchema = yup.object().shape({
+   });
    Object.keys(formValues).forEach(key => {
       validationSchema = validationSchema.shape({
          [key]: formValues[key]
       })
    })
-   console.log(validationSchema);
+   validationSchema = validationSchema.shape({
+      language: formValues.language
+   })
 
    // Create form
    let {
@@ -161,10 +172,15 @@
       initialValues: initValues,
       validationSchema: validationSchema,
       onSubmit: values => {
-
-         submitAction(values);
-
-         success = true;
+         try {
+            submitAction(values);
+            success = true;
+         } catch (e) {
+            console.log('')
+            console.log('formbase submit error: ', e);
+            console.log('')
+            success = false;
+         }
       }
    })
 
@@ -172,7 +188,7 @@
    $: formEmpty = isObjEmpty($form);
    $: anyEmpty = isObjEmptyAny($form);
 
-   const resetForm = () => {
+   export const resetForm = () => {
       Object.keys($form).forEach(key =>{
          $form[key] = '';
       })
@@ -181,10 +197,17 @@
 
 </script>
 
-{#if success}
+{#if success && extraSuccess}
 
    <div class="w-full" transition:fade={{duration: 200}}>
-      <MessageSentAlert resetForm={() => resetForm()}/>
+      <div 
+         class="w-fit h-fit mx-auto my-0 p-0"
+         on:click={() => resetForm()}
+         on:keydown={() => resetForm()}>
+         <slot name="success">
+            <MessageSentAlert success/>
+         </slot>
+      </div>
    </div>
 
 {:else}
@@ -314,6 +337,19 @@
          </RowWrap>
       {/if}
 
+      <FormInput 
+         type="hidden"
+         name="language"
+         label=""
+         on:change={handleChange}
+         bind:value={$form.language}
+         bind:errors={$errors.language}
+         required
+      />
+
+      <!-- Errors -->
+      <slot name="errors" />
+
       <!-- <Captcha /> -->
 
       <div class="flex flex-row w-full justify-between items-center mt-4">
@@ -323,11 +359,8 @@
             :  firstLetterCase($LL.base.form.content.send_msg())}">
             <Button
                ariaLabel={submitText}
-               disabled={!$isValid || anyEmpty} 
+               disabled={!$isValid}
                type="submit">
-               {#if $isSubmitting}
-                  <Confetti amount={70} x={[-0.5, 0.5]} y={[-0.5, -0.5]} colorArray={["#0b3259", "#fb5607", "#195693", "#d1d1ce", "#3a86ff"]} />
-               {/if}
                {submitText}
             </Button>
          </div>
