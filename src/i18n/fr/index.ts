@@ -41,6 +41,7 @@ const fr: Translation = {
       },
       btn: {
          close: "fermer",
+         reload: "recharger",
          back_to_home: "Retour à la page d'accueil",
          more_info: "plus d'infos",
          about_trixo: "à propos de Trixolutions",
@@ -118,6 +119,12 @@ const fr: Translation = {
          more_about_us: 'en savoir plus sur nous',
          open_workshops: 'ateliers ouverts',
          creator: "Conçu, Développé et Géré par Mist Media"
+      }
+   },
+   pwa: {
+      messages: {
+         app_ready: "L'application est gérée pour fonctionner hors ligne.",
+         new_content: "De nouveaux contenus sont disponibles. Appuyez sur 'recharger' pour afficher le contenu.",
       }
    }
 }

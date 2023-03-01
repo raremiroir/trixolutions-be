@@ -41,6 +41,7 @@ const nl: BaseTranslation = {
       },
       btn: {
          close: "sluiten",
+         reload: "opnieuw laden",
          back_to_home: "Terug naar Homepagina",
          more_info: "meer info",
          about_trixo: "over Trixolutions",
@@ -118,6 +119,12 @@ const nl: BaseTranslation = {
          more_about_us: 'meer over ons',
          open_workshops: 'open workshops',
          creator: "Ontworpen, Ontwikkeld en Beheerd door Mist Media"
+      }
+   },
+   pwa: {
+      messages: {
+         app_ready: "App is gereed om offline te functioneren.",
+         new_content: "Nieuwe content is beschikbaar. Druk op 'opnieuw laden' om de content te bekijken.",
       }
    }
 }

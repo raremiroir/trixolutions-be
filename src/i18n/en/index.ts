@@ -41,6 +41,7 @@ const en: Translation = {
       },
       btn: {
          close: "close",
+         reload: "reload",
          back_to_home: "Back to Home Page",
          more_info: "more info",
          about_trixo: "about Trixolutions",
@@ -118,6 +119,12 @@ const en: Translation = {
          more_about_us: 'more about us',
          open_workshops: 'open workshops',
          creator: "Designed, Developed and Managed by Mist Media"
+      }
+   },
+   pwa: {
+      messages: {
+         app_ready: "App ready to work offline.",
+         new_content: "New content available, click on the reload button to update.",
       }
    }
 }
