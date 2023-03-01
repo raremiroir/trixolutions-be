@@ -124,6 +124,10 @@ type RootTranslation = {
 			 */
 			close: string
 			/**
+			 * o​p​n​i​e​u​w​ ​l​a​d​e​n
+			 */
+			reload: string
+			/**
 			 * T​e​r​u​g​ ​n​a​a​r​ ​H​o​m​e​p​a​g​i​n​a
 			 */
 			back_to_home: string
@@ -394,6 +398,18 @@ type RootTranslation = {
 			 * O​n​t​w​o​r​p​e​n​,​ ​O​n​t​w​i​k​k​e​l​d​ ​e​n​ ​B​e​h​e​e​r​d​ ​d​o​o​r​ ​M​i​s​t​ ​M​e​d​i​a
 			 */
 			creator: string
+		}
+	}
+	pwa: {
+		messages: {
+			/**
+			 * A​p​p​ ​i​s​ ​g​e​r​e​e​d​ ​o​m​ ​o​f​f​l​i​n​e​ ​t​e​ ​f​u​n​c​t​i​o​n​e​r​e​n​.
+			 */
+			app_ready: string
+			/**
+			 * N​i​e​u​w​e​ ​c​o​n​t​e​n​t​ ​i​s​ ​b​e​s​c​h​i​k​b​a​a​r​.​ ​D​r​u​k​ ​o​p​ ​'​o​p​n​i​e​u​w​ ​l​a​d​e​n​'​ ​o​m​ ​d​e​ ​c​o​n​t​e​n​t​ ​t​e​ ​b​e​k​i​j​k​e​n​.
+			 */
+			new_content: string
 		}
 	}
 }
@@ -3220,6 +3236,10 @@ export type TranslationFunctions = {
 			 */
 			close: () => LocalizedString
 			/**
+			 * opnieuw laden
+			 */
+			reload: () => LocalizedString
+			/**
 			 * Terug naar Homepagina
 			 */
 			back_to_home: () => LocalizedString
@@ -3470,6 +3490,18 @@ export type TranslationFunctions = {
 			 * Ontworpen, Ontwikkeld en Beheerd door Mist Media
 			 */
 			creator: () => LocalizedString
+		}
+	}
+	pwa: {
+		messages: {
+			/**
+			 * App is gereed om offline te functioneren.
+			 */
+			app_ready: () => LocalizedString
+			/**
+			 * Nieuwe content is beschikbaar. Druk op 'opnieuw laden' om de content te bekijken.
+			 */
+			new_content: () => LocalizedString
 		}
 	}
 	components: {
