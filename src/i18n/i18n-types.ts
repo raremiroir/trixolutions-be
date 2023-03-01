@@ -653,7 +653,7 @@ export type NamespaceNavTranslation = {
 			 */
 			title: string
 			/**
-			 * a​l​g​e​m​e​n​e​-​v​o​o​r​w​a​a​r​d​e​n​-​k​m​o​-​p​o​r​t​e​f​e​u​i​l​l​e
+			 * a​l​g​e​m​e​n​e​-​v​o​o​r​w​a​a​r​d​e​n​-​k​m​o​-​p​o​r​t​f​o​l​i​o
 			 */
 			slug: string
 		}
@@ -3726,7 +3726,7 @@ export type TranslationFunctions = {
 				 */
 				title: () => LocalizedString
 				/**
-				 * algemene-voorwaarden-kmo-portefeuille
+				 * algemene-voorwaarden-kmo-portfolio
 				 */
 				slug: () => LocalizedString
 			}
