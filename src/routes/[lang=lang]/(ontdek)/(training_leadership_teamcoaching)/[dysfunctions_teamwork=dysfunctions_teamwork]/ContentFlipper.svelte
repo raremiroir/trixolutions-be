@@ -10,12 +10,12 @@
 
 </script>
 <Flipper class="{klass}">
-   <ContentCard
+   <ContentCard altBg
        slot="front" {id} {title} 
        class="border-4 border-transparent cursor-pointer">
        <slot name="front"/>
    </ContentCard>
-   <ContentCard
+   <ContentCard altBg
        slot="back" {id} {title} 
        hoverFx="none"
        class="border-4 border-primary/70 cursor-pointer">
