@@ -2,6 +2,26 @@
 
 import supabase from "$lib/db"
 
+// Select Queries
+
+export const dbSelect = async(table:string, select:string) => {
+   const { data, error } = await supabase
+      .from(table)
+      .select(select);
+
+   if (error) throw new Error(error.message)
+   else return data;
+}
+
+export const dbSelectOrder = async(table:string, select:string = '*', order:string, ascending:boolean = false) => {
+   const { data, error } = await supabase
+      .from(table)
+      .select(select)
+      .order(order, { ascending: ascending });
+
+   if (error) throw new Error(error.message)
+   else return data;
+}
 
 // Insert Queries
 export const dbInsert = async(table:string, values = {}) => {
@@ -9,7 +29,6 @@ export const dbInsert = async(table:string, values = {}) => {
       .from(table)
       .insert([values])
 
-   if (error) throw new Error (error.message);
-
-   return data;
+   if (error) throw new Error (error.message)
+   else return data;
 }
