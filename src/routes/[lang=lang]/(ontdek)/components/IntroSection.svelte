@@ -1,33 +1,16 @@
 <script lang="ts">
     import { formatUrl } from "$utils";
-    import { breakpoints } from "$lib/constants/breakpoints";
     
     import { Section, Image } from "$comp";
     
    export let title:string;
    export let imgSrc:string;
-   export let imgMode = 'cover';
    export let imgWidth = "w-full lg:w-5/12"
    export let contentWidth = "w-full lg:w-7/12"
-
-   // innerWidth stores current screen width
-   let innerWidth:number;
-    $: innerWidth
-    // Image ratio depends on screen width
-    let ratio = '7:5'
-    $: if (innerWidth < breakpoints.xs) { ratio = "2:1"; }  
-        else if (innerWidth < breakpoints.sm) { ratio = "7:3"; } 
-        else if (innerWidth < breakpoints.md) { ratio = "2:1"; } 
-        else if (innerWidth < breakpoints.lg) { ratio = "5:2"; } 
-        else if (innerWidth < breakpoints.xl) { ratio = "12:11"; } 
-        else if (innerWidth < breakpoints.xxl) { ratio = "8:6"; }
-        else { ratio = "7:5"}
 
     export let imgClass = '';
 
 </script>
-
-<svelte:window bind:innerWidth />
 
 <Section name={`${formatUrl(title)}-intro`}>
    
@@ -45,8 +28,8 @@
            <Image 
                alt={title}
                src={imgSrc}
-               mode="{imgMode}" position="top" 
-               {ratio} class={imgClass}/>
+               imgClass="{imgWidth}"
+               class={imgClass}/>
        </div>
 
        <div class="{contentWidth}">

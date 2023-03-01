@@ -12,15 +12,13 @@
    export let iconClass = 'h-8 w-auto pb-1';
 
    export let hoverFx = 'minimal'
-   export let altBg = false
+   
 
-   export let height = 'fit'
+
+   // export let altBg = false
 </script>
 
-<CardBase 
-   ariaLabel={title} {title} {hoverFx} {altBg}
-   class={klass} {height} width="full"
-   img='' compactResponsive>
+<CardBase {title} {hoverFx} class={klass} img=''>
    <H3 slot="title" smallest 
        class="text-center w-full border-b-2 border-primary/50">
        {#if id}<span class="text-4xl">{id}</span><br/>{/if}
