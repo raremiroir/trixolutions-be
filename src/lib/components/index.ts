@@ -62,6 +62,7 @@
    // PWA & SEO
    export { default as SEO }           from './Common/SEO/index.svelte'
    export { default as PWA }           from './Common/PWA/PWA.svelte'
+   export { default as ReloadPrompt }  from './Common/PWA/ReloadPrompt.svelte'
 
    // Items for every page
    export { default as Breadcrumbs }   from './Common/Breadcrumbs.svelte';

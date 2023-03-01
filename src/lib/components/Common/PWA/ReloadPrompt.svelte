@@ -1,5 +1,12 @@
 <script lang="ts">
-	import { useRegisterSW } from 'virtual:pwa-register/svelte'
+	import { useRegisterSW } from 'virtual:pwa-register/svelte';
+
+	import LL from '$i18n/i18n-svelte';
+	import { titleCase } from '$utils';
+
+	/* 7 days */
+	const intervalMS = 1000 * 60 * 60 * 24 * 7;
+ 
 	const {
 		needRefresh,
 		updateServiceWorker,
@@ -10,7 +17,7 @@
 		r && setInterval(() => {
 		   console.log('Checking for sw update')
 		   r.update()
-		}, 20000 /* 20s for testing purposes */)
+		}, intervalMS)
 			console.log(`SW Registered: ${r}`)
 		},
 		onRegisterError(error) {
@@ -22,34 +29,35 @@
 		needRefresh.set(false)
 	}
 	$: toast = $offlineReady || $needRefresh
-</script>
+ </script>
 
 {#if toast}
-	<div class="pwa-toast" role="alert">
-		<div class="message">
-			{#if $offlineReady}
-				<span>
-					App ready to work offline
-				</span>
-			{:else}
-				<span>
-					New content available, click on reload button to update.
-				</span>
-			{/if}
-		</div>
-		{#if $needRefresh}
-			<button on:click={() => updateServiceWorker(true)}>
-				Reload
-			</button>
+<div class="pwa-toast" role="alert">
+	<div class="message">
+		{#if $offlineReady}
+			<span>
+				{$LL.pwa.messages.app_ready()}
+			</span>
+		{:else}
+			<span>
+				{$LL.pwa.messages.new_content()}
+			</span>
 		{/if}
-		<button on:click={close}>
-			Close
-		</button>
 	</div>
+	{#if $needRefresh}
+		<button on:click={() => updateServiceWorker(true)}>
+			{titleCase($LL.base.btn.reload())}
+		</button>
+	{/if}
+	<button on:click={close}>
+		{titleCase($LL.base.btn.close())}
+	</button>
+</div>
 {/if}
 
-<style>
-	.pwa-toast {
+ 
+ <style>
+	  .pwa-toast {
 		position: fixed;
 		right: 0;
 		bottom: 0;
@@ -72,4 +80,4 @@
 		border-radius: 2px;
 		padding: 3px 10px;
 	}
-</style>
+ </style>
