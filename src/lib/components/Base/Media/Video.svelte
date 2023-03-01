@@ -3,8 +3,6 @@
 	import { fade } from "svelte/transition";
 	import { onMount } from "svelte";
 
-
-
    // Set video source
    export let src = 'https://sveltejs.github.io/assets/caminandes-llamigos.mp4'
    // Set video source (ogg) (optional)
@@ -71,7 +69,7 @@
    $: videoDuration = Math.round(duration);
    $: videoTime = Math.round(time);
 
-   function onKeyDown(e) {
+   function onKeyDown(e:any) {
          switch(e.keyCode) {
             // Pause/Play = P = 80
             case 80:

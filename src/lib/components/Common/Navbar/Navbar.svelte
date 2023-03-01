@@ -1,6 +1,3 @@
-<!--      -->
-<!--  TS  -->
-<!--      -->
 <script lang="ts">
    // Import navigation functions
    import { page, navigating }   from "$app/stores";
@@ -74,9 +71,7 @@
 
 </script>
 
-<!--      -->
-<!-- HTML -->
-<!--      -->
+
 <svelte:window bind:scrollY={yscroll} />
 
 <!-- Navbar Outer Wrap -->
@@ -106,7 +101,8 @@
    
       <!-- Navigation -->
       <div class="flex flex-row justify-end">
-         <nav class="
+         <nav 
+            class="
             w-3/5 h-fit left-0
             transition-all duration-200 ease-out
             translate-y-0 relative

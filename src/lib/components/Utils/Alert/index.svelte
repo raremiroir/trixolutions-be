@@ -22,6 +22,7 @@
    on:click={onClick}
    on:keydown={onClick}
    transition:fade={{duration:200}}
+   role="alert"
    class="
       dui-alert border-2
       { 

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from '$comp';
-	import LL from '$i18n/i18n-svelte';
+
+   import LL from '$i18n/i18n-svelte'
 
 	export let color = `
       bg-primary group-hover:bg-primary-l2 group-active:bg-primary-l1
@@ -12,6 +12,8 @@
 </script>
 
 <label 
+   title="{$LL.base.nav.hamburger.toggle_nav()}"
+   role="button"
    for="check" 
    class="
       flex flex-col justify-center items-end 
@@ -55,11 +57,6 @@
    />
 </label>
 
-<!--
-▄▄▄▄ ▄▄▄ ▄   ▄ ▄   ▄▄▄
-█▄▄▄  █  ▀▄ ▄▀ █   █▄▄
-▄▄▄█  █    █   █▄▄ █▄▄
--->
 <style>
 	span.hamburgerTransition {
 		transition: background-color 300ms cubic-bezier(0, 0, 0.2, 1),

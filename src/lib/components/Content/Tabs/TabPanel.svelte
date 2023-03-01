@@ -1,7 +1,7 @@
 <script>
 	import { getContext } from 'svelte';
 	import { TABS } from './Tabs.svelte';
-	import { fly, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 
 	const panel = {};
 	const { registerPanel, selectedPanel } = getContext(TABS);

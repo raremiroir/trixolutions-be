@@ -18,7 +18,7 @@
 		// select locale
 		setLocale(newLocale)
 		// update `lang` attribute
-		document.querySelector('html').setAttribute('lang', newLocale)
+		document.querySelector('html')?.setAttribute('lang', newLocale)
 		if (updateHistoryState) {
 			// update url to reflect locale changes
 			history.pushState({ locale: newLocale }, '', replaceLocaleInUrl($page.url, newLocale))

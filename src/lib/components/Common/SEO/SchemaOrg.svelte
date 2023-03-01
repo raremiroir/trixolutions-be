@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import hash from 'object-hash';
 	export let article = false;
 	export let author;
@@ -14,7 +14,7 @@
 	export let siteLanguage;
 	export let siteTitle;
 	export let siteTitleAlt;
-	export let siteUrl;
+	export let siteUrl:string;
 	export let title;
 	export let url;
 	export let facebookPage;
@@ -79,7 +79,7 @@
 	const schemaOrgBreadcrumbList = {
 		'@type': 'BreadcrumbList',
 		'@id': `${url}#breadcrumb`,
-		itemListElement: breadcrumbs.map((element, index) => ({
+		itemListElement: breadcrumbs.map((element:any, index:number) => ({
 			'@type': 'ListItem',
 			position: index + 1,
 			item: {

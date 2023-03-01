@@ -6,6 +6,8 @@
    import { Link } from "..";
    import Icon from "@iconify/svelte";
 
+   type btnType = "button" | "submit" | "reset" | undefined;
+
    // Define extra classes
    let klass = '';
    export { klass as class };
@@ -13,13 +15,14 @@
    // Is the button a link ?
    export let href = '';
    // Define button type
-   export let type = 'button'
+   export let type:btnType = 'button'
    // Define tabindex
    export let tabindex = -1;
+
+   // Define title tooltip
+   export let title = '';
    // Define aria-label
    export let ariaLabel:string;
-
-   export let title = '';
    
    // Define size:
    export let size = 'md'

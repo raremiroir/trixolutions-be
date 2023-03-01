@@ -13,19 +13,30 @@ const mapOptions = {
 	lat: 51.615,
 	zoom: 7.53,
 }
-const pins = {
+
+interface Pins {
+	[key: string]: {
+		id: number,
+		lat: number,
+      lng: number,
+      label: string,
+		address: string,
+      extra: string,
+	}
+}
+const pins: Pins = {
 	be: {
 		id: 1,
-		lng: 4.508149242460171,
 		lat: 51.22063831056065,
+		lng: 4.508149242460171,
 		label: "Trixolutions België",
 		address: "Krommelei 14, 2110 Wijnegem",
 		extra: "",
 	},
 	nl: {
 		id: 2,
-		lng: 4.387250556219944,
 		lat: 51.980388837210086,
+		lng: 4.387250556219944,
 		label: "Trixolutions Nederland",
 		address: "Rotterdamseweg 205, 2629 HD Delft",
 		extra: "Art Centre Delft",

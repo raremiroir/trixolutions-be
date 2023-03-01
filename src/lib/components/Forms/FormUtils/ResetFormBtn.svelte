@@ -17,8 +17,9 @@
 >
 	<Button
 		on:click={resetForm}
+		ariaLabel={$LL.base.form.content.reset_form()}
+		title={$LL.base.form.content.reset_form()}
 		size="square-md"
-		center
 		color="bg-error hover:bg-error-dark"
 		disabled={formEmpty}
 	>

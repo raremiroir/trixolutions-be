@@ -15,7 +15,7 @@
       menuOpen = !menuOpen;
    }
    // Focus lost on menu --> close it
-   const handleMenuFocusLoss = ({relatedTarget, currentTarget}) => {
+   const handleMenuFocusLoss = ({relatedTarget, currentTarget}:any) => {
       if (relatedTarget instanceof HTMLElement && currentTarget.contains(relatedTarget)) return
       menuOpen = false;
    }
