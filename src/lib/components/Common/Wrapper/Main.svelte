@@ -6,7 +6,6 @@
 	import PageTransition from "../../Utils/PageTransition.svelte";
 
    import LL from "$i18n/i18n-svelte";
-	import Subtitle from "../../Core/Title/Subtitle.svelte";
 
    // Define extra classes
    let klass = '';
