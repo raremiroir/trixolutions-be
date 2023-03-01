@@ -14,8 +14,6 @@
 	import { website } from '$src/lib/config/website';
 	// Import i18n
 	import LL, { locale } from '$i18n/i18n-svelte';
-	// Import utils
-	import { titleCase } from '$src/lib/utils';
 	
 	// Import Video
 	import cegeka_video from '$lib/assets/videos/referentiefilmpje-cegeka-min.mp4';
