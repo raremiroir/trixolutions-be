@@ -12,6 +12,3 @@ export const load: PageLoad = async ({ parent }) => {
 	// get the translation functions value from the store
 	const $LL = get(LL)
 }
-
-// No prerender because of post action (?)
-export const prerender = false;
