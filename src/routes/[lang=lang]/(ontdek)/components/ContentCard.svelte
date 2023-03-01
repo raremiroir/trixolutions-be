@@ -15,10 +15,10 @@
    
 
 
-   // export let altBg = false
+   export let altBg = false
 </script>
 
-<CardBase {title} {hoverFx} class={klass} img='' altBg>
+<CardBase {title} {hoverFx} class={klass} img='' {altBg}>
    <H3 slot="title" smallest 
        class="text-center w-full border-b-2 border-primary/50">
        {#if id}<span class="text-4xl">{id}</span><br/>{/if}
