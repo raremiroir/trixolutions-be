@@ -30,9 +30,15 @@
 
     // Set 'active' variable for accordeon component
 	let active:any = null;
+    $: active;
 </script>
 
-<IntroSection title={$currentTitle} imgSrc={$currentHero}>
+<IntroSection 
+    title={$currentTitle} 
+    imgSrc={$currentHero} 
+    imgWidth="w-full { active ? 'lg:w-3/12' : 'lg:w-5/12'}"
+    contentWidth="w-full { active ? 'lg:w-9/12' : 'lg:w-7/12'}"
+    >
     <div class="" slot="title">
         <Title type="h2" small>
             {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
