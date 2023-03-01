@@ -106,15 +106,13 @@
 
 	let mySlider: any;
 	onMount(() => {
-		console.log(mySlider.splide);
+		// console.log(mySlider.splide);
 	});
 
 </script>
 
 <Splide
 	on:paginationMounted={(e) => e.items.forEach( function (item) { item.button.textContent = String( item.page + 1 ) }) }
-   on:mounted={ e => console.log( e.detail.splide.length ) }
-   on:move={ e => console.log( 'move to', e.detail.index ) }
 	bind:this={mySlider}
 	options={ gridSlideOptions }
 	extensions={{ Grid }}

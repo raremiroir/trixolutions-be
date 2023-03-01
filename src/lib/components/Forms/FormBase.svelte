@@ -176,9 +176,6 @@
             submitAction(values);
             success = true;
          } catch (e) {
-            console.log('')
-            console.log('formbase submit error: ', e);
-            console.log('')
             success = false;
          }
       }

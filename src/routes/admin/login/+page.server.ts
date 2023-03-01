@@ -13,7 +13,7 @@ export const actions = {
                 }
             }
         } catch (err) {
-            console.log('Error: ', err);
+            console.error(err);
             throw error(500, 'Er is iets fout gegaan bij het inloggen.')
         }
 

@@ -74,29 +74,23 @@ locales.forEach((locale) => {
         });
       } else if (key !== 'home') {
 
-        console.log('key: ', key);
-
         let altLocalePages:any = {};
 
         locales.forEach((lang) => {
           if (lang !== locale) {
-            console.log('alt lang: ', lang);
             altLocalePages[String(lang)] = `/${lang}/${nav[lang][key].slug}`;
           }
         })
 
-        console.log('got it')
         pages[String(`/${locale}/${currentNav[key].slug}`)] = {
           altLocalePages: altLocalePages,
           priority: 0.7
         };
 
-        console.log(pages);
         
         if (currentNav[key].items) {
           Object.keys(currentNav[key].items).forEach((item) => {
 
-            console.log('item: ', item);
             let altLocaleSubPages:any = {};
             locales.forEach((lang) => {
               if (lang !== locale) {

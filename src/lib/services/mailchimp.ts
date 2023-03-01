@@ -12,7 +12,7 @@ client.setConfig({
 export const registerEmail = async (first_name:string, last_name:string, email:string, lang:string = 'nl' ) => {
     const list_id = '4d890cd5e1';
     try {
-        console.log(`email: ${email}, first_name: ${first_name}, last_name: ${last_name}, lang: ${lang}`);
+        // console.log(`email: ${email}, first_name: ${first_name}, last_name: ${last_name}, lang: ${lang}`);
         const res = await client.lists.addListMember(list_id, {
             email_address: email,
             language: lang,

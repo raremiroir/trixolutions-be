@@ -11,7 +11,6 @@
 
    // Request session to display
    export let session:any;
-   console.log(session);
 
    // Request session dates to display
    export let sessionDates:any;

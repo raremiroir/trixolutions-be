@@ -23,8 +23,6 @@
     export let data;
     const pageData = data.data[0];
 
-    console.log(pageData);
-
     // Import stores
     import { 
         currentHero, currentTitle, 

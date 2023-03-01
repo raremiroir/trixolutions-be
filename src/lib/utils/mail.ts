@@ -12,7 +12,7 @@ export const mailToAdmin = async({ subject = '', message = '' }) => {
          'Content-Type': 'application/json',
       }
    }).then((res) => {
-      console.log(res);
+      // console.log(res);
       success = true;
    })
    .catch((err) => {
