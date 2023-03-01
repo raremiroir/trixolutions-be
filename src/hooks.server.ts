@@ -3,7 +3,7 @@ import '$lib/db';
 
 // Import svelte items
 import type { Handle, HandleServerError, RequestEvent } from '@sveltejs/kit'
-import { redirect, error } from '@sveltejs/kit';
+import { redirect } from '@sveltejs/kit';
 import { randomUUID } from 'crypto';
 
 // Import i18n
@@ -16,14 +16,17 @@ import type { Locales } from './i18n/i18n-types';
 import * as Sentry from '@sentry/node'
 import { BrowserTracing } from '@sentry/tracing';
 
+interface mainSlugs {
+	[key: string]: string[];
+}
 
 // Define all locales
 const myLocales = ['nl', 'fr', 'en']
 // Define main (first) slugs in urls for each locale
-const mainSlugs = {
-	"nl": ['open-sessies', 'contact', 'blog', 'over-ons', 'referenties'],
-	"fr": ['sessions-ouvertes', 'a-propos', 'references'],
-	"en": ['open-sessions', 'about-us']
+const mainSlugs: mainSlugs = {
+	nl: ['open-sessies', 'contact', 'blog', 'over-ons', 'referenties'],
+	fr: ['sessions-ouvertes', 'a-propos', 'references'],
+	en: ['open-sessions', 'about-us']
 }
 
 const allSlugs = Object.values(mainSlugs).flat();
@@ -66,7 +69,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	let locale:Locales = 'nl'
 	let restPath = '';
 
-	if (isLocale(firstParam) || (allSlugs.includes(firstParam) && firstParam !== '') || firstParam === '' || firstParam === '404') {
+	if (isLocale(firstParam) || (allSlugs.includes(firstParam) && firstParam !== '') || firstParam === '' || firstParam === 'not-found') {
 		if (isLocale(firstParam)) {
 			// Define lang according to params
 			locale = firstParam as Locales;
@@ -87,12 +90,12 @@ export const handle: Handle = async ({ event, resolve }) => {
 			locale = getPreferredLocale(event);
 			// Redirect to new path
 			throw redirect(301, `/${locale}`);
-		} else if ( firstParam === '404' ) {
+		} else if ( firstParam === 'not-found' ) {
 			locale = getPreferredLocale(event);
 			// Redirect to new path
-			throw redirect(301, `/${locale}/404`);
+			throw redirect(301, `/${locale}/not-found`);
 		} else {
-			throw redirect(301, `/404`);
+			throw redirect(301, `/not-found`);
 		}
 
 		const LL = L[locale];
@@ -108,7 +111,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	){
 		return await resolve(event);
 	} else {
-		throw redirect(302, '/404');
+		throw redirect(302, '/not-found');
 	}
 }
 

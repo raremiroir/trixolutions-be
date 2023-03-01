@@ -17,10 +17,10 @@ declare global {
 		}
 		// interface PageData {}
 		// interface LayoutLoad{}
-		interface Error {
-			message: string;
-			errorId: string;
-		}
+		// interface Error {
+		// 	message: string;
+		// 	errorId: string;
+		// }
 		// interface Platform {}
 	}
 }
