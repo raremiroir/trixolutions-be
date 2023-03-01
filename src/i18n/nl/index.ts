@@ -127,24 +127,27 @@ const nl: BaseTranslation = {
          digital_coaching: {
             title: 'Mogelijkheden tot (digitale) opleiding en coaching',
             sub: 'Bovenstaande inzichten, methodieken en oefeningen kunnen u aangeboden worden in de volgende formats:',
-            offline: {
-               title: 'Offline (Covid-19 proof)',
-               items: [
-                  "Persoonlijke coaching",
-                  "Inspiratiesessie van 1,5 uur",
-                  "Workshop van een halve dag",
-                  "Opleidingstraject",
-               ]
-            },
-            online: {
-               title: "Online (Platform ZOOM, TEAMS, of VEDAMO)",
-               items: [
-                  "Persoonlijke coaching",
-                  "Inspiratiesessie van 1,5 uur in onze Trixolutions Virtual Classroom",
-                  "Workshop van een halve dag in onze Trixolutions Virtual Classroom",
-                  "Digitale Learning Journey",
-               ]
-            }
+            options: [
+               {
+                  title: 'Offline (Covid-19 proof)',
+                  items: [
+                     "Persoonlijke coaching",
+                     "Inspiratiesessie van 1,5 uur",
+                     "Workshop van een halve dag",
+                     "Opleidingstraject",
+                  ]
+               },
+               {
+                  title: "Online (Platform ZOOM, TEAMS, of VEDAMO)",
+                  items: [
+                     "Persoonlijke coaching",
+                     "Inspiratiesessie van 1,5 uur in onze Trixolutions Virtual Classroom",
+                     "Workshop van een halve dag in onze Trixolutions Virtual Classroom",
+                     "Digitale Learning Journey",
+                  ]
+               }
+
+            ]
          }
       },
       footer: {

@@ -406,52 +406,54 @@ type RootTranslation = {
 				 * B​o​v​e​n​s​t​a​a​n​d​e​ ​i​n​z​i​c​h​t​e​n​,​ ​m​e​t​h​o​d​i​e​k​e​n​ ​e​n​ ​o​e​f​e​n​i​n​g​e​n​ ​k​u​n​n​e​n​ ​u​ ​a​a​n​g​e​b​o​d​e​n​ ​w​o​r​d​e​n​ ​i​n​ ​d​e​ ​v​o​l​g​e​n​d​e​ ​f​o​r​m​a​t​s​:
 				 */
 				sub: string
-				offline: {
-					/**
-					 * O​f​f​l​i​n​e​ ​(​C​o​v​i​d​-​1​9​ ​p​r​o​o​f​)
-					 */
-					title: string
-					items: {
+				options: {
+					'0': {
 						/**
-						 * P​e​r​s​o​o​n​l​i​j​k​e​ ​c​o​a​c​h​i​n​g
+						 * O​f​f​l​i​n​e​ ​(​C​o​v​i​d​-​1​9​ ​p​r​o​o​f​)
 						 */
-						'0': string
-						/**
-						 * I​n​s​p​i​r​a​t​i​e​s​e​s​s​i​e​ ​v​a​n​ ​1​,​5​ ​u​u​r
-						 */
-						'1': string
-						/**
-						 * W​o​r​k​s​h​o​p​ ​v​a​n​ ​e​e​n​ ​h​a​l​v​e​ ​d​a​g
-						 */
-						'2': string
-						/**
-						 * O​p​l​e​i​d​i​n​g​s​t​r​a​j​e​c​t
-						 */
-						'3': string
+						title: string
+						items: {
+							/**
+							 * P​e​r​s​o​o​n​l​i​j​k​e​ ​c​o​a​c​h​i​n​g
+							 */
+							'0': string
+							/**
+							 * I​n​s​p​i​r​a​t​i​e​s​e​s​s​i​e​ ​v​a​n​ ​1​,​5​ ​u​u​r
+							 */
+							'1': string
+							/**
+							 * W​o​r​k​s​h​o​p​ ​v​a​n​ ​e​e​n​ ​h​a​l​v​e​ ​d​a​g
+							 */
+							'2': string
+							/**
+							 * O​p​l​e​i​d​i​n​g​s​t​r​a​j​e​c​t
+							 */
+							'3': string
+						}
 					}
-				}
-				online: {
-					/**
-					 * O​n​l​i​n​e​ ​(​P​l​a​t​f​o​r​m​ ​Z​O​O​M​,​ ​T​E​A​M​S​,​ ​o​f​ ​V​E​D​A​M​O​)
-					 */
-					title: string
-					items: {
+					'1': {
 						/**
-						 * P​e​r​s​o​o​n​l​i​j​k​e​ ​c​o​a​c​h​i​n​g
+						 * O​n​l​i​n​e​ ​(​P​l​a​t​f​o​r​m​ ​Z​O​O​M​,​ ​T​E​A​M​S​,​ ​o​f​ ​V​E​D​A​M​O​)
 						 */
-						'0': string
-						/**
-						 * I​n​s​p​i​r​a​t​i​e​s​e​s​s​i​e​ ​v​a​n​ ​1​,​5​ ​u​u​r​ ​i​n​ ​o​n​z​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​V​i​r​t​u​a​l​ ​C​l​a​s​s​r​o​o​m
-						 */
-						'1': string
-						/**
-						 * W​o​r​k​s​h​o​p​ ​v​a​n​ ​e​e​n​ ​h​a​l​v​e​ ​d​a​g​ ​i​n​ ​o​n​z​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​V​i​r​t​u​a​l​ ​C​l​a​s​s​r​o​o​m
-						 */
-						'2': string
-						/**
-						 * D​i​g​i​t​a​l​e​ ​L​e​a​r​n​i​n​g​ ​J​o​u​r​n​e​y
-						 */
-						'3': string
+						title: string
+						items: {
+							/**
+							 * P​e​r​s​o​o​n​l​i​j​k​e​ ​c​o​a​c​h​i​n​g
+							 */
+							'0': string
+							/**
+							 * I​n​s​p​i​r​a​t​i​e​s​e​s​s​i​e​ ​v​a​n​ ​1​,​5​ ​u​u​r​ ​i​n​ ​o​n​z​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​V​i​r​t​u​a​l​ ​C​l​a​s​s​r​o​o​m
+							 */
+							'1': string
+							/**
+							 * W​o​r​k​s​h​o​p​ ​v​a​n​ ​e​e​n​ ​h​a​l​v​e​ ​d​a​g​ ​i​n​ ​o​n​z​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​V​i​r​t​u​a​l​ ​C​l​a​s​s​r​o​o​m
+							 */
+							'2': string
+							/**
+							 * D​i​g​i​t​a​l​e​ ​L​e​a​r​n​i​n​g​ ​J​o​u​r​n​e​y
+							 */
+							'3': string
+						}
 					}
 				}
 			}
@@ -3573,52 +3575,54 @@ export type TranslationFunctions = {
 				 * Bovenstaande inzichten, methodieken en oefeningen kunnen u aangeboden worden in de volgende formats:
 				 */
 				sub: () => LocalizedString
-				offline: {
-					/**
-					 * Offline (Covid-19 proof)
-					 */
-					title: () => LocalizedString
-					items: {
+				options: {
+					'0': {
 						/**
-						 * Persoonlijke coaching
+						 * Offline (Covid-19 proof)
 						 */
-						'0': () => LocalizedString
-						/**
-						 * Inspiratiesessie van 1,5 uur
-						 */
-						'1': () => LocalizedString
-						/**
-						 * Workshop van een halve dag
-						 */
-						'2': () => LocalizedString
-						/**
-						 * Opleidingstraject
-						 */
-						'3': () => LocalizedString
+						title: () => LocalizedString
+						items: {
+							/**
+							 * Persoonlijke coaching
+							 */
+							'0': () => LocalizedString
+							/**
+							 * Inspiratiesessie van 1,5 uur
+							 */
+							'1': () => LocalizedString
+							/**
+							 * Workshop van een halve dag
+							 */
+							'2': () => LocalizedString
+							/**
+							 * Opleidingstraject
+							 */
+							'3': () => LocalizedString
+						}
 					}
-				}
-				online: {
-					/**
-					 * Online (Platform ZOOM, TEAMS, of VEDAMO)
-					 */
-					title: () => LocalizedString
-					items: {
+					'1': {
 						/**
-						 * Persoonlijke coaching
+						 * Online (Platform ZOOM, TEAMS, of VEDAMO)
 						 */
-						'0': () => LocalizedString
-						/**
-						 * Inspiratiesessie van 1,5 uur in onze Trixolutions Virtual Classroom
-						 */
-						'1': () => LocalizedString
-						/**
-						 * Workshop van een halve dag in onze Trixolutions Virtual Classroom
-						 */
-						'2': () => LocalizedString
-						/**
-						 * Digitale Learning Journey
-						 */
-						'3': () => LocalizedString
+						title: () => LocalizedString
+						items: {
+							/**
+							 * Persoonlijke coaching
+							 */
+							'0': () => LocalizedString
+							/**
+							 * Inspiratiesessie van 1,5 uur in onze Trixolutions Virtual Classroom
+							 */
+							'1': () => LocalizedString
+							/**
+							 * Workshop van een halve dag in onze Trixolutions Virtual Classroom
+							 */
+							'2': () => LocalizedString
+							/**
+							 * Digitale Learning Journey
+							 */
+							'3': () => LocalizedString
+						}
 					}
 				}
 			}

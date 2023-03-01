@@ -127,24 +127,26 @@ const fr: Translation = {
          digital_coaching: {
             title: 'Possibilités de formation et de coaching (numérique).',
             sub: 'Les informations, méthodologies et exercices ci-dessus peuvent vous être proposés dans les formats suivants :',
-            offline: {
-               title: 'En présentiel (sécurité Covid-19 assurée)',
-               items: [
-                  "Coaching personnel",
-                  "Session d'inspiration de 1,5 heures",
-                  "Atelier de demi-journée",
-                  "Parcours de formation"
-               ]
-            },
-            online: {
-               title: "En ligne (plateforme ZOOM, TEAMS ou VEDAMO)",
-               items: [
-                  "Coaching personnel",
-                  "Session d'inspiration de 1,5 heures dans notre salle de classe virtuelle Trixolutions",
-                  "Atelier de demi-journée dans notre salle de classe virtuelle Trixolutions",
-                  "Parcours de formation numérique"
-               ]
-            }
+            options: [
+               {
+                  title: 'En présentiel (sécurité Covid-19 assurée)',
+                  items: [
+                     "Coaching personnel",
+                     "Session d'inspiration de 1,5 heures",
+                     "Atelier de demi-journée",
+                     "Parcours de formation"
+                  ]
+               },
+               {
+                  title: "En ligne (plateforme ZOOM, TEAMS ou VEDAMO)",
+                  items: [
+                     "Coaching personnel",
+                     "Session d'inspiration de 1,5 heures dans notre salle de classe virtuelle Trixolutions",
+                     "Atelier de demi-journée dans notre salle de classe virtuelle Trixolutions",
+                     "Parcours de formation numérique"
+                  ]
+               }
+            ]
          }
       },
       footer: {

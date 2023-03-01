@@ -127,24 +127,26 @@ const en: Translation = {
          digital_coaching: {
             title: 'Opportunities for (digital) education and coaching.',
             sub: 'The above insights, methodologies, and exercises can be offered to you in the following formats:',
-            offline: {
-               title: 'Offline (Covid-19 proof)',
-               items: [
-                  "Personal coaching",
-                  "Inspiration session of 1.5 hours",
-                  "Half-day workshop",
-                  "Training program"
-               ]
-            },
-            online: {
-               title: "Online (Platform ZOOM, TEAMS, or VEDAMO)",
-               items: [
-                  "Personal coaching",
-                  "Inspiration session of 1.5 hours in our Trixolutions Virtual Classroom",
-                  "Half-day workshop in our Trixolutions Virtual Classroom",
-                  "Digital Learning Journey"
-               ]
-            }
+            options: [
+               {
+                  title: 'Offline (Covid-19 proof)',
+                  items: [
+                     "Personal coaching",
+                     "Inspiration session of 1.5 hours",
+                     "Half-day workshop",
+                     "Training program"
+                  ]
+               },
+               {
+                  title: "Online (Platform ZOOM, TEAMS, or VEDAMO)",
+                  items: [
+                     "Personal coaching",
+                     "Inspiration session of 1.5 hours in our Trixolutions Virtual Classroom",
+                     "Half-day workshop in our Trixolutions Virtual Classroom",
+                     "Digital Learning Journey"
+                  ]
+               }
+            ]
          }
       },
       footer: {
