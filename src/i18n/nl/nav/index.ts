@@ -59,7 +59,7 @@ const nl_nav: BaseTranslation = {
       },
       terms_kmo: {
          title: "Algemene Voorwaarden KMO Portefeuille",
-         slug: 'algemene-voorwaarden-kmo-portefeuille'
+         slug: 'algemene-voorwaarden-kmo-portfolio'
       },
       privacy_policy: {
          title: "Privacybeleid",
