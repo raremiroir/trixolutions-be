@@ -13,23 +13,10 @@
 
    // Import website config
    import { website } from "$lib/config/website";
-   // Import supabase
-	import supabase from "$lib/db";
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
    // Import Utils
-	import { firstLetterCase } from "$utils";
-
-
-   // Load data
-   const getData = async () => {
-      const {data, error} = await supabase
-         .from('team_members')
-         .select(`*, img(name, folder, type)`)
-         .order('order', { ascending: true });
-      if (error) throw new Error(error.message);
-      return data;
-   }
+	import { firstLetterCase, dbSelectOrder } from "$utils";
 
    // SEO
    $: pageSlug = `/${$locale}/${$LL.nav.about.slug()}`
@@ -85,7 +72,7 @@
       </Reveal>
 
       <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-         {#await getData()}
+         {#await dbSelectOrder('team_members', '*, img(name, folder, type)', 'order', true)}
             <Alert>{firstLetterCase($LL.base.db.loading())}</Alert>
          {:then data} 
             {#each data as member}
