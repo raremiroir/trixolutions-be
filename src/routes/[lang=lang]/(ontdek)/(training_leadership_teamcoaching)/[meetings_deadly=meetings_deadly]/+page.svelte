@@ -69,9 +69,5 @@
                 </AccordeonItem>
             {/each}
         {/each}
-
-        {#each accItems as item, key}
-        {/each}
-        
     </Accordeon>
 </IndepthSection>
