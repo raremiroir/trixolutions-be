@@ -46,7 +46,7 @@
                 {#if card.content === 'list'}
                     <List>
                         {#each listItems as item}
-                            <ListItem>{item()}</ListItem>
+                            <ListItem transp>{item()}</ListItem>
                         {/each}
                     </List>
                 {:else if card.content === 'timespan'}
