@@ -3,265 +3,237 @@ import type { NamespacePagesExploreTranslation } from '../../i18n-types.js'
 const fr_pages_explore: NamespacePagesExploreTranslation = {
 	training_leadership_teamcoaching: {
       base: {
-         the_model: "Het Model",
-         by_lencioni: "by Patrick Lecioni"
+         the_model: "Le Modèle",
+         by_lencioni: "par Patrick Lecioni"
       },
       dysfunctions_teamwork: {
-         title: 'de 5 frustraties van teamwerk',
+         title: 'les 5 dysfonctions du travail d’équipe',
          intro: {
-            first: 	`Of je het nu leuk vindt of niet, alle teams zijn potentieel 
-                     disfunctioneel.<br/>
-                     Dat is onvermijdelijk omdat ze uit feilbare, onvolmaakte 
-                     mensen bestaan.<br/>
-                     Van het basketbalveld tot de executive suite, politiek en 
-                     onduidelijkheid zijn meer regel dan uitzondering.<br/>
-                     Het disfunctioneren onder ogen zien en focussen op teamwerk 
-                     is echter vooral van cruciaal belang aan de top van een 
-                     organisatie, omdat het executive team de toon zet voor hoe 
-                     alle werknemers met elkaar samenwerken.<br/>`,
-            second: `Een voormalige klant, de oprichter van een miljardenbedrijf, 
-                     beschreef de kracht van teamwerk het beste toen hij me eens vertelde:`,
-            quote: 	`Als je alle mensen in de organisatie in dezelfde richting 
-                     zou kunnen laten roeien, zou je elke sector en elke markt 
-                     kunnen domineren tegenover eender welke concurrentie.`,
+            first: 	`Que vous les trouviez chouettes ou non, toutes les équipes sont potentiellement dysfonctionnelles.<br/>
+                      C’est inévitable : elles se composent de personnes faillibles et imparfaites.<br/>
+                      Du terrain de basket à la suite exécutive, la politique et le manque de clarté sont davantage 
+                      la règle que l’exception.<br/> 
+                      Toutefois, voir le dysfonctionnement et se concentrer sur le travail d’équipe est surtout essentiel 
+                      au sommet d’une organisation étant donné que c’est l’exécutif qui donne le ton quant à la manière dont 
+                      les travailleurs collaborent entre eux.<br/>`,
+            second: `Un ancien client, fondateur d’une entreprise de plusieurs milliards, a donné la meilleure 
+                     description de la puissance du travail d’équipe lorsqu’il m’a un jour raconté ceci :`,
+            quote: 	`Si vous parveniez à faire avancer tous les collaborateurs de votre organisation dans une même direction, 
+                      vous seriez en mesure de dominer n’importe quel secteur et n’importe quel marché, indépendamment de 
+                      la concurrence.`,
          },
          cards: [
             {
-               title: `Gebrek aan Vertrouwen`,
-               content: `De angst om kwetsbaar te zijn bij teamleden verhindert dat er vertrouwen wordt opgebouwd binnen het team.`
+               title: `Manque de Confiance`,
+               content: `La peur d’être vulnérable chez les membres de l’équipe entrave la confiance au sein de cette dernière.`
             },
             {
-               title: `Angst voor Conflicten`,
-               content: `De wens om kunstmatige harmonie te bewaren, onderdrukt het ontstaan van productieve, ideologische conflicten.`
+               title: `Peur des Conflits`,
+               content: `La volonté de préserver une harmonie artificielle étouffe les débats d’idées productifs.`
             },
             {
-               title: `Gebrek aan Betrokkenheid`,
-               content: `Het gebrek aan duidelijkheid of buy-in verhindert teamleden om beslissingen te nemen waar ze zich aan houden.`
+               title: `Manque d’Engagement`,
+               content: `Le manque de clarté ou d’implication empêche les membres de l’équipe de prendre des décisions auxquelles ils se tiennent.`
             },
             {
-               title: `Aansprakelijkheid Vermijden`,
-               content: `De behoefte om interpersoonlijk ongemak te vermijden, weerhoudt teamleden ervan elkaar aansprakelijkheid te houden voor hun gedrag en prestaties.`
+               title: `Éviter la Responsabilisation`,
+               content: `Le besoin d’éviter le malaise interpersonnel empêche les membres de l’équipe de se tenir responsables de leur comportement et de leurs performances.`
             },
             {
-               title: `Geen Aandacht voor de Resultaten`,
-               content: `Het nastreven van individuele doelen en persoonlijke status vermindert de focus op het collectieve succes.`
+               title: `Manque d’Attention Portée aux Résultats`,
+               content: `La poursuite d’objectifs individuels et d’un statut personnel nuit à la concentration sur la réussite collective.`
             },
          ],
          in_depth: {
-            title: "Teamfrustraties Overwinnen",
+            title: "Vaincre les Dysfonctions d’une Équipe",
             accordeon_items: {
                first: {
-                  title: "De Frustraties Aanpakken",
+                  title: "Appréhender les Dysfonctions",
                   list: {
-                     intro: "Om je team te verbeteren en het disfunctioneren waarmee je wordt geconfronteerd beter te begrijpen, stel je jezelf deze eenvoudige vragen:",
+                     intro: "Afin d’améliorer votre équipe et de mieux comprendre le dysfonctionnement auquel vous êtes confronté, posez-vous ces questions simples :",
                      items: [
-                        "Geven teamleden openlijk en gemakkelijk hun mening?",
-                        "Zijn teamvergaderingen boeiend en productief?",
-                        "Komt het team snel tot beslissingen en voorkomt het dat het vastloopt door consensus?",
-                        "Confronteren teamleden elkaar over hun tekortkomingen?",
-                        "Offeren teamleden hun eigen belangen op voor het welzijn van het team?",
+                        "Les membres de votre équipe donnent-ils ouvertement et facilement leur avis ?",
+                        "Les réunions d’équipe sont-elles passionnantes et productives ?",
+                        "L’équipe parvient-elle à prendre rapidement des décisions et à éviter les blocages grâce au consensus ?",
+                        "Les membres de l’équipe se reprochent-ils leurs défaillances respectives ?",
+                        "Les membres de l’équipe sacrifient-ils leurs propres intérêts pour le bien-être de l’équipe ?",
                      ],
                   },
-                  text: `Hoewel geen enkel team perfect is en zelfs de beste teams soms worstelen 
-                        met een of meer van deze problemen, werken de beste organisaties er constant 
-                        aan om ervoor te zorgen dat hun antwoorden ‘ja’ zijn.<br/>
-                        Als je veel van deze vragen met ‘nee’ hebt beantwoord, heeft jouw team 
-                        wellicht wat werk nodig.<br/>
+                  text: `Bien qu’il n’existe pas d’équipe parfaite et que même les meilleures font parfois face à un ou plusieurs de 
+                        ces problèmes, les organisations les plus efficaces s’efforcent en permanence de pouvoir répondre « oui » à 
+                        ces questions. <br/>
+                        Si vous avez souvent répondu « non », votre équipe a probablement du pain sur la planche.<br/>
                         <br/>
-                        De eerste stap om politiek en onduidelijkheid binnen jouw team te verminderen, 
-                        is begrijpen dat er vijf frustraties zijn en dat de frustraties die van 
-                        toepassing zijn, één voor één moeten worden aangepakt.`
+                        La première étape pour réduire les jeux politiques et le manque de transparence au sein de votre équipe, 
+                        c’est de comprendre les 5 dysfonctions et de réaliser qu’il faut s’attaquer à chacun de ceux auxquels votre 
+                        équipe est confrontée.`
                },
                second: {
-                  title: "De Frustraties",
-                  intro: "Bekijk de <strong>frustraties die gebonden zijn aan de 5 lagen</strong>, en klik erop om nog is te zien wat de laag precies inhoudt.<br/><br/>",
+                  title: "Les Dysfonctions",
+                  intro: "Voir les <strong>frustrations qui sont liées aux 5 couches</strong>, et cliquez dessus pour voir ce que le calque implique..<br/><br/>",
                   cards: [
                      {
-                        title: "Gebrek aan Vertrouwen",
-                        front: `Dit gebeurt wanneer teamleden terughoudend zijn om zich kwetsbaar op te 
-                              stellen tegenover elkaar en niet bereid zijn hun fouten, zwakheden of 
-                              behoeften toe te geven. Zonder een bepaald comfortniveau onder de 
-                              teamleden is een basis van vertrouwen onmogelijk.`,
+                        title: "Le Manque de Confiance",
+                        front: `Il apparaît lorsque les membres de l’équipe refusent de se montrer vulnérables aux yeux des 
+                                 autres et ne sont pas prêts à concéder leurs erreurs, leurs faiblesses ou leurs besoins. 
+                                 Sans un certain niveau de confort parmi les membres de l’équipe, une base de confiance est impossible.`,
                      },
                      {
-                        title: "Angst voor Conflicten",
-                        front: `Teams die geen vertrouwen hebben, zijn niet in staat om 
-                                 ongefilterd en gepassioneerd te discussiëren over 
-                                 belangrijke kwesties, waardoor situaties ontstaan waarin 
-                                 teamconflicten gemakkelijk kunnen veranderen in verhulde 
-                                 discussies en achterklap. In een werkomgeving waar teamleden 
-                                 hun mening niet openlijk uiten, worden slechte beslissingen 
-                                 genomen.`
+                        title: "La Peur des Conflits",
+                        front: `Les équipes où la confiance fait défaut ne sont pas en mesure de discuter sans filtre et avec passion 
+                                 de questions importantes. Résultat ? On se retrouve dans des situations où les conflits se transforment 
+                                 facilement en discussions de faux-semblants et en commérages. Dans un environnement de travail où les 
+                                 membres de l’équipe n’expriment pas ouvertement leur avis, de mauvaises décisions sont prises.`
                      },
                      {
-                        title: `Gebrek aan Betrokkenheid`,
-                        front: `Zonder conflicten is het moeilijk voor teamleden om zich 
-                                 aan de beslissingen te houden, waardoor een omgeving ontstaat 
-                                 waarin dubbelzinnigheid heerst. Gebrek aan richting en 
-                                 betrokkenheid kan werknemers, met name topmedewerkers, 
-                                 misnoegd maken.`
+                        title: `Le Manque d’Engagement`,
+                        front: `Sans conflit, il est difficile pour les membres d’une équipe de s’en tenir aux décisions ce qui donne 
+                                 lieu à un environnement dominé par l’ambiguïté. Un manque d’orientation et d’engagement peut contrarier les 
+                                 collaborateurs, notamment les collaborateurs précieux.`
                      },
                      {
-                        title: `Aansprakelijkheid Vermijden`,
-                        front: `Wanneer teams geen duidelijk actieplan hebben, aarzelen 
-                                 zelfs de meest gefocuste en gedreven individuen om hun 
-                                 collega’s te bellen over activiteiten en gedragingen die 
-                                 contraproductief kunnen lijken voor het algemene welzijn 
-                                 van het team.`
+                        title: `Éviter la Responsabilisation`,
+                        front: `Lorsque des équipes n’ont pas de plan d’action clair, même les individus les plus concentrés et motivés 
+                                 hésitent à appeler leurs collègues pour évoquer des activités et des comportements qui peuvent sembler 
+                                 contre-productifs vis-à-vis du bien-être général de l’équipe.`
                      },
                      {
-                        title: `Aandacht voor de Resultaten`,
-                        front: ` Teamleden hebben van nature de neiging om hun eigen behoeften 
-                                 (ego, loopbaanontwikkeling, erkenning, enz.) boven de collectieve 
-                                 doelen van het team te stellen wanneer individuen niet 
-                                 aansprakelijk worden gehouden. Als een team de prestatiegerichtheid 
-                                 uit het oog heeft verloren, lijdt het hele bedrijf er uiteindelijk onder.`
+                        title: `Pas d’Attention Portée aux Résultats`,
+                        front: `Les membres d’une équipe ont naturellement tendance à placer leurs besoins (ego, évolution de carrière, 
+                                 reconnaissance, etc.) au-dessus des objectifs collectifs de l’équipe lorsqu’il n’y a pas de 
+                                 responsabilisation. Lorsqu’une équipe a perdu de vue les résultats, toute l’entreprise finit par en pâtir.`
                      },
                   ]
                },
                third: {
-                  title: "De Beloningen",
-                  text: `Het streven naar een functioneel, samenhangend team is een van de weinige 
-                           resterende concurrentievoordelen voor organisaties die zich op een krachtige 
-                           manier willen onderscheiden.<br/>
-                           Functionele teams vermijden het om tijd te verspillen door over de verkeerde 
-                           kwesties te praten en keer op keer terug te komen op dezelfde onderwerpen 
-                           vanwege een gebrek aan buy-in. Functionele teams nemen ook kwalitatief betere 
-                           beslissingen en bereiken meer in minder tijd en met minder afleiding en 
-                           frustratie. Bovendien verlaten “A”-spelers zelden organisaties waar ze deel 
-                           uitmaken van een samenhangend team.<br/>
+                  title: "es Récompenses",
+                  text: `Tendre vers une équipe cohérente et fonctionnelle est l’un des rares derniers objectifs concurrentiels pour 
+                           les organisations qui veulent se différencier avec force.<br/>
+                           Les équipes fonctionnelles évitent de perdre du temps à parler des mauvaises questions ou à revenir sans 
+                           cesse sur les mêmes sujets en raison d’un manque d’implication. Les équipes fonctionnelles prennent aussi 
+                           de meilleures décisions sur le plan qualitatif, obtiennent plus de résultats en moins de temps et réduisent 
+                           les distractions et les dysfonctions. En outre, les acteurs « A » quittent rarement les organisations 
+                           lorsqu’ils appartiennent à une équipe cohérente.<br/>
                            <br/>
-                           Succesvol teamwerk gaat niet over het beheersen van subtiele, gesofisticeerde 
-                           theorieën, maar over het omarmen van gezond verstand met een ongebruikelijk 
-                           niveau van discipline en volharding.<br/>
-                           Ironisch genoeg zijn teams succesvol omdat ze buitengewoon menselijk zijn. 
-                           Door de onvolkomenheden van hun menselijkheid te erkennen, overwinnen leden 
-                           van functionele teams de natuurlijke neigingen die teamwerk zo moeilijk maken.`
+                           Un travail d’équipe efficace ne signifie pas maîtriser des théories subtiles et sophistiquées, mais faire 
+                           preuve de bon sens avec un niveau inhabituel de discipline et de persévérance.<br/>
+                           Ironiquement, les équipes décrochent des succès parce qu’elles sont extraordinairement humaines. 
+                           En admettant les manquements de leur humanité, les membres des équipes fonctionnelles surpassent les tendances 
+                           naturelles qui compliquent tant le travail d’équipe.`
                }
             }
          }
       },
       ideal_teamplayer: {
-         title: 'de ideale teamplayer',
+         title: 'le coéquipier idéal',
          intro: {
-            first: `Met voldoende tijd, geduld en aandacht van een goede manager kan 
-                     bijna iedereen leren een teamspeler te worden. Daar ben ik van 
-                     overtuigd.<br/>
+            first: `Avec suffisamment de temps, de patience et d’attention de la part d’un manager compétent, 
+                     chaque collaborateur – ou presque – peut devenir un coéquipier idéal. J’en suis convaincu.<br/>
                      <br/>
-                     Sommige mensen zijn wel beter in teamwork dan anderen. Dit zijn 
-                     mensen die onmiddellijk waarde toevoegen in een teamomgeving en 
-                     veel minder coaching en management nodig hebben om op een zinvolle 
-                     manier bij te dragen.<br/>
+                     Certaines personnes sont effectivement plus douées que d’autres pour le travail d’équipe. 
+                     Ce sont celles qui apportent immédiatement une valeur ajoutée dans une équipe et ont besoin 
+                     de moins de coaching et de management pour participer à son fonctionnement de manière sensée.<br/>
                      <br/>
-                     Er zijn dus twee logische vragen. Hoe zien deze mensen eruit? 
-                     En hoe vinden we ze? Het blijkt dat ze drie kenmerken gemeen hebben: 
-                     ze zijn bescheiden, hongerig en slim.`,
-            second: `Alvorens ik elk van deze kenmerken uitleg, wil ik eerst uitleggen 
-                     hoe deze theorie tot stand is gekomen. <br/>
-                     Zoals zoveel van mijn ideeën, kwam dit naar boven als resultaat van 
-                     mijn werk met klanten in de afgelopen twintig jaar. <br/>
-                     Telkens wanneer ik met CEO’s en hun leiderschapsteams werkte om 
-                     kernwaarden te identificeren, werd 
-                     mij vaak gevraagd naar de waarden van mijn eigen bedrijf, The Table 
-                     Group. Wanneer we onze drie waarden onthulden, vroegen veel van onze 
-                     klanten of ze die waarden ook voor zichzelf konden overnemen.<br/>
+                     Il y a donc deux questions logiques à se poser. À quoi ressemblent ces personnes ? 
+                     Et comment les trouver ? Elles partagent apparemment trois vertus communes : 
+                     elles sont modestes, ont une intelligence sociale et une soif de réussite..`,
+            second: `Avant de vous détailler chacune de ces vertus, j’aimerais vous expliquer comment 
+                     cette théorie a vu le jour. <br/>
+                     Comme bon nombre de mes idées, celle-ci a émergé à la suite de mon travail avec 
+                     des clients au cours des 20 dernières années. <br/>
+                     Chaque fois que je travaillais avec des PDG et leurs équipes de direction pour 
+                     identifier des valeurs clés, on m’interrogeait sur les valeurs de mon entreprise, 
+                     The Table Group. Lorsque nous avons dévoilé nos trois valeurs, bon nombre de nos 
+                     clients nous ont demandé s’ils pouvaient les appliquer à leur propre situation.<br/>
                      <br/>
-                     Natuurlijk zeiden we “nee” en legden we uit dat ze zelf concepten 
-                     moesten bedenken die hun unieke geschiedenis en cultuur weerspiegelden. 
-                     Wij waren een bedrijf dat gericht was op teamwerk en bekend stond om 
-                     The Five Dysfunctions of a Team, dus de waarden bescheiden, hongerig 
-                     en slim waren logisch voor ons. Wat we niet beseften, was dat onze 
-                     klanten, die bijna allemaal bezig waren met teamwork, aangetrokken 
-                     werden tot onze waarden omdat dat de bouwstenen waren van echte 
-                     teamspelers. Toen we dat eenmaal beseften, was het idee voor dit 
-                     boek geboren.`
+                     Nous avons bien évidemment répondu « non » en expliquant qu’ils devaient réfléchir eux-mêmes 
+                     à des concepts qui reflétaient leur histoire et leur culture uniques. Notre entreprise, axée 
+                     sur le travail d’équipe, était connue pour l’ouvrage The Five Dysfunctions of a Team. Les valeurs 
+                     de modestie, de soif de réussite et d’intelligence sociale étaient donc logiques dans notre cas. 
+                     Ce que nous n’avions pas réalisé alors, c’est que nos clients – quasiment tous axés sur le travail 
+                     d’équipe – furent attirés par nos valeurs parce qu’elles étaient le terreau de véritables coéquipiers. 
+                     C’est au moment où nous l’avons compris que l’idée de ce livre a germé.`
          },
          in_depth: {
-            title: "Hoe Herken je de Ideale Teamspeler",
+            title: "Comment Reconnaître le Coéquipier Idéal ?",
             accordeon_items: {
                first: {
-                  title: "De Drie Kenmerken",
-                  subtitle: "De drie kenmerken lijken vrij eenvoudig, maar vereisen enige uitleg:",
+                  title: "Les Trois Vertus",
+                  subtitle: "Ces trois vertus paraissent relativement simples, mais requièrent quelques explications :",
                   tabs: {
                      items: [
-                        "Bescheiden",
-                        "Hongerig",
-                        "Emotioneel Intelligent"
+                        "Modestie",
+                        "La Soif de Réussite",
+                        "Intelligence Sociale"
                      ],
                      panels: [
-                        `Het <em>eerste en belangrijkste kenmerk</em> van een ideale teamspeler 
-                        is <strong>bescheidenheid</strong>.<br/>
-                        Een bescheiden werknemer is iemand die zich meer <strong>bekommert om 
-                        het succes van het team</strong> dan erkenning te krijgen voor zijn of 
-                        haar bijdragen.<br/>
+                        `La <em>première et la plus importante caractéristique</em> d'un joueur d'équipe idéal 
+                        est la <strong>modestie</strong>.<br/>
+                        Un travailleur modeste se préoccupe davantage du <strong>succès de 
+                        l'équipe</strong> que de la reconnaissance qu’il peut obtenir pour son travail.<br/>
                         <br/>
-                        Mensen die niet bescheiden zijn, mensen die onevenredig veel 
-                        aandacht vragen, zijn gevaarlijk voor een team.<br/>
-                        Bescheiden teamspelers zijn niet bang om de vaardigheden en 
-                        talenten die ze in het team aanbrengen eerlijk te erkennen, 
-                        maar <b>nooit op een trotse of opschepperige manier</b>.`,
-                        `Het <em>volgende kenmerk</em> van een ideale teamspeler is 
-                        <strong>honger, </strong> de wens om <strong>hard te 
-                        werken en alles te doen wat nodig is </strong> om het 
-                        team te helpen slagen.<br/>
+                        Les personnes qui ne le sont pas, qui demandent une attention déraisonnable, sont 
+                        dangereuses pour une équipe.<br/> 
+                        Les coéquipiers modestes n’ont pas peur de reconnaître honnêtement les compétences et 
+                        les talents qu’ils apportent à l’équipe, mais <b>jamais avec fierté ou vantardise.</b>.`,
+
+                        `Ensuite, un coéquipier idéal <strong>a soif de réussite,</strong> 
+                        il déborde d’envie de <strong>mettre tout en œuvre et de faire tout ce qui est 
+                        nécessaire</strong> pour contribuer au succès de l’équipe<br/>
                         <br/>
-                        Hongerige werknemers hoeven bijna nooit door een manager gepusht te 
-                        worden om harder te werken, omdat ze 
-                        <strong>gemotiveerd en ijverig </strong> zijn.<br/>
-                        Ze bieden zich vrijwillig aan om hiaten op te vullen, <strong>meer 
-                        verantwoordelijkheden</strong> op zich te nemen en zoeken gretig 
-                        naar nieuwe manieren om bij te dragen aan het team.`,
-                        `Het <em>laatste kenmerk</em> van een teamspeler heeft niets met 
-                        intelligentie te maken, maar wel met <strong>wijs omgaan met 
-                        mensen.</strong><br/>
+                        Les travailleurs qui ont soif de réussite ne doivent quasiment jamais être poussés à 
+                        fournir plus d’effort par un manager, parce qu’ils sont <strong>motivés et assidus</strong>.<br/>
+                        Ils se portent volontaires pour combler les lacunes, <strong>sont prêts à assumer davantage 
+                        de responsabilités</strong> et cherchent avidement de nouvelles manières de contribuer 
+                        au succès de l’équipe.`,
+
+                        `Enfin, la <em>dernière vertu</em>  n’a rien à voir avec les capacités intellectuelles, mais 
+                        bien avec <strong>l’aptitude à collaborer au sein d’un groupe.</strong><br/>
                         <br/>
-                        Slimme werknemers begrijpen de nuances van teamdynamiek en 
-                        weten hoe hun <strong>woorden en daden anderen 
-                        beïnvloeden.</strong><br/>
-                        Hun <strong>goed beoordelingsvermogen</strong> en intuïtie 
-                        helpen hen om op de meest effectieve manier met anderen 
-                        om te gaan.`
+                        Les travailleurs dotés d’une intelligence sociale comprennent les nuances de la dynamique d’équipe 
+                        et savent dans quelle mesure <strong>leurs mots et leurs actes influencent les autres.</strong><br/> 
+                        Forts de leur <strong>bonne capacité de jugement</strong> et de leur intuition performante, ils sont 
+                        capables d’interagir avec les autres de la manière la plus efficace qui soit`
                      ]
                   },
-                  text: `Hoe eenvoudig deze drie concepten ook zijn, de sleutel tot dit alles is 
-                           <strong>de unieke combinatie van de drie kenmerken</strong> die iemand 
-                           tot een ideale teamspeler maken.<br/>
-                           Als zelfs maar één van deze eigenschappen ontbreekt, kunnen er 
-                           problemen ontstaan.<br/>
+                  text: `Aussi simples ces trois concepts soient-ils, la clé du succès de l’équipe réside dans 
+                           <strong>la combinaison unique de ces trois vertus</strong> dqui font de ce travailleur 
+                           le coéquipier idéal.<br/>
+                           S’il ne manque que l’une d’entre elles, des problèmes peuvent surgir.<br/>
                            <br/>
-                           Een bescheiden en hongerige werknemer die niet slim is met mensen kan 
-                           bijvoorbeeld veel bereiken, maar zal vaak een spoor van interpersoonlijke 
-                           vernieling achter zich laten.<br/>
-                           Een persoon die slim en bescheiden is, maar niet hongerig, zal teamleden 
-                           frustreren door alleen te doen wat nodig is en zal constant gevraagd worden 
-                           om meer te doen.<br/>
+                           Un travailleur modeste qui a soif de réussite, mais qui n’a pas l’intelligence des 
+                           contacts humains pourra par exemple atteindre de grandes choses, mais laissera souvent 
+                           derrière lui des dégâts interpersonnels.<br/>
+                           Une personne modeste, dotée d’une intelligence sociale, mais sans soif de réussite 
+                           suscitera la frustration des membres de l’équipe en ne faisant que ce qui est nécessaire. 
+                           Il sera toujours invité à en faire davantage.<br/>
                            <br/>
-                           Tot slot kan een teamlid dat hongerig en slim, maar echt niet bescheiden is, 
-                           een verwoestende impact hebben op een team.<br/>
-                           Dit type weet zich te profileren als een goedbedoelende collega, terwijl hij 
-                           vooral denkt aan zijn eigen behoeften. Tegen de tijd dat de teamleden dit 
-                           doorkrijgen, zijn mensen gemanipuleerd en getekend.<br/>
+                           Enfin, un coéquipier doté d’une intelligence sociale qui a soif de réussite, mais qui manque 
+                           de modestie pourra avoir un impact dévastateur sur une équipe.<br/>
+                           Ce type de travailleur est capable de se profiler comme un collègue bien intentionné alors 
+                           qu’il ne pense qu’à ses propres intérêts. Le temps que les membres de l’équipe le comprennent, 
+                           ils auront été manipulés et marqués.<br/>
                            <br/>
-                           <em>Hoe werf je ideale teamspelers aan?</em> Je moet vooral weten waar je op 
-                           moet letten en dat je op niet-traditionele manieren moet zoeken.<br/>
-                           <em>En hoe zit het met werknemers die al in het team zitten en een of meer 
-                           van de kenmerken missen?</em> Om hen te helpen verbeteren, moet je ervoor 
-                           zorgen dat ze de concepten begrijpen en weten waar ze tekortschieten.<br/>
+                           <em>Comment recruter le coéquipier idéal ?</em> Vous devez surtout connaître les 
+                           aspects à prendre en compte et opter pour une recherche non traditionnelle..<br/>
+                           <em>Et qu’en est-il des collaborateurs qui font déjà partie de l’équipe, mais à 
+                           qui il manque une ou plusieurs de ces caractéristiques ?</em> Si vous souhaitez les aider 
+                           à s’améliorer, vous devez faire en sorte qu’ils comprennent ces concepts et qu’ils sachent 
+                           où le bât blesse.<br/>
                            <br/>
-                           Dit eenvoudige model introduceren bij teams en hen toelaten zichzelf te 
-                           beoordelen, is al een goede stap naar verbetering.`
+                           Présenter ce modèle simple à des équipes et leur permettre de s’évaluer constitue déjà un pas vers le progrès.`
                },
                second: {
-                  title: `Mooi Resultaat`,
-                  text: `De impact van teamleden die waarde hechten aan en blijk geven van nederigheid, 
-                           honger en intelligentie, kan niet genoeg worden benadrukt. De meeste teams die 
-                           het moeilijk hebben, hebben niet zozeer een gebrek aan kennis of competenties, 
-                           maar hebben geen toegang tot die kennis en competenties vanwege disfunctioneel 
-                           gedrag. Een team met allemaal mensen die bescheiden, hongerig en slim zijn, zal 
-                           deze disfuncties snel en gemakkelijk overwinnen, waardoor ze meer gedaan kunnen 
-                           krijgen in minder tijd en met veel minder afleiding. Ik hoop dat deze aanpak 
-                           leiders zal helpen bij het aanwerven, herkennen en ontwikkelen van ideale 
-                           teamspelers in hun organisaties.`
+                  title: `De Beaux Résultats`,
+                  text: `Nous ne soulignerons jamais assez l’impact de membres de l’équipe qui attachent de 
+                  l’importance à et font preuve de modestie, de soif de réussite et d’intelligence sociale. 
+                  La plupart des équipes en difficulté ne manquent pas de connaissances ou de compétences, 
+                  mais elles n’y ont pas accès en raison d’une attitude dysfonctionnelle. Une équipée composée 
+                  uniquement de travailleurs modestes qui ont une intelligence sociale et une soif de réussite 
+                  parviendra rapidement et facilement à surmonter ces dysfonctions. Elle pourra ainsi accomplir 
+                  plus de choses en moins de temps, en réduisant largement les distractions. J’espère que cette 
+                  approche aidera les dirigeants à recruter, identifier et développer des coéquipiers idéaux au 
+                  sein de leurs organisations.`
                }
             }
          }
@@ -269,141 +241,138 @@ const fr_pages_explore: NamespacePagesExploreTranslation = {
       },
       working_genius: {
          title: `The 6 Types of Working Genius`,
-         title_alt: `De 6 Intrinsieke Werkwaarden`,
+         title_alt: `Les 6 Capacités de Travail Intrinsèques`,
          intro: {
-            intro: `Teveel mensen in deze wereld <strong>werken tegen hun zin omdat ze hun persoonlijke 
-                     en innerlijke vermogens niet kennen</strong>. Hierdoor doen ze niet het werk dat hen 
-                     energie en plezier geeft en belanden ze in jobs en projecten die hun <em>vermoeien 
-                     en demotiveren</em>. Eigenlijk is dit een regelrechte tragedie om 2 aspecten:<br/>`,
+            intro: `Trop de gens dans ce monde <strong>travaillent contre leur gré parce qu’ils ne 
+                     connaissent pas leurs capacités personnelles et intérieures</strong>. Du coup, 
+                     ils ne font pas le travail qui leur donne de l’énergie et du plaisir et ils se 
+                     retrouvent dans des jobs et des projets qui les <em>fatiguent et les démotivent</em>. 
+                     En fait, il s’agit d’une véritable tragédie pour 2 aspects :<br/>`,
             list: [
-               `<b>Ten eerste:</b> het zorgt ervoor dat mensen hun <strong>zelfvertrouwen en 
-               plezier in het leven verliezen</strong>, wat natuurlijk voor hen een ramp is, 
-               maar ook voor hun <em>familie en vrienden</em>. En eigenlijk voor de maatschappij 
-               in zijn geheel. Dit alleen al is eigenlijk verschrikkelijk.`,
-               `<b>Ten tweede:</b> <strong>organisaties en teams die niet inhaken op die persoonlijke 
-               intrinsieke vermogens van hun teamleden zullen nooit in de buurt komen om 
-               het <em>volledige potentieel van die medewerkers</em> te laten ontplooien en bereiken.</strong> 
-               Ze zullen blijven twijfelen over het niet bereiken van doelen, effectiviteit, 
-               betrokkenheid en werkplezier van die mensen.`,	
+               `<b>Premièrement:</b> cela fait <strong>perdre confiance et joie de vivre</strong> aux gens, 
+               ce qui est une catastrophe pour eux, bien sûr, mais aussi pour leur <em>famille et leurs amis</em>. 
+               Et en fait pour la société dans son ensemble. Cela seul est en fait terrible..`,
+               `<b>Deuxièmement:</b> <strong>les organisations et les équipes qui n’exploitent pas 
+               les capacités intrinsèques personnelles des membres de leur équipe ne seront jamais 
+               près de débloquer et d’atteindre </em>le plein potentiel de ces employés.</strong> 
+               Ils continueront à avoir des doutes sur l’incapacité à atteindre les objectifs, l’efficacité, 
+               l’implication et la satisfaction au travail de ces personnes.`,	
             ],
-            text: `En wat eigenlijk het rampplaatje volledig maakt is dat eigenlijk dit alles te vermijden 
-                  is …<br/>
+            text: `Et ce qui complète réellement le tableau de la catastrophe, c’est que tout cela peut en 
+                  fait être évité …<br/>
                   <br/>
-                  De oplossing is dat iedereen, werknemers, managers, studenten, … hun <strong>intrinsieke 
-                  werkwaarden</strong> ontdekken alsook de vermogens die ze niet natuurlijk bezitten en derhalve 
-                  dus altijd energie zullen kosten. Om op die manier aan te haken met juiste “Working Genius”!`
+                  La solution est que chacun, salariés, managers, étudiants, … découvre ses <strong>capacités 
+                  intrinsèques de travail</strong> ainsi que les capacités qu’il ne possède pas naturellement 
+                  et donc coûtera toujours de l’énergie. Pour se connecter de cette façon avec 
+                  le bon « Working Genius » !`
          }
       },
       decisive_lead: {
-         title: "de beslissende voorsprong",
+         title: "l’avantage décisif",
          intro_accordeon: [
             {
-               title: 'Building a Cohesive Leadership Team',
-               intro: `De eerste stap is ervoor zorgen dat de leiders van de organisatie zich 
-                        op een functionele, samenhangende manier gedragen.<br/>
-                        Als de mensen die verantwoordelijk zijn voor het runnen van een 
-                        organisatie – of dat nu een bedrijf is, een afdeling binnen dat bedrijf, 
-                        een startende onderneming, een restaurant, een school of een kerk – zich 
-                        disfunctioneel gedragen, dan zal dat disfunctioneren zich trapsgewijs 
-                        voortzetten in de rest van de organisatie en een rem zetten op een 
-                        gezonde organisatie.<br/>
-                        En ja, er zijn concrete stappen die een leiderschapsteam kan nemen om dit 
-                        te voorkomen.`,
+               title: 'Mettre en Place une Équipe Dirigeante Unie',
+               intro: `La première étape consiste à ce que les supérieurs de l’organisation 
+                        se comportent de manière fonctionnelle et cohérente.<br/>
+                        Si les personnes responsables de l’exploitation d’une organisation – 
+                        qu’il s’agisse d’une entreprise, d’un département au sein de cette entreprise, 
+                        d’une entreprise débutante, d’un restaurant, d’une école ou d’une église – 
+                        se comportent de manière dysfonctionnelle, ce dysfonctionnement se propagera 
+                        progressivement au reste de l’organisation et entravera la mise en place d’une 
+                        organisation saine.<br/>
+                        Eh oui, il existe des mesures concrètes qu’une équipe dirigeante peut prendre pour l’éviter.`,
                list: {
-                  intro: "Samenhangende teams elimineren politiek en vergroten hun effectiviteit door het volgende te doen:",
+                  intro: "Des équipes unies éliminent le jeu politique et renforcent leur efficacité en procédant comme suit :",
                   items: [
-                     "Open zijn en vertrouwen opbouwen",
-                     "Constructieve ideologische conflicten aangaan",
-                     "Zich inzetten voor duidelijke beslissingen",
-                     "Elkaar verantwoordelijk houden voor gedrag en prestaties",
-                     "Focussen op collectieve resultaten",
+                     "Faire preuve d’ouverture et créer un climat de confiance",
+                     "Se lancer dans des conflits idéologiques constructifs",
+                     "Se mobiliser pour des décisions claires",
+                     "Se sentir responsable de son comportement et de ses prestations",
+                     "Se concentrer sur des résultats collectifs",
                   ]
                }
             },
             {
-               title: `Helderheid Scheppen`,
-               intro: `De tweede stap om een gezonde organisatie op te bouwen, 
-                        is ervoor zorgen dat de leden van dat leiderschapsteam 
-                        intellectueel op één lijn liggen rond zes eenvoudige 
-                        maar cruciale vragen.<br/>
-                        Leiders moeten duidelijk zijn over onderwerpen als waarom 
-                        de organisatie bestaat en wat de belangrijkste prioriteit 
-                        is voor de komende maanden.<br/>
-                        Leiders moeten eventuele hiaten tussen hen wegwerken, zodat 
-                        mensen een, twee of drie niveaus lager volledige duidelijkheid 
-                        hebben over wat ze moeten doen om de organisatie succesvol te maken.`,
+               title: `Un Seul Mot d’Ordre, la Transparence`,
+               intro: `La deuxième étape de la construction d’une organisation saine consiste à veiller 
+                        à ce que les membres de l’équipe de direction soient rassemblés autour d’une même ligne 
+                        intellectuelle en ce qui concerne 6 questions simples, mais cruciales.<br/>
+                        Les dirigeants doivent être clairs au sujet des thèmes tels que les raisons de 
+                        l’existence de l’organisation et les principales priorités pour les mois à venir.<br/>
+                        Les dirigeants doivent éventuellement éliminer les lacunes entre eux de manière à ce 
+                        que les collaborateurs qui se trouvent à un, deux ou trois échelons en dessous d’eux 
+                        sachent clairement ce qu’ils doivent faire afin de contribuer au succès de l’organisation.`,
                list: {
-                  intro: "Gezonde organisaties verkleinen de kans op verwarring door het volgende te verduidelijken:",
+                  intro: "Les organisations saines réduisent le risque de confusion en précisant ce qui suit :",
                   items: [
-                     `Waarom bestaan we?`,
-                     `Hoe gedragen we ons?`,
-                     `Wat doen we?`,
-                     `Hoe zullen we slagen?`,
-                     `Wat is op dit moment het belangrijkste?`,
-                     `Wie moet wat doen?`,
+                     `Quelle est notre raison d’exister ?`,
+                     `Comment nous comportons-nous ?`,
+                     `Que faisons-nous ?`,
+                     `Comment allons-nous réussir ?`,
+                     `Quel est le plus important à l’heure actuelle ?`,
+                     `Quelles sont les missions de chacun ?`,
                   ]
                }
             },
             {
-               title: `De Helderheid Versterken`,
-               intro: `Tot slot moeten leiders, naast overcommunicatie, ervoor zorgen 
-                        dat de antwoorden op de zes cruciale vragen herhaaldelijk worden 
-                        benadrukt met behulp van eenvoudige menselijke systemen.<br/>
-                        Dat betekent dat elk proces waarbij mensen betrokken zijn, van 
-                        aanwerving en ontslag tot prestatiebeheer en besluitvorming, op 
-                        een aangepaste manier is ontworpen om opzettelijk het unieke 
-                        karakter van de organisatie te ondersteunen en te benadrukken.<br/>
-                        <br/>
-                        Naast deze vier stappen is het essentieel dat een gezonde 
-                        organisatie beter wordt in die ene activiteit die ten grondslag 
-                        ligt aan alles wat ze doet: vergaderingen. Ja, vergaderingen.<br/>
-                        Zonder een paar eenvoudige maar fundamentele wijzigingen aan te 
-                        brengen in de manier waarop vergaderingen plaatsvinden, zal een 
-                        gezonde organisatie moeite hebben om datgene te behouden waaraan 
-                        ze hard heeft gewerkt om het op te bouwen.<br/>
-                        <br/>
-                        Kan een gezonde organisatie falen?<br/>
-                        Ja. Maar dat gebeurt bijna nooit. Echt waar. Wanneer politiek, 
-                        ambiguïteit, disfunctioneren en onduidelijkheid tot een minimum 
-                        worden beperkt, worden mensen geïnspireerd om producten te ontwerpen, 
-                        klanten te bedienen, problemen op te lossen en elkaar te helpen op 
-                        een manier waar ongezonde organisaties alleen maar van kunnen dromen.<br/>
-                        <br/>
-                        Gezonde organisaties herstellen van tegenslagen, trekken de beste 
-                        mensen aan, stoten de anderen af en creëren kansen die ze niet hadden 
-                        kunnen verwachten.<br/>
-                        Aan het einde van de dag, aan het einde van het kwartaal, zijn 
-                        werknemers gelukkiger, is het resultaat sterker en zijn leidinggevenden 
-                        gerust omdat ze weten dat ze hun belangrijkste verantwoordelijkheid 
-                        hebben vervuld: het creëren van een succesvolle omgeving.`,
+               title: `Surcommuniquer cette Transparence`,
+               intro: `Ce n’est que lorsque ces deux premières étapes ont été lancées 
+                        (harmonisation au niveau comportemental et intellectuel) qu’une organisation 
+                        peut mettre en place la troisième mesure : surcommuniquer les réponses aux six 
+                        questions. <br/>
+                        Les dirigeants d’une entreprise saine se répètent en permanence – et je veux 
+                        dire, constamment – et soulignent ce qui est important et à quel niveau. Ils 
+                        commettent toujours l’erreur d’en dire trop au lieu de pas assez.<br/>
+                        Cette qualité à elle seule différencie les dirigeants des organisations saines des autres.`,
                list: {
-                  intro: "Organisaties verstevigen hun gezondheid door te zorgen voor consistentie in…",
+                  intro: "Les organisations saines réunissent leurs collaborateurs sur une même ligne en matière de clarté organisationnelle en communiquant des messages clés via…",
                   items: [
-                     `Het aanwerven`,
-                     `Beheren van de prestaties`,
-                     `Beloningen en erkenning`,
-                     `Ontslag van de werknemer`,
-                     `Vergaderingen`,
+                     `La répétition`,
+                     `La simplicité`,
+                     `Plusieurs canaux`,
+                     `Des messages progressifs`,
                   ]
                }
             },
             {
-               title: `Helderheid over Communiceren`,
-               intro: `Pas nadat deze eerste twee stappen aan de gang zijn 
-                        (gedrags- en intellectuele afstemming), kan een organisatie de 
-                        derde stap ondernemen: de antwoorden op de zes vragen overcommuniceren. <br/>
-                        Leiders van een gezonde organisatie herhalen zich constant – en ik 
-                        bedoel constant – en benadrukken wat waar en belangrijk is. Ze maken 
-                        altijd de fout om te veel te zeggen in plaats van te weinig.<br/>
-                        Alleen al deze kwaliteit onderscheidt leiders van gezonde organisaties 
-                        van anderen.`,
+               title: `Renforcer la transparence`,
+               intro: `Enfin, les dirigeants doivent, en parallèle à la surcommunication, veiller à 
+                        souligner de manière répétée les réponses aux 6 questions cruciales à l’aide 
+                        de systèmes humains simples. Cela veut dire que chaque processus impliquant 
+                        des humains, du recrutement au licenciement en passant par la gestion des 
+                        performances et la prise de décision, doit être conçu de manière adaptée 
+                        afin de soutenir et de souligner volontairement le caractère unique de 
+                        l’organisation.<br/>
+                        <br/>
+                        En parallèle à ces quatre étapes, il est essentiel qu’une organisation saine 
+                        soit plus performante dans l’activité qui est à la base de tout : les 
+                        réunions. Oui, les réunions.<br/>
+                        Sans quelques changements simples, mais fondamentaux dans le déroulement 
+                        des réunions, une organisation saine éprouvera des difficultés à conserver 
+                        ce qu’elle a réussi à mettre en place à force de tant d’efforts.<br/>
+                        <br/>
+                        Une organisation saine peut-elle échouer ?<br/>
+                        Oui. Mais cela n’arrive presque jamais. Vraiment. Lorsque le jeu politique, 
+                        l’ambiguïté, le dysfonctionnement et le manque de précision sont limités au maximum, 
+                        les collaborateurs ont l’inspiration nécessaire pour concevoir des produits, servir 
+                        des clients, résoudre des problèmes et s’entraider d’une manière dont ne peuvent 
+                        que rêver les organisations non saines.<br/>
+                        <br/>
+                        Les organisations saines se relèvent après un échec, attirent les meilleurs profils, 
+                        repoussent les autres et créent des opportunités auxquelles elles n’auraient jamais 
+                        pu s’attendre.<br/>
+                        À la fin de la journée, à la fin du trimestre, les travailleurs sont plus heureux, 
+                        l’organisation a enregistré un meilleur résultat et les dirigeants ont l’esprit 
+                        tranquille, car ils savent qu’ils ont rempli leur principale responsabilité : créer 
+                        un environnement efficace.`,
                list: {
-                  intro: "Gezonde organisaties brengen hun werknemers op één lijn rond organisatorische duidelijkheid door kernboodschappen te communiceren via…",
+                  intro: "Les organisations consolident leur santé en assurant une cohérence au niveau…",
                   items: [
-                     `Herhaling`,
-                     `Eenvoud`,
-                     `Meerdere mediums`,
-                     `Trapsgewijze berichten`,
+                     `Du recrutement`,
+                     `De la gestion des prestations`,
+                     `Des récompenses et de la reconnaissance`,
+                     `Du licenciement du travailleur`,
+                     `Des réunions`,
                   ]
                }
             },
@@ -429,7 +398,7 @@ const fr_pages_explore: NamespacePagesExploreTranslation = {
                target: "Doel",
                keys_success: "Sleutels tot Succes"
             },
-            accordeon_title: `Met deze 4 types van meetings maak je je vergaderingen niet alleen productiever, maar ook efficiënter en aangenamer:`,
+            accordeon_title: `t deMeze 4 types van meetings maak je je vergaderingen niet alleen productiever, maar ook efficiënter en aangenamer:`,
             accordeon_items: [
                {
                   title: "Dagelijkse Check-In",

@@ -1859,6 +1859,47 @@ export type NamespacePagesExploreTranslation = {
 				}
 				'2': {
 					/**
+					 * H​e​l​d​e​r​h​e​i​d​ ​o​v​e​r​ ​C​o​m​m​u​n​i​c​e​r​e​n
+					 */
+					title: string
+					/**
+					 * P​a​s​ ​n​a​d​a​t​ ​d​e​z​e​ ​e​e​r​s​t​e​ ​t​w​e​e​ ​s​t​a​p​p​e​n​ ​a​a​n​ ​d​e​ ​g​a​n​g​ ​z​i​j​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​(​g​e​d​r​a​g​s​-​ ​e​n​ ​i​n​t​e​l​l​e​c​t​u​e​l​e​ ​a​f​s​t​e​m​m​i​n​g​)​,​ ​k​a​n​ ​e​e​n​ ​o​r​g​a​n​i​s​a​t​i​e​ ​d​e​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​r​d​e​ ​s​t​a​p​ ​o​n​d​e​r​n​e​m​e​n​:​ ​d​e​ ​a​n​t​w​o​o​r​d​e​n​ ​o​p​ ​d​e​ ​z​e​s​ ​v​r​a​g​e​n​ ​o​v​e​r​c​o​m​m​u​n​i​c​e​r​e​n​.​ ​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​L​e​i​d​e​r​s​ ​v​a​n​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​h​e​r​h​a​l​e​n​ ​z​i​c​h​ ​c​o​n​s​t​a​n​t​ ​–​ ​e​n​ ​i​k​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​d​o​e​l​ ​c​o​n​s​t​a​n​t​ ​–​ ​e​n​ ​b​e​n​a​d​r​u​k​k​e​n​ ​w​a​t​ ​w​a​a​r​ ​e​n​ ​b​e​l​a​n​g​r​i​j​k​ ​i​s​.​ ​Z​e​ ​m​a​k​e​n​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​l​t​i​j​d​ ​d​e​ ​f​o​u​t​ ​o​m​ ​t​e​ ​v​e​e​l​ ​t​e​ ​z​e​g​g​e​n​ ​i​n​ ​p​l​a​a​t​s​ ​v​a​n​ ​t​e​ ​w​e​i​n​i​g​.​<​b​r​/​>​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​A​l​l​e​e​n​ ​a​l​ ​d​e​z​e​ ​k​w​a​l​i​t​e​i​t​ ​o​n​d​e​r​s​c​h​e​i​d​t​ ​l​e​i​d​e​r​s​ ​v​a​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​
+				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​a​n​d​e​r​e​n​.
+					 */
+					intro: string
+					list: {
+						/**
+						 * G​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​b​r​e​n​g​e​n​ ​h​u​n​ ​w​e​r​k​n​e​m​e​r​s​ ​o​p​ ​é​é​n​ ​l​i​j​n​ ​r​o​n​d​ ​o​r​g​a​n​i​s​a​t​o​r​i​s​c​h​e​ ​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​d​o​o​r​ ​k​e​r​n​b​o​o​d​s​c​h​a​p​p​e​n​ ​t​e​ ​c​o​m​m​u​n​i​c​e​r​e​n​ ​v​i​a​…
+						 */
+						intro: string
+						items: {
+							/**
+							 * H​e​r​h​a​l​i​n​g
+							 */
+							'0': string
+							/**
+							 * E​e​n​v​o​u​d
+							 */
+							'1': string
+							/**
+							 * M​e​e​r​d​e​r​e​ ​m​e​d​i​u​m​s
+							 */
+							'2': string
+							/**
+							 * T​r​a​p​s​g​e​w​i​j​z​e​ ​b​e​r​i​c​h​t​e​n
+							 */
+							'3': string
+						}
+					}
+				}
+				'3': {
+					/**
 					 * D​e​ ​H​e​l​d​e​r​h​e​i​d​ ​V​e​r​s​t​e​r​k​e​n
 					 */
 					title: string
@@ -1921,47 +1962,6 @@ export type NamespacePagesExploreTranslation = {
 							 * V​e​r​g​a​d​e​r​i​n​g​e​n
 							 */
 							'4': string
-						}
-					}
-				}
-				'3': {
-					/**
-					 * H​e​l​d​e​r​h​e​i​d​ ​o​v​e​r​ ​C​o​m​m​u​n​i​c​e​r​e​n
-					 */
-					title: string
-					/**
-					 * P​a​s​ ​n​a​d​a​t​ ​d​e​z​e​ ​e​e​r​s​t​e​ ​t​w​e​e​ ​s​t​a​p​p​e​n​ ​a​a​n​ ​d​e​ ​g​a​n​g​ ​z​i​j​n​ ​
-				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​(​g​e​d​r​a​g​s​-​ ​e​n​ ​i​n​t​e​l​l​e​c​t​u​e​l​e​ ​a​f​s​t​e​m​m​i​n​g​)​,​ ​k​a​n​ ​e​e​n​ ​o​r​g​a​n​i​s​a​t​i​e​ ​d​e​ ​
-				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​r​d​e​ ​s​t​a​p​ ​o​n​d​e​r​n​e​m​e​n​:​ ​d​e​ ​a​n​t​w​o​o​r​d​e​n​ ​o​p​ ​d​e​ ​z​e​s​ ​v​r​a​g​e​n​ ​o​v​e​r​c​o​m​m​u​n​i​c​e​r​e​n​.​ ​<​b​r​/​>​
-				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​L​e​i​d​e​r​s​ ​v​a​n​ ​e​e​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​ ​h​e​r​h​a​l​e​n​ ​z​i​c​h​ ​c​o​n​s​t​a​n​t​ ​–​ ​e​n​ ​i​k​ ​
-				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​b​e​d​o​e​l​ ​c​o​n​s​t​a​n​t​ ​–​ ​e​n​ ​b​e​n​a​d​r​u​k​k​e​n​ ​w​a​t​ ​w​a​a​r​ ​e​n​ ​b​e​l​a​n​g​r​i​j​k​ ​i​s​.​ ​Z​e​ ​m​a​k​e​n​ ​
-				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​a​l​t​i​j​d​ ​d​e​ ​f​o​u​t​ ​o​m​ ​t​e​ ​v​e​e​l​ ​t​e​ ​z​e​g​g​e​n​ ​i​n​ ​p​l​a​a​t​s​ ​v​a​n​ ​t​e​ ​w​e​i​n​i​g​.​<​b​r​/​>​
-				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​A​l​l​e​e​n​ ​a​l​ ​d​e​z​e​ ​k​w​a​l​i​t​e​i​t​ ​o​n​d​e​r​s​c​h​e​i​d​t​ ​l​e​i​d​e​r​s​ ​v​a​n​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​
-				​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​a​n​d​e​r​e​n​.
-					 */
-					intro: string
-					list: {
-						/**
-						 * G​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​b​r​e​n​g​e​n​ ​h​u​n​ ​w​e​r​k​n​e​m​e​r​s​ ​o​p​ ​é​é​n​ ​l​i​j​n​ ​r​o​n​d​ ​o​r​g​a​n​i​s​a​t​o​r​i​s​c​h​e​ ​d​u​i​d​e​l​i​j​k​h​e​i​d​ ​d​o​o​r​ ​k​e​r​n​b​o​o​d​s​c​h​a​p​p​e​n​ ​t​e​ ​c​o​m​m​u​n​i​c​e​r​e​n​ ​v​i​a​…
-						 */
-						intro: string
-						items: {
-							/**
-							 * H​e​r​h​a​l​i​n​g
-							 */
-							'0': string
-							/**
-							 * E​e​n​v​o​u​d
-							 */
-							'1': string
-							/**
-							 * M​e​e​r​d​e​r​e​ ​m​e​d​i​u​m​s
-							 */
-							'2': string
-							/**
-							 * T​r​a​p​s​g​e​w​i​j​z​e​ ​b​e​r​i​c​h​t​e​n
-							 */
-							'3': string
 						}
 					}
 				}
@@ -4929,6 +4929,47 @@ export type TranslationFunctions = {
 					}
 					'2': {
 						/**
+						 * Helderheid over Communiceren
+						 */
+						title: () => LocalizedString
+						/**
+						 * Pas nadat deze eerste twee stappen aan de gang zijn 
+					                        (gedrags- en intellectuele afstemming), kan een organisatie de 
+					                        derde stap ondernemen: de antwoorden op de zes vragen overcommuniceren. <br/>
+					                        Leiders van een gezonde organisatie herhalen zich constant – en ik 
+					                        bedoel constant – en benadrukken wat waar en belangrijk is. Ze maken 
+					                        altijd de fout om te veel te zeggen in plaats van te weinig.<br/>
+					                        Alleen al deze kwaliteit onderscheidt leiders van gezonde organisaties 
+					                        van anderen.
+						 */
+						intro: () => LocalizedString
+						list: {
+							/**
+							 * Gezonde organisaties brengen hun werknemers op één lijn rond organisatorische duidelijkheid door kernboodschappen te communiceren via…
+							 */
+							intro: () => LocalizedString
+							items: {
+								/**
+								 * Herhaling
+								 */
+								'0': () => LocalizedString
+								/**
+								 * Eenvoud
+								 */
+								'1': () => LocalizedString
+								/**
+								 * Meerdere mediums
+								 */
+								'2': () => LocalizedString
+								/**
+								 * Trapsgewijze berichten
+								 */
+								'3': () => LocalizedString
+							}
+						}
+					}
+					'3': {
+						/**
 						 * De Helderheid Versterken
 						 */
 						title: () => LocalizedString
@@ -4991,47 +5032,6 @@ export type TranslationFunctions = {
 								 * Vergaderingen
 								 */
 								'4': () => LocalizedString
-							}
-						}
-					}
-					'3': {
-						/**
-						 * Helderheid over Communiceren
-						 */
-						title: () => LocalizedString
-						/**
-						 * Pas nadat deze eerste twee stappen aan de gang zijn 
-					                        (gedrags- en intellectuele afstemming), kan een organisatie de 
-					                        derde stap ondernemen: de antwoorden op de zes vragen overcommuniceren. <br/>
-					                        Leiders van een gezonde organisatie herhalen zich constant – en ik 
-					                        bedoel constant – en benadrukken wat waar en belangrijk is. Ze maken 
-					                        altijd de fout om te veel te zeggen in plaats van te weinig.<br/>
-					                        Alleen al deze kwaliteit onderscheidt leiders van gezonde organisaties 
-					                        van anderen.
-						 */
-						intro: () => LocalizedString
-						list: {
-							/**
-							 * Gezonde organisaties brengen hun werknemers op één lijn rond organisatorische duidelijkheid door kernboodschappen te communiceren via…
-							 */
-							intro: () => LocalizedString
-							items: {
-								/**
-								 * Herhaling
-								 */
-								'0': () => LocalizedString
-								/**
-								 * Eenvoud
-								 */
-								'1': () => LocalizedString
-								/**
-								 * Meerdere mediums
-								 */
-								'2': () => LocalizedString
-								/**
-								 * Trapsgewijze berichten
-								 */
-								'3': () => LocalizedString
 							}
 						}
 					}

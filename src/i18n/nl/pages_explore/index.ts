@@ -345,6 +345,26 @@ const nl_pages_explore: BaseTranslation = {
                }
             },
             {
+               title: `Helderheid over Communiceren`,
+               intro: `Pas nadat deze eerste twee stappen aan de gang zijn 
+                        (gedrags- en intellectuele afstemming), kan een organisatie de 
+                        derde stap ondernemen: de antwoorden op de zes vragen overcommuniceren. <br/>
+                        Leiders van een gezonde organisatie herhalen zich constant – en ik 
+                        bedoel constant – en benadrukken wat waar en belangrijk is. Ze maken 
+                        altijd de fout om te veel te zeggen in plaats van te weinig.<br/>
+                        Alleen al deze kwaliteit onderscheidt leiders van gezonde organisaties 
+                        van anderen.`,
+               list: {
+                  intro: "Gezonde organisaties brengen hun werknemers op één lijn rond organisatorische duidelijkheid door kernboodschappen te communiceren via…",
+                  items: [
+                     `Herhaling`,
+                     `Eenvoud`,
+                     `Meerdere mediums`,
+                     `Trapsgewijze berichten`,
+                  ]
+               }
+            },
+            {
                title: `De Helderheid Versterken`,
                intro: `Tot slot moeten leiders, naast overcommunicatie, ervoor zorgen 
                         dat de antwoorden op de zes cruciale vragen herhaaldelijk worden 
@@ -384,26 +404,6 @@ const nl_pages_explore: BaseTranslation = {
                      `Beloningen en erkenning`,
                      `Ontslag van de werknemer`,
                      `Vergaderingen`,
-                  ]
-               }
-            },
-            {
-               title: `Helderheid over Communiceren`,
-               intro: `Pas nadat deze eerste twee stappen aan de gang zijn 
-                        (gedrags- en intellectuele afstemming), kan een organisatie de 
-                        derde stap ondernemen: de antwoorden op de zes vragen overcommuniceren. <br/>
-                        Leiders van een gezonde organisatie herhalen zich constant – en ik 
-                        bedoel constant – en benadrukken wat waar en belangrijk is. Ze maken 
-                        altijd de fout om te veel te zeggen in plaats van te weinig.<br/>
-                        Alleen al deze kwaliteit onderscheidt leiders van gezonde organisaties 
-                        van anderen.`,
-               list: {
-                  intro: "Gezonde organisaties brengen hun werknemers op één lijn rond organisatorische duidelijkheid door kernboodschappen te communiceren via…",
-                  items: [
-                     `Herhaling`,
-                     `Eenvoud`,
-                     `Meerdere mediums`,
-                     `Trapsgewijze berichten`,
                   ]
                }
             },
