@@ -9,14 +9,6 @@ export const load: LayoutLoad<{ locale: Locales }> = async ({ data: { locale } }
 	// load dictionary into memory
 	await loadLocaleAsync(locale)
 
-	// load namespaces into memory
-	await loadLocaleAsync(locale, 'nav')
-	await loadLocaleAsync(locale, 'components')
-	await loadLocaleAsync(locale, 'other')
-	await loadLocaleAsync(locale, 'pages')
-	await loadLocaleAsync(locale, 'pages_explore')
-	await loadLocaleAsync(locale, 'sessions')
-
 
 	// if you need to output a localized string in a `load` function,
 	// you always need to call `setLocale` right before you access the `LL` store
@@ -27,6 +19,7 @@ export const load: LayoutLoad<{ locale: Locales }> = async ({ data: { locale } }
 	// pass locale to the "rendering context"
 	return { locale }
 }
- export const prerender = true;
+ export const prerender = 'auto';
  export const ssr = true;
  export const csr = true;
+ export const trailingSlash = 'always';
