@@ -24,6 +24,8 @@ export { mailToAdmin as mailToAdmin } from './mail'
 export { registerMailchimp as registerMailchimp } from './mail'
 
 // Supabase Queries
+export { dbSelect as dbSelect } from './query'
+export { dbSelectOrder as dbSelectOrder } from './query'
 export { dbInsert as dbInsert } from './query'
 
 // Checkers
