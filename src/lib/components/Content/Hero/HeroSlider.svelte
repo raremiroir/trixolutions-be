@@ -2,7 +2,7 @@
 	import { Splide, SplideTrack } from '@splidejs/svelte-splide';
 	import '@splidejs/svelte-splide/css/core';
 
-	import SlideChangeBtn from './SlideChangeBtn.svelte';
+	import SlideChangeBtn from '$comp/Content/Slider/SlideChangeBtn.svelte';
 	export let visibleHeading = false;
 	export let label: string;
 

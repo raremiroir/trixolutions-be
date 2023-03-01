@@ -1,7 +1,7 @@
 <script lang='ts'>
 
 	// Import Swiper styles
-	import { HeroInner } from '../Hero/hero';
+	import { HeroInner } from './hero';
 	import { SplideSlide } from '@splidejs/svelte-splide';
 
 	// Set extra classes
