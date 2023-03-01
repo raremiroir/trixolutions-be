@@ -1,5 +1,5 @@
 import supabase from '$lib/db'
-import type { PageLoad } from '../$types';
+import type { PageLoad } from './$types';
 
 import { fetchMarkdownPosts } from '$utils';
 import type { BlogPost } from '$src/types';

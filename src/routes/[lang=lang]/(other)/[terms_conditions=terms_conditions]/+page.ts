@@ -1,7 +1,7 @@
 import LL, { setLocale } from '$i18n/i18n-svelte'
 import { get } from 'svelte/store'
 import { error } from '@sveltejs/kit'
-import type { PageLoad } from '../../$types'
+import type { PageLoad } from './$types'
 
 export const load: PageLoad = async ({ parent, params }) => {
 	if (  params.terms_conditions === 'algemene-voorwaarden' && params.lang === 'nl'
