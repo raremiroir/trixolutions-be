@@ -90,6 +90,9 @@
    // Hero
    export { default as Hero }             from './Content/Hero/Hero.svelte';
    export { default as HeroInner }        from './Content/Hero/HeroInner.svelte';
+   export { default as HeroSlider }       from './Content/Hero/HeroSlider.svelte';
+   export { default as HeroSlide }       from './Content/Hero/HeroSlide.svelte';
+
    // Modal
    export { default as Modal }            from './Content/Modal/Modal.svelte';
    export { default as FeaturesModalContent } from './Content/FeaturesSlider/FeaturesModalContent.svelte';
@@ -97,8 +100,6 @@
    export { default as SlideChangeBtn }   from './Content/Slider/SlideChangeBtn.svelte'
 
    export { default as NavSlider }        from './Content/Slider/NavSlider.svelte'
-   export { default as HeroSlider }       from './Content/Slider/HeroSlider.svelte';
-   export { default as HeroSlide }        from './Content/Slider/HeroSlide.svelte'
    export { default as ThumbnailSlide }   from './Content/Slider/ThumbnailSlide.svelte'
    export { default as FeatureSlide }     from './Content/Slider/FeatureSlide.svelte'
 
