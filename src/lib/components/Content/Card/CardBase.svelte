@@ -44,6 +44,9 @@
    const hoverMinimal = hoverFx === 'minimal' ? true : false;
    const hoverFull = hoverFx === 'full' ? true : false;
 
+   // Get grayer bg
+   export let altBg = false;
+
    // Set direction of card
    export let direction = 'col';
 
@@ -82,7 +85,7 @@
          <div
             class="
                { transition }
-               flex bg-white 
+               flex { altBg ? 'bg-gray-50' : 'bg-white' }
                w-full h-1/2
                { imgHeight ? imgHeight
                : direction === 'row' ? 'sm:h-full sm:w-1/3'
@@ -117,7 +120,7 @@
             { transition }
             { direction === 'row' || !img ? '' : 'bottom-0 absolute' }
             z-2
-            bg-white
+            { altBg ? 'bg-gray-50' : 'bg-white' }
             w-full h-1/2 
             { img ? bodyHeight ? bodyHeight
                   : direction === 'row' ? 'sm:h-full sm:w-2/3'
