@@ -24,26 +24,12 @@
 	>
 	<Button
 		ariaLabel={prev ? `${$LL.base.slide.prev()}` : next ? `${$LL.base.slide.next()}` : 'set next/prev' }
-		color="primary-alt"
-		size="xl"
-		flat square rounded
-		class="flex items-center justify-center z-3"
-	>
-		<div
-			class="
-				w-full h-full p-1 
-				rounded-full 
-				bg-primary group-hover:bg-primary-l1
-				flex items-center justify-center
-				group-active:scale-90 group-active:bg-primary-l2 
-				transition-all duration-300 ease-out"
-		>
-			<Icon
-				icon="material-symbols:arrow-right-alt-rounded"
-				rotate="{prev ? '180deg' : '0deg'}"
-				color="#fff"
-				width="{ small ? 40 : 60 }"
-			/>
-		</div>
-	</Button>
+		title={prev ? `${$LL.base.slide.prev()}` : next ? `${$LL.base.slide.next()}` : 'set next/prev' }
+		color="primary"
+		size="px-8 py-8"
+		flat circle
+		icon='material-symbols:arrow-right-alt-rounded'
+		iconClass="text-white w-12 h-12 {prev ? 'rotate-180' : ''}"
+		class="flex items-center justify-center z-3 mx-6"
+	/>
 </Tooltip>
