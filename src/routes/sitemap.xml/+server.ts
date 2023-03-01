@@ -17,7 +17,7 @@ interface SitemapItem {
 	altLocales: Object;
 }
 
-type Pages = Record<string, Page>;
+type Pages = Page[];
 type SitemapObject = Record<string, SitemapItem[]>;
 type SitemapItemArray = SitemapItem[];
 
