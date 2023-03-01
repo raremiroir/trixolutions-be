@@ -114,6 +114,39 @@ const nl: BaseTranslation = {
          prev: "Vorige Slide",
          next: "Volgende Slide"
       },
+      foot_accordeon: {
+         about_trix_lencioni: {
+            title: "Over Trixolutions en Patrick Lencioni",
+            text: `Trixolutions is exclusief CAPA PRO geaccrediteerd en daardoor lid van de Table Group van Patrick Lencioni. 
+                  Samen zetten we ons in om werknemers meer voldoening te geven door organisaties gezonder te maken.<br/>
+                  Trixolutions heeft gewerkt met honderden senior leidinggevenden en hun teams in organisaties..<br/>
+                  <br/>
+                  Door zijn werk als bestsellerauteur is Patrick Lencioni een pionier in de beweging rond gezonde organisaties. 
+                  Trixolutions is heel fier rechtsreeks met hem te kunnen samenwerken.`,
+         },
+         digital_coaching: {
+            title: 'Mogelijkheden tot (digitale) opleiding en coaching',
+            sub: 'Bovenstaande inzichten, methodieken en oefeningen kunnen u aangeboden worden in de volgende formats:',
+            offline: {
+               title: 'Offline (Covid-19 proof)',
+               items: [
+                  "Persoonlijke coaching",
+                  "Inspiratiesessie van 1,5 uur",
+                  "Workshop van een halve dag",
+                  "Opleidingstraject",
+               ]
+            },
+            online: {
+               title: "Online (Platform ZOOM, TEAMS, of VEDAMO)",
+               items: [
+                  "Persoonlijke coaching",
+                  "Inspiratiesessie van 1,5 uur in onze Trixolutions Virtual Classroom",
+                  "Workshop van een halve dag in onze Trixolutions Virtual Classroom",
+                  "Digitale Learning Journey",
+               ]
+            }
+         }
+      },
       footer: {
          social_media: "sociale media",
          more_about_us: 'meer over ons',

@@ -114,6 +114,39 @@ const fr: Translation = {
          prev: "Diapo Précédente",
          next: "Diapo Suivante"
       },
+      foot_accordeon: {
+         about_trix_lencioni: {
+            title: "À Propos de Trixolutions et Patrick Lencioni",
+            text: `Trixolutions est exclusivement accrédité CAPA PRO et est donc membre du Table Group de Patrick Lencioni. 
+                  Ensemble, nous nous engageons à donner plus de satisfaction aux employés en rendant les organisations plus saines.<br/>
+                  Trixolutions a travaillé avec des centaines de cadres supérieurs et de leurs équipes au sein d'organisations..<br/>
+                  <br/>
+                  Grâce à son travail en tant qu'auteur à succès, Patrick Lencioni est un pionnier dans le mouvement des organisations saines. 
+                  Trixolutions est très fière de travailler directement avec lui.`,
+         },
+         digital_coaching: {
+            title: 'Possibilités de formation et de coaching (numérique).',
+            sub: 'Les informations, méthodologies et exercices ci-dessus peuvent vous être proposés dans les formats suivants :',
+            offline: {
+               title: 'En présentiel (sécurité Covid-19 assurée)',
+               items: [
+                  "Coaching personnel",
+                  "Session d'inspiration de 1,5 heures",
+                  "Atelier de demi-journée",
+                  "Parcours de formation"
+               ]
+            },
+            online: {
+               title: "En ligne (plateforme ZOOM, TEAMS ou VEDAMO)",
+               items: [
+                  "Coaching personnel",
+                  "Session d'inspiration de 1,5 heures dans notre salle de classe virtuelle Trixolutions",
+                  "Atelier de demi-journée dans notre salle de classe virtuelle Trixolutions",
+                  "Parcours de formation numérique"
+               ]
+            }
+         }
+      },
       footer: {
          social_media: "des médias sociaux",
          more_about_us: 'en savoir plus sur nous',

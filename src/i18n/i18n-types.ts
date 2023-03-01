@@ -381,6 +381,81 @@ type RootTranslation = {
 			 */
 			next: string
 		}
+		foot_accordeon: {
+			about_trix_lencioni: {
+				/**
+				 * O​v​e​r​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​e​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i
+				 */
+				title: string
+				/**
+				 * T​r​i​x​o​l​u​t​i​o​n​s​ ​i​s​ ​e​x​c​l​u​s​i​e​f​ ​C​A​P​A​ ​P​R​O​ ​g​e​a​c​c​r​e​d​i​t​e​e​r​d​ ​e​n​ ​d​a​a​r​d​o​o​r​ ​l​i​d​ ​v​a​n​ ​d​e​ ​T​a​b​l​e​ ​G​r​o​u​p​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​.​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​S​a​m​e​n​ ​z​e​t​t​e​n​ ​w​e​ ​o​n​s​ ​i​n​ ​o​m​ ​w​e​r​k​n​e​m​e​r​s​ ​m​e​e​r​ ​v​o​l​d​o​e​n​i​n​g​ ​t​e​ ​g​e​v​e​n​ ​d​o​o​r​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​g​e​z​o​n​d​e​r​ ​t​e​ ​m​a​k​e​n​.​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​h​e​e​f​t​ ​g​e​w​e​r​k​t​ ​m​e​t​ ​h​o​n​d​e​r​d​e​n​ ​s​e​n​i​o​r​ ​l​e​i​d​i​n​g​g​e​v​e​n​d​e​n​ ​e​n​ ​h​u​n​ ​t​e​a​m​s​ ​i​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​.​.​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​o​o​r​ ​z​i​j​n​ ​w​e​r​k​ ​a​l​s​ ​b​e​s​t​s​e​l​l​e​r​a​u​t​e​u​r​ ​i​s​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​e​e​n​ ​p​i​o​n​i​e​r​ ​i​n​ ​d​e​ ​b​e​w​e​g​i​n​g​ ​r​o​n​d​ ​g​e​z​o​n​d​e​ ​o​r​g​a​n​i​s​a​t​i​e​s​.​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​i​s​ ​h​e​e​l​ ​f​i​e​r​ ​r​e​c​h​t​s​r​e​e​k​s​ ​m​e​t​ ​h​e​m​ ​t​e​ ​k​u​n​n​e​n​ ​s​a​m​e​n​w​e​r​k​e​n​.
+				 */
+				text: string
+			}
+			digital_coaching: {
+				/**
+				 * M​o​g​e​l​i​j​k​h​e​d​e​n​ ​t​o​t​ ​(​d​i​g​i​t​a​l​e​)​ ​o​p​l​e​i​d​i​n​g​ ​e​n​ ​c​o​a​c​h​i​n​g
+				 */
+				title: string
+				/**
+				 * B​o​v​e​n​s​t​a​a​n​d​e​ ​i​n​z​i​c​h​t​e​n​,​ ​m​e​t​h​o​d​i​e​k​e​n​ ​e​n​ ​o​e​f​e​n​i​n​g​e​n​ ​k​u​n​n​e​n​ ​u​ ​a​a​n​g​e​b​o​d​e​n​ ​w​o​r​d​e​n​ ​i​n​ ​d​e​ ​v​o​l​g​e​n​d​e​ ​f​o​r​m​a​t​s​:
+				 */
+				sub: string
+				offline: {
+					/**
+					 * O​f​f​l​i​n​e​ ​(​C​o​v​i​d​-​1​9​ ​p​r​o​o​f​)
+					 */
+					title: string
+					items: {
+						/**
+						 * P​e​r​s​o​o​n​l​i​j​k​e​ ​c​o​a​c​h​i​n​g
+						 */
+						'0': string
+						/**
+						 * I​n​s​p​i​r​a​t​i​e​s​e​s​s​i​e​ ​v​a​n​ ​1​,​5​ ​u​u​r
+						 */
+						'1': string
+						/**
+						 * W​o​r​k​s​h​o​p​ ​v​a​n​ ​e​e​n​ ​h​a​l​v​e​ ​d​a​g
+						 */
+						'2': string
+						/**
+						 * O​p​l​e​i​d​i​n​g​s​t​r​a​j​e​c​t
+						 */
+						'3': string
+					}
+				}
+				online: {
+					/**
+					 * O​n​l​i​n​e​ ​(​P​l​a​t​f​o​r​m​ ​Z​O​O​M​,​ ​T​E​A​M​S​,​ ​o​f​ ​V​E​D​A​M​O​)
+					 */
+					title: string
+					items: {
+						/**
+						 * P​e​r​s​o​o​n​l​i​j​k​e​ ​c​o​a​c​h​i​n​g
+						 */
+						'0': string
+						/**
+						 * I​n​s​p​i​r​a​t​i​e​s​e​s​s​i​e​ ​v​a​n​ ​1​,​5​ ​u​u​r​ ​i​n​ ​o​n​z​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​V​i​r​t​u​a​l​ ​C​l​a​s​s​r​o​o​m
+						 */
+						'1': string
+						/**
+						 * W​o​r​k​s​h​o​p​ ​v​a​n​ ​e​e​n​ ​h​a​l​v​e​ ​d​a​g​ ​i​n​ ​o​n​z​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​V​i​r​t​u​a​l​ ​C​l​a​s​s​r​o​o​m
+						 */
+						'2': string
+						/**
+						 * D​i​g​i​t​a​l​e​ ​L​e​a​r​n​i​n​g​ ​J​o​u​r​n​e​y
+						 */
+						'3': string
+					}
+				}
+			}
+		}
 		footer: {
 			/**
 			 * s​o​c​i​a​l​e​ ​m​e​d​i​a
@@ -3472,6 +3547,81 @@ export type TranslationFunctions = {
 			 * Volgende Slide
 			 */
 			next: () => LocalizedString
+		}
+		foot_accordeon: {
+			about_trix_lencioni: {
+				/**
+				 * Over Trixolutions en Patrick Lencioni
+				 */
+				title: () => LocalizedString
+				/**
+				 * Trixolutions is exclusief CAPA PRO geaccrediteerd en daardoor lid van de Table Group van Patrick Lencioni. 
+			                  Samen zetten we ons in om werknemers meer voldoening te geven door organisaties gezonder te maken.<br/>
+			                  Trixolutions heeft gewerkt met honderden senior leidinggevenden en hun teams in organisaties..<br/>
+			                  <br/>
+			                  Door zijn werk als bestsellerauteur is Patrick Lencioni een pionier in de beweging rond gezonde organisaties. 
+			                  Trixolutions is heel fier rechtsreeks met hem te kunnen samenwerken.
+				 */
+				text: () => LocalizedString
+			}
+			digital_coaching: {
+				/**
+				 * Mogelijkheden tot (digitale) opleiding en coaching
+				 */
+				title: () => LocalizedString
+				/**
+				 * Bovenstaande inzichten, methodieken en oefeningen kunnen u aangeboden worden in de volgende formats:
+				 */
+				sub: () => LocalizedString
+				offline: {
+					/**
+					 * Offline (Covid-19 proof)
+					 */
+					title: () => LocalizedString
+					items: {
+						/**
+						 * Persoonlijke coaching
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Inspiratiesessie van 1,5 uur
+						 */
+						'1': () => LocalizedString
+						/**
+						 * Workshop van een halve dag
+						 */
+						'2': () => LocalizedString
+						/**
+						 * Opleidingstraject
+						 */
+						'3': () => LocalizedString
+					}
+				}
+				online: {
+					/**
+					 * Online (Platform ZOOM, TEAMS, of VEDAMO)
+					 */
+					title: () => LocalizedString
+					items: {
+						/**
+						 * Persoonlijke coaching
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Inspiratiesessie van 1,5 uur in onze Trixolutions Virtual Classroom
+						 */
+						'1': () => LocalizedString
+						/**
+						 * Workshop van een halve dag in onze Trixolutions Virtual Classroom
+						 */
+						'2': () => LocalizedString
+						/**
+						 * Digitale Learning Journey
+						 */
+						'3': () => LocalizedString
+					}
+				}
+			}
 		}
 		footer: {
 			/**
