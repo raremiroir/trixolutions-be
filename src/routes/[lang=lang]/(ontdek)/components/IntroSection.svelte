@@ -10,6 +10,8 @@
 
     export let imgClass = '';
 
+    const transition = 'transition-all duration-300 ease-in-out'
+
 </script>
 
 <Section name={`${formatUrl(title)}-intro`}>
@@ -18,22 +20,20 @@
 
    <div class="
        flex flex-col lg:flex-row gap-4
-       transition-all duration-300 ease-in-out ">
+       transition-all duration-300 ease-in-out">
        <div class="
                border-4 border-primary rounded-xl 
-               shadow-lg 
-               overflow-hidden h-fit
-               transition-all duration-300 ease-in-out
-               {imgWidth}">
+               shadow-lg {imgWidth} {transition}
+               overflow-hidden h-fit {imgWidth}">
            <Image 
                alt={title}
                src={imgSrc}
-               imgClass="{imgWidth}"
-               class={imgClass}/>
+               imgClass=""
+               class="flex items-center justify-center {imgClass}"/>
        </div>
 
-       <div class="{contentWidth}">
-               <slot/>
+       <div class="{contentWidth} {transition}">
+            <slot/>
        </div>
    </div>
 

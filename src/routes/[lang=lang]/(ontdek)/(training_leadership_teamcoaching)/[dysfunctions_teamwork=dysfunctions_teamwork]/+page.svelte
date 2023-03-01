@@ -61,6 +61,8 @@
         }
     } 
 
+    const transition = "transition-all duration-300 ease-in-out";
+
 </script>
 
 <IntroSection title={$currentTitle} imgSrc={$currentHero}>
@@ -126,12 +128,12 @@
                 {@html $LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.accordeon_items.second.intro()}
             </Text>
             <div class="
-                    grid 
+                    grid {transition}
                     grid-cols-1 sm:grid-cols-2 lg:grid-cols-6
                     gap-4 xl:gap-8" >
                 {#each secondAccCards as card, key}
                 <div class="
-                        col-span-1 
+                        col-span-1 {transition}
                         { (Number(key) + 1) === 5 ? 'sm:col-span-2' : 'sm:col-span-1'}
                         { (Number(key) + 1) >= 4 ? 'lg:col-span-3' : 'lg:col-span-2'}
                     ">

@@ -32,17 +32,18 @@
       else { $active = id }
    }
 
+   const transition = "transition-all duration-300 ease-in-out"
 </script>
 
 
 <div class="
       flex-col flex 
       rounded-xl overflow-hidden
-      transition-all duration-300 ease-out
+      {transition}
       shadow-md hover:shadow-lg hover:shadow-black/20">
    <div class="
          flex flex-row justify-between items-center 
-         transition-all duration-300 ease-out group
+         {transition} group
          { isCurrentActive ? 'border-b-primary/50 hover:border-b-primary-l1 ' : 'border-transparent'} 
          border-b-4 border-t-4 border-transparent
          cursor-pointer
@@ -54,7 +55,7 @@
          on:mouseleave={() => isHovered = false}
          >
       
-      <div class="flex items-center justify-start gap-2">
+      <div class="flex items-center justify-start gap-2 {transition}">
          {#if icon !== ''}
             <Icon 
                {icon} 
@@ -80,7 +81,7 @@
                bg-primary group-hover:bg-primary-l1
                group-active:scale-90 group-active:bg-primary-l2 
                { isCurrentActive ? 'rotate-90 group-active:rotate-0' : 'rotate-0 group-active:rotate-90'} 
-               transition-all duration-300 ease-in-out">
+               {transition}">
             <Icon icon="material-symbols:arrow-right-alt-rounded" color="#fff" class=" " width="40" />
          </div>
       </div>
@@ -88,7 +89,7 @@
    
    {#if isCurrentActive}
       <div class=" 
-            transition-all duration-300 ease-in-out
+            {transition}
             rounded-b-xl bg-white px-4 pt-2 pb-4 
             shadow-lg shadow-black/20"
             transition:slide>
