@@ -42,7 +42,7 @@
                 { card.content === 'timespan' ? `sm:col-span-1` : card.content === 'target'   ? `sm:col-span-2` : card.content === 'list'     ? `sm:col-span-3` : ``}
                 lg:col-span-1
                 ">
-            <ContentCard icon={card.icon} title={card.title}>
+            <ContentCard icon={card.icon} title={card.title} altBg>
                 {#if card.content === 'list'}
                     <List>
                         {#each listItems as item}
