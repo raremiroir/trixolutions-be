@@ -39,7 +39,7 @@
         </Text><br/>
 
         {#each Array.from($LL.pages_explore.training_leadership_teamcoaching.working_genius.intro.list) as item}
-            <ListItem>
+            <ListItem transp>
                 {@html item()}
             </ListItem>
         {/each}
