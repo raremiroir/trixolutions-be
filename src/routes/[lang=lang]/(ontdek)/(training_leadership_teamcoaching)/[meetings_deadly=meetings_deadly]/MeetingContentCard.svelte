@@ -1,7 +1,7 @@
 <script lang="ts">
     // Import components
     import { Text, List, ListItem } from "$comp";
-	import ContentCard from "../../ContentCard.svelte";
+	import { ContentCard } from "../../components/explore";
 
     // Import i18n
     import LL from "$i18n/i18n-svelte";
@@ -15,17 +15,17 @@
     $: cardTypes = [
         {
             icon: 'material-symbols:nest-clock-farsight-analog-outline-rounded',
-            title: $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.key_titles.timespan(),
+            title: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.key_titles.timespan(),
             content: 'timespan'
         },
         {
             icon: 'mingcute:target-line',
-            title: $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.key_titles.target(),
+            title: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.key_titles.target(),
             content: 'target'
         },
         {
             icon: 'material-symbols:key-outline-rounded',
-            title: $LL.pages.main.training_leadership_teamcoaching.meetings_deadly.in_depth.key_titles.keys_success(),
+            title: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.key_titles.keys_success(),
             content: 'list',
         },
     ]
@@ -42,11 +42,11 @@
                 { card.content === 'timespan' ? `sm:col-span-1` : card.content === 'target'   ? `sm:col-span-2` : card.content === 'list'     ? `sm:col-span-3` : ``}
                 lg:col-span-1
                 ">
-            <ContentCard height="equal" icon={card.icon} title={card.title}>
+            <ContentCard icon={card.icon} title={card.title}>
                 {#if card.content === 'list'}
                     <List>
                         {#each listItems as item}
-                            <ListItem>{item}</ListItem>
+                            <ListItem>{item()}</ListItem>
                         {/each}
                     </List>
                 {:else if card.content === 'timespan'}

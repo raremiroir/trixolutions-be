@@ -7,9 +7,11 @@
         {locale: 'nl', slug: 'ideale-teamplayer'}
     ];
     // Import components
-    import { Text, Accordeon, AccordeonItem, Tab, TabList, TabPanel, Tabs, H2, Subheader, H4 } from '$comp';
-	import IntroSection from '../../IntroSection.svelte';
-	import IndepthSection from '../../IndepthSection.svelte';
+    import { 
+        Text, Accordeon, AccordeonItem, Tab, 
+        TabList, TabPanel, Tabs, H2, Subheader, H4 
+    } from '$comp';
+    import { IntroSection, IndepthSection } from '../../components/explore';
     
     // Import i18n
     import LL, { locale } from "$i18n/i18n-svelte";
@@ -30,18 +32,9 @@
     // Set 'active' variable for accordeon component
 	let active:any = null;
 
-    let firstAccTabItems:any = [];
-    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.items).length; i++) {
-        firstAccTabItems[i] = $LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.items[i]()
-    } 
-    let firstAccTabPanels:any = [];
-    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.panels).length; i++) {
-        firstAccTabPanels[i] = $LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.panels[i]()
-    } 
-
 </script>
 
-<IntroSection title={$currentTitle} imgSrc={$currentHero} imgMode='cover'>
+<IntroSection title={$currentTitle} imgSrc={$currentHero}>
     <div class="" slot="title">
         <H2 small>
             {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
@@ -58,7 +51,7 @@
     </Text>
 </IntroSection>
 
-<IndepthSection title={pageData.title.nl}>
+<IndepthSection title={$currentTitle}>
     <span slot="title">{@html $LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.title()}</span>
     <Accordeon bind:active>
         <AccordeonItem id={1} title={$LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.title()} titleSmaller>
@@ -67,15 +60,17 @@
             </H4>
             <Tabs>
                 <TabList>
-                    {#each firstAccTabItems as item}
+
+                    {#each Array.from($LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.items) as item}
                         <Tab>
-                            {@html item}
+                            {@html item()}
                         </Tab>
                     {/each}
+
                 </TabList>
-                {#each firstAccTabPanels as panel}
+                {#each Array.from($LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.tabs.panels) as panel}
                     <TabPanel>
-                        {@html panel}
+                        {@html panel()}
                     </TabPanel>
                 {/each}
             </Tabs>

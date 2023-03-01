@@ -9,8 +9,8 @@
 
     // Import components
     import { Text, Accordeon, AccordeonItem, H2 } from '$comp';
-    import IntroSection from '../../IntroSection.svelte';
-	import IndepthSection from '../../IndepthSection.svelte';
+
+    import { IntroSection, IndepthSection } from '../../components/explore';
 	import MeetingContentCard from './MeetingContentCard.svelte';
 
     // Import i18n
@@ -32,27 +32,9 @@
     // Set 'active' variable for accordeon component
 	let active:any = null;
 
-    // Get localized 'accordion items' from i18n library
-    let accItems:any = []
-    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items).length; i++) {
-        let itemKeys:any = [];
-        for (let x = 0; x < Array.from($LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].keys).length; x++) {
-            itemKeys[x] = $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].keys[x]()
-        }
-
-        accItems[i] = {
-            title: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].title(),
-            text: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].text(),
-            timespan: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].timespan(),
-            target: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].target(),
-            target_desc: $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items[i].target_desc(),
-            keys: itemKeys,
-        }
-    } 
-
 </script>
 
-<IntroSection title={$currentTitle} imgSrc={$currentHero} imgMode='cover'>
+<IntroSection title={$currentTitle} imgSrc={$currentHero}>
     <H2 small slot="title">
         {$currentTitle}
     </H2>
@@ -62,7 +44,7 @@
     </Text>
 </IntroSection>
 
-<IndepthSection title={pageData.title.nl}>
+<IndepthSection title={$currentTitle}>
     <span slot="title">
         {@html $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.title()} - 
         <span class="italic font-semibold">{@html $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.subtitle()}</span>
@@ -72,17 +54,23 @@
             {@html $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_title()}
         </Text>
 
+        {#each Array($LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.accordeon_items) as value}
+            {#each Object.keys(value) as key}
+                <AccordeonItem id={Number(key) + 1} title="{Number(key) + 1}. {value[key].title()}" titleSmaller>
+                    <MeetingContentCard 
+                        listItems={Array.from((value[key].keys))} 
+
+                        timespan={value[key].timespan()}
+                        target={value[key].target()}
+                        target_desc={value[key].target_desc()}
+                        >
+                        {@html value[key].text()}
+                    </MeetingContentCard>
+                </AccordeonItem>
+            {/each}
+        {/each}
+
         {#each accItems as item, key}
-            <AccordeonItem id={Number(key) + 1} title="{Number(key) + 1}. {item.title}" titleSmaller>
-                <MeetingContentCard 
-                    listItems={item.keys}
-                    timespan={item.timespan}
-                    target={item.target}
-                    target_desc={item.target_desc}
-                    >
-                    {@html item.text}
-                </MeetingContentCard>
-            </AccordeonItem>
         {/each}
         
     </Accordeon>

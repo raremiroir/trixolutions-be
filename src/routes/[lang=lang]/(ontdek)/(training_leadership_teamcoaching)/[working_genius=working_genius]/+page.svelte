@@ -8,7 +8,7 @@
     ];
     // Import components
     import { Text, List, ListItem, H2 } from '$comp';
-	import IntroSection from '../../IntroSection.svelte';
+	import { IntroSection } from '../../components/explore';
 
     // Import i18n
     import LL, { locale } from "$i18n/i18n-svelte";
@@ -26,12 +26,6 @@
     $: $currentSlug = `/${$locale}/${$LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].slug()}`;
     $: $currentIcon = `mdi:head-cog-outline`
 
-    // Get localized 'intro list items' from i18n library
-    let introListItems:any = []
-    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.working_genius.intro.list).length; i++) {
-        introListItems[i] =  $LL.pages_explore.training_leadership_teamcoaching.working_genius.intro.list[i]()
-    } 
-
 </script>
 
 <IntroSection title={$currentTitle} imgSrc={$currentHero} imgMode='contain' imgClass="bg-primary">
@@ -43,9 +37,10 @@
         <Text>
             {@html $LL.pages_explore.training_leadership_teamcoaching.working_genius.intro.intro()}
         </Text><br/>
-        {#each introListItems as item}
+
+        {#each Array.from($LL.pages_explore.training_leadership_teamcoaching.working_genius.intro.list) as item}
             <ListItem>
-                {@html item}
+                {@html item()}
             </ListItem>
         {/each}
     </List><br/>

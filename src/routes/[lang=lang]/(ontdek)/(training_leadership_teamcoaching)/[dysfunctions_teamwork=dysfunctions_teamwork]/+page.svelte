@@ -6,24 +6,31 @@
       {locale: 'fr', slug: '5-dysfonctions-travail-equipe'},
       {locale: 'nl', slug: '5-frustraties-teamwerk'}
    ];
+   
     // Import Components
-    import { Text, List, ListItem, Blockquote, Accordeon, AccordeonItem, H2, Subheader } from '$comp';
+    import { 
+        Text, List, ListItem, Blockquote, 
+        Accordeon, AccordeonItem, H2, Subheader 
+    } from '$comp';
 	
-    import IntroSection from '../../IntroSection.svelte';
-	import IndepthSection from '../../IndepthSection.svelte';
-
-    import ContentCard from '../../ContentCard.svelte';
+    import { IntroSection, IndepthSection, ContentCard } from '../../components/explore'
 	import ContentFlipper from './ContentFlipper.svelte';
 
-    // Import i18n
+    // Import i18n../../components/ContentCard.svelte
     import LL, { locale } from "$i18n/i18n-svelte";
     
     //  Import data
     export let data;
     const pageData = data.data[0];
 
+    console.log(pageData);
+
     // Import stores
-    import { currentHero, currentTitle, currentDesc, currentSlug, currentIcon } from "$lib/stores";
+    import { 
+        currentHero, currentTitle, 
+        currentDesc, currentSlug, currentIcon 
+    } from "$lib/stores";
+    
     // Set page props
     $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].title()
     $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
@@ -58,7 +65,7 @@
 
 </script>
 
-<IntroSection title={$currentTitle} imgSrc={$currentHero} imgMode='contain'>
+<IntroSection title={$currentTitle} imgSrc={$currentHero}>
     <div class="" slot="title">
         <H2 small>
             {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
@@ -82,6 +89,7 @@
             grid-cols-1 sm:grid-cols-2 lg:grid-cols-6
             gap-4 xl:gap-8" 
         slot="append">
+
         {#each frustrationCards as card, key}
             <div class="
                     col-span-1 
@@ -97,7 +105,7 @@
 </IntroSection>
 
 
-<IndepthSection title={pageData.title.nl}>
+<IndepthSection title={$currentTitle}>
     <span slot="title">{$LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.title()}</span>
     <Accordeon bind:active>
 

@@ -9,7 +9,7 @@
 
     // Import components
     import { Title, Text, Accordeon, AccordeonItem, List, ListItem} from '$comp';
-	import IntroSection from '../../IntroSection.svelte';
+    import { IntroSection } from '../../components/explore';
 
     // Import i18n
     import LL, { locale } from '$i18n/i18n-svelte';
@@ -30,25 +30,6 @@
 
     // Set 'active' variable for accordeon component
 	let active:any = null;
-
-    // Get localized 'accordion items' from i18n library
-    let accordeonItems:any = []
-    $: for (let i = 0; i < Array.from($LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon).length; i++) {
-        
-        let listItems:any = [];
-        for (let x = 0; x < Array.from($LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.items).length; x++) {
-            listItems[x] = $LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.items[x]()
-        }
-
-        accordeonItems[i] = {
-            title: $LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].title(),
-            intro: $LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].intro(),
-            list: {
-                intro: $LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon[i].list.intro(),
-                items: listItems
-            },
-        }
-    } 
 </script>
 
 <IntroSection title={$currentTitle} imgSrc={$currentHero}>
@@ -62,19 +43,21 @@
     <Accordeon class="w-full" 
         bind:active>
 
-        {#each accordeonItems as item, key}
-            <AccordeonItem id={Number(key) + 1}
-                title='{Number(key) + 1}. {item.title}' titleSmallest>
-                <Text>
-                    {@html item.intro}
-                </Text><br/>
-                <List>
-                    <Text color="text-primary-d1">{item.list.intro}</Text>
-                    {#each Array.from(item.list.items) as listItem}
-                        <ListItem>{listItem}</ListItem>
-                    {/each}
-                </List>
-            </AccordeonItem>
+        {#each Array($LL.pages_explore.training_leadership_teamcoaching.decisive_lead.intro_accordeon) as value, key}
+            {#each Object.keys(value) as key}
+                <AccordeonItem id={Number(key) + 1}
+                    title='{Number(key) + 1}. {value[key].title()}' titleSmallest>
+                    <Text>
+                        {@html value[key].intro()}
+                    </Text><br/>
+                    <List>
+                        <Text color="text-primary-d1">{value[key].list.intro()}</Text>
+                        {#each Array.from(value[key].list.items) as listItem}
+                            <ListItem>{listItem()}</ListItem>
+                        {/each}
+                    </List>
+                </AccordeonItem>
+            {/each}
         {/each}
     </Accordeon>
 </IntroSection>
