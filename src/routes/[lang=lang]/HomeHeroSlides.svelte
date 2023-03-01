@@ -24,14 +24,14 @@
          subheader: $LL.pages.home.hero.slides[1].subheader(),
          content: $LL.pages.home.hero.slides[1].content(),
          src: HeroBeslVrsp,
-         link: '',
+         link: $LL.nav.explore.training_leadership_teamcoaching.items.ideal_teamplayer.slug(),
       },
       {
          title: $LL.pages.home.hero.slides[2].title(), title_type: 'fake',
          subheader: $LL.pages.home.hero.slides[2].subheader(),
          content: $LL.pages.home.hero.slides[2].content(),
          src: HeroWorkGeni,
-         link: '',
+         link: $LL.nav.explore.training_leadership_teamcoaching.items.working_genius.slug(),
       },
    ];
 </script>
@@ -68,7 +68,7 @@
             <Button 
                ariaLabel={$LL.base.btn.more_info()} outlined
                size="xxl" color="secondary"
-               href="/out:{$locale}/{slide.link}">
+               href="/{$locale}/{slide.link}">
                {$LL.base.btn.more_info()}
             </Button>
             {#if slide.extra_btn}
