@@ -15,6 +15,8 @@
       };
    }
 
+   const transition = "transition-all duration-200 ease-in-out"
+
    let klass = '';
    export { klass as class };
 </script>
@@ -32,7 +34,7 @@
                <div 
                   in:flip={{delay: 150, duration:150}} out:flip={{delay: 0, duration: 150}}
                   class="
-                     transition-all duration-200 ease-in-out
+                     {transition}
                      h-fit w-full overflow-hidden 
                      flex items-center justify-center">
                   <slot name="front">Front</slot>
@@ -43,7 +45,7 @@
                <div 
                   in:flip={{delay: 150, duration: 150}} out:flip={{delay: 0, duration:150}}
                   class="
-                     transition-all duration-200 ease-in-out
+                     {transition}
                      h-fit w-full overflow-hidden 
                      flex items-center justify-center">
                   <slot name="back">Back</slot>
