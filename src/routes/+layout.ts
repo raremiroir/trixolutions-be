@@ -22,4 +22,4 @@ export const load: LayoutLoad<{ locale: Locales }> = async ({ data: { locale } }
  export const prerender = 'auto';
  export const ssr = true;
  export const csr = true;
- export const trailingSlash = 'always';
+ export const trailingSlash = 'never';
