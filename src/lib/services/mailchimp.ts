@@ -1,11 +1,13 @@
-import dotenv from 'dotenv';
-dotenv.config();
-let MAILCHIMP_API_KEY = process.env['MAILCHIMP_API_KEY'];
+
+
+import variables from '$lib/constants/variables';
+const { mailchimp } = variables;
+
 
 import client from '@mailchimp/mailchimp_marketing'
 
 client.setConfig({
-    apiKey: MAILCHIMP_API_KEY,
+    apiKey: mailchimp,
     server: 'us4'
 })
 
