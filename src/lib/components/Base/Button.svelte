@@ -66,6 +66,7 @@
    // Does btn have icon?
    export let icon = '';
    export let iconClass = '';
+   export let iconRotate = '0deg';
    // Should the icon be at the end of the btn?
    export let iconEnd = false;
 
@@ -86,13 +87,13 @@
 
    // TODO: Handle size responsiveness
    // Handle size
-   if      (size === 'xs')  size = 'btn-size-xs'
-   else if (size === 'sm')  size = 'btn-size-sm'
-   else if (size === 'md')  size = 'btn-size-md'
-   else if (size === 'lg')  size = 'btn-size-lg'
-   else if (size === 'xl')  size = 'btn-size-xl'
-   else if (size === 'xxl') size = 'btn-size-xxl'
-   else if (size === 'xxxl') size = 'btn-size-xxxl'
+   if      (size === 'xs')  size = 'py-1 px-[6px] rounded text-sm'
+   else if (size === 'sm')  size = 'py-1 px-[6px] lg:px-4 lg:h-8 rounded-md text-sm lg:text-base'
+   else if (size === 'md')  size = 'px-4 h-8 lg:px-6 lg:h-11 rounded-lg text-base lg:text-lg'
+   else if (size === 'lg')  size = 'px-6 h-11 lg:px-8 lg:h-13 rounded-[10px] text-lg lg:text-xl'
+   else if (size === 'xl')  size = 'px-8 h-13 lg:px-10 lg:h-15 rounded-xl text-xl lg:text-2xl'
+   else if (size === 'xxl') size = 'px-6 h-11 sm:px-8 sm:h-13 md:px-10 md:h-15 xl:px-12 xl:h-18 rounded-xl text-xl md:text-2xl lg:text-3xl'
+   else if (size === 'xxxl') size = 'px-8 h-13 sm:px-10 sm:h-15 md:px-12 md:h-18 xl:px-18 xl:h-24 rounded-xl text-4xl md:text-5xl lg:text-6xl'
    else  size = size;
 
    // Handle component type
@@ -129,7 +130,7 @@
       { outlined ? 'btn-outlined' : 'btn-default' }
       { disabled ? 'cursor-not-allowed opacity-50' : '' }
       
-      { rounded ? 'rounded-full' 
+      { rounded || circle ? '!rounded-full' 
       : noRounding ? 'rounded-none'
       : tile    ? 'rounded-tr-2xl rounded-bl-2xl rounded-tl-sm rounded-br-sm'
       : '' }
@@ -142,7 +143,7 @@
       { glass    ? 'dui-btn-glass'    : '' }
       { wide     ? 'dui-btn-wide'   : '' }
       { block    ? '!w-full'   : 'w-fit' }
-      { square   ? 'aspect-square'   : '' }
+      { square || circle  ? 'aspect-square'   : '' }
       { circle   ? 'dui-btn-circle'   : '' }
       { active   ? 'dui-btn-active'   : '' }
       { loading  ? 'dui-loading'   : '' }
@@ -214,7 +215,7 @@
       <slot/>
       
       {#if icon !== '' && iconEnd}
-         <Icon {icon} class="h-auto {iconClass}" />
+         <Icon {icon} class="h-auto {iconClass}" rotate={iconRotate} />
       {/if}
 
    {/if}
