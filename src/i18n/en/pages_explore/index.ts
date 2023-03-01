@@ -200,7 +200,7 @@ const en_pages_explore: NamespacePagesExploreTranslation = {
                         with others in the most effective way.`
                      ]
                   },
-                  text: `HAs simple as these three concepts may be, the key to all this is 
+                  text: `As simple as these three concepts may be, the key to all this is 
                            <strong>the unique combination of all three virtues,</strong> which 
                            make a person an ideal team player.<br/>
                            Unfortunately, when even one of these attributes is lacking in a 
