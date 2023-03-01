@@ -75,10 +75,21 @@
          </div>
          <!-- Reveal Posts -->
          <PostGrid>
+            <!-- Show the first item in the grid -->
+            <Reveal>
+               <PostCard
+                  title={$LL.nav.open_sessions.items.hybrid_traject.title()}
+                  imgSrc='home/lencioni-ctc.webp'
+                  slug={$LL.nav.open_sessions.items.hybrid_traject.slug()}
+                  excerpt={$LL.nav.open_sessions.items.hybrid_traject.description()}
+                  imgFit='object-cover'
+               />
+            </Reveal>
+
             <!-- Loop through each page features on home page -->
             {#each pagesData as item}
             <!-- If the page section name equals the current section name, show the item -->
-            {#if item.category.name === section.name}
+               {#if item.category.name === section.name}
                   <Reveal>
                      <PostCard
                         title={$LL.nav.explore[section.name].items[item.name].title()}
