@@ -14,6 +14,8 @@
    
    // show figcaption
    export let caption = false;
+   // Show title
+   export let title = '';
 
    let klass = '';
    export { klass as class };
@@ -24,6 +26,7 @@
 <figure
    on:click
    on:keydown
+   title={ title ? title : caption && !title ? alt : ''}
    class="
    transition-all duration-300 ease-in-out
    {klass}
@@ -34,9 +37,9 @@
       {:else}
          <img 
             {alt}
-            srcset=" https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=1 x1,
-                     https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=2 x2,
-                     https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=3 x3,"
+            srcset="https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=1 x1, 
+            https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=2 x2, 
+            https://trixolutions.imgix.net/{src}?auto=enhance&auto=format&q=80&fm=webp&w=1&fit=max&dpr=3 x3"
             src="https://trixolutions.imgix.net/{src}?fit=clip&auto=enhance&auto=format&q=80&fm=webp&w=1"
             loading="{eager ? 'eager' : 'lazy'}"
             aria-labelledby="img-caption"
