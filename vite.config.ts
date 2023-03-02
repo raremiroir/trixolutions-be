@@ -8,8 +8,11 @@ const config: UserConfig = {
 		sveltekit(), 
 		SvelteKitPWA({/* pwa options */})
 	],
-	 preview: { port: 3000 },
-	 server: { 
+	define: {
+		'process.env': process.env
+	},
+	preview: { port: 3000 },
+	server: { 
 		port: 3000, 
 		fs: {
 		  allow: ['..'],
