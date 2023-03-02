@@ -9,12 +9,12 @@ import {
 
 const variables = process.env.NODE_ENV === 'production' 
   ? {
-    mapbox: process.env.VITE_MAPBOX_TOKEN,
-    turnstile: process.env.VITE_TURNSTILE_SITEKEY,
-    mailgun_key: process.env.VITE_MAILGUN_API_KEY,
-    mailgun_domain: process.env.VITE_MAILGUN_DOMAIN,
-    mailgun_base_url: process.env.VITE_MAILGUN_BASE_URL,  
-    mailchimp: process.env.VITE_MAILCHIMP_API_KEY,
+    mapbox: import.meta.env.VITE_MAPBOX_TOKEN,
+    turnstile: import.meta.env.VITE_TURNSTILE_SITEKEY,
+    mailgun_key: import.meta.env.VITE_MAILGUN_API_KEY,
+    mailgun_domain: import.meta.env.VITE_MAILGUN_DOMAIN,
+    mailgun_base_url: import.meta.env.VITE_MAILGUN_BASE_URL,  
+    mailchimp: import.meta.env.VITE_MAILCHIMP_API_KEY,
   } 
   : {
     mapbox: mapbox_token,
