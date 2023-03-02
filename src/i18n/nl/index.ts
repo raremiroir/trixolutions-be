@@ -154,6 +154,7 @@ const nl: BaseTranslation = {
          social_media: "sociale media",
          more_about_us: 'meer over ons',
          open_workshops: 'open workshops',
+         other_site: "Bezoek onze website in Nederland!",
          creator: "Ontworpen, Ontwikkeld en Beheerd door Mist Media"
       }
    },

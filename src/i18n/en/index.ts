@@ -153,6 +153,7 @@ const en: Translation = {
          social_media: "social media",
          more_about_us: 'more about us',
          open_workshops: 'open workshops',
+         other_site: "Check out our website in the Netherlands!",
          creator: "Designed, Developed and Managed by Mist Media"
       }
    },

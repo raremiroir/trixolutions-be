@@ -472,6 +472,10 @@ type RootTranslation = {
 			 */
 			open_workshops: string
 			/**
+			 * B​e​z​o​e​k​ ​o​n​z​e​ ​w​e​b​s​i​t​e​ ​i​n​ ​N​e​d​e​r​l​a​n​d​!
+			 */
+			other_site: string
+			/**
 			 * O​n​t​w​o​r​p​e​n​,​ ​O​n​t​w​i​k​k​e​l​d​ ​e​n​ ​B​e​h​e​e​r​d​ ​d​o​o​r​ ​M​i​s​t​ ​M​e​d​i​a
 			 */
 			creator: string
@@ -3640,6 +3644,10 @@ export type TranslationFunctions = {
 			 * open workshops
 			 */
 			open_workshops: () => LocalizedString
+			/**
+			 * Bezoek onze website in Nederland!
+			 */
+			other_site: () => LocalizedString
 			/**
 			 * Ontworpen, Ontwikkeld en Beheerd door Mist Media
 			 */

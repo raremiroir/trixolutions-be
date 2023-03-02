@@ -153,6 +153,7 @@ const fr: Translation = {
          social_media: "des médias sociaux",
          more_about_us: 'en savoir plus sur nous',
          open_workshops: 'ateliers ouverts',
+         other_site: "Visitez notre site aux Pays Bas!",
          creator: "Conçu, Développé et Géré par Mist Media"
       }
    },
