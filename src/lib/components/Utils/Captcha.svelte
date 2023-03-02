@@ -2,8 +2,7 @@
    import { Turnstile } from 'svelte-turnstile'
    import type { TurnstileSize } from 'svelte-turnstile'
 
-   import variables from '$lib/constants/variables'
-   const { turnstile } = variables;
+   const key = import.meta.env.VITE_TURNSTILE_SITEKEY;
 
 
    // String that can be used to differentiate widgets, returned on validation
@@ -22,7 +21,7 @@
 </script>
 
 <Turnstile 
-   siteKey={turnstile}
+   siteKey={key}
    {size} {action}
    {forms} {formsField}
    theme="light"

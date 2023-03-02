@@ -4,8 +4,7 @@ import { H4, MarkProse, Subtitle } from "$comp";
 import { Map, Geocoder, Marker, controls } from "@beyonk/svelte-mapbox";
 const { GeolocateControl, NavigationControl, ScaleControl } = controls
 
-import variables from "$lib/constants/variables";
-const { mapbox } = variables;
+const token = import.meta.env.VITE_MAPBOX_TOKEN;
 
 
 let mapComponent:any;
@@ -63,7 +62,7 @@ function eventHandler (e: { detail: any; }) {
 <div class="h-180 border-4 border-primary">
 	<Map
 		customStylesheetUrl="mapbox://styles/mirostorm/cle4woprs000b01o36tzm4bhv"
-		accessToken="{mapbox}"
+		accessToken="{token}"
 		bind:this={mapComponent}
     	on:ready={onReady}
 		options={{	
