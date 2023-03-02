@@ -8,10 +8,6 @@ const config = {
 	// for more information about preprocessors
    kit: {
       adapter: adapter(),
-      
-      files: {
-         serviceWorker: ''
-      },
       prerender: {
          crawl: true,
          concurrency: 3,
