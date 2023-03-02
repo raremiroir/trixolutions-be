@@ -159,6 +159,10 @@ type RootTranslation = {
 			 * s​c​h​r​i​j​f​ ​j​e​ ​i​n
 			 */
 			sign_up: string
+			/**
+			 * T​e​r​u​g​ ​n​a​a​r​ ​b​o​v​e​n
+			 */
+			back_to_top: string
 		}
 		error: {
 			/**
@@ -3352,6 +3356,10 @@ export type TranslationFunctions = {
 			 * schrijf je in
 			 */
 			sign_up: () => LocalizedString
+			/**
+			 * Terug naar boven
+			 */
+			back_to_top: () => LocalizedString
 		}
 		error: {
 			/**

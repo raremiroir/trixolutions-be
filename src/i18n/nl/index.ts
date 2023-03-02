@@ -49,7 +49,8 @@ const nl: BaseTranslation = {
          read_more: 'lees meer',
          go_to: 'ga naar',
          proceed_in: "ga verder in het",
-         sign_up: "schrijf je in"
+         sign_up: "schrijf je in",
+         back_to_top: 'Terug naar boven',
       },
       error: {
          not_found: "Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk.",
