@@ -62,7 +62,7 @@
 <!-- Main -->
 <Main noMargin cta>
    <!-- Loop through each home page category from db -->
-   {#each categoryData as section}
+   {#each categoryData as section, key}
       <!-- Section -->
       <Section name={$LL.nav.explore[section.name].slug()}>
          <div slot="title">
@@ -75,16 +75,18 @@
          </div>
          <!-- Reveal Posts -->
          <PostGrid>
-            <!-- Show the first item in the grid -->
-            <Reveal>
-               <PostCard
-                  title={$LL.nav.open_sessions.items.hybrid_traject.title()}
-                  imgSrc='home/lencioni-ctc.webp'
-                  slug={$LL.nav.open_sessions.items.hybrid_traject.slug()}
-                  excerpt={$LL.nav.open_sessions.items.hybrid_traject.description()}
-                  imgFit='object-cover'
-               />
-            </Reveal>
+            <!-- Show the first item in the first grid -->
+            {#if key === 0}
+               <Reveal>
+                  <PostCard
+                     title={$LL.nav.open_sessions.items.hybrid_traject.title()}
+                     imgSrc='home/lencioni-ctc.webp'
+                     slug={$LL.nav.open_sessions.items.hybrid_traject.slug()}
+                     excerpt={$LL.nav.open_sessions.items.hybrid_traject.description()}
+                     imgFit='object-cover'
+                  />
+               </Reveal>
+            {/if}
 
             <!-- Loop through each page features on home page -->
             {#each pagesData as item}
