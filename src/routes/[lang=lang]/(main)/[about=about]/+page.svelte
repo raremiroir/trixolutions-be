@@ -8,7 +8,7 @@
    ];
    
    // Import Components
-   import { Main, Section, Title, Text, Image, Alert, ErrorLoading, SEO, Breadcrumbs, H1, H2, Subtitle, Reveal } from "$comp";
+   import { Main, Section, Text, Image, Alert, ErrorLoading, SEO, Breadcrumbs, H1, H2, Subtitle, Reveal } from "$comp";
 	import MemberCard from "./MemberCard.svelte";
 
    // Import website config
