@@ -32,7 +32,7 @@
             {
                title: $LL.nav.contact.title(),
                link: $LL.nav.contact.slug()
-            }
+            },
          ]
       },
       {
@@ -75,10 +75,38 @@
       },
    ]
    $: footerColItems;
+
+   let partnersImages = [
+      {
+         alt: 'mbti',
+         src: '/images/partners/mbti.png',
+      },
+      {
+         alt: 'discovery insights',
+         src: '/images/partners/discovery-insights.png',
+      },
+      {
+         alt: 'working genius certified',
+         src: '/images/partners/working-genius-certified.webp',
+      },
+      {
+         alt: 'capa pro member',
+         src: '/images/partners/capa-pro.png',
+      },
+      {
+         alt: 'dics',
+         src: '/images/partners/dics.png',
+      },
+      {
+         alt: 'kmo portfolio',
+         src: '/images/partners/kmo-portfolio.png',
+      }
+      
+   ]
 </script>
 
 <!-- Footer -->
-<footer class="px-4 divide-y bg-gray-700 text-gray-100">
+<footer class="px-4 divide-y divide-gray-600 bg-gray-700 text-gray-100">
 	<div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
 
 		<div class="lg:w-1/3">
@@ -90,17 +118,25 @@
 		<div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
          <div class="space-y-3">
 				<div class="uppercase dark:text-gray-50">{$LL.base.footer.social_media()}</div>
-				<div class="flex justify-start space-x-3">
+				<div class="flex justify-start space-x-3 !mb-6">
                {#each socialMediaItems as item}
                   <Link
                      color="text-gray-100/80"
                      rel="noopener noreferrer" target="_blank"
                      title={item.title} ariaLabel={item.title} 
-                     href={item.link} class="flex items-center p-1">
+                     href={item.link} class="flex items-center">
                      <Icon icon={item.icon} class="w-8 h-8 fill-gray-100/80" />
                   </Link>
                {/each}
 				</div>
+            <Link
+               color="text-gray-100/80"
+               target="_blank"
+               title={$LL.base.footer.other_site()}
+               ariaLabel={$LL.base.footer.other_site()} 
+               href="https://trixolutions.nl">
+               {$LL.base.footer.other_site()}
+            </Link>
 			</div>
          {#each footerColItems as col_item}
             <div class="space-y-3">
@@ -112,7 +148,7 @@
                            color="text-gray-100/80"
                            rel="noopener noreferrer"
                            title={item.title} ariaLabel={item.title} 
-                           href="/{$locale}/{item.link}" >
+                           href="/{$locale}/{item.link}">
                            {String(item.title)}
                         </Link>
                      </li>
@@ -122,6 +158,9 @@
          {/each}
 		</div>
 	</div>
+   <div class="py-4">
+
+   </div>
 	<div class="py-6 text-sm text-center dark:text-gray-400">
       <Link
          href="https://mistmedia.be/{$locale}"
