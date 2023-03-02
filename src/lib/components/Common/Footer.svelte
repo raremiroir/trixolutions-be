@@ -1,5 +1,5 @@
 <script>
-   import { Logo } from "$src/lib/components";
+   import { Image, Logo } from "$src/lib/components";
 
    import { Link } from "$comp";
 	import Icon from "@iconify/svelte";
@@ -7,6 +7,7 @@
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
 	import { titleCase } from "$utils";
+	import BackToTop from "./BackToTop.svelte";
 
 
    $: socialMediaItems = [
@@ -79,43 +80,45 @@
    let partnersImages = [
       {
          alt: 'mbti',
-         src: '/images/partners/mbti.png',
+         src: 'partners/mbti.png',
       },
       {
          alt: 'discovery insights',
-         src: '/images/partners/discovery-insights.png',
+         src: 'partners/discovery-insights.png',
       },
       {
          alt: 'working genius certified',
-         src: '/images/partners/working-genius-certified.webp',
+         src: 'partners/working-genius-certified.webp',
       },
       {
          alt: 'capa pro member',
-         src: '/images/partners/capa-pro.png',
+         src: 'partners/capa-pro.png',
       },
       {
          alt: 'dics',
-         src: '/images/partners/dics.png',
+         src: 'partners/dics.png',
       },
       {
          alt: 'kmo portfolio',
-         src: '/images/partners/kmo-portfolio.png',
+         src: 'partners/kmo-portfolio.png',
       }
       
    ]
 </script>
 
-<!-- Footer -->
-<footer class="px-4 divide-y divide-gray-600 bg-gray-700 text-gray-100">
-	<div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+<BackToTop />
 
-		<div class="lg:w-1/3">
+<!-- Footer -->
+<footer class="px-4 bg-gray-700 text-gray-100">
+	<div class="container w-5/6 flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+
+		<div class="lg:w-1/4 xl:w-1/5">
 			<a rel="noopener noreferrer" href="/" class="flex justify-center space-x-3 lg:justify-start">
 				<Logo color="fill-gray-100/80" xcolor="fill-gray-300/80"/>
 			</a>
 		</div>
 
-		<div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+		<div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-3/4 xl:w-4/5 sm:grid-cols-4">
          <div class="space-y-3">
 				<div class="uppercase dark:text-gray-50">{$LL.base.footer.social_media()}</div>
 				<div class="flex justify-start space-x-3 !mb-6">
@@ -158,7 +161,20 @@
          {/each}
 		</div>
 	</div>
-   <div class="py-4">
+   <div class="w-5/6 mx-auto py-4 flex flex-row justify-between border-b border-gray-600">
+
+      {#each partnersImages as item}
+         <Image 
+            src={item.src}
+            alt={item.alt}
+            class="group"
+            imgClass="
+               w-auto h-full 
+               max-h-24 mx-auto
+               transition-all duration-200 ease-in-out 
+               opacity-70 group-hover:opacity-100"
+         />
+      {/each}
 
    </div>
 	<div class="py-6 text-sm text-center dark:text-gray-400">
