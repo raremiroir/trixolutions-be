@@ -19,12 +19,12 @@
    // define duration
    export let slow = false;
    export let fast = false;
-   const duration = slow ? 1000 : fast ? 250 : 500
+   const duration = slow ? 500 : fast ? 200 : 300;
    // define delay
    export let lazy = false;
    export let lazier = false;
    export let laziest = false;
-   const delay = lazy ? 300 : lazier ? 500 : laziest ? 1000 : 0;
+   const delay = lazy ? 150 : lazier ? 300 : laziest ? 500 : 0;
    // define direction
    export let top = true;
    export let bottom = false;
