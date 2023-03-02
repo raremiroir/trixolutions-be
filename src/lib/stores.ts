@@ -2,8 +2,6 @@ import { derived, writable } from "svelte/store";
 
 // Store current active modal
 export let currentModal = writable();
-// Store used modal id's - remove later
-export let usedModalIds = writable([1]);
 
 
 // Define current page slugs in each locale

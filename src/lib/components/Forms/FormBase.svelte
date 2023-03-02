@@ -202,7 +202,7 @@
          on:click={() => resetForm()}
          on:keydown={() => resetForm()}>
          <slot name="success">
-            <MessageSentAlert success/>
+            <MessageSentAlert/>
          </slot>
       </div>
    </div>
