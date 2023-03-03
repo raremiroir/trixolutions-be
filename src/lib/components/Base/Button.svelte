@@ -19,6 +19,9 @@
    // Define tabindex
    export let tabindex = -1;
 
+   // Onclick event
+   export let onClick:any = '';
+
    // Define title tooltip
    export let title = '';
    // Define aria-label
@@ -79,6 +82,8 @@
    export let lowercase = false;
    // Is text capitalized?
    export let capitalize = false;
+   // Is text normal ?
+   export let textNormalize = false;
    // Is text bold?
    export let bold = false;
 
@@ -108,7 +113,7 @@
    this={btnCompType}
 
    {type} wrap
-   {href} on:click
+   {href} on:click={() => onClick}
 
    role={type} {tabindex} 
    {disabled} {ariaLabel}
@@ -136,7 +141,7 @@
       : '' }
    
       { bold ? 'font-bold' : 'font-semibold'} 
-      { lowercase ? 'lowercase' : capitalize ? 'capitalize' : 'uppercase' }
+      { lowercase ? 'lowercase' : capitalize ? 'capitalize' : textNormalize ? '' : 'uppercase' }
 
       { flat ? 'shadow-none': 'shadow-md shadow-black/30 hover:shadow-black/50 active:shadow-black/50'}
 
