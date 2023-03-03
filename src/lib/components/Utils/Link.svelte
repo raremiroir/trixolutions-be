@@ -38,6 +38,7 @@
 
    export let disabled = false;
 
+   export let size = 'md';
 
    // Unused props
    export let type = '';
@@ -57,12 +58,13 @@
       { wrap 
          ? `${fill ? 'w-full h-full' : fit ? 'w-fit h-fit' : ''}`
          : `group font-medium font-body
+            ${ size === 'sm' ? 'text-base' : 'text-lg' }
             transition-all duration-300 ease-out
-            border-b-2 w-fit border-t-2
+            border-b-2 border-transparent w-fit
             ${ linkStyle === 'underline' 
-               ? 'border-primary-l3 group-hover:border-primary-l1 group-active:border-primary' 
+               ? 'hover:border-primary-l1 group-hover:border-primary-l1 active:border-primary group-active:border-primary' 
             : linkStyle === 'underlineOnHover' 
-               ? `group-hover:border-b-primary-l1 hover:border-t-primary-l1
+               ? `group-hover:border-b-primary-l1 hover:border-b-primary-l1
                   active:bg-primary-l1 active:!text-gray-100 px-1`
             : 'border-transparent'}
             ${color} ${hoverColor}`
