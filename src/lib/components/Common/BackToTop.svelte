@@ -41,7 +41,7 @@
          fixed w-14 h-14
          { transition }
          rounded-full shadow-md
-         99 right-5 bottom-5 group
+         z-99 right-5 bottom-5 group
          bg-primary-d1 hover:bg-primary-d3
          select-none cursor-pointer
          flex items-center justify-center
