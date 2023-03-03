@@ -497,6 +497,104 @@ type RootTranslation = {
 			new_content: string
 		}
 	}
+	cookies_prefs: {
+		/**
+		 * K​e​n​n​i​s​g​e​v​i​n​g
+		 */
+		title: string
+		/**
+		 * D​e​z​e​ ​w​e​b​s​i​t​e​ ​m​a​a​k​t​ ​g​e​b​r​u​i​k​ ​v​a​n​ ​c​o​o​k​i​e​s​ ​o​m​ ​u​w​ ​e​r​v​a​r​i​n​g​ ​t​e​ ​v​e​r​b​e​t​e​r​e​n​.​ ​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​o​o​r​ ​o​p​ ​<​b​>​'​A​c​c​e​p​t​e​r​e​n​'​<​/​b​>​ ​t​e​ ​k​l​i​k​k​e​n​,​ ​g​a​a​t​ ​u​ ​a​k​k​o​o​r​d​ ​m​e​t​ ​h​e​t​ ​g​e​b​r​u​i​k​ ​v​a​n​ ​a​l​l​e​ ​c​o​o​k​i​e​s​.
+		 */
+		text: string
+		/**
+		 * T​r​i​x​o​l​u​t​i​o​n​s​.​b​e​ ​m​a​a​k​t​ ​g​e​b​r​u​i​k​ ​v​a​n​ ​c​o​o​k​i​e​s​ ​v​o​o​r​ ​e​e​n​ ​o​p​t​i​m​a​l​e​ ​g​e​b​r​u​i​k​e​r​s​e​r​v​a​r​i​n​g​.​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​W​e​ ​g​e​b​r​u​i​k​e​n​ ​c​o​o​k​i​e​s​ ​o​m​ ​d​e​ ​w​e​b​s​i​t​e​ ​t​e​ ​a​n​a​l​y​s​e​r​e​n​,​ ​t​e​ ​v​e​r​b​e​t​e​r​e​n​,​ ​t​e​ ​p​e​r​s​o​n​a​l​i​s​e​r​e​n​ ​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​e​n​ ​t​e​ ​b​e​v​e​i​l​i​g​e​n​.​ ​<​b​r​/​>​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​H​i​e​r​o​n​d​e​r​ ​v​i​n​d​ ​u​ ​e​e​n​ ​m​e​e​r​ ​g​e​d​e​t​a​i​l​l​e​e​r​d​e​ ​u​i​t​l​e​g​ ​o​m​t​r​e​n​t​ ​d​e​ ​s​o​o​r​t​e​n​ ​c​o​o​k​i​e​s​ ​d​i​e​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​e​ ​a​a​n​b​i​e​d​e​n​,​ ​e​n​ ​k​u​n​t​ ​u​ ​a​a​n​g​e​v​e​n​ ​w​e​l​k​e​ ​c​o​o​k​i​e​s​ ​u​ ​w​i​l​t​ ​t​o​e​s​t​a​a​n​.​ ​<​b​r​/​>
+		 */
+		text_more: string
+		types: {
+			'0': {
+				/**
+				 * F​u​n​c​t​i​o​n​a​l​i​t​e​i​t
+				 */
+				label: string
+				/**
+				 * F​u​n​c​t​i​o​n​e​l​e​ ​c​o​o​k​i​e​s​ ​z​i​j​n​ ​n​o​o​d​z​a​k​e​l​i​j​k​ ​o​m​ ​d​e​ ​w​e​b​s​i​t​e​ ​t​e​ ​l​a​t​e​n​ ​f​u​n​c​t​i​o​n​e​r​e​n​ ​e​n​ ​k​u​n​n​e​n​ ​n​i​e​t​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​o​r​d​e​n​ ​u​i​t​g​e​s​c​h​a​k​e​l​d​ ​i​n​ ​o​n​z​e​ ​s​y​s​t​e​m​e​n​.​ ​Z​e​ ​w​o​r​d​e​n​ ​m​e​e​s​t​a​l​ ​a​l​l​e​e​n​ ​i​n​g​e​s​t​e​l​d​ ​a​l​s​ ​r​e​a​c​t​i​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​p​ ​a​c​t​i​e​s​ ​d​i​e​ ​u​ ​o​n​d​e​r​n​e​m​e​n​,​ ​z​o​a​l​s​ ​h​e​t​ ​i​n​s​t​e​l​l​e​n​ ​v​a​n​ ​u​w​ ​p​r​i​v​a​c​y​v​o​o​r​k​e​u​r​e​n​,​ ​h​e​t​ ​i​n​v​u​l​l​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​v​a​n​ ​f​o​r​m​u​l​i​e​r​e​n​ ​o​f​ ​b​a​s​i​s​ ​f​u​n​c​t​i​o​n​a​l​i​t​e​i​t​ ​v​a​n​ ​d​e​ ​w​e​b​s​i​t​e​.​ ​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​U​ ​k​u​n​t​ ​u​w​ ​b​r​o​w​s​e​r​ ​i​n​s​t​e​l​l​e​n​ ​o​m​ ​d​e​z​e​ ​c​o​o​k​i​e​s​ ​t​e​ ​b​l​o​k​k​e​r​e​n​ ​o​f​ ​t​e​ ​w​a​a​r​s​c​h​u​w​e​n​,​ ​m​a​a​r​ ​s​o​m​m​i​g​e​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​e​l​e​n​ ​v​a​n​ ​d​e​ ​s​i​t​e​ ​z​u​l​l​e​n​ ​d​a​n​ ​n​i​e​t​ ​w​e​r​k​e​n​.​ ​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​e​z​e​ ​c​o​o​k​i​e​s​ ​s​l​a​a​n​ ​g​e​e​n​ ​p​e​r​s​o​o​n​l​i​j​k​ ​i​d​e​n​t​i​f​i​c​e​e​r​b​a​r​e​ ​i​n​f​o​r​m​a​t​i​e​ ​o​p​.​<​b​r​/​>
+				 */
+				text: string
+			}
+			'1': {
+				/**
+				 * E​r​v​a​r​i​n​g
+				 */
+				label: string
+				/**
+				 * E​r​v​a​r​i​n​g​s​c​o​o​k​i​e​s​ ​h​e​l​p​e​n​ ​o​n​s​ ​o​m​ ​b​i​j​ ​t​e​ ​h​o​u​d​e​n​ ​w​a​n​n​e​e​r​ ​u​ ​l​a​a​t​s​t​ ​o​n​z​e​ ​w​e​b​s​i​t​e​ ​b​e​z​o​c​h​t​ ​h​e​e​f​t​,​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​o​m​ ​u​ ​e​e​n​ ​v​e​r​b​e​t​e​r​d​e​ ​e​r​v​a​r​i​n​g​ ​t​e​ ​k​u​n​n​e​n​ ​b​e​z​o​r​g​e​n​.​ ​Z​e​ ​h​e​l​p​e​n​ ​o​o​k​ ​d​e​ ​w​e​b​s​i​t​e​ ​t​e​ ​v​e​r​b​e​t​e​r​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​d​o​o​r​ ​a​n​o​n​i​e​m​ ​g​e​g​e​v​e​n​s​ ​t​e​ ​v​e​r​z​a​m​e​l​e​n​ ​e​n​ ​t​e​ ​r​a​p​p​o​r​t​e​r​e​n​ ​o​v​e​r​ ​h​o​e​ ​d​e​ ​s​i​t​e​ ​w​o​r​d​t​ ​g​e​b​r​u​i​k​t​.​ ​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​e​z​e​ ​c​o​o​k​i​e​s​ ​s​l​a​a​n​ ​g​e​e​n​ ​p​e​r​s​o​o​n​l​i​j​k​ ​i​d​e​n​t​i​f​i​c​e​e​r​b​a​r​e​ ​i​n​f​o​r​m​a​t​i​e​ ​o​p​.​ ​<​b​r​/​>​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​A​l​s​ ​u​ ​d​e​z​e​ ​c​o​o​k​i​e​s​ ​n​i​e​t​ ​t​o​e​s​t​a​a​t​,​ ​w​e​t​e​n​ ​w​e​ ​n​i​e​t​ ​w​a​n​n​e​e​r​ ​u​ ​o​n​z​e​ ​s​i​t​e​ ​h​e​e​f​t​ ​b​e​z​o​c​h​t​ ​e​n​ ​k​u​n​n​e​n​ ​
+			​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​w​e​ ​d​e​ ​p​r​e​s​t​a​t​i​e​s​ ​v​a​n​ ​o​n​z​e​ ​s​i​t​e​ ​n​i​e​t​ ​m​e​t​e​n​.​ ​<​b​r​/​>
+				 */
+				text: string
+			}
+		}
+		btns: {
+			/**
+			 * A​c​c​e​p​t​e​r​e​n
+			 */
+			accept: string
+			/**
+			 * A​l​l​e​ ​c​o​o​k​i​e​s​ ​a​c​c​e​p​t​e​r​e​n​ ​e​n​ ​d​o​o​r​g​a​a​n
+			 */
+			accept_tip: string
+			/**
+			 * W​e​i​g​e​r​e​n
+			 */
+			decline: string
+			/**
+			 * A​l​l​e​ ​o​p​t​i​o​n​e​l​e​ ​c​o​o​k​i​e​s​ ​w​e​i​g​e​r​e​n​ ​e​n​ ​d​o​o​r​g​a​a​n
+			 */
+			decline_tip: string
+			/**
+			 * D​o​o​r​g​a​a​n
+			 */
+			save: string
+			/**
+			 * K​e​u​z​e​ ​o​p​s​l​a​a​n​ ​e​n​ ​d​o​o​r​g​a​a​n
+			 */
+			save_tip: string
+			/**
+			 * C​o​o​k​i​e​ ​i​n​s​t​e​l​l​i​n​g​e​n
+			 */
+			settings: string
+			/**
+			 * M​e​e​r​ ​i​n​f​o
+			 */
+			more_info: string
+			/**
+			 * M​i​n​d​e​r​ ​i​n​f​o
+			 */
+			less_info: string
+			/**
+			 * M​e​e​r​ ​i​n​f​o​ ​o​v​e​r​ ​o​n​z​e​ ​c​o​o​k​i​e​s
+			 */
+			more_info_tip: string
+			/**
+			 * B​e​k​i​j​k​ ​o​n​s​ ​p​r​i​v​a​c​y​b​e​l​e​i​d​ ​v​o​o​r​ ​m​e​e​r​ ​i​n​f​o​ ​o​m​t​r​e​n​t​ ​c​o​o​k​i​e​s​ ​e​n​ ​p​r​i​v​a​c​y​ ​o​p​ ​T​r​i​x​o​l​u​t​i​o​n​s​.​b​e
+			 */
+			view_policy: string
+		}
+	}
 }
 
 export type NamespaceComponentsTranslation = {
@@ -3672,6 +3770,104 @@ export type TranslationFunctions = {
 			 * Nieuwe content is beschikbaar. Druk op 'opnieuw laden' om de content te bekijken.
 			 */
 			new_content: () => LocalizedString
+		}
+	}
+	cookies_prefs: {
+		/**
+		 * Kennisgeving
+		 */
+		title: () => LocalizedString
+		/**
+		 * Deze website maakt gebruik van cookies om uw ervaring te verbeteren. 
+	               Door op <b>'Accepteren'</b> te klikken, gaat u akkoord met het gebruik van alle cookies.
+		 */
+		text: () => LocalizedString
+		/**
+		 * Trixolutions.be maakt gebruik van cookies voor een optimale gebruikerservaring.
+	                  We gebruiken cookies om de website te analyseren, te verbeteren, te personaliseren 
+	                  en te beveiligen. <br/>
+	                  Hieronder vind u een meer gedetailleerde uitleg omtrent de soorten cookies die
+	                  we aanbieden, en kunt u aangeven welke cookies u wilt toestaan. <br/>
+		 */
+		text_more: () => LocalizedString
+		types: {
+			'0': {
+				/**
+				 * Functionaliteit
+				 */
+				label: () => LocalizedString
+				/**
+				 * Functionele cookies zijn noodzakelijk om de website te laten functioneren en kunnen niet 
+			                     worden uitgeschakeld in onze systemen. Ze worden meestal alleen ingesteld als reactie 
+			                     op acties die u ondernemen, zoals het instellen van uw privacyvoorkeuren, het invullen 
+			                     van formulieren of basis functionaliteit van de website. <br/>
+			                     U kunt uw browser instellen om deze cookies te blokkeren of te waarschuwen, maar sommige 
+			                     delen van de site zullen dan niet werken. <br/>
+			                     Deze cookies slaan geen persoonlijk identificeerbare informatie op.<br/>
+				 */
+				text: () => LocalizedString
+			}
+			'1': {
+				/**
+				 * Ervaring
+				 */
+				label: () => LocalizedString
+				/**
+				 * Ervaringscookies helpen ons om bij te houden wanneer u laatst onze website bezocht heeft,
+			                  om u een verbeterde ervaring te kunnen bezorgen. Ze helpen ook de website te verbeteren 
+			                  door anoniem gegevens te verzamelen en te rapporteren over hoe de site wordt gebruikt. <br/>
+			                  Deze cookies slaan geen persoonlijk identificeerbare informatie op. <br/>
+			                  Als u deze cookies niet toestaat, weten we niet wanneer u onze site heeft bezocht en kunnen 
+			                  we de prestaties van onze site niet meten. <br/>
+				 */
+				text: () => LocalizedString
+			}
+		}
+		btns: {
+			/**
+			 * Accepteren
+			 */
+			accept: () => LocalizedString
+			/**
+			 * Alle cookies accepteren en doorgaan
+			 */
+			accept_tip: () => LocalizedString
+			/**
+			 * Weigeren
+			 */
+			decline: () => LocalizedString
+			/**
+			 * Alle optionele cookies weigeren en doorgaan
+			 */
+			decline_tip: () => LocalizedString
+			/**
+			 * Doorgaan
+			 */
+			save: () => LocalizedString
+			/**
+			 * Keuze opslaan en doorgaan
+			 */
+			save_tip: () => LocalizedString
+			/**
+			 * Cookie instellingen
+			 */
+			settings: () => LocalizedString
+			/**
+			 * Meer info
+			 */
+			more_info: () => LocalizedString
+			/**
+			 * Minder info
+			 */
+			less_info: () => LocalizedString
+			/**
+			 * Meer info over onze cookies
+			 */
+			more_info_tip: () => LocalizedString
+			/**
+			 * Bekijk ons privacybeleid voor meer info omtrent cookies en privacy op Trixolutions.be
+			 */
+			view_policy: () => LocalizedString
 		}
 	}
 	components: {

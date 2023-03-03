@@ -164,6 +164,50 @@ const nl: BaseTranslation = {
          app_ready: "App is gereed om offline te functioneren.",
          new_content: "Nieuwe content is beschikbaar. Druk op 'opnieuw laden' om de content te bekijken.",
       }
+   },
+   cookies_prefs: {
+      title: "Kennisgeving",
+      text: `Deze website maakt gebruik van cookies om uw ervaring te verbeteren. 
+               Door op <b>'Accepteren'</b> te klikken, gaat u akkoord met het gebruik van alle cookies.`,
+      text_more: `Trixolutions.be maakt gebruik van cookies voor een optimale gebruikerservaring.
+                  We gebruiken cookies om de website te analyseren, te verbeteren, te personaliseren 
+                  en te beveiligen. <br/>
+                  Hieronder vind u een meer gedetailleerde uitleg omtrent de soorten cookies die
+                  we aanbieden, en kunt u aangeven welke cookies u wilt toestaan. <br/>`,
+      types: [
+         {
+            label: "Functionaliteit",
+            text: `Functionele cookies zijn noodzakelijk om de website te laten functioneren en kunnen niet 
+                     worden uitgeschakeld in onze systemen. Ze worden meestal alleen ingesteld als reactie 
+                     op acties die u ondernemen, zoals het instellen van uw privacyvoorkeuren, het invullen 
+                     van formulieren of basis functionaliteit van de website. <br/>
+                     U kunt uw browser instellen om deze cookies te blokkeren of te waarschuwen, maar sommige 
+                     delen van de site zullen dan niet werken. <br/>
+                     Deze cookies slaan geen persoonlijk identificeerbare informatie op.<br/>`,
+         },
+         {
+            label: "Ervaring",
+            text: `Ervaringscookies helpen ons om bij te houden wanneer u laatst onze website bezocht heeft,
+                  om u een verbeterde ervaring te kunnen bezorgen. Ze helpen ook de website te verbeteren 
+                  door anoniem gegevens te verzamelen en te rapporteren over hoe de site wordt gebruikt. <br/>
+                  Deze cookies slaan geen persoonlijk identificeerbare informatie op. <br/>
+                  Als u deze cookies niet toestaat, weten we niet wanneer u onze site heeft bezocht en kunnen 
+                  we de prestaties van onze site niet meten. <br/>`,
+         }
+      ],
+      btns: {
+         accept: "Accepteren",
+         accept_tip: "Alle cookies accepteren en doorgaan",
+         decline: "Weigeren",
+         decline_tip: "Alle optionele cookies weigeren en doorgaan",
+         save: "Doorgaan",
+         save_tip: "Keuze opslaan en doorgaan",
+         settings: "Cookie instellingen",
+         more_info: "Meer info",
+         less_info: "Minder info",
+         more_info_tip: "Meer info over onze cookies",
+         view_policy: "Bekijk ons privacybeleid voor meer info omtrent cookies en privacy op Trixolutions.be"
+      }
    }
 }
 

@@ -163,6 +163,48 @@ const en: Translation = {
          app_ready: "App ready to work offline.",
          new_content: "New content available, click on the reload button to update.",
       }
+   },
+   cookies_prefs: {
+      title: "Cookie Notice",
+      text: `This website uses cookies to improve your experience. 
+            By clicking <b>'Accept'</b>, you agree to the use of all cookies.`,
+      text_more: `Trixolutions.be uses cookies for an optimal user experience. We use cookies 
+                  to analyze, improve, personalize, and secure our website.<br/>
+                  Below you will find a more detailed explanation regarding the types of cookies 
+                  we offer, and you can indicate which cookies you want to allow.<br/>`,
+      types: [
+         {
+            label: "Functional",
+            text: `Functional cookies are necessary for the website to function and cannot be disabled 
+                  in our systems. They are usually only set in response to actions you take, such as 
+                  setting your privacy preferences, filling out forms, or basic website functionality. <br/>
+                  You can set your browser to block or alert you about these cookies, but as a result, 
+                  some parts of the site may not work. <br/>
+                  These cookies do not store any personally identifiable information. <br/>`,
+         },
+         {
+            label: "Experience",
+            text: `Experience cookies help us keep track of when you last visited our website in order 
+                  to provide you with an improved experience. They also help improve the website by 
+                  collecting and reporting anonymous data on how the site is used. <br/>
+                  These cookies do not store any personally identifiable information. <br/>
+                  If you do not allow these cookies, we will not know when you visited our site and will 
+                  not be able to measure the performance of our site. <br/>`,
+         }
+      ],
+      btns: {
+         accept: "Accept",
+         accept_tip: "Accept all cookies and continue",
+         decline: "Decline",
+         decline_tip: "Decline all optional cookies and continue",
+         save: "Continue",
+         save_tip: "Save selection and continue",
+         settings: "Cookie preferences",
+         more_info: "More info",
+         less_info: "Less info",
+         more_info_tip: "More info about our cookies",
+         view_policy: "View our privacy policy for more info about cookies and privacy on Trixolutions.be"
+      },
    }
 }
 

@@ -163,6 +163,53 @@ const fr: Translation = {
          app_ready: "L'application est gérée pour fonctionner hors ligne.",
          new_content: "De nouveaux contenus sont disponibles. Appuyez sur 'recharger' pour afficher le contenu.",
       }
+   },
+   cookies_prefs: {
+      title: "Avis sur les Cookies",
+      text: `Ce site web utilise des cookies pour améliorer votre expérience. 
+            En cliquant sur <b>"Accepter"</b>, vous acceptez l'utilisation de tous les cookies.`,
+      text_more: `Trixolutions.be utilise des cookies pour une expérience utilisateur optimale. 
+                  Nous utilisons des cookies pour analyser le site web, l'améliorer, le personnaliser 
+                  et le sécuriser. <br/>
+                  Ci-dessous, vous trouverez une explication plus détaillée des types de cookies que 
+                  nous proposons et vous pouvez indiquer les cookies que vous souhaitez autoriser. <br/>`,
+      types: [
+         {
+            label: "Fonctionnalité",
+            text: `Les cookies fonctionnels sont nécessaires pour assurer le fonctionnement du site 
+                  web et ne peuvent pas être désactivés dans nos systèmes. Ils sont généralement 
+                  définis en réponse à des actions que vous effectuez, telles que la définition de 
+                  vos préférences de confidentialité, le remplissage de formulaires ou la fonctionnalité 
+                  de base du site web. <br/>
+                  Vous pouvez configurer votre navigateur pour bloquer ou vous avertir de ces cookies, 
+                  mais certaines parties du site ne fonctionneront pas. <br/>
+                  Ces cookies ne stockent aucune information personnellement identifiable. <br/>`,
+         },
+         {
+            label: "Expérience",
+            text: `Les cookies d'expérience nous aident à suivre quand vous avez visité notre site web 
+                  pour la dernière fois, afin de vous offrir une expérience améliorée. Ils contribuent 
+                  également à améliorer le site web en collectant et en rapportant anonymement des données 
+                  sur son utilisation. <br/>
+                  Ces cookies ne stockent aucune information personnellement identifiable. <br/>
+                  Si vous n'autorisez pas ces cookies, nous ne saurons pas quand vous avez visité notre site 
+                  et nous ne pourrons pas mesurer les performances de notre site. <br/>`,
+         }
+      ],
+      btns: {
+         accept: "Accepter",
+         accept_tip: "Accepter tous les cookies et continuer",
+         decline: "Refuser",
+         decline_tip: "Refuser tous les cookies facultatifs et continuer",
+         save: "Continuer",
+         save_tip: "Enregistrer la sélection et continuer",
+         settings: "Préférences en matière de cookies",
+         more_info: "Plus d'infos",
+         less_info: "Moins d'infos",
+         more_info_tip: "Plus d'infos sur nos cookies",
+         view_policy: "Consultez notre politique de confidentialité pour plus d'informations sur les cookies et la confidentialité sur Trixolutions.be",
+      }
+
    }
 }
 
