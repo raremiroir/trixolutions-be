@@ -3,7 +3,7 @@
 
    import LL from "$i18n/i18n-svelte";
    // Import utils
-	import { firstLetterCase, formatUrl, titleCase } from "$src/lib/utils";
+	import { firstLetterCase, titleCase } from "$src/lib/utils";
    
    // Import components
    import { Tooltip, Text } from "$comp";
