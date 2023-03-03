@@ -42,9 +42,9 @@ export const POST = async ({ request, cookies }: { request: Request, cookies: Co
 			priority: 'high',
 		})
 
-		console.log('set: ', cookies.get('cookie_prefs_set'));
-		console.log('functional: ', cookies.get('cookie_functional'));
-		console.log('experience: ', cookies.get('cookie_experience'));
+		// console.log('set: ', cookies.get('cookie_prefs_set'));
+		// console.log('functional: ', cookies.get('cookie_functional'));
+		// console.log('experience: ', cookies.get('cookie_experience'));
 	} catch (err) {
 		console.error(err);
 	}
