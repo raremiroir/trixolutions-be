@@ -55,20 +55,27 @@ Sentry.init({
    tracesSampleRate: 1.0,
 });
 
+
+
+
 export const handle: Handle = async ({ event, resolve }) => {
+	// Get params
 	const params = event.params;
-	if (event.url.pathname === "//") {
+	if (event.url.pathname === "//" || event.url.pathname.startsWith("//")) {
 		throw redirect(301, `${event.url.origin}`);
 	}
-	const path = event.url.pathname;
 
+	// Get path
+	const path = event.url.pathname;
+	// Split path
 	const splitPath = path.split('/');
+	// Try to get lang from path
 	const firstParam = splitPath[1];
-	// console.log(splitPath, firstParam)
 
 	let locale:Locales = 'nl'
 	let restPath = '';
 
+	// Check if first param is a locale or 'not found'
 	if (isLocale(firstParam) || (allSlugs.includes(firstParam) && firstParam !== '') || firstParam === '' || firstParam === 'not-found') {
 		if (isLocale(firstParam)) {
 			// Define lang according to params
@@ -102,19 +109,23 @@ export const handle: Handle = async ({ event, resolve }) => {
 		event.locals.locale = locale;
 		event.locals.LL = LL;
 		
+		// Set locale in html lang attribute
 		return resolve(event, { transformPageChunk: ({ html }) => html.replace('%lang%', locale) });
 
 	} else if (
+		// If path starts with /api/ or /sitemap.xml or /admin, don't redirect
 		path.startsWith('/api/') ||
 		path === ('/sitemap.xml') ||
 		path.startsWith('/admin')
 	){
 		return await resolve(event);
 	} else {
+		// Else, redirect to not found page
 		throw redirect(302, '/not-found');
 	}
 }
 
+// Handle server errors
 export const handleError:HandleServerError = ({ error, event }) => {
 	const errorId = randomUUID();
 	Sentry.captureException(error, { event, errorId });
