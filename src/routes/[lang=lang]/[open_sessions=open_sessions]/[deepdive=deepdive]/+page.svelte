@@ -172,7 +172,7 @@
       <hr class="border-2 border-primary/70"/>
       
       <Reveal>
-         <div class="grid grid-cols-2 gap-4 xl:gap-8">
+         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4 xl:gap-8">
             <!-- Trainer -->
             <ModalTrainerTom/>
             <!-- Location -->

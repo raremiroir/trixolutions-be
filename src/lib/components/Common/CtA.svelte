@@ -8,8 +8,16 @@
 </script>
 
 <Reveal>
-   <div class="w-full flex flex-row items-center justify-center h-fit pt-2 pb-16 divide-x-4 divide-primary/30 divide-dashed">
-      <div class="w-1/2 flex items-center justify-center">
+   <div 
+      class="
+         w-full 
+         gap-4 sm:gap-8 lg:gap-0
+         flex flex-col md:flex-row
+         items-center justify-center 
+         h-fit md:pt-2 md:pb-16 
+         divide-y-4 md:divide-y-0 md:divide-x-4 divide-primary/30 divide-dashed
+         ">
+      <div class="w-full md:w-1/2 flex items-center justify-center">
          <Modal width="min-w-[40%] max-w-[80%] xl:max-w-[40%]">
             <Button ariaLabel="{titleCase($LL.pages.contact.btn.contact_us())}" slot="trigger" size="xl" block>
                <div class="flex items-center justify-center gap-2">
@@ -24,7 +32,7 @@
    
          </Modal>
       </div>
-      <div class="w-1/2 flex items-center justify-center flex-col gap-4">
+      <div class="w-full md:w-1/2 pt-4 sm:pt-8 md:pt-0 flex items-center justify-center flex-col gap-4">
          <div class="w-2/3 text-center">
             <H4 small >{$LL.pages.contact.newsletter.up_to_date()}!</H4>
             <Subtitle small>{$LL.pages.contact.newsletter.subtitle()}!</Subtitle>

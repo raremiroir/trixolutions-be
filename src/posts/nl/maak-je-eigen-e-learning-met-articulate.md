@@ -1,7 +1,7 @@
 ---
 title: Maak Je Eigen E-Learning met Articulate
 id: 3
-excerpt: "E-Learning Modules zijn niet meer enkel weggelegd voor de grote internationale bedrijven. Vandaag de dag zijn er reeds haalbare en budgetvriendelijke mogelijkheden om zeer kwalitatieve E-Learnings te ontwikkelen. Onder andere met de software van 'Articulate' (Rise/Storyline)."
+excerpt: "E-Learning Modules zijn niet meer enkel weggelegd voor de grote internationale bedrijven. Vandaag de dag zijn er reeds haalbare en budgetvriendelijke mogelijkheden om zeer kwalitatieve E-Learnings te ontwikkelen."
 ---
 
 E-Learning Modules zijn niet meer enkel weggelegd voor de grote internationale bedrijven. Vandaag de dag zijn er reeds haalbare en budgetvriendelijke mogelijkheden om zeer kwalitatieve E-Learnings te ontwikkelen. Onder andere met de software van “Articulate” (Rise/Storyline).

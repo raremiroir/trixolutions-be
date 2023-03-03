@@ -59,7 +59,7 @@ function eventHandler (e: { detail: any; }) {
 
 
 
-<div class="h-180 border-4 border-primary">
+<div class="h-88 sm:h-104 md:h-152 lg:h-160 xl:h-180 border-4 border-primary">
 	<Map
 		customStylesheetUrl="mapbox://styles/mirostorm/cle4woprs000b01o36tzm4bhv"
 		accessToken="{token}"

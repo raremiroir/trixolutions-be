@@ -1,6 +1,4 @@
 <script lang='ts'>
-  // IMPORT TYPES
-	import type { CookiePreferences } from '$src/lib/types/core';
 
   // IMPORT UTILS
   import { Button, Checkbox, Link, List, ListItem, Text } from '$comp';
@@ -8,7 +6,6 @@
 
   // IMPORT I18N
   import LL, { locale } from '$i18n/i18n-svelte';
-	import { RowWrap } from '../Forms/FormUtils';
 
 	import { fade, slide } from 'svelte/transition';
 	import Icon from '@iconify/svelte';
@@ -32,7 +29,7 @@
         if (!res.ok) {
           throw new Error(res.statusText);
         } else {
-          return res.json()
+          return res.json();
         }
       }).catch(err => {
         console.error(err);
@@ -117,14 +114,14 @@
       left-1/2 -translate-x-1/2
       p-4 flex flex-col gap-6
       rounded-lg shadow-lg shadow-black/40
-      w-3/4 lg:w-2/5'>
+      w-11/12 md:w-3/4 xl:w-1/2'>
       <div class="flex w-full justify-between items-start">
         <span class="font-bold text-2xl text-primary-d2 border-b-2 border-primary-d2 w-fit pb-1">
           {$LL.cookies_prefs.title()}
         </span>
         <div 
-          on:click={() => acceptAll()}
-          on:keydown={() => acceptAll()} 
+          on:click|preventDefault={() => acceptAll()}
+          on:keydown|preventDefault={() => acceptAll()} 
           class="{transition} bg-error opacity-30 hover:opacity-50 cursor-pointer rounded-full">
           <Icon
             icon="material-symbols:close-rounded"
@@ -170,25 +167,39 @@
         </div>
 
         <div class="flex items-center justify-between w-full">
-          <!-- More info -->
-          <div 
-            on:click={() => toggleInfo()}
-            on:keydown={() => toggleInfo()}>
-            <Button {...btnGhost}
-              ariaLabel="{$LL.cookies_prefs.btns.more_info_tip()}" icon="material-symbols:info-outline-rounded">
-              {#if moreInfo}
-                {$LL.cookies_prefs.btns.less_info()}
-              {:else}
-                {$LL.cookies_prefs.btns.more_info()}
-              {/if}
-            </Button>
-          </div>
-    
-          <div class="flex items-center gap-4">
+          <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <!-- More info -->
+            <div 
+              on:click|preventDefault={() => toggleInfo()}
+              on:keydown|preventDefault={() => toggleInfo()}>
+              <Button {...btnGhost}
+                ariaLabel="{$LL.cookies_prefs.btns.more_info_tip()}" icon="material-symbols:info-outline-rounded">
+                {#if moreInfo}
+                  {$LL.cookies_prefs.btns.less_info()}
+                {:else}
+                  {$LL.cookies_prefs.btns.more_info()}
+                {/if}
+              </Button>
+            </div>
             <!-- Decline -->
             <div 
-              on:click={() => declineAll()}
-              on:keydown={() => declineAll()}>
+              class="md:hidden"
+              on:click|preventDefault={() => declineAll()}
+              on:keydown|preventDefault={() => declineAll()}>
+              <Button {...btnGhost}
+                type="submit"
+                ariaLabel="{$LL.cookies_prefs.btns.decline_tip()}" icon="ic:round-close">
+              {$LL.cookies_prefs.btns.decline()}
+              </Button>
+            </div>
+          </div>
+    
+          <div class="flex items-center gap-2 md:gap-4 flex-col sm:flex-row">
+            <!-- Decline -->
+            <div 
+              class="hidden md:block"
+              on:click|preventDefault={() => declineAll()}
+              on:keydown|preventDefault={() => declineAll()}>
               <Button {...btnGhost}
                 type="submit"
                 ariaLabel="{$LL.cookies_prefs.btns.decline_tip()}" icon="ic:round-close">
@@ -197,8 +208,8 @@
             </div>
             <!-- Continue -->
             <div 
-              on:click={() => submitGDPR()}
-              on:keydown={() => submitGDPR()}>
+              on:click|preventDefault={() => submitGDPR()}
+              on:keydown|preventDefault={() => submitGDPR()}>
               <Button {...btnOutline}
                 type="submit"
                 ariaLabel="{$LL.cookies_prefs.btns.save_tip()}" icon="ic:round-login">
@@ -207,8 +218,8 @@
             </div>
             <!-- Accept -->
             <div
-              on:click={() => acceptAll()}
-              on:keydown={() => acceptAll()}>
+              on:click|preventDefault={() => acceptAll()}
+              on:keydown|preventDefault={() => acceptAll()}>
               <Button {...btnDefault}
                 type="submit"
                 ariaLabel="{$LL.cookies_prefs.btns.accept_tip()}" icon="ic:round-check">

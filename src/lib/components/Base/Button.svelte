@@ -93,7 +93,7 @@
    // TODO: Handle size responsiveness
    // Handle size
    if      (size === 'xs')  size = 'py-1 px-[6px] rounded text-sm'
-   else if (size === 'sm')  size = 'py-1 px-[6px] lg:px-4 lg:h-8 rounded-md text-sm lg:text-base'
+   else if (size === 'sm')  size = 'px-[6px] h-6 lg:px-4 lg:h-8 rounded-md text-sm lg:text-base'
    else if (size === 'md')  size = 'px-4 h-8 lg:px-6 lg:h-11 rounded-lg text-base lg:text-lg'
    else if (size === 'lg')  size = 'px-6 h-11 lg:px-8 lg:h-13 rounded-[10px] text-lg lg:text-xl'
    else if (size === 'xl')  size = 'px-8 h-13 lg:px-10 lg:h-15 rounded-xl text-xl lg:text-2xl'

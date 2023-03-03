@@ -75,7 +75,7 @@
          group {transition}
          w-full min-w-min
          flex
-         { direction === 'row' ? 'md:relative flex-col sm:flex-row' : `flex-col relative` } 
+         { direction === 'row' ? 'md:relative flex-col md:flex-row' : `flex-col relative` } 
          { !img ? '' : `${ height }`}
          shadow-lg {hoverFull || hoverMinimal ? 'hover:shadow-black/30' : '' }
          { hoverFull || hoverMinimal ? 'sm:hover:-translate-y-1 lg:hover:-translate-y-2 active:-translate-y-1' : '' }
@@ -88,7 +88,7 @@
                flex { altBg ? 'bg-gray-50' : 'bg-white' }
                w-full h-1/2
                { imgHeight ? imgHeight
-               : direction === 'row' ? 'sm:h-full sm:w-1/3'
+               : direction === 'row' ? 'md:h-full md:w-1/3'
                : `sm:h-[40%] 3xl:h-1/2 ${ hoverFull ? 'group-hover:h-3/5 sm:group-hover:h-[50%] 3xl:group-hover:h-[60%]' : '' }`
                }
                { hoverFull ? 'group-hover:h-3/5' : '' }
@@ -107,7 +107,7 @@
                   { transition } { imgFit }
                   h-full w-full 
                   rounded-t-2xl
-                  { direction === 'row' ? 'sm:rounded-l-2xl sm:rounded-tr-none' : '' }
+                  { direction === 'row' ? 'md:rounded-l-2xl md:rounded-tr-none' : '' }
                   { imgPos && direction !== 'row' ? 'absolute rounded-2xl' : '' } { imgPos }
                   { hoverFull || hoverMinimal ? 'opacity-60 group-hover:opacity-90' : 'opacity-70' }">
          </div>
@@ -123,7 +123,7 @@
             { altBg ? 'bg-gray-50' : 'bg-white' }
             w-full h-1/2 
             { img ? bodyHeight ? bodyHeight
-                  : direction === 'row' ? 'sm:h-full sm:w-2/3'
+                  : direction === 'row' ? 'md:h-full md:w-2/3'
                   : `sm:h-[60%] 3xl:h-1/2 ${ hoverFull ? 'sm:group-hover:h-[50%] 3xl:group-hover:h-[40%]' : '' }`
             : 'h-full w-full' }
             { hoverFull ? 'group-hover:h-2/5 group-hover:py-2 lg:group-hover:py-4' : '' }
@@ -142,7 +142,11 @@
                   ">
                <!-- Title -->
                <div class="{ badgesTop ? 'order-last' : 'order-first' } w-full">
-                  <slot name="title"><H3 smaller thin>{@html title}</H3></slot>
+                  <slot name="title">
+                     <H3 smaller thin class="!font-extrabold sm:font-bold ">
+                        {@html title}
+                     </H3>
+                  </slot>
                </div>
                <!-- End Title -->
    

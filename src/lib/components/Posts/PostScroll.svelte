@@ -4,9 +4,8 @@
 
    export let pageData:any;
 
-   import { locale } from "$i18n/i18n-svelte";
-	import { Reveal } from "..";
-	import { formatDateFull, formatDateShort, formatTime, formatUrl } from "$utils";
+	import { Reveal } from "$comp";
+	import { formatDateFull, formatUrl } from "$utils";
    
    export let blog = false;
 </script>
@@ -16,7 +15,7 @@
    {#each pageData as blogPost}
       <Reveal>
          <PostCard
-            height="h-136 xs:h-128 sm:h-88 md:h-132 lg:h-180 xl:h-160 2xl:h-160 3xl:h-180"
+            height="h-128 xs:h-124 sm:h-88 md:h-132 lg:h-180 xl:h-160 2xl:h-160 3xl:h-180"
             authorImg={blog ? `team/${blogPost.author.img}.webp` : ''}
             author={blog ? `${blogPost.author.first_name} ${blogPost.author.last_name}` : ''} 
             date={blog ? `${formatDateFull(blogPost.created_at)}` : ''}

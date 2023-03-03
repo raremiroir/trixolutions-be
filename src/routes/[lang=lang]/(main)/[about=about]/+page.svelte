@@ -49,16 +49,16 @@
    <Section name="about-us">
       <H1 slot="title">{$LL.pages.about.title()}</H1>
       <div class="grid grid-cols-2 xl:grid-cols-5 gap-6 md:gap-12">
-         <Reveal class="col-span-5 md:col-span-1 xl:col-span-2" left lazy>
+         <Reveal class="col-span-5 lg:col-span-1 xl:col-span-2" left lazy>
             <div class="h-fit rounded-xl shadow-md overflow-hidden">
                <Image
-                  class="rounded-xl shadow-md"
+                  class="rounded-xl shadow-md w-full h-auto sm:max-h-80"
                   src="team/tom-color.webp" 
                   alt="Over Trixolutions"
                />
             </div>
          </Reveal>
-         <Reveal class="col-span-5 md:col-span-1 xl:col-span-3" right>
+         <Reveal class="col-span-5 lg:col-span-1 xl:col-span-3" right>
             <Text class="h-fit">
                {@html $LL.pages.about.intro()}
             </Text>
@@ -71,7 +71,7 @@
          <H2>{$LL.pages.about.team.title()}</H2>
       </Reveal>
 
-      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 xl:gap-8">
          {#await dbSelectOrder('team_members', '*, img(name, folder, type)', 'order', true)}
             <Alert>{firstLetterCase($LL.base.db.loading())}</Alert>
          {:then data} 

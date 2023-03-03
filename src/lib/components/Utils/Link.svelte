@@ -31,6 +31,9 @@
    export let color = `text-primary-l3`
    export let hoverColor = `group-hover:text-primary-l1   hover:text-primary-l1 
                             group-active:text-primary     active:text-primary`
+   // Center link
+   export let center = false;
+
 
    // Choose link style
    // == underline - underlineOnHover - specialUnderline - none
@@ -58,6 +61,7 @@
       { wrap 
          ? `${fill ? 'w-full h-full' : fit ? 'w-fit h-fit' : ''}`
          : `group font-medium font-body
+            ${ center ? 'text-center mx-auto' : '' }
             ${ size === 'sm' ? 'text-base' : 'text-lg' }
             transition-all duration-300 ease-out
             border-b-2 border-transparent w-fit

@@ -87,12 +87,12 @@
          src: 'partners/discovery-insights.png',
       },
       {
-         alt: 'working genius certified',
-         src: 'partners/working-genius-certified.webp',
-      },
-      {
          alt: 'capa pro member',
          src: 'partners/capa-pro.png',
+      },
+      {
+         alt: 'working genius certified',
+         src: 'partners/working-genius-certified.webp',
       },
       {
          alt: 'dics',
@@ -104,27 +104,34 @@
       }
       
    ]
+
+   const linkProps = {
+      class: "w-full text-center",
+      color: "text-gray-100/80",
+   }
 </script>
 
 <BackToTop />
 
 <!-- Footer -->
 <footer class="px-4 bg-gray-700 text-gray-100">
-	<div class="container w-5/6 flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+	<div class="container w-5/6 flex flex-col justify-between py-10 mx-auto space-y-8 xl:flex-row xl:space-y-0">
 
-		<div class="lg:w-1/4 xl:w-1/5">
-			<a rel="noopener noreferrer" href="/" class="flex justify-center space-x-3 lg:justify-start">
+		<div class="xl:w-1/4 xxl:w-1/5">
+			<a rel="noopener noreferrer" href="/" class="flex justify-center space-x-3 xl:justify-start">
 				<Logo color="fill-gray-100/80" xcolor="fill-gray-300/80"/>
 			</a>
 		</div>
 
-		<div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-3/4 xl:w-4/5 sm:grid-cols-4">
-         <div class="space-y-3">
-				<div class="uppercase dark:text-gray-50">{$LL.base.footer.social_media()}</div>
-				<div class="flex justify-start space-x-3 !mb-6">
+		<div class="grid grid-cols-1 md:grid-cols-2 text-sm gap-x-3 gap-y-8 xl:w-3/4 xxl:w-4/5 xl:grid-cols-4">
+
+         <!-- Social Media -->
+         <div class="space-y-2 md:space-y-3">
+				<div class="uppercase dark:text-gray-50 w-full md:w-fit text-center md:text-start">{$LL.base.footer.social_media()}</div>
+				<div class="flex justify-center md:justify-start space-x-3 !mb-3 md:!mb-6">
                {#each socialMediaItems as item}
                   <Link
-                     color="text-gray-100/80"
+                     color={linkProps.color}
                      rel="noopener noreferrer" target="_blank"
                      title={item.title} ariaLabel={item.title} 
                      href={item.link} class="flex items-center">
@@ -132,23 +139,28 @@
                   </Link>
                {/each}
 				</div>
-            <Link
-               color="text-gray-100/80"
-               target="_blank"
-               title={$LL.base.footer.other_site()}
-               ariaLabel={$LL.base.footer.other_site()} 
-               href="https://trixolutions.nl">
-               {$LL.base.footer.other_site()}
-            </Link>
+            <!-- Visit our site in Netherlands -->
+            <div class="text-center md:text-start">
+               <Link
+                  {...linkProps}
+                  target="_blank"
+                  title={$LL.base.footer.other_site()}
+                  ariaLabel={$LL.base.footer.other_site()} 
+                  href="https://trixolutions.nl">
+                  {$LL.base.footer.other_site()}
+               </Link>
+            </div>
 			</div>
+
+         <!-- Footer Cols -->
          {#each footerColItems as col_item}
             <div class="space-y-3">
-               <h3 class="tracking-wide uppercase dark:text-gray-50">{col_item.title}</h3>
+               <h3 class="tracking-wide uppercase dark:text-gray-50 w-full md:w-fit text-center md:text-start">{col_item.title}</h3>
                <ul class="space-y-1">
                   {#each col_item.items as item}
-                     <li>
+                     <li class="text-center md:text-start">
                         <Link
-                           color="text-gray-100/80"
+                           {...linkProps}
                            rel="noopener noreferrer"
                            title={item.title} ariaLabel={item.title} 
                            href="/{$locale}/{item.link}">
@@ -159,30 +171,38 @@
                </ul>
             </div>
          {/each}
+
 		</div>
 	</div>
-   <div class="w-5/6 mx-auto py-4 flex flex-row justify-between border-b border-gray-600">
-
+   
+   <div 
+      class="
+         w-11/12 md:w-5/6 mx-auto py-4 
+         grid gap-8 
+         grid-cols-2 sm:grid-cols-3 md:grid-cols-6 
+         border-b border-gray-600
+         ">
       {#each partnersImages as item}
          <Image 
             src={item.src}
             alt={item.alt}
             class="group"
+            imgFit="object-contain"
             imgClass="
                w-auto h-full 
-               max-h-24 mx-auto
+               max-h-18 xxl:max-h-24 mx-auto
                transition-all duration-200 ease-in-out 
                opacity-70 group-hover:opacity-100"
          />
       {/each}
-
    </div>
+
 	<div class="py-6 text-sm text-center dark:text-gray-400">
       <Link
          href="https://mistmedia.be/{$locale}"
          title="{$LL.base.btn.go_to()} Mist Media Website"
          ariaLabel="{$LL.base.btn.go_to()} Mist Media Website" 
-         color="text-gray-300/80" 
+         color={linkProps.color}
          target="_blank">
          © Trixolutions.be 2023 - {$LL.base.footer.creator()}
       </Link>

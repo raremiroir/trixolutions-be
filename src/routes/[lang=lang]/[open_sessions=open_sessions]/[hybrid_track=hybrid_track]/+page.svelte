@@ -90,12 +90,11 @@
          </Text>
       </Reveal>
 
-      <Reveal lazy>
+      <Reveal>
          <PartnershipAccordeon />
       </Reveal>
 
       <!-- Workshop Cards -->
-      <Reveal bottom>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 lg:gap-4">
          {#each pageData as session}
             {#if session.type !== 'level_2' && session.type!== 'info_session'}
@@ -103,7 +102,6 @@
             {/if}
          {/each}
       </div>
-      </Reveal>
    </Section>
 
    <!-- Practical Info -->
@@ -125,7 +123,7 @@
          </Reveal>
       </div>
       <!-- Dates -->
-      <Reveal lazy>
+      <Reveal>
          <div class="
                w-full grid 
                grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
@@ -142,8 +140,8 @@
       </Reveal>
       
       <!-- Modals -->
-      <Reveal bottom lazier>
-         <div class="grid grid-cols-2 md:grid-cols-3 gap-4 xl:gap-8">
+      <Reveal bottom>
+         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 xl:gap-8">
             <!-- Trainer -->
             <ModalTrainerTom/>
             <!-- Location -->
@@ -179,7 +177,7 @@
       </Reveal>
 
       <!-- Features Slider -->
-      <Reveal lazy>
+      <Reveal>
          <HybridTrackFeaturesSlider />
       </Reveal>
 

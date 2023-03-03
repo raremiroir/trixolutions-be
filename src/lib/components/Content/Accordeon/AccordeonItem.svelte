@@ -82,7 +82,11 @@
                group-active:scale-90 group-active:bg-primary-l2 
                { isCurrentActive ? 'rotate-90 group-active:rotate-0' : 'rotate-0 group-active:rotate-90'} 
                {transition}">
-            <Icon icon="material-symbols:arrow-right-alt-rounded" color="#fff" class=" " width="40" />
+            <Icon 
+               icon="material-symbols:arrow-right-alt-rounded" 
+               color="#fff" 
+               class="h-auto w-6 md:w-8 lg:w-10" 
+               />
          </div>
       </div>
    </div>

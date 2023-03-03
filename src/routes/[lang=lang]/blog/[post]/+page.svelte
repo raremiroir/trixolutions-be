@@ -75,7 +75,7 @@
    </Hero>
 </header>
 
-<Main cta partnership>
+<Main cta partnership noMargin>
    <Breadcrumbs currentIcon="mdi:note-text-outline" beforeIcon="mdi:newspaper-variant-outline"/>
    <Section name="{url}">
       <H2 slot="title">

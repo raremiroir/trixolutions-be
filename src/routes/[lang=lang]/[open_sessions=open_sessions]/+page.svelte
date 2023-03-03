@@ -8,7 +8,7 @@
    ];
 
    // Import components
-   import { Main, Section, Breadcrumbs, H1, SEO } from "$comp";
+   import { Main, Section, Breadcrumbs, H1, SEO, Reveal } from "$comp";
    import { SessionTypeCard } from './components/open-sessies';
    
    // Import website config
@@ -76,16 +76,18 @@
       <H1 slot="title">{titleCase($LL.sessions.open_sessions())}</H1>
       <ul class="m-0 flex flex-col gap-4 xs:gap-5 sm:gap-6 lg:gap-8">
          {#each session_types as session, key}
-            <SessionTypeCard
-               title={session.title}
-               badge={session.badge}
-               second_badge={session.second_badge}
-               href={session.link}
-               img={session.img}
-               btn={{title: 'Meer Info', href: session.link, ariaLabel: $LL.base.btn.more_info()}}
-            >
-               {@html session.text}
-            </SessionTypeCard>
+            <Reveal>
+               <SessionTypeCard
+                  title={session.title}
+                  badge={session.badge}
+                  second_badge={session.second_badge}
+                  href={session.link}
+                  img={session.img}
+                  btn={{title: 'Meer Info', href: session.link, ariaLabel: $LL.base.btn.more_info()}}
+               >
+                  {@html session.text}
+               </SessionTypeCard>
+            </Reveal>
          {/each}
       </ul>
    </Section>

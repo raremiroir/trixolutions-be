@@ -13,7 +13,7 @@
 		img: src,
       imgPos: position,
       
-      height: 'h-72 md:h-80 xl:h-88',
+      height: 'h-56 md:h-80 xl:h-88',
       imgHeight: 'h-2/3',
       bodyHeight: 'h-1/3',
       

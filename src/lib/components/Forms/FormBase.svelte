@@ -211,7 +211,7 @@
    <form
       transition:fade={{duration: 200}}
       on:submit={handleSubmit}
-      class="flex flex-col gap-2 overflow-y-hidden">
+      class="flex flex-col gap-1 md:gap-2 overflow-y-hidden">
       
       <!-- Name input -->
       {#if inputItems.name}

@@ -41,6 +41,11 @@
 		faviconWidth: 512, faviconHeight: 512,
 		caption: author,
 	};
+
+
+   const cardProps = {
+      height: 'h-96 sm:h-78 md:h-96 lg:h-140 xl:h-132 2xl:h-132 3xl:h-140'
+   }
 </script>
 
 <!-- SEO -->
@@ -79,6 +84,7 @@
             {#if key === 0}
                <Reveal>
                   <PostCard
+                     {...cardProps}
                      title={$LL.nav.open_sessions.items.hybrid_traject.title()}
                      imgSrc='home/lencioni-ctc.webp'
                      slug={$LL.nav.open_sessions.items.hybrid_traject.slug()}
@@ -94,6 +100,7 @@
                {#if item.category.name === section.name}
                   <Reveal>
                      <PostCard
+                        {...cardProps}
                         title={$LL.nav.explore[section.name].items[item.name].title()}
                         imgSrc={`${item.hero_img.folder}/${item.hero_img.name}.${item.hero_img.type}`}
                         slug={$LL.nav.explore[section.name].items[item.name].slug()}

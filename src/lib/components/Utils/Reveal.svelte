@@ -44,7 +44,7 @@
    const y = left || right ? 0 : bottom ? far ? 40 : 20 : top ? far ? -40 : -20 : 0;
    
    // define threshold
-   export let threshold = 0.2
+   export let threshold = 0.1
    
    
    if (fade || slide || blur || scale || spin) fly = false;

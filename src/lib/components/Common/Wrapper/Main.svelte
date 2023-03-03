@@ -26,7 +26,7 @@
 <PageTransition>
    <main 
       class="
-         overflow-x-hidden w-full mb-20
+         overflow-x-hidden w-full mb-12 md:mb-20
          {noMargin ? 'mt-6' : 'mt-24'}
          {klass}"
    >
