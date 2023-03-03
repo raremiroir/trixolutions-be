@@ -42,6 +42,7 @@
 // ██    ██    ██    ██ ██           ██ 
 //  ██████     ██    ██ ███████ ███████ 
    export { default as PageTitle }     from './Utils/PageTitle.svelte'
+   export { default as CookieBanner }  from './Utils/CookieBanner.svelte'
    export { default as HeadHrefLangs } from './Utils/HeadHrefLangs.svelte'
    export { default as Loading }       from './Utils/Loading.svelte'
    export { default as Reveal }        from './Utils/Reveal.svelte'
@@ -123,7 +124,6 @@
 // █████   ██    ██ ██████  ██ ████ ██ 
 // ██      ██    ██ ██   ██ ██  ██  ██ 
 // ██       ██████  ██   ██ ██      ██ 
-   export { default as Form } from './Forms/Form.svelte';
    export { default as FormBase } from './Forms/FormBase.svelte';
 
    export { default as ContactForm } from './Forms/ContactForm.svelte'
@@ -131,6 +131,7 @@
    export { default as MailchimpForm } from './Forms/Mailchimp/MailchimpForm.svelte'
    
    export { default as FormInput } from './Forms/FormInput/index.svelte';
+   export { default as Checkbox } from './Forms/FormInput/Checkbox.svelte';
    export { default as MessageSentAlert } from './Forms/FormUtils/MessageSentAlert.svelte';
 
 
