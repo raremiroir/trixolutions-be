@@ -1,7 +1,13 @@
 import { derived, writable } from "svelte/store";
+import type { CookiePreferences } from "./types/core";
 
 // Store current active modal
 export let currentModal = writable();
+
+export let cookiePrefs = writable({
+   functional: true,
+   experience: false,
+});
 
 
 // Define current page slugs in each locale
