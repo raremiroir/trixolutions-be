@@ -4,7 +4,9 @@ import { H4, MarkProse, Subtitle } from "$comp";
 import { Map, Geocoder, Marker, controls } from "@beyonk/svelte-mapbox";
 const { GeolocateControl, NavigationControl, ScaleControl } = controls
 
-const token = import.meta.env.VITE_MAPBOX_TOKEN;
+
+import { PUBLIC_MAPBOX_TOKEN } from "$env/static/public"
+const token = PUBLIC_MAPBOX_TOKEN;
 
 
 let mapComponent:any;

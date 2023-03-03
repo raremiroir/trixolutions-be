@@ -2,7 +2,9 @@
    import { Turnstile } from 'svelte-turnstile'
    import type { TurnstileSize } from 'svelte-turnstile'
 
-   const key = import.meta.env.VITE_TURNSTILE_SITEKEY;
+
+   import { PUBLIC_TURNSTILE_SITEKEY } from '$env/static/public'
+   const key = PUBLIC_TURNSTILE_SITEKEY;
 
 
    // String that can be used to differentiate widgets, returned on validation
