@@ -76,15 +76,15 @@ const config = {
       },
       csp: { 
          mode: 'auto',
-      directives: {
-            'script-src': [
-               'self',
-               'nonce-{SERVER-GENERATED-NONCE}'
-            ]
+         directives: {
+            'script-src': ['self']
          },
          reportOnly: {
             'script-src': ['self']
          }
+      },
+      paths: {
+         base: '/nl' | '/fr' | '/en',
       }
    },
    extensions: [
