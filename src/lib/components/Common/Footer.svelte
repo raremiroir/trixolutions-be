@@ -9,16 +9,19 @@
 	import { titleCase } from "$utils";
 	import BackToTop from "./BackToTop.svelte";
 
+   import { PUBLIC_FACEBOOK_PAGE } from "$env/static/public";
+   import { PUBLIC_LINKEDIN_PROFILE } from "$env/static/public";
+
 
    $: socialMediaItems = [
       {
          title: 'LinkedIn',
-         link: 'https://be.linkedin.com/company/trixolutions---business-training-consulting-&-recruitment',
+         link: `https://be.linkedin.com/${PUBLIC_LINKEDIN_PROFILE}`,
          icon: 'mdi:linkedin'
       },
       {
          title: 'Facebook',
-         link: 'https://www.facebook.com/people/trixolutions/100065334466305/?paipv=0&eav=AfbqMx7WZnqAY8xcvRH0Tvk6dBmrc7pFxDTz04b7dmxtHEyidCzPCHvVtNz6U8Yh4C4&_rdr',
+         link: `https://www.facebook.com/${PUBLIC_FACEBOOK_PAGE}`,
          icon: 'ri:facebook-box-fill'
       }
    ]
