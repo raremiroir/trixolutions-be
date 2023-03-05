@@ -32,6 +32,8 @@ export { dbInsert as dbInsert } from './query'
 export { isObjEmpty as isObjEmpty } from './base/checkers'
 export { isObjEmptyAny as isObjEmptyAny } from './base/checkers'
 
+// Validation
+export { validateTurnstile as validateTurnstile } from './validate'
 
 // Actions
 export { tooltip as tooltip } from './actions/tooltip'
