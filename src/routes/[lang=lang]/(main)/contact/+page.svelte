@@ -10,7 +10,7 @@
    import { 
       Main, Section, Breadcrumbs, 
       Text, Button, 
-      Map, Modal, 
+      Modal, Mapbox, 
 	   SEO, CardBase, ContactForm, 
       H2, H1, H3, Reveal
    } from "$comp";
@@ -141,9 +141,9 @@
    
    <Section name="trixolutions-map">
       <H2 small slot="title">{firstLetterCase($LL.pages.contact.find_on_map())}!</H2>
-      <Reveal>
-         <Map/>
-      </Reveal>
+      <!-- <Reveal> -->
+         <Mapbox/>
+      <!-- </Reveal> -->
    </Section>
 
    
