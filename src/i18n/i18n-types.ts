@@ -163,6 +163,10 @@ type RootTranslation = {
 			 * T​e​r​u​g​ ​n​a​a​r​ ​b​o​v​e​n
 			 */
 			back_to_top: string
+			/**
+			 * B​e​z​o​e​k​ ​o​n​z​e​ ​N​e​d​e​r​l​a​n​d​s​e​ ​w​e​b​s​i​t​e
+			 */
+			visit_nl: string
 		}
 		error: {
 			/**
@@ -3458,6 +3462,10 @@ export type TranslationFunctions = {
 			 * Terug naar boven
 			 */
 			back_to_top: () => LocalizedString
+			/**
+			 * Bezoek onze Nederlandse website
+			 */
+			visit_nl: () => LocalizedString
 		}
 		error: {
 			/**

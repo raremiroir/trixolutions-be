@@ -51,6 +51,7 @@ const en: Translation = {
          proceed_in: "proceed in",
          sign_up: "sign up now",
          back_to_top: 'Back to top',
+         visit_nl: "Visit our website in the Netherlands",
       },
       error: {
          not_found: "Sorry! The page you were looking for was not found. <br/>Return to our home page by clicking the button, or just use the navigation bar.",

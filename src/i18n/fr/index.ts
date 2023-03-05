@@ -51,6 +51,7 @@ const fr: Translation = {
          proceed_in: "continuer en",
          sign_up: "abonnez-vous",
          back_to_top: 'Remonter',
+         visit_nl: "Visiter notre site web dans les Pays-Bas",
       },
       error: {
          not_found: "Malheureusement. La page que vous recherchiez n'a pas été trouvée. <br/>Retournez à la page d'accueil via le bouton ci-dessous, ou utilisez la barre de navigation.",
