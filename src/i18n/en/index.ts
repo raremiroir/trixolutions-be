@@ -171,8 +171,8 @@ const en: Translation = {
    },
    cookies_prefs: {
       title: "Cookie Notice",
-      text: `This website uses cookies to improve your experience. 
-            By clicking <b>'Accept'</b>, you agree to the use of all cookies.`,
+      text: `Trixolutions uses cookies to improve your experience. 
+            By clicking 'Accept', you agree to the use of all cookies.`,
       text_more: `Trixolutions.be uses cookies for an optimal user experience. We use cookies 
                   to analyze, improve, personalize, and secure our website.<br/>
                   Below you will find a more detailed explanation regarding the types of cookies 

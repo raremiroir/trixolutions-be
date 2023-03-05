@@ -171,8 +171,8 @@ const fr: Translation = {
    },
    cookies_prefs: {
       title: "Avis sur les Cookies",
-      text: `Ce site web utilise des cookies pour améliorer votre expérience. 
-            En cliquant sur <b>"Accepter"</b>, vous acceptez l'utilisation de tous les cookies.`,
+      text: `Trixolutions utilise des cookies pour améliorer votre expérience. 
+            En cliquant sur "Accepter", vous acceptez l'utilisation de tous les cookies.`,
       text_more: `Trixolutions.be utilise des cookies pour une expérience utilisateur optimale. 
                   Nous utilisons des cookies pour analyser le site web, l'améliorer, le personnaliser 
                   et le sécuriser. <br/>

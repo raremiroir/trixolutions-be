@@ -527,8 +527,8 @@ type RootTranslation = {
 		 */
 		title: string
 		/**
-		 * D​e​z​e​ ​w​e​b​s​i​t​e​ ​m​a​a​k​t​ ​g​e​b​r​u​i​k​ ​v​a​n​ ​c​o​o​k​i​e​s​ ​o​m​ ​u​w​ ​e​r​v​a​r​i​n​g​ ​t​e​ ​v​e​r​b​e​t​e​r​e​n​.​ ​
-	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​o​o​r​ ​o​p​ ​<​b​>​'​A​c​c​e​p​t​e​r​e​n​'​<​/​b​>​ ​t​e​ ​k​l​i​k​k​e​n​,​ ​g​a​a​t​ ​u​ ​a​k​k​o​o​r​d​ ​m​e​t​ ​h​e​t​ ​g​e​b​r​u​i​k​ ​v​a​n​ ​a​l​l​e​ ​c​o​o​k​i​e​s​.
+		 * T​r​i​x​o​l​u​t​i​o​n​s​ ​m​a​a​k​t​ ​g​e​b​r​u​i​k​ ​v​a​n​ ​c​o​o​k​i​e​s​ ​o​m​ ​u​w​ ​e​r​v​a​r​i​n​g​ ​t​e​ ​v​e​r​b​e​t​e​r​e​n​.​ ​
+	​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​D​o​o​r​ ​o​p​ ​'​A​c​c​e​p​t​e​r​e​n​'​ ​t​e​ ​k​l​i​k​k​e​n​,​ ​g​a​a​t​ ​u​ ​a​k​k​o​o​r​d​ ​m​e​t​ ​h​e​t​ ​g​e​b​r​u​i​k​ ​v​a​n​ ​a​l​l​e​ ​c​o​o​k​i​e​s​.
 		 */
 		text: string
 		/**
@@ -3822,8 +3822,8 @@ export type TranslationFunctions = {
 		 */
 		title: () => LocalizedString
 		/**
-		 * Deze website maakt gebruik van cookies om uw ervaring te verbeteren. 
-	               Door op <b>'Accepteren'</b> te klikken, gaat u akkoord met het gebruik van alle cookies.
+		 * Trixolutions maakt gebruik van cookies om uw ervaring te verbeteren. 
+	               Door op 'Accepteren' te klikken, gaat u akkoord met het gebruik van alle cookies.
 		 */
 		text: () => LocalizedString
 		/**

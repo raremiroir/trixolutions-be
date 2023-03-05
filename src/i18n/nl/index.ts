@@ -172,8 +172,8 @@ const nl: BaseTranslation = {
    },
    cookies_prefs: {
       title: "Kennisgeving",
-      text: `Deze website maakt gebruik van cookies om uw ervaring te verbeteren. 
-               Door op <b>'Accepteren'</b> te klikken, gaat u akkoord met het gebruik van alle cookies.`,
+      text: `Trixolutions maakt gebruik van cookies om uw ervaring te verbeteren. 
+               Door op 'Accepteren' te klikken, gaat u akkoord met het gebruik van alle cookies.`,
       text_more: `Trixolutions.be maakt gebruik van cookies voor een optimale gebruikerservaring.
                   We gebruiken cookies om de website te analyseren, te verbeteren, te personaliseren 
                   en te beveiligen. <br/>
