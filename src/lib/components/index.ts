@@ -32,8 +32,8 @@
    export { default as Lightbox }      from './Base/Media/Lightbox.svelte'
    export { default as Video }         from './Base/Media/Video.svelte'
    export { default as Logo }          from './Base/Media/Logo.svelte'
-   export { default as Map }           from './Base/Media/Map/index.svelte'
-   export { default as MapGoogle }     from './Base/Media/MapGoogle.svelte'
+   export { default as Mapbox }        from './Base/Media/Map/Mapbox.svelte'
+   export { default as MapGoogle }     from './Base/Media/Map/MapGoogle.svelte'
    export { default as Button }        from './Base/Button.svelte'
 
 

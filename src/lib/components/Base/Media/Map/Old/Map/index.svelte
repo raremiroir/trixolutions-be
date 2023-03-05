@@ -43,29 +43,6 @@
       return m;
    }
 
-   // let toolbar = L.control({ position: 'topright' });
-   // let toolbarComponent:any;
-   // toolbar.onAdd = (map:any) => {
-   //    let div = L.DomUtil.create('div');
-   //    toolbarComponent = new Toolbar({
-   //       target: div,
-   //       props: {}
-   //    })
-   //    toolbarComponent.$on('showhide-markers', ({ detail }:any) => show = detail);
-   //    toolbarComponent.$on('showhide-lines', ({ detail }:any) => lines = detail);
-   //    toolbarComponent.$on('click-reset', () => {
-   //       map.setView(initialView, initialZoom, { animate: true });
-   //    })
-   //    return div;
-   // }
-
-   // toolbar.onRemove = () => {
-   //    if (toolbarComponent) {
-   //       toolbarComponent.$destroy();
-   //       toolbarComponent = null;
-   //    }
-   // }
-
    // Create popup with svelte component inside and handle removal
    const bindPopup = (marker:any, createFn:any) => {
       let popupComponent:any;
@@ -132,9 +109,6 @@
    let lineLayers:any;
    const mapAction = (container:any) => {
       map = createMap(container);
-      // Might add toolbar later
-      // toolbar.addTo(map);
-
       markerLayers = L.layerGroup();
 
       Object.keys(markersInfo).forEach((k:string) => {
@@ -149,7 +123,6 @@
 
       return {
          destroy: () => {
-            // toolbar.remove();
             map.remove();
             map = null;
          }
@@ -176,7 +149,6 @@
 </div>
 
 <style>
-   
 	.map :global(.marker-text) {
 		width:100%;
 		text-align:center;

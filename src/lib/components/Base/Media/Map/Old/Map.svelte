@@ -3,12 +3,13 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { browser } from '$app/environment';
 
+	import * as leaflet from 'leaflet';
+
 	let mapElement:any;
 	let map:any;
 
-	onMount(async () => {
+	onMount(() => {
 		if (browser) {
-			const leaflet = await import('leaflet');
 			map = leaflet.map(mapElement).setView([51.505, -0.09], 13);
 
 			leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
