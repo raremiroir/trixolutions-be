@@ -134,6 +134,7 @@
    export { default as FormInput } from './Forms/FormInput/index.svelte';
    export { default as Checkbox } from './Forms/FormInput/Checkbox.svelte';
    export { default as MessageSentAlert } from './Forms/FormUtils/MessageSentAlert.svelte';
+   export { default as ValidationError } from './Forms/FormUtils/ValidationError.svelte';
 
 
 // ██████   ██████  ███████ ████████ ███████ 
