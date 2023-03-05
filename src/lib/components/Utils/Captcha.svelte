@@ -5,8 +5,8 @@
 
    import { ValidationError, Text } from '$lib/components'
    
-   import { PUBLIC_TURNSTILE_SITEKEY } from '$env/static/public'
-   const sitekey = PUBLIC_TURNSTILE_SITEKEY;
+
+   const sitekey = import.meta.env.VITE_TURNSTILE_SITEKEY;
    import { turnstile as dummyKeys } from '$lib/test/dummy';
    const key = sitekey;
 
