@@ -3,14 +3,17 @@
    import type { ChosenInputs } from './types'
 
    // IMPORT COMPONENTS
-   import { Alert, Button, Captcha, FormInput, Tooltip } from '$comp';
+   import { Alert, Button, Captcha, Checkbox, FormInput, Tooltip } from '$comp';
 	import { fade } from 'svelte/transition';
 	import { MessageSentAlert, RowWrap } from './FormUtils';
 
    // IMPORT UTILS
    import * as yup from 'yup'
    import { createForm } from 'svelte-forms-lib';
-   import { firstLetterCase, isObjEmpty, isObjEmptyAny, titleCase, tooltip } from '$utils'
+   import { 
+      firstLetterCase, isObjEmpty, isObjEmptyAny, 
+      titleCase, tooltip, validateTurnstile 
+   } from '$utils'
    
    // IMPORT I18N
    import LL, { locale } from '$i18n/i18n-svelte';
@@ -38,7 +41,9 @@
          enabled: true,
          automatic: true,
          rows: 6
-      }
+      },
+      turnstile_response: { enabled: true },
+      accept_terms: { enabled: true },
    };
 
    $: inputItems;
@@ -46,20 +51,24 @@
    // Define formValues & initial values
    let formValues:any = {};
    let initValues:any = {};
+   let requiredValues:any = [];
 
    // Name validation schema
    if (inputItems.name?.enabled) {
       formValues.first_name = yup.string()
          .required($LL.base.validation.required({ item: titleCase($LL.base.form.first_name()) }))
+         .matches(/^[A-Za-z]+(?:['-][A-Za-z]+)*$/, $LL.base.validation.only_alpha({ item: titleCase($LL.base.form.first_name()) }))
          .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.first_name()), min: 2 }))
          .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.first_name()), max: 50 }));
       formValues.last_name = yup.string()
-         .required($LL.base.validation.required({ item: titleCase($LL.base.form.first_name()) }))
-         .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.first_name()), min: 2 }))
-         .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.first_name()), max: 50 }));
+         .required($LL.base.validation.required({ item: titleCase($LL.base.form.last_name()) }))
+         .matches(/^[A-Za-z]+(?:['-][A-Za-z]+)*$/, $LL.base.validation.only_alpha({ item: titleCase($LL.base.form.last_name()) }))
+         .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.last_name()), min: 2 }))
+         .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.last_name()), max: 50 }));
       
       initValues.first_name = '';
       initValues.last_name = '';
+      requiredValues.push('first_name', 'last_name');
    }
    // Email validation schema
    if (inputItems.email?.enabled) {
@@ -68,6 +77,7 @@
         .email($LL.base.validation.email_error());
       
       initValues.email = '';
+      requiredValues.push('email');
    }
    // Phone validation schema
    if (inputItems.phone?.enabled) {
@@ -75,18 +85,21 @@
          .matches(/^((\+|00)\d{1,3})?[\s.-]?\d{1,4}[\s.-]?\d{1,4}[\s.-]?\d{1,4}[\s.-]?\d{1,4}|^$/, $LL.base.validation.phone_error())
       if (inputItems.phone?.required) {
          formValues.phone = formValues.phone.required($LL.base.validation.required({ item: titleCase($LL.base.form.telephone()) }));
+         requiredValues.push('phone');
       } else {
          formValues.phone = formValues.phone.optional();
       }
-      initValues.email = '';
+      initValues.phon = '';
    }
    // Company validation schema
    if (inputItems.company?.enabled) {
       formValues.company = yup.string()
-         .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.company()), min: 2 }))
          .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.company()), max: 50 }));
       if (inputItems.company.required) {
-         formValues.company = formValues.company.required($LL.base.validation.required({ item: titleCase($LL.base.form.company()) }));
+         formValues.company = formValues.company
+            .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.company()), min: 2 }))
+            .required($LL.base.validation.required({ item: titleCase($LL.base.form.company()) }))
+         requiredValues.push('company');
       } else {
          formValues.company = formValues.company.optional();
       }
@@ -95,10 +108,12 @@
    // Job Title validation schema
    if (inputItems.job?.enabled) {
       formValues.job = yup.string()
-         .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.job()), min: 2 }))
          .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.job()), max: 50 }));
       if (inputItems.job.required) {
-         formValues.job = formValues.job.required($LL.base.validation.required({ item: titleCase($LL.base.form.job()) }));
+         formValues.job = formValues.job
+            .min(2, $LL.base.validation.field_too_short({ item: titleCase($LL.base.form.job()), min: 2 }))
+            .required($LL.base.validation.required({ item: titleCase($LL.base.form.job()) }));
+         requiredValues.push('job');
       } else {
          formValues.job = formValues.job.optional();
       }
@@ -116,6 +131,7 @@
          .required($LL.base.validation.required_def());
       
       initValues.session_picked = '';
+      requiredValues.push('session_picked');
    }
    // Subject validation schema
    if (inputItems.subject?.enabled) {
@@ -124,6 +140,7 @@
          .max(50, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.subject()), max: 50 }));
       if (inputItems.subject?.required) {
          formValues.subject = formValues.subject.required($LL.base.validation.required({ item: titleCase($LL.base.form.subject()) }));
+         requiredValues.push('subject');
       } else {
          formValues.subject = formValues.subject.optional();
       }
@@ -137,11 +154,20 @@
          .max(1000, $LL.base.validation.field_too_long({ item: titleCase($LL.base.form.message()), max: 1000 }));
       if (inputItems.message?.required) {
          formValues.message = formValues.message.required($LL.base.validation.required({ item: titleCase($LL.base.form.message()) }));
+         requiredValues.push('message');
       } else {
          formValues.message = formValues.message.optional();
       }
       
       initValues.message = '';
+   }
+
+   // Terms/conditions validation schema
+   if (inputItems.accept_terms?.enabled) {
+      formValues.accept_terms = yup.boolean()
+         .oneOf([true], $LL.base.validation.terms_error({ terms: $LL.nav.others.terms_conditions.title(), policy: $LL.nav.others.privacy_policy.title() }));
+      initValues.accept_terms = false;
+      requiredValues.push('accept_terms');
    }
 
    // Language validation schema
@@ -150,6 +176,14 @@
     .default(() => $locale)
     .required();
    initValues.language = $locale;
+   $: $form.language = $locale;
+
+   // Captcha validation schema
+   if (inputItems.turnstile_response?.enabled) {
+      formValues.turnstile_response = yup.string()
+         .matches(/^.*\S.*$/, $LL.base.form.captcha());
+      initValues.turnstile_response = "";
+   }
 
    // Define validation schema
    let validationSchema = yup.object().shape({
@@ -171,19 +205,26 @@
    } = createForm({
       initialValues: initValues,
       validationSchema: validationSchema,
-      onSubmit: values => {
+      onSubmit: async (values) => {
          try {
-            submitAction(values);
-            success = true;
+            console.log(values.turnstile_response);
+
+            const res = await validateTurnstile(values.turnstile_response);
+            if (res) {
+               submitAction(values);
+               success = true;
+            } else {
+               success = false;
+            }
+
          } catch (e) {
             success = false;
          }
       }
    })
 
+   $: console.log($form);
 
-   $: formEmpty = isObjEmpty($form);
-   $: anyEmpty = isObjEmptyAny($form);
 
    export const resetForm = () => {
       Object.keys($form).forEach(key =>{
@@ -209,6 +250,7 @@
 
 {:else}
    <form
+      novalidate
       transition:fade={{duration: 200}}
       on:submit={handleSubmit}
       class="flex flex-col gap-1 md:gap-2 overflow-y-hidden">
@@ -334,6 +376,21 @@
          </RowWrap>
       {/if}
 
+      <!-- Accept Terms/Conditions -->
+      {#if inputItems.accept_terms}
+         <RowWrap>
+            <Checkbox 
+               name="gdpr"
+               on:change={handleChange}
+               bind:checked={$form.accept_terms}
+               bind:errors={$errors.accept_terms}
+               required
+            >{$LL.base.form.check_terms({ terms: $LL.nav.others.terms_conditions.title(), policy: $LL.nav.others.privacy_policy.title() })}
+            </Checkbox>
+         </RowWrap>
+      {/if}
+
+      <!-- Locale -->
       <FormInput 
          type="hidden"
          name="language"
@@ -343,24 +400,25 @@
          bind:errors={$errors.language}
          required
       />
+      
+      <!-- Turnstile Validation -->
+      <RowWrap>
+         <Captcha 
+            on:change={handleChange}
+            bind:errors={$errors.turnstile_response} 
+            bind:turnstileResponse={$form.turnstile_response} />
+      </RowWrap>
 
       <!-- Errors -->
       <slot name="errors" />
 
-      <Captcha />
 
       <div class="flex flex-row w-full justify-between items-center mt-4">
-         <!-- Submit Btn -->
-         <div use:tooltip title="{!$isValid || anyEmpty
-            ? $LL.base.form.content.fill_out_all() 
-            :  firstLetterCase($LL.base.form.content.send_msg())}">
-            <Button
-               ariaLabel={submitText}
-               disabled={!$isValid}
-               type="submit">
-               {submitText}
-            </Button>
-         </div>
+         <Button
+            ariaLabel={submitText}
+            type="submit">
+            {submitText}
+         </Button>
       </div>
 
    </form>

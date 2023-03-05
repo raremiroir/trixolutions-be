@@ -3,14 +3,16 @@
    
    import { FormBase } from "$comp";
 
-   import { mailToAdmin } from "$lib/utils";
+   import { mailToAdmin, validateTurnstile } from "$lib/utils";
 
    let inputItems: ChosenInputs = {
       name: { enabled: true, required: true },
       email: { enabled: true, required: true },
       company: { enabled: true, required: false },
       subject: { enabled: true, required: true },
-      message: { enabled: true, required: true, rows: 6 }
+      message: { enabled: true, required: true, rows: 6 },
+      accept_terms: { enabled: true, required: true },
+      turnstile_response: { enabled: true, required: true },
    }
 </script>
 
@@ -18,6 +20,7 @@
    {inputItems}
    submitText="Send Message"
    submitAction={(values) => {
+
       const subject = `Trixolutions.be: Nieuw bericht van ${values.first_name} ${values.last_name} - ${values.subject}`;
       const message = `
          <b><i>Nieuw bericht van:</i></b><br/>

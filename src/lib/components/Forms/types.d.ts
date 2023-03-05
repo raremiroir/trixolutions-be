@@ -46,4 +46,7 @@ export type ChosenInputs = {
    date?: InputItem,
    text?: InputItem,
    number?: InputItem,
+
+   turnstile_response?: InputItem,
+   accept_terms?: InputItem,
 }
