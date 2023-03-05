@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import type { UserConfig } from 'vite';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit'
-import { website } from './src/lib/config/website';
+import { config as websiteConfig } from './config/website'
 
 const config: UserConfig = {
 	logLevel: 'info',
@@ -13,15 +13,15 @@ const config: UserConfig = {
 			strategies: 'injectManifest',
 			registerType: 'autoUpdate',
 			// filename: 'prompt-sw.ts',
-			scope: '/',
+			// scope: '/',
 			manifest: {
-				name: website.siteTitle,
-				short_name: website.siteTitle,
+				name: websiteConfig.title,
+				short_name: websiteConfig.title,
 				start_url: '/',
 				scope: '/',
 				display: 'standalone',
-				theme_color: website.themeColor,
-				background_color: website.backgroundColor,
+				theme_color: websiteConfig.themeColor,
+				background_color: websiteConfig.backgroundColor,
 				icons: [
 					{
 						src: './static/icon-192.png',
