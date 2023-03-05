@@ -12,8 +12,6 @@ const config: UserConfig = {
 			includeManifestIcons: true,
 			strategies: 'injectManifest',
 			registerType: 'autoUpdate',
-			filename: 'prompt-sw.ts',
-			// scope: '/',
 			manifest: {
 				name: websiteConfig.title,
 				short_name: websiteConfig.title,
@@ -47,8 +45,6 @@ const config: UserConfig = {
 			workbox: {
 				globPatterns: ['client/**/*.{js,css,html,svg,png,jpg,jpeg,gif,ico,woff,woff2,mp3,mp4,webp,avif,svg}'],
 				globIgnores: ['**/node_modules/**/*'],
-				skipWaiting: true,
-				clientsClaim: true,
 				offlineGoogleAnalytics: false,
 				mode: 'production',
 			}
