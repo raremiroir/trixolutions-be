@@ -3,23 +3,7 @@
    import { H4, Text, List, ListItem, Accordeon, AccordeonItem, Image, Blockquote } from "$comp";
    // Import i18n
    import LL from "$i18n/i18n-svelte";
-   // Import constants
-   import { breakpoints } from "$src/lib/constants/breakpoints";
-
-   // Define image ratio through vw
-   let innerWidth:number;
-   $: innerWidth;
-   let ratio = '1'
-   $: if (innerWidth < breakpoints.xs) { ratio = "2:1"; }  
-      else if (innerWidth < breakpoints.sm) { ratio = "2:1"; } 
-      else if (innerWidth < breakpoints.md) { ratio = "3:1"; } 
-      else if (innerWidth < breakpoints.lg) { ratio = "3:1"; } 
-      else if (innerWidth < breakpoints.xl) { ratio = "1"; } 
-      else if (innerWidth < breakpoints.xxl) { ratio = "1"; }
-      else { ratio = "1"}
 </script>
-
-<svelte:window bind:innerWidth={innerWidth} />
 
 <ul class="flex flex-col gap-4">
    <Accordeon>
@@ -46,10 +30,10 @@
                   </List>
                   <div class="w-full lg:w-4/12">
                      <Image 
-                        src="lencioni-assets/pyramid-lencioni-graphic.png"
-                        mode="contain"
+                        src="lencioni/pyramid-lencioni-graphic.png"
                         alt="Lencioni Pyramide"
-                        {ratio}
+                        class="my-2 w-full flex items-center justify-center"
+                        imgClass="w-full h-44 sm:h-60 md:h-76 lg:h-auto"
                      />
                   </div>
                </div>
