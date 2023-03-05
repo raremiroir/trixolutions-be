@@ -12,7 +12,7 @@ const config: UserConfig = {
 			includeManifestIcons: true,
 			strategies: 'injectManifest',
 			registerType: 'autoUpdate',
-			// filename: 'prompt-sw.ts',
+			filename: 'prompt-sw.ts',
 			// scope: '/',
 			manifest: {
 				name: websiteConfig.title,
