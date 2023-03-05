@@ -2,6 +2,25 @@ import LL from "%i18n/i18n-svelte";
 import { get } from "svelte/store";
 const $LL = get(LL);
 
+// Email types
+interface SendEmail {
+   from: string = 'Trixolutions Admin',
+   to: string[] = ['mirostorm@gmail.com'],
+   cc?: string,
+   subject: string,
+   message: string,
+}
+
+// Turnstile types
+interface TokenValidateResponse {
+   'error-codes': string[],
+   success: boolean,
+   action: string,
+   cdata: string
+}
+type TurnstileVersion = 'v0' | 'v1';
+
+// Form / Input types
 export type InputItem = {
    enabled: boolean = false,
    disabled?: boolean,

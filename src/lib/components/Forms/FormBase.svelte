@@ -1,3 +1,26 @@
+<script lang="ts" context="module">
+   export const validateTurnstile = async (turnstile_response:any) => {
+
+      const turnstileData = JSON.stringify({ turnstile_response });
+      let success = false;
+
+      await fetch ('/api/turnstile', {
+         method: 'POST',
+         body: turnstileData,
+         headers: {
+            'Content-Type': 'application/json',
+         }
+      }).then(res => {
+         success = true
+      }).catch(err => {
+         console.error(err);
+         success = false;
+      })
+
+      return success;
+   }
+</script>
+
 <script lang='ts'>
    // IMPORT TYPES
    import type { ChosenInputs } from './types'
@@ -12,7 +35,7 @@
    import { createForm } from 'svelte-forms-lib';
    import { 
       firstLetterCase, isObjEmpty, isObjEmptyAny, 
-      titleCase, tooltip, validateTurnstile 
+      titleCase, tooltip 
    } from '$utils'
    
    // IMPORT I18N
@@ -186,16 +209,13 @@
    }
 
    // Define validation schema
-   let validationSchema = yup.object().shape({
-   });
+   let validationSchema = yup.object().shape({});
    Object.keys(formValues).forEach(key => {
       validationSchema = validationSchema.shape({
          [key]: formValues[key]
       })
    })
-   validationSchema = validationSchema.shape({
-      language: formValues.language
-   })
+   validationSchema = validationSchema.shape({language: formValues.language})
 
    // Create form
    let {
@@ -207,8 +227,6 @@
       validationSchema: validationSchema,
       onSubmit: async (values) => {
          try {
-            console.log(values.turnstile_response);
-
             const res = await validateTurnstile(values.turnstile_response);
             if (res) {
                submitAction(values);
@@ -223,8 +241,12 @@
       }
    })
 
-   $: console.log($form);
-
+   // $: console.log('form:', $form);
+   // $: console.log('errors:', $errors);
+   // $: console.log('state:', $state);
+   // $: console.log('is valid:', $isValid);
+   // $: console.log('is submitting:', $isSubmitting);
+   // $: console.log('is validating:', $isValidating);
 
    export const resetForm = () => {
       Object.keys($form).forEach(key =>{

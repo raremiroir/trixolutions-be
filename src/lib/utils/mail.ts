@@ -1,4 +1,4 @@
-export const mailToAdmin = async({ subject = '', message = '' }) => {
+export const mailToAdmin = async({ subject = '', message = '', }) => {
 
    // console.log(subject, message)
    let success = false;

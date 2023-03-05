@@ -1,5 +1,6 @@
 import Mailgun from 'mailgun.js'
 import formData from 'form-data'
+import type { SendEmail } from '$lib/components/Forms/types';
 const mailgun = new Mailgun(formData);
 
 import {

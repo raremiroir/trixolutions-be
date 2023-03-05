@@ -3,7 +3,7 @@
    
    import { FormBase } from "$comp";
 
-   import { mailToAdmin, validateTurnstile } from "$lib/utils";
+   import { mailToAdmin } from "$lib/utils";
 
    let inputItems: ChosenInputs = {
       name: { enabled: true, required: true },

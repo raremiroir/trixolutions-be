@@ -1,18 +1,8 @@
 import { SECRET_TURNSTILE_PRIVATEKEY } from "$env/static/private";
 const priv_key = SECRET_TURNSTILE_PRIVATEKEY;
 
-interface TokenValidateResponse {
-   'error-codes': string[],
-   success: boolean,
-   action: string,
-   cdata: string
-}
-
-const dummyKeys = {
-   pass: '1x0000000000000000000000000000000AA',
-   block: '2x0000000000000000000000000000000AA',
-   challenge: '3x0000000000000000000000000000000AA',
-}
+import type { TokenValidateResponse, TurnstileVersion } from "$lib/components/Forms/types";
+import { turnstile as dummyKeys } from "$lib/test/dummy";
 const key = priv_key;
 
 const validateToken = async (token: string, secret:string) => {

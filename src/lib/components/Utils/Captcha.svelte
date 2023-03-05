@@ -4,17 +4,10 @@
 	import type { TurnstileRetry } from 'svelte-turnstile/Turnstile.svelte';
 
    import { ValidationError, Text } from '$lib/components'
-
-
-   const dummyKeys = {
-      pass: '1x00000000000000000000AA',
-      block: '2x00000000000000000000AB',
-      challenge: '3x00000000000000000000FF',
-   }
-
+   
    import { PUBLIC_TURNSTILE_SITEKEY } from '$env/static/public'
    const sitekey = PUBLIC_TURNSTILE_SITEKEY;
-
+   import { turnstile as dummyKeys } from '$lib/test/dummy';
    const key = sitekey;
 
    export let turnstileResponse: string | undefined;
