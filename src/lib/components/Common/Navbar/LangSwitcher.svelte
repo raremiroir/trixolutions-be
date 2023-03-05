@@ -38,7 +38,7 @@
 
 <svelte:window on:popstate={handlePopStateEvent} />
 
-<Menu hoverState padding="p-0.5" position="right">
+<Menu hoverState padding="px-1 py-1" position="right">
    <Button 
 		flat
       slot="trigger"
@@ -50,7 +50,7 @@
 				| <span class="pt-0.5">{$locale.toUpperCase()}</span>
 			</span>
    </Button>
-   <ul class="flex flex-col gap-1 p-2">
+   <ul class="flex flex-col gap-1 p-0">
       {#each locales as l}
          <li class="w-full">
 				<Button
@@ -58,9 +58,9 @@
 					href={`${changeUrlToLocale($page.url, l)}`}
 					color="{l === $locale ? 'secondary' : 'ghost'}"
 					block alignStart noAnim flat
-					size="sm" 
+					size="md" 
 					icon="emojione:flag-for-{l === 'nl' ? 'belgium' : l === 'en' ? 'united-kingdom' : l === 'fr' ? 'france' : ''}"
-					iconClass="w-5"
+					iconClass="w-6 mr-1"
 					>
 					<div class="flex flex-col items-start justify-start w-full">
 						{ l === 'en' ? 'English' 
