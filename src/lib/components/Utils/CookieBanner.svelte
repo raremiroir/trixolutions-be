@@ -157,11 +157,13 @@
       <form class="flex flex-col items-start justify-center w-full gap-4">
         <div class="flex items-center justify-start gap-4">
             <Checkbox size="sm" disabled
-              name='functional' bind:checked={$cookiePrefs.functional}>
+              name='functional' 
+              bind:checked={$cookiePrefs.functional}>
               {$LL.cookies_prefs.types[0].label()}
             </Checkbox>
             <Checkbox size="sm"
-              name='experience' bind:checked={$cookiePrefs.experience}>
+              name='experience' 
+              bind:checked={$cookiePrefs.experience}>
               {$LL.cookies_prefs.types[1].label()}
             </Checkbox>
         </div>
