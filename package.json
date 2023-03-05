@@ -12,7 +12,6 @@
 	"type": "module",
 	"scripts": {
 		"generate:licences": "npx generate-license-file --input package.json --output third-party-licenses.txt --overwrite",
-		"dev:pocketbase": "cd ../backend && pocketbase serve",
 		"dev:i18n": "npx typesafe-i18n",
 		"dev:sveltekit": "cross-env MODE=development vite dev --host",
 		"dev:watch": "npm-run-all -p -r dev:i18n dev:sveltekit ",
