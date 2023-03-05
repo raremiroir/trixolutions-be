@@ -1,5 +1,6 @@
 import type { Site } from '$lib/types/site';
 import type { DD } from '$lib/types/dd';
+import { dev } from '$app/environment'
 
 import {
 	PUBLIC_CONTACT_EMAIL,
@@ -8,6 +9,7 @@ import {
 	PUBLIC_GITHUB_PAGE,
 	PUBLIC_LINKEDIN_PROFILE,
 	PUBLIC_SITE_URL,
+	PUBLIC_DOMAIN
 } from '$env/static/public';
 
 import SiteCover from '$img/home/home.png';
@@ -15,11 +17,15 @@ import SiteCover from '$img/home/home.png';
 const facebookPageName = PUBLIC_FACEBOOK_PAGE;
 const facebookAuthorPageName = PUBLIC_FACEBOOK_AUTHOR_PAGE;
 
+const siteTitle = 'Trixolutions';
+const slogan = 'Training, Coaching & Consultancy';
+const tagLine = 'Opleidingen en Training in Lencioni Teamcoaching en Consultancy';
+
 export const siteConfig: Site.Config = {
-	url: 'http://localhost:3000', // Production: https://trixolutions.be
-	title: 'Trixolutions',
-	subtitle: 'Trixolutions - Training, Coaching & Consultancy',
-	description: 'Trixolutions - Opleidingen en Training in Lencioni Teamcoaching en Consultancy',
+	url: dev ?'http://localhost:3000' : PUBLIC_SITE_URL,
+	title: siteTitle,
+	subtitle: `${siteTitle} - ${slogan}`,
+	description: `${siteTitle} - ${tagLine}`,
 	lang: 'nl',
 	timeZone: 'Europe/Brussels',
 	since: 2023,
@@ -38,9 +44,10 @@ export const website = {
 	author: 'Miro Storm',
 	ogLanguage: 'nl-BE',
 	siteLanguage: 'nl-BE',
-	siteTitle: 'Trixolutions',
-	siteShortTitle: 'Trixolutions',
-	description: 'Trixolutions - Opleidingen en Training in Lencioni Teamcoaching en Consultancy',
+	domain: PUBLIC_DOMAIN,
+	siteTitle: siteTitle,
+	siteShortTitle: siteTitle,
+	description: `${siteTitle} - ${tagLine}`,
 	siteUrl: PUBLIC_SITE_URL,
 	backgroundColor: '#F0F0EF',
 	themeColor: '#0B3259',
@@ -52,44 +59,3 @@ export const website = {
 	githubPage: PUBLIC_GITHUB_PAGE,
 	linkedinProfile: PUBLIC_LINKEDIN_PROFILE,
 	};
-
-	export const navConfig: (DD.Nav | DD.Link)[] = [
-		{
-			name: 'Home',
-			url: '/',
-		 },
-		 {
-			name: 'Over Ons',
-			url: '/over-ons',
-		 },
-		 {
-			name: 'Referenties',
-			url: '/referenties',
-		 },
-		 {
-			name: 'Blog',
-			url: '/blog',
-		 },
-		 {
-			name: 'Open Sessies',
-			url: '/open-sessies',
-			links: [
-				{
-					name: "Gratis Open Infosesssies", 
-					url: "/gratis-open-infosessies"
-				},
-				{
-					name: "Hybride Lencioni Leertraject",
-					url: "/open-sessies/hybride-lencioni-leertraject"
-				},
-				{
-					name: "Lencioni Deepdive - Level 2" ,
-					url: "/lencioni-deepdive-level2"
-				}
-			]
-		 },
-		 {
-			name: 'Contact',
-			url: '/contact',
-		 },
-	 ];
