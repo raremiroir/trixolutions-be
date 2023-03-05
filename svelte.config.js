@@ -84,7 +84,7 @@ const config = {
          }
       },
       paths: {
-         base: '/nl',
+         base: '/',
       }
    },
    extensions: [
