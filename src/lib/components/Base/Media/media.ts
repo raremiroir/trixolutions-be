@@ -1,4 +1,7 @@
 export { default as Logo } from './Logo.svelte'
 export { default as Map } from './Map.svelte'
-export { default as Image } from './TwicPic.svelte'
+export { default as MapOL } from './MapOL.svelte'
+export { default as MapOld } from './MapOld.svelte'
+export { default as MapGoogle } from './MapGoogle.svelte'
+export { default as Image } from './Image.svelte'
 export { default as Video } from './Video.svelte'
