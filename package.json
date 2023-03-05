@@ -37,6 +37,7 @@
 		"deploy:vercel-local-build": "vercel build --prod && vercel deploy --prebuilt --prod"
 	},
 	"dependencies": {
+		"@boxfish-studio/sveltekit-cookie-manager": "^1.0.3",
 		"@sentry/svelte": "^7.38.0",
 		"@sentry/tracing": "^7.38.0",
 		"@splidejs/splide-extension-grid": "^0.4.1",

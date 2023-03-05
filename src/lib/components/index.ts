@@ -43,15 +43,22 @@
 // ██    ██    ██    ██ ██           ██ 
 //  ██████     ██    ██ ███████ ███████ 
    export { default as PageTitle }     from './Utils/PageTitle.svelte'
-   export { default as CookieBanner }  from './Utils/CookieBanner.svelte'
+   
+   // export { default as CookieBanner }  from './Utils/CookieBanner.svelte'
+   export { default as CookieManager }  from './Utils/Cookies/CookieManager.svelte'
+   export { default as CookieLibrary }  from './Utils/Cookies/CookieLibrary.svelte'
+
    export { default as HeadHrefLangs } from './Utils/HeadHrefLangs.svelte'
+   export { default as Captcha }       from './Utils/Captcha.svelte'
+   
    export { default as Loading }       from './Utils/Loading.svelte'
    export { default as Reveal }        from './Utils/Reveal.svelte'
+   
+   export { default as Tooltip }       from './Utils/Tooltip.svelte'
    export { default as Link }          from './Utils/Link.svelte'
+   
    export { default as Alert }         from './Utils/Alert/index.svelte'
    export { default as ErrorLoading }  from './Utils/Alert/ErrorLoading.svelte'
-   export { default as Tooltip }       from './Utils/Tooltip.svelte'
-   export { default as Captcha }       from './Utils/Captcha.svelte'
    // TODO:
    export { default as Flipper }       from './Utils/Flipper.svelte'
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Import Components
 	import Loader from './Loader.svelte';
-	import { HeadHrefLangs, PWA, PageTitle, CookieBanner } from '$comp';
+	import { HeadHrefLangs, PWA, PageTitle, CookieManager, CookieLibrary } from '$comp';
 
 	// Import Styles
 	import "$src/style/normalize.css"
@@ -35,8 +35,8 @@
 </svelte:head>
 
 <PWA/>
-<!-- TODO import cookie from layoutdata and set cookiebanner -->
-<CookieBanner isset={false}/>
+
+<CookieManager />
 
 <div class="
 		flex flex-col min-h-screen bg-gray-50
