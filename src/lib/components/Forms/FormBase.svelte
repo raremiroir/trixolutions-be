@@ -347,7 +347,7 @@
       <!-- Errors -->
       <slot name="errors" />
 
-      <!-- <Captcha /> -->
+      <Captcha />
 
       <div class="flex flex-row w-full justify-between items-center mt-4">
          <!-- Submit Btn -->
