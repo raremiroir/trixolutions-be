@@ -222,6 +222,16 @@ type RootTranslation = {
 			 * K​i​e​s​ ​e​e​n​ ​o​p​t​i​e​.
 			 */
 			pick_one: string
+			/**
+			 * J​e​ ​m​o​e​t​ ​d​e​ ​{​t​e​r​m​s​}​ ​e​n​ ​d​e​ ​{​p​o​l​i​c​y​}​ ​a​c​c​e​p​t​e​r​e​n​.
+			 * @param {unknown} policy
+			 * @param {unknown} terms
+			 */
+			terms_error: RequiredParams<'policy' | 'terms'>
+			/**
+			 * V​u​l​ ​d​e​ ​c​a​p​t​c​h​a​ ​i​n​.
+			 */
+			captcha_error: string
 		}
 		newsletter: {
 			/**
@@ -290,6 +300,16 @@ type RootTranslation = {
 			 * @param {unknown} session
 			 */
 			pick_session: RequiredParams<'session'>
+			/**
+			 * I​k​ ​g​a​ ​a​k​k​o​o​r​d​ ​m​e​t​ ​d​e​ ​{​t​e​r​m​s​}​ ​e​n​ ​h​e​t​ ​{​p​o​l​i​c​y​}​.
+			 * @param {unknown} policy
+			 * @param {unknown} terms
+			 */
+			check_terms: RequiredParams<'policy' | 'terms'>
+			/**
+			 * E​v​e​n​ ​a​a​n​t​o​n​e​n​ ​d​a​t​ ​j​e​ ​g​e​e​n​ ​r​o​b​o​t​ ​b​e​n​t​.​.​.
+			 */
+			captcha: string
 			content: {
 				/**
 				 * o​p​t​i​o​n​e​e​l
@@ -3514,6 +3534,14 @@ export type TranslationFunctions = {
 			 * Kies een optie.
 			 */
 			pick_one: () => LocalizedString
+			/**
+			 * Je moet de {terms} en de {policy} accepteren.
+			 */
+			terms_error: (arg: { policy: unknown, terms: unknown }) => LocalizedString
+			/**
+			 * Vul de captcha in.
+			 */
+			captcha_error: () => LocalizedString
 		}
 		newsletter: {
 			/**
@@ -3578,6 +3606,14 @@ export type TranslationFunctions = {
 			 * kies een {session}
 			 */
 			pick_session: (arg: { session: unknown }) => LocalizedString
+			/**
+			 * Ik ga akkoord met de {terms} en het {policy}.
+			 */
+			check_terms: (arg: { policy: unknown, terms: unknown }) => LocalizedString
+			/**
+			 * Even aantonen dat je geen robot bent...
+			 */
+			captcha: () => LocalizedString
 			content: {
 				/**
 				 * optioneel

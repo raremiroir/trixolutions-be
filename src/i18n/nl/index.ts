@@ -67,6 +67,8 @@ const nl: BaseTranslation = {
          phone_error: "Dit telefoonnummer is ongeldig.",
          only_alpha: "{item:string} zou geen speciale karakters of nummers mogen bevatten.",
          pick_one: "Kies een optie.",
+         terms_error: "Je moet de {terms} en de {policy} accepteren.",
+         captcha_error: "Vul de captcha in.",
       },
       newsletter: {
          btn: "Inschrijven voor Nieuwsbrief",
@@ -89,6 +91,8 @@ const nl: BaseTranslation = {
          message: "bericht",
          telephone: "telefoonnummer",
          pick_session: "kies een {session}",
+         check_terms: "Ik ga akkoord met de {terms} en het {policy}.",
+         captcha: "Even aantonen dat je geen robot bent...",
          content: {
             optional: "optioneel",
             send_msg: "bericht verzenden",

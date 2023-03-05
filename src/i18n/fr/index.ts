@@ -67,6 +67,8 @@ const fr: Translation = {
          phone_error: "Ce numéro de téléphone est invalide.",
          only_alpha: "{item:string} ne doit pas contenir de caractères spéciaux ni de chiffres.",
          pick_one: "Chosis une option.",
+         terms_error: "Vous devez accepter les {terms} et la {policy}.",
+         captcha_error: "Veuillez remplir le captcha.",
       },
       newsletter: {
          btn: "S'inscrire à la Newsletter",
@@ -89,6 +91,8 @@ const fr: Translation = {
          message: "message",
          telephone: "numéro de téléphone",
          pick_session: "choisir une {session}",
+         check_terms: "J'accepte les {terms} et la {policy}.",
+         captcha: "Juste pour prouver que vous n'êtes pas un robot...",
          content: {
             optional: "optionnel",
             send_msg: "envoyer le message",

@@ -67,6 +67,8 @@ const en: Translation = {
          phone_error: "This phone number in invalid.",
          only_alpha: "{item:string} should not contain any numbers or special characters.",
          pick_one: "Pick an option.",
+         terms_error: "You have to accept the {terms} and the {policy}.",
+         captcha_error: "Please fill in the captcha.",
       },
       newsletter: {
          btn: "Subscribe to Trixolutions Newsletter",
@@ -89,6 +91,8 @@ const en: Translation = {
          message: "message",
          telephone: "phone",
          pick_session: "choose {session}",
+         check_terms: "Accept the {terms} and the {policy}.",
+         captcha: "Just to prove you're not a robot...",
          content: {
             optional: "optional",
             send_msg: "send message",
