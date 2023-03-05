@@ -82,9 +82,6 @@ const config = {
          reportOnly: {
             'script-src': ['self']
          }
-      },
-      paths: {
-         base: '/',
       }
    },
    extensions: [
