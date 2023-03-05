@@ -10,13 +10,10 @@ const config: UserConfig = {
 		SvelteKitPWA({
 			includeAssets: ['favicon.ico', 'robots.txt', 'static/**/*', 'client/**/*.{js,css,html,svg,png,jpg,jpeg,gif,ico,woff,woff2,mp3,mp4,webp,avif,svg}'],
 			includeManifestIcons: true,
-			strategies: 'injectManifest',
 			registerType: 'autoUpdate',
 			manifest: {
 				name: websiteConfig.title,
 				short_name: websiteConfig.title,
-				start_url: '/',
-				scope: '/',
 				display: 'standalone',
 				theme_color: websiteConfig.themeColor,
 				background_color: websiteConfig.backgroundColor,
