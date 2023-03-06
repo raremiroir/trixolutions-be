@@ -3,14 +3,15 @@
    
    import { FormBase } from "$comp";
 
-   import { mailToAdmin } from "$lib/utils";
+   import { mailToAdmin, titleCase } from "$lib/utils";
+   import LL from "$i18n/i18n-svelte";
 
    let inputItems: ChosenInputs = {
-      name: { enabled: true, required: true },
-      email: { enabled: true, required: true },
-      company: { enabled: true, required: false },
-      subject: { enabled: true, required: true },
-      message: { enabled: true, required: true, rows: 6 },
+      name: { enabled: true, required: true, },
+      email: { enabled: true, required: true, },
+      company: { enabled: true, required: false, },
+      subject: { enabled: true, required: true, },
+      message: { enabled: true, required: true, rows: 6, },
       accept_terms: { enabled: true, required: true },
       turnstile_response: { enabled: true, required: true },
    }
@@ -18,7 +19,8 @@
 
 <FormBase 
    {inputItems}
-   submitText="Send Message"
+   title={$LL.pages.contact.btn.contact_us()}
+   submitText={titleCase($LL.base.form.content.send_msg())}
    submitAction={(values) => {
 
       const subject = `Trixolutions.be: Nieuw bericht van ${values.first_name} ${values.last_name} - ${values.subject}`;
