@@ -93,6 +93,16 @@ const en: Translation = {
          pick_session: "choose {session}",
          check_terms: "Accept the {terms} and the {policy}.",
          captcha: "Just to prove you're not a robot...",
+         placeholder: {
+            first_name: "John",
+            last_name: "Doe",
+            email: "john.doe@example.com",
+            company: "Example Inc.",
+            job: "Teamleader",
+            subject: "I have a question about...",
+            message: "Write your message here...",
+            telephone: "+32 123 45 67",
+         },
          content: {
             optional: "optional",
             send_msg: "send message",

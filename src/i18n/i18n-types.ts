@@ -310,6 +310,40 @@ type RootTranslation = {
 			 * E​v​e​n​ ​a​a​n​t​o​n​e​n​ ​d​a​t​ ​j​e​ ​g​e​e​n​ ​r​o​b​o​t​ ​b​e​n​t​.​.​.
 			 */
 			captcha: string
+			placeholder: {
+				/**
+				 * J​a​n
+				 */
+				first_name: string
+				/**
+				 * J​a​n​s​s​e​n​s
+				 */
+				last_name: string
+				/**
+				 * j​a​n​.​j​a​n​s​s​e​n​s​@​v​o​o​r​b​e​e​l​d​.​b​e
+				 */
+				email: string
+				/**
+				 * V​o​o​r​b​e​e​l​d​ ​N​V
+				 */
+				company: string
+				/**
+				 * T​e​a​m​l​e​i​d​e​r
+				 */
+				job: string
+				/**
+				 * I​k​ ​h​e​b​ ​e​e​n​ ​v​r​a​a​g​ ​o​v​e​r​.​.​.
+				 */
+				subject: string
+				/**
+				 * S​c​h​r​i​j​f​ ​h​i​e​r​ ​j​e​ ​b​e​r​i​c​h​t​.​.​.
+				 */
+				message: string
+				/**
+				 * 0​4​9​9​ ​9​9​ ​9​9​ ​9​9
+				 */
+				telephone: string
+			}
 			content: {
 				/**
 				 * o​p​t​i​o​n​e​e​l
@@ -3614,6 +3648,40 @@ export type TranslationFunctions = {
 			 * Even aantonen dat je geen robot bent...
 			 */
 			captcha: () => LocalizedString
+			placeholder: {
+				/**
+				 * Jan
+				 */
+				first_name: () => LocalizedString
+				/**
+				 * Janssens
+				 */
+				last_name: () => LocalizedString
+				/**
+				 * jan.janssens@voorbeeld.be
+				 */
+				email: () => LocalizedString
+				/**
+				 * Voorbeeld NV
+				 */
+				company: () => LocalizedString
+				/**
+				 * Teamleider
+				 */
+				job: () => LocalizedString
+				/**
+				 * Ik heb een vraag over...
+				 */
+				subject: () => LocalizedString
+				/**
+				 * Schrijf hier je bericht...
+				 */
+				message: () => LocalizedString
+				/**
+				 * 0499 99 99 99
+				 */
+				telephone: () => LocalizedString
+			}
 			content: {
 				/**
 				 * optioneel

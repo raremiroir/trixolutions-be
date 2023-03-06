@@ -93,6 +93,16 @@ const nl: BaseTranslation = {
          pick_session: "kies een {session}",
          check_terms: "Ik ga akkoord met de {terms} en het {policy}.",
          captcha: "Even aantonen dat je geen robot bent...",
+         placeholder: {
+            first_name: "Jan",
+            last_name: "Janssens",
+            email: "jan.janssens@voorbeeld.be",
+            company: "Voorbeeld NV",
+            job: "Teamleider",
+            subject: "Ik heb een vraag over...",
+            message: "Schrijf hier je bericht...",
+            telephone: "0499 99 99 99",
+         },
          content: {
             optional: "optioneel",
             send_msg: "bericht verzenden",
