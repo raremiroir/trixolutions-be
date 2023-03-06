@@ -29,12 +29,11 @@
 </script>
 
    <input 
-      {disabled}
+      {disabled} aria-disabled={disabled}
       on:focus on:blur
       id={name} 
       {type}
       autocorrect="off"
-      
       {value} aria-valuetext="{value}"
       {placeholder} aria-placeholder="{placeholder}"
       {required} aria-required={required}

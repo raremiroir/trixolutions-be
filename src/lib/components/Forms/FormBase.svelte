@@ -45,6 +45,7 @@
    $: extraSuccess;
    let success = false;
 
+   export let title = "Contact Form";
    export let submitText = 'Submit';
    export let sessionTitle = 'Session';
 
@@ -273,19 +274,22 @@
 {:else}
    <form
       novalidate
+      {title} aria-label="{title}"
       transition:fade={{duration: 200}}
       on:submit={handleSubmit}
+      aria-orientation="vertical"
       class="flex flex-col gap-1 md:gap-2 overflow-y-hidden">
       
       <!-- Name input -->
       {#if inputItems.name}
-         <RowWrap>
+         <RowWrap cols={2}>
             <FormInput 
                name="first_name"
                label="{titleCase($LL.base.form.first_name())}"
                on:change={handleChange}
                bind:value={$form.first_name} 
                bind:errors={$errors.first_name} 
+               placeholder={$LL.base.form.placeholder.first_name()}
                required={inputItems.name.required}
             />
             <FormInput 
@@ -294,13 +298,14 @@
                on:change={handleChange}
                bind:value={$form.last_name} 
                bind:errors={$errors.last_name} 
+               placeholder={$LL.base.form.placeholder.last_name()}
                required={inputItems.name.required}
             />
          </RowWrap>
       {/if}
       <!-- Email / Phone input -->
       {#if inputItems.email || inputItems.phone || (inputItems.email && inputItems.phone)}
-         <RowWrap>  
+         <RowWrap cols={inputItems.email && inputItems.phone ? 2 : 1}>  
             {#if inputItems.email}
                <FormInput 
                   name="email"
@@ -308,6 +313,7 @@
                   on:change={handleChange}
                   bind:value={$form.email} 
                   bind:errors={$errors.email} 
+                  placeholder={$LL.base.form.placeholder.email()}
                   required={inputItems.email.required}
                />
             {/if}
@@ -318,6 +324,7 @@
                   on:change={handleChange}
                   bind:value={$form.phone} 
                   bind:errors={$errors.phone} 
+                  placeholder={$LL.base.form.placeholder.telephone()}
                   required={inputItems.phone.required}
                />
             {/if}
@@ -325,7 +332,7 @@
       {/if}
       <!-- Company / Job input -->
       {#if inputItems.company || inputItems.job || (inputItems.company && inputItems.job)}
-         <RowWrap>  
+         <RowWrap cols={inputItems.company && inputItems.job ? 2 : 1}>  
             {#if inputItems.company}
                <FormInput 
                   name="company"
@@ -333,6 +340,7 @@
                   on:change={handleChange}
                   bind:value={$form.company} 
                   bind:errors={$errors.company} 
+                  placeholder={$LL.base.form.placeholder.company()}
                   required={inputItems.company.required}
                />
             {/if}
@@ -343,6 +351,7 @@
                   on:change={handleChange}
                   bind:value={$form.company} 
                   bind:errors={$errors.company} 
+                  placeholder={$LL.base.form.placeholder.job()}
                   required={inputItems.job.required}
                />
             {/if}
@@ -375,6 +384,7 @@
                on:change={handleChange}
                bind:value={$form.subject} 
                bind:errors={$errors.subject} 
+               placeholder={$LL.base.form.placeholder.subject()}
                required={inputItems.subject.required}
             />
          </RowWrap>
@@ -393,6 +403,7 @@
                on:change={handleChange} 
                bind:value={$form.message}
                bind:errors={$errors.message}
+               placeholder={$LL.base.form.placeholder.message()}
                required={inputItems.message.required}
             />
          </RowWrap>

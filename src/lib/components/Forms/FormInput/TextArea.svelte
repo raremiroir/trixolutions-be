@@ -20,10 +20,14 @@
 
 
 <textarea 
-   {rows} {disabled}
+   {rows}
    on:focus on:blur 
    aria-label={ariaLabel}
-   id={name} {name} {placeholder} {value} {required}
+   id={name} {name} 
+   {placeholder} aria-placeholder={placeholder}
+   {value} aria-valuetext={value}
+   {required} aria-required={required}
+   {disabled} aria-disabled={disabled}
    on:input on:change
    class="{noResize ? 'resize-none' : ''} {klass}" 
 />
