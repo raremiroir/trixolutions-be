@@ -1,3 +1,19 @@
 {
-   "trailingSlash": false
- }
+  "framework": "sveltekit",
+  "trailingSlash": false,
+  "functions": {
+    "api/**/*.ts": {
+      "memory": 3008,
+      "maxDuration": 30
+    }
+  },
+  "headers": {
+    "source": "/sw.js",
+    "headers": [
+      {
+        "key": "Cache-Control",
+        "value": "public, max-age=0, must-revalidate"
+      }
+    ]
+  },
+}
