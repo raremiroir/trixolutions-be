@@ -1,4 +1,10 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
+
+	// Initialize Vercel Analytics
+	import { inject } from '@vercel/analytics';
+	inject({ mode: dev ? 'development' : 'production' })
+
 	// Import Components
 	import Loader from './Loader.svelte';
 	import { HeadHrefLangs, PWA, PageTitle, CookieManager, CookieLibrary } from '$comp';
