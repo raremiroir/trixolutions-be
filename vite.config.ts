@@ -4,7 +4,7 @@ import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 import { config as websiteConfig } from './config/website'
 
 const config: UserConfig = {
-	logLevel: 'info',
+	// logLevel: 'info',
 	plugins: [
 		sveltekit(), 
 		SvelteKitPWA({
