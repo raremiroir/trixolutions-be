@@ -40,7 +40,7 @@
       <Text small>{description}</Text>
    {/if}
    {#if errors}
-      <ValidationError>{errors}</ValidationError>
+      <ValidationError error={errors}/>
    {/if}
    <Turnstile 
       on:turnstile-callback={(e) => {

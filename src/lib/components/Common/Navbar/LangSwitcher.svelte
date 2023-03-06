@@ -52,7 +52,7 @@
    </Button>
    <ul class="flex flex-col gap-1 p-0">
       {#each locales as l}
-         <li class="w-full">
+         <li role="menuitem" class="w-full">
 				<Button
 					ariaLabel="{$LL.base.nav.lang.change_lang_to()} {l}"
 					href={`${changeUrlToLocale($page.url, l)}`}

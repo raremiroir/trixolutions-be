@@ -9,6 +9,7 @@
 </script>
 
 	<button 
+		role="tab"
 		class="
 			border-none w-full
 			transition-all duration-200 ease-out
@@ -27,7 +28,6 @@
 	</button>
 
 <style>
-
 	.selected {
 		border-bottom: 2px solid teal;
 		color: #333;

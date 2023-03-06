@@ -11,6 +11,7 @@
 
 {#if $selectedPanel === panel}
 	<div 
+		role="tabpanel"
 		in:slide={{duration:500}} out:slide={{duration:500}}
 		class="bg-primary/15 shadow-xl
 		font-medium text-primary-d2

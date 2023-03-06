@@ -13,6 +13,8 @@
 
 <!-- Box -->
 <div
+   aria-modal="true"
+   aria-label="Open Modal"
 	use:clickOutside
 	on:click_outside={closeModal}
 	class="

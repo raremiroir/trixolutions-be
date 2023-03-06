@@ -105,7 +105,6 @@
 		</Reveal>
 	</Section>
 
-	<!-- TODO: Fix image grid + add reveal -->
 	<Section name="our-team">
 		<div class="flex flex-wrap justify-between items-center gap-1 sm:gap-2 md:gap-3 xl:gap-6">
 			{#each references as img}

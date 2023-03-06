@@ -179,6 +179,7 @@
 	</div>
    
    <div 
+      role="complementary"
       class="
          w-11/12 md:w-5/6 mx-auto py-4 
          grid gap-8 

@@ -56,13 +56,16 @@
 <!--      -->
 
 <!-- Component Wrapper -->
-<div class="{block ? 'w-full' : ''} {wrapClass} relative"
-     on:focusout={handleMenuFocusLoss}>
+<div 
+   class="{block ? 'w-full' : ''} {wrapClass} relative"
+   role="menu"
+   on:focusout={handleMenuFocusLoss}>
 
 
      <!-- Trigger Wrapper -->
       {#if hoverState}
          <div 
+            role="button"
             class="group {klass}" 
             on:mouseenter={() => openMenu()}
             on:mouseleave={() => closeMenu()}
@@ -73,6 +76,7 @@
          </div>
       {:else}
          <div 
+            role="button"
             class="group {klass}" 
             on:click={handleMenuClick}
             on:keydown|preventDefault={handleMenuClick}>
@@ -83,6 +87,7 @@
       {#if menuOpen}
          {#if hoverState}
             <div 
+               role="menubar"
                transition:fade="{{duration: 200}}"
                on:mouseenter={() => openMenu()}
                on:mouseleave={() => closeMenu()}
@@ -94,6 +99,7 @@
             </div>
          {:else}
             <div 
+               role="menubar"
                transition:fade="{{duration: 200}}"
                class="{menuPos} {padding} {menuClass}">
                <slot/>

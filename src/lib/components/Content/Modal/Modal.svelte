@@ -47,6 +47,9 @@
 {#if trigger || normalModal}
    <!-- Trigger -->
    <div 
+      role="button"
+      tabindex="0"
+      aria-haspopup="true"
       class="h-fit"
       on:click|stopPropagation={openModal(id)}
       on:keydown={openModal(id)}>

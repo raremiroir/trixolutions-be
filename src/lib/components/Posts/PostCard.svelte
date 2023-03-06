@@ -27,7 +27,7 @@
       height: height,
       
 		href: link,
-		article: false,
+		article: true,
 		ariaLabel: title,
 
       hoverFx: 'full',

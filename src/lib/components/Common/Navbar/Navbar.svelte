@@ -76,6 +76,7 @@
 
 <!-- Navbar Outer Wrap -->
 <div 
+   role="banner"
    class="
       w-full fixed top-0
       { yscroll >= 10

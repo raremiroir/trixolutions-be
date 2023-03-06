@@ -9,6 +9,8 @@
 
 </script>
 <div 
+   role="button"
+   aria-label={$LL.base.btn.close()}
    on:click={onClick}
    on:keydown={onClick}   
    class="h-8 w-8">

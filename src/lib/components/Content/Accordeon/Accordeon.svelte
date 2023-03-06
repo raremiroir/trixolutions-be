@@ -14,7 +14,8 @@
    export { klass as class };
 </script>
 
-<div class="
+<div
+   class="
       flex flex-col gap-4
       transition-all duration-300 ease-in-out 
       {klass}">
