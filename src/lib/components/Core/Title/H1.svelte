@@ -7,6 +7,9 @@
    // Choose color or leave blank for default (primary)
    export let color = ''
 
+   // Define id
+   export let id:string = '';
+
    // Use small case
       export let small = false;
    // Use smaller case
@@ -48,7 +51,7 @@
    </span>
 {:else}
    <h1 class="{ titleClasses }"
-      class:italic>
+      class:italic {id}>
       <slot/>
    </h1>   
 {/if}
