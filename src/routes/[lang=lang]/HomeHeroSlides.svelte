@@ -45,6 +45,7 @@
          >
          <H1 
             slot="title" 
+            id="landing"
             fake={key !== 0} 
             small={key === 2}
             smaller={key === 1}
