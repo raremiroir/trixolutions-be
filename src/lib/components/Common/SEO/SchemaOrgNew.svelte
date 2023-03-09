@@ -26,47 +26,7 @@
    // Import i18n
    import type { BaseTranslation, Locales, TranslationFunctions } from '$src/i18n/i18n-types';
    import { locales, baseLocale } from "$i18n/i18n-util";
-   import { i18nObject } from 'typesafe-i18n';
-   import nl_website from '$i18n/nl/website';
-   import fr_website from '$i18n/fr/website';
-   import en_website from '$i18n/en/website';
-   import nl_nav from '$i18n/nl/nav';
-   import fr_nav from '$i18n/fr/nav';
-   import en_nav from '$i18n/en/nav';
-   import nl_sessions from '$i18n/nl/sessions';
-   import fr_sessions from '$i18n/fr/sessions';
-   import en_sessions from '$i18n/en/sessions';
-   import nl_base from '$i18n/nl/index';
-   import fr_base from '$i18n/fr/index';
-   import en_base from '$i18n/en/index';
-
-   type i18nType = {
-      nl: any;
-      fr: any;
-      en: any;
-   }
-
-   // Define i18n Objects
-   const L_WEBSITE: i18nType = {
-      nl: i18nObject('nl', nl_website),
-      fr: i18nObject('fr', fr_website),
-      en: i18nObject('en', en_website),
-   }
-   const L_NAV: i18nType = {
-      nl: i18nObject('nl', nl_nav),
-      fr: i18nObject('fr', fr_nav),
-      en: i18nObject('en', en_nav),
-   }
-   const L_SESSIONS: i18nType = {
-      nl: i18nObject('nl', nl_sessions),
-      fr: i18nObject('fr', fr_sessions),
-      en: i18nObject('en', en_sessions),
-   }
-   const L_BASE: i18nType = {
-      nl: i18nObject('nl', nl_base),
-      fr: i18nObject('fr', fr_base),
-      en: i18nObject('en', en_base),
-   }
+   import L from '$i18n/i18n-node';
 
 
    // Import utils
@@ -121,6 +81,7 @@
 
    const definedLocales: Locales[] = hasAlternateLang ? locales : [ baseLocale ];
 
+   const socials: URL[] = [ `https://linkedin.com/in/${website.linkedinProfile}`, website.facebookPage ]
 
    // Define array for storing all the schema objects
    let schemaOrgArray:any = [];
@@ -129,104 +90,117 @@
    /* ============================================= */
 
    // THIRD PARTIES
-   const patrick_lencioni: Person = {
-      "@type": "Person",
-      "name": "Patrick Lencioni",
-      "givenName": "Patrick",
-      "familyName": "Lencioni",
-      "gender": "male",
-      "jobTitle": "Author",
-      "url": "https://www.tablegroup.com",
-      "sameAs": [
-         "https://www.linkedin.com/in/patrick-lencioni-orghealth",
-         "https://twitter.com/patricklencioni",
-         "https://www.instagram.com/patricklencioni_",
-      ],
-   }
 
-   let capaProObj: {[key:string]: Organization} = {};
+   // Pat Lencioni
+   definedLocales.forEach((lang: Locales) => {
+      const patrick_lencioni: Person = {
+         "@type": "Person",
+         "@id": `${website.domain}/${lang}/#person/patrick_lencioni`,
+         "name": "Patrick Lencioni",
+         "givenName": "Patrick",
+         "familyName": "Lencioni",
+         "gender": "male",
+         "jobTitle": "Author",
+         "url": "https://www.tablegroup.com",
+         "sameAs": [
+            "https://www.linkedin.com/in/patrick-lencioni-orghealth",
+            "https://twitter.com/patricklencioni",
+            "https://www.instagram.com/patricklencioni_",
+         ],
+      }
+      schemaOrgArray.push(patrick_lencioni);
+   })
+   // Capa Pro
    definedLocales.forEach((lang: Locales) => {
       const capa_pro: Organization = {
          "@type": "Organization",
-         "@id": `https://www.tablegroup.com/#capa_pro`,
+         "@id": `${website.domain}/${lang}/#capa_pro`,
          
-         "name": L_WEBSITE[lang].brands.capa_pro.name(),
-         "alternateName": `${L_WEBSITE[lang].brands.capa_pro.name()} - Patrick Lencioni`,
-         "slogan": L_WEBSITE[lang].brands.capa_pro.slogan(),
-         "description": L_WEBSITE[lang].brands.capa_pro.description(),
+         "name": L[lang].website.brands.capa_pro.name(),
+         "alternateName": `${L[lang].website.brands.capa_pro.name()} - Patrick Lencioni`,
+         "slogan": L[lang].website.brands.capa_pro.slogan(),
+         "description": L[lang].website.brands.capa_pro.description(),
          
          "url": "https://www.tablegroup.com",
          "logo": `${website.domain}/images/partners/capa-pro.png`,
          "image": `${website.domain}/images/partners/capa-pro.png`,
       
-         "founder": patrick_lencioni,
+         "founder": { "@id": `${website.domain}/${lang}/#person/patrick_lencioni` },
          "sameAs": [
                'https://www.linkedin.com/company/capa-pro2',
             ],
       }
-      capaProObj[lang] = capa_pro;
+      schemaOrgArray.push(capa_pro);
    })
-
-   let miro_storm: Person;
-   $: miro_storm = {
-      "@type": "Person",
-      "name": "Miro Storm",
-      "alternateName": "Miro Storm - Mist Media",
-      "familyName": "Polfliet",
-      "givenName": "Miro Storm",
-      "worksFor": "https://mistmedia.be",
-      "jobTitle": "Founder - Web Developer",
-      "alumniOf": {
-         "@type": "CollegeOrUniversity",
-         "name": "Karel de Grote Hogeschool",
-         "alternateName": "KdG",
-         "url": "https://www.kdg.be",
-         "logo": "https://www.kdg.be/sites/kdg.be/files/kdg-logo_english-vertical-black-rgb.png",
-      },
-      "image": "https://sqotemthjxsiwsufjzgz.supabase.co/storage/v1/object/public/images/team/miro_storm.png",
-      "gender": "http://schema.org/Male",
-      "sameAs": ["https://linkedin.com/in/mistmedia","https://github.com/raremiroir"]
-   }
-   let mist_media: Organization;
-   $: mist_media = {
-      "@type": "Organization",
-
-      "name": "Mist Media",
-      "slogan": "",
-      "description": "",
-
-      "url": "https://mistmedia.be",
-      "logo": "https://mistmedia.be/logo.png",
-      "image": `${website.domain}/images/partners/mist-media.png`,
-      "address": {
-         "@type": "PostalAddress",
-         "streetAddress": "Vekestraat 34",
-         "addressLocality": "Antwerp",
-         "addressRegion": "Antwerp",
-         "postalCode": "2000",
-         "addressCountry": "Belgium"
-      },
-      "contactPoint": {
-         "@type": "ContactPoint",
-         "contactType": "contact",
-         "telephone": "+32484340391",
-         "email": "miro@mistmedia.be"
-      },
-      "sameAs": [ 
-         "https://linkedin.com/in/mistmedia",
-         "https://github.com/raremiroir" 
-      ],
-      "founder": miro_storm,
-   }
+   // Miro Storm
+   definedLocales.forEach((lang: Locales) => {
+      const miro_storm: Person = {
+         "@type": "Person",
+         "@id": `${website.domain}/${lang}/#person/miro_storm`,
+         "name": "Miro Storm",
+         "alternateName": "Miro Storm - Mist Media",
+         "familyName": "Polfliet",
+         "givenName": "Miro Storm",
+         "worksFor": "https://mistmedia.be",
+         "jobTitle": "Founder - Web Developer",
+         "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Karel de Grote Hogeschool",
+            "alternateName": "KdG",
+            "url": "https://www.kdg.be",
+            "logo": "https://www.kdg.be/sites/kdg.be/files/kdg-logo_english-vertical-black-rgb.png",
+         },
+         "image": "https://sqotemthjxsiwsufjzgz.supabase.co/storage/v1/object/public/images/team/miro_storm.png",
+         "gender": "http://schema.org/Male",
+         "sameAs": ["https://linkedin.com/in/mistmedia","https://github.com/raremiroir"]
+      }
+      schemaOrgArray.push(miro_storm);
+   })
+   // Mist Media
+   definedLocales.forEach((lang: Locales) => {
+      const mistMedia: Organization = {
+         "@type": "Organization",
+         "@id": `${website.domain}/${lang}/#mist_media`,
+      
+         "name": "Mist Media",
+         "slogan": "",
+         "description": "",
+      
+         "url": "https://mistmedia.be",
+         "logo": "https://mistmedia.be/logo.png",
+         "image": `${website.domain}/images/partners/mist-media.png`,
+         "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Vekestraat 34",
+            "addressLocality": "Antwerp",
+            "addressRegion": "Antwerp",
+            "postalCode": "2000",
+            "addressCountry": "Belgium"
+         },
+         "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "contact",
+            "telephone": "+32484340391",
+            "email": "miro@mistmedia.be"
+         },
+         "sameAs": [ 
+            "https://linkedin.com/in/mistmedia",
+            "https://github.com/raremiroir" 
+         ],
+         "founder": { "@id": `${website.domain}/${lang}/#person/miro_storm` },
+      }
+      schemaOrgArray.push(mistMedia);
+   })
 
 
    // IMAGE OBJECT(S)
-   let mainImageObj: {[key:string]: ImageObject} = {};
+
+   // Main Image
    definedLocales.forEach((lang: Locales) => {
       const mainImage: ImageObject = { 
          '@type': 'ImageObject', 
          '@id': `${website.domain}/${entityMeta.slug[lang]}/#primaryimage`,
-         "inLanguage": lang,
+         "inLanguage": lang === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : lang === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
          "url": entityMeta.image?.url ? entityMeta.image.url : `${website.domain}/logo-1920x1280.webp`,
          "contentUrl": `${website.domain}/${entityMeta.slug[lang]}`,
          "width": `${entityMeta.image?.width}`,
@@ -238,9 +212,9 @@
             "url": `${website.domain}/${entityMeta.slug[lang]}`,
          },	
       };
-      mainImageObj[lang] = mainImage;
+      schemaOrgArray.push(mainImage);
    })
-
+   // Logo
    let logoObj: {[key:string]: ImageObject} = {};
    definedLocales.forEach((lang: Locales) => {
       const logo: ImageObject = {
@@ -249,7 +223,7 @@
          "url": `${website.domain}/logo-1920x1280.webp`,
          "contentUrl": `${website.domain}/logo-1920x1280.webp`,
          "embedUrl": `${website.domain}/logo-1920x1280.webp`,
-         "inLanguage": lang,
+         "inLanguage": lang === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : lang === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
          "width": "1920",
          "height": "1280",
          "caption": "Logo Trixolutions",
@@ -259,16 +233,16 @@
             "url": `${website.domain}/${entityMeta.slug[lang]}`,
          },
       };
-      logoObj[lang] = logo;
+      schemaOrgArray.push(logo);
    });
-
+   // Other Images
    if (images === true) {
       definedLocales.forEach((lang: Locales) => {
-         imagesMeta.forEach((image: ImageMetadata) => {
+         imagesMeta.forEach((image: ImageMetadata, key: number) => {
             const imageObject: ImageObject = { 
                '@type': 'ImageObject', 
-               '@id': `${website.domain}/${entityMeta.slug[lang]}/#image`,
-               "inLanguage": lang,
+               '@id': `${website.domain}/${entityMeta.slug[lang]}/#images/${key + 1}`,
+               "inLanguage": lang === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : lang === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
                "url": image.url,
                "contentUrl": `${website.domain}/${entityMeta.slug[lang]}`,
                "width": `${image.width}`,
@@ -287,38 +261,36 @@
 
 
    // AREAS
-   let areaServedObj: {[key:string]: {be: Country, nl: Country}} = {};
    definedLocales.forEach((lang: Locales) => {
       const areaServed: { be: Country, nl: Country } = {
          be: {
             "@type": "Country",
             "@id": `${website.domain}/${lang}/#country/be`,
-            "name": L_WEBSITE[lang].address.be.country(),
+            "name": L[lang].website.address.be.country(),
             "additionalType": "https://en.wikipedia.org/wiki/ISO_3166-2:BE",
             "hasMap": `${website.domain}/${lang}/contact`,
-            "logo": logoObj[lang], 
+            "logo": { "@id": `${website.domain}/${lang}/#logo` }, 
          },
          nl: {
             "@type": "Country",
             "@id": `${website.domain}/${lang}/#country/nl`,
-            "name": L_WEBSITE[lang].address.nl.country(),
+            "name": L[lang].website.address.nl.country(),
             "additionalType": "https://en.wikipedia.org/wiki/ISO_3166-2:NL",
             "hasMap": `${website.domain}/${lang}/contact`,
-            "logo": logoObj[lang],
+            "logo": { "@id": `${website.domain}/${lang}/#logo` },
          }
       }
-      areaServedObj[lang] = areaServed;
+      schemaOrgArray.push(areaServed.be, areaServed.nl);
    })
 
    // LANGUAGES
-   let languagesObj: {[key:string]: {nl: Language, fr: Language, en: Language}} = {};
    definedLocales.forEach((lang: Locales) => {
       const languages: {nl: Language, fr: Language, en: Language} = {
          nl: {
             "@type": "Language",
             "@id": `${website.domain}/${lang}/#language/nl`,
             "alternateName": "Nederlands",
-            "name": L_WEBSITE[lang].languages.nl(),
+            "name": L[lang].website.languages.nl(),
             "description": "Dutch Language",
             "disambiguatingDescription": "Belgian Dutch Language",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/1024px-Flag_of_Belgium.svg.png?20221128005359",
@@ -329,7 +301,7 @@
             "@type": "Language",
             "@id": `${website.domain}/${lang}/#language/fr`,
             "alternateName": "Français",
-            "name": L_WEBSITE[lang].languages.fr(),
+            "name": L[lang].website.languages.fr(),
             "description": "French Language",
             "disambiguatingDescription": "Belgian French Language",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png?20120916041411",
@@ -340,40 +312,39 @@
             "@type": "Language",
             "@id": `${website.domain}/${lang}/#language/en`,
             "alternateName": "English",
-            "name": L_WEBSITE[lang].languages.en(),
+            "name": L[lang].website.languages.en(),
             "description": "English Language",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Flag_of_the_United_Kingdom.svg/1024px-Flag_of_the_United_Kingdom.svg.png?20120916041411",
             "sameAs": "https://wikipedia.org/wiki/English_language",
             "identifier": "en",
          },
       }
-      languagesObj[lang] = languages;
+      schemaOrgArray.push(languages.nl, languages.fr, languages.en);
    })
    
    // CONTACT INFO
-   let openingHoursObj: {[key:string]: OpeningHoursSpecification} = {};
+   // Opening Hours
    definedLocales.forEach((lang: Locales) => {
       const openingHours: OpeningHoursSpecification = {
          "@type": "OpeningHoursSpecification",
          "@id": `${website.domain}/${lang}/#opening-hours/normal`,
          "dayOfWeek": [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ],
-         "image": mainImageObj[lang],
+         "image": { '@id': `${website.domain}/${entityMeta.slug[lang]}/#primaryimage` },
          "validFrom": "2020-01-01",
          "opens": "08:00",
          "closes": "18:00",
-         "name": L_WEBSITE[lang].opening_hours.title(),
-         "alternateName": L_WEBSITE[lang].opening_hours.title(),
-         "description": L_WEBSITE[lang].opening_hours.description({
+         "name": L[lang].website.opening_hours.title(),
+         "alternateName": L[lang].website.opening_hours.title(),
+         "description": L[lang].website.opening_hours.description({
             start: "08:00",
             end: "18:00",
-            open: L_WEBSITE[lang].opening_hours.days_of_week.monday(),
-            close: L_WEBSITE[lang].opening_hours.days_of_week.friday(),
+            open: L[lang].website.opening_hours.days_of_week.monday(),
+            close: L[lang].website.opening_hours.days_of_week.friday(),
          }),
       }
-      openingHoursObj[lang] = openingHours;
+      schemaOrgArray.push(openingHours);
    })
-
-   let alwaysOpenObj: {[key:string]: OpeningHoursSpecification} = {};
+   // Always Open
    definedLocales.forEach((lang: Locales) => {
       const alwaysOpen: OpeningHoursSpecification = {
          "@type": "OpeningHoursSpecification",
@@ -381,114 +352,105 @@
          "validFrom": "2020-01-01",
          "opens": "00:00",
          "closes": "23:59",
-         "name": L_WEBSITE[lang].opening_hours.title(),
-         "alternateName": L_WEBSITE[lang].opening_hours.title(),
-         "description": L_WEBSITE[lang].opening_hours.service_open(),
+         "name": L[lang].website.opening_hours.title(),
+         "alternateName": L[lang].website.opening_hours.title(),
+         "description": L[lang].website.opening_hours.service_open(),
       }
-      alwaysOpenObj[lang] = alwaysOpen;
+      schemaOrgArray.push(alwaysOpen);
    })
-
-
-   let contactPointObj: {[key:string]: ContactPoint} = {};
+   // Contact Point
    definedLocales.forEach((lang: Locales) => {
       const contactPoint: ContactPoint = {
          "@type": "ContactPoint",
          "@id": `${website.domain}/${lang}/#contact-point`,
-         "image": logoObj[lang],
+         "image": { "@id": `${website.domain}/${lang}/#logo` },
          "contactType": "all",
          "email": website.contactEmail,
-         "areaServed": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "availableLanguage": [ languagesObj[lang].nl, languagesObj[lang].fr, languagesObj[lang].en ],
-         "hoursAvailable": openingHoursObj[lang],
-         "name": L_NAV[lang].contact.title(),
-         "description": L_NAV[lang].contact.description(),
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "availableLanguage": [ { "@id": `${website.domain}/${lang}/#language/nl` }, { "@id": `${website.domain}/${lang}/#language/fr` }, { "@id": `${website.domain}/${lang}/#language/en` } ],
+         "hoursAvailable": { "@id": `${website.domain}/${lang}/#opening-hours/normal` },
+         "name": L[lang].nav.contact.title(),
+         "description": L[lang].nav.contact.description(),
       }
-      contactPointObj[lang] = contactPoint;
+      schemaOrgArray.push(contactPoint);
    })
 
    // ADDRESSES
-   let addressBeObj: {[key:string]: PostalAddress} = {};
+   // be
    definedLocales.forEach((lang: Locales) => {
       const addressBe: PostalAddress = {
          "@type": "PostalAddress",
          "@id": `${website.domain}/${lang}/#address/be`,
-         "name": L_WEBSITE[lang].address.be.name(),
-         "description": L_WEBSITE[lang].address.be.description(),
+         "name": L[lang].website.address.be.name(),
+         "description": L[lang].website.address.be.description(),
 
-         "addressLocality": `${L_WEBSITE[lang].address.be.city()}, ${L_WEBSITE[lang].address.be.province()}`,
-         "addressRegion": L_WEBSITE[lang].address.be.country(),
-         "postalCode": L_WEBSITE[lang].address.be.zip(),
-         "streetAddress": `${L_WEBSITE[lang].address.be.street()} ${L_WEBSITE[lang].address.be.number()}, ${L_WEBSITE[lang].address.be.zip()} ${L_WEBSITE[lang].address.be.city()}, ${L_WEBSITE[lang].address.be.country()}`,
+         "addressLocality": `${L[lang].website.address.be.city()}, ${L[lang].website.address.be.province()}`,
+         "addressRegion": L[lang].website.address.be.country(),
+         "postalCode": L[lang].website.address.be.zip(),
+         "streetAddress": `${L[lang].website.address.be.street()} ${L[lang].website.address.be.number()}, ${L[lang].website.address.be.zip()} ${L[lang].website.address.be.city()}, ${L[lang].website.address.be.country()}`,
 
-         "areaServed": [ areaServedObj[lang].be ],
-         "availableLanguage": [ languagesObj[lang].nl, languagesObj[lang].fr, languagesObj[lang].en ],
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/be` } ],
+         "availableLanguage": [ { "@id": `${website.domain}/${lang}/#language/nl` }, { "@id": `${website.domain}/${lang}/#language/fr` }, { "@id": `${website.domain}/${lang}/#language/en` } ],
          "contactType": "all",
          "email": website.contactEmail,
 
-         "image": logoObj[lang],
+         "image": { "@id": `${website.domain}/${lang}/#logo` },
 
-         "hoursAvailable": openingHoursObj[lang],
+         "hoursAvailable": { "@id": `${website.domain}/${lang}/#opening-hours/normal` },
          
-         "url": L_WEBSITE[lang].address.be.url()
+         "url": L[lang].website.address.be.url()
       }
-      addressBeObj[lang] = addressBe;
+      schemaOrgArray.push(addressBe);
    })
-
-   let addressNlObj: {[key:string]: PostalAddress} = {};
+   // nl
    definedLocales.forEach((lang: Locales) => {
       const addressNl: PostalAddress = {
          "@type": "PostalAddress",
          "@id": `${website.domain}/${lang}/#address/nl`,
-         "name": L_WEBSITE[lang].address.nl.name(),
-         "description": L_WEBSITE[lang].address.nl.description(),
+         "name": L[lang].website.address.nl.name(),
+         "description": L[lang].website.address.nl.description(),
 
-         "addressLocality": `${L_WEBSITE[lang].address.nl.city()}, ${L_WEBSITE[lang].address.nl.province()}`,
-         "addressRegion": L_WEBSITE[lang].address.nl.country(),
-         "postalCode": L_WEBSITE[lang].address.nl.zip(),
-         "streetAddress": `${L_WEBSITE[lang].address.nl.street()} ${L_WEBSITE[lang].address.nl.number()}, ${L_WEBSITE[lang].address.nl.zip()} ${L_WEBSITE[lang].address.nl.city()}, ${L_WEBSITE[lang].address.nl.country()}`,
+         "addressLocality": `${L[lang].website.address.nl.city()}, ${L[lang].website.address.nl.province()}`,
+         "addressRegion": L[lang].website.address.nl.country(),
+         "postalCode": L[lang].website.address.nl.zip(),
+         "streetAddress": `${L[lang].website.address.nl.street()} ${L[lang].website.address.nl.number()}, ${L[lang].website.address.nl.zip()} ${L[lang].website.address.nl.city()}, ${L[lang].website.address.nl.country()}`,
 
-         "areaServed": [ areaServedObj[lang].nl ],
-         "availableLanguage": [ languagesObj[lang].nl, languagesObj[lang].fr, languagesObj[lang].en ],
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "availableLanguage": [ { "@id": `${website.domain}/${lang}/#language/nl` }, { "@id": `${website.domain}/${lang}/#language/fr` }, { "@id": `${website.domain}/${lang}/#language/en` } ],
          "contactType": "all",
          "email": website.contactEmail,
 
-         "hoursAvailable": openingHoursObj[lang],
+         "hoursAvailable": { "@id": `${website.domain}/${lang}/#opening-hours/normal` },
          
-         "url": L_WEBSITE[lang].address.nl.url()
+         "url": L[lang].website.address.nl.url()
       }
-      addressNlObj[lang] = addressNl;
+      schemaOrgArray.push(addressNl);
    })
-
-   let addressServicesBeObj: {[key:string]: PostalAddress} = {};
+   // be_martinus
    definedLocales.forEach((lang: Locales) => {
       const addressServicesBe: PostalAddress = {
          "@type": "PostalAddress",
          "@id": `${website.domain}/${lang}/#address/be_martinus`,
-         "name": `${L_WEBSITE[lang].services_locations.be.name()} - ${L_WEBSITE[lang].services_locations.be.city()}`,
+         "name": `${L[lang].website.services_locations.be.name()} - ${L[lang].website.services_locations.be.city()}`,
 
-         "addressLocality": `${L_WEBSITE[lang].services_locations.be.city()}, ${L_WEBSITE[lang].services_locations.be.province()}`,
-         "addressRegion": L_WEBSITE[lang].services_locations.be.country(),
-         "postalCode": L_WEBSITE[lang].services_locations.be.zip(),
-         "streetAddress": `${L_WEBSITE[lang].services_locations.be.street()} ${L_WEBSITE[lang].services_locations.be.number()}, ${L_WEBSITE[lang].services_locations.be.zip()} ${L_WEBSITE[lang].services_locations.be.city()}, ${L_WEBSITE[lang].services_locations.be.country()}`,
+         "addressLocality": `${L[lang].website.services_locations.be.city()}, ${L[lang].website.services_locations.be.province()}`,
+         "addressRegion": L[lang].website.services_locations.be.country(),
+         "postalCode": L[lang].website.services_locations.be.zip(),
+         "streetAddress": `${L[lang].website.services_locations.be.street()} ${L[lang].website.services_locations.be.number()}, ${L[lang].website.services_locations.be.zip()} ${L[lang].website.services_locations.be.city()}, ${L[lang].website.services_locations.be.country()}`,
 
-         "areaServed": [ areaServedObj[lang].be ],
-         "availableLanguage": [ languagesObj[lang].nl, languagesObj[lang].fr, languagesObj[lang].en ],
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/be` } ],
+         "availableLanguage": [ { "@id": `${website.domain}/${lang}/#language/nl` }, { "@id": `${website.domain}/${lang}/#language/fr` }, { "@id": `${website.domain}/${lang}/#language/en` } ],
          "contactType": "all",
          "email": website.contactEmail,
 
-         "hoursAvailable": openingHoursObj[lang],
+         "hoursAvailable": { "@id": `${website.domain}/${lang}/#opening-hours/normal` },
          
-         "url": L_WEBSITE[lang].services_locations.be.url(),
+         "url": L[lang].website.services_locations.be.url(),
       }
-      addressServicesBeObj[lang] = addressServicesBe;
+      schemaOrgArray.push(addressServicesBe);
    })
 
-   // ORGANIZATION
-   const socials: URL[] = [
-      `https://linkedin.com/in/${website.linkedinProfile}`,
-      website.facebookPage,
-   ]
-   let membersObj: {[key:string]: {[key:string]: Person}} = {};
+   // MEMBERS
    definedLocales.forEach((lang: Locales) => {
       const members: {[key:string]: Person} = {
          tom: {
@@ -497,12 +459,12 @@
             "name": "Tom Van Dorst",
             "givenName": "Tom",
             "familyName": "Van Dorst",
-            "jobTitle": L_WEBSITE[lang].members.tom.title(),
-            "knowsLanguage": [ languagesObj[lang].nl, languagesObj[lang].fr, languagesObj[lang].en ],
+            "jobTitle": L[lang].website.members.tom.title(),
+            "knowsLanguage": [ { "@id": `${website.domain}/${lang}/#language/nl` }, { "@id": `${website.domain}/${lang}/#language/fr` }, { "@id": `${website.domain}/${lang}/#language/en` } ],
             "url": website.domain,
             "sameAs": socials,
             "email": 'tomvandorst@trixolutions.be',
-            "affiliation": [ capaProObj[lang] ],
+            "affiliation": [ { "@id": `${website.domain}/${lang}/#capa_pro` } ],
             "image": [
                {
                   "@type": "ImageObject",
@@ -510,7 +472,7 @@
                   "url": `${website.domain}/assets/images/team/tom-color.webp`,
                   "width": "1920",
                   "height": "1280",
-                  "caption": `Tom Van Dorst - ${L_WEBSITE[lang].members.tom.title()} - Trixolutions (Color)`
+                  "caption": `Tom Van Dorst - ${L[lang].website.members.tom.title()} - Trixolutions (Color)`
                },
                {
                   "@type": "ImageObject",
@@ -518,7 +480,7 @@
                   "url": `${website.domain}/assets/images/team/tom-bw.webp`,
                   "width": "1920",
                   "height": "1280",
-                  "caption": `Tom Van Dorst - ${L_WEBSITE[lang].members.tom.title()} - Trixolutions (B/W)`
+                  "caption": `Tom Van Dorst - ${L[lang].website.members.tom.title()} - Trixolutions (B/W)`
                },
             ],
          },
@@ -528,8 +490,8 @@
             "name": "Tamara D'Haese",
             "givenName": "Tamara",
             "familyName": "D'Haese",
-            "jobTitle": L_WEBSITE[lang].members.tamara.title(),
-            "knowsLanguage": [ languagesObj[lang].nl, languagesObj[lang].fr, languagesObj[lang].en ],
+            "jobTitle": L[lang].website.members.tamara.title(),
+            "knowsLanguage": [ { "@id": `${website.domain}/${lang}/#language/nl` }, { "@id": `${website.domain}/${lang}/#language/fr` }, { "@id": `${website.domain}/${lang}/#language/en` } ],
             "url": website.domain,
             "email": 'info@trixolutions.be',
             "image": {
@@ -538,7 +500,7 @@
                "url": `${website.domain}/assets/images/team/tamara-bw.webp`,
                "width": "1920",
                "height": "1920",
-               "caption": `Tamara D'Haese - ${L_WEBSITE[lang].members.tamara.title()} - Trixolutions`
+               "caption": `Tamara D'Haese - ${L[lang].website.members.tamara.title()} - Trixolutions`
             }
          },
          christoph: {
@@ -547,8 +509,8 @@
             "name": "Christoph Meunier",
             "givenName": "Christoph",
             "familyName": "Meunier",
-            "jobTitle": L_WEBSITE[lang].members.christoph.title(),
-            "knowsLanguage": [ languagesObj[lang].nl, languagesObj[lang].fr, languagesObj[lang].en ],
+            "jobTitle": L[lang].website.members.christoph.title(),
+            "knowsLanguage": [ { "@id": `${website.domain}/${lang}/#language/nl` }, { "@id": `${website.domain}/${lang}/#language/fr` }, { "@id": `${website.domain}/${lang}/#language/en` } ],
             "url": website.domain,
             "image": {
                "@type": "ImageObject",
@@ -556,15 +518,16 @@
                "url": `${website.domain}/assets/images/team/christoph-bw.webp`,
                "width": "1920",
                "height": "2000",
-               "caption": `Christoph Meunier - ${L_WEBSITE[lang].members.christoph.title()} - Trixolutions`
+               "caption": `Christoph Meunier - ${L[lang].website.members.christoph.title()} - Trixolutions`
             }
          }
       };
-      membersObj[lang] = members;
+      Object.values(members).forEach((member: Person) => {
+         schemaOrgArray.push(member);
+      })
    })
 
    // RATING
-   let ratingObj: {[key:string]: AggregateRating} = {};
    definedLocales.forEach((lang: Locales) => {
       const rating: AggregateRating = {
          "@type": "AggregateRating",
@@ -573,60 +536,41 @@
          "reviewCount": `${ratings.amount}`,
          "bestRating": "5",
          "worstRating": "0",
-         "ratingExplanation": L_WEBSITE[lang].ratings.text({amount: ratings.amount}),
-         "name": titleCase(L_SESSIONS[lang].ratings()),
+         "ratingExplanation": L[lang].website.ratings.text({amount: ratings.amount}),
+         "name": titleCase(L[lang].sessions.ratings()),
       }
-      ratingObj[lang] = rating;
+      schemaOrgArray.push(rating);
    })
 
    // AUDIENCE
-   let audienceObj: {[key:string]: Audience} = {};
    definedLocales.forEach((lang: Locales) => {
       const audience: Audience = {
          "@type": "Audience",
          "@id": `${website.domain}/${lang}/#audience`,
          "audienceType": "Business",
          "alternateName": "Businesses",
-         "description": L_WEBSITE[lang].audience.description(),
-         "disambiguatingDescription": L_WEBSITE[lang].audience.description(),
+         "description": L[lang].website.audience.description(),
+         "disambiguatingDescription": L[lang].website.audience.description(),
          "identifier": "https://schema.org/BusinessAudience",
          "name": "Businesses",
          "sameAs": "https://wikipedia.org/wiki/Business",
       }
-      audienceObj[lang] = audience;
-   })
-
-
-   // PRICERANGE
-   let priceRangeObj: {[key:string]: any} = {};
-   definedLocales.forEach((lang: Locales) => {
-      const priceRange: any = {
-         "@type": "PriceRange",
-         "@id": `${website.domain}/${lang}/#pricerange`,
-         "name": L_WEBSITE[lang].pricing.price_range(),
-         "description": L_WEBSITE[lang].pricing.price_range(),
-         "priceCurrency": "EUR",
-         "priceRange": "€€€",
-         "valueAddedTaxIncluded": true,
-         "valueAddedTaxName": L_WEBSITE[lang].pricing.vat(),
-         "valueAddedTaxPercentage": 21,
-      }
-      priceRangeObj[lang] = priceRange;
+      schemaOrgArray.push(audience);
    })
 
    // PLACES
-   let placeBeObj: {[key:string]: Place} = {};
+   // BE
    definedLocales.forEach((lang: Locales) => {
       const placeBe: Place = {
          "@type": "Place",
          "@id": `${website.domain}/${lang}/#place/be`,
-         "name": L_WEBSITE[lang].address.be.name(),
-         "alternateName": `${website.title} ${L_WEBSITE[lang].address.be.country()}`,
-         "description": L_WEBSITE[lang].address.be.description(),
-         "disambiguatingDescription": L_WEBSITE[lang].address.be.description(),
-         "slogan": L_WEBSITE[lang].slogan(),
-         "address": addressBeObj[lang],
-         "aggregateRating": ratingObj[lang],
+         "name": L[lang].website.address.be.name(),
+         "alternateName": `${website.title} ${L[lang].website.address.be.country()}`,
+         "description": L[lang].website.address.be.description(),
+         "disambiguatingDescription": L[lang].website.address.be.description(),
+         "slogan": L[lang].website.slogan(),
+         "address": { "@id": `${website.domain}/${lang}/#address/be` },
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
          "hasMap": `${website.domain}/${lang}/contact`,
          "keywords": [
             'Trixolutions',
@@ -635,8 +579,8 @@
             'Lencioni',
             'Teamcoaching België',
          ],
-         "logo": logoObj[lang],
-         "image": logoObj[lang],
+         "logo": { "@id": `${website.domain}/${lang}/#logo` },
+         "image": { "@id": `${website.domain}/${lang}/#logo` },
          "longitude": 4.5084357,
          "latitude": 51.2207385,
          "geo": {
@@ -646,24 +590,23 @@
          },
          "url": website.domain,
          "sameAs": socials,
-         "openingHoursSpecification": openingHoursObj[lang],
+         "openingHoursSpecification": { "@id": `${website.domain}/${lang}/#opening-hours/normal` },
          "publicAccess": false,
       }
-      placeBeObj[lang] = placeBe;
+      schemaOrgArray.push(placeBe);
    })
-
-   let placeNlObj: {[key:string]: Place} = {};
+   // NL
    definedLocales.forEach((lang: Locales) => {
       const placeNl: Place = {
          "@type": "Place",
          "@id": `${website.domain}/${lang}/#place/nl`,
-         "name": L_WEBSITE[lang].address.nl.name(),
-         "alternateName": `${website.title} ${L_WEBSITE[lang].address.nl.country()}`,
-         "description": L_WEBSITE[lang].address.nl.description(),
-         "disambiguatingDescription": L_WEBSITE[lang].address.nl.description(),
-         "slogan": L_WEBSITE[lang].slogan(),
-         "address": addressNlObj[lang],
-         "aggregateRating": ratingObj[lang],
+         "name": L[lang].website.address.nl.name(),
+         "alternateName": `${website.title} ${L[lang].website.address.nl.country()}`,
+         "description": L[lang].website.address.nl.description(),
+         "disambiguatingDescription": L[lang].website.address.nl.description(),
+         "slogan": L[lang].website.slogan(),
+         "address": { "@id": `${website.domain}/${lang}/#address/nl` },
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
          "hasMap": `${website.domain}/${lang}/contact`,
          "keywords": [
             'Trixolutions',
@@ -671,8 +614,8 @@
             'Lencioni',
             'Teamcoaching Nederland',
          ],
-         "logo": logoObj[lang],
-         "image": logoObj[lang],
+         "logo": { "@id": `${website.domain}/${lang}/#logo` },
+         "image": { "@id": `${website.domain}/${lang}/#logo` },
          "longitude": 4.3874651,
          "latitude": 51.9804814,
          "geo": {
@@ -682,22 +625,22 @@
          },
          "url": "https://trixolutions.nl",
          "sameAs": socials,
-         "openingHoursSpecification": openingHoursObj[lang],
+         "openingHoursSpecification": { "@id": `${website.domain}/${lang}/#opening-hours/normal` },
          "publicAccess": false,
       }
-      placeNlObj[lang] = placeNl;
+      schemaOrgArray.push(placeNl);
    })
 
    // SERVICE INFO
-   let placeServiceBeObj: {[key:string]: Place} = {};
+   // Service BE
    definedLocales.forEach((lang: Locales) => {
       const placeServiceBe: Place = {
          "@type": "Place",
          "@id": `${website.domain}/${lang}/#place/service_be`,
-         "name": L_WEBSITE[lang].services_locations.be.name(),
-         "alternateName": `${L_WEBSITE[lang].services_locations.be.name()} ${L_WEBSITE[lang].services_locations.be.country()}`,
-         "address": addressServicesBeObj[lang],
-         "logo": logoObj[lang],
+         "name": L[lang].website.services_locations.be.name(),
+         "alternateName": `${L[lang].website.services_locations.be.name()} ${L[lang].website.services_locations.be.country()}`,
+         "address": { "@id": `${website.domain}/${lang}/#address/be_martinus` },
+         "logo": { "@id": `${website.domain}/${lang}/#logo` },
          "image": "https://www.domeinmartinus.be/sites/default/files/styles/d7/public/2018-02/Mart-buiten-sfeer-2_1.jpg?itok=lJn4pOoB",
          "longitude": 4.6289041,
          "latitude": 51.2385543,
@@ -706,260 +649,257 @@
             "longitude": 4.6289041,
             "latitude": 51.2385543,
          },
-         "url": L_WEBSITE[lang].services_locations.be.url(),
+         "url": L[lang].website.services_locations.be.url(),
       }
-      placeServiceBeObj[lang] = placeServiceBe;
+      schemaOrgArray.push(placeServiceBe);
    })
-   
-   let serviceChannelObj: {[key:string]: {[key:string]: ServiceChannel}} = {};
+   // Service Channels
    definedLocales.forEach((lang: Locales) => {
       const serviceChannel: {[key:string]: ServiceChannel} = {
          web: {
             "@type": "ServiceChannel",
             "@id": `${website.domain}/${lang}/#service_channel/web`,
-            "name": L_WEBSITE[lang].contact.types.website(),
-            "description": L_WEBSITE[lang].contact.types.website_description(),
-            "disambiguatingDescription": L_WEBSITE[lang].contact.types.website_description(),
+            "name": L[lang].website.contact.types.website(),
+            "description": L[lang].website.contact.types.website_description(),
+            "disambiguatingDescription": L[lang].website.contact.types.website_description(),
             "serviceUrl": website.domain,
-            "servicePostalAddress": addressBeObj[lang],
-            "availableLanguage": [ languagesObj[lang].nl, languagesObj[lang].fr, languagesObj[lang].en ],
+            "servicePostalAddress": { "@id": `${website.domain}/${lang}/#address/be` },
+            "availableLanguage": [ { "@id": `${website.domain}/${lang}/#language/nl` }, { "@id": `${website.domain}/${lang}/#language/fr` }, { "@id": `${website.domain}/${lang}/#language/en` } ],
          },
          email: {
             "@type": "ServiceChannel",
             "@id": `${website.domain}/${lang}/#service_channel/email`,
-            "name": L_WEBSITE[lang].contact.types.email(),
-            "description": L_WEBSITE[lang].contact.types.email_description(),
+            "name": L[lang].website.contact.types.email(),
+            "description": L[lang].website.contact.types.email_description(),
             "disambiguatingDescription": website.contactEmail,
             "serviceUrl": website.domain,
-            "servicePostalAddress": addressBeObj[lang],
-            "availableLanguage": [ languagesObj[lang].nl, languagesObj[lang].fr, languagesObj[lang].en ],
+            "servicePostalAddress": { "@id": `${website.domain}/${lang}/#address/be` },
+            "availableLanguage": [ { "@id": `${website.domain}/${lang}/#language/nl` }, { "@id": `${website.domain}/${lang}/#language/fr` }, { "@id": `${website.domain}/${lang}/#language/en` } ],
          },
       }
-      serviceChannelObj[lang] = serviceChannel;
+      schemaOrgArray.push(serviceChannel.web, serviceChannel.email);
    })
 
    // SERVICES
-   let extendOfferObj: {[key:string]: Offer} = {};
+   // Offer Extend
    definedLocales.forEach((lang: Locales) => {
       const extendOffer: Offer = {
          "@type": "Offer",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#offer/extend`,
+         "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/extend`,
 
-         "name": L_WEBSITE[lang].services.extend.title(),
-         "alternateName": L_WEBSITE[lang].services.extend.title_alt(),
-         "description": L_WEBSITE[lang].services.extend.description(),
-         "disambiguatingDescription": L_WEBSITE[lang].services.extend.description_disambiguation(),
+         "name": L[lang].website.services.extend.title(),
+         "alternateName": L[lang].website.services.extend.title_alt(),
+         "description": L[lang].website.services.extend.description(),
+         "disambiguatingDescription": L[lang].website.services.extend.description_disambiguation(),
          
          "price": 490.00,
          "priceCurrency": "EUR",
-         "eligibleRegion": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
+         "eligibleRegion": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}`,
          "itemOffered": {
             "@type": "Service",
-            "name": L_WEBSITE[lang].services.extend.title(),
-            "alternateName": L_WEBSITE[lang].services.extend.title_alt(),
-            "description": L_WEBSITE[lang].services.extend.description(),
-            "disambiguatingDescription": L_WEBSITE[lang].services.extend.description_disambiguation(),
-            "image": logoObj[lang],
-            "logo": logoObj[lang],
-            "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
+            "name": L[lang].website.services.extend.title(),
+            "alternateName": L[lang].website.services.extend.title_alt(),
+            "description": L[lang].website.services.extend.description(),
+            "disambiguatingDescription": L[lang].website.services.extend.description_disambiguation(),
+            "image": { "@id": `${website.domain}/${lang}/#logo` },
+            "logo": { "@id": `${website.domain}/${lang}/#logo` },
+            "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}`,
          },
          "offeredBy": {
             "@type": "Organization",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-            'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+            'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
          },
          "seller": {
             "@type": "Organization",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-            'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+            'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
          },
       }
-      extendOfferObj[lang] = extendOffer;
+      schemaOrgArray.push(extendOffer);
    })
-
-   let offerHybridBaseObj: {[key:string]: Offer} = {};
+   // Offer Hybrid Base
    definedLocales.forEach((lang: Locales) => {
       const offerHybridBase: Offer = {
          "@type": "Offer",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_base`,
+         "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_base`,
 
-         "name": L_WEBSITE[lang].services.hybrid_base.title(),
-         "alternateName": L_WEBSITE[lang].services.hybrid_base.title_alt(),
-         "description": L_WEBSITE[lang].services.hybrid_base.description(),
-         "disambiguatingDescription": L_WEBSITE[lang].services.hybrid_base.description_disambiguation(),
+         "name": L[lang].website.services.hybrid_base.title(),
+         "alternateName": L[lang].website.services.hybrid_base.title_alt(),
+         "description": L[lang].website.services.hybrid_base.description(),
+         "disambiguatingDescription": L[lang].website.services.hybrid_base.description_disambiguation(),
          
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#image/hybrid_base`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#image/hybrid_base`,
             "url": `${website.domain}/images/home/lencioni-ctc.webp`,
-            "caption": L_WEBSITE[lang].services.hybrid_base.description_disambiguation(),
+            "caption": L[lang].website.services.hybrid_base.description_disambiguation(),
             "width": "1920",
             "height": "1280",
          },
          
          "price": 690.00,
          "priceCurrency": "EUR",
-         "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
+         "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}`,
          "itemOffered": {
             "@type": "Service",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_base`,
-            "name": L_WEBSITE[lang].services.hybrid_base.title(),
-            "alternateName": L_WEBSITE[lang].services.hybrid_base.title_alt(),
-            "description": L_WEBSITE[lang].services.hybrid_base.description(),
-            "disambiguatingDescription": L_WEBSITE[lang].services.hybrid_base.description_disambiguation(),
-            "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_base`,
+            "name": L[lang].website.services.hybrid_base.title(),
+            "alternateName": L[lang].website.services.hybrid_base.title_alt(),
+            "description": L[lang].website.services.hybrid_base.description(),
+            "disambiguatingDescription": L[lang].website.services.hybrid_base.description_disambiguation(),
+            "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}`,
          },
 
          "category": [ 'team building', 'team coaching', 'lencioni', 'trixolutions', 'teamcoaching', 'teamwork', 'workshop', 'training', 'business' ],
 
-         "aggregateRating": ratingObj[lang],
-         "areaServed": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "eligibleRegion": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "addOn": extendOfferObj[lang],
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "eligibleRegion": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "addOn": { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/extend` },
 
          "offeredBy": {
             "@type": "Organization",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-            'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+            'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
          },
          "seller": {
             "@type": "Organization",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-            'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+            'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
          },
       }
-      offerHybridBaseObj[lang] = offerHybridBase;
+      schemaOrgArray.push(offerHybridBase);
    })
-
-   let offerHybridFullObj: {[key:string]: Offer} = {};
+   // Offer Hybrid Full
    definedLocales.forEach((lang: Locales) => {
       const offerHybridFull: Offer = {
          "@type": "Offer",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_full`,
+         "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_full`,
 
-         "name": L_WEBSITE[lang].services.hybrid_full.title(),
-         "alternateName": L_WEBSITE[lang].services.hybrid_full.title_alt(),
-         "description": L_WEBSITE[lang].services.hybrid_full.description(),
-         "disambiguatingDescription": L_WEBSITE[lang].services.hybrid_full.description_disambiguation(),
+         "name": L[lang].website.services.hybrid_full.title(),
+         "alternateName": L[lang].website.services.hybrid_full.title_alt(),
+         "description": L[lang].website.services.hybrid_full.description(),
+         "disambiguatingDescription": L[lang].website.services.hybrid_full.description_disambiguation(),
 
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#image/hybrid_full`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#image/hybrid_full`,
             "url": `${website.domain}/images/home/working-genius.webp`,
-            "caption": L_WEBSITE[lang].services.hybrid_full.description_disambiguation(),
+            "caption": L[lang].website.services.hybrid_full.description_disambiguation(),
             "width": "1080",
             "height": "720",
          },
          
          "price": 1590.00,
          "priceCurrency": "EUR",
-         "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
+         "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}`,
          "itemOffered": {
             "@type": "Service",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`,
-            "name": L_WEBSITE[lang].services.hybrid_full.title(),
-            "alternateName": L_WEBSITE[lang].services.hybrid_full.title_alt(),
-            "description": L_WEBSITE[lang].services.hybrid_full.description(),
-            "disambiguatingDescription": L_WEBSITE[lang].services.hybrid_full.description_disambiguation(),
-            "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`,
+            "name": L[lang].website.services.hybrid_full.title(),
+            "alternateName": L[lang].website.services.hybrid_full.title_alt(),
+            "description": L[lang].website.services.hybrid_full.description(),
+            "disambiguatingDescription": L[lang].website.services.hybrid_full.description_disambiguation(),
+            "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}`,
          },
 
          "category": [ 'team building', 'team coaching', 'lencioni', 'trixolutions', 'teamcoaching', 'teamwork', 'workshop', 'training', 'business' ],
 
-         "aggregateRating": ratingObj[lang],
-         "areaServed": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "eligibleRegion": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "addOn": extendOfferObj[lang],
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "eligibleRegion": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "addOn": { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/extend` },
 
          "offeredBy": {
             "@type": "Organization",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-            'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+            'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
          },
          "seller": {
             "@type": "Organization",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-            'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+            'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
          },
       }
-      offerHybridFullObj[lang] = offerHybridFull;
+      schemaOrgArray.push(offerHybridFull);
    })
-
+   // Offer Deepdive
    let offerDeepDiveObj: {[key:string]: Offer} = {};
    definedLocales.forEach((lang: Locales) => {
       const offerDeepDive: Offer = {
          "@type": "Offer",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#offer/deepdive`,
+         "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#offer/deepdive`,
 
-         "name": L_WEBSITE[lang].services.deepdive.title(),
-         "alternateName": L_WEBSITE[lang].services.deepdive.title_alt(),
-         "description": L_WEBSITE[lang].services.deepdive.description(),
-         "disambiguatingDescription": L_WEBSITE[lang].services.deepdive.description_disambiguation(),
+         "name": L[lang].website.services.deepdive.title(),
+         "alternateName": L[lang].website.services.deepdive.title_alt(),
+         "description": L[lang].website.services.deepdive.description(),
+         "disambiguatingDescription": L[lang].website.services.deepdive.description_disambiguation(),
 
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#image/hybrid_full`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#image/hybrid_full`,
             "url": `${website.domain}/images/home/working-genius.webp`,
-            "caption": L_WEBSITE[lang].services.deepdive.description_disambiguation(),
+            "caption": L[lang].website.services.deepdive.description_disambiguation(),
             "width": "1080",
             "height": "720",
          },
          
          "price": 490.00,
          "priceCurrency": "EUR",
-         "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}`,
+         "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}`,
          "itemOffered": {
             "@type": "Service",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#service/deepdive`,
-            "name": L_WEBSITE[lang].services.deepdive.title(),
-            "alternateName": L_WEBSITE[lang].services.deepdive.title_alt(),
-            "description": L_WEBSITE[lang].services.deepdive.description(),
-            "disambiguatingDescription": L_WEBSITE[lang].services.deepdive.description_disambiguation(),
-            "image": logoObj[lang],
-            "logo": logoObj[lang],
-            "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#service/deepdive`,
+            "name": L[lang].website.services.deepdive.title(),
+            "alternateName": L[lang].website.services.deepdive.title_alt(),
+            "description": L[lang].website.services.deepdive.description(),
+            "disambiguatingDescription": L[lang].website.services.deepdive.description_disambiguation(),
+            "image": { "@id": `${website.domain}/${lang}/#logo` },
+            "logo": { "@id": `${website.domain}/${lang}/#logo` },
+            "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}`,
          },
 
          "category": [ 'team building', 'team coaching', 'lencioni', 'trixolutions', 'teamcoaching', 'teamwork', 'workshop', 'training', 'business' ],
 
-         "aggregateRating": ratingObj[lang],
-         "areaServed": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "eligibleRegion": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "addOn": extendOfferObj[lang],
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "eligibleRegion": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "addOn": { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/extend` },
 
          "offeredBy": {
             "@type": "Organization",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-            'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+            'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
          },
          "seller": {
             "@type": "Organization",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-            'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+            'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
          },
       }
-      offerDeepDiveObj[lang] = offerDeepDive;
+      schemaOrgArray.push(offerDeepDive);
    })
 
-   let serviceHybridBaseObj: {[key:string]: Service} = {};
+   // Service Hybrid Base
    definedLocales.forEach((lang: Locales) => {
       const serviceHybridBase: Service = {
          "@type": "Service",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_base`,
+         "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_base`,
 
-         "name": L_WEBSITE[lang].services.hybrid_base.title(),
-         "alternateName": L_WEBSITE[lang].services.hybrid_base.title_alt(),
-         "description": L_WEBSITE[lang].services.hybrid_base.description(),
-         "disambiguatingDescription": L_WEBSITE[lang].services.hybrid_base.description_disambiguation(),
-         "logo": logoObj[lang],
-         "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
+         "name": L[lang].website.services.hybrid_base.title(),
+         "alternateName": L[lang].website.services.hybrid_base.title_alt(),
+         "description": L[lang].website.services.hybrid_base.description(),
+         "disambiguatingDescription": L[lang].website.services.hybrid_base.description_disambiguation(),
+         "logo": { "@id": `${website.domain}/${lang}/#logo` },
+         "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}`,
          
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#image/hybrid_base`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#image/hybrid_base`,
             "url": `${website.domain}/images/home/lencioni-ctc.webp`,
-            "caption": L_WEBSITE[lang].services.hybrid_base.description_disambiguation(),
+            "caption": L[lang].website.services.hybrid_base.description_disambiguation(),
             "width": "1920",
             "height": "1280",
          },
@@ -968,59 +908,58 @@
 
          "provider": {
             "@type": "Organization",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-            'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+            'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
          },
 
-         "aggregateRating": ratingObj[lang],
-         "areaServed": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "audience": audienceObj[lang],
-         "availableChannel": [ serviceChannelObj[lang].web ],
-         "hoursAvailable": alwaysOpenObj[lang],
-         "serviceAudience": audienceObj[lang],
-         "serviceArea": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "audience": { "@id": `${website.domain}/${lang}/#audience` },
+         "availableChannel": [ { "@id": `${website.domain}/${lang}/#service_channel/web` }, ],
+         "hoursAvailable": { "@id": `${website.domain}/${lang}/#opening-hours/always-open` },
+         "serviceAudience": { "@id": `${website.domain}/${lang}/#audience` },
+         "serviceArea": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
          "serviceType": 'Teamcoaching',
-         "termsOfService": `${website.domain}/${lang}/${L_NAV[lang].others.terms_conditions.slug()}`,
+         "termsOfService": `${website.domain}/${lang}/${L[lang].nav.others.terms_conditions.slug()}`,
 
-         "offers": [ offerHybridBaseObj[lang] ],
+         "offers": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_base` } ],
          "brand": [ 
-            capaProObj[lang],
+            { "@id": `${website.domain}/${lang}/#capa_pro` },
             {
                "@type": "Organization",
-               "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-               'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+               "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+               'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
             } 
          ],
 
          "isRelatedTo": [
-            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`},
-            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#service/deepdive`}
+            {"@type": "Service", "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`},
+            {"@type": "Service", "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#service/deepdive`}
          ],
          "isSimilarTo": [
-            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`},
+            {"@type": "Service", "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`},
          ]
       }
-      serviceHybridBaseObj[lang] = serviceHybridBase;
+      schemaOrgArray.push(serviceHybridBase);
    })
-
-   let serviceHybridFullObj: {[key:string]: Service} = {};
+   // Service Hybrid Full
    definedLocales.forEach((lang: Locales) => {
       const serviceHybridFull: Service = {
          "@type": "Service",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`,
+         "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`,
 
-         "name": L_WEBSITE[lang].services.hybrid_full.title(),
-         "alternateName": L_WEBSITE[lang].services.hybrid_full.title_alt(),
-         "description": L_WEBSITE[lang].services.hybrid_full.description(),
-         "disambiguatingDescription": L_WEBSITE[lang].services.hybrid_full.description_disambiguation(),
-         "logo": logoObj[lang],
-         "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
+         "name": L[lang].website.services.hybrid_full.title(),
+         "alternateName": L[lang].website.services.hybrid_full.title_alt(),
+         "description": L[lang].website.services.hybrid_full.description(),
+         "disambiguatingDescription": L[lang].website.services.hybrid_full.description_disambiguation(),
+         "logo": { "@id": `${website.domain}/${lang}/#logo` },
+         "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}`,
 
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#image/hybrid_full`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#image/hybrid_full`,
             "url": `${website.domain}/images/home/working-genius.webp`,
-            "caption": L_WEBSITE[lang].services.hybrid_full.description_disambiguation(),
+            "caption": L[lang].website.services.hybrid_full.description_disambiguation(),
             "width": "1080",
             "height": "720",
          },
@@ -1029,57 +968,56 @@
 
          "provider": {
             "@type": "Organization",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-            'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+            'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
          },
 
-         "aggregateRating": ratingObj[lang],
-         "areaServed": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "audience": audienceObj[lang],
-         "availableChannel": [ serviceChannelObj[lang].web ],
-         "hoursAvailable": alwaysOpenObj[lang],
-         "serviceAudience": audienceObj[lang],
-         "serviceArea": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "audience": { "@id": `${website.domain}/${lang}/#audience` },
+         "availableChannel": [ { "@id": `${website.domain}/${lang}/#service_channel/web` }, ],
+         "hoursAvailable": { "@id": `${website.domain}/${lang}/#opening-hours/always-open` },
+         "serviceAudience": { "@id": `${website.domain}/${lang}/#audience` },
+         "serviceArea": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
          "serviceType": 'Teamcoaching',
-         "termsOfService": `${website.domain}/${lang}/${L_NAV[lang].others.terms_conditions.slug()}`,
+         "termsOfService": `${website.domain}/${lang}/${L[lang].nav.others.terms_conditions.slug()}`,
 
-         "offers": [ offerHybridFullObj[lang] ],
+         "offers": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_base` } ],
          "brand": [ 
-            capaProObj[lang],
+            { "@id": `${website.domain}/${lang}/#capa_pro` },
             {
                "@type": "Organization",
-               "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-               'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+               "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+               'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
             } 
          ],
 
          "isRelatedTo": [
-            serviceHybridBaseObj[lang],
-            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#service/deepdive`}
+            { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_base` },
+            {"@type": "Service", "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#service/deepdive`}
          ],
-         "isSimilarTo": [ serviceHybridBaseObj[lang] ]
+         "isSimilarTo": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_base` } ]
       }
-      serviceHybridFullObj[lang] = serviceHybridFull;
+      schemaOrgArray.push(serviceHybridFull);
    })
-
-   let serviceDeepDiveObj: {[key:string]: Service} = {};
+   // Service DeepDive
    definedLocales.forEach((lang: Locales) => {
       const serviceDeepDive: Service = {
          "@type": "Service",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#service/deepdive`,
+         "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#service/deepdive`,
 
-         "name": L_WEBSITE[lang].services.deepdive.title(),
-         "alternateName": L_WEBSITE[lang].services.deepdive.title_alt(),
-         "description": L_WEBSITE[lang].services.deepdive.description(),
-         "disambiguatingDescription": L_WEBSITE[lang].services.deepdive.description_disambiguation(),
-         "logo": logoObj[lang],
-         "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}`,
+         "name": L[lang].website.services.deepdive.title(),
+         "alternateName": L[lang].website.services.deepdive.title_alt(),
+         "description": L[lang].website.services.deepdive.description(),
+         "disambiguatingDescription": L[lang].website.services.deepdive.description_disambiguation(),
+         "logo": { "@id": `${website.domain}/${lang}/#logo` },
+         "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}`,
 
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#image/hybrid_full`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#image/hybrid_full`,
             "url": `${website.domain}/images/home/working-genius.webp`,
-            "caption": L_WEBSITE[lang].services.deepdive.description_disambiguation(),
+            "caption": L[lang].website.services.deepdive.description_disambiguation(),
             "width": "1080",
             "height": "720",
          },
@@ -1088,47 +1026,47 @@
 
          "provider": {
             "@type": "Organization",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-            'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+            "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+            'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
          },
 
-         "aggregateRating": ratingObj[lang],
-         "areaServed": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "audience": audienceObj[lang],
-         "availableChannel": [ serviceChannelObj[lang].web ],
-         "hoursAvailable": alwaysOpenObj[lang],
-         "serviceAudience": audienceObj[lang],
-         "serviceArea": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "audience": { "@id": `${website.domain}/${lang}/#audience` },
+         "availableChannel": [ { "@id": `${website.domain}/${lang}/#service_channel/web` }, ],
+         "hoursAvailable": { "@id": `${website.domain}/${lang}/#opening-hours/always-open` },
+         "serviceAudience": { "@id": `${website.domain}/${lang}/#audience` },
+         "serviceArea": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
          "serviceType": 'Teamcoaching',
-         "termsOfService": `${website.domain}/${lang}/${L_NAV[lang].others.terms_conditions.slug()}`,
+         "termsOfService": `${website.domain}/${lang}/${L[lang].nav.others.terms_conditions.slug()}`,
 
-         "offers": [ offerDeepDiveObj[lang] ],
+         "offers": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#offer/deepdive` } ],
          "brand": [ 
-            capaProObj[lang],
+            { "@id": `${website.domain}/${lang}/#capa_pro` },
             {
                "@type": "Organization",
-               "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-               'url': `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+               "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+               'url': `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
             } 
          ],
 
          "isRelatedTo": [
-            serviceHybridBaseObj[lang],
-            serviceHybridFullObj[lang]
+            { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_base` },
+            { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full` }
          ],
          "isSimilarTo": []
       }
-      serviceDeepDiveObj[lang] = serviceDeepDive;
+      schemaOrgArray.push(serviceDeepDive);
    })
 
    // OWNERSHIP INFO
-   let ownershipInfoObj: {[key:string]: OwnershipInfo} = {};
    definedLocales.forEach((lang: Locales) => {
       const ownershipInfo: OwnershipInfo = {
          "@type": "OwnershipInfo",
-         "typeOfGood": [ serviceHybridBaseObj[lang], serviceHybridFullObj[lang], serviceDeepDiveObj[lang] ]
+         "@id": `${website.domain}/${lang}/#ownership-info`,
+         "typeOfGood": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_base` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#service/deepdive` } ]
       }
-      ownershipInfoObj[lang] = ownershipInfo;
+      schemaOrgArray.push(ownershipInfo);
    })
 
    // EVENTS
@@ -1139,20 +1077,20 @@
             if (session.language === lang) {
                const eventHybridFull: Event = {
                   "@type": "Event",
-                  "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#events/lencioni_masterclass/${new Date(session.starts_on).toISOString()}`,
-                  "about": [ serviceHybridFullObj[lang] ],
+                  "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#events/lencioni_masterclass/${new Date(session.starts_on).toISOString()}`,
+                  "about": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full` } ],
 
-                  "name": L_WEBSITE[lang].services.hybrid_full.title_alt(),
-                  "alternateName": L_WEBSITE[lang].services.hybrid_full.title(),
-                  "description": L_WEBSITE[lang].services.hybrid_full.description(),
-                  "disambiguatingDescription": L_WEBSITE[lang].services.hybrid_full.description_disambiguation(),
+                  "name": L[lang].website.services.hybrid_full.title_alt(),
+                  "alternateName": L[lang].website.services.hybrid_full.title(),
+                  "description": L[lang].website.services.hybrid_full.description(),
+                  "disambiguatingDescription": L[lang].website.services.hybrid_full.description_disambiguation(),
 
-                  "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
+                  "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}`,
                   "image": {
                      "@type": "ImageObject",
-                     "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#image/hybrid_full`,
+                     "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#image/hybrid_full`,
                      "url": `${website.domain}/images/home/working-genius.webp`,
-                     "caption": L_WEBSITE[lang].services.hybrid_full.description_disambiguation(),
+                     "caption": L[lang].website.services.hybrid_full.description_disambiguation(),
                      "width": "1080",
                      "height": "720",
                   },
@@ -1160,23 +1098,23 @@
                   "startDate": new Date(session.starts_on).toISOString(),
                   "endDate": new Date(session.ends_on).toISOString(),
                   "duration": "P2D",
-                  "performer": lang === 'fr' ? membersObj[lang].christoph : membersObj[lang].tom,
+                  "performer": lang === 'fr' ? { "@id": `${website.domain}/${lang}/#person/christoph-meunier` } : { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` },
 
-                  "audience": audienceObj[lang],
+                  "audience": { "@id": `${website.domain}/${lang}/#audience` },
                   "isAccessibleForFree": false,
                   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                   "eventStatus": "https://schema.org/EventScheduled",
 
                   
-                  "location": placeServiceBeObj[lang],
-                  "offers": [ offerHybridFullObj[lang] ],
-                  "aggregateRating": ratingObj[lang],
-                  "inLanguage": lang,
+                  "location": { "@id": `${website.domain}/${lang}/#place/service_be` },
+                  "offers": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_base` } ],
+                  "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
+                  "inLanguage": lang === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : lang === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
                   
                   "organizer": {
                      "@type": "Organization",
-                     "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-                     "url": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+                     "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+                     "url": `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
                   },
                }
                eventHybridFullObj[`${lang}-${index}`] = eventHybridFull;
@@ -1191,19 +1129,19 @@
          if (session.language === lang) {
             const eventDeepDive: Event = {
                "@type": "Event",
-               "about": [ serviceDeepDiveObj[lang] ],
+               "about": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#service/deepdive` } ],
 
-               "name": L_WEBSITE[lang].services.deepdive.title_alt(),
-               "alternateName": L_WEBSITE[lang].services.deepdive.title(),
-               "description": L_WEBSITE[lang].services.deepdive.description(),
-               "disambiguatingDescription": L_WEBSITE[lang].services.deepdive.description_disambiguation(),
+               "name": L[lang].website.services.deepdive.title_alt(),
+               "alternateName": L[lang].website.services.deepdive.title(),
+               "description": L[lang].website.services.deepdive.description(),
+               "disambiguatingDescription": L[lang].website.services.deepdive.description_disambiguation(),
 
-               "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}`,
+               "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}`,
                "image": {
                   "@type": "ImageObject",
-                  "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#image/hybrid_full`,
+                  "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#image/hybrid_full`,
                   "url": `${website.domain}/images/home/working-genius.webp`,
-                  "caption": L_WEBSITE[lang].services.deepdive.description_disambiguation(),
+                  "caption": L[lang].website.services.deepdive.description_disambiguation(),
                   "width": "1080",
                   "height": "720",
                },
@@ -1211,23 +1149,23 @@
                "startDate": new Date(session.starts_on).toISOString(),
                "endDate": new Date(session.ends_on).toISOString(),
                "duration": "PT6H",
-               "performer": lang === 'fr' ? membersObj[lang].christoph : membersObj[lang].tom,
+               "performer": lang === 'fr' ? { "@id": `${website.domain}/${lang}/#person/christoph-meunier` } : { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` },
 
-               "audience": audienceObj[lang],
+               "audience": { "@id": `${website.domain}/${lang}/#audience` },
                "isAccessibleForFree": false,
                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                "eventStatus": "https://schema.org/EventScheduled",
 
                
-               "location": placeServiceBeObj[lang],
-               "offers": [ offerDeepDiveObj[lang] ],
-               "aggregateRating": ratingObj[lang],
-               "inLanguage": lang,
+               "location": { "@id": `${website.domain}/${lang}/#place/service_be` },
+               "offers": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#offer/deepdive` } ],
+               "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
+               "inLanguage": lang === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : lang === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
                
                "organizer": {
                   "@type": "Organization",
-                  "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-                  "url": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+                  "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+                  "url": `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
                },
             }
             eventDeepDiveObj[`${lang}-${index}`] = eventDeepDive;
@@ -1241,20 +1179,20 @@
          if (session.language === lang) {
             const eventInfoSessions: Event = {
                "@type": "Event",
-               "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.info_sessions.slug()}/#events/${new Date(session.starts_on).toISOString()}`,
-               "about": [ serviceDeepDiveObj[lang] ],
+               "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.info_sessions.slug()}/#events/${new Date(session.starts_on).toISOString()}`,
+               "about": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#service/deepdive` } ],
 
-               "name": L_SESSIONS[lang].info.title_single(),
-               "alternateName": L_SESSIONS[lang].info.title_short(),
-               "description": L_SESSIONS[lang].info.description(),
-               "disambiguatingDescription": L_SESSIONS[lang].info.description_alt(),
+               "name": L[lang].sessions.info.title_single(),
+               "alternateName": L[lang].sessions.info.title_short(),
+               "description": L[lang].sessions.info.description(),
+               "disambiguatingDescription": L[lang].sessions.info.description_alt(),
 
-               "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.info_sessions.slug()}`,
+               "url": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.info_sessions.slug()}`,
                "image": {
                   "@type": "ImageObject",
-                  "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.info_sessions.slug()}/#image/info_sessions`,
+                  "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.info_sessions.slug()}/#image/info_sessions`,
                   "url": `${website.domain}/images/home/lencioni-ctc.webp`,
-                  "caption": L_SESSIONS[lang].info.description_alt(),
+                  "caption": L[lang].sessions.info.description_alt(),
                   "width": "1920",
                   "height": "1280",
                },
@@ -1262,20 +1200,20 @@
                "startDate": new Date(session.starts_on).toISOString(),
                "endDate": new Date(session.ends_on).toISOString(),
                "duration": "PT45M",
-               "performer": lang === 'fr' ? membersObj[lang].christoph : membersObj[lang].tom,
+               "performer": lang === 'fr' ? { "@id": `${website.domain}/${lang}/#person/christoph-meunier` } : { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` },
 
-               "audience": audienceObj[lang],
+               "audience": { "@id": `${website.domain}/${lang}/#audience` },
                "isAccessibleForFree": true,
                "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
                "eventStatus": "https://schema.org/EventScheduled",
 
-               "aggregateRating": ratingObj[lang],
-               "inLanguage": lang,
+               "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
+               "inLanguage": lang === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : lang === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
                
                "organizer": {
                   "@type": "Organization",
-                  "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
-                  "url": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}`,
+                  "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
+                  "url": `${website.domain}/${lang}/${L[lang].nav.about.slug()}`,
                },
             }
             eventInfoSessionsObj[`${lang}-${index}`] = eventInfoSessions;
@@ -1288,7 +1226,9 @@
    Object.values(eventDeepDiveObj).forEach((event: Event) => allEvents.push(event));
    Object.values(eventInfoSessionsObj).forEach((event: Event) => allEvents.push(event));
 
-   
+   // schemaOrgArray = [...schemaOrgArray, ...allEvents];
+
+
    /* === === === === === === == === == === === === === === */
    /* === === === == == UNIVERSAL SCHEMAS == == === === === */
    /* === === === === === === == === == === === === === === */
@@ -1299,24 +1239,24 @@
       const offerCatalog: OfferCatalog = {
          "@type": "OfferCatalog",
          "@id": `${website.domain}/${lang}/#offerCatalog`,
-         "name": L_WEBSITE[lang].services.title(),
-         "description": L_WEBSITE[lang].services.description(),
+         "name": L[lang].website.services.title(),
+         "description": L[lang].website.services.description(),
          "itemListElement": [
             {
                "@type": "OfferCatalog",
-               "name": L_WEBSITE[lang].services.hybrid_full.title(),
-               "description": L_WEBSITE[lang].services.description(),
+               "name": L[lang].website.services.hybrid_full.title(),
+               "description": L[lang].website.services.description(),
                "itemListElement": [
-                  serviceHybridBaseObj[lang],
-                  serviceHybridFullObj[lang],
+                  { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_base` },
+                  { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full` },
                ]
             },
             {
                "@type": "OfferCatalog",
-               "name": L_WEBSITE[lang].services.deepdive.title(),
-               "description": L_WEBSITE[lang].services.deepdive.description(),
+               "name": L[lang].website.services.deepdive.title(),
+               "description": L[lang].website.services.deepdive.description(),
                "itemListElement": [
-                  serviceDeepDiveObj[lang]
+                  { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#service/deepdive` }
                ]
             }
          ]
@@ -1329,35 +1269,35 @@
    definedLocales.forEach((lang: Locales) => {
       const organization: Organization = {
          "@type": "Organization",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].about.slug()}/#organization`,
+         "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization`,
          
-         "name": L_WEBSITE[lang].title(),
-         "alternateName": `${L_WEBSITE[lang].title()} - ${L_WEBSITE[lang].tagLine()}`,
-         "slogan": L_WEBSITE[lang].slogan(),
-         "description": L_WEBSITE[lang].description_short(),
-         "disambiguatingDescription": L_WEBSITE[lang].description(),
+         "name": L[lang].website.title(),
+         "alternateName": `${L[lang].website.title()} - ${L[lang].website.tagLine()}`,
+         "slogan": L[lang].website.slogan(),
+         "description": L[lang].website.description_short(),
+         "disambiguatingDescription": L[lang].website.description(),
          
          "url": `${website.domain}/${lang}`,
-         "logo": logoObj[lang],
-         "image": logoObj[lang],
+         "logo": { "@id": `${website.domain}/${lang}/#logo` },
+         "image": { "@id": `${website.domain}/${lang}/#logo` },
          
-         "address": addressBeObj[lang],
-         "areaServed": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
+         "address": { "@id": `${website.domain}/${lang}/#address/be` },
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
 
          "email": website.contactEmail,
-         "contactPoint": contactPointObj[lang],
+         "contactPoint": { "@id": `${website.domain}/${lang}/#contact-point` },
 
-         "founder": membersObj[lang].tom,
-         "foundingLocation": placeBeObj[lang],
-         "member": [ membersObj[lang].tom, membersObj[lang].christoph, membersObj[lang].tamara ],
+         "founder": { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` },
+         "foundingLocation": { "@id": `${website.domain}/${lang}/#place/be` },
+         "member": [ { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` }, { "@id": `${website.domain}/${lang}/#person/christoph-meunier` }, { "@id": `${website.domain}/${lang}/#person/tamara-dhaese` } ],
 
-         "owns": ownershipInfoObj[lang],
-         "hasOfferCatalog": offerCatalogObj[lang],
+         "owns": { "@id": `${website.domain}/${lang}/#ownership-info` },
+         "hasOfferCatalog": { "@id": `${website.domain}/${lang}/#offerCatalog` },
          "event": allEvents,
 
-         "aggregateRating": ratingObj[lang],
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
          "sameAs": socials,
-         "brand": [ capaProObj[lang] ],
+         "brand": [ { "@id": `${website.domain}/${lang}/#capa_pro` } ],
 
          "knowsLanguage": [ "nl", "fr", "en" ],
          "keywords": [
@@ -1370,9 +1310,8 @@
             'opleidingen in teamcoaching', 
             'model van lencioni'
          ]
-
-
       }
+      organizationObj[lang] = organization;
    })
 
    // LOCAL BUSINESS
@@ -1383,38 +1322,38 @@
          "@id": `${website.domain}/${lang}/#localBusiness`,
          
          "legalName": "Trixolutions BV",
-         "name": L_WEBSITE[lang].title(),
-         "alternateName": `${L_WEBSITE[lang].title()} - ${L_WEBSITE[lang].tagLine()}`,
-         "description": L_WEBSITE[lang].description_short(),
-         "disambiguatingDescription": L_WEBSITE[lang].description(),
-         "slogan": L_WEBSITE[lang].slogan(),
+         "name": L[lang].website.title(),
+         "alternateName": `${L[lang].website.title()} - ${L[lang].website.tagLine()}`,
+         "description": L[lang].website.description_short(),
+         "disambiguatingDescription": L[lang].website.description(),
+         "slogan": L[lang].website.slogan(),
 
          "url": website.domain,
-         "address": addressBeObj[lang],
-         "location": placeBeObj[lang],
+         "address": { "@id": `${website.domain}/${lang}/#address/be` },
+         "location": { "@id": `${website.domain}/${lang}/#place/be` },
          "email": website.contactEmail,
-         "logo": logoObj[lang],
-         "image": logoObj[lang],
+         "logo": { "@id": `${website.domain}/${lang}/#logo` },
+         "image": { "@id": `${website.domain}/${lang}/#logo` },
          
          "openingHours": "Mo,Tu,We,Th,Fr 08:00-18:00",
-         "priceRange": priceRangeObj[lang],
+         "priceRange": "€€€",
          
          "knowsLanguage": [ "nl-BE", "fr-BE", "en-GB" ],
-         "contactPoint": contactPointObj[lang],
-         "areaServed": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "employees": [ membersObj[lang].tom, membersObj[lang].christoph, membersObj[lang].tamara ],
-         "founder": membersObj[lang].tom,
-         "foundingLocation": placeBeObj[lang],
-         "member": [ membersObj[lang].tom, membersObj[lang].christoph, membersObj[lang].tamara ],
+         "contactPoint": { "@id": `${website.domain}/${lang}/#contact-point` },
+         "areaServed": [ { "@id": `${website.domain}/${lang}/#country/be` }, { "@id": `${website.domain}/${lang}/#country/nl` } ],
+         "employees": [ { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` }, { "@id": `${website.domain}/${lang}/#person/christoph-meunier` }, { "@id": `${website.domain}/${lang}/#person/tamara-dhaese` } ],
+         "founder": { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` },
+         "foundingLocation": { "@id": `${website.domain}/${lang}/#place/be` },
+         "member": [ { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` }, { "@id": `${website.domain}/${lang}/#person/christoph-meunier` }, { "@id": `${website.domain}/${lang}/#person/tamara-dhaese` } ],
 
-         "owns": ownershipInfoObj[lang],
-         "hasOfferCatalog": offerCatalogObj[lang],
+         "owns": { "@id": `${website.domain}/${lang}/#ownership-info` },
+         "hasOfferCatalog": { "@id": `${website.domain}/${lang}/#offerCatalog` },
          "event": allEvents,
-         "makesOffer": [ offerHybridBaseObj[lang], offerHybridFullObj[lang], offerDeepDiveObj[lang] ],
+         "makesOffer": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_base` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_full` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#offer/deepdive` } ],
 
-         "aggregateRating": ratingObj[lang],
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
          "sameAs": socials,
-         "brand": [ capaProObj[lang], organizationObj[lang] ],
+         "brand": [ { "@id": `${website.domain}/${lang}/#capa_pro` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` } ],
       }
       localBusinessObj[lang] = localBusiness;
    })
@@ -1427,14 +1366,14 @@
          "@id": `${website.domain}/${lang}/#website`,
          "url": `${website.domain}/${lang}`,
 
-         "name": L_WEBSITE[lang].title(),
-         "alternateName": `${L_WEBSITE[lang].title()} - ${L_WEBSITE[lang].slogan()}`,
-         "description": L_WEBSITE[lang].description_short(),
-         "disambiguatingDescription": L_WEBSITE[lang].description(),
-         "headline": L_WEBSITE[lang].tagLine(),
-         "alternativeHeadline": L_WEBSITE[lang].slogan(),
-         "text": L_WEBSITE[lang].description(),
-         "image": logoObj[lang],
+         "name": L[lang].website.title(),
+         "alternateName": `${L[lang].website.title()} - ${L[lang].website.slogan()}`,
+         "description": L[lang].website.description_short(),
+         "disambiguatingDescription": L[lang].website.description(),
+         "headline": L[lang].website.tagLine(),
+         "alternativeHeadline": L[lang].website.slogan(),
+         "text": L[lang].website.description(),
+         "image": { "@id": `${website.domain}/${lang}/#logo` },
 
          "accessibilityAPI": accessibility.api,
          "accessibilityControl": accessibility.control,
@@ -1443,51 +1382,51 @@
          "accessibilitySummary": accessibility.summary[lang],
          "accessMode": accessibility.mode,
 
-         "accountablePerson": membersObj[lang].tom,
-         "aggregateRating": ratingObj[lang],
-         "audience": audienceObj[lang],
+         "accountablePerson": { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` },
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
+         "audience": { "@id": `${website.domain}/${lang}/#audience` },
 
          "dateCreated": website.created_on,
          "datePublished": website.updated_on,
          "dateModified": website.updated_on,
 
-         "creditText": L_BASE[lang].base.footer.creator(),
-         "author": membersObj[lang].tom,
-         "creator": mist_media,
-         "contributor": [ membersObj[lang].tom, mist_media ],
-         "editor": miro_storm,
-         "maintainer": mist_media,
-         "provider": mist_media,
-         "publisher": mist_media,
-         "translator": mist_media,
-         "producer": mist_media,
+         "creditText": L[lang].base.footer.creator(),
+         "author": { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` },
+         "creator": { "@id": `${website.domain}/${lang}/#mist_media` },
+         "contributor": [ { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` }, { "@id": `${website.domain}/${lang}/#mist_media` } ],
+         "editor": { "@id": `${website.domain}/${lang}/#person/miro_storm` },
+         "maintainer": { "@id": `${website.domain}/${lang}/#mist_media` },
+         "provider": { "@id": `${website.domain}/${lang}/#mist_media` },
+         "publisher": { "@id": `${website.domain}/${lang}/#mist_media` },
+         "translator": { "@id": `${website.domain}/${lang}/#mist_media` },
+         "producer": { "@id": `${website.domain}/${lang}/#mist_media` },
 
-         "sourceOrganization": organizationObj[lang],
+         "sourceOrganization": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` },
          "copyrightYear": new Date().getFullYear(),
-         "copyrightHolder": organizationObj[lang],
-         "copyrightNotice": L_BASE[lang].base.footer.creator(),
-         "countryOfOrigin": areaServedObj[lang].be,
-         "locationCreated": placeBeObj[lang],
+         "copyrightHolder": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` },
+         "copyrightNotice": L[lang].base.footer.creator(),
+         "countryOfOrigin": { "@id": `${website.domain}/${lang}/#country/be` },
+         "locationCreated": { "@id": `${website.domain}/${lang}/#place/be` },
 
-         "spatialCoverage": placeBeObj[lang],
+         "spatialCoverage": { "@id": `${website.domain}/${lang}/#place/be` },
          "isAccessibleForFree": true,
          "isFamilyFriendly": true,
          "isPartOf": [ website.domain ],
          "interactivityType": "mixed",
          "typicalAgeRange": "18-65",
-         "inLanguage": lang,
+         "inLanguage": lang === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : lang === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
 
          "genre": [ "business", "teamcoaching", "lencioni", "piramide lencioni", "website", "workshops" ],
          "keywords": [ "business", "teamcoaching", "lencioni", "piramide lencioni", "website", "workshops" ],
 
-         "mentions": [ capaProObj[lang], organizationObj[lang], patrick_lencioni ],
+         "mentions": [ { "@id": `${website.domain}/${lang}/#capa_pro` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` }, { "@id": `${website.domain}/${lang}/#person/patrick_lencioni` } ],
 
-         "sdPublisher": mist_media,
+         "sdPublisher": { "@id": `${website.domain}/${lang}/#mist_media` },
          "sdLicense": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
          "sdDatePublished": website.updated_on,
 
-         "mainEntity": [ localBusinessObj[lang], organizationObj[lang] ],
-         "offers": [ offerHybridBaseObj[lang], offerHybridFullObj[lang], offerDeepDiveObj[lang] ],
+         "mainEntity": [ { "@id": `${website.domain}/${lang}/#localBusiness` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` } ],
+         "offers": [ { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_base` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_full` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.open_sessions.items.deepdive.slug()}/#offer/deepdive` } ],
          "sameAs": socials,
       }
       websiteObj[lang] = websiteSchema;
@@ -1516,8 +1455,8 @@
          "item": {
             "@type": "WebPage",
             "@id": `${website.domain}/${lang}/#webpage`,
-            "name": L_NAV[lang].home.title(),
-            "description": L_NAV[lang].home.description(),
+            "name": L[lang].nav.home.title(),
+            "description": L[lang].nav.home.description(),
             "url": `${website.domain}/${lang}`
          },
       }
@@ -1563,11 +1502,11 @@
          "description": entityMeta.description[lang],
          "disambiguatingDescription": `${website.title}: ${entityMeta.description[lang]}`,
    
-         "breadcrumb": breadcrumbsObj[lang],
-         "primaryImageOfPage": mainImageObj[lang],	
-         "isPartOf": websiteObj[lang],
-         "author": entityMeta.author === 'tom' ? membersObj[lang].tom : entityMeta.author === 'lencioni' ? patrick_lencioni : organizationObj[lang],
-         "inLanguage": lang === 'en' ? languagesObj[lang].en : lang === 'fr' ? languagesObj[lang].fr : languagesObj[lang].nl,
+         "breadcrumb": { '@id': `${website.domain}/${entityMeta.slug[lang]}/#breadcrumbs` },
+         "primaryImageOfPage": { '@id': `${website.domain}/${entityMeta.slug[lang]}/#primaryimage` },	
+         "isPartOf": { "@id": `${website.domain}/${lang}/#website` },
+         "author": entityMeta.author === 'tom' ? { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` } : entityMeta.author === 'lencioni' ? { "@id": `${website.domain}/${lang}/#person/patrick_lencioni` } : { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` },
+         "inLanguage": lang === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : lang === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
          
          "relatedLink": entityMeta.related?.map((link) => { return `${website.domain}/${lang}/${link.slug[lang]}` }),
          "significantLink": entityMeta.significant?.map((link) => { return `${website.domain}/${lang}/${link.slug[lang]}` }),
@@ -1579,25 +1518,25 @@
          "accessibilitySummary": accessibility.summary[lang],
          "accessMode": accessibility.mode,
          
-         "accountablePerson": membersObj[lang].tom,
-         "aggregateRating": ratingObj[lang],
-         "audience": audienceObj[lang],
+         "accountablePerson": { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` },
+         "aggregateRating": { "@id": `${website.domain}/${lang}/#rating` },
+         "audience": { "@id": `${website.domain}/${lang}/#audience` },
          
          "dateCreated": entityMeta.created_on,
          "datePublished": entityMeta.updated_on,
          "dateModified": entityMeta.updated_on,
          "lastReviewed": entityMeta.updated_on,
-         "reviewedBy": [ mist_media, organizationObj[lang] ],
-         "creditText": L_BASE[lang].base.footer.creator(),
-         "creator": mist_media,
-         "editor": miro_storm,
-         "contributor": [ mist_media, organizationObj[lang] ],
-         "maintainer": mist_media,
-         "provider": mist_media,
-         "publisher": mist_media,
-         "translator": mist_media,
-         "producer": mist_media,
-         "countryOfOrigin": areaServedObj[lang].be,
+         "reviewedBy": [ { "@id": `${website.domain}/${lang}/#mist_media` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` } ],
+         "creditText": L[lang].base.footer.creator(),
+         "creator": { "@id": `${website.domain}/${lang}/#mist_media` },
+         "editor": { "@id": `${website.domain}/${lang}/#person/miro_storm` },
+         "contributor": [ { "@id": `${website.domain}/${lang}/#mist_media` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` } ],
+         "maintainer": { "@id": `${website.domain}/${lang}/#mist_media` },
+         "provider": { "@id": `${website.domain}/${lang}/#mist_media` },
+         "publisher": { "@id": `${website.domain}/${lang}/#mist_media` },
+         "translator": { "@id": `${website.domain}/${lang}/#mist_media` },
+         "producer": { "@id": `${website.domain}/${lang}/#mist_media` },
+         "countryOfOrigin": { "@id": `${website.domain}/${lang}/#country/be` },
    
          "sameAs": socials,
    
@@ -1610,32 +1549,32 @@
             {
                "@type": "ReadAction",
                "target": [`${website.domain}/${entityMeta.slug[lang]}`],
-               "provider": organizationObj[lang]
+               "provider": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` }
             },
             {
                "@type": "ViewAction",
                "target": [`${website.domain}/${entityMeta.slug[lang]}`],
-               "provider": organizationObj[lang]
+               "provider": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` }
             },
             {
                "@type": "WatchAction",
                "target": [`${website.domain}/${entityMeta.slug[lang]}`],
-               "provider": organizationObj[lang]
+               "provider": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` }
             },
             {
                "@type": "ShareAction",
                "target": [`${website.domain}/${entityMeta.slug[lang]}`],
-               "provider": organizationObj[lang]
+               "provider": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` }
             },
             {
                "@type": "BookmarkAction",
                "target": [`${website.domain}/${entityMeta.slug[lang]}`],
-               "provider": organizationObj[lang]
+               "provider": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` }
             },
             {
                "@type": "SubscribeAction",
                "target": [`${website.domain}/${entityMeta.slug[lang]}`],
-               "provider": organizationObj[lang]
+               "provider": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` }
             },
          ]
       };
@@ -1689,21 +1628,21 @@
                "requiresSubscription": false,
                "isFamilyFriendly": true,
                "isAccessibleForFree": true,
-               "isPartOf": webPageObj[lang],
-               "mainEntityOfPage": webPageObj[lang],
-               "author": entityMeta.author === 'tom' ? membersObj[lang].tom : entityMeta.author === 'lencioni' ? patrick_lencioni : organizationObj[lang],
+               "isPartOf": { "@id": `${website.domain}/${entityMeta.slug[lang]}/#webpage` },
+               "mainEntityOfPage": { "@id": `${website.domain}/${entityMeta.slug[lang]}/#webpage` },
+               "author": entityMeta.author === 'tom' ? { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` } : entityMeta.author === 'lencioni' ? { "@id": `${website.domain}/${lang}/#person/patrick_lencioni` } : { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` },
       
-               "contributor": [ mist_media, organizationObj[lang] ],
-               "copyrightHolder": organizationObj[lang],
-               "creditText": L_BASE[lang].base.footer.creator(),
-               "editor": miro_storm,
-               "maintainer": mist_media,
-               "translator": mist_media,
-               "productionCompany": organizationObj[lang],
+               "contributor": [ { "@id": `${website.domain}/${lang}/#mist_media` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` } ],
+               "copyrightHolder": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` },
+               "creditText": L[lang].base.footer.creator(),
+               "editor": { "@id": `${website.domain}/${lang}/#person/miro_storm` },
+               "maintainer": { "@id": `${website.domain}/${lang}/#mist_media` },
+               "translator": { "@id": `${website.domain}/${lang}/#mist_media` },
+               "productionCompany": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` },
       
-               "inLanguage": videoMeta.language === 'en' ? languagesObj[lang].en : videoMeta.language === 'fr' ? languagesObj[lang].fr : languagesObj[lang].nl,
+               "inLanguage": videoMeta.language === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : videoMeta.language === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
       
-               "countryOfOrigin": areaServedObj[lang].be,
+               "countryOfOrigin": { "@id": `${website.domain}/${lang}/#country/be` },
       
                "interactionStatistic": [
                   {
@@ -1720,7 +1659,7 @@
                      "description": item.description[lang],
                      "startOffset": item.start,
                      "endOffset": item.end,
-                     "isPartOf": videoSchema,
+                     "isPartOf": { '@id': `${website.domain}/${lang}//${entityMeta.slug[lang]}/#videos/${key+1}` },
                   }
                   return clip;
                }),
@@ -1748,14 +1687,14 @@
                "disambiguatingDescription": `${articleMeta.name[lang]}: ${articleMeta.description[lang]}`,
                "headline": `${articleMeta.name[lang]}`,
 
-               "contributor": [ mist_media, organizationObj[lang] ],
-               "creditText": L_BASE[lang].base.footer.creator(),
-               "editor": miro_storm,
-               "maintainer": mist_media,
-               "copyrightHolder": organizationObj[lang],
+               "contributor": [ { "@id": `${website.domain}/${lang}/#mist_media` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` } ],
+               "creditText": L[lang].base.footer.creator(),
+               "editor": { "@id": `${website.domain}/${lang}/#person/miro_storm` },
+               "maintainer": { "@id": `${website.domain}/${lang}/#mist_media` },
+               "copyrightHolder": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` },
                "copyrightYear": `${new Date().getFullYear()}`,
          
-               "inLanguage": lang === 'en' ? languagesObj[lang].en : lang === 'fr' ? languagesObj[lang].fr : languagesObj[lang].nl,
+               "inLanguage": lang === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : lang === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
                "articleBody": articleMeta.body[lang],
                "text": articleMeta.body[lang],
                "articleSection": articleMeta.tags ? articleMeta.tags[lang] : [], //blog, news, article, etc
@@ -1769,16 +1708,16 @@
                "accessibilitySummary": accessibility.summary[lang],
                "accessMode": accessibility.mode,
          
-               "accountablePerson": membersObj[lang].tom,
+               "accountablePerson": { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` },
          
                "isPartOf": { "@id": `${website.domain}/${lang}//${entityMeta.slug[lang]}/#webpage`},
                "mainEntityOfPage": { "@id": `${website.domain}/${lang}//${entityMeta.slug[lang]}/#webpage`},
          
-               "author": articleMeta.author === 'tom' ? membersObj[lang].tom : articleMeta.author === 'lencioni' ? patrick_lencioni : organizationObj[lang],
+               "author": articleMeta.author === 'tom' ? { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` } : articleMeta.author === 'lencioni' ? { "@id": `${website.domain}/${lang}/#person/patrick_lencioni` } : { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` },
                "datePublished": new Date(articleMeta.datePublished).toISOString(),
                "dateModified": new Date(articleMeta.dateModified).toISOString(),
-               "publisher": organizationObj[lang],
-               "image": mainImageObj[lang],
+               "publisher": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` },
+               "image": { '@id': `${website.domain}/${entityMeta.slug[lang]}/#primaryimage` },
             }
             articleObj.push(articleSchema);
          })
@@ -1806,12 +1745,12 @@
                "disambiguatingDescription": `${blogPostMeta.excerpt[lang]}`,
                "headline": `${blogPostMeta.name[lang]}`,
          
-               "contributor": [ mist_media, organizationObj[lang] ],
-               "creditText": L_BASE[lang].base.footer.creator(),
-               "editor": miro_storm,
-               "maintainer": mist_media,
+               "contributor": [ { "@id": `${website.domain}/${lang}/#mist_media` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` } ],
+               "creditText": L[lang].base.footer.creator(),
+               "editor": { "@id": `${website.domain}/${lang}/#person/miro_storm` },
+               "maintainer": { "@id": `${website.domain}/${lang}/#mist_media` },
          
-               "inLanguage": lang === 'en' ? languagesObj[lang].en : lang === 'fr' ? languagesObj[lang].fr : languagesObj[lang].nl,
+               "inLanguage": lang === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : lang === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
                "articleBody": blogPostMeta.body[lang],
                "text": blogPostMeta.body[lang],
                "articleSection": blogPostMeta.tags ? blogPostMeta.tags[lang] : [], //blog, news, article, etc
@@ -1825,23 +1764,23 @@
                "accessibilitySummary": accessibility.summary[lang],
                "accessMode": accessibility.mode,
          
-               "accountablePerson": membersObj[lang].tom,
+               "accountablePerson": { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` },
          
-               "isPartOf": webPageObj[lang],
-               "mainEntityOfPage": webPageObj[lang],
+               "isPartOf": [{ "@id": `${website.domain}/${entityMeta.slug[lang]}/#webpage` }, { '@id': `${website.domain}/${lang}/${L[lang].nav.blog.slug()}/#blog` }],
+               "mainEntityOfPage": { "@id": `${website.domain}/${entityMeta.slug[lang]}/#webpage` },
          
-               "author": blogPostMeta.author === 'tom' ? membersObj[lang].tom : blogPostMeta.author === 'lencioni' ? patrick_lencioni : organizationObj[lang],
+               "author": blogPostMeta.author === 'tom' ? { "@id": `${website.domain}/${lang}/#person/tom-van-dorst` } : blogPostMeta.author === 'lencioni' ? { "@id": `${website.domain}/${lang}/#person/patrick_lencioni` } : { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` },
                "datePublished": new Date(blogPostMeta.datePublished).toISOString(),
                "dateModified": new Date(blogPostMeta.dateModified).toISOString(),
-               "publisher": organizationObj[lang],
-               "image": mainImageObj[lang],
+               "publisher": { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` },
+               "image": { '@id': `${website.domain}/${entityMeta.slug[lang]}/#primaryimage` },
             }
             blogPostPerLocale.push(blogPostSchema);
          })
          blogPostObj[lang] = blogPostPerLocale;
       })
-
-      const blogPostArr = Object.values(blogPostObj).map((blogPost: BlogPosting[]) => blogPost);
+      let blogPostArr: BlogPosting[] = [];
+      Object.values(blogPostObj).forEach((blogPost: BlogPosting[]) => blogPostArr = [ ...blogPostArr, ...blogPost ]);
       schemaOrgArray = [ ...schemaOrgArray, ...blogPostArr ]
    }
 
@@ -1851,7 +1790,7 @@
       definedLocales.forEach((lang: Locales) => {
          const blogSchema: Blog = {
             '@type': 'Blog',
-            '@id': `${website.domain}/${lang}//${entityMeta.slug[lang]}/#blog`,
+            '@id': `${website.domain}/${lang}/${entityMeta.slug[lang]}/#blog`,
          
             "name": `${entityMeta.name[lang]}`,
             "alternateName": `${website.title} - ${entityMeta.name[lang]}`,
@@ -1859,12 +1798,12 @@
             "disambiguatingDescription": `${entityMeta.description[lang]}`,
             "headline": `${entityMeta.name[lang]}`,
          
-            "contributor": [ mist_media, organizationObj[lang] ],
-            "creditText": L_BASE[lang].base.footer.creator(),
-            "editor": miro_storm,
-            "maintainer": mist_media,
+            "contributor": [ { "@id": `${website.domain}/${lang}/#mist_media` }, { "@id": `${website.domain}/${lang}/${L[lang].nav.about.slug()}/#organization` } ],
+            "creditText": L[lang].base.footer.creator(),
+            "editor": { "@id": `${website.domain}/${lang}/#person/miro_storm` },
+            "maintainer": { "@id": `${website.domain}/${lang}/#mist_media` },
          
-            "inLanguage": lang === 'en' ? languagesObj[lang].en : lang === 'fr' ? languagesObj[lang].fr : languagesObj[lang].nl,
+            "inLanguage": lang === 'en' ? { "@id": `${website.domain}/${lang}/#language/en` } : lang === 'fr' ? { "@id": `${website.domain}/${lang}/#language/fr` } : { "@id": `${website.domain}/${lang}/#language/nl` },
          
             "blogPost": blogPostObj[lang],
          }
@@ -1874,7 +1813,7 @@
       schemaOrgArray = [ ...schemaOrgArray, ...blogObj ]
    }
    
-   // console.log(schemaOrgArray);
+   console.log(schemaOrgArray);
    let jsonLdString = JSON.stringify(schemaOrgArray);
 
    let jsonLdScript = `<script type="application/ld+json">${jsonLdString}${'<'}/script>`;
