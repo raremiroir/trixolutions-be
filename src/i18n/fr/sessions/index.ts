@@ -34,6 +34,8 @@ const fr_sessions: NamespaceSessionsTranslation = {
       subscribe: "s'inscrire en session d'info",
       trainer: "entraîneur",
       time: "plage de temps",
+      description: "Une session d'information gratuite et ouverte sur notre formation polyvalente de coaching d'équipe Lencioni.",
+      description_alt: "Une session d'information gratuite et ouverte sur notre formation polyvalente de coaching d'équipe Lencioni. N'hésitez pas et inscrivez-vous !",
       excerpt: "Une session d'information gratuite et ouverte sur notre formation polyvalente de coaching d'équipe Lencioni.<br/>N'hésitez pas et inscrivez-vous !",
       intro: {
          title: "Coaching d'équipe avec Lencioni",
