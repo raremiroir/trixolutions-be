@@ -225,17 +225,17 @@
    definedLocales.forEach((lang: Locales) => {
       const mainImage: ImageObject = { 
          '@type': 'ImageObject', 
-         '@id': `${website.domain}${entityMeta.slug[lang]}#primaryimage`,
+         '@id': `${website.domain}/${entityMeta.slug[lang]}#primaryimage`,
          "inLanguage": lang,
          "url": entityMeta.image?.url ? entityMeta.image.url : `${website.domain}/logo-1920x1280.webp`,
-         "contentUrl": `${website.domain}${entityMeta.slug[lang]}`,
+         "contentUrl": `${website.domain}/${entityMeta.slug[lang]}`,
          "width": `${entityMeta.image?.width}`,
          "height": `${entityMeta.image?.height}`,
          "caption": entityMeta.image?.alt ? entityMeta.image.alt[lang] : 'Logo Trixolutions',
          "about": {
             "@type": "WebPage",
-            "@id": `${website.domain}${entityMeta.slug[lang]}#webpage`,
-            "url": `${website.domain}${entityMeta.slug[lang]}`,
+            "@id": `${website.domain}/${entityMeta.slug[lang]}#webpage`,
+            "url": `${website.domain}/${entityMeta.slug[lang]}`,
          },	
       };
       mainImageObj[lang] = mainImage;
@@ -255,8 +255,8 @@
          "caption": "Logo Trixolutions",
          "about": {
             "@type": "WebPage",
-            "@id": `${website.domain}${entityMeta.slug[lang]}#webpage`,
-            "url": `${website.domain}${entityMeta.slug[lang]}`,
+            "@id": `${website.domain}/${entityMeta.slug[lang]}#webpage`,
+            "url": `${website.domain}/${entityMeta.slug[lang]}`,
          },
       };
       logoObj[lang] = logo;
@@ -267,17 +267,17 @@
          imagesMeta.forEach((image: ImageMetadata) => {
             const imageObject: ImageObject = { 
                '@type': 'ImageObject', 
-               '@id': `${website.domain}${entityMeta.slug[lang]}/#image`,
+               '@id': `${website.domain}/${entityMeta.slug[lang]}/#image`,
                "inLanguage": lang,
                "url": image.url,
-               "contentUrl": `${website.domain}${entityMeta.slug[lang]}`,
+               "contentUrl": `${website.domain}/${entityMeta.slug[lang]}`,
                "width": `${image.width}`,
                "height": `${image.height}`,
                "caption": image.alt ? image.alt[lang] : 'Trixolutions',
                "about": {
                   "@type": "WebPage",
-                  "@id": `${website.domain}${entityMeta.slug[lang]}#webpage`,
-                  "url": `${website.domain}${entityMeta.slug[lang]}`,
+                  "@id": `${website.domain}/${entityMeta.slug[lang]}#webpage`,
+                  "url": `${website.domain}/${entityMeta.slug[lang]}`,
                },	
             };
             schemaOrgArray.push(imageObject);
@@ -1541,7 +1541,7 @@
       }
       let breadcrumbsSchema: BreadcrumbList = {
          '@type': 'BreadcrumbList',
-         '@id': `${website.domain}${entityMeta.slug[lang]}#breadcrumbs`,
+         '@id': `${website.domain}/${entityMeta.slug[lang]}#breadcrumbs`,
          "itemListElement": breadCrumbsPerLocale,
       }
 
@@ -1555,8 +1555,8 @@
       // Define WebPage schema for each defined locale
       const webPageSchema: WebPage = {
          "@type": "WebPage",
-         "@id": `${website.domain}${entityMeta.slug[lang]}#webpage`,
-         "url": `${website.domain}${entityMeta.slug[lang]}`,
+         "@id": `${website.domain}/${entityMeta.slug[lang]}#webpage`,
+         "url": `${website.domain}/${entityMeta.slug[lang]}`,
    
          "name": `${website.title} - ${entityMeta.name[lang]}`,
          "alternateName": `${entityMeta.name[lang]}`,
@@ -1609,32 +1609,32 @@
             // },
             {
                "@type": "ReadAction",
-               "target": [`${website.domain}${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}/${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
             {
                "@type": "ViewAction",
-               "target": [`${website.domain}${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}/${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
             {
                "@type": "WatchAction",
-               "target": [`${website.domain}${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}/${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
             {
                "@type": "ShareAction",
-               "target": [`${website.domain}${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}/${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
             {
                "@type": "BookmarkAction",
-               "target": [`${website.domain}${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}/${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
             {
                "@type": "SubscribeAction",
-               "target": [`${website.domain}${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}/${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
          ]
@@ -1660,8 +1660,8 @@
          videosMeta.forEach((videoMeta: VideoMetadata, key: number) => {
             const videoSchema: VideoObject = {
                '@type': 'VideoObject',
-               '@id': `${website.domain}/${lang}/${entityMeta.slug[lang]}/#videos/${key+1}`,
-               'url': `${website.domain}/${lang}/${entityMeta.slug[lang]}`,
+               '@id': `${website.domain}/${lang}//${entityMeta.slug[lang]}/#videos/${key+1}`,
+               'url': `${website.domain}/${lang}//${entityMeta.slug[lang]}`,
                
                'name': `${videoMeta.name[lang]}`,
                'alternateName': `${website.title} - ${videoMeta.name[lang]}`,
@@ -1739,8 +1739,8 @@
          articlesMeta.forEach((articleMeta: ArticleMetadata, key: number) => {
             const articleSchema: Article = {
                '@type': 'Article',
-               '@id': `${website.domain}/${lang}/${entityMeta.slug[lang]}/#articles/${key+1}`,
-               'url': `${website.domain}/${lang}/${entityMeta.slug[lang]}`,
+               '@id': `${website.domain}/${lang}//${entityMeta.slug[lang]}/#articles/${key+1}`,
+               'url': `${website.domain}/${lang}//${entityMeta.slug[lang]}`,
          
                "name": `${articleMeta.name[lang]}`,
                "alternateName": `${website.title} - ${articleMeta.name[lang]}`,
@@ -1771,8 +1771,8 @@
          
                "accountablePerson": membersObj[lang].tom,
          
-               "isPartOf": { "@id": `${website.domain}/${lang}/${entityMeta.slug[lang]}/#webpage`},
-               "mainEntityOfPage": { "@id": `${website.domain}/${lang}/${entityMeta.slug[lang]}/#webpage`},
+               "isPartOf": { "@id": `${website.domain}/${lang}//${entityMeta.slug[lang]}/#webpage`},
+               "mainEntityOfPage": { "@id": `${website.domain}/${lang}//${entityMeta.slug[lang]}/#webpage`},
          
                "author": articleMeta.author === 'tom' ? membersObj[lang].tom : articleMeta.author === 'lencioni' ? patrick_lencioni : organizationObj[lang],
                "datePublished": new Date(articleMeta.datePublished).toISOString(),
@@ -1797,8 +1797,8 @@
          blogPostsMeta.forEach((blogPostMeta: BlogPostMetadata, key: number) => {
             const blogPostSchema: BlogPosting = {
                '@type': 'BlogPosting',
-               '@id': `${website.domain}/${lang}/${entityMeta.slug[lang]}/#blogpost/${key+1}`,
-               'url': `${website.domain}/${lang}/${entityMeta.slug[lang]}`,
+               '@id': `${website.domain}/${lang}//${entityMeta.slug[lang]}/#blogpost/${key+1}`,
+               'url': `${website.domain}/${lang}//${entityMeta.slug[lang]}`,
          
                "name": `${blogPostMeta.name[lang]}`,
                "alternateName": `${website.title} - ${blogPostMeta.name[lang]}`,
@@ -1851,7 +1851,7 @@
       definedLocales.forEach((lang: Locales) => {
          const blogSchema: Blog = {
             '@type': 'Blog',
-            '@id': `${website.domain}/${lang}/${entityMeta.slug[lang]}/#blog`,
+            '@id': `${website.domain}/${lang}//${entityMeta.slug[lang]}/#blog`,
          
             "name": `${entityMeta.name[lang]}`,
             "alternateName": `${website.title} - ${entityMeta.name[lang]}`,

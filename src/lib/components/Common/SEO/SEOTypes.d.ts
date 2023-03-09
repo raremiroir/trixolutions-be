@@ -30,6 +30,7 @@ export type PersonObject = {
 export type OGProps = {
    title: string;
    description: string;
+   slug: string;
    type?: OGType;
    tags?: string[];
    videos?: MediaObject[];
@@ -39,8 +40,8 @@ export type OGProps = {
 
 
 // SCHEMA ORG
-export type LocalizedString = { nl: string; fr?: string; en?: string; };
-export type LocalizedStringArr = { nl: string[]; fr?: string[]; en?: string[]; };
+export type LocaleString = { nl: string; fr?: string; en?: string; };
+export type LocaleStringArr = { nl: string[]; fr?: string[]; en?: string[]; };
 
 export type RatingsObj = {
    amount: number;
@@ -49,29 +50,29 @@ export type RatingsObj = {
 
 export type ImageMetadata = {
    url?: string;
-   alt?: LocalizedString;
+   alt?: LocaleString;
    width?: number;
    height?: number;
 }
 
 export type EntityMetadata = {
-   name: LocalizedString;
-   description: LocalizedString;
-   slug: LocalizedString;
+   name: LocaleString;
+   description: LocaleString;
+   slug: LocaleString;
    author?: string;
    created_on?: string;
    updated_on?: string;
    image?: ImageMetadata;
-   related?: { name: LocalizedString; slug: LocalizedString; }[];
-   significant?: { name: LocalizedString; slug: LocalizedString; }[];
-   breadcrumb: { name: LocalizedString; slug: LocalizedString; description: LocalizedString; }[];
+   related?: { name: LocaleString; slug: LocaleString; }[];
+   significant?: { name: LocaleString; slug: LocaleString; }[];
+   breadcrumb: { name: LocaleString; slug: LocaleString; description: LocaleString; }[];
 }
 
 export type ArticleMetadata = {
-   name: LocalizedString;
-   description: LocalizedString;
-   excerpt: LocalizedString;
-   body: LocalizedString;
+   name: LocaleString;
+   description: LocaleString;
+   excerpt: LocaleString;
+   body: LocaleString;
 
    words: number;
    author: string;
@@ -82,12 +83,12 @@ export type ArticleMetadata = {
    datePublished: string;
    dateModified: string;
    
-   tags?: LocalizedStringArr;
+   tags?: LocaleStringArr;
 }
 
 export type VideoMetadata = {
-   name: LocalizedString;
-   description: LocalizedString;
+   name: LocaleString;
+   description: LocaleString;
    url: string;
    duration: string;
    thumbnail: ImageMetadata;
@@ -96,20 +97,20 @@ export type VideoMetadata = {
    size: string;
    language: Locales;
    views: number;
-   key_moments: { start: number; end: number; name: LocalizedString; description: LocalizedString; }[];
+   key_moments: { start: number; end: number; name: LocaleString; description: LocaleString; }[];
 }
 
 export type BlogPostMetadata = {
-   name: LocalizedString;
-   description: LocalizedString;
-   slug: LocalizedString;
-   excerpt: LocalizedString;
-   body: LocalizedString;
+   name: LocaleString;
+   description: LocaleString;
+   slug: LocaleString;
+   excerpt: LocaleString;
+   body: LocaleString;
    words: number;
    author: 'tom'|'lencioni';
    datePublished: string;
    dateModified: string;
-   tags?: LocalizedStringArr;
+   tags?: LocaleStringArr;
 }
 
 export type ArticlesData = ArticleMetadata[];

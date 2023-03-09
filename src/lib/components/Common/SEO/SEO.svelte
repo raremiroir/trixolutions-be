@@ -16,8 +16,6 @@
    // Export default props
    export let createdOn = "";
    export let updatedOn = "";
-   export let slug = '';
-   $: slug;
    export let hasAlternateLang = true;
    export let ratings: RatingsObj = { amount: 7, average: 4.8 }
 
@@ -28,6 +26,8 @@
    // Export Schema.org props
    export let schemaOrg: SOProps;
    $: schemaOrg;
+
+   
    
    
    const websiteLogo: ImageMetadata = {
@@ -37,7 +37,7 @@
       height: 1280,
    }
 
-   $: url = `${website.domain}/${$locale}/${slug}`;
+   $: url = `${website.domain}/${$locale}/${openGraph.slug}`;
 
    // Define SEO Component Props
    $: openGraphProps = {

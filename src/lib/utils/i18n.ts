@@ -8,10 +8,6 @@
 
 import { langSelection } from '$lib/stores'
 
-import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors'
-import { detectLocale } from '$i18n/i18n-util'
-import type { RequestEvent } from '@sveltejs/kit/types/internal'
-
 export const replaceLocaleInUrl = (url: URL, locale: string, full = true): string => {
 
 	const [, , ...rest] = url.pathname.split('/')
