@@ -121,6 +121,9 @@
 
    const definedLocales: Locales[] = hasAlternateLang ? locales : [ baseLocale ];
 
+
+   // Define array for storing all the schema objects
+   let schemaOrgArray:any = [];
    /* ============================================= */
    /* ======= DEFINE DEFAULT SCHEMA OBJECTS ======= */
    /* ============================================= */
@@ -222,17 +225,17 @@
    definedLocales.forEach((lang: Locales) => {
       const mainImage: ImageObject = { 
          '@type': 'ImageObject', 
-         '@id': `${website.domain}/${lang}/${entityMeta.slug}/#primaryimage`,
+         '@id': `${website.domain}${entityMeta.slug[lang]}#primaryimage`,
          "inLanguage": lang,
          "url": entityMeta.image?.url ? entityMeta.image.url : `${website.domain}/logo-1920x1280.webp`,
-         "contentUrl": `${website.domain}/${lang}/${entityMeta.slug}`,
+         "contentUrl": `${website.domain}${entityMeta.slug[lang]}`,
          "width": `${entityMeta.image?.width}`,
          "height": `${entityMeta.image?.height}`,
          "caption": entityMeta.image?.alt ? entityMeta.image.alt[lang] : 'Logo Trixolutions',
          "about": {
             "@type": "WebPage",
-            "@id": `${website.domain}/${lang}/${entityMeta.slug}/#webpage`,
-            "url": `${website.domain}/${lang}/${entityMeta.slug}`,
+            "@id": `${website.domain}${entityMeta.slug[lang]}#webpage`,
+            "url": `${website.domain}${entityMeta.slug[lang]}`,
          },	
       };
       mainImageObj[lang] = mainImage;
@@ -252,36 +255,36 @@
          "caption": "Logo Trixolutions",
          "about": {
             "@type": "WebPage",
-            "@id": `${website.domain}/${lang}/${entityMeta.slug}/#webpage`,
-            "url": `${website.domain}/${lang}/${entityMeta.slug}`,
+            "@id": `${website.domain}${entityMeta.slug[lang]}#webpage`,
+            "url": `${website.domain}${entityMeta.slug[lang]}`,
          },
       };
       logoObj[lang] = logo;
    });
 
-   if (images && imagesMeta) {
-      let imageObj: ImageObject[] = [];
+   if (images === true) {
       definedLocales.forEach((lang: Locales) => {
          imagesMeta.forEach((image: ImageMetadata) => {
             const imageObject: ImageObject = { 
                '@type': 'ImageObject', 
-               '@id': `${website.domain}/${lang}/${entityMeta.slug}/#image`,
+               '@id': `${website.domain}${entityMeta.slug[lang]}/#image`,
                "inLanguage": lang,
                "url": image.url,
-               "contentUrl": `${website.domain}/${lang}/${entityMeta.slug}`,
+               "contentUrl": `${website.domain}${entityMeta.slug[lang]}`,
                "width": `${image.width}`,
                "height": `${image.height}`,
                "caption": image.alt ? image.alt[lang] : 'Trixolutions',
                "about": {
                   "@type": "WebPage",
-                  "@id": `${website.domain}/${lang}/${entityMeta.slug}/#webpage`,
-                  "url": `${website.domain}/${lang}/${entityMeta.slug}`,
+                  "@id": `${website.domain}${entityMeta.slug[lang]}#webpage`,
+                  "url": `${website.domain}${entityMeta.slug[lang]}`,
                },	
             };
-            imageObj.push(imageObject);
+            schemaOrgArray.push(imageObject);
          })
       })
    }
+
 
    // AREAS
    let areaServedObj: {[key:string]: {be: Country, nl: Country}} = {};
@@ -740,7 +743,7 @@
    definedLocales.forEach((lang: Locales) => {
       const extendOffer: Offer = {
          "@type": "Offer",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug}#offer/extend`,
+         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#offer/extend`,
 
          "name": L_WEBSITE[lang].services.extend.title(),
          "alternateName": L_WEBSITE[lang].services.extend.title_alt(),
@@ -750,7 +753,7 @@
          "price": 490.00,
          "priceCurrency": "EUR",
          "eligibleRegion": [ areaServedObj[lang].be, areaServedObj[lang].nl ],
-         "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug}`,
+         "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
          "itemOffered": {
             "@type": "Service",
             "name": L_WEBSITE[lang].services.extend.title(),
@@ -833,7 +836,7 @@
    definedLocales.forEach((lang: Locales) => {
       const offerHybridFull: Offer = {
          "@type": "Offer",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug}#offer/hybrid_full`,
+         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#offer/hybrid_full`,
 
          "name": L_WEBSITE[lang].services.hybrid_full.title(),
          "alternateName": L_WEBSITE[lang].services.hybrid_full.title_alt(),
@@ -1290,8 +1293,6 @@
    /* === === === == == UNIVERSAL SCHEMAS == == === === === */
    /* === === === === === === == === == === === === === === */
 
-   let schemaOrgArray:any = [];
-
    // OFFER CATALOG
    let offerCatalogObj: {[key:string]: OfferCatalog} = {};
    definedLocales.forEach((lang: Locales) => {
@@ -1497,7 +1498,7 @@
    const localBusinessArr: LocalBusiness[] = Object.values(localBusinessObj).map((localBusiness: LocalBusiness) => localBusiness);
    const websiteArr: WebSite[] = Object.values(websiteObj).map((website: WebSite) => website);
 
-   schemaOrgArray = [ ...offerCatalogArr, ...organizationArr, ...localBusinessArr, ...websiteArr ];
+   schemaOrgArray = [ ...schemaOrgArray, ...offerCatalogArr, ...organizationArr, ...localBusinessArr, ...websiteArr ];
 
    /* === === === === === === == === == === === === === === */
    /* === === === === PAGE SPECIFIC SCHEMAS === === === === */
@@ -1529,8 +1530,8 @@
                "position": key+2,
                "item": {
                   "@type": "WebPage",
-                  "@id": `${website.domain}/${lang}/${crumb.slug[lang]}/#webpage`,
-                  "url": `${website.domain}/${lang}/${crumb.slug[lang]}`,
+                  "@id": `${website.domain}${crumb.slug[lang]}/#webpage`,
+                  "url": `${website.domain}${crumb.slug[lang]}`,
                   "name": crumb.name[lang],
                   "description": crumb.description[lang],
                },
@@ -1540,7 +1541,7 @@
       }
       let breadcrumbsSchema: BreadcrumbList = {
          '@type': 'BreadcrumbList',
-         '@id': `${website.domain}/${lang}/${entityMeta.slug[lang]}/#breadcrumbs`,
+         '@id': `${website.domain}${entityMeta.slug[lang]}#breadcrumbs`,
          "itemListElement": breadCrumbsPerLocale,
       }
 
@@ -1554,8 +1555,8 @@
       // Define WebPage schema for each defined locale
       const webPageSchema: WebPage = {
          "@type": "WebPage",
-         "@id": `${website.domain}/${lang}/${entityMeta.slug[lang]}/#webpage`,
-         "url": `${website.domain}/${lang}/${entityMeta.slug[lang]}`,
+         "@id": `${website.domain}${entityMeta.slug[lang]}#webpage`,
+         "url": `${website.domain}${entityMeta.slug[lang]}`,
    
          "name": `${website.title} - ${entityMeta.name[lang]}`,
          "alternateName": `${entityMeta.name[lang]}`,
@@ -1608,32 +1609,32 @@
             // },
             {
                "@type": "ReadAction",
-               "target": [`${website.domain}/${lang}/${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
             {
                "@type": "ViewAction",
-               "target": [`${website.domain}/${lang}/${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
             {
                "@type": "WatchAction",
-               "target": [`${website.domain}/${lang}/${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
             {
                "@type": "ShareAction",
-               "target": [`${website.domain}/${lang}/${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
             {
                "@type": "BookmarkAction",
-               "target": [`${website.domain}/${lang}/${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
             {
                "@type": "SubscribeAction",
-               "target": [`${website.domain}/${lang}/${entityMeta.slug[lang]}`],
+               "target": [`${website.domain}${entityMeta.slug[lang]}`],
                "provider": organizationObj[lang]
             },
          ]
@@ -1650,7 +1651,7 @@
    // === == == == ===
    // === OPTIONAL ===
    // === == == == === 
-   
+
    // VIDEO
    if (videos) {
       // Create empty array for all video schemas
@@ -1873,6 +1874,7 @@
       schemaOrgArray = [ ...schemaOrgArray, ...blogObj ]
    }
    
+   // console.log(schemaOrgArray);
    let jsonLdString = JSON.stringify(schemaOrgArray);
 
    let jsonLdScript = `<script type="application/ld+json">${jsonLdString}${'<'}/script>`;

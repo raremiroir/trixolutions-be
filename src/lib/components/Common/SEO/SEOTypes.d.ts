@@ -1,4 +1,5 @@
 import type { Locales } from "$src/i18n/i18n-types";
+import type { Locale } from "typesafe-i18n/types/runtime/src/core.mjs";
 
 // OPEN GRAPH
 export type OGType = 	'article' | 'book' | 'books.author' | 'books.genre' | 
@@ -12,8 +13,9 @@ export type OGType = 	'article' | 'book' | 'books.author' | 'books.genre' |
                'video.tv_show' | 'website' | '';
 
 export type MediaObject = {
-   url: string;
-   alt: string;
+   [key: string]: string | { width: number; height: number; } | undefined;
+   url?: string;
+   alt?: string;
    type?: string;
    dimensions?: { width: number; height: number };
    duration?: number;
@@ -30,6 +32,9 @@ export type OGProps = {
    description: string;
    type?: OGType;
    tags?: string[];
+   videos?: MediaObject[];
+   audios?: MediaObject[];
+   person?: PersonObject;
 }
 
 
@@ -72,11 +77,7 @@ export type ArticleMetadata = {
    author: string;
    language: Locales;
 
-   image: {
-      url: string;
-      width?: number;
-      height?: number;
-   }
+   image: ImageMetadata;
 
    datePublished: string;
    dateModified: string;
@@ -89,11 +90,7 @@ export type VideoMetadata = {
    description: LocalizedString;
    url: string;
    duration: string;
-   thumbnail: {
-      url: string;
-      width?: number;
-      height?: number;
-   };
+   thumbnail: ImageMetadata;
    uploadDate: string;
    quality: string;
    size: string;

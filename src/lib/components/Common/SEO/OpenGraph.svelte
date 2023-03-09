@@ -3,7 +3,7 @@
 
 	import type { OGType, MediaObject, PersonObject } from "./SEOTypes"
 
-	type mediaObjectArray = MediaObject[] | boolean;
+	type mediaObjectArray = MediaObject[];
 
 
 	export let siteTitle:string = 'Trixolutions'
@@ -25,20 +25,19 @@
 	export let ogLanguage:Locales = 'nl'
 	export let hasAlternateLang = true;
 
-	export let images:mediaObjectArray = false;
-	export let squareImages:mediaObjectArray = false;
-	export let audios:mediaObjectArray = false;
-	export let videos:mediaObjectArray = false;
+	export let images:mediaObjectArray = [];
+	export let squareImages:mediaObjectArray = [];
+	export let audios:mediaObjectArray = [];
+	export let videos:mediaObjectArray = [];
 
-	export let person:PersonObject = false
+	export let person:PersonObject = {};
 	
 
-	const lang = ogLanguage === 'nl' ? 'nl_BE' : ogLanguage === 'fr' ? 'fr_BE' : 'en_GB';
-	const alt_lang_1 = ogLanguage === 'nl' ? 'fr_BE' : ogLanguage === 'fr' ? 'en_GB' : 'nl_BE';
-	const alt_lang_2 = ogLanguage === 'nl' ? 'en_GB' : ogLanguage === 'fr' ? 'nl_BE' : 'fr_BE';
+	$: lang = ogLanguage === 'nl' ? 'nl_BE' : ogLanguage === 'fr' ? 'fr_BE' : 'en_GB';
+	$: alt_lang_1 = ogLanguage === 'nl' ? 'fr_BE' : ogLanguage === 'fr' ? 'en_GB' : 'nl_BE';
+	$: alt_lang_2 = ogLanguage === 'nl' ? 'en_GB' : ogLanguage === 'fr' ? 'nl_BE' : 'fr_BE';
 
-	
-	
+
 	$: siteTitle;
 	$: pageTitle;
 	$: metadescription;
@@ -139,9 +138,10 @@
 		{/if}
 	{/if}
 	
-	{#if person}
+	{#if person.first_name && person.last_name}
 		<meta property="profile:first_name" content={person.first_name} />
 		<meta property="profile:last_name" content={person.last_name} />
-		<meta property="profile:gender" content={person.gender} />
+		<!-- {#if person.username} <meta property="profile:username" content={person.username} /> {/if} -->
+		{#if person.gender} <meta property="profile:gender" content={person.gender} /> {/if}
 	{/if}
 </svelte:head>

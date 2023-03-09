@@ -1,6 +1,6 @@
 <script lang="ts">
    // Import types
-   import type { RatingsObj, OGProps, SOProps, ImageMetadata } from "./SEOTypes";
+   import type { RatingsObj, OGProps, SOProps, ImageMetadata, MediaObject } from "./SEOTypes";
 
    // Import SEO components
    import SchemaOrgNew from "./SchemaOrgNew.svelte";
@@ -17,20 +17,17 @@
    export let createdOn = "";
    export let updatedOn = "";
    export let slug = '';
+   $: slug;
    export let hasAlternateLang = true;
    export let ratings: RatingsObj = { amount: 7, average: 4.8 }
 
    // Export OG props
-   export let openGraph: OGProps = {
-      title: '',
-      description: '',
-      type: "website", // website, article, blog, event ...
-
-      tags: [''],
-   }
+   export let openGraph: OGProps;
+   $: openGraph;
    
    // Export Schema.org props
    export let schemaOrg: SOProps;
+   $: schemaOrg;
    
    
    const websiteLogo: ImageMetadata = {
@@ -43,9 +40,9 @@
    $: url = `${website.domain}/${$locale}/${slug}`;
 
    // Define SEO Component Props
-   const openGraphProps = {
+   $: openGraphProps = {
       siteTitle: website.title,
-      pageTitle: openGraph.title,
+      pageTitle: `Trixolutions - ${openGraph.title}`,
       metadescription: openGraph.description,
       url: url,
       
@@ -63,14 +60,22 @@
       ogLanguage: $locale,
       hasAlternateLang: hasAlternateLang,
 
-      images: false,
-      squareImages: false,
-      audios: false,
-      videos: false,
+      images: schemaOrg.entity.image ? [{
+         url: schemaOrg.entity.image.url,
+         alt: schemaOrg.entity.image.alt ? schemaOrg.entity.image.alt[$locale] : '',
+         dimensions: { width: schemaOrg.entity.image.width ? schemaOrg.entity.image.width : 640, height: schemaOrg.entity.image.height ? schemaOrg.entity.image.height : 480 }
+         }] : [{
+            url: websiteLogo.url,
+            alt: `Trixolutions - ${openGraph.title}`,
+            dimensions: { width: websiteLogo.width, height: websiteLogo.height }
+         }],
+      squareImages: [],
+      audios: [],
+      videos: [],
 
-      person: false,
+      person: {},
    }
-   const schemaOrgProps = {
+   $: schemaOrgProps = {
       hasAlternateLang: hasAlternateLang,
       sessions: schemaOrg.sessions,
 
