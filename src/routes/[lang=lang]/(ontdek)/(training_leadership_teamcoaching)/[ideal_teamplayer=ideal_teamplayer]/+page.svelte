@@ -21,23 +21,22 @@
     const pageData = data.data[0];
 
     // Import stores
-    import { currentHero, currentTitle, currentDesc, currentSlug, currentIcon } from "$lib/stores";
+    import { currentHero, currentIcon, currentReference } from "$lib/stores";
+	import { titleCase } from "$src/lib/utils";
     // Set page props
-    $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].title()
     $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
-    $: $currentDesc = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].description();
-    $: $currentSlug = `/${$locale}/${$LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].slug()}`;
     $: $currentIcon = `icon-park-outline:gold-medal`
+    $: $currentReference = 'ideal_teamplayer';
 
     // Set 'active' variable for accordeon component
 	let active:any = null;
 
 </script>
 
-<IntroSection title={$currentTitle} imgSrc={$currentHero}>
+<IntroSection title={titleCase($LL.nav.explore.training_leadership_teamcoaching.items.ideal_teamplayer.title())} imgSrc={$currentHero}>
     <div class="" slot="title">
         <H2 small>
-            {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
+            {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {titleCase($LL.nav.explore.training_leadership_teamcoaching.items.ideal_teamplayer.title())}
         </H2>
         <Subheader>{$LL.pages_explore.training_leadership_teamcoaching.base.by_lencioni()}</Subheader>
     </div>
@@ -51,7 +50,7 @@
     </Text>
 </IntroSection>
 
-<IndepthSection title={$currentTitle}>
+<IndepthSection title={titleCase($LL.nav.explore.training_leadership_teamcoaching.items.ideal_teamplayer.title())}>
     <span slot="title">{@html $LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.title()}</span>
     <Accordeon bind:active>
         <AccordeonItem id={1} title={$LL.pages_explore.training_leadership_teamcoaching.ideal_teamplayer.in_depth.accordeon_items.first.title()} titleSmaller>

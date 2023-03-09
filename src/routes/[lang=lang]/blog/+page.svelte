@@ -22,33 +22,26 @@
 
    //   Import data
 	import type { PageData } from "./$types";
+	import { getBaseEntity } from "$src/lib/utils/seo";
    export let data:PageData;
    const posts = data.posts;
 
    // SEO
-   $: pageSlug = `/${$locale}/${$LL.nav.blog.slug()}`
-   $: pageTitle = $LL.nav.blog.title()
-   $: pageDesc = $LL.nav.blog.description()
-
-   let { author, siteUrl } = website;
-	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
-	
-   $: entityMeta = {
-		url: `${siteUrl}${pageSlug}`,
-		faviconWidth: 512, faviconHeight: 512,
-		caption: author,
-	};
+   // !TODO: ADD MORE INFO + BLOG + POSTS
+   $: openGraph = {
+      title: $LL.nav.blog.title(),
+      description: $LL.nav.blog.description(),
+		slug: $LL.nav.blog.slug(),
+      tags: ['blog', 'trixolutions', 'teamcoaching'],
+   }
+   $: schemaOrg = {
+      entity: getBaseEntity('blog'),
+      sessions: [],
+   }
 </script>
 
 
-<SEO 
-	slug="{pageSlug}"
-	datePublished = '2023-01-11T12:31:00.000+0100'
-	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{pageTitle}"
-	metadescription="{pageDesc}"
-	{breadcrumbs} {entityMeta}
-/>
+<SEO {openGraph} {schemaOrg} />
 
 <header>
    <Navbar/>

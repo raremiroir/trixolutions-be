@@ -21,22 +21,21 @@
     const pageData = data.data[0];
 
     // Import stores
-    import { currentHero, currentTitle, currentDesc, currentSlug, currentIcon } from "$lib/stores";
+    import { currentHero, currentIcon, currentReference } from "$lib/stores";
+	import { titleCase } from "$src/lib/utils";
     // Set page props
-    $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].title()
     $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
-    $: $currentDesc = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].description();
-    $: $currentSlug = `/${$locale}/${$LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].slug()}`;
     $: $currentIcon = `fa6-solid:users-slash`
-
+    $: $currentReference = 'meetings_deadly'
+    
     // Set 'active' variable for accordeon component
 	let active:any = null;
 
 </script>
 
-<IntroSection title={$currentTitle} imgSrc={$currentHero}>
+<IntroSection title={titleCase($LL.nav.explore.training_leadership_teamcoaching.items.meetings_deadly.title())} imgSrc={$currentHero}>
     <H2 small slot="title">
-        {$currentTitle}
+        {titleCase($LL.nav.explore.training_leadership_teamcoaching.items.meetings_deadly.title())}
     </H2>
 
     <Text>
@@ -44,7 +43,7 @@
     </Text>
 </IntroSection>
 
-<IndepthSection title={$currentTitle}>
+<IndepthSection title={titleCase($LL.nav.explore.training_leadership_teamcoaching.items.meetings_deadly.title())}>
     <span slot="title">
         {@html $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.title()} - 
         <span class="italic font-semibold">{@html $LL.pages_explore.training_leadership_teamcoaching.meetings_deadly.in_depth.subtitle()}</span>

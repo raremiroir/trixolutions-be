@@ -4,7 +4,7 @@
       Navbar, Main, Section, 
       H1, H2, Subheader, Subtitle,
       Breadcrumbs, Tag, MarkProse,
-      Hero, PostSEO, Reveal 
+      Hero, SEO, Reveal 
    } from "$comp";
    // Import utils
    import { titleCase, formatDateMonthFull, formatTime, formatUrl } from "$utils";
@@ -31,6 +31,7 @@
    
    // Define current page slug
    import { currentPageMap } from "$lib/stores";
+	import { website } from "$src/lib/config/website";
    $currentPageMap = [
       {locale: 'en', slug: `blog/${formatUrl(post.title)}`},
       {locale: 'fr', slug: `blog/${formatUrl(post.title)}`},
@@ -54,9 +55,44 @@
       cover: `${post.img.folder}/${post.img.name}.${post.img.type}`,
       author: `${post.author.first_name} ${post.author.last_name}`
    } 
+
+   // !TODO: ADD MORE INFO + OG:PERSON + POST + ARTICLE
+   $: openGraph = {
+      title: titleCase(post.title),
+      description: post.excerpt,
+		slug: `blog/${formatUrl(post.title)}`,
+      tags: ['blog', `${post.title}`, 'trixolutions', 'teamcoaching'],
+   }
+   $: schemaOrg = {
+      entity: {
+         name: { nl: titleCase(post.title) },
+         slug: { nl: `blog/${formatUrl(post.title)}` },
+         description: { nl: post.excerpt },
+         author: `${post.author.first_name} ${post.author.last_name}`,
+
+         image: { 
+            url: `${website.domain}/${post.img.folder}/${post.img.name}.${post.img.type}`,
+            alt: { nl: post.title },
+         },
+
+         breadcrumb: [
+            {
+               name: { nl: 'Blog' },
+               slug: { nl: 'blog' },
+               description: { nl: 'Trixolutions Blog' },
+            },
+            { 
+               name: { nl: titleCase(post.title) }, 
+               slug: { nl: `blog/${formatUrl(post.title)}` },
+               description: { nl: post.excerpt }, 
+            }
+         ],
+      },
+      sessions: [],
+   }
 </script>
 
-<PostSEO {...seoProps} />
+<SEO {openGraph} {schemaOrg} />
 <header>
    <Navbar/>
    <Hero imgSrc="{seoProps.cover}" imgAlt="{post.title}">

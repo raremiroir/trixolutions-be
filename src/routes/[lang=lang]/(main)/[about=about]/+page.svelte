@@ -8,40 +8,68 @@
    ];
    
    // Import Components
-   import { Main, Section, Text, Image, Alert, ErrorLoading, SEO, Breadcrumbs, H1, H2, Subtitle, Reveal } from "$comp";
+   import { 
+      Main, Section, Text, Image, Alert, ErrorLoading, 
+      SEO, Breadcrumbs, H1, H2, Subtitle, Reveal } from "$comp";
 	import MemberCard from "./MemberCard.svelte";
 
    // Import website config
    import { website } from "$lib/config/website";
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
+	import { getBaseEntity } from "$lib/utils/seo";
    // Import Utils
 	import { firstLetterCase, dbSelectOrder } from "$utils";
 
    // SEO
-   $: pageSlug = `/${$locale}/${$LL.nav.about.slug()}`
-   $: pageTitle = $LL.nav.about.title()
-   $: pageDesc = $LL.nav.about.description()
-
-   let { author, siteUrl } = website;
-	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
-	
-   $: entityMeta = {
-		url: `${siteUrl}${pageSlug}`,
-		faviconWidth: 512, faviconHeight: 512,
-		caption: author,
-	};
+   // !TODO: ADD OG:PERSON
+   $: openGraph = {
+      title: $LL.nav.about.title(),
+      description: $LL.nav.about.description(),
+		slug: $LL.nav.about.slug(),
+      tags: ['about', 'a propos', 'over', 'trixolutions'],
+   }
+   $: schemaOrg = {
+      entity: getBaseEntity('about'),
+      sessions: [],
+      images: [
+         {
+            url: `${website.domain}/images/team/tom-bw.webp`,
+            width: 1920, height: 1280,
+            alt: { nl: `Tom van Dorst - CEO / Trainer`, en: `Tom van Dorst - CEO / Trainer`, fr: `Tom van Dorst - PDG / Formateur` },
+         },
+         {
+            url: `${website.domain}/images/team/frederik-bw.webp`,
+            width: 1920, height: 2200,
+            alt: { nl: `Frederik Vanderveken - Senior Trainer`, en: `Frederik Vanderveken - Senior Trainer`, fr: `Frederik Vanderveken - Formateur Senior` },
+         },
+         {
+            url: `${website.domain}/images/team/roger-bw.webp`,
+            width: 1439, height: 1217,
+            alt: { nl: `Roger Baum - Trainer / Acteur`, en: `Roger Baum - Trainer / Actor`, fr: `Roger Baum - Formateur / Acteur` },
+         },
+         {
+            url: `${website.domain}/images/team/tamara-bw.webp`,
+            width: 1920, height: 1920,
+            alt: { nl: `Tamara D'Haese - Office Manager`, en: `Tamara D'Haese - Office Manager`, fr: `Tamara D'Haese - Chef de Bureau` },
+         },
+         {
+            url: `${website.domain}/images/team/kelly-bw.webp`,
+            width: 1920, height: 1280,
+            alt: { nl: `Kelly  - Trainer / Facilitator`, en: `Kelly  - Trainer / Facilitator`, fr: `Kelly  - Formateur / Facilitatrice` },
+         },
+         {
+            url: `${website.domain}/images/team/christoph-bw.webp`,
+            width: 1920, height: 2000,
+            alt: { nl: `Christoph Meunier - Trainer / Facilitator`, en: `Christoph Meunier - Trainer / Facilitator`, fr: `Christoph Meunier - Formateur / Facilitateur` },
+         }
+      ],
+   }
 
 </script>
 
-<SEO 
-	slug="{pageSlug}"
-	datePublished = '2023-01-11T12:31:00.000+0100'
-	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{pageTitle}"
-	metadescription="{pageDesc}"
-	{breadcrumbs} {entityMeta}
-/>
+<!-- SEO -->
+<SEO {openGraph} {schemaOrg} />
 
 <Main cta>
    <Breadcrumbs currentIcon="mdi:information-outline"/>

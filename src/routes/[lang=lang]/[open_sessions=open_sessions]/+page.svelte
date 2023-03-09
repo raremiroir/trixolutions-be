@@ -11,12 +11,11 @@
    import { Main, Section, Breadcrumbs, H1, SEO, Reveal } from "$comp";
    import { SessionTypeCard } from './components/open-sessies';
    
-   // Import website config
-   import { website } from "$lib/config/website";
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
    // Import utils
 	import { titleCase } from "$src/lib/utils";
+	import { getBaseEntity } from "$src/lib/utils/seo";
 
    
    $: session_types = [
@@ -46,29 +45,21 @@
    ]
 
    // SEO
-   $: pageSlug = `/${$locale}/${$LL.nav.open_sessions.slug()}`
-   $: pageTitle = $LL.nav.open_sessions.title()
-   $: pageDesc = $LL.nav.open_sessions.description()
-
-   let { author, siteUrl } = website;
-	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
-	
-   $: entityMeta = {
-		url: `${siteUrl}${pageSlug}`,
-		faviconWidth: 512, faviconHeight: 512,
-		caption: author,
-	};
+   // !TODO ADD SESSIONS
+   $: openGraph = {
+      title: $LL.nav.open_sessions.title(),
+      description: $LL.nav.open_sessions.description(),
+		slug: $LL.nav.open_sessions.slug(),
+      tags: ['contact', 'trixolutions', 'teamcoaching'],
+   }
+   $: schemaOrg = {
+      entity: getBaseEntity('open_sessions'),
+      sessions: [],
+   }
    
 </script>
 
-<SEO 
-	slug="{pageSlug}"
-	datePublished = '2023-01-11T12:31:00.000+0100'
-	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{pageTitle}"
-	metadescription="{pageDesc}"
-	{breadcrumbs} {entityMeta}
-/>
+<SEO {openGraph} {schemaOrg} />
 
 <Main cta>
    <Breadcrumbs currentIcon="mdi:account-school-outline"/>

@@ -27,6 +27,7 @@
    import { currentModal } from "$src/lib/stores";
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
+	import { getBaseEntity } from "$src/lib/utils/seo";
 	
 
    // Import data
@@ -46,29 +47,20 @@
 	let active:any = null;
 
    // SEO
-   $: pageSlug = `/${$locale}/${$LL.nav.open_sessions.items.deepdive.slug()}`
-   $: pageTitle = $LL.nav.open_sessions.items.deepdive.title()
-   $: pageDesc = $LL.nav.open_sessions.items.deepdive.description()
-
-   let { author, siteUrl } = website;
-	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
-	
-   $: entityMeta = {
-		url: `${siteUrl}${pageSlug}`,
-		faviconWidth: 512, faviconHeight: 512,
-		caption: author,
-	};
+   $: openGraph = {
+      title: $LL.nav.open_sessions.items.deepdive.title(),
+      description: $LL.nav.open_sessions.items.deepdive.description(),
+		slug: $LL.nav.open_sessions.items.deepdive.slug(),
+      tags: ['workshops', 'opleidingen', 'lencioni', 'deepdive', 'trixolutions', 'teamcoaching'],
+   }
+   $: schemaOrg = {
+      entity: getBaseEntity('deepdive', ['open_sessions', 'items']),
+      sessions: data.sessionData,
+   }
 
 </script>
 
-<SEO 
-	slug="{pageSlug}"
-	datePublished = '2023-01-11T12:31:00.000+0100'
-	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{pageTitle}"
-	metadescription="{pageDesc}"
-	{breadcrumbs} {entityMeta}
-/>
+<SEO {openGraph} {schemaOrg} />
 
 <header>
    <Hero titleSmall imgSrc="home/working-genius.webp" imgAlt="No alt">

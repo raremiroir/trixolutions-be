@@ -25,6 +25,7 @@
 
    // Import data
 	import type { PageData } from "./$types";
+	import { getBaseEntity } from "$src/lib/utils/seo";
    export let data:PageData;
    // Get info sessions
    let sessions = Object(data.sessions);
@@ -33,29 +34,20 @@
 
 
    // SEO
-   $: pageSlug = `/${$locale}/${$LL.nav.open_sessions.items.info_sessions.slug()}`
-   $: pageTitle = $LL.nav.open_sessions.items.info_sessions.title()
-   $: pageDesc = $LL.nav.open_sessions.items.info_sessions.description()
-
-   let { author, siteUrl } = website;
-	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
-	
-   $: entityMeta = {
-		url: `${siteUrl}${pageSlug}`,
-		faviconWidth: 512, faviconHeight: 512,
-		caption: author,
-	};
+   $: openGraph = {
+      title: $LL.nav.open_sessions.items.info_sessions.title(),
+      description: $LL.nav.open_sessions.items.info_sessions.description(),
+		slug: $LL.nav.open_sessions.items.info_sessions.slug(),
+      tags: ['info sessions', 'opleidingen', 'lencioni', 'info sessies', 'trixolutions', 'teamcoaching'],
+   }
+   $: schemaOrg = {
+      entity: getBaseEntity('info_sessions', ['open_sessions', 'items']),
+      sessions: data.sessions,
+   }
 
 </script>
 
-<SEO 
-	slug="{pageSlug}"
-	datePublished = '2023-01-11T12:31:00.000+0100'
-	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{pageTitle}"
-	metadescription="{pageDesc}"
-	{breadcrumbs} {entityMeta}
-/>
+<SEO {openGraph} {schemaOrg} />
 
 <header>
    <Hero imgSrc="home/kracht-gezonde-teams.webp" imgAlt="No Alt">

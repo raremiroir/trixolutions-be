@@ -10,10 +10,9 @@
 	// Import components
 	import { Main, Section, Breadcrumbs, Image, Video, SEO, Reveal, H1 } from '$comp';
 	
-	// Import website config
-	import { website } from '$src/lib/config/website';
 	// Import i18n
 	import LL, { locale } from '$i18n/i18n-svelte';
+	import { getBaseEntity } from "$lib/utils/seo";
 	
 	// Import Video
 	import cegeka_video from '$lib/assets/videos/referentiefilmpje-cegeka-min.mp4';
@@ -68,29 +67,21 @@
 	];
 
    // SEO
-   $: pageSlug = `/${$locale}/${$LL.nav.references.slug()}`
-   $: pageTitle = $LL.nav.references.title()
-   $: pageDesc = $LL.nav.references.description()
-   let { author, siteUrl } = website;
-	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
-	
-   $: entityMeta = {
-		url: `${siteUrl}${pageSlug}`,
-		faviconWidth: 512, faviconHeight: 512,
-		caption: author,
-	};
-
+	// !TODO: ADD VIDEO
+	$: openGraph = {
+      title: $LL.nav.references.title(),
+      description: $LL.nav.references.description(),
+		slug: $LL.nav.references.slug(),
+      tags: ['references', 'referenties', 'trixolutions', 'teamcoaching'],
+   }
+   $: schemaOrg = {
+      entity: getBaseEntity('references'),
+      sessions: [],
+   }
 </script>
 
 
-<SEO 
-	slug="{pageSlug}"
-	datePublished = '2023-01-11T12:31:00.000+0100'
-	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{pageTitle}"
-	metadescription="{pageDesc}"
-	{breadcrumbs} {entityMeta}
-/>
+<SEO {openGraph} {schemaOrg} />
 
 
 

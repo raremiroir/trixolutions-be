@@ -22,17 +22,13 @@
 	import featuredImageSrc from '$lib/assets/images/home/home.png';
    
    // Import i18n
-   import LL from '$i18n/i18n-svelte'
-   import { locale } from "$i18n/i18n-svelte";
+   import LL, { locale } from '$i18n/i18n-svelte'
+	import { getBaseEntity } from "$lib/utils/seo";
+
    // Import utils
 	import { firstLetterCase, titleCase } from "$utils";
    // Import website config
 	import { website } from '$src/lib/config/website';
-
-
-	import FormBase from "$comp/Forms/FormBase.svelte";
-   
-
 
    const cardProps = {
       hoverFx: 'minimal',
@@ -55,29 +51,21 @@
    ]
 
    // SEO
-   $: pageSlug = `/${$locale}/${$LL.nav.contact.slug()}`
-   $: pageTitle = $LL.nav.contact.title()
-   $: pageDesc = $LL.nav.contact.description()
-   let { author, siteUrl } = website;
-	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
-	
-   $: entityMeta = {
-		url: `${siteUrl}${pageSlug}`,
-		faviconWidth: 512, faviconHeight: 512,
-		caption: author,
-	};
-
+   // !TODO: ADD MORE INFO + OG:PERSON
+   $: openGraph = {
+      title: $LL.nav.contact.title(),
+      description: $LL.nav.contact.description(),
+		slug: $LL.nav.contact.slug(),
+      tags: ['contact', 'trixolutions', 'teamcoaching'],
+   }
+   $: schemaOrg = {
+      entity: getBaseEntity('contact'),
+      sessions: [],
+   }
 </script>
 
 
-<SEO 
-	slug="{pageSlug}"
-	datePublished = '2023-01-11T12:31:00.000+0100'
-	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{pageTitle}"
-	metadescription="{pageDesc}"
-	{breadcrumbs} {entityMeta}
-/>
+<SEO {openGraph} {schemaOrg} />
 
 <Main cta>
    <Breadcrumbs currentIcon="mdi:email-outline"/>

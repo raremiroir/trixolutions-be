@@ -19,14 +19,13 @@
     const pageData = data.data[0];
 
     // Import stores
-    import { currentHero, currentTitle, currentDesc, currentSlug, currentIcon } from "$lib/stores";
+    import { currentHero, currentIcon, currentReference } from "$lib/stores";
+	import { titleCase } from "$src/lib/utils";
 
     // Set page props
-    $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].title()
     $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
-    $: $currentDesc = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].description()
-    $: $currentSlug = `/${$locale}/${$LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].slug()}`
     $: $currentIcon = `iconoir:leaderboard-star`;
+    $: $currentReference = 'decisive_lead';
 
     // Set 'active' variable for accordeon component
 	let active:any = null;
@@ -34,14 +33,14 @@
 </script>
 
 <IntroSection 
-    title={$currentTitle} 
+    title={titleCase($LL.pages_explore.training_leadership_teamcoaching.decisive_lead.title())} 
     imgSrc={$currentHero} 
     imgWidth="w-full { active ? 'lg:w-3/12' : 'lg:w-5/12'}"
     contentWidth="w-full { active ? 'lg:w-9/12' : 'lg:w-7/12'}"
     >
     <div class="" slot="title">
         <Title type="h2" small>
-            {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
+            {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {titleCase($LL.pages_explore.training_leadership_teamcoaching.decisive_lead.title())}
         </Title>
         <Title type="subheader">{$LL.pages_explore.training_leadership_teamcoaching.base.by_lencioni()}</Title>
     </div>

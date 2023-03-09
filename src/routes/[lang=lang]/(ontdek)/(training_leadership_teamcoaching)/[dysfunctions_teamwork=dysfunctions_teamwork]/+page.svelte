@@ -24,20 +24,17 @@
     const pageData = data.data[0];
 
     // Import stores
-    import { 
-        currentHero, currentTitle, 
-        currentDesc, currentSlug, currentIcon 
-    } from "$lib/stores";
+    import { currentHero, currentIcon, currentReference } from "$lib/stores";
+	import { titleCase } from "$src/lib/utils";
     
     // Set page props
-    $: $currentTitle = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].title()
     $: $currentHero = `${pageData.hero_img.folder}/${pageData.hero_img.name}.${pageData.hero_img.type}`
-    $: $currentDesc = $LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].description()
-    $: $currentSlug = `/${$locale}/${$LL.nav.explore.training_leadership_teamcoaching.items[pageData.name].slug()}`
     $: $currentIcon = `mdi:head-alert-outline`;
+    $: $currentReference = 'dysfunctions_teamwork';
 
     // Set 'active' variable for accordeon component
 	let active:any = null;
+    $: active;
 
     // Get localized 'frustration cards' from i18n library
     let frustrationCards:any = []
@@ -65,10 +62,10 @@
 
 </script>
 
-<IntroSection title={$currentTitle} imgSrc={$currentHero}>
+<IntroSection title={titleCase($LL.nav.explore.training_leadership_teamcoaching.items.dysfunctions_teamwork.title())} imgSrc={$currentHero}>
     <div class="" slot="title">
         <H2 small>
-            {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {$currentTitle}
+            {$LL.pages_explore.training_leadership_teamcoaching.base.the_model()} - {titleCase($LL.nav.explore.training_leadership_teamcoaching.items.dysfunctions_teamwork.title())}
         </H2>
         <Subheader>{$LL.pages_explore.training_leadership_teamcoaching.base.by_lencioni()}</Subheader>
     </div>
@@ -105,7 +102,7 @@
 </IntroSection>
 
 
-<IndepthSection title={$currentTitle}>
+<IndepthSection title={titleCase($LL.nav.explore.training_leadership_teamcoaching.items.dysfunctions_teamwork.title())}>
     <span slot="title">{$LL.pages_explore.training_leadership_teamcoaching.dysfunctions_teamwork.in_depth.title()}</span>
     <Accordeon bind:active>
 

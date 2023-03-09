@@ -47,7 +47,7 @@
 <div class="
 		flex flex-col min-h-screen bg-gray-50
 		relative ">
-	<div class="content overflow-y-auto box-border w-full">	
+	<div class="content overflow-y-auto box-border w-full" >	
 		<Loader />
 		<slot />
 	</div>
