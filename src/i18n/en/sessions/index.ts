@@ -30,6 +30,8 @@ const en_sessions: NamespaceSessionsTranslation = {
       subscribe: 'sign up for info session',
       trainer: "trainer",
       time: "time frame",
+      description: "A free, open info session about our versatile Lencioni Team Coaching Training.",
+      description_alt: "A free, open info session about our versatile Lencioni Team Coaching Training. Don't hesitate and sign up!",
       excerpt: "A free, open info session about our versatile Lencioni Team Coaching Training.<br/>Don't hesitate and sign up!",
       intro: {
          title: "Teamcoaching with Lencioni",

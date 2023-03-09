@@ -22,7 +22,8 @@ export const namespaces: Namespaces[] = [
 	'other',
 	'pages',
 	'pages_explore',
-	'sessions'
+	'sessions',
+	'website'
 ]
 
 export const isLocale = (locale: string): locale is Locales => locales.includes(locale as Locales)

@@ -19,7 +19,8 @@ export type Translations = RootTranslation &
 	other: NamespaceOtherTranslation,
 	pages: NamespacePagesTranslation,
 	pages_explore: NamespacePagesExploreTranslation,
-	sessions: NamespaceSessionsTranslation
+	sessions: NamespaceSessionsTranslation,
+	website: NamespaceWebsiteTranslation
 }
 
 type RootTranslation = {
@@ -2553,6 +2554,14 @@ export type NamespaceSessionsTranslation = {
 		 */
 		time: string
 		/**
+		 * E​e​n​ ​g​r​a​t​i​s​,​ ​o​n​l​i​n​e​,​ ​o​p​e​n​ ​i​n​f​o​s​e​s​s​i​e​ ​o​v​e​r​ ​o​n​z​e​ ​v​e​e​l​z​i​j​d​i​g​e​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​O​p​l​e​i​d​i​n​g​e​n​.
+		 */
+		description: string
+		/**
+		 * E​e​n​ ​g​r​a​t​i​s​,​ ​o​n​l​i​n​e​,​ ​o​p​e​n​ ​i​n​f​o​s​e​s​s​i​e​ ​o​v​e​r​ ​o​n​z​e​ ​v​e​e​l​z​i​j​d​i​g​e​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​O​p​l​e​i​d​i​n​g​e​n​.​ ​A​a​r​z​e​l​ ​n​i​e​t​ ​e​n​ ​s​c​h​r​i​j​f​ ​j​e​ ​i​n​!
+		 */
+		description_alt: string
+		/**
 		 * E​e​n​ ​g​r​a​t​i​s​,​ ​o​p​e​n​ ​i​n​f​o​s​e​s​s​i​e​ ​o​v​e​r​ ​o​n​z​e​ ​v​e​e​l​z​i​j​d​i​g​e​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​O​p​l​e​i​d​i​n​g​.​<​b​r​/​>​A​a​r​z​e​l​ ​n​i​e​t​ ​e​n​ ​s​c​h​r​i​j​f​ ​j​e​ ​i​n​!
 		 */
 		excerpt: string
@@ -3329,6 +3338,505 @@ export type NamespaceSessionsTranslation = {
 	}
 }
 
+export type NamespaceWebsiteTranslation = {
+	/**
+	 * T​r​i​x​o​l​u​t​i​o​n​s
+	 */
+	title: string
+	/**
+	 * T​r​a​i​n​i​n​g​,​ ​C​o​a​c​h​i​n​g​ ​&​ ​C​o​n​s​u​l​t​a​n​c​y
+	 */
+	slogan: string
+	/**
+	 * O​p​l​e​i​d​i​n​g​e​n​ ​e​n​ ​T​r​a​i​n​i​n​g​ ​i​n​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​e​n​ ​C​o​n​s​u​l​t​a​n​c​y
+	 */
+	tagLine: string
+	/**
+	 * T​r​i​x​o​l​u​t​i​o​n​s​ ​i​s​ ​e​e​n​ ​o​p​l​e​i​d​i​n​g​s​-​ ​e​n​ ​t​r​a​i​n​i​n​g​s​c​e​n​t​r​u​m​ ​v​o​o​r​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​e​n​ ​C​o​n​s​u​l​t​a​n​c​y​.
+	 */
+	description_short: string
+	/**
+	 * T​r​i​x​o​l​u​t​i​o​n​s​ ​i​s​ ​e​e​n​ ​o​p​l​e​i​d​i​n​g​s​-​ ​e​n​ ​t​r​a​i​n​i​n​g​s​c​e​n​t​r​u​m​ ​v​o​o​r​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​e​n​ ​C​o​n​s​u​l​t​a​n​c​y​.​ ​W​e​ ​b​i​e​d​e​n​ ​o​p​l​e​i​d​i​n​g​e​n​ ​e​n​ ​t​r​a​i​n​i​n​g​e​n​ ​a​a​n​ ​i​n​ ​B​e​l​g​i​ë​ ​e​n​ ​N​e​d​e​r​l​a​n​d​.
+	 */
+	description: string
+	languages: {
+		/**
+		 * n​l​-​B​E
+		 */
+		siteLanguage: string
+		/**
+		 * N​e​d​e​r​l​a​n​d​s
+		 */
+		nl: string
+		/**
+		 * F​r​a​n​s
+		 */
+		fr: string
+		/**
+		 * E​n​g​e​l​s
+		 */
+		en: string
+	}
+	members: {
+		tom: {
+			/**
+			 * C​E​O​ ​/​ ​T​r​a​i​n​e​r
+			 */
+			title: string
+			/**
+			 * E​i​g​e​n​a​a​r
+			 */
+			status: string
+			/**
+			 * t​o​m​v​a​n​d​o​r​s​t​@​t​r​i​x​o​l​u​t​i​o​n​s​.​b​e
+			 */
+			email: string
+		}
+		tamara: {
+			/**
+			 * O​f​f​i​c​e​ ​M​a​n​a​g​e​r
+			 */
+			title: string
+		}
+		christoph: {
+			/**
+			 * T​r​a​i​n​e​r​ ​/​ ​F​a​c​i​l​i​t​a​t​o​r
+			 */
+			title: string
+		}
+	}
+	author: {
+		/**
+		 * M​i​s​t​ ​M​e​d​i​a
+		 */
+		name: string
+		/**
+		 * O​n​t​w​i​k​k​e​l​a​a​r
+		 */
+		status: string
+		/**
+		 * G​e​m​a​a​k​t​ ​m​e​t​ ​�​�​ ​d​o​o​r​ ​M​i​s​t​ ​M​e​d​i​a​.
+		 */
+		bio: string
+	}
+	address: {
+		be: {
+			/**
+			 * V​e​s​t​i​g​i​n​g​ ​B​e​l​g​i​ë
+			 */
+			name: string
+			/**
+			 * T​r​i​x​o​l​u​t​i​o​n​s
+			 */
+			location: string
+			/**
+			 * K​r​o​m​m​e​l​e​i
+			 */
+			street: string
+			/**
+			 * 1​4
+			 */
+			number: string
+			/**
+			 * 2​1​1​0
+			 */
+			zip: string
+			/**
+			 * W​i​j​n​e​g​e​m
+			 */
+			city: string
+			/**
+			 * A​n​t​w​e​r​p​e​n
+			 */
+			province: string
+			/**
+			 * B​e​l​g​i​ë
+			 */
+			country: string
+			/**
+			 * h​t​t​p​s​:​/​/​t​r​i​x​o​l​u​t​i​o​n​s​.​b​e
+			 */
+			url: string
+			/**
+			 * O​n​z​e​ ​v​e​s​t​i​g​i​n​g​ ​i​n​ ​B​e​l​g​i​ë​ ​i​s​ ​g​e​v​e​s​t​i​g​d​ ​i​n​ ​W​i​j​n​e​g​e​m​,​ ​A​n​t​w​e​r​p​e​n​.
+			 */
+			description: string
+		}
+		nl: {
+			/**
+			 * V​e​s​t​i​g​i​n​g​ ​N​e​d​e​r​l​a​n​d
+			 */
+			name: string
+			/**
+			 * A​r​t​ ​C​e​n​t​e​r​ ​D​e​l​f​t
+			 */
+			location: string
+			/**
+			 * R​o​t​t​e​r​d​a​m​s​e​w​e​g
+			 */
+			street: string
+			/**
+			 * 2​0​5
+			 */
+			number: string
+			/**
+			 * 2​6​2​9​ ​H​D
+			 */
+			zip: string
+			/**
+			 * D​e​l​f​t
+			 */
+			city: string
+			/**
+			 * Z​u​i​d​-​H​o​l​l​a​n​d
+			 */
+			province: string
+			/**
+			 * N​e​d​e​r​l​a​n​d
+			 */
+			country: string
+			/**
+			 * h​t​t​p​s​:​/​/​a​r​t​c​e​n​t​r​e​d​e​l​f​t​.​c​o​m
+			 */
+			url: string
+			/**
+			 * O​n​z​e​ ​v​e​s​t​i​g​i​n​g​ ​i​n​ ​N​e​d​e​r​l​a​n​d​ ​i​s​ ​g​e​v​e​s​t​i​g​d​ ​i​n​ ​A​r​t​ ​C​e​n​t​e​r​ ​D​e​l​f​t​,​ ​Z​u​i​d​-​H​o​l​l​a​n​d​.
+			 */
+			description: string
+		}
+	}
+	ratings: {
+		/**
+		 * G​e​b​a​s​e​e​r​d​ ​o​p​ ​{​a​m​o​u​n​t​}​ ​b​e​o​o​r​d​e​l​i​n​g​e​n
+		 * @param {unknown} amount
+		 */
+		text: RequiredParams<'amount'>
+	}
+	audience: {
+		/**
+		 * B​e​d​r​i​j​v​e​n​ ​d​i​e​ ​h​u​n​ ​t​e​a​m​p​r​e​s​t​a​t​i​e​s​ ​w​i​l​l​e​n​ ​v​e​r​b​e​t​e​r​e​n​.
+		 */
+		description: string
+	}
+	pricing: {
+		/**
+		 * B​T​W
+		 */
+		vat: string
+		/**
+		 * P​r​i​j​s​b​e​r​e​i​k
+		 */
+		price_range: string
+		/**
+		 * P​r​i​j​z​e​n​ ​z​i​j​n​ ​e​x​c​l​u​s​i​e​f​ ​B​T​W​.
+		 */
+		description: string
+		per: {
+			/**
+			 * p​e​r​ ​p​e​r​s​o​o​n
+			 */
+			person: string
+			/**
+			 * p​e​r​ ​t​e​a​m
+			 */
+			team: string
+			/**
+			 * p​e​r​ ​d​a​g
+			 */
+			day: string
+			/**
+			 * p​e​r​ ​m​a​a​n​d
+			 */
+			month: string
+			/**
+			 * p​e​r​ ​{​a​m​o​u​n​t​}​ ​m​a​a​n​d​e​n
+			 * @param {unknown} amount
+			 */
+			months: RequiredParams<'amount'>
+			/**
+			 * p​e​r​ ​j​a​a​r
+			 */
+			year: string
+		}
+	}
+	opening_hours: {
+		/**
+		 * O​p​e​n​i​n​g​s​t​i​j​d​e​n
+		 */
+		title: string
+		/**
+		 * O​n​z​e​ ​o​p​e​n​i​n​g​s​t​i​j​d​e​n​ ​z​i​j​n​ ​v​a​n​ ​{​s​t​a​r​t​}​ ​t​o​t​ ​{​e​n​d​}​,​ ​v​a​n​ ​{​o​p​e​n​}​ ​t​o​t​ ​{​c​l​o​s​e​}​.
+		 * @param {unknown} close
+		 * @param {unknown} end
+		 * @param {unknown} open
+		 * @param {unknown} start
+		 */
+		description: RequiredParams<'close' | 'end' | 'open' | 'start'>
+		/**
+		 * D​e​ ​o​p​e​n​i​n​g​s​t​i​j​d​e​n​ ​z​i​j​n​ ​g​e​b​a​s​e​e​r​d​ ​o​p​ ​B​r​u​s​s​e​l​s​e​ ​t​i​j​d​.​ ​(​G​M​T​+​1​)
+		 */
+		description_disambiguation: string
+		/**
+		 * H​e​t​ ​o​n​l​i​n​e​ ​l​e​e​r​p​l​a​t​f​o​r​m​ ​i​s​ ​a​l​t​i​j​d​ ​b​e​s​c​h​i​k​b​a​a​r​ ​(​2​4​/​7​)​.
+		 */
+		service_open: string
+		days_of_week: {
+			/**
+			 * m​a​a​n​d​a​g
+			 */
+			monday: string
+			/**
+			 * d​i​n​s​d​a​g
+			 */
+			tuesday: string
+			/**
+			 * w​o​e​n​s​d​a​g
+			 */
+			wednesday: string
+			/**
+			 * d​o​n​d​e​r​d​a​g
+			 */
+			thursday: string
+			/**
+			 * v​r​i​j​d​a​g
+			 */
+			friday: string
+			/**
+			 * z​a​t​e​r​d​a​g
+			 */
+			saturday: string
+			/**
+			 * z​o​n​d​a​g
+			 */
+			sunday: string
+		}
+	}
+	services: {
+		/**
+		 * O​p​l​e​i​d​i​n​g​e​n​ ​i​n​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g
+		 */
+		title: string
+		/**
+		 * T​r​i​x​o​l​u​t​i​o​n​s​ ​b​i​e​d​t​ ​o​p​l​e​i​d​i​n​g​e​n​ ​e​n​ ​t​r​a​i​n​i​n​g​e​n​ ​i​n​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​a​a​n​.​ ​L​e​e​r​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​M​o​d​e​l​ ​k​e​n​n​e​n​ ​e​n​ ​b​r​e​n​g​ ​j​e​ ​t​e​a​m​ ​n​a​a​r​ ​e​e​n​ ​h​o​g​e​r​ ​n​i​v​e​a​u​.
+		 */
+		description: string
+		/**
+		 * T​e​a​m​c​o​a​c​h​i​n​g
+		 */
+		type: string
+		'default': {
+			/**
+			 * L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g
+			 */
+			title: string
+			/**
+			 * L​e​e​r​ ​h​e​t​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​M​o​d​e​l​ ​k​e​n​n​e​n​ ​e​n​ ​b​r​e​n​g​ ​j​e​ ​t​e​a​m​ ​n​a​a​r​ ​e​e​n​ ​h​o​g​e​r​ ​n​i​v​e​a​u​.
+			 */
+			description: string
+		}
+		hybrid_base: {
+			/**
+			 * L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​L​e​e​r​t​r​a​j​e​c​t
+			 */
+			title: string
+			/**
+			 * B​a​s​i​s​ ​T​r​i​x​o​l​u​t​i​o​n​s​/​L​e​n​c​i​o​n​i​ ​H​y​b​r​i​d​e​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​L​e​e​r​t​r​a​j​e​c​t
+			 */
+			title_alt: string
+			/**
+			 * D​i​t​ ​e​d​u​c​a​t​i​e​v​e​ ​p​l​a​n​ ​o​m​v​a​t​ ​e​e​n​ ​o​n​l​i​n​e​ ​t​o​o​l​ ​(​L​M​S​)​ ​v​o​o​r​ ​g​e​m​a​k​k​e​l​i​j​k​ ​o​n​l​i​n​e​ ​l​e​r​e​n​.
+			 */
+			description: string
+			/**
+			 * D​i​t​ ​e​d​u​c​a​t​i​e​v​e​ ​p​l​a​n​ ​o​m​v​a​t​ ​e​e​n​ ​o​n​l​i​n​e​ ​t​o​o​l​ ​(​L​M​S​)​ ​v​o​o​r​ ​g​e​m​a​k​k​e​l​i​j​k​ ​o​n​l​i​n​e​ ​l​e​r​e​n​.​ ​H​e​t​ ​i​s​ ​e​e​n​ ​h​y​b​r​i​d​e​ ​l​e​e​r​t​r​a​j​e​c​t​ ​z​o​n​d​e​r​ ​t​w​e​e​d​a​a​g​s​e​ ​o​n​s​i​t​e​ ​m​a​s​t​e​r​c​l​a​s​s​.
+			 */
+			description_disambiguation: string
+		}
+		hybrid_full: {
+			/**
+			 * H​y​b​r​i​d​e​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​L​e​e​r​t​r​a​j​e​c​t
+			 */
+			title: string
+			/**
+			 * V​o​l​l​e​d​i​g​ ​T​r​i​x​o​l​u​t​i​o​n​s​/​L​e​n​c​i​o​n​i​ ​H​y​b​r​i​d​e​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​L​e​e​r​t​r​a​j​e​c​t
+			 */
+			title_alt: string
+			/**
+			 * L​e​e​r​ ​d​e​ ​b​e​p​r​o​e​f​d​e​ ​e​n​ ​e​n​ ​s​u​c​c​e​s​v​o​l​l​e​ ​i​n​z​i​c​h​t​e​n​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​k​e​n​n​e​n​ ​e​n​ ​b​r​e​n​g​ ​j​e​ ​t​e​a​m​ ​n​a​a​r​ ​e​e​n​ ​h​o​g​e​r​ ​n​i​v​e​a​u​ ​m​e​t​ ​e​e​n​ ​H​y​b​r​i​d​e​ ​L​e​e​r​t​r​a​j​e​c​t​ ​m​e​t​ ​L​M​S​ ​é​n​ ​T​w​e​e​d​a​a​g​s​e​ ​L​i​v​e​ ​M​a​s​t​e​r​c​l​a​s​s​!
+			 */
+			description: string
+			/**
+			 * D​i​t​ ​p​l​a​n​ ​i​s​ ​e​e​n​ ​v​o​l​l​e​d​i​g​ ​h​y​b​r​i​d​e​ ​t​e​a​m​c​o​a​c​h​i​n​g​s​t​r​a​j​e​c​t​,​ ​d​a​t​ ​e​e​n​ ​o​n​l​i​n​e​ ​t​o​o​l​ ​(​L​M​S​)​ ​v​o​o​r​ ​z​e​l​f​e​d​u​c​a​t​i​e​ ​e​n​ ​e​e​n​ ​t​w​e​e​d​a​a​g​s​e​ ​o​n​-​s​i​t​e​ ​t​e​a​m​c​o​a​c​h​i​n​g​ ​m​a​s​t​e​r​c​l​a​s​s​ ​o​m​v​a​t​!
+			 */
+			description_disambiguation: string
+		}
+		deepdive: {
+			/**
+			 * L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​D​e​e​p​ ​D​i​v​e
+			 */
+			title: string
+			/**
+			 * T​r​i​x​o​l​u​t​i​o​n​s​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​D​e​e​p​ ​D​i​v​e
+			 */
+			title_alt: string
+			/**
+			 * O​n​t​d​e​k​ ​d​e​ ​4​ ​a​n​d​e​r​e​ ​s​u​c​c​e​s​v​o​l​l​e​ ​m​o​d​e​l​l​e​n​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​ ​e​n​ ​T​h​e​ ​T​a​b​l​e​ ​G​r​o​u​p​.​ ​O​p​t​i​m​a​l​i​s​e​e​r​ ​j​e​ ​t​e​a​m​c​o​a​c​h​i​n​g​ ​m​e​t​ ​e​e​n​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​L​e​n​c​i​o​n​i​ ​D​e​e​p​ ​D​i​v​e​!
+			 */
+			description: string
+			/**
+			 * B​r​e​i​d​ ​j​e​ ​k​e​n​n​i​s​ ​u​i​t​ ​m​e​t​ ​d​e​ ​4​ ​a​n​d​e​r​e​ ​s​u​c​c​e​s​m​o​d​e​l​l​e​n​ ​v​a​n​ ​P​a​t​r​i​c​k​ ​L​e​n​c​i​o​n​i​.​ ​D​i​t​ ​i​s​ ​e​e​n​ ​u​i​t​b​r​e​i​d​i​n​g​ ​o​p​ ​d​e​ ​a​n​d​e​r​e​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​t​r​a​j​e​c​t​e​n​.
+			 */
+			description_disambiguation: string
+		}
+		extend: {
+			/**
+			 * L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​T​r​a​j​e​c​t​ ​V​e​r​l​e​n​g​e​n
+			 */
+			title: string
+			/**
+			 * T​r​i​x​o​l​u​t​i​o​n​s​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​T​r​a​j​e​c​t​ ​V​e​r​l​e​n​g​e​n
+			 */
+			title_alt: string
+			/**
+			 * V​e​r​l​e​n​g​ ​j​e​ ​L​e​n​c​i​o​n​i​ ​T​e​a​m​c​o​a​c​h​i​n​g​ ​T​r​a​j​e​c​t​ ​m​e​t​ ​e​e​n​ ​e​x​t​r​a​ ​j​a​a​r​,​ ​v​o​o​r​ ​s​l​e​c​h​t​s​ ​€​ ​4​9​0​!
+			 */
+			description: string
+			/**
+			 * D​e​ ​L​M​S​-​t​o​o​l​ ​i​s​ ​1​ ​j​a​a​r​ ​b​e​s​c​h​i​k​b​a​a​r​ ​e​n​ ​i​s​ ​t​e​ ​v​e​r​l​e​n​g​e​n​ ​v​o​o​r​ ​1​ ​j​a​a​r​ ​v​o​o​r​ ​€​ ​4​9​0​,​-​ ​e​x​c​l​.​ ​B​T​W​.
+			 */
+			description_disambiguation: string
+		}
+	}
+	services_locations: {
+		types: {
+			/**
+			 * O​n​l​i​n​e
+			 */
+			online: string
+			/**
+			 * O​n​s​i​t​e
+			 */
+			onsite: string
+			/**
+			 * H​y​b​r​i​d​e
+			 */
+			hybrid: string
+		}
+		be: {
+			/**
+			 * D​o​m​e​i​n​ ​M​a​r​t​i​n​u​s
+			 */
+			name: string
+			/**
+			 * S​n​i​e​d​e​r​s​p​a​d
+			 */
+			street: string
+			/**
+			 * 1​3​3
+			 */
+			number: string
+			/**
+			 * 2​9​8​0
+			 */
+			zip: string
+			/**
+			 * Z​o​e​r​s​e​l
+			 */
+			city: string
+			/**
+			 * A​n​t​w​e​r​p​e​n
+			 */
+			province: string
+			/**
+			 * B​e​l​g​i​ë
+			 */
+			country: string
+			/**
+			 * h​t​t​p​s​:​/​/​d​o​m​e​i​n​m​a​r​t​i​n​u​s​.​b​e
+			 */
+			url: string
+		}
+	}
+	contact: {
+		/**
+		 * C​o​n​t​a​c​t​e​e​r​ ​o​n​s
+		 */
+		title: string
+		/**
+		 * C​o​n​t​a​c​t​e​e​r​ ​T​r​i​x​o​l​u​t​i​o​n​s
+		 */
+		title_alt: string
+		/**
+		 * H​e​b​ ​j​e​ ​v​r​a​g​e​n​ ​o​f​ ​w​i​l​ ​j​e​ ​m​e​e​r​ ​i​n​f​o​r​m​a​t​i​e​?​ ​N​e​e​m​ ​d​a​n​ ​c​o​n​t​a​c​t​ ​m​e​t​ ​o​n​s​ ​o​p​.
+		 */
+		description: string
+		types: {
+			/**
+			 * W​e​b​s​i​t​e
+			 */
+			website: string
+			/**
+			 * C​o​n​t​a​c​t​e​e​r​ ​o​n​s​ ​v​i​a​ ​d​e​ ​w​e​b​s​i​t​e​.
+			 */
+			website_description: string
+			/**
+			 * T​e​l​e​f​o​o​n
+			 */
+			phone: string
+			/**
+			 * B​e​l​ ​o​n​s​ ​o​p​ ​o​n​s​ ​t​e​l​e​f​o​o​n​n​u​m​m​e​r​.
+			 */
+			phone_description: string
+			/**
+			 * E​-​m​a​i​l
+			 */
+			email: string
+			/**
+			 * S​t​u​u​r​ ​o​n​s​ ​e​e​n​ ​e​-​m​a​i​l​.
+			 */
+			email_description: string
+			/**
+			 * A​d​r​e​s
+			 */
+			address: string
+		}
+	}
+	catalog: {
+		/**
+		 * A​a​n​b​o​d
+		 */
+		title: string
+		/**
+		 * T​r​a​i​n​i​n​g​e​n​ ​e​n​ ​C​o​a​c​h​i​n​g
+		 */
+		title_alt: string
+		/**
+		 * E​e​n​ ​c​a​t​a​l​o​g​u​s​ ​v​a​n​ ​d​e​ ​t​r​a​i​n​i​n​g​s​p​l​a​n​n​e​n​ ​d​i​e​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​a​a​n​b​i​e​d​t​.
+		 */
+		description: string
+		/**
+		 * D​e​ ​a​a​n​b​o​d​c​a​t​a​l​o​g​u​s​ ​v​a​n​ ​T​r​i​x​o​l​u​t​i​o​n​s​ ​b​e​v​a​t​ ​d​e​ ​v​e​r​s​c​h​i​l​l​e​n​d​e​ ​t​r​a​i​n​i​n​g​s​p​l​a​n​n​e​n​ ​d​i​e​ ​b​e​s​c​h​i​k​b​a​a​r​ ​z​i​j​n​ ​v​o​o​r​ ​d​e​ ​k​l​a​n​t​.
+		 */
+		description_disambiguation: string
+	}
+	brands: {
+		capa_pro: {
+			/**
+			 * C​A​P​A​ ​P​r​o
+			 */
+			name: string
+			/**
+			 * C​A​P​A​ ​P​R​O​ ​i​s​ ​h​e​t​ ​p​r​o​f​e​s​s​i​o​n​e​l​e​ ​a​f​f​i​l​i​a​t​e​ ​n​e​t​w​e​r​k​ ​v​a​n​ ​P​a​t​ ​L​e​n​c​i​o​n​i​ ​e​n​ ​d​e​ ​T​a​b​l​e​ ​G​r​o​u​p​.​ ​L​e​d​e​n​ ​v​a​n​ ​C​A​P​A​ ​P​R​O​ ​h​e​b​b​e​n​ ​e​x​c​l​u​s​i​e​v​e​ ​t​o​e​g​a​n​g​ ​t​o​t​ ​l​i​v​e​-​e​v​e​n​e​m​e​n​t​e​n​,​ ​e​i​g​e​n​ ​i​n​h​o​u​d​,​ ​t​r​a​i​n​i​n​g​,​ ​t​o​o​l​s​ ​e​n​ ​a​d​v​i​e​s​ ​v​a​n​ ​L​e​n​c​i​o​n​i​ ​e​n​ ​z​i​j​n​ ​b​e​d​r​i​j​f​ ​o​m​ ​h​e​n​ ​t​e​ ​h​e​l​p​e​n​ ​l​e​i​d​e​r​s​,​ ​t​e​a​m​s​ ​e​n​ ​o​r​g​a​n​i​s​a​t​i​e​s​ ​t​e​ ​t​r​a​n​s​f​o​r​m​e​r​e​n​.
+			 */
+			description: string
+			/**
+			 * D​e​ ​O​f​f​i​c​i​ë​l​e​ ​A​l​l​i​a​n​t​i​e​ ​v​a​n​ ​A​d​v​i​s​e​u​r​s​ ​e​n​ ​P​r​a​k​t​i​j​k​p​r​o​f​e​s​s​i​o​n​a​l​s​ ​v​a​n​ ​T​h​e​ ​T​a​b​l​e​ ​G​r​o​u​p
+			 */
+			slogan: string
+		}
+	}
+}
+
 export type Namespaces =
 	| 'components'
 	| 'nav'
@@ -3336,6 +3844,7 @@ export type Namespaces =
 	| 'pages'
 	| 'pages_explore'
 	| 'sessions'
+	| 'website'
 
 type DisallowNamespaces = {
 	/**
@@ -3373,6 +3882,12 @@ type DisallowNamespaces = {
 	 * you need to use the `./sessions/index.ts` file instead
 	 */
 	sessions?: "[typesafe-i18n] reserved for 'sessions'-namespace. You need to use the `./sessions/index.ts` file instead."
+
+	/**
+	 * reserved for 'website'-namespace\
+	 * you need to use the `./website/index.ts` file instead
+	 */
+	website?: "[typesafe-i18n] reserved for 'website'-namespace. You need to use the `./website/index.ts` file instead."
 }
 
 export type TranslationFunctions = {
@@ -5875,6 +6390,14 @@ export type TranslationFunctions = {
 			 */
 			time: () => LocalizedString
 			/**
+			 * Een gratis, online, open infosessie over onze veelzijdige Lencioni Teamcoaching Opleidingen.
+			 */
+			description: () => LocalizedString
+			/**
+			 * Een gratis, online, open infosessie over onze veelzijdige Lencioni Teamcoaching Opleidingen. Aarzel niet en schrijf je in!
+			 */
+			description_alt: () => LocalizedString
+			/**
 			 * Een gratis, open infosessie over onze veelzijdige Lencioni Teamcoaching Opleiding.<br/>Aarzel niet en schrijf je in!
 			 */
 			excerpt: () => LocalizedString
@@ -6648,6 +7171,498 @@ export type TranslationFunctions = {
 			 * Deze open sessies vinden fysiek plaats en zijn steeds veilig doch dynamisch en hoogst interactief.
 			 */
 			approach: () => LocalizedString
+		}
+	}
+	website: {
+		/**
+		 * Trixolutions
+		 */
+		title: () => LocalizedString
+		/**
+		 * Training, Coaching & Consultancy
+		 */
+		slogan: () => LocalizedString
+		/**
+		 * Opleidingen en Training in Lencioni Teamcoaching en Consultancy
+		 */
+		tagLine: () => LocalizedString
+		/**
+		 * Trixolutions is een opleidings- en trainingscentrum voor Lencioni Teamcoaching en Consultancy.
+		 */
+		description_short: () => LocalizedString
+		/**
+		 * Trixolutions is een opleidings- en trainingscentrum voor Lencioni Teamcoaching en Consultancy. We bieden opleidingen en trainingen aan in België en Nederland.
+		 */
+		description: () => LocalizedString
+		languages: {
+			/**
+			 * nl-BE
+			 */
+			siteLanguage: () => LocalizedString
+			/**
+			 * Nederlands
+			 */
+			nl: () => LocalizedString
+			/**
+			 * Frans
+			 */
+			fr: () => LocalizedString
+			/**
+			 * Engels
+			 */
+			en: () => LocalizedString
+		}
+		members: {
+			tom: {
+				/**
+				 * CEO / Trainer
+				 */
+				title: () => LocalizedString
+				/**
+				 * Eigenaar
+				 */
+				status: () => LocalizedString
+				/**
+				 * tomvandorst@trixolutions.be
+				 */
+				email: () => LocalizedString
+			}
+			tamara: {
+				/**
+				 * Office Manager
+				 */
+				title: () => LocalizedString
+			}
+			christoph: {
+				/**
+				 * Trainer / Facilitator
+				 */
+				title: () => LocalizedString
+			}
+		}
+		author: {
+			/**
+			 * Mist Media
+			 */
+			name: () => LocalizedString
+			/**
+			 * Ontwikkelaar
+			 */
+			status: () => LocalizedString
+			/**
+			 * Gemaakt met 💪 door Mist Media.
+			 */
+			bio: () => LocalizedString
+		}
+		address: {
+			be: {
+				/**
+				 * Vestiging België
+				 */
+				name: () => LocalizedString
+				/**
+				 * Trixolutions
+				 */
+				location: () => LocalizedString
+				/**
+				 * Krommelei
+				 */
+				street: () => LocalizedString
+				/**
+				 * 14
+				 */
+				number: () => LocalizedString
+				/**
+				 * 2110
+				 */
+				zip: () => LocalizedString
+				/**
+				 * Wijnegem
+				 */
+				city: () => LocalizedString
+				/**
+				 * Antwerpen
+				 */
+				province: () => LocalizedString
+				/**
+				 * België
+				 */
+				country: () => LocalizedString
+				/**
+				 * https://trixolutions.be
+				 */
+				url: () => LocalizedString
+				/**
+				 * Onze vestiging in België is gevestigd in Wijnegem, Antwerpen.
+				 */
+				description: () => LocalizedString
+			}
+			nl: {
+				/**
+				 * Vestiging Nederland
+				 */
+				name: () => LocalizedString
+				/**
+				 * Art Center Delft
+				 */
+				location: () => LocalizedString
+				/**
+				 * Rotterdamseweg
+				 */
+				street: () => LocalizedString
+				/**
+				 * 205
+				 */
+				number: () => LocalizedString
+				/**
+				 * 2629 HD
+				 */
+				zip: () => LocalizedString
+				/**
+				 * Delft
+				 */
+				city: () => LocalizedString
+				/**
+				 * Zuid-Holland
+				 */
+				province: () => LocalizedString
+				/**
+				 * Nederland
+				 */
+				country: () => LocalizedString
+				/**
+				 * https://artcentredelft.com
+				 */
+				url: () => LocalizedString
+				/**
+				 * Onze vestiging in Nederland is gevestigd in Art Center Delft, Zuid-Holland.
+				 */
+				description: () => LocalizedString
+			}
+		}
+		ratings: {
+			/**
+			 * Gebaseerd op {amount} beoordelingen
+			 */
+			text: (arg: { amount: unknown }) => LocalizedString
+		}
+		audience: {
+			/**
+			 * Bedrijven die hun teamprestaties willen verbeteren.
+			 */
+			description: () => LocalizedString
+		}
+		pricing: {
+			/**
+			 * BTW
+			 */
+			vat: () => LocalizedString
+			/**
+			 * Prijsbereik
+			 */
+			price_range: () => LocalizedString
+			/**
+			 * Prijzen zijn exclusief BTW.
+			 */
+			description: () => LocalizedString
+			per: {
+				/**
+				 * per persoon
+				 */
+				person: () => LocalizedString
+				/**
+				 * per team
+				 */
+				team: () => LocalizedString
+				/**
+				 * per dag
+				 */
+				day: () => LocalizedString
+				/**
+				 * per maand
+				 */
+				month: () => LocalizedString
+				/**
+				 * per {amount} maanden
+				 */
+				months: (arg: { amount: unknown }) => LocalizedString
+				/**
+				 * per jaar
+				 */
+				year: () => LocalizedString
+			}
+		}
+		opening_hours: {
+			/**
+			 * Openingstijden
+			 */
+			title: () => LocalizedString
+			/**
+			 * Onze openingstijden zijn van {start} tot {end}, van {open} tot {close}.
+			 */
+			description: (arg: { close: unknown, end: unknown, open: unknown, start: unknown }) => LocalizedString
+			/**
+			 * De openingstijden zijn gebaseerd op Brusselse tijd. (GMT+1)
+			 */
+			description_disambiguation: () => LocalizedString
+			/**
+			 * Het online leerplatform is altijd beschikbaar (24/7).
+			 */
+			service_open: () => LocalizedString
+			days_of_week: {
+				/**
+				 * maandag
+				 */
+				monday: () => LocalizedString
+				/**
+				 * dinsdag
+				 */
+				tuesday: () => LocalizedString
+				/**
+				 * woensdag
+				 */
+				wednesday: () => LocalizedString
+				/**
+				 * donderdag
+				 */
+				thursday: () => LocalizedString
+				/**
+				 * vrijdag
+				 */
+				friday: () => LocalizedString
+				/**
+				 * zaterdag
+				 */
+				saturday: () => LocalizedString
+				/**
+				 * zondag
+				 */
+				sunday: () => LocalizedString
+			}
+		}
+		services: {
+			/**
+			 * Opleidingen in Lencioni Teamcoaching
+			 */
+			title: () => LocalizedString
+			/**
+			 * Trixolutions biedt opleidingen en trainingen in Lencioni Teamcoaching aan. Leer het Lencioni Teamcoaching Model kennen en breng je team naar een hoger niveau.
+			 */
+			description: () => LocalizedString
+			/**
+			 * Teamcoaching
+			 */
+			type: () => LocalizedString
+			'default': {
+				/**
+				 * Lencioni Teamcoaching
+				 */
+				title: () => LocalizedString
+				/**
+				 * Leer het Lencioni Teamcoaching Model kennen en breng je team naar een hoger niveau.
+				 */
+				description: () => LocalizedString
+			}
+			hybrid_base: {
+				/**
+				 * Lencioni Teamcoaching Leertraject
+				 */
+				title: () => LocalizedString
+				/**
+				 * Basis Trixolutions/Lencioni Hybride Teamcoaching Leertraject
+				 */
+				title_alt: () => LocalizedString
+				/**
+				 * Dit educatieve plan omvat een online tool (LMS) voor gemakkelijk online leren.
+				 */
+				description: () => LocalizedString
+				/**
+				 * Dit educatieve plan omvat een online tool (LMS) voor gemakkelijk online leren. Het is een hybride leertraject zonder tweedaagse onsite masterclass.
+				 */
+				description_disambiguation: () => LocalizedString
+			}
+			hybrid_full: {
+				/**
+				 * Hybride Lencioni Teamcoaching Leertraject
+				 */
+				title: () => LocalizedString
+				/**
+				 * Volledig Trixolutions/Lencioni Hybride Teamcoaching Leertraject
+				 */
+				title_alt: () => LocalizedString
+				/**
+				 * Leer de beproefde en en succesvolle inzichten van Patrick Lencioni kennen en breng je team naar een hoger niveau met een Hybride Leertraject met LMS én Tweedaagse Live Masterclass!
+				 */
+				description: () => LocalizedString
+				/**
+				 * Dit plan is een volledig hybride teamcoachingstraject, dat een online tool (LMS) voor zelfeducatie en een tweedaagse on-site teamcoaching masterclass omvat!
+				 */
+				description_disambiguation: () => LocalizedString
+			}
+			deepdive: {
+				/**
+				 * Lencioni Teamcoaching Deep Dive
+				 */
+				title: () => LocalizedString
+				/**
+				 * Trixolutions Lencioni Teamcoaching Deep Dive
+				 */
+				title_alt: () => LocalizedString
+				/**
+				 * Ontdek de 4 andere succesvolle modellen van Patrick Lencioni en The Table Group. Optimaliseer je teamcoaching met een Trixolutions Lencioni Deep Dive!
+				 */
+				description: () => LocalizedString
+				/**
+				 * Breid je kennis uit met de 4 andere succesmodellen van Patrick Lencioni. Dit is een uitbreiding op de andere Lencioni Teamcoaching trajecten.
+				 */
+				description_disambiguation: () => LocalizedString
+			}
+			extend: {
+				/**
+				 * Lencioni Teamcoaching Traject Verlengen
+				 */
+				title: () => LocalizedString
+				/**
+				 * Trixolutions Lencioni Teamcoaching Traject Verlengen
+				 */
+				title_alt: () => LocalizedString
+				/**
+				 * Verleng je Lencioni Teamcoaching Traject met een extra jaar, voor slechts € 490!
+				 */
+				description: () => LocalizedString
+				/**
+				 * De LMS-tool is 1 jaar beschikbaar en is te verlengen voor 1 jaar voor € 490,- excl. BTW.
+				 */
+				description_disambiguation: () => LocalizedString
+			}
+		}
+		services_locations: {
+			types: {
+				/**
+				 * Online
+				 */
+				online: () => LocalizedString
+				/**
+				 * Onsite
+				 */
+				onsite: () => LocalizedString
+				/**
+				 * Hybride
+				 */
+				hybrid: () => LocalizedString
+			}
+			be: {
+				/**
+				 * Domein Martinus
+				 */
+				name: () => LocalizedString
+				/**
+				 * Sniederspad
+				 */
+				street: () => LocalizedString
+				/**
+				 * 133
+				 */
+				number: () => LocalizedString
+				/**
+				 * 2980
+				 */
+				zip: () => LocalizedString
+				/**
+				 * Zoersel
+				 */
+				city: () => LocalizedString
+				/**
+				 * Antwerpen
+				 */
+				province: () => LocalizedString
+				/**
+				 * België
+				 */
+				country: () => LocalizedString
+				/**
+				 * https://domeinmartinus.be
+				 */
+				url: () => LocalizedString
+			}
+		}
+		contact: {
+			/**
+			 * Contacteer ons
+			 */
+			title: () => LocalizedString
+			/**
+			 * Contacteer Trixolutions
+			 */
+			title_alt: () => LocalizedString
+			/**
+			 * Heb je vragen of wil je meer informatie? Neem dan contact met ons op.
+			 */
+			description: () => LocalizedString
+			types: {
+				/**
+				 * Website
+				 */
+				website: () => LocalizedString
+				/**
+				 * Contacteer ons via de website.
+				 */
+				website_description: () => LocalizedString
+				/**
+				 * Telefoon
+				 */
+				phone: () => LocalizedString
+				/**
+				 * Bel ons op ons telefoonnummer.
+				 */
+				phone_description: () => LocalizedString
+				/**
+				 * E-mail
+				 */
+				email: () => LocalizedString
+				/**
+				 * Stuur ons een e-mail.
+				 */
+				email_description: () => LocalizedString
+				/**
+				 * Adres
+				 */
+				address: () => LocalizedString
+			}
+		}
+		catalog: {
+			/**
+			 * Aanbod
+			 */
+			title: () => LocalizedString
+			/**
+			 * Trainingen en Coaching
+			 */
+			title_alt: () => LocalizedString
+			/**
+			 * Een catalogus van de trainingsplannen die Trixolutions aanbiedt.
+			 */
+			description: () => LocalizedString
+			/**
+			 * De aanbodcatalogus van Trixolutions bevat de verschillende trainingsplannen die beschikbaar zijn voor de klant.
+			 */
+			description_disambiguation: () => LocalizedString
+		}
+		brands: {
+			capa_pro: {
+				/**
+				 * CAPA Pro
+				 */
+				name: () => LocalizedString
+				/**
+				 * CAPA PRO is het professionele affiliate netwerk van Pat Lencioni en de Table Group. Leden van CAPA PRO hebben exclusieve toegang tot live-evenementen, eigen inhoud, training, tools en advies van Lencioni en zijn bedrijf om hen te helpen leiders, teams en organisaties te transformeren.
+				 */
+				description: () => LocalizedString
+				/**
+				 * De Officiële Alliantie van Adviseurs en Praktijkprofessionals van The Table Group
+				 */
+				slogan: () => LocalizedString
+			}
 		}
 	}
 }

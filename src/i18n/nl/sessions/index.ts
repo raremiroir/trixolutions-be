@@ -33,6 +33,8 @@ const nl_sessions: BaseTranslation = {
       subscribe: 'inschrijven in infosessie',
       trainer: "trainer",
       time: "tijd",
+      description: "Een gratis, online, open infosessie over onze veelzijdige Lencioni Teamcoaching Opleidingen.",
+      description_alt: "Een gratis, online, open infosessie over onze veelzijdige Lencioni Teamcoaching Opleidingen. Aarzel niet en schrijf je in!",
       excerpt: "Een gratis, open infosessie over onze veelzijdige Lencioni Teamcoaching Opleiding.<br/>Aarzel niet en schrijf je in!",
       intro: {
          title: "Teamcoaching met Lencioni",

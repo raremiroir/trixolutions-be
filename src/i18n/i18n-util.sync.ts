@@ -15,18 +15,21 @@ import en_other from './en/other/index.js'
 import en_pages from './en/pages/index.js'
 import en_pages_explore from './en/pages_explore/index.js'
 import en_sessions from './en/sessions/index.js'
+import en_website from './en/website/index.js'
 import fr_components from './fr/components/index.js'
 import fr_nav from './fr/nav/index.js'
 import fr_other from './fr/other/index.js'
 import fr_pages from './fr/pages/index.js'
 import fr_pages_explore from './fr/pages_explore/index.js'
 import fr_sessions from './fr/sessions/index.js'
+import fr_website from './fr/website/index.js'
 import nl_components from './nl/components/index.js'
 import nl_nav from './nl/nav/index.js'
 import nl_other from './nl/other/index.js'
 import nl_pages from './nl/pages/index.js'
 import nl_pages_explore from './nl/pages_explore/index.js'
 import nl_sessions from './nl/sessions/index.js'
+import nl_website from './nl/website/index.js'
 
 const localeTranslations = {
 	en: {
@@ -36,7 +39,8 @@ const localeTranslations = {
 		other: en_other,
 		pages: en_pages,
 		pages_explore: en_pages_explore,
-		sessions: en_sessions
+		sessions: en_sessions,
+		website: en_website
 	},
 	fr: {
 		...fr,
@@ -45,7 +49,8 @@ const localeTranslations = {
 		other: fr_other,
 		pages: fr_pages,
 		pages_explore: fr_pages_explore,
-		sessions: fr_sessions
+		sessions: fr_sessions,
+		website: fr_website
 	},
 	nl: {
 		...nl,
@@ -54,7 +59,8 @@ const localeTranslations = {
 		other: nl_other,
 		pages: nl_pages,
 		pages_explore: nl_pages_explore,
-		sessions: nl_sessions
+		sessions: nl_sessions,
+		website: nl_website
 	},
 }
 
