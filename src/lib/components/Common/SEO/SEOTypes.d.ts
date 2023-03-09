@@ -20,10 +20,10 @@ export type MediaObject = {
    tags?: string[];
 };
 export type PersonObject = {
-   first_name: string;
-   last_name: string;
-   gender: string;
-} | boolean;
+   first_name?: string;
+   last_name?: string;
+   gender?: string;
+};
 
 export type OGProps = {
    title: string;
