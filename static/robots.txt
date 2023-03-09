@@ -6,24 +6,21 @@ Allow: /
 
 
 Disallow: /cgi-bin/
+
 Disallow: /terms-conditions
 Disallow: /algemene-voorwaarden
 Disallow: /conditions-generales
 Disallow: /en/terms-conditions
 Disallow: /nl/algemene-voorwaarden
 Disallow: /fr/conditions-generales
-Disallow: /vacancies
-Disallow: /vacatures
-Disallow: /postes-vacants
-Disallow: /en/vacancies
-Disallow: /nl/vacatures
-Disallow: /fr/postes-vacants
+
 Disallow: /privacy-policy
 Disallow: /privacybeleid
 Disallow: /politique-de-confidentialite
 Disallow: /en/privacy-policy
 Disallow: /nl/privacybeleid
 Disallow: /fr/politique-de-confidentialite
+
 Disallow: /general-conditions-sme-portfolio
 Disallow: /algemene-voorwaarden-kmo-portfolio
 Disallow: /conditions-generales-portefeuille-pme
