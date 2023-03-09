@@ -9,7 +9,7 @@
 
    // Import Components
    import { 
-      Main, SEO, Section, Footer, Navbar, 
+      Main, SEONew, Section, Footer, Navbar, 
       Reveal, PostCard, PostGrid, H2
    } from "$comp";
 	import HomeHeroSlides from './HomeHeroSlides.svelte';
@@ -19,10 +19,20 @@
    import { website } from '$lib/config/website';
 
    // Import i18n
+   import { i18nObject, i18n } from "typesafe-i18n";
    import LL, { locale } from "$i18n/i18n-svelte";
+   import { loadedLocales } from "$i18n/i18n-util";
+   import nl_nav from "$i18n/nl/nav";
+   import fr_nav from "$i18n/fr/nav";
+   import en_nav from "$i18n/en/nav";
+
+   const _NL = i18nObject('en', nl_nav);
+   const _FR = i18nObject('en', fr_nav);
+   const _EN = i18nObject('en', en_nav);
 
    // Import data
 	import type { PageData } from "./$types";
+	import { get } from "svelte/store";
    export let data:PageData;
    const categoryData = data.categories;
    const pagesData = data.pages;
@@ -33,14 +43,36 @@
    $: pageTitle = $LL.nav.home.title()
    $: pageDesc = $LL.nav.home.description()
 
-   let { author, siteUrl } = website;
-	$: breadcrumbs = [{ name: pageTitle, slug: pageSlug }];
-	
-   $: entityMeta = {
-		url: `${siteUrl}${pageSlug}`,
-		faviconWidth: 512, faviconHeight: 512,
-		caption: author,
-	};
+   // console.log(nl_nav)
+
+   const openGraph = {
+      title: pageTitle,
+      description: pageDesc,
+      tags: ['home', 'homepage', 'trixolutions', 'home page', 'teamcoaching'],
+   }
+   const schemaOrg = {
+      entity: {
+         name: {
+            nl: `Trixolutions - ${_NL.home.title}`,
+            en: `Trixolutions - ${_EN.home.title}`,
+            fr: `Trixolutions - ${_FR.home.title}`,
+         },
+         description: {
+            nl: `${_NL.home.description}`,
+            en: `${_EN.home.description}`,
+            fr: `${_FR.home.description}`,
+         },
+         slug: {
+            nl: `/nl/${_NL.home.slug}`,
+            en: `/en/${_EN.home.slug}`,
+            fr: `/fr/${_FR.home.slug}`,
+         },
+         breadcrumb: [],
+      },
+      sessions: [],
+
+      articles: [],
+   }
 
 
    const cardProps = {
@@ -49,13 +81,10 @@
 </script>
 
 <!-- SEO -->
-<SEO 
-	slug="{pageSlug}"
-	datePublished = '2023-01-11T12:31:00.000+0100'
-	lastUpdated = '2023-01-11T12:31:00.000+0100'
-	title="{pageTitle}"
-	metadescription="{pageDesc}"
-	{breadcrumbs} {entityMeta}
+<SEONew 
+   createdOn='2022-10-01'
+   updatedOn='2023-03-10'
+   {openGraph} {schemaOrg} 
 />
 
 <!-- Header -->
