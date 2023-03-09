@@ -1,3 +1,4 @@
+
 <script lang="ts">
    // Import types
    import type { RatingsObj, OGProps, SOProps, ImageMetadata, MediaObject } from "./SEOTypes";
@@ -14,8 +15,8 @@
    // ================== //
 
    // Export default props
-   export let createdOn = "";
-   export let updatedOn = "";
+   export let createdOn = website.created_on;
+   export let updatedOn = website.updated_on;
    export let hasAlternateLang = true;
    export let ratings: RatingsObj = { amount: 7, average: 4.8 }
 

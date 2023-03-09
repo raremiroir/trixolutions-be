@@ -225,7 +225,7 @@
    definedLocales.forEach((lang: Locales) => {
       const mainImage: ImageObject = { 
          '@type': 'ImageObject', 
-         '@id': `${website.domain}/${entityMeta.slug[lang]}#primaryimage`,
+         '@id': `${website.domain}/${entityMeta.slug[lang]}/#primaryimage`,
          "inLanguage": lang,
          "url": entityMeta.image?.url ? entityMeta.image.url : `${website.domain}/logo-1920x1280.webp`,
          "contentUrl": `${website.domain}/${entityMeta.slug[lang]}`,
@@ -234,7 +234,7 @@
          "caption": entityMeta.image?.alt ? entityMeta.image.alt[lang] : 'Logo Trixolutions',
          "about": {
             "@type": "WebPage",
-            "@id": `${website.domain}/${entityMeta.slug[lang]}#webpage`,
+            "@id": `${website.domain}/${entityMeta.slug[lang]}/#webpage`,
             "url": `${website.domain}/${entityMeta.slug[lang]}`,
          },	
       };
@@ -255,7 +255,7 @@
          "caption": "Logo Trixolutions",
          "about": {
             "@type": "WebPage",
-            "@id": `${website.domain}/${entityMeta.slug[lang]}#webpage`,
+            "@id": `${website.domain}/${entityMeta.slug[lang]}/#webpage`,
             "url": `${website.domain}/${entityMeta.slug[lang]}`,
          },
       };
@@ -276,7 +276,7 @@
                "caption": image.alt ? image.alt[lang] : 'Trixolutions',
                "about": {
                   "@type": "WebPage",
-                  "@id": `${website.domain}/${entityMeta.slug[lang]}#webpage`,
+                  "@id": `${website.domain}/${entityMeta.slug[lang]}/#webpage`,
                   "url": `${website.domain}/${entityMeta.slug[lang]}`,
                },	
             };
@@ -743,7 +743,7 @@
    definedLocales.forEach((lang: Locales) => {
       const extendOffer: Offer = {
          "@type": "Offer",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#offer/extend`,
+         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#offer/extend`,
 
          "name": L_WEBSITE[lang].services.extend.title(),
          "alternateName": L_WEBSITE[lang].services.extend.title_alt(),
@@ -782,7 +782,7 @@
    definedLocales.forEach((lang: Locales) => {
       const offerHybridBase: Offer = {
          "@type": "Offer",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#offer/hybrid_base`,
+         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_base`,
 
          "name": L_WEBSITE[lang].services.hybrid_base.title(),
          "alternateName": L_WEBSITE[lang].services.hybrid_base.title_alt(),
@@ -791,7 +791,7 @@
          
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#image/hybrid_base`,
+            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#image/hybrid_base`,
             "url": `${website.domain}/images/home/lencioni-ctc.webp`,
             "caption": L_WEBSITE[lang].services.hybrid_base.description_disambiguation(),
             "width": "1920",
@@ -803,7 +803,7 @@
          "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
          "itemOffered": {
             "@type": "Service",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#service/hybrid_base`,
+            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_base`,
             "name": L_WEBSITE[lang].services.hybrid_base.title(),
             "alternateName": L_WEBSITE[lang].services.hybrid_base.title_alt(),
             "description": L_WEBSITE[lang].services.hybrid_base.description(),
@@ -836,7 +836,7 @@
    definedLocales.forEach((lang: Locales) => {
       const offerHybridFull: Offer = {
          "@type": "Offer",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#offer/hybrid_full`,
+         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#offer/hybrid_full`,
 
          "name": L_WEBSITE[lang].services.hybrid_full.title(),
          "alternateName": L_WEBSITE[lang].services.hybrid_full.title_alt(),
@@ -845,7 +845,7 @@
 
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#image/hybrid_full`,
+            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#image/hybrid_full`,
             "url": `${website.domain}/images/home/working-genius.webp`,
             "caption": L_WEBSITE[lang].services.hybrid_full.description_disambiguation(),
             "width": "1080",
@@ -857,7 +857,7 @@
          "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
          "itemOffered": {
             "@type": "Service",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#service/hybrid_full`,
+            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`,
             "name": L_WEBSITE[lang].services.hybrid_full.title(),
             "alternateName": L_WEBSITE[lang].services.hybrid_full.title_alt(),
             "description": L_WEBSITE[lang].services.hybrid_full.description(),
@@ -890,7 +890,7 @@
    definedLocales.forEach((lang: Locales) => {
       const offerDeepDive: Offer = {
          "@type": "Offer",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}#offer/deepdive`,
+         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#offer/deepdive`,
 
          "name": L_WEBSITE[lang].services.deepdive.title(),
          "alternateName": L_WEBSITE[lang].services.deepdive.title_alt(),
@@ -899,7 +899,7 @@
 
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}#image/hybrid_full`,
+            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#image/hybrid_full`,
             "url": `${website.domain}/images/home/working-genius.webp`,
             "caption": L_WEBSITE[lang].services.deepdive.description_disambiguation(),
             "width": "1080",
@@ -911,7 +911,7 @@
          "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}`,
          "itemOffered": {
             "@type": "Service",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}#service/deepdive`,
+            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#service/deepdive`,
             "name": L_WEBSITE[lang].services.deepdive.title(),
             "alternateName": L_WEBSITE[lang].services.deepdive.title_alt(),
             "description": L_WEBSITE[lang].services.deepdive.description(),
@@ -946,7 +946,7 @@
    definedLocales.forEach((lang: Locales) => {
       const serviceHybridBase: Service = {
          "@type": "Service",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#service/hybrid_base`,
+         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_base`,
 
          "name": L_WEBSITE[lang].services.hybrid_base.title(),
          "alternateName": L_WEBSITE[lang].services.hybrid_base.title_alt(),
@@ -957,7 +957,7 @@
          
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#image/hybrid_base`,
+            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#image/hybrid_base`,
             "url": `${website.domain}/images/home/lencioni-ctc.webp`,
             "caption": L_WEBSITE[lang].services.hybrid_base.description_disambiguation(),
             "width": "1920",
@@ -993,11 +993,11 @@
          ],
 
          "isRelatedTo": [
-            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#service/hybrid_full`},
-            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}#service/deepdive`}
+            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`},
+            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#service/deepdive`}
          ],
          "isSimilarTo": [
-            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#service/hybrid_full`},
+            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`},
          ]
       }
       serviceHybridBaseObj[lang] = serviceHybridBase;
@@ -1007,7 +1007,7 @@
    definedLocales.forEach((lang: Locales) => {
       const serviceHybridFull: Service = {
          "@type": "Service",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#service/hybrid_full`,
+         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#service/hybrid_full`,
 
          "name": L_WEBSITE[lang].services.hybrid_full.title(),
          "alternateName": L_WEBSITE[lang].services.hybrid_full.title_alt(),
@@ -1018,7 +1018,7 @@
 
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#image/hybrid_full`,
+            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#image/hybrid_full`,
             "url": `${website.domain}/images/home/working-genius.webp`,
             "caption": L_WEBSITE[lang].services.hybrid_full.description_disambiguation(),
             "width": "1080",
@@ -1055,7 +1055,7 @@
 
          "isRelatedTo": [
             serviceHybridBaseObj[lang],
-            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}#service/deepdive`}
+            {"@type": "Service", "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#service/deepdive`}
          ],
          "isSimilarTo": [ serviceHybridBaseObj[lang] ]
       }
@@ -1066,7 +1066,7 @@
    definedLocales.forEach((lang: Locales) => {
       const serviceDeepDive: Service = {
          "@type": "Service",
-         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}#service/deepdive`,
+         "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#service/deepdive`,
 
          "name": L_WEBSITE[lang].services.deepdive.title(),
          "alternateName": L_WEBSITE[lang].services.deepdive.title_alt(),
@@ -1077,7 +1077,7 @@
 
          "image": {
             "@type": "ImageObject",
-            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}#image/hybrid_full`,
+            "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#image/hybrid_full`,
             "url": `${website.domain}/images/home/working-genius.webp`,
             "caption": L_WEBSITE[lang].services.deepdive.description_disambiguation(),
             "width": "1080",
@@ -1150,7 +1150,7 @@
                   "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}`,
                   "image": {
                      "@type": "ImageObject",
-                     "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}#image/hybrid_full`,
+                     "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.hybrid_traject.slug()}/#image/hybrid_full`,
                      "url": `${website.domain}/images/home/working-genius.webp`,
                      "caption": L_WEBSITE[lang].services.hybrid_full.description_disambiguation(),
                      "width": "1080",
@@ -1201,7 +1201,7 @@
                "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}`,
                "image": {
                   "@type": "ImageObject",
-                  "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}#image/hybrid_full`,
+                  "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.deepdive.slug()}/#image/hybrid_full`,
                   "url": `${website.domain}/images/home/working-genius.webp`,
                   "caption": L_WEBSITE[lang].services.deepdive.description_disambiguation(),
                   "width": "1080",
@@ -1252,7 +1252,7 @@
                "url": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.info_sessions.slug()}`,
                "image": {
                   "@type": "ImageObject",
-                  "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.info_sessions.slug()}#image/info_sessions`,
+                  "@id": `${website.domain}/${lang}/${L_NAV[lang].open_sessions.items.info_sessions.slug()}/#image/info_sessions`,
                   "url": `${website.domain}/images/home/lencioni-ctc.webp`,
                   "caption": L_SESSIONS[lang].info.description_alt(),
                   "width": "1920",
@@ -1541,7 +1541,7 @@
       }
       let breadcrumbsSchema: BreadcrumbList = {
          '@type': 'BreadcrumbList',
-         '@id': `${website.domain}/${entityMeta.slug[lang]}#breadcrumbs`,
+         '@id': `${website.domain}/${entityMeta.slug[lang]}/#breadcrumbs`,
          "itemListElement": breadCrumbsPerLocale,
       }
 
@@ -1555,7 +1555,7 @@
       // Define WebPage schema for each defined locale
       const webPageSchema: WebPage = {
          "@type": "WebPage",
-         "@id": `${website.domain}/${entityMeta.slug[lang]}#webpage`,
+         "@id": `${website.domain}/${entityMeta.slug[lang]}/#webpage`,
          "url": `${website.domain}/${entityMeta.slug[lang]}`,
    
          "name": `${website.title} - ${entityMeta.name[lang]}`,
