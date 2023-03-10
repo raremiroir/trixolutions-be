@@ -64,11 +64,11 @@
       images: schemaOrg.entity.image ? [{
          url: schemaOrg.entity.image.url,
          alt: schemaOrg.entity.image.alt ? schemaOrg.entity.image.alt[$locale] : '',
-         dimensions: { width: schemaOrg.entity.image.width ? schemaOrg.entity.image.width : 640, height: schemaOrg.entity.image.height ? schemaOrg.entity.image.height : 480 }
+         dimensions: { width: Number(schemaOrg.entity.image.width ? schemaOrg.entity.image.width : 640), height: Number(schemaOrg.entity.image.height ? schemaOrg.entity.image.height : 480) }
          }] : [{
             url: websiteLogo.url,
             alt: `Trixolutions - ${openGraph.title}`,
-            dimensions: { width: websiteLogo.width, height: websiteLogo.height }
+            dimensions: { width: Number(websiteLogo.width), height: Number(websiteLogo.height) }
          }],
       squareImages: [],
       audios: [],
