@@ -1,4 +1,4 @@
-import L from "$i18n/i18n-node"
+import L from "$utils/i18node"
 import { locales } from "$i18n/i18n-util"
 import type { 
    Locales, 

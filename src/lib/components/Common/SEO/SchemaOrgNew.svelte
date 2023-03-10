@@ -26,7 +26,7 @@
    // Import i18n
    import type { BaseTranslation, Locales, TranslationFunctions } from '$src/i18n/i18n-types';
    import { locales, baseLocale } from "$i18n/i18n-util";
-   import L from '$i18n/i18n-node';
+   import L from '$utils/i18node';
 
 
    // Import utils
