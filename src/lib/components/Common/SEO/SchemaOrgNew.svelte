@@ -1813,7 +1813,7 @@
       schemaOrgArray = [ ...schemaOrgArray, ...blogObj ]
    }
    
-   console.log(schemaOrgArray);
+   // console.log(schemaOrgArray);
    let jsonLdString = JSON.stringify(schemaOrgArray);
 
    let jsonLdScript = `<script type="application/ld+json">${jsonLdString}${'<'}/script>`;
