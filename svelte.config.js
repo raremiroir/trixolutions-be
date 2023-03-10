@@ -76,12 +76,12 @@ const config = {
       },
       csp: { 
          mode: 'auto',
-         // directives: {
-         //    'script-src': ['self']
-         // },
-         // reportOnly: {
-         //    'script-src': ['self']
-         // }
+         directives: {
+            'script-src': ['self', 'vitals.vercel-insights.com']
+         },
+         reportOnly: {
+            'script-src': ['self', 'vitals.vercel-insights.com']
+         }
       }
    },
    extensions: [
