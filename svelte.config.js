@@ -80,7 +80,8 @@ const config = {
             'script-src': ['self', 'vitals.vercel-insights.com']
          },
          reportOnly: {
-            'script-src': ['self', 'vitals.vercel-insights.com']
+            'report-to': ['self', 'vitals.vercel-insights.com'],
+            // 'report-uri': ['https://vitals.vercel-insights.com/api/vitals']
          }
       }
    },
