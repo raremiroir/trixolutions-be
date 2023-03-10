@@ -43,7 +43,7 @@
    // Define SEO Component Props
    $: openGraphProps = {
       siteTitle: website.title,
-      pageTitle: `Trixolutions - ${openGraph.title}`,
+      pageTitle: `Trixolutions | ${openGraph.title}`,
       metadescription: openGraph.description,
       url: url,
       
