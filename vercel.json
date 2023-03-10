@@ -5,12 +5,5 @@
       "memory": 3008,
       "maxDuration": 30
     }
-  },
-  "headers": [
-    {
-      "source": "/sw.js",
-      "key": "Cache-Control",
-      "value": "public, max-age=0, must-revalidate"
-    }
-  ]
+  }
 }
