@@ -106,6 +106,27 @@
    }
 </script>
 
+<svelte:head>
+   <title>{openGraphProps.pageTitle}</title>
+   <meta name="title" content={openGraphProps.pageTitle} />
+   <meta name="description" content={openGraphProps.metadescription} />
+   <meta name="author" content={schemaOrg.entity.author ? schemaOrg.entity.author : 'Trixolutions'} />
+
+   <meta name="theme-color" content="{website.themeColor}" />
+   <meta name="msapplication-TileColor" content="{website.themeColor}" />
+   <meta name="msapplication-TileImage" content="{website.domain}/apple-touch-icon-144x144.png" />
+   <meta name="msapplication-config" content="/browserconfig.xml" />
+   <meta name="application-name" content="Trixolutions" />
+   <meta name="apple-mobile-web-app-title" content="Trixolutions" />
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+   
+   <meta name="HandheldFriendly" content="true" />
+   <meta name="MobileOptimized" content="width" />
+   <meta name="referrer" content="origin" />
+   
+   <meta name="keywords" content={openGraphProps.tags?.join(',')} />
+</svelte:head>
 
 <OpenGraph {...openGraphProps} />
 <SchemaOrgNew {...schemaOrgProps} />
