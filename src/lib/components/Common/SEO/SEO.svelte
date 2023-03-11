@@ -108,6 +108,7 @@
 
 <svelte:head>
    <title>{openGraphProps.pageTitle}</title>
+   <link rel="canonical" href="{website.domain}/{openGraph.slug}"/>
    <meta name="title" content={openGraphProps.pageTitle} />
    <meta name="description" content={openGraphProps.metadescription} />
    <meta name="author" content={schemaOrg.entity.author ? schemaOrg.entity.author : 'Trixolutions'} />
