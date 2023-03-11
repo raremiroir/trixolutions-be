@@ -1,5 +1,4 @@
 import supabase from '$lib/db'
-import { formatDateFull } from '$src/lib/utils';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
@@ -31,7 +30,7 @@ export const load: PageLoad = async ({ params }) => {
       let sessionDates:any = [];
       data.forEach(session => {
          if (session.type === 'info_session') {
-            sessionDates.push(formatDateFull(session.starts_on));
+            sessionDates.push(new Date(session.starts_on).toLocaleDateString('nl-BE', { dateStyle: 'short' }));
          }
       });
       

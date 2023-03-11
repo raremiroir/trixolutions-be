@@ -1,6 +1,6 @@
 <script lang="ts">
 	import LL from "$i18n/i18n-svelte";
-	import { formatDateShort, formatTime, formatYear, titleCase } from "$utils";
+	import { titleCase } from "$utils";
 
 	import { CardBase, H4, Tag } from "$comp";
 	import Icon from "@iconify/svelte";
@@ -17,9 +17,14 @@
       hoverFx: 'minimal',
    }
 
+	const startDate = new Date(session.starts_on).toLocaleDateString($LL.code(), { day: '2-digit', month: '2-digit' });
+	const endDate = new Date(session.ends_on).toLocaleDateString($LL.code(), { day: '2-digit', month: '2-digit' });
+	const startTime = new Date(session.starts_on).toLocaleTimeString($LL.code(), { hour: '2-digit', minute: '2-digit' });
+	const endTime = new Date(session.ends_on).toLocaleTimeString($LL.code(), { hour: '2-digit', minute: '2-digit' });
+
 </script>
 <CardBase
-	title="{formatDateShort(session.starts_on)} - {formatDateShort(session.ends_on)}"
+	title="{startDate} - {endDate}"
 	{...cardProps}
 	class="{klass} group"
 >
@@ -30,9 +35,9 @@
 		/>
 		<H4 class="uppercase pt-[5px] {session.is_full ? 'text-error/70' : ''}" smaller>
 			<div class="flex flex-col gap-0 leading-none">
-				{formatDateShort(session.starts_on)} - {formatDateShort(session.ends_on)}<br />
+				{startDate} - {endDate}<br />
 				<span class="text-lg font-medium m-0">
-					{formatYear(session.starts_on)}
+					{new Date(session.starts_on).getFullYear()}
 					{#if session.is_full}
 						- {titleCase($LL.sessions.is_full())}
 					{/if}
@@ -49,7 +54,7 @@
 				opacity-60 group-hover:opacity-100 
 				transition-all duration-200 ease-in-out
 				border-gray-700 !text-gray-700">
-			{formatTime(session.starts_on)} - {formatTime(session.ends_on)}
+			{startTime} - {endTime}
 		</Tag>
 	</div>
 </CardBase>

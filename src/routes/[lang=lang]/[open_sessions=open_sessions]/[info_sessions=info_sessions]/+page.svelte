@@ -20,8 +20,10 @@
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
    // Import utils
-   import { formatDateMonthFull, formatTime, titleCase } from "$utils";
+   import { titleCase } from "$utils";
 	
+
+
 
    // Import data
 	import type { PageData } from "./$types";
@@ -31,7 +33,6 @@
    let sessions = Object(data.sessions);
    // Get info session dates
    let sessionDates = Object(data.sessionDates);
-
 
    // SEO
    $: openGraph = {
@@ -44,6 +45,7 @@
       entity: getBaseEntity('info_sessions', ['open_sessions', 'items']),
       sessions: data.sessions,
    }
+
 
 </script>
 
@@ -84,9 +86,9 @@
                <Reveal>
                   <CardBase
                      hoverFx="minimal"
-                     ariaLabel="{$LL.sessions.info.title_single()} - {formatDateMonthFull(session.starts_on)}"
-                     title={titleCase($LL.sessions.info.title_single())}
-                     badge="{formatDateMonthFull(session.starts_on)}" badgesTop
+                     ariaLabel="{$LL.sessions.info.title_single()} - {new Date(session.starts_on).toLocaleString($LL.code(), {day: 'numeric', month: 'long'})}"
+                     title={new Date(session.starts_on).toLocaleString($LL.code(), {day: 'numeric', month: 'long'})}
+                     badge="{new Date(session.starts_on).toLocaleString($LL.code(), {day: 'numeric', month: 'long'})}" badgesTop
                      height="h-[148px] sm:h-40  md:h-[164px]">
                      <H3 smaller thin slot="title" class="sm:whitespace-nowrap">{titleCase($LL.sessions.info.title_single())}</H3>
                      <div class="flex flex-row justify-between w-full">
@@ -96,7 +98,7 @@
                         </Tag>
                         <Tag primary>
                            <span class="text-xs italic">{titleCase($LL.sessions.info.time())}:</span><br/>
-                           {formatTime(session.starts_on)} - {formatTime(session.ends_on)}
+                           {new Date(session.starts_on).toLocaleTimeString($LL.code(), { hour: '2-digit', minute: '2-digit' })} - {new Date(session.ends_on).toLocaleTimeString($LL.code(), { hour: '2-digit', minute: '2-digit' })}
                         </Tag>
                      </div>
                   </CardBase>

@@ -7,11 +7,13 @@
       Hero, SEO, Reveal 
    } from "$comp";
    // Import utils
-   import { titleCase, formatDateMonthFull, formatTime, formatUrl } from "$utils";
+   import { titleCase, formatUrl } from "$utils";
    
    // Import types
    import type { BlogPost } from "$src/types";
    import type { PageData } from "./$types";
+
+   import LL from "$i18n/i18n-svelte";
 
    // Import data (first priority)
    export let data:PageData;
@@ -104,7 +106,7 @@
                {seoProps.author}
             </Subtitle>
             <Tag outlined secondary class="float-right !text-gray-50/70 !border-gray-50/70">
-               {formatDateMonthFull(seoProps.published)} ({formatTime(seoProps.published)})
+               {new Date(seoProps.published).toLocaleString($LL.code(), {day: 'numeric', month: 'long'})} ({new Date(seoProps.published).toLocaleTimeString($LL.code(), { hour: '2-digit', minute: '2-digit' })})
             </Tag>
          </div>
       </div>

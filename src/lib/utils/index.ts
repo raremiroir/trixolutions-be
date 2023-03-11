@@ -1,15 +1,8 @@
 // Formatters
-export { generateUsername as generateUsername } from './formatters/formatText';
-export { firstLetterCase as firstLetterCase } from './formatters/formatText';             // Hello world
-export { titleCase as titleCase } from './formatters/formatText';                         // Hello World
-export { formatUrl as formatUrl } from './formatters/formatText';                         // hello-world
-export { formatPrice as formatPrice } from './formatters/formatPrice';                    // 1,500.99
-export { formatYear as formatYear } from './formatters/formatDateTime'                    // 2023
-export { formatMonthShort as formatMonthShort } from './formatters/formatDateTime'        // jan
-export { formatDateMonthFull as formatDateMonthFull } from './formatters/formatDateTime'  // 10 Januari
-export { formatDateFull as formatDateFull } from './formatters/formatDateTime'            // 10/01/2023
-export { formatDateShort as formatDateShort } from './formatters/formatDateTime'          // 10/01
-export { formatTime as formatTime } from './formatters/formatDateTime'                    // 15:45
+export { firstLetterCase as firstLetterCase } from './formatters';             // Hello world
+export { titleCase as titleCase } from './formatters';                         // Hello World
+export { formatUrl as formatUrl } from './formatters';                         // hello-world
+export { formatPrice as formatPrice } from './formatters';
 
 // I18n
 export { replaceLocaleInUrl as replaceLocaleInUrl } from './i18n'

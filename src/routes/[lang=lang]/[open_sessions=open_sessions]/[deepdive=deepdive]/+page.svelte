@@ -22,8 +22,7 @@
    } from "../components/open-sessies";
    
    // Import constants
-   import { firstLetterCase, formatDateFull, formatUrl, titleCase } from "$utils";
-   import { website } from "$lib/config/website";
+   import { firstLetterCase, titleCase } from "$utils";
    import { currentModal } from "$src/lib/stores";
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
@@ -37,7 +36,7 @@
 
    let sessionDates:any = [];
    sessionData.forEach((element:any) => {
-      if (element.type === 'level_2') sessionDates.push(formatDateFull(element.starts_on))
+      if (element.type === 'level_2') sessionDates.push(new Date(element.starts_on).toLocaleDateString('nl-BE', { dateStyle: 'short' }))
    });
    
    // Set active store for modal

@@ -24,8 +24,7 @@
    // Import i18n
    import LL, { locale } from "$i18n/i18n-svelte";
    // Import globals
-   import { website } from "$lib/config/website";
-   import { titleCase, formatUrl, formatDateFull } from "$utils";
+   import { titleCase } from "$utils";
    import { currentModal } from "$src/lib/stores";
 	import { getBaseEntity } from "$src/lib/utils/seo";
    
@@ -42,7 +41,7 @@
 
    let sessionDates:any = [];
    sessionData.forEach((item:any) => {
-      if(item.type === 'level_1_full') sessionDates.push(formatDateFull(item.starts_on));
+      if(item.type === 'level_1_full') sessionDates.push(new Date(item.starts_on).toLocaleDateString('nl-BE', { dateStyle: 'short' }));
    });
 
 
