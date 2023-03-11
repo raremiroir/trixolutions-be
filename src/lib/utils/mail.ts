@@ -37,16 +37,9 @@ export const registerMailchimp = async({ first_name = '', last_name = '', email 
          }
       })
 
-      if (res.status === 200) {
-         return {
-            status: res.status,
-            data: res.json(),
-         }
-      } else {
-         return {
-            status: res.status,
-            data: res.json(), 
-         }
+      return {
+         status: res.status,
+         data: res.json(), 
       }
    } catch (err) {
       return {
