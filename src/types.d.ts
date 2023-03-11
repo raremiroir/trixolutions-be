@@ -16,3 +16,8 @@ export interface BlogPost {
       last_name: string,
    }
 }
+
+export interface CurPageMap {
+   locale: Locales;
+   slug: string;
+}
