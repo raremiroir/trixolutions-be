@@ -1,9 +1,9 @@
 import en_nav from '$i18n/en/nav';
 import fr_nav from '$i18n/fr/nav';
 import nl_nav from '$i18n/nl/nav';
-
-const locales = ['en', 'fr', 'nl'];
-
+import type { Locales } from '$src/i18n/i18n-types';
+import { baseLocale, locales } from '$i18n/i18n-util';
+import { getParamValues } from '../utils';
 
 interface navObject {
   [key: string]: any;
@@ -14,6 +14,13 @@ interface pagesObject {
     priority: Number;
   }
 }
+interface altLocalePagesObject {
+  [key: string]: {
+    [key in Locales]: string;
+  };
+}
+
+
 
 let pages:pagesObject = {};
 
@@ -23,7 +30,7 @@ const nav:navObject = {
   nl: nl_nav 
 }
 
-locales.forEach((locale) => {
+locales.forEach((locale: Locales) => {
 
   let currentNav = nav[locale];
   try {
@@ -112,5 +119,36 @@ locales.forEach((locale) => {
 });
 // console.log(pages);
 
+let pagesPerLocale: altLocalePagesObject = {};
+Object.keys(nav[baseLocale]).forEach(async key => {
+  if (key !== 'others' && key !== 'explore') {
+    const paramValues = await getParamValues(key);
+    pagesPerLocale[key] = paramValues;
+  }
 
-export { pages };
+  if (key === 'open_sessions') {
+    Object.keys(nav[baseLocale].open_sessions.items).forEach(async (item) => {
+      console.log(item);
+      const paramValues = await getParamValues(item, ['open_sessions', 'items']);
+      pagesPerLocale[item] = paramValues;
+    })
+  }
+
+  if (key === 'others') {
+    Object.keys(nav[baseLocale].others).forEach(async (item) => {
+      console.log(item);
+      const paramValues = await getParamValues(item, ['others']).catch(e => console.error(e));
+      pagesPerLocale[item] = paramValues;
+    })
+  }
+
+  if (key === 'explore') {
+    Object.keys(nav[baseLocale].explore.training_leadership_teamcoaching.items).forEach(async (item) => {
+      const paramValues = await getParamValues(item, ['explore', 'training_leadership_teamcoaching', 'items']);
+      pagesPerLocale[item] = paramValues;
+    })
+  }
+})
+
+
+export { pages, pagesPerLocale };
