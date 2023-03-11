@@ -7,29 +7,39 @@ import { redirect } from '@sveltejs/kit';
 import { randomUUID } from 'crypto';
 
 // Import i18n
-import { detectLocale, i18n, isLocale } from '$i18n/i18n-util'
+import { baseLocale, detectLocale, i18n, isLocale, locales } from '$i18n/i18n-util'
 import { loadAllLocales } from '$i18n/i18n-util.sync'
 import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors'
-import type { Locales } from './i18n/i18n-types';
+import type { Locales } from '$i18n/i18n-types';
 
 // Import sentry
 import * as Sentry from '@sentry/node'
 import { BrowserTracing } from '@sentry/tracing';
 
-interface mainSlugs {
+type MainSlugs = {
 	[key: string]: string[];
 }
 
-// Define all locales
-const myLocales = ['nl', 'fr', 'en']
 // Define main (first) slugs in urls for each locale
-const mainSlugs: mainSlugs = {
-	nl: ['open-sessies', 'contact', 'blog', 'over-ons', 'referenties'],
-	fr: ['sessions-ouvertes', 'a-propos', 'references'],
-	en: ['open-sessions', 'about-us']
-}
+import { pagesPerLocale } from '$lib/constants/pages';
 
-const allSlugs = Object.values(mainSlugs).flat();
+const slugsArr = Object.values(pagesPerLocale).flat();
+
+let mainSlugsNotUniue:MainSlugs = {}
+locales.forEach((locale: Locales) => {
+	mainSlugsNotUniue[locale] = slugsArr
+		.map((item) => item[locale])					// Get all slugs for locale
+		.filter(value => !value.includes('/'))		// Filter out slugs with subpages
+		.filter(value => !(value === ''));			// Filter out empty slugs
+})
+
+let mainSlugs:MainSlugs = {
+	nl: mainSlugsNotUniue.nl,
+	fr: mainSlugsNotUniue.fr.filter((item:any) => !mainSlugsNotUniue.nl.includes(item)),
+	en: mainSlugsNotUniue.en.filter((item:any) => !mainSlugsNotUniue.nl.includes(item) && !mainSlugsNotUniue.fr.includes(item))
+};
+
+const allSlugs = slugsArr.map((item) => Object.values(item)).flat();
 
 // Load locales
 loadAllLocales()
@@ -72,11 +82,16 @@ export const handle: Handle = async ({ event, resolve }) => {
 	// Try to get lang from path
 	const firstParam = splitPath[1];
 
-	let locale:Locales = 'nl'
+	let locale:Locales = baseLocale
 	let restPath = '';
 
 	// Check if first param is a locale or 'not found'
-	if (isLocale(firstParam) || (allSlugs.includes(firstParam) && firstParam !== '') || firstParam === '' || firstParam === 'not-found') {
+	if (
+		isLocale(firstParam) 
+		|| (allSlugs.includes(firstParam) && firstParam !== '') 
+		|| firstParam === '' 
+		|| firstParam === 'not-found'
+	) {
 		if (isLocale(firstParam)) {
 			// Define lang according to params
 			locale = firstParam as Locales;

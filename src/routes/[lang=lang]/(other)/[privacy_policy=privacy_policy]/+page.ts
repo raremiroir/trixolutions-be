@@ -1,8 +1,8 @@
+import { getParamValues } from '$src/lib/utils';
 import { error } from '@sveltejs/kit'
 import type { PageLoad } from './$types'
-import { getParamValues } from '$src/lib/utils';
 
-const pageName = 'terms_conditions';
+const pageName = 'privacy_policy';
 
 export const load: PageLoad = async ({ parent, params }) => {
 

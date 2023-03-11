@@ -1,8 +1,11 @@
 import supabase from '$lib/db'
+import { getParamValues } from '$src/lib/utils';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = ({ params }) => {
+const pageName = 'dysfunctions_teamwork';
+
+export const load: PageLoad = async ({ params }) => {
 
    const getData = async () => {
       const {data, error} = await supabase
@@ -14,9 +17,8 @@ export const load: PageLoad = ({ params }) => {
       else if (data) { return data; };
    }
 
-   if (  params.dysfunctions_teamwork === '5-frustraties-teamwerk'         && params.lang === 'nl'
-		|| params.dysfunctions_teamwork === '5-dysfunctions-teamwork'        && params.lang === 'en'
-		|| params.dysfunctions_teamwork === '5-dysfonctions-travail-equipe'  && params.lang === 'fr' ) {
+   const paramValues = await getParamValues(pageName, ['explore', 'training_leadership_teamcoaching', 'items']);
+   if ( params.lang in paramValues && paramValues[params.lang] === params[pageName]  ) {
 
          return {
             data: getData()

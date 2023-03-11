@@ -1,13 +1,21 @@
 <script lang="ts">
+    // Import i18n
+    import LL from "$i18n/i18n-svelte";
+    import { locales } from "$i18n/i18n-util";
+    import type { Locales } from "$i18n/i18n-types";
+
+    const pageName = 'job_offers'
+
     // Define current page slug
     import { currentPageMap } from "$lib/stores";
-    $currentPageMap = [
-       {locale: 'en', slug: 'vacancies'},
-       {locale: 'fr', slug: 'postes-vacants'},
-       {locale: 'nl', slug: 'vacatures'}
-    ];
+    import { pagesPerLocale } from "$lib/constants/pages";
+    locales.forEach((locale:Locales, key) => {
+       $currentPageMap[key] = {
+          locale: locale,
+          slug: pagesPerLocale[pageName][locale]
+       }
+    })
 
-    import LL from "$i18n/i18n-svelte";
     
     // Import Components
     import { Main, Section, Breadcrumbs, Accordeon, AccordeonItem, H1, Text } from "$comp";

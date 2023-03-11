@@ -2,7 +2,7 @@ import type { ParamMatcher } from '@sveltejs/kit'
 import { formatRegex } from '$lib/utils';
 
 // list of valid slugs
-const validSlugs = ['references', 'referenties'];
+const validSlugs = ['privacy-policy', 'privacybeleid', 'politique-de-confidentialite'];
 const pattern = formatRegex.slugPattern(validSlugs);
 
 // only accept valid slugs in the URL

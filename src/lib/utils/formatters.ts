@@ -1,13 +1,16 @@
+import type { Locales } from "$i18n/i18n-types";
+import { importNamespaceAsync } from "$i18n/i18n-util.async";
+import { baseLocale, locales } from "$i18n/i18n-util";
+
 
 // Capitalize first letter of string
 export const firstLetterCase = (string:string) => {
 	return string.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
  }
 
-// Capitalize first letter of each word in string
-export const titleCase = (str:string) => {
-	return str.replace(/\b\w/g, (c) => c.toUpperCase());
-}
+ export const titleCase = (str: string) => {
+	return str.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+ };
 
 
 // Url formatter for dynamic pages
@@ -28,4 +31,53 @@ export const formatUrl = (string:string) => {
  // Price formatter
 export const formatPrice = (number:number) => {
 	return (number).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+}
+
+
+// Regex pattern formatter
+export const formatRegex = {
+	// slugs for param matchers
+	slugPattern: function (slugs:string[]) {
+		return new RegExp(`^(${slugs.join('|')})$`);
+	}
+}
+
+
+
+type NavValues = {[key in Locales]: any};
+
+let nav: any = {}
+locales.forEach(async (locale: Locales) => {
+	nav[locale] = await importNamespaceAsync(locale, 'nav');
+})
+
+// Param values object formatter
+export const getParamValues = async (pageRef:string = 'home', depth: string[] = []) => {
+	const depthAmount = depth.length;
+	let paramValues:any = {};
+
+	switch (depthAmount) {
+		case 1:
+			locales.forEach((locale: Locales) => {
+				paramValues[locale] = nav[locale][depth[0]][pageRef].slug;
+			})
+			break;
+		case 2:
+			locales.forEach((locale: Locales) => {
+				paramValues[locale] = nav[locale][depth[0]][depth[1]][pageRef].slug;
+			})
+			break;
+		case 3:
+			locales.forEach((locale: Locales) => {
+				paramValues[locale] = nav[locale][depth[0]][depth[1]][depth[2]][pageRef].slug;
+			})
+			break;
+		default:
+			locales.forEach((locale: Locales) => {
+				paramValues[locale] = nav[locale][pageRef].slug;
+			})
+			break;
+	}
+	
+	return paramValues;
 }

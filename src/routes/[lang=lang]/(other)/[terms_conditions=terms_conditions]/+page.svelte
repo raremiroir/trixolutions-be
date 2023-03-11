@@ -1,13 +1,20 @@
 <script lang="ts">
+    // Import i18n
+    import LL from "$i18n/i18n-svelte";
+    import { locales } from "$i18n/i18n-util";
+    import type { Locales } from "$i18n/i18n-types";
+
+    const pageName = 'terms_conditions'
+
     // Define current page slug
     import { currentPageMap } from "$lib/stores";
-    $currentPageMap = [
-       {locale: 'en', slug: 'terms-conditions'},
-       {locale: 'fr', slug: 'conditions-generales'},
-       {locale: 'nl', slug: 'algemene-voorwaarden'}
-    ];
-
-    import LL from "$i18n/i18n-svelte";
+    import { pagesPerLocale } from "$lib/constants/pages";
+    locales.forEach((locale:Locales, key) => {
+       $currentPageMap[key] = {
+          locale: locale,
+          slug: pagesPerLocale[pageName][locale]
+       }
+    })
     
     // Import Components
     import { Main, Section, Breadcrumbs, Accordeon, AccordeonItem, H1, Text } from "$comp";

@@ -1,18 +1,24 @@
 <script lang="ts">
-    // Define current page slug
+   // Import i18n
+   import { locales } from "$i18n/i18n-util";
+   import type { Locales } from "$i18n/i18n-types";
+   import LL from "$i18n/i18n-svelte";
+   
+   const pageName = 'decisive_lead';
+   
+   // Define current page slug
    import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'decisive-lead'},
-      {locale: 'fr', slug: 'avantage-decisif'},
-      {locale: 'nl', slug: 'beslissende-voorsprong'}
-   ];
+   import { pagesPerLocale } from "$lib/constants/pages";
+   locales.forEach((locale:Locales, key) => {
+      $currentPageMap[key] = {
+         locale: locale,
+         slug: pagesPerLocale[pageName][locale]
+      }
+   })
 
     // Import components
     import { Title, Text, Accordeon, AccordeonItem, List, ListItem} from '$comp';
     import { IntroSection } from '../../components/explore';
-
-    // Import i18n
-    import LL, { locale } from '$i18n/i18n-svelte';
     
     //  Import data
     export let data;

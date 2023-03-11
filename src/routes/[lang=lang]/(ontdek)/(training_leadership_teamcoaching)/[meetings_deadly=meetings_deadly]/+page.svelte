@@ -1,20 +1,26 @@
 <script lang="ts">
-    // Define current page slug
-    import { currentPageMap } from "$lib/stores";
-    $currentPageMap = [
-        {locale: 'en', slug: 'meetings-are-deadly'},
-        {locale: 'fr', slug: 'reunions-tuent'},
-        {locale: 'nl', slug: 'vergaderingen-zijn-dodelijk'}
-    ];
+   // Import i18n
+   import { locales } from "$i18n/i18n-util";
+   import type { Locales } from "$i18n/i18n-types";
+   import LL from "$i18n/i18n-svelte";
+   
+   const pageName = 'meetings_deadly';
+   
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   import { pagesPerLocale } from "$lib/constants/pages";
+   locales.forEach((locale:Locales, key) => {
+      $currentPageMap[key] = {
+         locale: locale,
+         slug: pagesPerLocale[pageName][locale]
+      }
+   })
 
     // Import components
     import { Text, Accordeon, AccordeonItem, H2 } from '$comp';
 
     import { IntroSection, IndepthSection } from '../../components/explore';
 	import MeetingContentCard from './MeetingContentCard.svelte';
-
-    // Import i18n
-    import LL, { locale } from "$i18n/i18n-svelte";
     
     // Import data
     export let data;

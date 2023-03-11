@@ -1,7 +1,11 @@
 import type { ParamMatcher } from '@sveltejs/kit'
+import { formatRegex } from '$lib/utils';
+
+// list of valid slugs
+const validSlugs = ['decisive-lead', 'beslissende-voorsprong', 'avantage-decisif'];
+const pattern = formatRegex.slugPattern(validSlugs);
 
 // only accept valid slugs in the URL
 export const match: ParamMatcher = (param) => {
-
-   return /^(decisive-lead|beslissende-voorsprong|avantage-decisif)$/.test(param);
+   return pattern.test(param);
 }

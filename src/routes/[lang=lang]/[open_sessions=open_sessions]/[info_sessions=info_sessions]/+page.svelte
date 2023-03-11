@@ -1,28 +1,31 @@
 <script lang="ts">
+   // Import i18n
+   import { locales } from "$i18n/i18n-util";
+   import type { Locales } from "$i18n/i18n-types";
+   import LL from "$i18n/i18n-svelte";
+   
+   const pageName = 'info_sessions';
+   
    // Define current page slug
    import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'open-sessions/free-open-info-sessions'},
-      {locale: 'fr', slug: 'sessions-ouvertes/sessions-info-gratuites-ouvertes'},
-      {locale: 'nl', slug: 'open-sessies/gratis-open-infosessies'}
-   ];
-
-   // Import components
+   import { pagesPerLocale } from "$lib/constants/pages";
+   locales.forEach((locale:Locales, key) => {
+      $currentPageMap[key] = {
+         locale: locale,
+         slug: pagesPerLocale[pageName][locale]
+      }
+   })
+   
+   // Import component_subscribe
    import { 
       Main, Section, Breadcrumbs, 
       Text, Button, H2, H3, Tag,
       Hero, Modal, CardBase,
-	   SEO, Reveal, SessionSubForm
+      SEO, Reveal, SessionSubForm
    } from "$comp";
-   
-   // Import website config
-	import { website } from "$src/lib/config/website";
-   // Import i18n
-   import LL, { locale } from "$i18n/i18n-svelte";
+
    // Import utils
    import { titleCase } from "$utils";
-	
-
 
 
    // Import data
@@ -30,9 +33,11 @@
 	import { getBaseEntity } from "$src/lib/utils/seo";
    export let data:PageData;
    // Get info sessions
-   let sessions = Object(data.sessions);
+   $: sessions = data.sessions.filter((obj:any) => obj.type === 'info_session');
    // Get info session dates
-   let sessionDates = Object(data.sessionDates);
+   $: sessionDates = sessions.map((item:any) => {
+      return new Date(item.starts_on).toLocaleDateString('nl-BE', { dateStyle: 'short' });
+   });
 
    // SEO
    $: openGraph = {

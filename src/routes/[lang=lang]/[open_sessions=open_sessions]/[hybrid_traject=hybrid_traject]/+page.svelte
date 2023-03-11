@@ -1,13 +1,5 @@
 <script lang="ts">
-   // Define current page slug
-   import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'open-sessions/hybrid-lencioni-learning-track'},
-      {locale: 'fr', slug: 'sessions-ouvertes/traject-hybride-lencioni'},
-      {locale: 'nl', slug: 'open-sessies/hybride-lencioni-leertraject'}
-   ];
-
-   // Import components
+// Import components
    import { 
       Main, Section, Breadcrumbs, SEO,
       H2, H3, H4, Subheader, 
@@ -21,13 +13,29 @@
       HybridTrackFeaturesSlider, ModalProgramPlacehold
    } from "../components/open-sessies";
 
-   // Import i18n
-   import LL, { locale } from "$i18n/i18n-svelte";
    // Import globals
    import { titleCase } from "$utils";
    import { currentModal } from "$src/lib/stores";
 	import { getBaseEntity } from "$src/lib/utils/seo";
+
+   // Import i18n
+   import { locales } from "$i18n/i18n-util";
+   import type { Locales } from "$i18n/i18n-types";
+   import LL from "$i18n/i18n-svelte";
+
+   const pageName = 'hybrid_traject';
    
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   import { pagesPerLocale } from "$lib/constants/pages";
+   locales.forEach((locale:Locales, key) => {
+      $currentPageMap[key] = {
+         locale: locale,
+         slug: pagesPerLocale[pageName][locale]
+      }
+   })
+
+
    // Set active store for current modal
    $currentModal = 0;
    $: $currentModal;

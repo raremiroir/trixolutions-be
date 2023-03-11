@@ -2,11 +2,16 @@ import type { PageLoad } from './$types'
 import LL, { setLocale } from '$i18n/i18n-svelte'
 import { get } from 'svelte/store'
 import { error } from '@sveltejs/kit';
+import { isLocale } from '$i18n/i18n-util';
+import { getParamValues } from '$lib/utils';
+
+
+const pageName = 'about';
 
 export const load: PageLoad = async ({ parent, params }) => {
-	if (  params.about === 'over-ons' && params.lang === 'nl'
-		|| params.about === 'about-us' && params.lang === 'en'
-		|| params.about === 'a-propos' && params.lang === 'fr' ) {
+
+	const paramValues = await getParamValues(pageName);
+	if (params.lang in paramValues && isLocale(params.lang) && paramValues[params.lang] === params[pageName]) {
 		// wait for `+layout.ts` to load dictionary and pass locale information
 		const { locale } = await parent()
 	

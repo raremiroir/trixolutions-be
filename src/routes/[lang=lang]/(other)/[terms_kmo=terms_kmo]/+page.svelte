@@ -1,17 +1,23 @@
 <script lang="ts">
-   // Define current page slug
-   import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-       {locale: 'en', slug: 'terms-conditions-sme-portfolio'},
-       {locale: 'fr', slug: 'conditions-generales-portefeuille-pme'},
-       {locale: 'nl', slug: 'algemene-voorwaarden-kmo-portfolio'}
-    ];
+    // Import i18n
+    import LL from "$i18n/i18n-svelte";
+    import { locales } from "$i18n/i18n-util";
+    import type { Locales } from "$i18n/i18n-types";
+
+    const pageName = 'terms_kmo'
+
+    // Define current page slug
+    import { currentPageMap } from "$lib/stores";
+    import { pagesPerLocale } from "$lib/constants/pages";
+    locales.forEach((locale:Locales, key) => {
+       $currentPageMap[key] = {
+          locale: locale,
+          slug: pagesPerLocale[pageName][locale]
+       }
+    })
 
     // Import Components
     import { Main, Section, Breadcrumbs, Accordeon, AccordeonItem, H1, Text, List, ListItem } from "$comp";
-
-    // Import i18n
-    import LL from "$i18n/i18n-svelte";
     
     let active:any = null;
 </script>

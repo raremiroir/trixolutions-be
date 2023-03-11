@@ -1,11 +1,19 @@
 <script lang="ts">
+   // Import i18n
+   import { locales } from "$i18n/i18n-util";
+   import type { Locales } from "$i18n/i18n-types";
+   import LL from "$i18n/i18n-svelte";
+   
+   // const pageName = 'home';
+   
    // Define current page slug
    import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: ''},
-      {locale: 'fr', slug: ''},
-      {locale: 'nl', slug: ''}
-   ];
+   locales.forEach((locale:Locales, key) => {
+      $currentPageMap[key] = {
+         locale: locale,
+         slug: ''
+      }
+   })
 
    // Import Components
    import { 
@@ -14,9 +22,7 @@
    } from "$comp";
 	import HomeHeroSlides from './HomeHeroSlides.svelte';
 
-   // Import i18n
-   import LL, { locale } from "$i18n/i18n-svelte";
-	import { getBaseEntity } from "$lib/utils/seo";
+   import { getBaseEntity } from "$lib/utils/seo";
 
    // Import data
 	import type { PageData } from "./$types";

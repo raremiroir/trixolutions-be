@@ -1,17 +1,24 @@
-<script>
-	// Define current page slug
+<script lang="ts">
+   // Import i18n
+   import { locales } from "$i18n/i18n-util";
+   import type { Locales } from "$i18n/i18n-types";
+   import LL from "$i18n/i18n-svelte";
+   
+   const pageName = 'references';
+   
+   // Define current page slug
    import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'references'},
-      {locale: 'fr', slug: 'references'},
-      {locale: 'nl', slug: 'referenties'}
-   ];
+   import { pagesPerLocale } from "$lib/constants/pages";
+   locales.forEach((locale:Locales, key) => {
+      $currentPageMap[key] = {
+         locale: locale,
+         slug: pagesPerLocale[pageName][locale]
+      }
+   })
 	
 	// Import components
 	import { Main, Section, Breadcrumbs, Image, Video, SEO, Reveal, H1 } from '$comp';
-	
-	// Import i18n
-	import LL, { locale } from '$i18n/i18n-svelte';
+
 	import { getBaseEntity } from "$lib/utils/seo";
 	
 	// Import Video

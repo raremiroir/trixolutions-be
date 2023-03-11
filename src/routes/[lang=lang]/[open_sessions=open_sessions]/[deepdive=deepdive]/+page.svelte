@@ -1,12 +1,4 @@
 <script lang="ts">
-   // Define current page slug
-   import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'open-sessions/lencioni-deepdive-level-2'},
-      {locale: 'fr', slug: 'sessions-ouvertes/lencioni-deepdive-niveau-2'},
-      {locale: 'nl', slug: 'open-sessies/lencioni-deepdive-level-2'}
-   ];
-   
    // Import components
    import 
       { 
@@ -20,14 +12,28 @@
       SessionDateCard, ModalLocation, ModalTrainerTom, 
       PricingCard, ModalTargetAudience, ModalApproach 
    } from "../components/open-sessies";
-   
+
    // Import constants
    import { firstLetterCase, titleCase } from "$utils";
    import { currentModal } from "$src/lib/stores";
-   // Import i18n
-   import LL, { locale } from "$i18n/i18n-svelte";
 	import { getBaseEntity } from "$src/lib/utils/seo";
-	
+   // Import i18n
+   import { locales } from "$i18n/i18n-util";
+   import type { Locales } from "$i18n/i18n-types";
+   import LL, { locale } from "$i18n/i18n-svelte";
+   
+   const pageName = 'deepdive';
+   
+   // Define current page slug
+   import { currentPageMap } from "$lib/stores";
+   import { pagesPerLocale } from "$lib/constants/pages";
+   locales.forEach((locale:Locales, key) => {
+      $currentPageMap[key] = {
+         locale: locale,
+         slug: pagesPerLocale[pageName][locale]
+      }
+   })
+
 
    // Import data
    export let data;

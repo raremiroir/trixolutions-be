@@ -1,7 +1,11 @@
 import type { ParamMatcher } from '@sveltejs/kit'
+import { formatRegex } from '$lib/utils';
+
+// list of valid slugs
+const validSlugs = ['ideal-team-player', 'ideale-teamplayer', 'coequipier-ideal'];
+const pattern = formatRegex.slugPattern(validSlugs);
 
 // only accept valid slugs in the URL
 export const match: ParamMatcher = (param) => {
-
-   return /^(ideal-team-player|ideale-teamplayer|coequipier-ideal)$/.test(param);
+   return pattern.test(param);
 }

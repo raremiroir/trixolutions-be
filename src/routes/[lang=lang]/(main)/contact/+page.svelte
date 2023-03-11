@@ -1,11 +1,20 @@
-<script>  
+<script lang="ts">  
+   // Import i18n
+   import { locales } from "$i18n/i18n-util";
+   import type { Locales } from "$i18n/i18n-types";
+   import LL from "$i18n/i18n-svelte";
+   
+   const pageName = 'contact';
+   
    // Define current page slug
    import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'contact'},
-      {locale: 'fr', slug: 'contact'},
-      {locale: 'nl', slug: 'contact'}
-   ];
+   locales.forEach((locale:Locales, key) => {
+      $currentPageMap[key] = {
+         locale: locale,
+         slug: pageName
+      }
+   })
+
    // Import components
    import { 
       Main, Section, Breadcrumbs, 
@@ -21,9 +30,7 @@
 	import ogImageSrc from '$lib/assets/images/home/home-open-graph.png';
 	import featuredImageSrc from '$lib/assets/images/home/home.png';
    
-   // Import i18n
-   import LL, { locale } from '$i18n/i18n-svelte'
-	import { getBaseEntity } from "$lib/utils/seo";
+   import { getBaseEntity } from "$lib/utils/seo";
 
    // Import utils
 	import { firstLetterCase, titleCase } from "$utils";

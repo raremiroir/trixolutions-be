@@ -1,11 +1,19 @@
 <script lang="ts">
+   // Import i18n
+   import { locales } from "$i18n/i18n-util";
+   import type { Locales } from "$i18n/i18n-types";
+   import LL, { locale } from "$i18n/i18n-svelte";
+   
+   const pageName = 'blog';
+   
    // Define current page slug
    import { currentPageMap } from "$lib/stores";
-   $currentPageMap = [
-      {locale: 'en', slug: 'blog'},
-      {locale: 'fr', slug: 'blog'},
-      {locale: 'nl', slug: 'blog'}
-   ];
+   locales.forEach((locale:Locales, key) => {
+      $currentPageMap[key] = {
+         locale: locale,
+         slug: pageName
+      }
+   })
 
    // Import components
    import { 
@@ -17,8 +25,6 @@
    import { website } from "$lib/config/website";
    // Import utils
    import { titleCase } from "$lib/utils";
-   // Import i18n
-   import LL, { locale } from "$i18n/i18n-svelte";
 
    //   Import data
 	import type { PageData } from "./$types";

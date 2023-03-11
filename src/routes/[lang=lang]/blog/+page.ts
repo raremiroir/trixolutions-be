@@ -9,10 +9,7 @@ export const load: PageLoad = async ({ fetch }) => {
    const res = await fetch('/api/posts');
    let posts = await res.json();
 
-   const allPosts = await fetchMarkdownPosts();
-
-    const getBlogData = async () => {
-
+   const getBlogData = async () => {
       const data = await dbSelectOrder(
             'blog_posts',
             `*, 
@@ -21,7 +18,7 @@ export const load: PageLoad = async ({ fetch }) => {
             'created_at');
                let blogPosts:any = [];
 
-      data.forEach(el => {
+      data.forEach((el:any) => {
          posts.forEach((post:any) => {
             if (post.meta.id === el.id) {
                blogPosts.push({

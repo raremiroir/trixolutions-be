@@ -1,10 +1,10 @@
 import supabase from '$lib/db'
-import { dbSelect, getParamValues } from '$src/lib/utils';
+import { dbSelect, dbSelectFilter, getParamValues } from '$src/lib/utils';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
 const parentPage = 'open_sessions';
-const pageName = 'info_sessions';
+const pageName = 'hybrid_traject';
 
 export const load: PageLoad = async ({ params }) => {
 
@@ -19,9 +19,13 @@ export const load: PageLoad = async ({ params }) => {
       && params.lang in parentParamValues
       && parentParamValues[params.lang] === params[parentPage]
       ) {
-      return {
-         sessions: dbSelect('sessions', `*, trainer (first_name, last_name)`)
-      }
+         
+         return {
+            sessionTypes: dbSelect('session_types'),
+            sessionData: dbSelect('sessions'),
+            ratingData: dbSelect('ratings'),
+            ratingImgData: dbSelectFilter('images', '*', ['folder', 'recensies']),
+         }
    }
 
    throw error (404, 'Not found');

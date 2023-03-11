@@ -1,39 +1,27 @@
 import supabase from '$lib/db'
+import { dbSelect, getParamValues } from '$src/lib/utils';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
+const parentPage = 'open_sessions';
+const pageName = 'deepdive';
+
 export const load: PageLoad = async ({ params }) => {
 
-   const getSessionTypes = async () => {
-      const {data, error} = await supabase
-         .from('session_types')
-         .select(`*`);
+   const parentParamValues = await getParamValues(parentPage);
+   const paramValues = await getParamValues(pageName, [parentPage, 'items']);
+   
+   const formattedParamSlug = parentParamValues[params.lang] + '/' + params[pageName];
 
-      if (error) {
-         throw new Error(error.message)
-      } else if (data) {
-         return data;
-      };
-   }
-   const getSessionData = async () => {
-      const {data, error} = await supabase
-         .from('sessions')
-         .select(`*`);
-
-      if (error) {
-         throw new Error(error.message)
-      } else if (data) {
-         return data;
-      };
-   }
-
-   if (  params.deepdive === 'lencioni-deepdive-level-2'  && params.open_sessions === 'open-sessies'      && params.lang === 'nl'
-      || params.deepdive === 'lencioni-deepdive-level-2'  && params.open_sessions === 'open-sessions'     && params.lang === 'en'
-      || params.deepdive === 'lencioni-deepdive-niveau-2' && params.open_sessions === 'sessions-ouvertes' && params.lang === 'fr') {
-         
+   if ( 
+      params.lang in paramValues 
+      && paramValues[params.lang] === formattedParamSlug 
+      && params.lang in parentParamValues
+      && parentParamValues[params.lang] === params[parentPage]
+      ) {
          return {
-            sessionTypes: getSessionTypes(),
-            sessionData: getSessionData()
+            sessionTypes: dbSelect('session_types'),
+            sessionData: dbSelect('sessions')
          }
       }
 

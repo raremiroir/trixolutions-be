@@ -1,8 +1,11 @@
 import supabase from '$lib/db'
+import { getParamValues } from '$src/lib/utils';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = ({ params }) => {
+const pageName = 'decisive_lead';
+
+export const load: PageLoad = async ({ params }) => {
 
    const getData = async () => {
       const {data, error} = await supabase
@@ -14,9 +17,8 @@ export const load: PageLoad = ({ params }) => {
       else if (data) { return data; };
    }
 
-   if (  params.decisive_lead === 'beslissende-voorsprong'  && params.lang === 'nl'
-		|| params.decisive_lead === 'decisive-lead'           && params.lang === 'en'
-		|| params.decisive_lead === 'avantage-decisif'        && params.lang === 'fr' ) {
+   const paramValues = await getParamValues(pageName, ['explore', 'training_leadership_teamcoaching', 'items']);
+   if ( params.lang in paramValues && paramValues[params.lang] === params[pageName]  ) {
 
          return {
             data: getData()
