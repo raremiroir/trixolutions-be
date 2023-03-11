@@ -58,14 +58,14 @@ const en: Translation = {
          blog_unavailable: "Sorry! At this time, the blog is only available in Dutch."
       },
       validation: {
-         required: "{item:string} is a required field.",
+         required: "{item} is a required field.",
          required_def: "This is a required field.",
-         default_fixed: "{item:string} is invalid.",
-         field_too_short: "{item:string} should be at least {min:number} letters long.",
-         field_too_long: "{item:string} should be at most {max:number} letters long.",
+         default_fixed: "{item} is invalid.",
+         field_too_short: "{item} should be at least {min} letters long.",
+         field_too_long: "{item} should be at most {max} letters long.",
          email_error: "This email in invalid.",
          phone_error: "This phone number in invalid.",
-         only_alpha: "{item:string} should not contain any numbers or special characters.",
+         only_alpha: "{item} should not contain any numbers or special characters.",
          pick_one: "Pick an option.",
          terms_error: "You have to accept the {terms} and the {policy}.",
          captcha_error: "Please fill in the captcha.",
@@ -73,12 +73,12 @@ const en: Translation = {
       newsletter: {
          btn: "Subscribe to Trixolutions Newsletter",
          validation: {
-            already_member: "{email:string} has already been signed up for our newsletter.",
-            looks_invalid: "{email:string} looks invalid or fake.",
+            already_member: "{email} has already been signed up for our newsletter.",
+            looks_invalid: "{email} looks invalid or fake.",
             failed: "An error occured whilst trying to subscribe you to the newsletter. Try again later.",
          },
          success: {
-            subscribed: "You have been successfully subscribed. Welcome to the Trixolutions family, {name:string}!"
+            subscribed: "You have been successfully subscribed. Welcome to the Trixolutions family, {name}!"
          }
       },
       form: {

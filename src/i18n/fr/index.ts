@@ -58,14 +58,14 @@ const fr: Translation = {
          blog_unavailable: "Désolé! Pour le moment, le blog n'est disponible qu'en néerlandais.",
       },
       validation: {
-         required: "{item:string} est un champ obligatoire.",
+         required: "{item} est un champ obligatoire.",
          required_def: "Ceci est un champ obligatoire.",
-         default_fixed: "{item:string} est invalide.",
-         field_too_short: "{item:string} doit comporter au moins {min:number} lettres.",
-         field_too_long: "{item:string} peut contenir jusqu'à 5 {max:number} lettres.",
+         default_fixed: "{item} est invalide.",
+         field_too_short: "{item} doit comporter au moins {min} lettres.",
+         field_too_long: "{item} peut contenir jusqu'à 5 {max} lettres.",
          email_error: "Cette adresse e-mail est invalide.",
          phone_error: "Ce numéro de téléphone est invalide.",
-         only_alpha: "{item:string} ne doit pas contenir de caractères spéciaux ni de chiffres.",
+         only_alpha: "{item} ne doit pas contenir de caractères spéciaux ni de chiffres.",
          pick_one: "Chosis une option.",
          terms_error: "Vous devez accepter les {terms} et la {policy}.",
          captcha_error: "Veuillez remplir le captcha.",
@@ -73,12 +73,12 @@ const fr: Translation = {
       newsletter: {
          btn: "S'inscrire à la Newsletter",
          validation: {
-            already_member: "{email:string} est déjà enregistré dans la Newsletter.",
-            looks_invalid: "{email:string} semble invalide ou faux.",
+            already_member: "{email} est déjà enregistré dans la Newsletter.",
+            looks_invalid: "{email} semble invalide ou faux.",
             failed: "Il y a eu un problème lors de l'inscription. Réessayez plus tard.",
          },
          success: {
-            subscribed: "Vous avez bien été enregistré. Bienvenue dans la famille Trixolutions, {name:string}!"
+            subscribed: "Vous avez bien été enregistré. Bienvenue dans la famille Trixolutions, {name}!"
          }
       },
       form: {
