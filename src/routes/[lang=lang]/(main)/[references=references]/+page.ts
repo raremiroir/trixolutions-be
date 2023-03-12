@@ -7,7 +7,7 @@ import { isLocale } from '$src/i18n/i18n-util'
 
 const pageName = 'references';
 
-export const load: PageLoad = async ({ parent, params }) => {
+export const load: PageLoad = async ({ params }) => {
 
 	const paramValues = await getParamValues(pageName);
 	if (params.lang in paramValues && isLocale(params.lang) && paramValues[params.lang] === params[pageName]) {
