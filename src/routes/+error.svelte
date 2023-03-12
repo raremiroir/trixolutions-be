@@ -25,11 +25,14 @@
       <div class="flex justify-center items-center flex-col w-full" slot="title">
          {#if status === 404}
             <H1 class="!text-[240px]">
-               {status}
+               404
             </H1>
-            <H1 fake>
+            <H1>
+               {$LL.base.error.whoops()} 😥
+            </H1>
+            <!-- <Subheader>
                {message}
-            </H1>
+            </Subheader> -->
          {/if}
       </div>
       {#if status === 404}
