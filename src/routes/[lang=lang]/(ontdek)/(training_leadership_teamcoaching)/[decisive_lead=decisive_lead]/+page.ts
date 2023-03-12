@@ -1,27 +1,14 @@
-import supabase from '$lib/db'
-import { getParamValues } from '$src/lib/utils';
+import { dbSelectFilter, getParamValues } from '$src/lib/utils';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
 const pageName = 'decisive_lead';
 
 export const load: PageLoad = async ({ params }) => {
-
-   const getData = async () => {
-      const {data, error} = await supabase
-         .from('home_pages')
-         .select(`*, hero_img ( name, folder, type )`)
-         .eq('id', 8);
-
-      if (error) { throw new Error(error.message) } 
-      else if (data) { return data; };
-   }
-
    const paramValues = await getParamValues(pageName, ['explore', 'training_leadership_teamcoaching', 'items']);
    if ( params.lang in paramValues && paramValues[params.lang] === params[pageName]  ) {
-
          return {
-            data: getData()
+            data: dbSelectFilter('home_pages', '*, hero_img ( name, folder, type )', ['id', 8])
          }
    }
    
