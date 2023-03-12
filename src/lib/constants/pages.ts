@@ -128,7 +128,6 @@ Object.keys(nav[baseLocale]).forEach(async key => {
 
   if (key === 'open_sessions') {
     Object.keys(nav[baseLocale].open_sessions.items).forEach(async (item) => {
-      console.log(item);
       const paramValues = await getParamValues(item, ['open_sessions', 'items']);
       pagesPerLocale[item] = paramValues;
     })
@@ -136,7 +135,6 @@ Object.keys(nav[baseLocale]).forEach(async key => {
 
   if (key === 'others') {
     Object.keys(nav[baseLocale].others).forEach(async (item) => {
-      console.log(item);
       const paramValues = await getParamValues(item, ['others']).catch(e => console.error(e));
       pagesPerLocale[item] = paramValues;
     })

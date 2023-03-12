@@ -56,7 +56,7 @@ const onReady = () => {
 function eventHandler (e: { detail: any; }) {
 	const data = e.detail
 	// do something with `data`, it's the result returned from the mapbox event
-	console.log(data);
+	// console.log(data);
 }
 </script>
 
