@@ -2,6 +2,12 @@ import type { BaseTranslation } from '../i18n-types'
 
 const nl: BaseTranslation = {
    code: "nl-BE",
+   errors: {
+      whoops: "Oeps!",
+      something_wrong: "Er is iets fout gegaan.",
+      not_found: "Pagina niet gevonden.",
+      not_found_desc: "De pagina die je zocht werd niet gevonden. <br/>Keer terug naar de <a href='/'>Homepagina</a>.",
+   },
    base: {
       word: {
          the: 'de',
@@ -54,6 +60,7 @@ const nl: BaseTranslation = {
          visit_nl: "Bezoek onze Nederlandse website",
       },
       error: {
+         whoops: "Oeps!",
          not_found: "Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk.",
          blog_unavailable: "Helaas! Op dit moment is de blog enkel toegankelijk in het Nederlands."
       },

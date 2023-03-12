@@ -2,6 +2,12 @@ import type { Translation } from '../i18n-types'
 
 const fr: Translation = {
    code: "fr-BE",
+   errors: {
+      whoops: "Oups!",
+      something_wrong: "Une erreur s'est produite.",
+      not_found: "Page introuvable",
+      not_found_desc: "La page que vous recherchez n'a pas été trouvée. ,<br/>Veuillez vérifier l'URL ou <a href='/'>revenir à la page d'accueil.</a>",
+   },
    base: {
       word: {
          the: 'le',
@@ -54,6 +60,7 @@ const fr: Translation = {
          visit_nl: "Visiter notre site web dans les Pays-Bas",
       },
       error: {
+         whoops: "Oups!",
          not_found: "Malheureusement. La page que vous recherchiez n'a pas été trouvée. <br/>Retournez à la page d'accueil via le bouton ci-dessous, ou utilisez la barre de navigation.",
          blog_unavailable: "Désolé! Pour le moment, le blog n'est disponible qu'en néerlandais.",
       },

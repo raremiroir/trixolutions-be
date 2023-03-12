@@ -28,6 +28,24 @@ type RootTranslation = {
 	 * n​l​-​B​E
 	 */
 	code: string
+	errors: {
+		/**
+		 * O​e​p​s​!
+		 */
+		whoops: string
+		/**
+		 * E​r​ ​i​s​ ​i​e​t​s​ ​f​o​u​t​ ​g​e​g​a​a​n​.
+		 */
+		something_wrong: string
+		/**
+		 * P​a​g​i​n​a​ ​n​i​e​t​ ​g​e​v​o​n​d​e​n​.
+		 */
+		not_found: string
+		/**
+		 * D​e​ ​p​a​g​i​n​a​ ​d​i​e​ ​j​e​ ​z​o​c​h​t​ ​w​e​r​d​ ​n​i​e​t​ ​g​e​v​o​n​d​e​n​.​ ​<​b​r​/​>​K​e​e​r​ ​t​e​r​u​g​ ​n​a​a​r​ ​d​e​ ​<​a​ ​h​r​e​f​=​'​/​'​>​H​o​m​e​p​a​g​i​n​a​<​/​a​>​.
+		 */
+		not_found_desc: string
+	}
 	base: {
 		word: {
 			/**
@@ -170,6 +188,10 @@ type RootTranslation = {
 			visit_nl: string
 		}
 		error: {
+			/**
+			 * O​e​p​s​!
+			 */
+			whoops: string
 			/**
 			 * H​e​l​a​a​s​.​ ​D​e​ ​p​a​g​i​n​a​ ​w​a​a​r​ ​j​e​ ​n​a​a​r​ ​z​o​c​h​t​ ​w​e​r​d​ ​n​i​e​t​ ​g​e​v​o​n​d​e​n​.​ ​<​b​r​/​>​K​e​e​r​ ​t​e​r​u​g​ ​n​a​a​r​ ​d​e​ ​h​o​m​e​p​a​g​i​n​a​ ​v​i​a​ ​o​n​d​e​r​s​t​a​a​n​d​e​ ​k​n​o​p​,​ ​o​f​ ​g​e​b​r​u​i​k​ ​d​e​ ​n​a​v​i​g​a​t​i​e​b​a​l​k​.
 			 */
@@ -3895,6 +3917,24 @@ export type TranslationFunctions = {
 	 * nl-BE
 	 */
 	code: () => LocalizedString
+	errors: {
+		/**
+		 * Oeps!
+		 */
+		whoops: () => LocalizedString
+		/**
+		 * Er is iets fout gegaan.
+		 */
+		something_wrong: () => LocalizedString
+		/**
+		 * Pagina niet gevonden.
+		 */
+		not_found: () => LocalizedString
+		/**
+		 * De pagina die je zocht werd niet gevonden. <br/>Keer terug naar de <a href='/'>Homepagina</a>.
+		 */
+		not_found_desc: () => LocalizedString
+	}
 	base: {
 		word: {
 			/**
@@ -4037,6 +4077,10 @@ export type TranslationFunctions = {
 			visit_nl: () => LocalizedString
 		}
 		error: {
+			/**
+			 * Oeps!
+			 */
+			whoops: () => LocalizedString
 			/**
 			 * Helaas. De pagina waar je naar zocht werd niet gevonden. <br/>Keer terug naar de homepagina via onderstaande knop, of gebruik de navigatiebalk.
 			 */

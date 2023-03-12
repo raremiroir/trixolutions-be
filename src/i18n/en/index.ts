@@ -2,6 +2,12 @@ import type { Translation } from '../i18n-types'
 
 const en: Translation = {
    code: "en-UK",
+   errors: {
+      whoops: "Whoops!",
+      something_wrong: "Something went wrong.",
+      not_found: "Page not found",
+      not_found_desc: "The page you are looking for does not exist. <br/>Return to <a href='/'>our home page?</a>",
+   },
    base: {
       word: {
          the: 'the',
@@ -54,6 +60,7 @@ const en: Translation = {
          visit_nl: "Visit our website in the Netherlands",
       },
       error: {
+         whoops: "Oops!",
          not_found: "Sorry! The page you were looking for was not found. <br/>Return to our home page by clicking the button, or just use the navigation bar.",
          blog_unavailable: "Sorry! At this time, the blog is only available in Dutch."
       },
