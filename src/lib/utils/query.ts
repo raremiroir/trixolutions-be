@@ -23,7 +23,7 @@ export const dbSelectOrder = async(table:string, select:string = '*', order:stri
    else return data;
 }
 
-export const dbSelectFilter = async(table:string, select: string = '*', filter: string[] = []) => {
+export const dbSelectFilter = async(table:string, select: string = '*', filter: any[] = []) => {
    const { data, error } = await supabase
       .from(table)
       .select(select)
