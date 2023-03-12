@@ -145,7 +145,7 @@ export const handleError:HandleServerError = ({ error, event }) => {
 	const errorId = randomUUID();
 	Sentry.captureException(error, { event, errorId });
 	return {
-		message: `Whoops! 🥺 ${error}`,
+		message: `${error}`,
 		errorId,
 	}
 }
