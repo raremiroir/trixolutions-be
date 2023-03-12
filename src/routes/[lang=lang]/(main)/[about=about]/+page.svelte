@@ -2,7 +2,7 @@
    // Import i18n
    import { locales } from "$i18n/i18n-util";
    import type { Locales } from "$i18n/i18n-types";
-   import LL from "$i18n/i18n-svelte";
+   import LL, { locale } from "$i18n/i18n-svelte";
    
    const pageName = 'about';
    
@@ -113,10 +113,10 @@
                <Reveal>
                   <MemberCard
                      src="{member.img.folder}/{member.img.name}.{member.img.type}" 
-                     alt="{member.first_name} {member.last_name} - {$locale === 'fr' ? member.job.fr : $locale === 'en' ? member.job.en : member.job.nl}"
+                     alt="{member.first_name} {member.last_name} - {member.job[$locale]}"
                      name="{member.first_name} {member.last_name}"
                      position={member.unique_name === 'christoph' || member.unique_name === 'frederik' ? 'bottom-0' : 'bottom-2 top-0'}>
-                     <Subtitle smaller italic>{$locale === 'fr' ? member.job.fr : $locale === 'en' ? member.job.en : member.job.nl}</Subtitle>
+                     <Subtitle smaller italic>{member.job[$locale]}</Subtitle>
                   </MemberCard>
                </Reveal>
             {/each}
